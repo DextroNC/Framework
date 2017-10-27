@@ -1,0 +1,75 @@
+version=53;
+center[]={4973.3193,8.9683102e-044,9880.7949};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={-0.84716797,0,0.079101563};
+		name="start";
+		text="Start";
+		type="mil_start";
+		colorName="ColorWEST";
+		id=449;
+		atlOffset=-339;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.84765625,339.57538,-0.079101563};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="this addAction [""<t color='#FF0000'>Teleport to Start</t>"",fw_fnc_teleport, [1,""start""], 0, true, true, """","""",3];     ";
+		};
+		id=450;
+		type="Land_InfoStand_V1_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ObjectTextureCustom0";
+				expression="_this setObjectTextureGlobal [0,_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};

@@ -1,0 +1,106 @@
+version=53;
+center[]={4836.1689,339,10146.148};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.15917969,0.034606934,0.99121094};
+			angles[]={0,4.1908751,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="pad";
+		};
+		id=698;
+		type="Land_HelipadEmpty_F";
+		atlOffset=0.034606934;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.15966797,0.58026123,-0.99023438};
+			angles[]={-0,0.89901906,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH60"", fw_fnc_heloSpawn,[""RHS_UH60M"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH1Y"", fw_fnc_heloSpawn,[""RHS_UH1Y"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn CH47"", fw_fnc_heloSpawn,[""RHS_CH_47F"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn MELB MH6"", fw_fnc_heloSpawn,[""RHS_MELB_MH6M"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 L"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_L"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 M"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_M"",pad]];      " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 T"", fw_fnc_heloSpawn,[""SR_AW159_T_Black"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 Armed"", fw_fnc_heloSpawn,[""SR_AW159_A_Black"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 Armed Heavy"", fw_fnc_heloSpawn,[""SR_AW159_A_Black"",pad,false,[[""PylonRight1"",""PylonRack_3Rnd_LG_scalpel"",true]]]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 18 GMPG"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC3_18_GPMG"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 32"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC3_32"",pad]];   " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8A"",pad]];   " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed Guided"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8B"",pad]];  }";
+			disableSimulation=1;
+		};
+		id=699;
+		type="Land_InfoStand_V2_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};

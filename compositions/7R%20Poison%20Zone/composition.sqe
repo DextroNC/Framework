@@ -1,0 +1,24 @@
+version=53;
+center[]={3994.0125,5,901.85291};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Trigger";
+		position[]={0,0,0};
+		class Attributes
+		{
+			condition="[player,thisTrigger] call ace_medical_fnc_poisonCondition";
+			onActivation="[player,thisTrigger] call ace_medical_fnc_poison";
+			sizeA=10;
+			sizeB=10;
+			sizeC=10;
+			repeatable=1;
+			activationBy="ANYPLAYER";
+			isRectangle=1;
+		};
+		id=252;
+		type="EmptyDetector";
+	};
+};

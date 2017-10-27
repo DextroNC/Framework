@@ -1,0 +1,106 @@
+version=53;
+center[]={4852.5371,339,10125.604};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.81689453,0.11895752,-0.77050781};
+			angles[]={0,4.0928965,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="v_pad";
+		};
+		id=386;
+		type="Land_HelipadEmpty_F";
+		atlOffset=0.11895752;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.81738281,0.58026123,0.77148438};
+			angles[]={-0,1.1764042,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="this addaction [""<t color=""""#00FF00"""">"" +""Spawn Vehicle"", fw_fnc_vehicleSpawn,[""rhsusf_rg33_wd"",v_pad]];";
+			disableSimulation=1;
+		};
+		id=387;
+		type="Land_InfoStand_V2_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};

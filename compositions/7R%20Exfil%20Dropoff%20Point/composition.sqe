@@ -1,0 +1,15 @@
+version=53;
+center[]={4836.3721,165.62866,9743.3174};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={0,0,0};
+		name="dropoff";
+		type="Empty";
+		id=116;
+		atlOffset=-173.37134;
+	};
+};

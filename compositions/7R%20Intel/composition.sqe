@@ -1,0 +1,47 @@
+version=53;
+center[]={4809.2769,339,10024.903};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0,0.13299561,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="nul=[this,3,""Picking up intel...""] spawn fw_fnc_intelAction;";
+			name="intel";
+			disableSimulation=1;
+		};
+		id=392;
+		type="Laptop_EP1";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

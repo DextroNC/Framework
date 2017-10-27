@@ -1,0 +1,85 @@
+version=52;
+center[]={1235.3982,15.038414,1079.5945};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.473877,0,2.2678223};
+			angles[]={0,6.279108,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="pad";
+		};
+		id=184;
+		type="Land_HelipadEmpty_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.4731445,0.58327579,-2.2684326};
+			angles[]={0.0010918301,4.6784773,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="this addaction [""<t color=""""#00FF00"""">"" +""Spawn Helicopter"", ""7R\HeloRespawn.sqf"",[""RHS_UH60M"",pad]];";
+		};
+		id=582;
+		type="Land_InfoStand_V2_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

@@ -1,0 +1,84 @@
+version=52;
+center[]={3993.709,5,1014.8318};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-14.356201,0,1.43573};
+		};
+		side="Empty";
+		class Attributes
+		{
+			init="null = [this,""rhs_ka60_c"",""RODEO 1-1"",0,[""rhs_pilot_combat_heli"", ""rhs_pilot_combat_heli""]] execVM ""7R\REINF\ReinfInit.sqf""";
+			name="reinfpad1";
+		};
+		id=99;
+		type="Land_HelipadEmpty_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={14.355957,0,-1.435791};
+		};
+		side="Empty";
+		class Attributes
+		{
+			init="null = [this,""RHS_Mi8mt_vdv"",""RODEO 1-2"",0,[""rhs_pilot_combat_heli"", ""rhs_pilot_combat_heli""]] execVM ""7R\REINF\ReinfInit.sqf""";
+			name="reinfpad2";
+		};
+		id=100;
+		type="Land_HelipadEmpty_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

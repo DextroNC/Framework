@@ -1,0 +1,28 @@
+version=52;
+center[]={5975.7964,2.9512041e+015,2511.6123};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={-0.78271484,0,7.3574219};
+		name="Silver_1";
+		text="Silver 1";
+		type="mil_dot";
+		colorName="ColorWhite";
+		id=131;
+		atlOffset=2.9512041e+015;
+	};
+	class Item1
+	{
+		dataType="Marker";
+		position[]={0.78271484,0,-7.3574219};
+		name="Gold_1";
+		text="Gold 1";
+		type="mil_dot";
+		colorName="ColorYellow";
+		id=133;
+		atlOffset=2.9512041e+015;
+	};
+};

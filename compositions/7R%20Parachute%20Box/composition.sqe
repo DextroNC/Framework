@@ -1,0 +1,165 @@
+version=53;
+center[]={4966.2881,8.9683102e-044,9874.4766};
+class items
+{
+	items=4;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.3549805,339.28406,0.4765625};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""loadouts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Altimeter"", ""loadouts\7R_EQ.sqf"",[""ACE_Altimeter""]]; " \n "";
+			disableSimulation=1;
+		};
+		id=445;
+		type="Box_NATO_Support_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.1860352,339.58026,-0.99023438};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="this addAction [""<t color='#FF0000'>Start Paradrop All Near Units</t>"",fw_fnc_paraDrop, [""paraDZ"",""paraStart"",2500,""Windrunner 1-1"",false], 0, true, true, """", ""leader player == player"", 3]; ";
+			disableSimulation=1;
+		};
+		id=446;
+		type="Land_InfoStand_V2_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item2
+	{
+		dataType="Marker";
+		position[]={1.2861328,0,1.53125};
+		name="paraDZ";
+		text="Drop Zone";
+		type="mil_start";
+		colorName="ColorWEST";
+		id=447;
+		atlOffset=-339;
+	};
+	class Item3
+	{
+		dataType="Marker";
+		position[]={1.2539063,0,-1.0195313};
+		name="paraStart";
+		text="Para Plane Start Marker";
+		type="Empty";
+		colorName="default";
+		id=448;
+		atlOffset=-339;
+	};
+};

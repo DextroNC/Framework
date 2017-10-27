@@ -1,0 +1,112 @@
+version=53;
+center[]={4945.3535,339,9946.3125};
+class items
+{
+	items=7;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.096679688,0,0.18261719};
+			angles[]={-0,6.2784142,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=373;
+		type="Land_HelipadSquare_F";
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.4726563,0.11068726,-5.5234375};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=374;
+		type="PortableHelipadLight_01_green_F";
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.7885742,0.11068726,-5.4716797};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=375;
+		type="PortableHelipadLight_01_green_F";
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.6738281,0.11068726,5.8095703};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=376;
+		type="PortableHelipadLight_01_green_F";
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.5341797,0.11068726,5.7685547};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=377;
+		type="PortableHelipadLight_01_green_F";
+	};
+	class Item5
+	{
+		dataType="Trigger";
+		position[]={-0.016601563,1.427002,0.15039063};
+		class Attributes
+		{
+			condition="player == driver (objectParent player) && vehicle player in thisList";
+			onActivation="nul = [player,thisTrigger] spawn fw_fnc_repairStation;";
+			sizeA=6;
+			sizeB=6;
+			sizeC=2;
+			repeatable=1;
+			activationBy="ANY";
+			isRectangle=1;
+		};
+		id=378;
+		type="EmptyDetector";
+		atlOffset=1.427002;
+	};
+	class Item6
+	{
+		dataType="Marker";
+		position[]={-0.53808594,7.4300438e+014,-0.91796875};
+		name="marker_15";
+		text="Repair";
+		type="mil_dot";
+		colorName="ColorWEST";
+		id=379;
+		atlOffset=7.4300438e+014;
+	};
+};

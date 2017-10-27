@@ -1,0 +1,22 @@
+version=52;
+center[]={11453.322,7.5644989e+009,8239.1348};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={0,0,0};
+		name="marker_0";
+		text="ao";
+		markerType="RECTANGLE";
+		type="rectangle";
+		colorName="ColorRed";
+		fillName="Border";
+		a=1500;
+		b=1500;
+		drawBorder=1;
+		id=0;
+		atlOffset=7.5644989e+009;
+	};
+};

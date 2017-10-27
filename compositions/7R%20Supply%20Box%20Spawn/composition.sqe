@@ -1,0 +1,122 @@
+version=53;
+center[]={4512.1675,0,10685.629};
+class items
+{
+	items=6;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.4912109,339.11066,-5.4306641};
+			angles[]={-0,0.0042870878,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=60;
+		type="PortableHelipadLight_01_yellow_F";
+		atlOffset=-3.0517578e-005;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.4814453,339.11069,5.4970703};
+			angles[]={-0,0.0042870878,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=61;
+		type="PortableHelipadLight_01_yellow_F";
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.5322266,339.11069,5.4433594};
+			angles[]={-0,0.0042870878,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=62;
+		type="PortableHelipadLight_01_yellow_F";
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.5102539,339.11066,-5.4873047};
+			angles[]={-0,0.0042870878,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=63;
+		type="PortableHelipadLight_01_yellow_F";
+		atlOffset=-3.0517578e-005;
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.020019531,339,0.009765625};
+			angles[]={0,3.1436746,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="slingpad";
+		};
+		id=64;
+		type="Land_HelipadEmpty_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item5
+	{
+		dataType="Marker";
+		position[]={-0.090820313,0,-0.0390625};
+		name="supplies";
+		text="Supplies";
+		type="mil_pickup";
+		colorName="ColorWEST";
+		id=65;
+		atlOffset=-339;
+	};
+};
