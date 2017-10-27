@@ -1,0 +1,3 @@
+
+this addaction ["<t color=""#00FF00"">" +"Silencer 556", "loadouts\7R_EQ.sqf",["hlc_muzzle_556NATO_KAC"]];
+this addaction ["<t color=""#00FF00"">" +"Silencer AR", "loadouts\7R_EQ.sqf",["muzzle_snds_H_MG_blk_F"]];

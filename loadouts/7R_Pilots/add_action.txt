@@ -1,0 +1,2 @@
+this addaction ["Helicopter Pilot", "loadouts\pilot.sqf"];
+this addaction ["Helicopter Crew", "loadouts\pilot_crew.sqf"];
