@@ -13,7 +13,7 @@
 	Use with a terminal and addActions.
 	
 	Example:	
-	this addAction ["Teleport to Marker",{nul = [1,"MARKERNAME"] spawn fw_fnc_teleport} [], 0, true, true, "","",3];     
+	this addAction ["Teleport to Marker", fw_fnc_teleport, [1,"MARKERNAME"], 0, true, true, "","",5];     
 */
 
 // Parameter Init
