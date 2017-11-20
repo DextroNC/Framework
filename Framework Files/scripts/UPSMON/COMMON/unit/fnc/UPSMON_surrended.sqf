@@ -23,18 +23,7 @@ if ((round (random 100)) <= UPSMON_ROGUE) then {_rogue = true};
 	If (alive _x) then
 	{
 		if (_rogue) then {
-			_x disableAI "SUPPRESSION";
-			_x disableAI "AUTOCOMBAT";
-			_x disableAI "COVER";
-			_x setBehaviour "AWARE";
-		[{
-			Params ["_args","_handle"];
-			_unit = _args select 0;
-			if (!alive _unit) exitWith {[_handle] call CBA_fnc_removePerFrameHandler;};
-			_near = _x findNearestEnemy _x;
-			if (isNull _near) then {_near = selectRandom allPlayers};
-			_x doMove (position _near);	
-		} , 5, [_x]] call CBA_fnc_addPerFrameHandler;
+			[_x] call fw_fnc_rogueCharge;
 		} else {
 			[_x, true] call ACE_captives_fnc_setSurrendered;
 			[{

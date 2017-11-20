@@ -31,8 +31,12 @@ UPSMON_ARTILLERY_EAST_FIRE = false; //set to true for doing east to fire //ToDo 
 UPSMON_ARTILLERY_WEST_FIRE = false; //set to true for doing west to fire
 UPSMON_ARTILLERY_GUER_FIRE = false; //set to true for doing resistance to fire
 
-// Can the group surrender?
+// Rampage (all AI near a player will relentlessly charge them)
+UPSMON_RAMPAGE = false;
+
+// Can the group surrender? Rogue Units do not surrender, they charge out of desperation.
 UPSMON_SURRENDER = true;
+UPSMON_ROGUE = 10;
 
 // Chance of Surrender/100
 UPSMON_WEST_SURRENDER = 20;
@@ -44,7 +48,7 @@ UPSMON_FLEE = 0.5;
 
 // Suppression Value which considers the Unit being Suppressed
 UPSMON_SUP = 0.5;
-UPSMON_ROGUE = 10;
+
 
 // Chance of Retreating/100
 UPSMON_WEST_RETREAT = 0;

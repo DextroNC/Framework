@@ -125,6 +125,13 @@ while {true} do
 				_enicapacity = _Situation select 1;
 				_typeofeni = _Situation select 2;
 				
+				// Rampage
+				if (UPSMON_RAMPAGE) exitWith {
+					_grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
+					[_grp] call fw_fnc_rampageCharge;
+				};
+				If (_grp getvariable ["UPSMON_Grpmission",""] == "RAMPAGE") exitwith {[_grp] call fw_fnc_rampageCharge;};
+				
 				//Retreat
 				[_grp,_dist,_ratio,_supstatus,_unitsneedammo,_typeofgrp,_attackpos,_assignedvehicle] call UPSMON_IsRetreating;
 			

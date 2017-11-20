@@ -92,4 +92,9 @@
 		class missionManager{};
 		class systemInit{preInit = 1;};
 	};
+	class AI {
+		file = "7R\AI";
+		class rampageCharge{};
+		class rogueCharge{};
+	};
 };
