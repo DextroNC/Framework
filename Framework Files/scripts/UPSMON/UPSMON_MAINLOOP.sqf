@@ -127,10 +127,9 @@ while {true} do
 				
 				// Rampage
 				if (UPSMON_RAMPAGE) exitWith {
-					_grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
 					[_grp] call fw_fnc_rampageCharge;
 				};
-				If (_grp getvariable ["UPSMON_Grpmission",""] == "RAMPAGE") exitwith {[_grp] call fw_fnc_rampageCharge;};
+				If (_grp getvariable ["UPSMON_Grpmission",""] == "RAMPAGE") exitwith {};
 				
 				//Retreat
 				[_grp,_dist,_ratio,_supstatus,_unitsneedammo,_typeofgrp,_attackpos,_assignedvehicle] call UPSMON_IsRetreating;

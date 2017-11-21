@@ -9,6 +9,8 @@
 // Parameter Init
 params ["_grp"];
 
+_grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
+
 {
 	_x disableAI "SUPPRESSION";
 	_x disableAI "AUTOCOMBAT";
@@ -20,7 +22,7 @@ _grp setCombatMode "RED";
 [{
 	Params ["_args","_handle"];
 	_grp = _args select 0;
-	if (!alive _grp) exitWith {
+	if (!alive _grp || !(_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE")) exitWith {
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
 	_nearestPlayer = [position leader _grp, allPlayers, 350, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
