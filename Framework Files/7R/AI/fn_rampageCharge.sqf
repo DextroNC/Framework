@@ -18,17 +18,24 @@ _grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
 
 _grp setBehaviour "AWARE";
 _grp setCombatMode "RED";
+_grp setSpeedMode "FULL";
 
 [{
 	Params ["_args","_handle"];
 	_grp = _args select 0;
-	if (!alive _grp || !(_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE")) exitWith {
+	_nearestPlayer = [];
+	if (count(waypoints _grp) > 0) then {
+		{
+			deleteWaypoint ((waypoints _grp) select 0);
+		}forEach (waypoints _grp);
+	};
+	if ({alive _x} count (units _grp) < 2 || !(_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE")) exitWith {
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
 	_nearestPlayer = [position leader _grp, allPlayers, 350, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
-	if (isNull _nearestPlayer) then {
+	if (count _nearestPlayer == 0) then {
 		[_grp, position leader _grp] call BIS_fnc_taskAttack;
 	} else {
-		[_grp, position leader _nearestPlayer] call BIS_fnc_taskAttack;
+		[_grp, position (selectRandom _nearestPlayer)] call BIS_fnc_taskAttack;
 	};
-} , 5, [_grp]] call CBA_fnc_addPerFrameHandler;
+} , 15, [_grp]] call CBA_fnc_addPerFrameHandler;

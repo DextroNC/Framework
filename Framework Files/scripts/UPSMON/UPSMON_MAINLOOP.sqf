@@ -5,6 +5,13 @@ while {true} do
 		If (!IsNull _x) then
 		{
 			_grp = _x;
+			
+			// Rampage
+			If (_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE") exitwith {};
+			if (UPSMON_RAMPAGE) exitWith {
+				[_grp] call fw_fnc_rampageCharge;
+			};
+			
 		
 			_members = (_grp getvariable "UPSMON_Origin") select 4;
 
@@ -124,12 +131,6 @@ while {true} do
 				_ratio = _Situation select 0;
 				_enicapacity = _Situation select 1;
 				_typeofeni = _Situation select 2;
-				
-				// Rampage
-				if (UPSMON_RAMPAGE) exitWith {
-					[_grp] call fw_fnc_rampageCharge;
-				};
-				If (_grp getvariable ["UPSMON_Grpmission",""] == "RAMPAGE") exitwith {};
 				
 				//Retreat
 				[_grp,_dist,_ratio,_supstatus,_unitsneedammo,_typeofgrp,_attackpos,_assignedvehicle] call UPSMON_IsRetreating;
