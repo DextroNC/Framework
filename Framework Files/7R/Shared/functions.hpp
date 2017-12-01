@@ -96,5 +96,6 @@
 		file = "7R\AI";
 		class rampageCharge{};
 		class rogueCharge{};
+		class rampageArea{};
 	};
 };
