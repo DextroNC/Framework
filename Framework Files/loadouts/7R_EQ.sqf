@@ -32,6 +32,7 @@ if (_type isEqualTo "ItemGPS") then {_unit linkItem "ItemGPS"};
 //USA - NATO
 
 //1x Sights
+if (_type isEqualTo "RH_eotexps3") then {_unit addPrimaryWeaponItem "RH_eotexps3"};
 if (_type isEqualTo "rhsusf_acc_compm4") then {_unit addPrimaryWeaponItem "rhsusf_acc_compm4"};
 if (_type isEqualTo "rhsusf_acc_eotech_552") then {_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552"};
 if (_type isEqualTo "rhsusf_acc_eotech_xps3") then {_unit addPrimaryWeaponItem "rhsusf_acc_eotech_xps3"};
@@ -47,6 +48,7 @@ if (_type isEqualTo "FHQ_optic_MicroCCO") then {_unit addPrimaryWeaponItem "FHQ_
 if (_type isEqualTo "FHQ_optic_MicroCCO_low") then {_unit addPrimaryWeaponItem "FHQ_optic_MicroCCO_low"};
 if (_type isEqualTo "FHQ_optic_AC11704") then {_unit addPrimaryWeaponItem "FHQ_optic_AC11704"};
 if (_type isEqualTo "RKSL_optic_RMR_MS19") then {_unit addPrimaryWeaponItem "RKSL_optic_RMR_MS19"};
+if (_type isEqualTo "rhsusf_acc_T1_high") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_high"};
 
 //Special Optics DMR
 if (_type isEqualTo "optic_NVS") then {_unit addPrimaryWeaponItem "optic_NVS"};
@@ -54,6 +56,8 @@ if (_type isEqualTo "RH_ta01nsn") then {_unit addPrimaryWeaponItem "RH_ta01nsn"}
 if (_type isEqualTo "rhsusf_acc_ACOG3") then {_unit addPrimaryWeaponItem "rhsusf_acc_ACOG3"};
 if (_type isEqualTo "ACE_optic_Arco_2D") then {_unit addPrimaryWeaponItem "ACE_optic_Arco_2D"};
 if (_type isEqualTo "optic_DMS") then {_unit addPrimaryWeaponItem "optic_DMS"};
+if (_type isEqualTo "RH_shortdot") then {_unit addPrimaryWeaponItem "RH_shortdot"};
+if (_type isEqualTo "FHQ_optic_VCOG") then {_unit addPrimaryWeaponItem "FHQ_optic_VCOG"};
 if (_type isEqualTo "ACE_optic_MRCO_2D") then {_unit addPrimaryWeaponItem "ACE_optic_MRCO_2D"};
 if (_type isEqualTo "RH_eothhs1") then {_unit addPrimaryWeaponItem "RH_eothhs1"};
 if (_type isEqualTo "rhsusf_acc_ACOG_RMR") then {_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR"};
@@ -76,16 +80,23 @@ if (_type isEqualTo "muzzle_snds_H_MG_blk_F") then {_unit addPrimaryWeaponItem "
 if (_type isEqualTo "O_UavTerminal") then {_unit linkItem "O_UavTerminal"};
 //1x
 if (_type isEqualTo "rhs_acc_rakursPM") then {_unit addPrimaryWeaponItem "rhs_acc_rakursPM"};
-if (_type isEqualTo "RH_eotexps3") then {_unit addPrimaryWeaponItem "RH_eotexps3"};
+if (_type isEqualTo "rhs_acc_1p87") then {_unit addPrimaryWeaponItem "rhs_acc_1p87"};
+if (_type isEqualTo "rhs_acc_ekp8_18") then {_unit addPrimaryWeaponItem "rhs_acc_ekp8_18"};
 if (_type isEqualTo "RH_LTdocterl") then {_unit addPrimaryWeaponItem "RH_LTdocterl"};
-if (_type isEqualTo "RH_barska_rds") then {_unit addPrimaryWeaponItem "RH_barska_rds"};
+if (_type isEqualTo "RH_barska_rdsRH_barska_rds") then {_unit addPrimaryWeaponItem "RH_barska_rds"};
 if (_type isEqualTo "FHQ_optic_AC12136") then {_unit addPrimaryWeaponItem "FHQ_optic_AC12136"};
 if (_type isEqualTo "FHQ_optic_MARS") then {_unit addPrimaryWeaponItem "FHQ_optic_MARS"};
+if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_low"};
 
-//Standard Sights
+// 3x
+if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_low"};
+
+
+//Standard Sights Russian
 if (_type isEqualTo "rhs_acc_1p63") then {_unit addPrimaryWeaponItem "rhs_acc_1p63"};
 if (_type isEqualTo "rhs_acc_ekp1") then {_unit addPrimaryWeaponItem "rhs_acc_ekp1"};
 if (_type isEqualTo "rhs_acc_pkas") then {_unit addPrimaryWeaponItem "rhs_acc_pkas"};
+if (_type isEqualTo "rhs_acc_ekp8_02") then {_unit addPrimaryWeaponItem "rhs_acc_ekp8_02"};
 
 //Glasses
 if (_type isEqualTo "rhs_ess_black") then {_unit addgoggles "rhs_ess_black"};

@@ -32,7 +32,7 @@ _grp setSpeedMode "FULL";
 	if ({alive _x} count (units _grp) < 2 || !(_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE")) exitWith {
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
-	_nearestPlayer = [position leader _grp, allPlayers, 350, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
+	_nearestPlayer = [position leader _grp, allPlayers, UPSMON_RAMPAGE_DISTANCE, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
 	if (count _nearestPlayer == 0) then {
 		[_grp, position leader _grp] call BIS_fnc_taskAttack;
 	} else {
