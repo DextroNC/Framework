@@ -30,7 +30,7 @@ if (_static) then {
 };
 
 // Start Message
-["SideChatSS", [[SR_Side, "HQ"], "Paradrop Insertion started..."]] spawn CBA_fnc_globalEvent; 
+[[SR_Side, "HQ"],"Paradrop Insertion started..."] remoteExec ["sideChat", 0];
 
 // Calculate Spawn and End Point
 _targetPos = markerPos _target;
@@ -111,7 +111,7 @@ if (_static) then {
 // Check if all Cargo is dropped and send Plane to End Pos
 [{(count crew (_this select 0))< 3}, {
 	Params ["_v", "_wpPos"];
-	["SideChatSS", [[playerSide, "HQ"], "All units dropped, Out."]] spawn CBA_fnc_globalEvent; 
+	[[SR_Side, "HQ"],"All units dropped, Out."] remoteExec ["sideChat", 0];
 	_v animate ["Door_1_source",0];
 	_v doMove _wpPos;
 }, [_v,_wpPos]] call CBA_fnc_waitUntilAndExecute;
