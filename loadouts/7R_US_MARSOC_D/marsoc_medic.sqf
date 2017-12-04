@@ -22,17 +22,16 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_corpsman";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+_unit addVest "milgp_v_mmac_medic_belt_CB";
+for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
-_unit addBackpack "VSM_OGA_Backpack_Kitbag";
+_unit addBackpack "rhsusf_assault_eagleaiii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "SR_MAK";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
-_unit addHeadgear "rhsusf_opscore_mar_ut_pelt";
+_unit addHeadgear "milgp_h_opscore_05_khk_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -49,8 +48,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 9 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

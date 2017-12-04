@@ -32,7 +32,7 @@ _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "SmokeShellGreen";
 _unit addItemToBackpack "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhs_6b7_1m_bala1_flora";
+_unit addHeadgear "rhs_6b7_1m_bala2_flora";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_ak103_zenitco01_b33";

@@ -30,9 +30,11 @@ if (_type == 1) then {
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
 	_box addWeaponcargoGlobal ["UK3CB_BAF_NLAW_Launcher", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];  
-	_box additemcargoGlobal ["SmokeShell", 18];  
+	_box additemcargoGlobal ["SmokeShell", 28];  
 	_box additemcargoGlobal ["SmokeShellGREEN", 2];
-	_box additemcargoGlobal ["SmokeShellRed", 2];    
+	_box additemcargoGlobal ["SmokeShellRed", 2];  
+	_box additemcargoGlobal ["SmokeShellBlue", 2];    
+	_box additemcargoGlobal ["SmokeShellOrange", 2];      
 	_box additemcargoGlobal ["SR_HE_Pack", 4];  
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];

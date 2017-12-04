@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_M81_Crye_od_pants_Camo";
+_unit forceAddUniform "SR_WDL_CombatUniform_Full";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -22,24 +22,24 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_light";
+_unit addVest "milgp_v_mmac_assaulter_belt_cb";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "DemoCharge_Remote_Mag";};
 
-_unit addBackpack "VSM_OGA_Backpack_Kitbag";
+_unit addBackpack "rhsusf_assault_eagleaiii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhsusf_opscore_ut_pelt";
+_unit addHeadgear "milgp_h_opscore_02_RGR_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_mk18";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+_unit addWeapon "rhs_weap_mk18_wd";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
@@ -51,8 +51,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 7 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 5 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

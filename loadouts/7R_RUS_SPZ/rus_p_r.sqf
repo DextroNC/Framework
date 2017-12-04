@@ -14,25 +14,25 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_gorka_r_y";
+_unit forceAddUniform "rhs_uniform_gorka_r_g";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_KSF1";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
-_unit addVest "rhsusf_spc_rifleman";
+_unit addVest "rhs_6b23_digi_6sh92_spetsnaz2";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
-_unit addBackpack "VSM_OGA_Backpack_Kitbag";
+_unit addBackpack "B_Carryall_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhsusf_lwh_helmet_marpatwd";
-_unit addGoggles "rhs_ess_black";
+_unit addHeadgear "rhs_6b7_1m_bala1_flora";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+_unit addWeapon "rhs_weap_ak74m_zenitco01_b33";
+_unit addPrimaryWeaponItem "rhs_acc_dtk";
+_unit addPrimaryWeaponItem "rhs_acc_2dpZenit_ris";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
 _unit addWeapon "rhs_weap_pb_6p9";
 _unit addWeapon "Binocular";
@@ -43,8 +43,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_no_tracers";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_AK_no_tracers";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

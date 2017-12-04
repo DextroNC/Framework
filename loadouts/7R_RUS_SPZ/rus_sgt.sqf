@@ -45,7 +45,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_no_tracers";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_30Rnd_545x39_AK_green";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_30Rnd_545x39_AK_no_tracers";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";

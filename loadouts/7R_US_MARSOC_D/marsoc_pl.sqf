@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_AOR1_Crye_SS_Camo";
+_unit forceAddUniform "VSM_AOR1_Crye_SS_tan_shirt_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -22,24 +22,25 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_squadleader";
+_unit addVest "milgp_v_mmac_teamleader_belt_CB";
 _unit addItemToVest "SmokeShell";
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 8 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 4 do {_unit addItemToVest "1Rnd_Smoke_Grenade_shell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "1Rnd_SmokeRed_Grenade_shell";};
+_unit addItemToVest "ACE_HuntIR_monitor";
 
-_unit addBackpack "rhsusf_assault_eagleaiii_coy";
+_unit addBackpack "milgp_bp_Pointman_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "ACE_HuntIR_monitor";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
-_unit addHeadgear "rhsusf_mich_bare_norotos_alt_tan";
+
+_unit addHeadgear "milgp_h_opscore_02_goggles_CB_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_m203s_d";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
 _unit addWeapon "ACE_Vector";

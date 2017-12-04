@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_M81_Crye_Camo";
+_unit forceAddUniform "SR_WDL_CombatUniform_Full";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -22,15 +22,15 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_light";
+_unit addVest "milgp_v_jpc_marksman_belt_cb";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 
-_unit addBackpack "rhsusf_assault_eagleaiii_coy";
+_unit addBackpack "milgp_bp_Tomahawk_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "RH_anpvs4";
-_unit addHeadgear "rhsusf_opscore_paint_pelt";
+_unit addHeadgear "milgp_h_opscore_01_RGR_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -48,8 +48,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "20Rnd_762x51_Mag";};
-for "_i" from 1 to 7 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "20Rnd_762x51_Mag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

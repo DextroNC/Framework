@@ -22,7 +22,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_corpsman";
+_unit addVest "milgp_v_mmac_medic_cb";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 
 _unit addBackpack "VSM_AOR1_carryall";
@@ -30,7 +30,7 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_MAK";};
 _unit addItemToBackpack "SR_BloodIV_Pack";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
-_unit addHeadgear "rhsusf_mich_bare_norotos_alt_tan";
+_unit addHeadgear "milgp_h_opscore_05_CB_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
