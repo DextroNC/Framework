@@ -22,24 +22,24 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_squadleader";
+_unit addVest "milgp_v_mmac_assaulter_belt_cb";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 
-_unit addBackpack "VSM_AOR1_carryall";
+_unit addBackpack "VSM_AOR1_Backpack_Kitbag";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhsusf_mich_bare_norotos_alt_tan";
+_unit addHeadgear "milgp_h_opscore_05_goggles_CB_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "SMA_HK417vfg";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addWeapon "SPS_hk417_16_vfg_fde_f";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
 _unit addWeapon "ACE_Vector";
@@ -50,8 +50,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 10 do {_unit addItemToVest "20Rnd_762x51_Mag";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
+for "_i" from 1 to 14 do {_unit addItemToVest "20Rnd_762x51_Mag";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
 
 
 _unit addItemToUniform "ACRE_PRC343";

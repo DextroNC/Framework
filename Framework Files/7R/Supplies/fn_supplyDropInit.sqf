@@ -22,24 +22,22 @@ if (isNil "SupplyDropAmmo") then {SupplyDropAmmo = 5; publicVariable "SupplyDrop
 
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (SupplyDropLock) exitWith {
-	["SideChatSS", [[SR_Side, "HQ"], "Negative: No Supply Drop available. Other Missions in progress"]] call CBA_fnc_globalEvent; 
+	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Other Missions in progress."] remoteExec ["sideChat", 0];
 };
 if (SupplyDropAmmo <= 0) exitWith {
-	["SideChatSS", [[SR_Side, "HQ"], "Negative: No Supply Drop available. Out of Resources."]] call CBA_fnc_globalEvent; 
+	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Out of Resources."] remoteExec ["sideChat", 0];
 };
 if (_target isEqualto [0,0,0]) exitWith {
-	["SideChatSS", [[SR_Side, "HQ"], "No Supply Drop Zone designated."]] call CBA_fnc_globalEvent; 
+	[[SR_Side, "HQ"],"No Supply Drop Zone designated."] remoteExec ["sideChat", 0];
 };
 
 // Lock
 SupplyDropLock = true;
 publicVariable "SupplyDropLock";
 
-// Confirmation Message
-["SideChatSS", [[SR_Side, "HQ"], "Confirmation: Supply Drop en route to Grid " + (mapGridPosition _target) + "."]] call CBA_fnc_globalEvent; 
-
-// Combat Log
+// Confirmation Message + Combat Log
 _str = str(_amount) + "x Supply Drop to Grid " + (mapGridPosition _target) + ".";
+[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
 
 // Calculating Spawn Point
@@ -95,7 +93,7 @@ _dropdist = 20 + (15 * _amount);
 waitUntil {(_planeacc distance2D _wp) < _dropdist};
 _planeacc doMove _wpPos;
 
-["SideChatSS", [[SR_Side, "HQ"], "Supply Drop delivered."]] call CBA_fnc_globalEvent; 
+[[SR_Side, "HQ"],"Supply Drop delivered."] remoteExec ["sideChat", 0];
 
 // Close Ramp
 _planeacc animate ["ramp_bottom",0];
@@ -117,4 +115,4 @@ SupplyDropAmmo = SupplyDropAmmo - _amount;
 publicVariable 'SupplyDropAmmo';
 
 // End Message
-["SideChatSS", [[SR_Side, "HQ"], "Supply Drop Mission completed. " + str (SupplyDropAmmo) + " Drops left."]] call CBA_fnc_globalEvent; 
+[[SR_Side, "HQ"],"Supply Drop Mission completed."] remoteExec ["sideChat", 0];

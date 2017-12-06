@@ -22,20 +22,20 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_squadleader";
+_unit addVest "milgp_v_mmac_grenadier_belt_CB";
 _unit addItemToVest "SmokeShell";
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 12 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 
-_unit addBackpack "fatpack_coy";
+_unit addBackpack "rhsusf_falconii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhsusf_opscore_mar_ut_pelt";
+_unit addHeadgear "milgp_h_opscore_02_goggles_khk_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";

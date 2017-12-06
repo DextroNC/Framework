@@ -9,13 +9,11 @@ _count = _this select 1;
 _start = getpos (driver _unit);
 _pos = getmarkerpos "REINF";
 if (_pos isEqualTo [0,0,0]) exitWith {
-	["SideChatSS", [_unit, "Reinforcements not available, no Landing Zone designated."]] call CBA_fnc_globalEvent; 
+	[[SR_Side, "HQ"],"Reinforcements not available, no Landing Zone designated."] remoteExec ["sideChat", 0];
 };
 
-_amount = count (crew _unit) - (count (units group _unit));
-["SideChatSS", [_unit, "En route with " + str (_amount) + " times Reinforcements to grid " + (mapGridPosition _pos) + " ."]] call CBA_fnc_globalEvent; 
-
-_str = "REINF Insertion: " + str (_count) + " Reinforments to Grid " + (mapGridPosition _pos) + ".";
+_str = "REINF Insertion: " + str (_amount) + " Reinforments to Grid " + (mapGridPosition _pos) + ".";
+[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
 
 group _unit setBehaviour "CARELESS";

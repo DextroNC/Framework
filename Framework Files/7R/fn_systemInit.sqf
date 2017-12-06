@@ -18,6 +18,7 @@ ace_medical_poisonKit = true;
 ExfilHelolock = false;
 SupplyDropAmmo = 8;
 ArtilleryCallAmmo = 0;
+CASCallAmmo = 0;
 ace_trenches_trenchSupplies = 0;
 
 // ======================================================================================

@@ -28,9 +28,11 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 3];
 	_box addWeaponcargoGlobal ["rhs_weap_rpg26", 3];
 	_box additemcargoGlobal ["rhs_mag_rgd5", 6];  
-	_box additemcargoGlobal ["SmokeShell", 18];  
+	_box additemcargoGlobal ["SmokeShell", 28];  
 	_box additemcargoGlobal ["SmokeShellGREEN", 2];
-	_box additemcargoGlobal ["SmokeShellRed", 2];    
+	_box additemcargoGlobal ["SmokeShellRed", 2];  
+	_box additemcargoGlobal ["SmokeShellBlue", 2];    
+	_box additemcargoGlobal ["SmokeShellOrange", 2]; 
 	_box addmagazinecargoGlobal ["rhs_VOG25", 16];  
 	_box addmagazinecargoGlobal ["rhs_GRD40_White", 8];  
 	_box addmagazinecargoGlobal ["rhs_GRD40_Red", 8];  

@@ -36,6 +36,7 @@
 	{
 		file = "7R\FireSupport";
 		class artillery{};
+		class CAS{};
 	};
 	class supply
 	{

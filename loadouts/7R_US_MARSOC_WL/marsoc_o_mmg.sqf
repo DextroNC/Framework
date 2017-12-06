@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_M81_Crye_Camo";
+_unit forceAddUniform "SR_WDL_CombatUniform_Full";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "SR_PAK";
@@ -22,11 +22,11 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_mg";
+_unit addVest "milgp_v_mmac_hgunner_belt_cb";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 
-_unit addBackpack "rhsusf_falconii_coy";
+_unit addBackpack "milgp_bp_hydration_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt_semi";
 _unit addGoggles "rhs_googles_clear";
@@ -43,8 +43,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_100Rnd_762x51";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
+for "_i" from 1 to 5 do {_unit addItemToVest "rhsusf_100Rnd_762x51";};
+for "_i" from 1 to 1 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

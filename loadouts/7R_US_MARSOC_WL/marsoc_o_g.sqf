@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_M81_Crye_Camo";
+_unit forceAddUniform "SR_WDL_CombatUniform_Full";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -22,19 +22,19 @@ _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
-_unit addVest "rhsusf_spc_light";
+_unit addVest "milgp_v_mmac_grenadier_belt_CB";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 12 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 _unit addBackpack "rhsusf_falconii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII_M203";
+_unit addWeapon "rhs_weap_m4a1_blockII_M203_wd";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
@@ -46,8 +46,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 7 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 7 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 14 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
