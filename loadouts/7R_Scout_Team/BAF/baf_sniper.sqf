@@ -50,8 +50,8 @@ _unit addItemToUniform "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
-	_new setUnitTrait ["camouflageCoef",1];
+	_unit linkItem "NVGoggles_OPFOR";
+	_unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Sniper", true];
 _unit setVariable ["ace_isEngineer",0, true];

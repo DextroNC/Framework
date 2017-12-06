@@ -53,8 +53,8 @@ _unit addItemToBackpack "ACRE_PRC117F";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
-	_new setUnitTrait ["camouflageCoef",1];
+	_unit linkItem "NVGoggles_OPFOR";
+	_unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Spotter", true];
 _unit setVariable ["ace_isEngineer",0, true];

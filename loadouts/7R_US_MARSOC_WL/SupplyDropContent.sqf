@@ -26,7 +26,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 12];  
 	_box addmagazinecargoGlobal ["tf47_m3maaws_HEDP", 3];  
 	_box addmagazinecargoGlobal ["tf47_m3maaws_HE", 3];
-	_box addmagazinecargoGlobal ["RH_20Rnd_57x28_FN", 4];
+	_box addmagazinecargoGlobal ["RH_17Rnd_9x19_g17", 4];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_300winmag_xm2010", 4];
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
 	_box addWeaponcargoGlobal ["rhs_weap_m72a7", 1];

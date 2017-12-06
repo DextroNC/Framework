@@ -57,7 +57,7 @@ if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
 	_unit setUnitTrait ["camouflageCoef",0.5];
 };
-_unit setVariable ["SR_Class","SGT", true];
+_unit setVariable ["SR_Class","RTO", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 
