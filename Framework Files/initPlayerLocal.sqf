@@ -35,8 +35,13 @@ _EZM = ["7R_EZ","Designate Extraction Point","",{null = ["EZ", "EZ", "ColorBlue"
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_Marker"], _EZM] call ace_interact_menu_fnc_addActionToClass;
 _SDM = ["7R_SupplyDrop","Mark Supply DZ","",{null = ["SupplyDrop", "Supply DZ", "ColorBlue", "hd_join", false] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _SDM] call ace_interact_menu_fnc_addActionToClass;
+
 _ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.75,0.75]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _ATM] call ace_interact_menu_fnc_addActionToClass;
+
+_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["cas-t", "CAS-T", "ColorRed", "hd_destroy", false, [0.75,0.75]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
+
 
 _headerSupply = ["7R_SupplyH","Call Supplies","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
@@ -62,7 +67,7 @@ _CVA6 =  ["7R_SupplyDropAir","Call Special Equipment Supply Drop","7R\Supplies\7
 _EZC = ["7R_EZ","Call Extraction","",{null = ["EZ","STARTSPAWN", "RHS_CH_47F", "Eagle 1-1", 0,"dropoff"] spawn fw_fnc_exfilCall;},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
-_headerArtillery = ["7R_ArtyH","Call Artillery","",{},_isLeader] call ace_interact_menu_fnc_createAction;
+_headerArtillery = ["7R_ArtyH","Call Fire Support","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerArtillery] call ace_interact_menu_fnc_addActionToClass;
 
 _headerArty = ["7R_ArtilleryHeader","Artillery Fire Mission","",{},_isLeader] call ace_interact_menu_fnc_createAction;
@@ -74,6 +79,9 @@ _ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnance
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA5] call ace_interact_menu_fnc_addActionToClass;
 _ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",7,75,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
+
+_CAS1 = ["7R_CAS","Call CAS","",{null = ["cas-t",3,"B_Plane_CAS_01_F",0,"STARTSPAWN"] spawn fw_fnc_CAS;},_isLeader] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
 _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","",{},_CSC] call ace_interact_menu_fnc_createAction;

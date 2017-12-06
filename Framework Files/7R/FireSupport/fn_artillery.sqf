@@ -12,7 +12,7 @@
 	ModuleOrdnanceRocket_F 
 	
 	Description:
-	Handles simulated artillery support.
+		Handles simulated artillery support.
 
 	Example:
 	nul = ["ModuleOrdnanceMortar_F","Sh_82mm_AMOS",3,30,35,100] spawn fw_fnc_artillery;
