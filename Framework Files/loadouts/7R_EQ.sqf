@@ -49,6 +49,7 @@ if (_type isEqualTo "FHQ_optic_MicroCCO_low") then {_unit addPrimaryWeaponItem "
 if (_type isEqualTo "FHQ_optic_AC11704") then {_unit addPrimaryWeaponItem "FHQ_optic_AC11704"};
 if (_type isEqualTo "RKSL_optic_RMR_MS19") then {_unit addPrimaryWeaponItem "RKSL_optic_RMR_MS19"};
 if (_type isEqualTo "rhsusf_acc_T1_high") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_high"};
+if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_low"};
 
 //Special Optics DMR
 if (_type isEqualTo "optic_NVS") then {_unit addPrimaryWeaponItem "optic_NVS"};
@@ -86,10 +87,12 @@ if (_type isEqualTo "RH_LTdocterl") then {_unit addPrimaryWeaponItem "RH_LTdocte
 if (_type isEqualTo "RH_barska_rdsRH_barska_rds") then {_unit addPrimaryWeaponItem "RH_barska_rds"};
 if (_type isEqualTo "FHQ_optic_AC12136") then {_unit addPrimaryWeaponItem "FHQ_optic_AC12136"};
 if (_type isEqualTo "FHQ_optic_MARS") then {_unit addPrimaryWeaponItem "FHQ_optic_MARS"};
-if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_low"};
 
 // 3x
-if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsusf_acc_T1_low"};
+if (_type isEqualTo "rhs_acc_1p78") then {_unit addPrimaryWeaponItem "rhs_acc_1p78"};
+if (_type isEqualTo "rhs_acc_nita") then {_unit addPrimaryWeaponItem "rhs_acc_nita"};
+if (_type isEqualTo "rhs_acc_pso1m2") then {_unit addPrimaryWeaponItem "rhs_acc_pso1m2"};
+if (_type isEqualTo "rhs_acc_pso1m21") then {_unit addPrimaryWeaponItem "rhs_acc_pso1m21"};
 
 
 //Standard Sights Russian
