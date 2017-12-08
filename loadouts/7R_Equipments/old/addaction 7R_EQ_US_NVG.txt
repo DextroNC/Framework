@@ -1,1 +1,0 @@
-this addaction ["<t color=""#FF0000"">" +"Night Vision ANPVS 14", "loadouts\7R_EQ.sqf",["rhsusf_ANPVS_14"]];
