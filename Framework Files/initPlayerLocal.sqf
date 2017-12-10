@@ -19,7 +19,7 @@ nul = execVM "briefing.sqf";
 
 // Support System Inits
 
-_isLeader = {(leader player == player)};
+_isLeader = {(leader player == player) || (rank player isEqualTo "SERGEANT")};
 _headerSupport = ["7R_Header","Command Support","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _headerSupport] call ace_interact_menu_fnc_addActionToClass;
 

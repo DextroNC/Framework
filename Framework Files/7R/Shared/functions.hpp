@@ -58,6 +58,11 @@
 		class exfilAction{};
 		class exfilCall{};
 	};
+	class reinf {
+		class reinfInit{};
+		class reinfMove{};
+		class reinfAction};
+	};
 	class Objectives {
 		file = "7R\Objectives";
 		class hvt{};

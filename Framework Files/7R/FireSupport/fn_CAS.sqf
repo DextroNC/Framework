@@ -70,7 +70,9 @@ CASCallAmmo = CASCallAmmo - 1;
 publicVariable "CASCallAmmo";
 deleteMarker _target;
 sleep 5;
-["SideChatSS", [[SR_Side, "IND"], "CAS completed. " + str (CASCallAmmo) + " Strikes left."]] spawn CBA_fnc_globalEvent;
+
+_str = "CAS completed. " + str (CASCallAmmo) + " Strikes left.";
+[[SR_Side, "IND"],_str] remoteExec ["sideChat", 0];
 
 // Lock release to allow new Fire Missions
 CASFireMissionLock = false;
