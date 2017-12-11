@@ -60,7 +60,7 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit setUnitTrait ["camouflageCoef",0.5];
+	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","G", true];
 _unit setVariable ["ace_isEngineer",0, true];

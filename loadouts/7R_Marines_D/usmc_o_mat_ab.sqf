@@ -53,7 +53,7 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
-	_unit setUnitTrait ["camouflageCoef",0.5];
+	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","MATAB", true];
 _unit setVariable ["ace_isEngineer",0, true];

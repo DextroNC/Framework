@@ -55,7 +55,7 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhs_1PN138";
-	_unit setUnitTrait ["camouflageCoef",0.5];
+	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PM", true];
 _unit setVariable ["ace_isEngineer",0, true];
