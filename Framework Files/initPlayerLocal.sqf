@@ -19,7 +19,7 @@ nul = execVM "briefing.sqf";
 
 // Support System Inits
 
-_isLeader = {(leader player == player) || (rank player isEqualTo "SERGEANT")};
+_isLeader = {(leader player == player) || [player] call fw_fnc_isSergeant};
 _headerSupport = ["7R_Header","Command Support","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _headerSupport] call ace_interact_menu_fnc_addActionToClass;
 
@@ -98,3 +98,11 @@ _CS3 = ["7R_SD_Spawn","Fortification Supply Drop","",{nul = [3,slingpad] spawn f
 
 _CS4 = ["7R_SD_Spawn","Special Supply Drop","",{nul = [4,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS4] call ace_interact_menu_fnc_addActionToClass;
+
+// Hacking
+SR_Hack_Area = [];
+if (count SR_Hack_Area != 0) then {
+	_hackC = {({position player inArea _x} count SR_Hack_Area) > 0 && "ARP_Objects_Laptop_M" in items player};
+	_hack = ["7R_Hack","Start Hack","",{[SR_Hack_Area,player] spawn fw_fnc_hackingAction},_hackC] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _hack] call ace_interact_menu_fnc_addActionToClass;
+};

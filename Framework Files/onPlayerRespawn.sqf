@@ -22,6 +22,10 @@ if (_height > 1) then {
 	_new setPosASL [_pos select 0, _pos select 1, _height];
 };
 
+// End Spectator
+[false] call acre_api_fnc_setSpectator
+["Terminate"] call BIS_fnc_EGSpectator;
+
 // Night Unit Trait Adjustment
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {

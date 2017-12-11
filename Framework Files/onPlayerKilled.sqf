@@ -1,6 +1,11 @@
 // Init Params
 setPlayerRespawnTime 999999;
 
+// Start Spectator
+[true] call acre_api_fnc_setSpectator
+["Initialize", [player, [], true]] call BIS_fnc_EGSpectator;
+
+
 // Log Entry
 _unit = _this select 0;
 _name = name _unit;

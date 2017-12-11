@@ -1,17 +1,22 @@
 /*
 	Parameters:
-		<-- Trigger as Object
+		<-- TriggerObjects as Array
+		<-- Unit as Object
 
 	Description:
 	Creates the Laptop and calls the hacking process. Creates continue and pickup action to laptop.
 	
 	Example:
-		[trigger] spawn fw_fnc_hackingAction;
+		[SR_Hack_Area,player] spawn fw_fnc_hackingAction;
 
 */
 
 // Parameter init
-params ["_trg"];
+params ["_array","_unit"];
+_trg = objNull;
+{
+	if (_unit inArea _x) exitWith {_trg = _x};
+}forEach _array;
 
 // Play Animation
 [player, "AinvPknlMstpSnonWnonDnon_medic_1", 1] call ace_common_fnc_doAnimation;

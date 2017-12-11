@@ -18,8 +18,8 @@
 if (!isServer) exitWith {};
 
 // Parameter Init
-params ["_spawn","_class","_call","_cool",["_pilot","_crew"];
-
+params ["_spawn","_class","_call","_cool","_args"];
+_args params ["_pilot","_crew"];
 sleep 10;
 
 // Main-Loop 
@@ -56,7 +56,7 @@ while {true} do {
 	_group setGroupIdGlobal [_call];
 	
 	// Add Action for Lift Off and Ready Message
-	[_helo] remoteExec ["fw_fnc_reinfAction", -2, true];
+	[_helo] remoteExec ["fw_fnc_reinfAction", 0, true];
 	[leader _group,"On Station for Reinforcement Transport."] remoteExec ["sideChat", 0];
 	
 	// Remove Helicopter spawn protection

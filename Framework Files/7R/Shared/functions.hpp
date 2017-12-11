@@ -16,6 +16,7 @@
 		class designateMarker{};
 		class dismountVehicle{};
 		class vehiclePatrol{};
+		class isSergeant{};
 		class flag{};
 	};
 	class template
@@ -59,9 +60,10 @@
 		class exfilCall{};
 	};
 	class reinf {
+		file = "7R\REINF";
 		class reinfInit{};
 		class reinfMove{};
-		class reinfAction};
+		class reinfAction{};
 	};
 	class Objectives {
 		file = "7R\Objectives";

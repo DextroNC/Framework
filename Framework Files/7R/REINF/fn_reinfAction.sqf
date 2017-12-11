@@ -12,4 +12,4 @@
 params ["_helo"];
 
 // AddAction
-_helo addAction ["<t color='#FF9933'>Lift off</t>",fw_fnc_reinfMove, [_helo], 0, false, false, "","player in (crew _target) && (count waypoints _target == 1)"];
+_helo addAction ["<t color='#FF9933'>Lift off</t>",fw_fnc_reinfMove, [_helo], 0, false, false, "","player in (crew _target)"];
