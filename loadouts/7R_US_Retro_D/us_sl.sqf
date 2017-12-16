@@ -20,7 +20,6 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
 
 _unit addVest "usm_vest_pasgtdes_lbv_rmp";
 _unit addItemToVest "SmokeShell";
@@ -29,6 +28,7 @@ _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 12 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "RH_15Rnd_9x19_M9";};
 
 _unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
