@@ -36,10 +36,10 @@ _EZM = ["7R_EZ","Designate Extraction Point","",{null = ["EZ", "EZ", "ColorBlue"
 _SDM = ["7R_SupplyDrop","Mark Supply DZ","",{null = ["SupplyDrop", "Supply DZ", "ColorBlue", "hd_join", false] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _SDM] call ace_interact_menu_fnc_addActionToClass;
 
-_ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.75,0.75]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
+_ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _ATM] call ace_interact_menu_fnc_addActionToClass;
 
-_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["cas-t", "CAS-T", "ColorRed", "hd_destroy", false, [0.75,0.75]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
+_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
 
@@ -80,7 +80,7 @@ _ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnance
 _ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",7,75,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
 
-_CAS1 = ["7R_CAS","Call CAS","",{null = ["cas-t",3,"B_Plane_CAS_01_F",0,"STARTSPAWN"] spawn fw_fnc_CAS;},_isLeader] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS","",{null = ["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] spawn fw_fnc_CAS;},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};

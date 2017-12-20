@@ -1,0 +1,48 @@
+version=53;
+center[]={4860.1602,339.08075,10165.39};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0,0.13299561,0};
+			angles[]={-0,5.7608781,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{nul=[this,5,""Investigating..."",""Investigate"",true] spawn fw_fnc_intelAction;}";
+			name="invest";
+			disableSimulation=1;
+		};
+		id=802;
+		type="Laptop_EP1";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

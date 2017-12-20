@@ -1,5 +1,5 @@
-version=52;
-center[]={11453.322,7.5644989e+009,8239.1348};
+version=53;
+center[]={4481.5942,7.5644995e+009,10182.897};
 class items
 {
 	items=1;
@@ -7,16 +7,16 @@ class items
 	{
 		dataType="Marker";
 		position[]={0,0,0};
-		name="marker_0";
+		name="ao";
 		text="ao";
 		markerType="RECTANGLE";
 		type="rectangle";
-		colorName="ColorRed";
+		colorName="ColorCIV";
 		fillName="Border";
 		a=1500;
 		b=1500;
 		drawBorder=1;
-		id=0;
+		id=851;
 		atlOffset=7.5644989e+009;
 	};
 };
