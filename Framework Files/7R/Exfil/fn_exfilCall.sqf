@@ -29,12 +29,12 @@ private "_drop";
 
 // Check if Target Marker exists if not exit with error msg
 if (_target isEqualto [0,0,0]) exitWith {
-	[[SR_Side, "HQ"],"No Extraction Zone designated."] remoteExec ["sideChat", 0];
+	[[SR_Side, "HQ"],"No Extraction Zone designated."] remoteExec ["sideChat", -2];
 };
 
 // Check if Exfiltration is locked
 if (ExfilHelolock) exitWith {
-	[[SR_Side, "HQ"],"Negative: All Helicopters are in use. Other Mission in progress."] remoteExec ["sideChat", 0];
+	[[SR_Side, "HQ"],"Negative: All Helicopters are in use. Other Mission in progress."] remoteExec ["sideChat", -2];
 };
 
 // Lock Exfiltration
@@ -44,7 +44,7 @@ publicVariable "ExfilHeloLock";
 // Log entry and Confirmation Message
 _str = "Exfil Helicopter dispatched to Grid " + (mapGridPosition _target) + ".";
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
-[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
+[[SR_Side, "HQ"],_str] remoteExec ["sideChat", -2];
 
 
 // Travel Time

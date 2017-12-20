@@ -27,13 +27,13 @@ if (isNil "CASCallAmmo") then {CASCallAmmo = 30; publicVariable "CASCallAmmo";};
 
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (CASFireMissionLock) exitWith {
-	[[SR_Side, "IND"],"Negative: Close Air Support available. Other Mission in progress."] remoteExec ["sideChat", 0];
+	[[SR_Side, "IND"],"Negative: Close Air Support available. Other Mission in progress."] remoteExec ["sideChat", -2];
 };
 if (CASCallAmmo == 0) exitWith {
-	[[SR_Side, "IND"],"Negative: Close Air Support available. Out of Ammunition."] remoteExec ["sideChat", 0];
+	[[SR_Side, "IND"],"Negative: Close Air Support available. Out of Ammunition."] remoteExec ["sideChat", -2];
 };
 if (markerPos _target isEqualto [0,0,0]) exitWith {
-	[[SR_Side, "IND"],"No CAS Target designated."] remoteExec ["sideChat", 0];
+	[[SR_Side, "IND"],"No CAS Target designated."] remoteExec ["sideChat", -2];
 };
 
 // Locks other requests, only one Fire Mission at a time.
@@ -42,37 +42,37 @@ publicVariable "CASFireMissionLock";
 
 // Fire Mission Confirmation Message + Create Log
 _str = "CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
-[[SR_Side, "IND"],_str] remoteExec ["sideChat", 0];
+[[SR_Side, "IND"],_str] remoteExec ["sideChat", -2];
 ["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
 
 // CAS Strike Preperation
 if (isNil "_delay") then {_delay = 0};
 if (_delay > 0) then {
 	sleep _delay;
-	[[SR_Side, "IND"],"CAS is moments away."] remoteExec ["sideChat", 0];
+	[[SR_Side, "IND"],"CAS is moments away."] remoteExec ["sideChat", -2];
 };
 
 // Module Prep
-_center = createCenter sideLogic;   
-_group = createGroup _center;  
-_pos = markerPos _target;  
 _dir = random 360;
     
 // Module Exec
-_cas = _group createUnit ["ModuleCAS_F",(markerPos _target), [], 0, "NONE"];  
-_cas setVariable ["vehicle","B_Plane_CAS_01_F", true];
+_cas = createVehicle ["LaserTargetCBase",(markerPos _target), [], 0, "NONE"];
+_cas enableSimulation false; 
+_cas hideObject true;
+_cas setVariable ["vehicle",_plane, true];
 _cas setVariable ["type", 3, true];
 _cas setDir _dir;
 
+[_cas,nil,true] call BIS_fnc_moduleCAS;
+
 // Publishing of new Ammo Count and Ending Message
-waitUntil {!alive _cas};
+deleteVehicle _cas;
+deleteMarker "CASTarget";
 CASCallAmmo = CASCallAmmo - 1;
 publicVariable "CASCallAmmo";
-deleteMarker _target;
-sleep 5;
 
 _str = "CAS completed. " + str (CASCallAmmo) + " Strikes left.";
-[[SR_Side, "IND"],_str] remoteExec ["sideChat", 0];
+[[SR_Side, "IND"],_str] remoteExec ["sideChat", -2];
 
 // Lock release to allow new Fire Missions
 CASFireMissionLock = false;
