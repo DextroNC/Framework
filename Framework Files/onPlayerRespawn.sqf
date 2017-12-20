@@ -23,7 +23,7 @@ if (_height > 1) then {
 };
 
 // End Spectator
-[false] call acre_api_fnc_setSpectator
+[false] call acre_api_fnc_setSpectator;
 ["Terminate"] call BIS_fnc_EGSpectator;
 
 // Night Unit Trait Adjustment
