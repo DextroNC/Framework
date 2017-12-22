@@ -37,7 +37,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "SMA_Mk17_16_Green";
 _unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
-_unit addPrimaryWeaponItem "RH_ta01nsn";
+_unit addPrimaryWeaponItem "RH_ta648";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "RH_g19t";
 _unit addHandgunItem "RH_X300";

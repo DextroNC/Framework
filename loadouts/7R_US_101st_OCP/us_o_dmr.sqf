@@ -27,14 +27,14 @@ _unit addItemToVest "HandGrenade";
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "rhsusf_falconii_mc";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "RH_anpvs4";
+_unit addItemToBackpack "optic_NVS";
 _unit addHeadgear "rhsusf_ach_helmet_ocp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_sr25";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
+_unit addPrimaryWeaponItem "RH_ta648";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_VectorDay";

@@ -29,14 +29,14 @@ for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 
 _unit addBackpack "milgp_bp_Tomahawk_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "RH_anpvs4";
+_unit addItemToBackpack "optic_NVS";
 _unit addHeadgear "milgp_h_opscore_01_khk_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "SPARTAN_EBR_snake_F";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addPrimaryWeaponItem "RH_ta01nsn";
+_unit addPrimaryWeaponItem "RH_ta648";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";

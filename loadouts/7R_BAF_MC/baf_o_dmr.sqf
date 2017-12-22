@@ -34,7 +34,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L129A1_FGrip";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addPrimaryWeaponItem "UK3CB_BAF_SUSAT";
+_unit addPrimaryWeaponItem "UK3CB_BAF_TA648_308";
 _unit addWeapon "UK3CB_BAF_L131A1";
 _unit addWeapon "ACE_VectorDay";
 
