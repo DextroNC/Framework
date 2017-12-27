@@ -26,6 +26,7 @@ _unit addVest "milgp_v_marciras_marksman_belt_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+_unit addItemToVest "RH_15Rnd_45cal_fnp";
 
 _unit addBackpack "milgp_bp_hydration_rgr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
@@ -38,7 +39,7 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_sr25_wd";
 _unit addPrimaryWeaponItem "rhsusf_acc_SR25S";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01F";
-_unit addPrimaryWeaponItem "RH_ta648";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "RH_fnp45";
 _unit addHandgunItem "RH_gemtech45";
@@ -52,7 +53,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 14 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "20Rnd_762x51_Mag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

@@ -53,6 +53,7 @@ if (_type isEqualTo "rhsusf_acc_T1_low") then {_unit addPrimaryWeaponItem "rhsus
 
 //Special Optics DMR
 if (_type isEqualTo "optic_NVS") then {_unit addPrimaryWeaponItem "optic_NVS"};
+if (_type isEqualTo "rhsusf_acc_ACOG_MDO") then {_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO"};
 if (_type isEqualTo "RH_ta01nsn") then {_unit addPrimaryWeaponItem "RH_ta01nsn"};
 if (_type isEqualTo "rhsusf_acc_ACOG3") then {_unit addPrimaryWeaponItem "rhsusf_acc_ACOG3"};
 if (_type isEqualTo "ACE_optic_Arco_2D") then {_unit addPrimaryWeaponItem "ACE_optic_Arco_2D"};
@@ -66,6 +67,7 @@ if (_type isEqualTo "rhsusf_acc_SpecterDR_A") then {_unit addPrimaryWeaponItem "
 if (_type isEqualTo "RKSL_optic_LDS") then {_unit addPrimaryWeaponItem "RKSL_optic_LDS"};
 if (_type isEqualTo "UK3CB_BAF_SUSAT") then {_unit addPrimaryWeaponItem "UK3CB_BAF_SUSAT"};
 if (_type isEqualTo "UK3CB_BAF_TA31F") then {_unit addPrimaryWeaponItem "UK3CB_BAF_TA31F"};
+if (_type isEqualTo "UK3CB_BAF_TA648_308") then {_unit addPrimaryWeaponItem "UK3CB_BAF_TA648_308"};
 
 // MMG
 if (_type isEqualTo "RH_m145") then {_unit addPrimaryWeaponItem "RH_m145"};

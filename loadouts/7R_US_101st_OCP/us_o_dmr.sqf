@@ -34,7 +34,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "rhs_weap_sr25";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addPrimaryWeaponItem "RH_ta648";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_VectorDay";

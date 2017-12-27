@@ -36,7 +36,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "SPARTAN_EBR_snake_F";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addPrimaryWeaponItem "RH_ta648";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
