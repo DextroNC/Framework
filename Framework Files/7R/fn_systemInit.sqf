@@ -10,7 +10,6 @@
 SR_Night = false;
 SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
 
-
 // First GasMask Equip give Atropine (true/false)
 ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";

@@ -60,3 +60,4 @@ if (SR_Night) then {
 _unit setVariable ["SR_Class","PM", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",2,true];
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];

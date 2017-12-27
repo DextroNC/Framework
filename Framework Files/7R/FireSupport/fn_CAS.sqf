@@ -17,6 +17,8 @@
 	Example:
 		nul = ["cas-t",3,"B_Plane_CAS_01_F",10,"STARTSPAWN"] spawn fw_fnc_CAS;
 */
+// Server Only Exec
+if (!isServer) exitWith {};
 
 // Parameter Init
 params ["_target","_type","_plane","_delay","_spawn"];
@@ -27,13 +29,13 @@ if (isNil "CASCallAmmo") then {CASCallAmmo = 30; publicVariable "CASCallAmmo";};
 
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (CASFireMissionLock) exitWith {
-	[[SR_Side, "IND"],"Negative: Close Air Support available. Other Mission in progress."] remoteExec ["sideChat", -2];
+	[[SR_Side, "HQ"],"Negative: Close Air Support available. Other Mission in progress."] remoteExec ["sideChat", 0];
 };
 if (CASCallAmmo == 0) exitWith {
-	[[SR_Side, "IND"],"Negative: Close Air Support available. Out of Ammunition."] remoteExec ["sideChat", -2];
+	[[SR_Side, "HQ"],"Negative: Close Air Support available. Out of Ammunition."] remoteExec ["sideChat", 0];
 };
 if (markerPos _target isEqualto [0,0,0]) exitWith {
-	[[SR_Side, "IND"],"No CAS Target designated."] remoteExec ["sideChat", -2];
+	[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];
 };
 
 // Locks other requests, only one Fire Mission at a time.
@@ -42,14 +44,14 @@ publicVariable "CASFireMissionLock";
 
 // Fire Mission Confirmation Message + Create Log
 _str = "CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
-[[SR_Side, "IND"],_str] remoteExec ["sideChat", -2];
+[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
 ["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
 
 // CAS Strike Preperation
 if (isNil "_delay") then {_delay = 0};
 if (_delay > 0) then {
 	sleep _delay;
-	[[SR_Side, "IND"],"CAS is moments away."] remoteExec ["sideChat", -2];
+	[[SR_Side, "HQ"],"CAS is moments away."] remoteExec ["sideChat", 0];
 };
 
 // Module Prep
@@ -72,7 +74,7 @@ CASCallAmmo = CASCallAmmo - 1;
 publicVariable "CASCallAmmo";
 
 _str = "CAS completed. " + str (CASCallAmmo) + " Strikes left.";
-[[SR_Side, "IND"],_str] remoteExec ["sideChat", -2];
+[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
 
 // Lock release to allow new Fire Missions
 CASFireMissionLock = false;

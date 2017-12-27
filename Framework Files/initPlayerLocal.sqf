@@ -80,7 +80,7 @@ _ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnance
 _ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",7,75,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
 
-_CAS1 = ["7R_CAS","Call CAS","",{null = ["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] spawn fw_fnc_CAS;},_isLeader] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
@@ -106,3 +106,7 @@ if (count SR_Hack_Area != 0) then {
 	_hack = ["7R_Hack","Start Hack","",{[SR_Hack_Area,player] spawn fw_fnc_hackingAction},_hackC] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _hack] call ace_interact_menu_fnc_addActionToClass;
 };
+
+// NVG Adjustments (DO NOT TOUCH)
+ace_nightvision_fogScaling = 0.5;
+ace_nightvision_effectScaling = 0.5;

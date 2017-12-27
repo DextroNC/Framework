@@ -55,3 +55,4 @@ _unit setVariable ["SR_Class","MMGAB", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];
