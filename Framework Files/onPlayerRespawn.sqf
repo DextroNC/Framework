@@ -25,6 +25,7 @@ if (_height > 1) then {
 // End Spectator
 [false] call acre_api_fnc_setSpectator;
 ["Terminate"] call BIS_fnc_EGSpectator;
+["ace_common_hideObjectGlobal", [_new,false]] call CBA_fnc_serverEvent;
 
 // Night Unit Trait Adjustment
 if (isNil "SR_Night") then {SR_Night = false};
