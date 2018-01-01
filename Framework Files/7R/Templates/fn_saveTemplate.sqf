@@ -37,6 +37,9 @@ if (_check) exitWith {hint "Error: Template already exists."};
 private _side = side _leader;
 
 // Check if units are in a Vehicle and depeding on Result create inner Array
+if (_leader isKindOf "Air") then {
+	_unitArray pushBack (typeOf _leader);
+};
 if (_leader isKindOf "LandVehicle") then {
 	_unitArray pushBack (typeOf _leader);
 	{

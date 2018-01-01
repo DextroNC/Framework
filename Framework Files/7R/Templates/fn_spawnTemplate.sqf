@@ -220,3 +220,52 @@ if (_type isEqualTo "VEHICLE") Then {
 	nul = _pass spawn fw_fnc_spawnVehicleTemplate;
 };
 
+
+// =================================================================================================
+
+// Air
+if (_type isEqualTo "AIR") Then {
+
+	// Find Template Array
+	{
+		if (_number in _x) exitWith {
+			_template = _x;
+		};
+	}forEach SR_Template;
+
+	// Check if Template exists
+	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
+
+	// Pass Template data
+	_side = _template select 1;
+	_units = _template select 2;
+
+	// Pre-Spawn Init
+	_dir  = markerDir _marker; 
+
+	// Spawn Vehicle
+	_veh = [_pos, _dir, (_units select 0), _side] call bis_fnc_spawnVehicle;
+
+	// Initialise
+	private _leader = leader (_veh select 2);
+	_params params ["_tMarker","_wpType","_mode","_pZone"];
+	hint format ["%1", _params];
+	private "_tPos";
+	
+	if (isNil "_pZone") then {
+		if (markerSize _tMarker isEqualTo [1,1]) then {
+			_tPos = markerPos _tMarker;
+		} else {
+			_tPos = [_tMarker, true] call CBA_fnc_randPosArea;
+		};
+		// Add Waypoint
+		_wp = group _leader addWaypoint [_tPos ,0,1];
+		_wp setWaypointType _wpType;
+		_wp setWaypointBehaviour _mode;
+		_wp setWaypointCompletionRadius 100;
+	} else {
+		_pa = [_pZone] call CBA_fnc_getArea;
+		[(group _leader), _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
+	};	
+};
+
