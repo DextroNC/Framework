@@ -52,7 +52,7 @@ _unit addItemToBackpack "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_new setUnitTrait ["camouflageCoef",0.5];
 };
 _unit setVariable ["SR_Class","PM", true];

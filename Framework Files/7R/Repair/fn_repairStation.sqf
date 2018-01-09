@@ -48,7 +48,7 @@ while {(position _veh inArea _trg) && !_end} do {
 		_veh setFuel (_fuel + 0.025);
 	};
 	
-	if (_dmg == 0 && _fuel == 1 && !_eng) then {
+	if (_dmg <= 0 && _fuel >= 1 && !_eng) then {
 		_timer = _timer + 1;
 		_arm = str ((30 - _timer)) + "s"; 
 	};

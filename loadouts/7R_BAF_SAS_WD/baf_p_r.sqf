@@ -14,25 +14,26 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM";
+_unit forceAddUniform "UK3CB_BAF_U_JumperUniform_DPMW";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "UK3CB_BAF_9_17Rnd";};
-_unit addVest "UK3CB_BAF_V_Osprey_Rifleman_C";
-for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
+_unit addVest "UK3CB_BAF_V_Osprey_DPMW2";
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
-_unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B";
+_unit addBackpack "UK3CB_BAF_B_Bergen_DPMW_Rifleman_B";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "UK3CB_BAF_H_Mk7_Net_CESS_B";
-_unit addGoggles "rhs_googles_clear";
+_unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addHeadgear "UK3CB_BAF_H_Wool_Hat";
+_unit addGoggles "shemagh_goggclr_od";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L85A2_RIS_AFG";
+_unit addWeapon "UK3CB_BAF_L119A1_FG";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addWeapon "UK3CB_BAF_M6";
 _unit addWeapon "UK3CB_BAF_L131A1";
 _unit addWeapon "Binocular";
 
@@ -44,8 +45,6 @@ _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -53,8 +52,9 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_15";
 	_new setUnitTrait ["camouflageCoef",0.5];
+	_unit addHeadgear "UK3CB_BAF_H_Mk6_DPMW_A";
 };
-_unit setVariable ["SR_Class","WMOR", true];
+_unit setVariable ["SR_Class","R", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 
