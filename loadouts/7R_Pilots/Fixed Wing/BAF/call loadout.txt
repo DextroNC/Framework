@@ -1,0 +1,1 @@
+[objNull, this] call compile preprocessFileLineNumbers "loadouts\fw_pilot.sqf"

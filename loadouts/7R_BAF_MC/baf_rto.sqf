@@ -29,6 +29,8 @@ _unit addItemToBackpack "UK3CB_BAF_H_Mk7_Camo_A";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellPurple";};
+_unit addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
+_unit addItemToBackpack "Laserbatteries";
 _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Bootneck_PRR_Over";
 _unit addGoggles "rhs_googles_clear";
 

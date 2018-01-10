@@ -18,7 +18,6 @@
 		class vehiclePatrol{};
 		class isSergeant{};
 		class flag{};
-		class dagrWP{postInit = 1;};
 	};
 	class template
 	{

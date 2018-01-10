@@ -1,0 +1,1 @@
+this addaction ["Fixed-Wing Pilot", "loadouts\fw_pilot.sqf"];
