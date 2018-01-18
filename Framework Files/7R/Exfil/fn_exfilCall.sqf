@@ -69,29 +69,30 @@ _wp1 setWayPointType "MOVE";
 _wp1 setWayPointSpeed "NORMAL";
 _wp1 setWayPointCombatMode "WHITE";
 
-
+// Slow down and lock to LZ
 waitUntil {sleep 0.5; ( (!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || ((_helo distance _target) < 1000))};
 _group lockWP true;
 _group setSpeedMode "LIMITED"; 
 
+// Landing
 waitUntil {sleep 0.5; (!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || ((_helo distance _target) < 200)};
-
 _helo land 'land';
 doStop _helo;
 
+// Ensure engine stays on and helo does not lift off when initially landed
 waitUntil {( (!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (isTouchingGround _helo)) || !isEngineOn _helo};
 _helo engineOn true;
 _helo flyInHeight 0;
 _group lockWP false;
-
 sleep 2;
 _helo engineOn true;
-waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
 
+// Wait for Liftoff Command and lift off
+waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
 _group setSpeedMode "NORMAL"; 
 _helo flyInHeight 100;
-
 {deleteWaypoint _x}forEach waypoints _group;
+
 /*
 // Check if DropOff Marker exists
  if (!isNil "_do") then {
@@ -112,6 +113,7 @@ _helo flyInHeight 100;
 	};
 };
 */
+
 // Final WP to despawn
 _wp3 = _group addWaypoint [_spawn, 0, 2];
 _wp3 setWayPointBehaviour "CARELESS";
@@ -119,13 +121,8 @@ _wp3 setWayPointType "MOVE";
 _wp3 setWayPointSpeed "NORMAL";
 _wp3 setWayPointCombatMode "WHITE";
 
+// Despawn and Unlock
 [{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D (_this select 2) < 300)}, {
 	ExfilHelolock = false;
 	publicVariable "ExfilHelolock";
 }, [_helo,_group,_spawn]] call CBA_fnc_waitUntilAndExecute;
-
-// Unlock
-[{!alive (_this select 0)}, {
-	ExfilHelolock = false;
-	publicVariable "ExfilHelolock";
-}, [_helo]] call CBA_fnc_waitUntilAndExecute;
