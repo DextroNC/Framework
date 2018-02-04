@@ -162,6 +162,7 @@ if (_type isEqualTo "VEHICLE") Then {
 	// Spawn Empty Vehicle
 	_veh = createVehicle [(_units select 0), _pos, [], 0, "NONE"];
 	_veh setDir _dir;
+	_veh disableTIEquipment true;
 	_units = _units - [(_units select 0)]; 
 
 	// Unit Spawn Loop
@@ -245,7 +246,8 @@ if (_type isEqualTo "AIR") Then {
 
 	// Spawn Vehicle
 	_veh = [_pos, _dir, (_units select 0), _side] call bis_fnc_spawnVehicle;
-
+	_veh disableTIEquipment true;
+	
 	// Initialise
 	private _leader = leader (_veh select 2);
 	_params params ["_tMarker","_wpType","_mode","_pZone"];

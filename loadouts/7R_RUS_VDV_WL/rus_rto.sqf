@@ -28,10 +28,10 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "SmokeShellGreen";
 _unit addItemToBackpack "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
-_unit addHeadgear "rhs_6b7_1m_bala1_flora";
+_unit addHeadgear "rhs_6b7_1m_flora";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_ak105";
+_unit addWeapon "rhs_weap_aks74n_2";
 _unit addPrimaryWeaponItem "rhs_acc_pgs64";
 _unit addWeapon "RH_gsh18";
 _unit addWeapon "ACE_VectorDay";
