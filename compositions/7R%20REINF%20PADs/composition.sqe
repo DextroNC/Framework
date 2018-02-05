@@ -13,7 +13,7 @@ class items
 		side="Empty";
 		class Attributes
 		{
-			init="null = [this,""RHS_CH_47F"",""RODEO 1-1"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] execVM ""7R\REINF\ReinfInit.sqf""";
+			init="null = [this,""RHS_CH_47F"",""RODEO 1-1"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit";
 			name="reinfpad1";
 		};
 		id=99;
@@ -52,7 +52,7 @@ class items
 		side="Empty";
 		class Attributes
 		{
-			init="null = [this,""RHS_UH60M"",""RODEO 1-2"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] execVM ""7R\REINF\ReinfInit.sqf""";
+			init="null = [this,""RHS_UH60M"",""RODEO 1-2"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit";
 			name="reinfpad2";
 		};
 		id=100;
