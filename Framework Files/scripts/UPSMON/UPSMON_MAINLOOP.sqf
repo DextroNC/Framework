@@ -141,12 +141,21 @@ while {true} do
 				If (_grp getvariable ["UPSMON_Grpmission",""] == "SURRENDER") exitwith {[_grp] call UPSMON_surrended;};
 			
 				// Artillery Support
-				_artillery = [_grp] call UPSMON_ArtiChk;
-				If (_artillery) then
-				{
-					[_grp,_currpos,_attackpos,_dist,_enies] call UPSMON_FO;
+				if (leader _grp distance2D _attackpos > 120) then {
+					_artillery = [_grp] call fw_fnc_artilleryCheck;
+					If (!isNull _artillery) then
+					{
+						
+						[_artillery,1,_attackpos] spawn fw_fnc_artilleryCall;
+					};
+				} else {
+					// Artillery Support Smoke
+					_artillery = [_grp] call fw_fnc_artilleryCheck;
+					If (!isNull _artillery) then
+					{
+						[_artillery,2,_attackpos] spawn fw_fnc_artilleryCall;
+					};
 				};
-					
 				// Reinforcement Support
 				_reinf = [_grp,_ratio,_typeofgrp] call UPSMON_ReinfChk;
 				If (_reinf) then
@@ -292,10 +301,11 @@ while {true} do
 					
 							If (count _artipos > 0) then
 							{
-								_artillery = [_grp] call UPSMON_ArtiChk;
-								If (_artillery) then
+								// Flare Artillery
+								_artillery = [_grp] call fw_fnc_artilleryCheck;
+								If (!isNull _artillery) then
 								{
-									[_grp,_currpos,_artipos,_dist,_enies,"ILLUM"] call UPSMON_FO;
+									[_artillery,3,_artipos] spawn fw_fnc_artilleryCall;
 								}
 								else
 								{

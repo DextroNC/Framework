@@ -1,0 +1,15 @@
+
+this addaction ["<t color=""#00FF00"">" +"Sight 1", "loadouts\7R_EQ.sqf",["LC_Optic_G36dualoptic15x"]];
+this addaction ["<t color=""#00FF00"">" +"Sight 2", "loadouts\7R_EQ.sqf",["HLC_Optic_G36Export15x"]];
+this addaction ["<t color=""#FF0000"">" +"RM: Zoom 1", "loadouts\7R_EQ.sqf",["LC_Optic_G36dualoptic35x"]];
+this addaction ["<t color=""#FF0000"">" +"RM: Zoom 2", "loadouts\7R_EQ.sqf",["HLC_Optic_G36Export35x"]];
+this addaction ["<t color=""#FF0000"">" +"RM: G3", "loadouts\7R_EQ.sqf",["hlc_optic_accupoint_g3"]];
+this addaction ["<t color=""#FF0000"">" +"DMR: Optic", "loadouts\7R_EQ.sqf",["HLC_Optic_ZFSG1"]];
+this addaction ["<t color=""#FF0000"">" +"GPS", "loadouts\7R_EQ.sqf",["ItemGPS"]];
+this addaction ["<t color=""#FF0000"">" +"Vector", "loadouts\7R_EQ.sqf",["ACE_Vector"]];
+this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "loadouts\7R_EQ.sqf",["Laserdesignator"]];
+this addaction ["<t color=""#FF0000"">" +"Lockpick", "loadouts\7R_EQ.sqf",["ACE_key_lockpick"]];
+this addaction ["<t color=""#FF0000"">" +"Entreching Tool", "loadouts\7R_EQ.sqf",["ACE_EntrenchingTool"]];
+this addaction ["<t color=""#FF0000"">" +"RADIO PRC152 (SLs, 2ic)", "loadouts\7R_EQ.sqf",["ACRE_PRC152"]];
+this addaction ["<t color=""#FF0000"">" +"RADIO PRC148 (Air, Sup, Mech)", "loadouts\7R_EQ.sqf",["ACRE_PRC148"]];
+this addaction ["<t color=""#FF0000"">" +"RADIO PRC117F (Long Range)", "loadouts\7R_EQ.sqf",["ACRE_PRC117F"]];

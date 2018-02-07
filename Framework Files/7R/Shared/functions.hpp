@@ -105,5 +105,8 @@
 		class rampageCharge{};
 		class rogueCharge{};
 		class rampageArea{};
+		class artilleryInit{};
+		class artilleryCheck{};
+		class artilleryCall{};
 	};
 };

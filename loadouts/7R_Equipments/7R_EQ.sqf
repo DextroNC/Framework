@@ -78,6 +78,14 @@ if (_type isEqualTo "rhsusf_acc_ELCAN") then {_unit addPrimaryWeaponItem "rhsusf
 if (_type isEqualTo "hlc_muzzle_556NATO_KAC") then {_unit addPrimaryWeaponItem "hlc_muzzle_556NATO_KAC"};
 if (_type isEqualTo "muzzle_snds_H_MG_blk_F") then {_unit addPrimaryWeaponItem "muzzle_snds_H_MG_blk_F"};
 
+// German 90s
+if (_type isEqualTo "HLC_Optic_G36dualoptic15x") then {_unit addPrimaryWeaponItem "HLC_Optic_G36dualoptic15x"};
+if (_type isEqualTo "HLC_Optic_G36Export15x") then {_unit addPrimaryWeaponItem "HLC_Optic_G36Export15x"};
+if (_type isEqualTo "HLC_Optic_G36dualoptic35x") then {_unit addPrimaryWeaponItem "HLC_Optic_G36dualoptic35x"};
+if (_type isEqualTo "HLC_Optic_G36Export35x") then {_unit addPrimaryWeaponItem "HLC_Optic_G36Export35x"};
+if (_type isEqualTo "hlc_optic_accupoint_g3") then {_unit addPrimaryWeaponItem "hlc_optic_accupoint_g3"};
+if (_type isEqualTo "HLC_Optic_ZFSG1") then {_unit addPrimaryWeaponItem "HLC_Optic_ZFSG1"};
+
 //RUSSIA
 //UAV Terminal Russia
 if (_type isEqualTo "O_UavTerminal") then {_unit linkItem "O_UavTerminal"};

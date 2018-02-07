@@ -17,7 +17,6 @@ _rogue = false;
 UPSMON_NPCs = UPSMON_NPCs - [_grp];
 
 if ((round (random 100)) <= UPSMON_ROGUE) then {_rogue = true};
-		
 	
 {
 	If (alive _x) then
