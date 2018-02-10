@@ -141,7 +141,8 @@ while {true} do
 				If (_grp getvariable ["UPSMON_Grpmission",""] == "SURRENDER") exitwith {[_grp] call UPSMON_surrended;};
 			
 				// Artillery Support
-				if (leader _grp distance2D _attackpos > 120) then {
+				if (isNil "AI_ART_Units") then {AI_ART_Units = [];};
+				if (leader _grp distance2D _attackpos > 120 && count AI_ART_Units > 0) then {
 					_artillery = [_grp] call fw_fnc_artilleryCheck;
 					If (!isNull _artillery) then
 					{
