@@ -18,7 +18,7 @@ private ["_ow","_wp","_target"];
 
 // Find OW pos
 _target = markerPos _marker;
-_ow = [_target,200,1] call BIS_fnc_findOverwatch;
+_ow = [_target,250,1] call BIS_fnc_findOverwatch;
 
 // Create WP
 _wp = _grp addWaypoint [_ow, 0];
