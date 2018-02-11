@@ -49,6 +49,9 @@ if ((count _units == 0) || {isNull (_units select 0)}) exitWith {
     ([])
 };
 
+// Add Units to UPSMON
+[(leader (group (_units select 0))),"p","NOWP3"] execVM "scripts\UPSMON.sqf";
+
 _Zen_ExtendPosition = {
     private ["_center", "_dist", "_phi"];
 
@@ -100,7 +103,7 @@ _Zen_ArrayShuffle = {
 };
 
 if (_buildingRadius < 0) then {
-    _buildingsArray = [nearestBuilding _center];
+    _buildingsArray = nearestObjects [_center, ["building"], 50];
 } else {
     _buildingsArray0 = nearestObjects [_center, ["house"], _buildingRadius];
     _buildingsArray1 = nearestObjects [_center, ["building"], _buildingRadius];

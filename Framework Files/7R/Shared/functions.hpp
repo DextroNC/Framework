@@ -105,5 +105,6 @@
 		class rampageCharge{};
 		class rogueCharge{};
 		class rampageArea{};
+		class overwatchAI{};
 	};
 };

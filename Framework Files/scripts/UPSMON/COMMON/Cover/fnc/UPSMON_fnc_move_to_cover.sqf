@@ -16,7 +16,7 @@ Returns:
 ****************************************************************/
 
 private ["_unit","_coverArray","_lookpos","_spawn","_cover","_coverPosition","_coverDist","_stopped","_continue","_checkTime","_dist","_sight"];
-/*	
+
 _unit 			=	_this select 0;
 _coverArray 	=	_this select 1;
 _lookpos  		=	_this select 2;
@@ -85,4 +85,3 @@ else
 		If (!_sight) then {_unit setUnitPos "MIDDLE";};
 	};	
 };
-*/
