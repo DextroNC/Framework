@@ -108,5 +108,6 @@
 		class artilleryInit{};
 		class artilleryCheck{};
 		class artilleryCall{};
+		class overwatchAI{};
 	};
 };

@@ -215,10 +215,16 @@ if ("TRANSPORT" in _UCthis) then
 //Patrol in building
 If ("LANDDROP" in _UCthis) then {_grp setvariable ["UPSMON_LANDDROP",true];};
 
+// Overwatch Mode
+if ("OW" in _UCthis) then {
+	[_grp,_areamarker] spawn fw_fnc_overwatchAI;
+};
+
 // don't make waypoints
 _nowpType = if ("NOWP" in _UCthis) then {1} else {0};
 _nowpType = if ("NOWP2" in _UCthis) then {2} else {_nowpType}; 
 _nowpType = if ("NOWP3" in _UCthis) then {3} else {_nowpType};
+_nowpType = if ("OW" in _UCthis) then {3} else {_nowpType};
 _grp setvariable ["UPSMON_NOWP",_nowpType];
 
 //Ambush squad will no move until in combat or so close enemy
