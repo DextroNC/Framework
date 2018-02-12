@@ -17,9 +17,7 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (count entities "HeadlessClient_F" > 0) then {
-	if (isDedicated) exitWith {};
-};
+if (isDedicated && count entities "HeadlessClient_F" > 0) exitWith {};
 
 
 // Parameter init
@@ -88,8 +86,7 @@ if (_type isEqualTo "PATROL") Then {
 		[{(_this select 0) getVariable ['arrived', false]}, {nul = (_this select 1) execVM "scripts\UPSMON.sqf"; }, [_grp, _upsmon]] call CBA_fnc_waitUntilAndExecute;
 	} else {
 		// Init UPSMON on spawned Unit
-		nul = _upsmon execVM "scripts\UPSMON.sqf";
-
+		[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 	};
 };
 
@@ -136,7 +133,7 @@ if (_type isEqualTo "GARRISON") Then {
 	_garrison append _params;
 	_array = units group _leader;
 	// Init Garrison on spawned Unit
-	nul = _garrison execVM "scripts\Zen_OccupyHouse.sqf";
+	[_garrison, "scripts\Zen_OccupyHouse.sqf"] remoteExec ["BIS_fnc_execVM",2];
 
 };
 

@@ -14,8 +14,6 @@
 		file = "7R\Shared";
 		class deleteVehicle{};
 		class designateMarker{};
-		class dismountVehicle{};
-		class vehiclePatrol{};
 		class isSergeant{};
 		class flag{};
 	};
@@ -109,5 +107,7 @@
 		class artilleryCheck{};
 		class artilleryCall{};
 		class overwatchAI{};
+		class dismountVehicle{};
+		class vehiclePatrol{};
 	};
 };

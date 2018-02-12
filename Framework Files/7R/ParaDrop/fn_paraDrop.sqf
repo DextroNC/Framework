@@ -104,6 +104,7 @@ if (_static) then {
 		_x setDir (getDir _v);
 		sleep _delay;
 		_x enableAI "MOVE";
+		_v doMove _wpPos;
 	} forEach assignedCargo _v;
 };
 

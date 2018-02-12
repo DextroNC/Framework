@@ -390,9 +390,9 @@ _grp setvariable ["UPSMON_Removegroup",false];
 //Assign the current group in the array of UPSMON Groups
 If (_side != civilian) then
 {
-	If (!(_grp in UPSMON_NPCs)) then {UPSMON_NPCs pushback _grp;};
+	If (!(_grp in UPSMON_NPCs)) then {UPSMON_NPCs pushBackUnique _grp;};
 }
 else
 {
-	If (!(_grp in UPSMON_Civs)) then {UPSMON_Civs pushback _grp;};
+	If (!(_grp in UPSMON_Civs)) then {UPSMON_Civs pushBackUnique _grp;};
 };

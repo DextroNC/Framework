@@ -5,10 +5,6 @@
 		<-- Upsmon Parameters initialized on Target Pos as Array
 		<-- Optional: Upsmon Parameters initialized on Target Pos for Cargo as Array
 */
-
-// Server only execute check
-if (!isServer) exitWith{};
-
 // Parameter Init
 params ["_l","_upsmon","_cargo"];
 _v = vehicle _l;
@@ -22,7 +18,7 @@ if (isNull (gunner vehicle _l)) then {
 	// Call UPSMON
 	_array = [_l]; 
 	_array append _upsmon;
-	nul = _array execVM "scripts\UPSMON.sqf";
+	[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 } else {
 	// Multi Group Dismount
 	_c = count units _g;
@@ -38,8 +34,8 @@ if (isNull (gunner vehicle _l)) then {
 	// Patrol Script Init
 	// Check if Second parameter set for crew exists, if not both groups receive same parameters
 	if (isNil "_cargo") then {_array append _upsmon;} else {_array append _cargo;};
-	nul = _array execVM "scripts\UPSMON.sqf";
+	[_array, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 	_array2 = [leader _ng]; 
 	_array2 append _upsmon;
-	nul = _array2 execVM "scripts\UPSMON.sqf";
+	[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 };

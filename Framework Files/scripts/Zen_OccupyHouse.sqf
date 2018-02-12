@@ -52,6 +52,9 @@ if ((count _units == 0) || {isNull (_units select 0)}) exitWith {
 // Add Units to UPSMON
 [(leader (group (_units select 0))),"p","NOWP3"] execVM "scripts\UPSMON.sqf";
 
+// Exclude from ASR AI
+{_x setVariable ["asr_ai_exclude", true, true]}forEach _units;
+
 _Zen_ExtendPosition = {
     private ["_center", "_dist", "_phi"];
 

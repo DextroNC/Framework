@@ -1,5 +1,5 @@
 // only run on server (including SP, MP, Dedicated) and Headless Client 
-if (!isServer && hasInterface ) exitWith {};
+if (!isServer) exitWith {};
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
