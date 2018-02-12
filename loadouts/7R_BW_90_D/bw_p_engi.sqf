@@ -35,7 +35,7 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addHeadgear "BWA3_Beret_Falli";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_g3a3ris";
+_unit addWeapon "hlc_rifle_g3a3";
 _unit addWeapon "RH_vp70";
 _unit addWeapon "ACE_Vector";
 
