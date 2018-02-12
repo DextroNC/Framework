@@ -1,0 +1,234 @@
+version=53;
+center[]={4893.4639,5,2235.1563};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.009765625,0.0014390945,0.80786133};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupIdGlobal [""F-1""];}";
+					description="Team Leader (Foxtrot)";
+					isPlayable=1;
+					class Inventory
+					{
+						class uniform
+						{
+							typeName="U_B_CombatUniform_mcam_tshirt";
+							isBackpack=0;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						gps="ItemGPS";
+					};
+				};
+				id=53;
+				type="B_Soldier_SL_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.71191406,0.0014390945,-0.37011719};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					description="Technician";
+					isPlayable=1;
+					class Inventory
+					{
+						class uniform
+						{
+							typeName="U_B_CombatUniform_mcam_tshirt";
+							isBackpack=0;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						gps="ItemGPS";
+					};
+				};
+				id=54;
+				type="B_Soldier_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.72021484,0.0014390945,-0.28808594};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					description="Crewman";
+					isPlayable=1;
+					class Inventory
+					{
+						class uniform
+						{
+							typeName="U_B_CombatUniform_mcam_tshirt";
+							isBackpack=0;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						gps="ItemGPS";
+					};
+				};
+				id=55;
+				type="B_Soldier_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male01ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=52;
+	};
+};

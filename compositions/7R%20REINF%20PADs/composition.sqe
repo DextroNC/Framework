@@ -1,5 +1,5 @@
-version=52;
-center[]={4004.0488,5,1013.36};
+version=53;
+center[]={4892.6152,5,2238.3599};
 class items
 {
 	items=2;
@@ -8,22 +8,22 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-4.0158691,0,-0.036010742};
+			position[]={-4.0161133,0,-0.035888672};
 		};
 		side="Empty";
 		class Attributes
 		{
-			init="null = [this,""RHS_CH_47F"",""RODEO 1-1"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit";
+			init="call{null = [this,""RHS_CH_47F"",""RODEO 1-1"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit;}";
 			name="reinfpad1";
 		};
-		id=99;
+		id=46;
 		type="Land_HelipadEmpty_F";
 		class CustomAttributes
 		{
 			class Attribute0
 			{
 				property="ace_isMedicalFacility";
-				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 				class Value
 				{
 					class data
@@ -47,22 +47,22 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={4.0161133,0,0.036010742};
+			position[]={4.015625,0,0.036132813};
 		};
 		side="Empty";
 		class Attributes
 		{
-			init="null = [this,""RHS_UH60M"",""RODEO 1-2"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit";
+			init="call{null = [this,""RHS_UH60M"",""RODEO 1-2"",0,[""B_Helipilot_F"", ""B_Helicrew_F""]] spawn fw_fnc_reinfInit;}";
 			name="reinfpad2";
 		};
-		id=100;
+		id=47;
 		type="Land_HelipadEmpty_F";
 		class CustomAttributes
 		{
 			class Attribute0
 			{
 				property="ace_isMedicalFacility";
-				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 				class Value
 				{
 					class data

@@ -1,0 +1,64 @@
+version=53;
+center[]={4892.1431,5,2235.8301};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0,0.57536411,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#00FF00'>Teleport to Ralleypoint</t>"",fw_fnc_teleport, [1,""SR_RP""], 0, true, true, """",""!(markerPos 'SR_RP' isEqualTo [0,0,0])"",3];     }";
+		};
+		id=43;
+		type="Land_InfoStand_V1_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ObjectTextureCustom0";
+				expression="_this setObjectTextureGlobal [0,_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};
