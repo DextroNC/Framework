@@ -10,10 +10,6 @@
 	Example:
 	[_grp,_marker,4] spawn fw_fnc_civPatrol;
 */
-
-// Server Only Exec
-if (!isServer) exitWith {};
-
 // Parameter Init
 params ["_grp","_zone","_amount"];
 if (isNil "_amount") then {_amount =4};

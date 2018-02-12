@@ -6,10 +6,6 @@
 	
 
 */
-
-// Server Only Exec
-if (!isServer) exitWith {};
-
 //Per Frame Handler
 [{
 	// Parameter Init

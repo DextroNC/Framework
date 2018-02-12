@@ -15,8 +15,12 @@
 
 */
 
-// Server only execute check
-if (!isServer) exitWith{};
+// Server only execute or HC if present
+if (!isServer && hasInterface) exitWith {};
+if (count entities "HeadlessClient_F" > 0) then {
+	if (isDedicated) exitWith {};
+};
+
 
 // Parameter init
 params ["_marker","_type","_number","_params","_params2"];

@@ -12,10 +12,6 @@
 		OnActivation of a Trigger:
 		_art = [_grp] call fw_fnc_artilleryCheck;
 */
-
-// Server only execute
-if (!isServer) exitWith {};
-
 // Parameter Init
 params ["_grp"];
 _return = objNull;

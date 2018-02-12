@@ -8,10 +8,6 @@
 	Example:
 		nul = [group] spawn fw_fnc_overwatchAI;
 */
-
-// Server only execute
-if (!isServer) exitWith {};
-
 // Parameter Init
 params ["_grp","_marker"];
 private ["_ow","_wp","_target"];

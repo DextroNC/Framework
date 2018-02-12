@@ -13,9 +13,6 @@
 
 */
 
-// Server only execute check
-if (!isServer) exitWith{};
-
 // Parameter Init
 params ["_leader","_marker","_speed","_upsmon","_cargo"];
 private "_ins"; 

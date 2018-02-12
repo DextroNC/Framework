@@ -14,8 +14,11 @@
 
 */
 
-// Server Only Exec
-if (!isServer) exitWith {};
+// Server only execute or HC if present
+if (!isServer && hasInterface) exitWith {};
+if (count entities "HeadlessClient_F" > 0) then {
+	if (isDedicated) exitWith {};
+};
 
 // Inline Function
 SR_CIV_OCCUPATION = {

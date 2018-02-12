@@ -14,8 +14,11 @@
 		nul = [this, 30, 1200, 60] spawn fw_fnc_artilleryInit;
 */
 
-// Server only execute
-if (!isServer) exitWith {};
+// Server only execute or HC if present
+if (!isServer && hasInterface) exitWith {};
+if (count entities "HeadlessClient_F" > 0) then {
+	if (isServer) exitWith {};
+};
 
 // Parameter Init
 params ["_unit","_ammo","_range","_cool"];

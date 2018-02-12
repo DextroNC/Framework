@@ -10,10 +10,6 @@
 	Example:
 		nul = [_art,1] spawn fw_fnc_artilleryCall;
 */
-
-// Server only execute
-if (!isServer) exitWith {};
-
 // Parameter Init
 params ["_u","_mode","_target"];
 _mag = "";
