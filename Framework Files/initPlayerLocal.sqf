@@ -107,6 +107,10 @@ if (count SR_Hack_Area != 0) then {
 	[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _hack] call ace_interact_menu_fnc_addActionToClass;
 };
 
+_rpC = {("SR_RallyTent" in weapons _player) || ("SR_RallyTent" in weapons _player)};
+_rp = ["7R_RP","Build RP","",{nul=[_player,"SR_RallyTent","Misc_Backpackheap"] spawn fw_fnc_buildRP},_rpC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _rp] call ace_interact_menu_fnc_addActionToClass;
+
 // NVG Adjustments (DO NOT TOUCH)
 ace_nightvision_fogScaling = 0.5;
 ace_nightvision_effectScaling = 0.5;

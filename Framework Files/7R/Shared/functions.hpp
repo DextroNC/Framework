@@ -98,6 +98,11 @@
 		class missionManager{};
 		class systemInit{preInit = 1;};
 	};
+	class RP {
+		file = "7R\Rally";
+		class buildRP{};
+		class destroyRP{};
+	};
 	class AI {
 		file = "7R\AI";
 		class rampageCharge{};
