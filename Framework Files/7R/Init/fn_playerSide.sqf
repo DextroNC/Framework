@@ -4,12 +4,12 @@
 		<-- none
 	
 	Description:
-	System Init, both static variables and EventHandlers
+		System Init, both static variables and EventHandlers as preInit
 */
 
-// Server only execute check
+// Global Variable Init
 SR_Side = west;
-
+AI_ART_Units = [];
 if (isServer) then {
 	SR_CC = "Civilian Casulties:";
 	publicVariable "SR_CC";
@@ -19,8 +19,7 @@ if (isServer) then {
 	publicVariable "SR_WC";
 };
 
-
-// Function Inits (do not touch)
+// CBA Eventhandler Init
 if (!isDedicated) then {
 	["ParaPort", {(_this select 1)allowDamage false;(_this select 1) moveInCargo [(_this select 0), (_this select 2)]; (_this select 1) assignAsCargo (_this select 0); [(_this select 1)] orderGetIn true; (_this select 1) allowDamage true; }] call CBA_fnc_addEventHandler;
 	["SideChatSS", {(_this select 0) sideChat (_this select 1) }] call CBA_fnc_addEventHandler;
