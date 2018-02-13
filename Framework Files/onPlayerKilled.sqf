@@ -58,7 +58,7 @@ if (!SR_RespawnLock) Then {
 };
 
 // Wait for wave or force
-waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
+waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" || !(markerPos "SR_RP" isEqualTo [0,0,0])};
 setPlayerRespawnTime 3;
 if ((player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot") exitWith {};
 _oldGroup = units group player; 
