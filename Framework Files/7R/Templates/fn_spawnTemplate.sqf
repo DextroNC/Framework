@@ -17,7 +17,7 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (isDedicated && count entities "HeadlessClient_F" > 0) exitWith {};
+if (HC in allPlayers && isServer) exitWith {};
 
 
 // Parameter init
@@ -133,7 +133,7 @@ if (_type isEqualTo "GARRISON") Then {
 	_garrison append _params;
 	_array = units group _leader;
 	// Init Garrison on spawned Unit
-	[_garrison, "scripts\Zen_OccupyHouse.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	_garrison execVM "scripts\Zen_OccupyHouse.sqf";
 
 };
 

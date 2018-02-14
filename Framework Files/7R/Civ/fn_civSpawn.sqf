@@ -16,9 +16,7 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (count entities "HeadlessClient_F" > 0) then {
-	if (isDedicated) exitWith {};
-};
+if (HC in allPlayers && isServer) exitWith {};
 
 // Inline Function
 SR_CIV_OCCUPATION = {
