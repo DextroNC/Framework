@@ -31,7 +31,7 @@ if (isNil "SR_Template") then {
 		_check = true;
 	};
 }forEach SR_Template;
-if (_check) exitWith {hint "Error: Template already exists."};
+if (_check) exitWith { hint format ["Error: Template %1 already exists.", _templateNumber] };
 
 // Unit Side
 private _side = side _leader;
