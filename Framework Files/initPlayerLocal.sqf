@@ -73,12 +73,14 @@ _headerArtillery = ["7R_ArtyH","Call Fire Support","",{},_isLeader] call ace_int
 _headerArty = ["7R_ArtilleryHeader","Artillery Fire Mission","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _headerArty] call ace_interact_menu_fnc_addActionToClass;
 
-_ACA3 = ["7R_Artillery","3 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",3,25,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
+_ACA3 = ["7R_Artillery","3 Rounds","",{null = ["ArtilleryTarget","",3,25,10] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA3] call ace_interact_menu_fnc_addActionToClass;
-_ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",5,50,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
+_ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","",5,50,10] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA5] call ace_interact_menu_fnc_addActionToClass;
-_ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","ModuleOrdnanceMortar_F",7,75,15] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
+_ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","",7,75,10] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
+_ACAS = ["7R_Artillery","Smoke Barage","",{null = ["ArtilleryTarget","UK3CB_BAF_Smoke_60mm_AMOS",7,100,10,1] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAS] call ace_interact_menu_fnc_addActionToClass;
 
 _CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
