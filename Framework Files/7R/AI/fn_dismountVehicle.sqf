@@ -18,7 +18,7 @@ if (isNull (gunner vehicle _l)) then {
 	// Call UPSMON
 	_array = [_l]; 
 	_array append _upsmon;
-	[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	[_array, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 } else {
 	// Multi Group Dismount
 	_c = count units _g;
@@ -37,5 +37,5 @@ if (isNull (gunner vehicle _l)) then {
 	[_array, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 	_array2 = [leader _ng]; 
 	_array2 append _upsmon;
-	[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	[_array2, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
 };
