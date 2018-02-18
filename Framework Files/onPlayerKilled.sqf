@@ -1,5 +1,6 @@
 // Init Params
 setPlayerRespawnTime 999999;
+_tod = CBA_MissionTime;
 
 // Start Spectator
 [true] call acre_api_fnc_setSpectator;
@@ -58,7 +59,7 @@ if (!SR_RespawnLock) Then {
 };
 
 // Wait for wave or force
-waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" || !(markerPos "SR_RP" isEqualTo [0,0,0])};
+waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" || !(markerPos "SR_RP" isEqualTo [0,0,0]) || ((CBA_MissionTime - _tod) > 300)};
 setPlayerRespawnTime 3;
 if ((player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot") exitWith {};
 _oldGroup = units group player; 
