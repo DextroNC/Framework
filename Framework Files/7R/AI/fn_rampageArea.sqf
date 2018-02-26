@@ -12,10 +12,7 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (count entities "HeadlessClient_F" > 0) then {
-	if (isServer) exitWith {};
-};
-
+if (HC in allPlayers && isServer) exitWith {};
 
 // Parameter Init
 params ["_trg"];
