@@ -85,6 +85,9 @@ _ACAS = ["7R_Artillery","Smoke Barage","",{null = ["ArtilleryTarget","UK3CB_BAF_
 _CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
+_CAS2 = ["7R_CAS","Call Guided CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN",true,player] remoteExec ["fw_fnc_CAS",0];},_isLeader] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
+
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
 _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","",{},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _CSH] call ace_interact_menu_fnc_addActionToClass;
