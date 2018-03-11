@@ -40,17 +40,20 @@ if (CASCallAmmo == 0) exitWith {
 if (markerPos _target isEqualto [0,0,0] || !_laser) exitWith {
 	[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];
 };
+_start = CBA_MissionTime;
 
 // Find Laser Designator in Group
 if (_laser) then {
 	_target = objNull;
-	while {isNull _target} do {
+	_spotter = objNull;
+	while {isNull _target && CBA_MissionTime - _start < 15} do {
 		{
 				_target = laserTarget _x;
 				if (!isNull _target) exitWith {_spotter = _x;};
 		} forEach units group _caller;
 		_target = laserTarget _spotter;
 	};
+	if (isNull _spotter) exitWith {[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];}; 
 };
 
 // Locks other requests, only one Fire Mission at a time.
