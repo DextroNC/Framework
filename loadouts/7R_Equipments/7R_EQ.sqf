@@ -16,8 +16,8 @@ if (_type isEqualTo "rhsusf_ANPVS_14") then {_unit linkItem "rhsusf_ANPVS_14"};
 if (_type isEqualTo "rhs_1PN138") then {_unit linkItem "rhs_1PN138"};
 
 // General
-if (_type isEqualTo "B_Parachute") then {_unit addBackpack "B_Parachute"};
-if (_type isEqualTo "ACE_Altimeter") then {_unit linkItem "ACE_Altimeter"};
+if (_type isEqualTo "B_Parachute") exitWith {_unit addBackpack "B_Parachute"};
+if (_type isEqualTo "ACE_Altimeter") exitWith {_unit linkItem "ACE_Altimeter"};
 if (_type isEqualTo "ACE_key_lockpick") then {_unit addItemToUniform "ACE_key_lockpick"};
 
 // Laserdesignator
@@ -123,8 +123,8 @@ if (_type isEqualTo "ACE_EntrenchingTool") then {
 	_c = false;
 	// Check if other group member already has Entrenching Tool
 	{
-		if ("ACE_EntrenchingTool" in items _x) then {_c = true};
 		if (groupId _group isEqualTo "P-1") exitWith {_c = false};
+		if ("ACE_EntrenchingTool" in items _x) then {_c = true};
 	} forEach units (group _unit);
 	// If check passed add tool
 	if (!_c) then {_unit addItem "ACE_EntrenchingTool";} else {

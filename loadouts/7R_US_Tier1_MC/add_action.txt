@@ -9,6 +9,7 @@ this addaction ["Platoon Medic", "loadouts\us_p_medic.sqf"];
 this addaction ["Squad Leader", "loadouts\us_sl.sqf"];
 this addaction ["Combat Medic", "loadouts\us_medic.sqf"];
 this addaction ["Operator Rifle", "loadouts\us_o_r.sqf"];
+this addaction ["Operator Pointman", "loadouts\us_o_pointman.sqf"];
 this addaction ["Operator AR", "loadouts\us_o_ar.sqf"];
 this addaction ["Operator Light AT", "loadouts\us_o_lat.sqf"];
 this addaction ["Operator MMG", "loadouts\us_o_mmg.sqf"];

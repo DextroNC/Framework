@@ -31,6 +31,8 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
+_unit addItemToBackpack "Laserbatteries";
+_unit addItemToBackpack "Laserdesignator";
 
 _unit addHeadgear "VSM_Multicam_Cap";
 _unit addGoggles "shemagh_loosetanCG";
@@ -53,7 +55,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
-for "_i" from 1 to 6 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
 
 
 _unit addItemToUniform "ACRE_PRC343";
