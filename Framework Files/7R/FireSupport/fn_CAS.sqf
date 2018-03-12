@@ -21,6 +21,7 @@
 */
 // Server Only Exec
 if (!isServer) exitWith {};
+_str = "";
 
 // Parameter Init
 params ["_target","_type","_plane","_delay","_spawn","_laser","_caller"];
@@ -33,17 +34,21 @@ if (isNil "CASCallAmmo") then {CASCallAmmo = 30; publicVariable "CASCallAmmo";};
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (CASFireMissionLock) exitWith {
 	[[SR_Side, "HQ"],"Negative: Close Air Support available. Other Mission in progress."] remoteExec ["sideChat", 0];
+	["FS: Currently Busy", 1.5] call ace_common_fnc_displayTextStructured;
 };
 if (CASCallAmmo == 0) exitWith {
 	[[SR_Side, "HQ"],"Negative: Close Air Support available. Out of Ammunition."] remoteExec ["sideChat", 0];
+	["FS: No Ammunition", 1.5] call ace_common_fnc_displayTextStructured;
 };
-if (markerPos _target isEqualto [0,0,0] || !_laser) exitWith {
+if (markerPos _target isEqualto [0,0,0] && !_laser) exitWith {
 	[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];
+	["FS: No Target", 1.5] call ace_common_fnc_displayTextStructured;
 };
 _start = CBA_MissionTime;
 
 // Find Laser Designator in Group
 if (_laser) then {
+	["FS: Designate Target", 1.5] call ace_common_fnc_displayTextStructured;
 	_target = objNull;
 	_spotter = objNull;
 	while {isNull _target && CBA_MissionTime - _start < 15} do {
@@ -53,7 +58,7 @@ if (_laser) then {
 		} forEach units group _caller;
 		_target = laserTarget _spotter;
 	};
-	if (isNull _spotter) exitWith {[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];}; 
+	if (isNull _spotter) exitWith {[[SR_Side, "HQ"],"No CAS Target designated."] remoteExec ["sideChat", 0];["FS: No Target", 1.5] call ace_common_fnc_displayTextStructured;}; 
 };
 
 // Locks other requests, only one Fire Mission at a time.
@@ -62,7 +67,11 @@ publicVariable "CASFireMissionLock";
 
 // Fire Mission Confirmation Message + Create Log
 ["FS: Mission Confirmed", 1.5] call ace_common_fnc_displayTextStructured;
-_str = "CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
+if (_laser) then {
+	_str = "Guided CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition _target) + ".";
+} else {
+	_str = "CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
+};
 [[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
 ["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
 
