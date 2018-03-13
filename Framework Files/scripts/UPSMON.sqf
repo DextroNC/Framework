@@ -220,6 +220,11 @@ if ("OW" in _UCthis) then {
 	[_grp,_areamarker] spawn fw_fnc_overwatchAI;
 };
 
+// Rampage Mode
+if ("RP" in _UCthis) then {
+	[_grp] spawn fw_fnc_rampageCharge;
+};
+
 // don't make waypoints
 _nowpType = if ("NOWP" in _UCthis) then {1} else {0};
 _nowpType = if ("NOWP2" in _UCthis) then {2} else {_nowpType}; 
