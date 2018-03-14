@@ -1,6 +1,30 @@
 // Init Params
 setPlayerRespawnTime 999999;
 _tod = CBA_MissionTime;
+	
+// Init Variables if not initiliazed yet
+if (isNil "SR_RespawnWave") then {
+	SR_RespawnWave = false;
+	publicVariable "SR_RespawnWave";
+};
+if (isNil "SR_RespawnLock") then {
+	SR_RespawnLock = false;
+	publicVariable "SR_RespawnLock";
+};
+if (isNil "SR_RespawnForce") then {
+	SR_RespawnForce = false;
+	publicVariable "SR_RespawnForce";
+};
+
+// Timer Inline Function
+FNC_timeCheck = {
+	params ["_tod"];
+	_return = false;
+	if (!SR_RespawnLock)then {
+		if ((CBA_MissionTime - _tod) > 300) then {_return = true};
+	};
+	_return
+};
 
 // Start Spectator
 [true] call acre_api_fnc_setSpectator;
@@ -17,21 +41,6 @@ _str = "<br/>" +_name + " has been killed in action by +"  + _killer + ".";
 // Debrief Entry
 SR_KIA = SR_KIA + "<br/>" + _name ;
 publicVariable "SR_KIA";
-
-			
-// Init Variables if not initiliazed yet
-if (isNil "SR_RespawnWave") then {
-	SR_RespawnWave = false;
-	publicVariable "SR_RespawnWave";
-};
-if (isNil "SR_RespawnLock") then {
-	SR_RespawnLock = false;
-	publicVariable "SR_RespawnLock";
-};
-if (isNil "SR_RespawnForce") then {
-	SR_RespawnForce = false;
-	publicVariable "SR_RespawnForce";
-};
 
 // Active Wave check
 if (SR_RespawnWave) exitWith {
@@ -59,7 +68,7 @@ if (!SR_RespawnLock) Then {
 };
 
 // Wait for wave or force
-waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" || !(markerPos "SR_RP" isEqualTo [0,0,0]) || ((CBA_MissionTime - _tod) > 300)};
+waitUntil {SR_RespawnWave || SR_RespawnForce || (player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" || !(markerPos "SR_RP" isEqualTo [0,0,0]) || [_tod] call FNC_timeCheck};
 setPlayerRespawnTime 3;
 if ((player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot") exitWith {};
 _oldGroup = units group player; 
