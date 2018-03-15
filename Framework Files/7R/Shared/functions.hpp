@@ -103,6 +103,12 @@
 		class buildRP{};
 		class destroyRP{};
 	};
+	class UC {
+		file = "7R\Undercover";
+		class goUndercover{};
+		class exitUndercover{};
+		class loopUndercover{};
+	};
 	class AI {
 		file = "7R\AI";
 		class rampageCharge{};
