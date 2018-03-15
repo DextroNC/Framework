@@ -31,6 +31,12 @@ FNC_Suspicion = {
 		};
 	}forEach _list;
 	
+	// Cap suspicion addition
+	if (_addS > 25) then {
+		_addS = 25;
+		if (!(currentWeapon _unit isEqualto "")) then {_addS = 40};
+	};
+	
 	// Process Addition and Reset
 	if (_addS > 0) then {
 		SR_SuspicionValue = SR_SuspicionValue + _addS;
