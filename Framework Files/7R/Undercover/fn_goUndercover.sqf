@@ -29,7 +29,7 @@ UC_Weapon = [_weapon, _items, _magazines];
 
 //Make Unit Undercover
 _unit setCaptive true;
-
+_unit setVariable ["SR_UC",true];
 // Start Loop
 hint "Undercover";
 sleep 2;

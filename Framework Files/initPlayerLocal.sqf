@@ -104,6 +104,13 @@ _CS3 = ["7R_SD_Spawn","Fortification Supply Drop","",{nul = [3,slingpad] spawn f
 _CS4 = ["7R_SD_Spawn","Special Supply Drop","",{nul = [4,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS4] call ace_interact_menu_fnc_addActionToClass;
 
+_uc1 = ["7R_UC","Go Undercover","",{nul = [_player] spawn fw_fnc_goUndercover;},{(CBA_MissionTime - SR_SuspicionSpotted > 60) && _player getVariable ["SR_Class","R"] isEqualto "UC" && !(_player getVariable ["SR_UC",false])}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions"], _uc1] call ace_interact_menu_fnc_addActionToClass;
+
+_uc2 = ["7R_UC","Exit Undercover","",{nul = [_player] spawn fw_fnc_exitUndercover;},{_player getVariable ["SR_UC",false]}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions"], _uc2] call ace_interact_menu_fnc_addActionToClass;
+
+
 // Hacking
 SR_Hack_Area = [];
 if (count SR_Hack_Area != 0) then {

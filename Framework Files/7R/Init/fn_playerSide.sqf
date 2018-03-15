@@ -18,6 +18,9 @@ if (isServer) then {
 	SR_WC = "Alleged War Criminals:";
 	publicVariable "SR_WC";
 };
+SR_SuspicionValue = 0;
+SR_SuspicionSpotted = -60;
+
 
 // CBA Eventhandler Init
 if (!isDedicated) then {

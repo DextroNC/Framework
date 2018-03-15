@@ -9,9 +9,11 @@
 // Parameter init
 params ["_unit"];
 
+// Reset Undercover for manual break
 _unit setCaptive false;
+_unit setVariable ["SR_UC",false];
 
-
+// Add Weapon, Weaponitems and Magazines
 UC_Weapon params ["_weapon", "_items", "_magazines"];
 _unit addWeapon _weapon;
 removeAllPrimaryWeaponItems _unit;
@@ -20,5 +22,8 @@ removeAllPrimaryWeaponItems _unit;
 } forEach (_items);
 
 {
-    _unit addMagazine _x;
+	If (!(_x select 0 isEqualTo "")) then {
+		_unit addMagazine _x;
+	};
 } forEach (_magazines);
+
