@@ -42,8 +42,8 @@
 		};
 		_unit doMove position _target;
 		if (_unit distance2d _target < 25) then {
-			[_unit] spawn {
-				params ["_unit"];
+			[_unit,_handle] spawn {
+				params ["_unit","_handle"];
 				_target = _unit getVariable "sb_target";
 				group _unit setSpeedMode "FULL"; 
 				_unit doMove position _target;
