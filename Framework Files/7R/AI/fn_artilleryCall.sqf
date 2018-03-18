@@ -29,7 +29,7 @@ if (_mode == 3 && "8Rnd_82mm_Mo_Flare_white" in getArtilleryAmmo [_u]) then {_ma
 if (_ammo - _rounds < 0) then {_rounds = _ammo};
 
 // Exec Fire Support
-_handle = [_u,_target,_mag,100,_rounds,[5,10],{},25] spawn BIS_fnc_fireSupport;
+_handle = [_u,_target,_mag,100,_rounds,[10,15],{},35] spawn BIS_fnc_fireSupport;
 _ammo = _ammo - _rounds;
 
 waitUntil {scriptDone _handle};
