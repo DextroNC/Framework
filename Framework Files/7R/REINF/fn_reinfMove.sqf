@@ -12,6 +12,10 @@ _start = getPos (driver _helo);
 _pos = markerPos "REINF";
 _count = {isPlayer _x} count (crew _helo); 
 
+if (ReifLock) exitWith {
+	[[SR_Side, "HQ"], "Reinforcements not available, helicopter reinforcements disabled."] remoteExec ["sideChat", 0];
+};
+
 if (_pos isEqualTo [0,0,0]) exitWith {
 	[[SR_Side, "HQ"],"Reinforcements not available, no Landing Zone designated."] remoteExec ["sideChat", 0];
 };

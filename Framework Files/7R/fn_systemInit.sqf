@@ -19,6 +19,7 @@ ace_medical_gasMask = "Mask_M50";
 
 // Support System Availability Variables
 ExfilHelolock = false;
+ReifLock = false;
 SupplyDropAmmo = 8;
 ArtilleryCallAmmo = 0;
 CASCallAmmo = 0;

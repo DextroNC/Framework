@@ -128,7 +128,7 @@ if (_type isEqualTo "ACE_EntrenchingTool") then {
 	} forEach units (group _unit);
 	// If check passed add tool
 	if (!_c) then {_unit addItem "ACE_EntrenchingTool";} else {
-		"Limit reached!" remoteExec ["hint", _group]; 
+		"Entrenching tool limit reached!" remoteExec ["hint", _group]; 
 	};
 };
 
