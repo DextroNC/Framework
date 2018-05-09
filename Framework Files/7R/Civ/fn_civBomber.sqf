@@ -33,6 +33,9 @@
 			_unit setVariable ["sb_target",_target,true];
 		};	
 	} else {
+		// Exit the script when the unit is moving to its target
+		if (_unit getVariable ["is_exploding", false]) exitWith {};
+
 		if (!alive _target) exitWith {_unit setVariable ["sb_target",nil,true];};
 		_grp = group _unit;
 		if (count (waypoints _grp) > 1) then {
@@ -42,6 +45,9 @@
 		};
 		_unit doMove position _target;
 		if (_unit distance2d _target < 25) then {
+			// Sets the exploding var to true (prevents multiple explosion)
+			_unit setVariable ["is_exploding", true];
+
 			[_unit,_handle] spawn {
 				params ["_unit","_handle"];
 				_target = _unit getVariable "sb_target";
