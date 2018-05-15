@@ -36,9 +36,9 @@ _unit addHeadgear "H_Cap_usblack";
 _unit addGoggles "shemaghface_od";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d145_d";
-_unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_h";
+_unit addWeapon "SMA_Mk16QCB";
+_unit addPrimaryWeaponItem "SMA_rotex_tan";
+_unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
 _unit addWeapon "RH_fnp45t";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
