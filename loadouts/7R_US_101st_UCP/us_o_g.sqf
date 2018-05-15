@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_cu_ucp_101st";
+_unit forceAddUniform "rhs_uniform_acu_ucp";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
