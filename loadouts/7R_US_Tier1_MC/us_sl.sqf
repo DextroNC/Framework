@@ -59,7 +59,7 @@ for "_i" from 1 to 14 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 
 _unit addItemToUniform "ACRE_PRC343";
-_unit addItemToBackpack "ACRE_PRC152";
+_unit addItem "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
