@@ -146,7 +146,6 @@ while {true} do
 					_artillery = [_grp] call fw_fnc_artilleryCheck;
 					If (!isNull _artillery) then
 					{
-						
 						[_artillery,1,_attackpos] spawn fw_fnc_artilleryCall;
 					};
 				} else {
