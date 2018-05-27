@@ -4,7 +4,7 @@
 		<-- Ammunition as Integer
 		<-- Range as Integer
 		<-- Cooldown as Integer
-		
+		<-- Should only fire flares as boolean (default is false)
 		
 	Description:
 		Init for Artillery Units to be aviable for AI units to call.
@@ -21,12 +21,19 @@ if (count entities "HeadlessClient_F" > 0) then {
 };
 
 // Parameter Init
-params ["_unit","_ammo","_range","_cool"];
+params ["_unit","_ammo","_range","_cool", ["_flares", false]];
 
 // Store Parameters on Unit
 _unit setVariable ["ART_Ammo", _ammo];
 _unit setVariable ["ART_Range", _range];
 _unit setVariable ["ART_CD", _cool];
+
+/*
+ * If the unit should only fire flares
+ * */
+if (_flares) then {
+	_unit setVariable ["ART_FlaresOnly", _flares];
+};
 
 // Add Artillery Unit to Artillery Unit Array
 if (isNil "AI_ART_Units") then {AI_ART_Units = [];};

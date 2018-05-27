@@ -21,15 +21,53 @@ private _ammo = _u getVariable ["ART_Ammo", 0];
 // Set last mission time to block while firing
 _u setVariable ["ART_LM", CBA_MissionTime];
 
+/*
+ * Stops the script when the unit is flares only but AI did not request flares
+ * */
+if (_u getVariable ["ART_FlaresOnly", false] && _mode != 3) exitWith {};
+
 // Mode Selection
-if (_mode == 2 && "8Rnd_82mm_Mo_Smoke_white" in getArtilleryAmmo [_u]) then {_mag = "8Rnd_82mm_Mo_Smoke_white";};
-if (_mode == 3 && "8Rnd_82mm_Mo_Flare_white" in getArtilleryAmmo [_u]) then {_mag = "8Rnd_82mm_Mo_Flare_white";};
+_possibleAmmo = [];
+
+if (_mode != 1) then {
+	// Loops through all the possible ammo types
+	{
+		private ["_keyword"];
+
+		// Selects the keyword according to the mode number
+		switch (_mode) do {
+			case 3: {
+				_keyword = "flare";
+			};
+			default {
+				_keyword = "smoke";
+			};
+		};
+
+		// Checks if the ammo contains the keyword specified above
+		if ([_keyword, _x, false] call BIS_fnc_inString) then {
+			// Adds the ammo type to the list
+			_possibleAmmo = _possibleAmmo + [_x];
+		};
+	} forEach ((getArtilleryAmmo [_u]) call BIS_fnc_arrayShuffle);
+};
+
+/*
+ * Exits the script if there is no possible ammo
+ * Only executes when the mode is not 1
+ * */
+_condition = count _possibleAmmo == 0 && _mode != 1;
+
+if (_condition) exitWith {};
+if (!_condition) then {
+	_mag = selectRandom _possibleAmmo;
+};
 
 // Ammo Check
 if (_ammo - _rounds < 0) then {_rounds = _ammo};
 
 // Exec Fire Support
-_handle = [_u,_target,_mag,100,_rounds,[10,15],{},35] spawn BIS_fnc_fireSupport;
+_handle = [_u, _target, _mag, 100, _rounds, [10, 15], {}, 35] spawn BIS_fnc_fireSupport;
 _ammo = _ammo - _rounds;
 
 waitUntil {scriptDone _handle};
