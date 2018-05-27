@@ -33,7 +33,7 @@ UPSMON_ARTILLERY_GUER_FIRE = false; //set to true for doing resistance to fire
 
 // Rampage (all AI near a player will relentlessly charge them)
 UPSMON_RAMPAGE = false;
-UPSMON_RAMPAGE_DISTANCE = 1000;
+UPSMON_RAMPAGE_DISTANCE = 2000;
 
 // Can the group surrender? Rogue Units do not surrender, they charge out of desperation.
 UPSMON_SURRENDER = true;
