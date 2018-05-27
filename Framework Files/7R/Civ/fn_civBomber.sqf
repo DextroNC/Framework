@@ -53,7 +53,7 @@
 				_target = _unit getVariable "sb_target";
 				group _unit setSpeedMode "FULL"; 
 				_unit doMove position _target;
-				[_unit, "SR_allah_akbar_1"] remoteExec ["say3D"];
+				[_unit, "akbar"] remoteExec ["say3D"];
 				sleep 3;
 				"M_PG_AT" createVehicle (position _unit);
 				[_handle] call CBA_fnc_removePerFrameHandler;

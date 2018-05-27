@@ -12,8 +12,10 @@
 */
 // Parameter Init
 params ["_u","_mode","_target"];
-_mag = "";
+_magClass = "";
+_disperions = 100;
 _rounds = 3;
+_magArray = _u getVariable ["SR_Ammo_Class",nil];
 
 // Check Ammo
 private _ammo = _u getVariable ["ART_Ammo", 0];
@@ -21,53 +23,24 @@ private _ammo = _u getVariable ["ART_Ammo", 0];
 // Set last mission time to block while firing
 _u setVariable ["ART_LM", CBA_MissionTime];
 
-/*
- * Stops the script when the unit is flares only but AI did not request flares
- * */
-if (_u getVariable ["ART_FlaresOnly", false] && _mode != 3) exitWith {};
-
-// Mode Selection
-_possibleAmmo = [];
-
-if (_mode != 1) then {
-	// Loops through all the possible ammo types
-	{
-		private ["_keyword"];
-
-		// Selects the keyword according to the mode number
-		switch (_mode) do {
-			case 3: {
-				_keyword = "flare";
-			};
-			default {
-				_keyword = "smoke";
-			};
-		};
-
-		// Checks if the ammo contains the keyword specified above
-		if ([_keyword, _x, false] call BIS_fnc_inString) then {
-			// Adds the ammo type to the list
-			_possibleAmmo = _possibleAmmo + [_x];
-		};
-	} forEach ((getArtilleryAmmo [_u]) call BIS_fnc_arrayShuffle);
-};
-
-/*
- * Exits the script if there is no possible ammo
- * Only executes when the mode is not 1
- * */
-_condition = count _possibleAmmo == 0 && _mode != 1;
-
-if (_condition) exitWith {};
-if (!_condition) then {
-	_mag = selectRandom _possibleAmmo;
+// Select Magazines based on Mode
+if (_u getVariable ["ART_FlaresOnly", false]) then {
+	_magClass = _magArray select 2;
+	_u addMagazine _magClass;
+	_disperions = 150;	
+	_rounds = 5;
+} else {
+	_magClass = _magArray select (_mode - 1);
+	_u addMagazine _magClass;
+	_disperions = [100,75,150] select (_mode - 1);
+	_rounds = [3,4,5] select (_mode - 1);
 };
 
 // Ammo Check
 if (_ammo - _rounds < 0) then {_rounds = _ammo};
 
 // Exec Fire Support
-_handle = [_u, _target, _mag, 100, _rounds, [10, 15], {}, 35] spawn BIS_fnc_fireSupport;
+_handle = [_u, _target, _magClass,_disperions, _rounds, [8, 12], {}, 35] spawn BIS_fnc_fireSupport;
 _ammo = _ammo - _rounds;
 
 waitUntil {scriptDone _handle};
