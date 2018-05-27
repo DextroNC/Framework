@@ -38,4 +38,4 @@ _grp setSpeedMode "FULL";
 	} else {
 		[_grp, position (selectRandom _nearestPlayer)] call BIS_fnc_taskAttack;
 	};
-} , 15, [_grp]] call CBA_fnc_addPerFrameHandler;
+} , selectRandom [15,16,17,18,19,20,21,22,23,24,25], [_grp]] call CBA_fnc_addPerFrameHandler;
