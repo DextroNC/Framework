@@ -33,7 +33,7 @@ _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_mk46";
+_unit addWeapon "hlc_lmg_mk46mod1";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";

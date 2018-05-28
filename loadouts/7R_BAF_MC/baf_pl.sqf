@@ -32,7 +32,6 @@ _unit addItemToBackpack "ACE_HuntIR_monitor";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
-_unit addItemToBackpack "UK3CB_BAF_H_Mk7_Camo_ESS_A";
 _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer_PRR";
 _unit addGoggles "rhs_googles_clear";
 
@@ -63,6 +62,7 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
+	_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_ESS_A";
 	_new setUnitTrait ["camouflageCoef",0.5];
 };
 _unit setVariable ["SR_Class","PL", true];

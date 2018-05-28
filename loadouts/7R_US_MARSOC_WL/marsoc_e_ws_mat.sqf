@@ -1,4 +1,4 @@
-_unit = (_this select 1);
+	_unit = (_this select 1);
 if( !local _unit ) exitWith {};
 
 comment "Exported from Arsenal by Dextro";
@@ -23,7 +23,7 @@ _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
 
 _unit addVest "milgp_v_marciras_marksman_cb";
-for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};		
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 
 _unit addBackpack "rhsusf_falconii_coy";

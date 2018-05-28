@@ -31,9 +31,9 @@ _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d145_wd";
+_unit addWeapon "rhs_weap_m27iar_grip";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
-_unit addPrimaryWeaponItem "RH_HBLM_des";
+_unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
 _unit addWeapon "Binocular";

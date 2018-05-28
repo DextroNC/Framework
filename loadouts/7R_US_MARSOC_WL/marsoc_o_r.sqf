@@ -33,7 +33,7 @@ _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII_wd";
+_unit addWeapon "rhs_weap_m4a1_blockII";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";

@@ -33,7 +33,7 @@ _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt_semi";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_mk18_grip_wd";
+_unit addWeapon "rhs_weap_mk18_grip";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "tf47_m3maaws";

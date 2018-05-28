@@ -39,7 +39,7 @@ _unit addHeadgear "milgp_h_opscore_02_goggles_RGR_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII_M203_wd";
+_unit addWeapon "rhs_weap_m4a1_blockII_M203";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";

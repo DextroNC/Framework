@@ -31,7 +31,7 @@ _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_CESS_A";
+_unit addHeadgear "UK3CB_BAF_H_Beret_RM_Bootneck_PRR_Over";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -55,6 +55,7 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_15";
+	_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_CESS_A";
 	_new setUnitTrait ["camouflageCoef",0.5];
 };
 _unit setVariable ["SR_Class","PE", true];

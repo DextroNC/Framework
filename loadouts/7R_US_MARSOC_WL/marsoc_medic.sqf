@@ -35,7 +35,7 @@ _unit addHeadgear "milgp_h_opscore_05_RGR_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_mk18_grip_KAC_wd";
+_unit addWeapon "rhs_weap_mk18_grip_KAC";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "RH_kimber_nw";

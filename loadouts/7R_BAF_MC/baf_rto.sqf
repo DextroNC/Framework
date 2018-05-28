@@ -25,13 +25,12 @@ _unit addVest "UK3CB_BAF_V_Osprey_SL_A";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A";
-_unit addItemToBackpack "UK3CB_BAF_H_Mk7_Camo_A";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellPurple";};
 _unit addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addItemToBackpack "Laserbatteries";
-_unit addHeadgear "UK3CB_BAF_H_Beret_RM_Bootneck_PRR_Over";
+_unit addHeadgear "UK3CB_BAF_H_Beret_RM_Bootneck_PRR";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -57,6 +56,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_15";
 	_new setUnitTrait ["camouflageCoef",0.5];
+	_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_A";
 };
 _unit setVariable ["SR_Class","SGT", true];
 _unit setVariable ["ace_isEngineer",0, true];
