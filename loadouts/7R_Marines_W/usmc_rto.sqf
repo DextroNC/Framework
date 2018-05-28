@@ -30,6 +30,7 @@ _unit addItemToBackpack "SmokeShellGreen";
 _unit addItemToBackpack "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
 _unit addHeadgear "rhsusf_lwh_helmet_marpatwd_headset";
+_unit addItemToBackpack "Laserbatteries";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -37,7 +38,7 @@ _unit addWeapon "rhs_weap_m4a1_carryhandle_pmag_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "RH_m9";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
