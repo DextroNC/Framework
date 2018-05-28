@@ -14,19 +14,19 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "AOR2_Camo_Cyre_TS";
+_unit forceAddUniform "VSM_MulticamTropic_Crye_SS_od_shirt_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_15Rnd_45cal_fnp";};
-_unit addVest "milgp_v_mmac_assaulter_belt_RGR";
+_unit addVest "milgp_v_mmac_assaulter_belt_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 _unit addItemToVest "ACE_EntrenchingTool";
-_unit addBackpack "AOR2_Backpack_Kitbag";
+_unit addBackpack "VSM_MulticamTropic_Backpack_Kitbag";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
 
@@ -35,11 +35,11 @@ _unit addGoggles "shemaghface_tan";
 
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d10_LMT_d";
+_unit addWeapon "rhs_weap_hk416d10_LMT_wd";
 _unit addPrimaryWeaponItem "RH_qdss_nt4_tg";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
-_unit addWeapon "RH_fnp45";
+_unit addWeapon "RH_fnp45t";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
 _unit addHandgunItem "RH_docter";
@@ -58,7 +58,7 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_15";
-	_unit addHeadgear "VSM_OGA_OD_Helmet1";
+	_unit addHeadgear "H_HelmetSpecB_snakeskin";
 	_unit addGoggles "shemagh2_goggclr_tan";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

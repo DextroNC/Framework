@@ -26,11 +26,12 @@ _unit addVest "milgp_v_marciras_marksman_cb";
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 
-_unit addBackpack "OPXT_ogag_1523";
+_unit addBackpack "OPXT_marpat_1523";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
+_unit addItemToBackpack "Laserbatteries";
 _unit addHeadgear "milgp_h_opscore_05_CB_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
@@ -40,7 +41,7 @@ _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
 _unit addWeapon "RH_kimber_nw";
 _unit addHandgunItem "RH_X300";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

@@ -14,24 +14,24 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "AOR2_Camo_Cyre_GP";
+_unit forceAddUniform "VSM_MulticamTropic_Crye_SS_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_15Rnd_45cal_fnp";};
-_unit addVest "milgp_v_mmac_hgunner_belt_RGR";
+_unit addVest "milgp_v_mmac_hgunner_belt_rgr";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "milgp_bp_hydration_rgr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "milgp_h_cap_02_RGR";
+_unit addHeadgear "milgp_h_cap_02_rgr";
 _unit addGoggles "shemagh_looseodCG";
 
 comment "Add weapons";
 _unit addWeapon "hlc_lmg_M60E4";
-_unit addWeapon "RH_fnp45";
+_unit addWeapon "RH_fnp45t";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
 _unit addHandgunItem "RH_docter";

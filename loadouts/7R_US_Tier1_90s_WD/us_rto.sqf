@@ -32,7 +32,7 @@ _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
-
+_unit addItemToBackpack "Laserbatteries";
 _unit addHeadgear "rhsusf_protech_helmet_rhino";
 _unit addGoggles "rhsusf_oakley_goggles_clr";
 
@@ -43,7 +43,7 @@ _unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
-_unit addWeapon "ACE_VectorDay";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

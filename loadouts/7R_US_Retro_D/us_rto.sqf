@@ -31,13 +31,13 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
-
+_unit addItemToBackpack "Laserbatteries";
 _unit addHeadgear "usm_bdu_cap_des";
 
 comment "Add weapons";
 _unit addWeapon "gst_m16a2_2";
 _unit addWeapon "RH_m9";
-_unit addWeapon "ACE_VectorDay";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

@@ -29,7 +29,6 @@ _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 _unit addBackpack "tf_rt1523g_bwmod";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addItemToBackpack "Laserbatteries";
 _unit addHeadgear "PBW_muetze1_tropen";
 
@@ -37,7 +36,7 @@ comment "Add weapons";
 _unit addWeapon "hlc_rifle_G36KA1";
 _unit addPrimaryWeaponItem "HLC_Optic_G36Dualoptic15x";
 _unit addWeapon "RH_vp70";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

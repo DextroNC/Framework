@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "AOR2_Camo_Cyre_GS";
+_unit forceAddUniform "VSM_MulticamTropic_Crye_SS_grey_shirt_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
@@ -31,20 +31,20 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
-
-_unit addHeadgear "AOR2_Cap";
-_unit addGoggles "shemagh_looseodCG";
+_unit addItemToBackpack "Laserbatteries";
+_unit addHeadgear "VSM_MulticamTropic_Cap";
+_unit addGoggles "shemagh_loosetanCG";
 
 comment "Add weapons";
 _unit addWeapon "rhsusf_weap_MP7A2_desert_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_rotex_mp7";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
-_unit addWeapon "RH_fnp45";
+_unit addWeapon "RH_fnp45t";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
 _unit addHandgunItem "RH_docter";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -53,7 +53,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
-for "_i" from 1 to 6 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
 
 
 _unit addItemToUniform "ACRE_PRC343";

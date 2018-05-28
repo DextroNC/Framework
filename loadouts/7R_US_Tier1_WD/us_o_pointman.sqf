@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "AOR2_Camo_Cyre";
+_unit forceAddUniform "VSM_MulticamTropic_Crye_SS_od_shirt_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
@@ -34,11 +34,11 @@ _unit addHeadgear "milgp_h_cap_backwards_02_goggles_CB";
 _unit addGoggles "shemaghface_od";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d10_LMT_d";
+_unit addWeapon "rhs_weap_hk416d10_LMT_wd";
 _unit addPrimaryWeaponItem "RH_qdss_nt4_tg";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
-_unit addWeapon "RH_fnp45";
+_unit addWeapon "RH_fnp45t";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
 _unit addHandgunItem "RH_docter";
@@ -56,7 +56,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "A3_GPNVG18_BLK_F";
+	_unit linkItem "A3_GPNVG18_F";
 	_unit addHeadgear "H_HelmetB_light";
 	_unit addGoggles "shemagh2_goggclr_od";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
