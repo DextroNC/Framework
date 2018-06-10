@@ -227,7 +227,7 @@ while {true} do
 							{	
 								If (("staticbag" in _typeofgrp) || (_grp getvariable ["UPSMON_NOFOLLOW",false] && _inmarker)) then
 								{
-									If ((_haslos && _dist <= _weaponrange && _dist > 300)  || (_grp getvariable ["UPSMON_NOFOLLOW",false] && _inmarker)) then
+									If ((_haslos && _dist <= _weaponrange && _dist < 300)  || (_grp getvariable ["UPSMON_NOFOLLOW",false] && _inmarker)) then
 									{
 										//SUPPORT
 										//[_grp] call UPSMON_PLANSPT;
