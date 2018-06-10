@@ -4,6 +4,10 @@
 		<-- Leader as Object
 		<-- Upsmon Parameters initialized on Target Pos as Array
 		<-- Optional: Upsmon Parameters initialized on Target Pos for Cargo as Array
+
+	Description:
+		Makes AI dismount and passes it to UPSMON
+		
 */
 // Parameter Init
 params ["_l","_upsmon","_cargo"];

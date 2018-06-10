@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Plane as Object
 
+	Descriptions:
+		Ejects attached objects from Plane
+
 	
 */
 

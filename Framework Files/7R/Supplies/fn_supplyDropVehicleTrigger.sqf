@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Box as Object
 
+	Description:
+		Vehicle Supply Station Trigger Area
+
 */
 
 // Parameter Init

@@ -10,9 +10,9 @@
 */
 
 // Parameter init
-_type = (_this select 3) select 0;
-_posObj = (_this select 3) select 1;
-_cargo = (_this select 3) select 2;
+_args = _this select 3;
+_args params ["_type","_posObj",["_cargo",false]];
+
 
 // Clear Landing Pad
 
@@ -28,7 +28,6 @@ _veh = _type createVehicle (getPosASL _posObj);
 _veh setDir (getDir _posObj);
 
 // Cargo
-if (isNil "_cargo") exitWith {};
 if (_cargo) then {
 	[_veh] execVM "7R\VehicleCargoContent.sqf";	
 };

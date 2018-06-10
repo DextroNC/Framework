@@ -2,10 +2,19 @@
 	Parameters:
 	<-- Group Leader of Vehicle
 
+	Description:
+		Deletes AI Vehicle including Crew
+
 */
-_groupLeader = _this select 0;
-_vehicle = vehicle _groupLeader;
+// Parameter Init
+params ["_leader"];
+_vehicle = vehicle _leader;
+_crew = units group _leader;
+
+// Delete Crew
 {
-_vehicle deleteVehicleCrew _x;
-}forEach units group _groupLeader;
+	_vehicle deleteVehicleCrew _x;
+}forEach _units;
+
+// Deletee Vehicle
 deleteVehicle _vehicle;

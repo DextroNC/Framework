@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Box as Object
 
+	Description:
+		Claim Fortification Supply Drop
+
 */
 
 // Parameter Init

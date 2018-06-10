@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Box as Object
 
+	Description:
+		Build Vehicle Supply Station
+
 */
 
 // Parameter Init

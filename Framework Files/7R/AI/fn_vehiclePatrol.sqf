@@ -5,6 +5,10 @@
 		<-- Array of Patrol Points as Array of Marker Names as String Example: ["pat1", "pat2"]
 		<-- Limited Speed as Integer (in kph)
 		<-- Upsmon Parameters initialized on when in contact as Array
+
+	Description:
+		AI Vehicle Patrol, on contact passed to Upsmon
+		
 */
 
 // Server only execute check

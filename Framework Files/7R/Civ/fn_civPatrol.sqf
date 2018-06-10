@@ -5,14 +5,14 @@
 		<-- Opt. Amount of Waypoints as Integer: Default = 4; 
 
 	Description:
-	Manages patrol for civilians.
+		Manages patrol for civilians.
 		
 	Example:
 	[_grp,_marker,4] spawn fw_fnc_civPatrol;
+	
 */
 // Parameter Init
-params ["_grp","_zone","_amount"];
-if (isNil "_amount") then {_amount =4};
+params ["_grp","_zone",["_amount", 4]];
 
 // Task Patrol
 _pa = [_zone] call CBA_fnc_getArea;

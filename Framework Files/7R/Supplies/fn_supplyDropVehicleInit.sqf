@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Box as Object
 
+	Description:
+		Adds Actions to Vehicle Supply Box
+
 */
 
 // Parameter Init

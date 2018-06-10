@@ -3,6 +3,9 @@
 		<-- Box as Object
 		<-- Spare Part as String of Classname
 
+	Description:
+		Spawn Spare Parts
+
 */
 
 // Progress Bar and Animation

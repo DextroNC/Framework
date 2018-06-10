@@ -1,5 +1,11 @@
 /*
-	Build Rallypoint
+	Parameters:
+		<-- Unit as Object
+		<-- Item Classname as String
+		<-- Model Classname as String
+
+	Description:
+		Build Rallypoint
 	
 */
 params ["_unit","_item","_model"];

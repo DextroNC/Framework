@@ -3,9 +3,13 @@
 	Parameters:
 		<-- Type as String
 		<-- SpawnPos as Object (Helipad invisible)
-		<-- Cargo as Boolean (applies Vehicle Cargo)
+		<-- Optional: Cargo as Boolean (applies Vehicle Cargo)
 		<-- Pylon Details as Array [[pylon name/index, magazine name, forced, turret],[pylon name/index, magazine name, forced, turret]]
 	
+	Description:
+		Spawns a Helicopter
+
+	Example:
 		Used with Addaction:
 		this addaction ["<t color=""#00FF00"">" +"Spawn Helicopter", fw_fnc_heloSpawn,["RHS_UH1Y",pad,false]];
 		
@@ -13,8 +17,7 @@
 
 // Parameter init
 _args = _this select 3;
-_array = [];
-_args params ["_type","_posObj","_cargo","_array"];
+_args params ["_type","_posObj",["_cargo",false],["_array",[]]];
 
 // Clear Landing Pad
 _old = nearestObjects [_posObj,["AllVehicles"],10];
@@ -41,7 +44,6 @@ if (count _array > 0) then {
 };
 
 // Cargo
-if (isNil "_cargo") exitWith {};
 if (_cargo) then {
 	[_helo] execVM "7R\VehicleCargoContent.sqf";	
 };

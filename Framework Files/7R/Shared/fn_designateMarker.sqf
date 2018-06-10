@@ -10,14 +10,8 @@
 */
 
 // Parameter Init
-params ["_markerName","_markerDescription","_color","_sign","_landingPad","_size"];
-// Default Value for Optionals
-if (isNil "_landingPad") then {
-	_landingPad  = false;
-};
-if (isNil "_size") then {
-	_size  = [1,1];
-};
+params ["_markerName","_markerDescription","_color","_sign",["_landingPad",false],["_size", [1,1]]];
+
 
 hint ("Click on Map to assign " + _markerDescription);
 

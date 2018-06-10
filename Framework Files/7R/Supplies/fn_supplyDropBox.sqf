@@ -7,14 +7,12 @@
 		<-- Cargo Spawn Overwrite as Boolean
 		
 	Description:
-	Spawns the Box and Loads it with appropriate cargo. Either provides them for Air Drop or Sling Loading.
+		Spawns the Box and Loads it with appropriate cargo. Either provides them for Air Drop or Sling Loading.
 
 */
 
 // Parameter Init
-params["_plane","_mem","_off","_mode","_cargo"];
-if (isNil "_mode") then {_mode = 1;};
-if (isNil "_cargo") then {_cargo = false;};
+params["_plane","_mem","_off",["_mode", 1],["_cargo", false]];
 private "_box";
 
 // Create Supply Box

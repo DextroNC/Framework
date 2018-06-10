@@ -6,16 +6,16 @@
 		<-- Vehicle Usage as Boolean
 	
 	Description:
-	HVT will stay at his location until he knows enemies are close. He will then start to flee along the over the given markers in the array.
-	If player gets within range of HVT he will surrender. Optional it can be enabled that he will use vehicles.
+		HVT will stay at his location until he knows enemies are close. He will then start to flee along the over the given markers in the array.
+		If player gets within range of HVT he will surrender. Optional it can be enabled that he will use vehicles.
 
-	When succesfully escaped following variable will be added to the HVT: SR_HVT_Escaped.
+		When succesfully escaped following variable will be added to the HVT: SR_HVT_Escaped.
 	
 	Trigger Condition: 
-	hvt getVariable ["SR_HVT_Escaped", false]
+		hvt getVariable ["SR_HVT_Escaped", false]
 		
 	Example:
-	nul = [this, ["f1", "f2","f3","f5"], 10, false] spawn fw_fnc_hvt; (HVT init line)
+		nul = [this, ["f1", "f2","f3","f5"], 10, false] spawn fw_fnc_hvt; (HVT init line)
 */
 
 // Only on Server

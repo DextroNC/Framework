@@ -7,8 +7,7 @@ while {true} do
 			_grp = _x;
 			
 			// Rampage
-			If (_grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE") exitwith {};
-			if (UPSMON_RAMPAGE) exitWith {
+			if (UPSMON_RAMPAGE || _grp getvariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE") exitWith {
 				[_grp] call fw_fnc_rampageCharge;
 			};
 			

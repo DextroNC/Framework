@@ -2,6 +2,9 @@
 	Parameters:
 		<-- Box as Object
 
+	Description:
+		Adds Claim Action to Fort. Sup. Drop
+
 */
 
 // Parameter Init

@@ -21,8 +21,7 @@ if (HC in allPlayers && isServer) exitWith {};
 // Inline Function
 SR_CIV_OCCUPATION = {
 	// Parameter Init
-	params ["_zone", "_civs", "_total","_bomber"];
-	if (isNil "_bomber") then {_bomber = 0};
+	params ["_zone", "_civs", "_total",["_bomber", 0]];
 	_zone setMarkerAlpha 0;
 	private "_unit";
 	private "_v";

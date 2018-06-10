@@ -1,5 +1,11 @@
 /*
-	Pick up RP
+	Parameters:
+		<-- Rallypoint as Object
+		<-- Unit as Object
+		<-- Item Classname as String
+		
+	Description:
+		Deconstruct and Pick up RP
 	
 */
 params ["_object","_unit","_item"];

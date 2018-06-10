@@ -5,16 +5,17 @@
 		<-- Airplane Type as String 
 		<-- Callsign as String
 		<-- Amount of Boxes as Integer (1-3 boxes)
-		<-- Type of Supply Drop as Integer (1: Infantry, 2: Vehicle Supply, 3: Fortification Supplies)
+		<-- Optional: Type of Supply Drop as Integer (1: Infantry, 2: Vehicle Supply, 3: Fortification Supplies), default : 1
+
+	Decription:
+		Init Supply Drop Function
 
 */
 
 // Parameter Init
-params ["_target","_spawn","_type","_callsign","_amount","_mode"];
-
+params ["_target","_spawn","_type","_callsign","_amount",["_mode",1]];
 _target = markerPos _target;
 _spawn = markerPos _spawn;
-if (isNil "_mode") then {_mode = 1};
 
 // Init Public variables if not initialized in init.sqf or else with default values.
 if (isNil "SupplyDropLock") then {SupplyDropLock = false; publicVariable "SupplyDropLock";};

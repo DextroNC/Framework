@@ -26,4 +26,4 @@ _unit setCombatMode "RED";
 	} else {
 		[group _unit, position _nearestPlayer] call BIS_fnc_taskAttack;
 	};
-} , 5, [_unit]] call CBA_fnc_addPerFrameHandler;
+} , 10, [_unit]] call CBA_fnc_addPerFrameHandler;

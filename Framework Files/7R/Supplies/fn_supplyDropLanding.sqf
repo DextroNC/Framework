@@ -3,6 +3,8 @@
 		<-- Plane as Object
 		<-- Parachute as Object
 	
+	Description:
+		Remove Parachute and spawn Smoke
 */
 
 // Parameter Init
