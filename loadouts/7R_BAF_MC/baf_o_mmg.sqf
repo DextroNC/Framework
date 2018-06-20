@@ -40,7 +40,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 3 do {_unit addItemToVest "UK3CB_BAF_556_100Rnd";};
+for "_i" from 1 to 3 do {_unit addItemToVest "UK3CB_BAF_762_100Rnd";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "UK3CB_BAF_762_100Rnd";};
 
 _unit addItemToUniform "ACRE_PRC343";
