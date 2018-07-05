@@ -247,12 +247,12 @@ if (_type isEqualTo "AIR") Then {
 
 	// Spawn Vehicle
 	_veh = [_pos, _dir, (_units select 0), _side] call bis_fnc_spawnVehicle;
-	_veh disableTIEquipment true;
+
+	(_veh select 0) disableTIEquipment true;
 	
 	// Initialise
 	private _leader = leader (_veh select 2);
 	_params params ["_tMarker","_wpType","_mode","_pZone"];
-	hint format ["%1", _params];
 	private "_tPos";
 	
 	if (isNil "_pZone") then {
@@ -271,4 +271,3 @@ if (_type isEqualTo "AIR") Then {
 		[(group _leader), _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 	};	
 };
-
