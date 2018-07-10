@@ -12,7 +12,7 @@ _last = _grp getVariable ["UPSMON_LastOrder",0];
 _grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
 
 // Check if last run is more than 30sec ago.
-if (CBA_MissionTime - last < 30) exitWith {};
+if (CBA_MissionTime - _last < 30) exitWith {};
 _grp setVariable ["UPSMON_LastOrder",CBA_MissionTime];
 
 // Disable what may hold their charge back
