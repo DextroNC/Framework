@@ -1,5 +1,5 @@
 version=53;
-center[]={4893.4639,5,2235.1563};
+center[]={1428.1096,5,4446.6426};
 class items
 {
 	items=1;
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.009765625,0.0014390945,0.80786133};
+					position[]={-0.0096435547,0.0014390945,0.80712891};
 				};
 				side="West";
 				flags=7;
@@ -23,7 +23,7 @@ class items
 				{
 					rank="SERGEANT";
 					init="call{this setGroupIdGlobal [""F-1""];}";
-					description="Team Leader (Foxtrot)";
+					description="Team Leader @Foxtrot";
 					isPlayable=1;
 					class Inventory
 					{
@@ -38,7 +38,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=53;
+				id=89;
 				type="B_Soldier_SL_F";
 				class CustomAttributes
 				{
@@ -88,7 +88,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.71191406,0.0014390945,-0.37011719};
+					position[]={-0.71130371,0.0014390945,-0.37011719};
 				};
 				side="West";
 				flags=5;
@@ -109,7 +109,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=54;
+				id=90;
 				type="B_Soldier_F";
 				class CustomAttributes
 				{
@@ -159,7 +159,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.72021484,0.0014390945,-0.28808594};
+					position[]={0.7208252,0.0014390945,-0.28808594};
 				};
 				side="West";
 				flags=5;
@@ -180,7 +180,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=55;
+				id=91;
 				type="B_Soldier_F";
 				class CustomAttributes
 				{
@@ -229,6 +229,6 @@ class items
 		class Attributes
 		{
 		};
-		id=52;
+		id=88;
 	};
 };

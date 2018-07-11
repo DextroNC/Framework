@@ -1,14 +1,14 @@
 version=53;
-center[]={4892.1431,5,2235.8301};
+center[]={1424.2256,5,4430.6685};
 class items
 {
-	items=1;
+	items=2;
 	class Item0
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0,0.57536411,0};
+			position[]={-0.44152832,0.57536411,-0.036621094};
 		};
 		side="Empty";
 		flags=4;
@@ -16,7 +16,7 @@ class items
 		{
 			init="call{this addAction [""<t color='#00FF00'>Teleport to Ralleypoint</t>"",fw_fnc_teleport, [1,""SR_RP""], 0, true, true, """",""!(markerPos 'SR_RP' isEqualTo [0,0,0])"",3];     }";
 		};
-		id=43;
+		id=101;
 		type="Land_InfoStand_V1_F";
 		class CustomAttributes
 		{
@@ -59,6 +59,44 @@ class items
 				};
 			};
 			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.44140625,0.28405476,0.036621094};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=102;
+		type="Box_NATO_Support_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""SR_RallyTent""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
 		};
 	};
 };

@@ -1,5 +1,5 @@
 version=53;
-center[]={7368.8555,5,3443.3242};
+center[]={1428.5884,5,4450.7222};
 class items
 {
 	items=1;
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.0092773438,0.0014390945,0.80786133};
+					position[]={-0.0093994141,0.0014390945,0.80761719};
 				};
 				side="West";
 				flags=7;
@@ -23,7 +23,7 @@ class items
 				{
 					rank="SERGEANT";
 					init="this setGroupIdGlobal [""E-1""];";
-					description="Team Leader (Echo Team)";
+					description="Team Leader @Echo";
 					isPlayable=1;
 					class Inventory
 					{
@@ -38,7 +38,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=2;
+				id=85;
 				type="B_Soldier_SL_F";
 				class CustomAttributes
 				{
@@ -88,7 +88,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.71044922,0.0014390945,-0.37011719};
+					position[]={-0.7109375,0.0014390945,-0.37011719};
 				};
 				side="West";
 				flags=5;
@@ -109,7 +109,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=3;
+				id=86;
 				type="B_Soldier_F";
 				class CustomAttributes
 				{
@@ -159,7 +159,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.72070313,0.0014390945,-0.28808594};
+					position[]={0.72021484,0.0014390945,-0.28808594};
 				};
 				side="West";
 				flags=5;
@@ -180,7 +180,7 @@ class items
 						gps="ItemGPS";
 					};
 				};
-				id=4;
+				id=87;
 				type="B_Soldier_F";
 				class CustomAttributes
 				{
@@ -229,6 +229,6 @@ class items
 		class Attributes
 		{
 		};
-		id=1;
+		id=84;
 	};
 };
