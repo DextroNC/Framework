@@ -28,7 +28,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "rhsusf_falconii_mc";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "optic_NVS";
-_unit addHeadgear "rhsusf_ach_helmet_ocp";
+_unit addHeadgear "rhsusf_ach_helmet_camo_ocp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
