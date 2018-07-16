@@ -26,6 +26,12 @@ if (["fence", (format ["%1", _this])] call BIS_fnc_inString) then
 {
 	If (!(_this isKindOf "Strategic")) exitwith {false};
 };
+
+// Sandbags and such
+if (["sandbag", (format ["%1", _this])] call BIS_fnc_inString) exitWith {true};
+if (["rampart", (format ["%1", _this])] call BIS_fnc_inString) exitWith {true};
+if (["nest", (format ["%1", _this])] call BIS_fnc_inString) exitWith {true};
+if (["trench", (format ["%1", _this])] call BIS_fnc_inString) exitWith {true};
  
 _type = typeOf _this; 
 if (_type == "") then 

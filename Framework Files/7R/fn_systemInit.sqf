@@ -29,6 +29,7 @@ ReifLock = false;
 SupplyDropAmmo = 6;
 ArtilleryCallAmmo = 0;
 CASCallAmmo = 0;
+UAV_Ammo = 0;
 ace_trenches_trenchSupplies = 0;
 
 

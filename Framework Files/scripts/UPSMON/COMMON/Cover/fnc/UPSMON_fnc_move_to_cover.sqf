@@ -25,6 +25,7 @@ _spawn 			= 	_this select 3;
 _cover 			=	_coverArray select 0;
 _coverPosition 	= 	_coverArray select 1;
 
+
 if (_spawn) then
 {
 	_unit setposATL _coverPosition;
@@ -37,50 +38,45 @@ if (_spawn) then
 }
 else
 {
-	Dostop _unit;
+	//Dostop _unit;
 	_unit domove _coverPosition;
 	_unit forceSpeed 100;
-	_unit setDestination [_coverPosition, "LEADER PLANNED", true];
+	//_unit setDestination [_coverPosition, "LEADER DIRECT", true];
 
-	_coverDist = round ([getposATL _unit,_coverPosition] call UPSMON_distancePosSqr);
+	_coverDist = round (getposATL _unit distance2d _coverPosition);
 
 	_stopped = true;
 	_continue = true;
 	
-	_checkTime =  (time + (1.7 * _coverDist) + 20);
+	_timer =  ((1.7 * _coverDist) + 20);
+	_start = CBA_MissionTime;
 
 	while { _continue } do 
 	{
 			
-		_dist = ([getposATL _unit,_coverPosition] call UPSMON_distancePosSqr);
+		_dist = getposATL _unit distance _coverPosition;
 		
-		if (!(unitReady _unit) && (alive _unit) && (_dist > 1.25) && (_unit getvariable ["UPSMON_SUPSTATUS",""] == "")) then
+		if ((alive _unit) && (_dist > 2)) then
 		{
 			//if unit takes too long to reach cover or moves too far out stop at current location
-			if (time <= _checkTime) then
-			{
-				_continue = false;
-			}
-			else
-			{
-				//_coverPosition = getPosATL _unit;
-				//_unit doMove _coverPosition;
-
-				//_continue = true;
+			if (CBA_MissionTime - _start > _timer) exitWith {
+				_stopped = true;
 			};
 		}
 		else
 		{	
 			_continue = false;
 			_stopped = false;
+			
 		};
 	}; 
 	
 	_unit forcespeed -1;
+	doStop _unit;
 	if (!( _stopped)) then 
 	{			
 		doStop _unit;
-		_unit setBehaviour "STEALTH";
+		_unit setBehaviour "AWARE";
 		_sight = [_unit,getdir _unit, 50] call UPSMON_CanSee; 
 		If (!_sight) then {_unit setUnitPos "MIDDLE";};
 	};	

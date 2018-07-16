@@ -43,6 +43,12 @@ if (UPSMON_Debug>0) then {player sidechat "Cover"};
 _objects = [(nearestObjects [_unitpos, [], _dist]), { _x call UPSMON_fnc_filter } ] call BIS_fnc_conditionalSelect;
 _vdir = [_unitpos, _lookpos] call BIS_fnc_DirTo;
 
+
+// Remove Waypoints
+{
+	deleteWaypoint _x;
+}forEach (waypoints (group (_units select 0)));
+
 {
 	If (alive _x) then
 	{

@@ -31,10 +31,10 @@ if ((round (random 100)) <= UPSMON_ROGUE) then {_rogue = true};
 					_u addEventHandler ["Killed", {
 					params ["_dead"];
 					if (_dead getVariable ["UPSMON_ROGUE",false]) exitWith {}; 
-					_killer = _dead getVariable ["ace_medical_lastDamageSource", "unknown"];
-					_name = name _dead;
+					_killer = _dead getVariable ["ace_medical_lastDamageSource", objNull];
+					_murderer = name _killer;
 					_str = SR_WC;
-					_str = format [_str + "<br/>" + str (_killer)];
+					_str = format [_str + "<br/>" + _murderer];
 					SR_WC = _str;
 					publicVariable "SR_WC";
 			}]; 

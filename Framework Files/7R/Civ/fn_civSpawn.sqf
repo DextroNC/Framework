@@ -36,10 +36,11 @@ SR_CIV_OCCUPATION = {
 		// add Eventhandler to count Civilian Casulties
 		_unit addEventHandler ["Killed", {
 			params ["_dead"];
-			_killer = _dead getVariable ["ace_medical_lastDamageSource", "unknown"];
+			_killer = _dead getVariable ["ace_medical_lastDamageSource", objNull];
+			_murderer = name _killer;
 			_name = name _dead;
 			_str = SR_CC;
-			_str = format [_str + "<br/>" + str (_name) + " has been killed by " + str (_killer) + "."];
+			_str = format [_str + "<br/>" + _name + " has been killed by " + _murderer + "."];
 			SR_CC = _str;
 			publicVariable "SR_CC";
 		}]; 
