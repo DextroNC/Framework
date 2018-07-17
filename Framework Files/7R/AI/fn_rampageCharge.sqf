@@ -17,7 +17,7 @@ _grp setVariable ["UPSMON_LastOrder",CBA_MissionTime];
 
 // Disable what may hold their charge back
 {
-	_x disableAI "SUPPRESSION";
+	//_x disableAI "SUPPRESSION";
 	_x disableAI "AUTOCOMBAT";
 } forEach (units _grp);
 _grp setBehaviour "AWARE";

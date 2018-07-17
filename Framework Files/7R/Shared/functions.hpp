@@ -2,11 +2,8 @@
 {
 	class init {
 		file = "7R\Init";
-		class playerSide{preInit = 1;};
-		class commCard{postInit = 1;};
-		class regulations{postInit = 1;};
+		class frameworkInit{preInit = 1;};
 		class radioInit{postInit = 1;};
-		class composition{postInit = 1;};
 		class compositionDisplay{};
 	};
 	class shared

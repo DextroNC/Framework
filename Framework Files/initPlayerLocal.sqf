@@ -1,17 +1,10 @@
 // JIP Teleporter Init
 
-_unit = _this select 0;
-_jip = _this select 1;
-
-if (_jip) then {
-	_unit addAction ["<t color='#FF0000'>JIP Teleporter</t>",fw_fnc_jipTeleport,nil,0,false,true,"","_target distance2D (markerPos 'respawn_west') < 50"];   
+if (_this select 1) then {
+	(_this select 0) addAction ["<t color='#FF0000'>JIP Teleporter</t>",fw_fnc_jipTeleport,nil,0,false,true,"","_target distance2D (markerPos 'respawn_west') < 50"];   
 };
  
 // =====================================================================================================================================================
-
-// Combat Log
-player createDiarySubject ["Combat Log", "Combat Log"];
-player createDiarySubject ["Mission Log", "Mission Log"];
 
 // Briefing Init
 nul = execVM "briefing.sqf";
