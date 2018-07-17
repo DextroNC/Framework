@@ -3,7 +3,9 @@
 		<-- Zone as Marker (String of Marker Name)
 		<-- Civ Classnames as Array (may use Global-Variable instead)
 		<-- Amount as Integer (max amount)
-		<-- Opt: Suicide Bombers - default: 0
+		<-- Opt: Suicide Bombers as Integer - default: 0
+		<-- Opt: Sleeper as Integer - default : 0
+		<-- Opt: Shooter as Integer - default : 0
 		
 		Description:
 		Spawn Civilians randomly in an area which they either patrol, occupy houses or idle near roads. 
@@ -21,7 +23,7 @@ if (HC in allPlayers && isServer) exitWith {};
 // Inline Function
 SR_CIV_OCCUPATION = {
 	// Parameter Init
-	params ["_zone", "_civs", "_total",["_bomber", 0]];
+	params ["_zone", "_civs", "_total",["_bomber", 0],["_sleeper",0],["_shooter",0]];
 	_zone setMarkerAlpha 0;
 	private "_unit";
 	private "_v";
@@ -78,7 +80,31 @@ SR_CIV_OCCUPATION = {
 			[_unit] spawn fw_fnc_civBomber;
 		};
 	};
+	// Shooter Spawn
+	iF (_shooter > 0) then {
+		for [{_i=0}, {_i < _shooter}, {_i = _i + 1}] do {
+			_type = _civs call BIS_fnc_selectRandom;
+			_pos = [_zone, true] call CBA_fnc_randPosArea;
+			_grp = createGroup civilian;
+			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
+			_unit setBehaviour "SAFE";
+			[_grp,_zone,5] spawn fw_fnc_civPatrol;
+			[_unit, 2] spawn fw_fnc_civSleeper;
+		};
+	};
+	// Sleeper Spawn
+	iF (_sleeper > 0) then {
+		for [{_i=0}, {_i < _sleeper}, {_i = _i + 1}] do {
+			_type = _civs call BIS_fnc_selectRandom;
+			_pos = [_zone, true] call CBA_fnc_randPosArea;
+			_grp = createGroup civilian;
+			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
+			_unit setBehaviour "SAFE";
+			[_grp,_zone,5] spawn fw_fnc_civPatrol;
+			[_unit, 1] spawn fw_fnc_civSleeper;
+		};
+	};
 };
 
 // Exec Inline Function
-[_this select 0, _this select 1, _this select 2,_this select 3] call SR_CIV_OCCUPATION;
+[_this select 0, _this select 1, _this select 2,_this select 3,_this select 4,_this select 5] call SR_CIV_OCCUPATION;

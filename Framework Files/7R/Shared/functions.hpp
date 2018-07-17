@@ -27,6 +27,8 @@
 		class civSpawn{};
 		class civPatrol{};
 		class civBomber{};
+		class civSleeper{};
+		class civShooter{};
 	};
 	class arty
 	{
