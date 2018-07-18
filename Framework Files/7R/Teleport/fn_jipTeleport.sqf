@@ -19,7 +19,7 @@ _str = "";
 // Teleport to Leader
 if (_leader != _unit) then {
 	// Teleport into Vehicle
-	if (vehicle _leader != _leader && vehicle _leader emptyPositions  "cargo") then {
+	if (vehicle _leader != _leader && vehicle _leader emptyPositions  "cargo" > 0) then {
 		_unit moveInCargo (vehicle _leader);
 		hint "Teleporting into Leader's Vehicle";
 	} 
@@ -28,19 +28,20 @@ if (_leader != _unit) then {
 		_unit setPos (getPos _leader);
 		hint "Teleporting to Leader";
 	};
+	// Info for Leader
+	_str = (name _unit) + " JIP Teleported";
+	_str remoteExec ["hint",_leader];
+
 // Teleport to Click on Map (if Unit == Leader)
 } else {
+	hint "Click on Map to teleport.";
 	[_unit] onMapSingleClick  {
-		hint "Click on Map to teleport.";
 		_unit = _this select 0;
 		_unit setPos _pos;
+		hint "Teleported";
 		onMapSingleClick "";
 	};
 };
-
-// Info for Leader
-_str = (name _unit) + "JIP Teleported";
-_str remoteExec ["hint",_leader];
 
 // Remove JIP Teleport Action
 _unit removeAction _id;
