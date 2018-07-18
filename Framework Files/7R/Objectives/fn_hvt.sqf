@@ -3,7 +3,7 @@
 		<-- Unit as Object
 		<-- Marker as Array of Strings (for waypoints to flee to)
 		<-- Surrender Ranger as Integer
-		<-- Vehicle Usage as Boolean
+		<-- Optional (default: false): Vehicle Usage as Boolean
 	
 	Description:
 		HVT will stay at his location until he knows enemies are close. He will then start to flee along the over the given markers in the array.
@@ -22,7 +22,7 @@
 if (!isServer) exitWith {};
 
 // Parameter Init
-params ["_unit","_markerArray","_dist","_veh"];
+params ["_unit","_markerArray","_dist",["_veh",false]];
 // disable ASR AI
 _unit setVariable ["asr_ai_exclude", true, true];
 _unit disableAI "AUTOCOMBAT";
