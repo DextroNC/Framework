@@ -62,6 +62,13 @@ _group setBehaviour "CARELESS";
 // Add Action for Lift Off
 [_helo] remoteExec ["fw_fnc_exfilAction", 0, true];
 
+clearweaponcargoGlobal _helo;  
+clearmagazinecargoGlobal _helo;  
+clearitemcargoGlobal _helo; 
+clearBackpackCargoGlobal _helo; 
+_helo addmagazinecargoGlobal ["rhs_mag_an_m14_th3",6];
+_helo addItemCargoGlobal ["SR_PAK", 10];
+
 // Add Waypoints at EZ
 _wp1 = _group addWaypoint [ _target, 0, 1];
 _wp1 setWayPointBehaviour "CARELESS";
@@ -89,30 +96,21 @@ _helo engineOn true;
 
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
+force = true;
+publicVariable "force";
 _group setSpeedMode "NORMAL"; 
 _helo flyInHeight 100;
 {deleteWaypoint _x}forEach waypoints _group;
 
-/*
-// Check if DropOff Marker exists
- if (!isNil "_do") then {
-	if (!(markerPos _do isEqualTo [0,0,0])) then {
-		_drop = markerPos _do;
-		_wp2 = _group addWaypoint [_drop, 0, 1];
-		_wp2 setWayPointBehaviour "CARELESS";
-		_wp2 setWayPointSpeed "NORMAL";
-		_wp2 setWayPointType "TR UNLOAD";
-		_wp2 setWayPointCombatMode "WHITE";
-		
-		_wp3 = _group addWaypoint [_spawn, 0, 2];
-		_wp3 setWayPointBehaviour "CARELESS";
-		_wp3 setWayPointType "MOVE";
-		_wp3 setWayPointSpeed "NORMAL";
-		_wp3 setWayPointCombatMode "WHITE";
-
-	};
+ if (!isNil "_do" && !(markerPos _do isEqualTo [0,0,0])) then {
+	_drop = markerPos _do;
+	_wp2 = _group addWaypoint [_drop, 0, 1];
+	_wp2 setWayPointBehaviour "CARELESS";
+	_wp2 setWayPointSpeed "NORMAL";
+	_wp2 setWayPointType "TR UNLOAD";
+	_wp2 setWayPointCombatMode "WHITE";
 };
-*/
+
 
 // Final WP to despawn
 _wp3 = _group addWaypoint [_spawn, 0, 2];
@@ -122,7 +120,7 @@ _wp3 setWayPointSpeed "NORMAL";
 _wp3 setWayPointCombatMode "WHITE";
 
 // Despawn and Unlock
-[{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D (_this select 2) < 300)}, {
+[{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D  (_this select 2) < 300)}, {
 	ExfilHelolock = false;
 	publicVariable "ExfilHelolock";
 }, [_helo,_group,_spawn]] call CBA_fnc_waitUntilAndExecute;
