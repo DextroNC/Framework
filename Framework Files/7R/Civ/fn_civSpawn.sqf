@@ -76,6 +76,7 @@ SR_CIV_OCCUPATION = {
 			_grp = createGroup civilian;
 			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
 			_unit setBehaviour "SAFE";
+			_unit addItem "HandGrenade";
 			[_grp,_zone,5] spawn fw_fnc_civPatrol;
 			[_unit] spawn fw_fnc_civBomber;
 		};

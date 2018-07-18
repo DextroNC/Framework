@@ -1,7 +1,7 @@
 /*
 	Parameters:
 		<-- Unit as Object
-		<-- Mode as Integer (mode: 1 - Handgrenade Suicide; mode: 2 - Pistol)
+		<-- Mode as Integer (mode: 1 - Handgrenade Suicide; mode: 2 - Pistol/Shooter)
 		
 	Description:
 		A civilian will pretent to be innocent, but under condition will turn against players.
@@ -22,19 +22,17 @@ switch (_mode) do {
 	case 1: {
 		_unit addItem "HandGrenade";
 		_unit addEventHandler ["GetInMan", {
-			params ["_unit", "_role", "_vehicle", "_turret"];
-			if (!alive _unit || !("HandGrenade" in items _unit)) exitWith {};
-			sleep (2 + (random 5));
-			[_unit, "akbar"] remoteExec ["say3D"];
-			sleep 3;
-			"GrenadeHand" createVehicle (position _unit);
+			params ["_unit"];
+			[_unit] spawn fw_fnc_civBomber;
 		}];
 	};
 	// Weapon Mode
 	case 2: {
-		_unit addItem "hgun_Pistol_01_F";
+		_unit addWeapon "hgun_Pistol_01_F";
 		_unit addMagazine "10Rnd_9x21_Mag";
-	
+		_unit addMagazine "10Rnd_9x21_Mag";
+		sleep 2;
+		[_unit] call ace_weaponselect_fnc_putWeaponAway;
 		["ace_captiveStatusChanged", {
 			params ["_unit","_status","_reason"];
 			nul = [_unit] spawn fw_fnc_civShooter; 
