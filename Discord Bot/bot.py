@@ -60,7 +60,7 @@ async def time():
     print(now)
     hour = now.hour + 2
     minute = now.minute
-    await bot.say("It is {0}:{1} CE(S)T".format(hour, minute))
+    await bot.say("It is {0}:{1} CE(S)T".format(str(hour), str(minute)))
     
 @bot.command(pass_context=True)
 async def steam(ctx):#shows link to steam group
@@ -105,11 +105,12 @@ async def training(ctx):
 @bot.command()
 async def instructors():
     embedinstructors = discord.Embed(title="Instructor", description="List of all Instructors - Message who you need to schedule training/qualifying.", color=0x087B08)
-    embedinstructors.add_field(name="Infantry Qualification", value="Gustav1101 and Merc", inline=False)
+    embedinstructors.add_field(name="Infantry Qualification", value="Merc and FluffyThumper", inline=False)
     embedinstructors.add_field(name="Heavy Weapons Qualification", value="Merc", inline=False)
     embedinstructors.add_field(name="Marksman Qualification", value="Evilknievel and Daedalor", inline=False)
     embedinstructors.add_field(name="Engineer Qualification", value="Daedalor", inline=False)
     embedinstructors.add_field(name="Medic Qualification", value="Merc", inline=False)
+    embedinstructors.add_field(name="Rotary Qualification", value="Gustav1101", inline=False)
     await bot.say(embed=embedinstructors)
     
 @bot.command(pass_context=True)
@@ -217,7 +218,7 @@ async def meme(ctx):#shows a meme image
     if channel == "305472012841910272" or "449619348978663444":
         memezimg = ['https://cdn.discordapp.com/attachments/452195429464145960/452200037875843083/evilhitler.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200351643336715/traintracks.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200441170886658/dedbem.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201039312060436/toilet.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201120627032064/dolphin.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201378023079938/art.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201483321081897/overwatch.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201621544370176/rpg.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201724384641050/wnc.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201875224133652/split.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202500158783499/moru.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202580614053888/compen.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202691599400960/yoga.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202837225766932/weasel.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202922177069057/plteo.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202996764508170/mixtape.jpg', 'https://cdn.discordapp.com/attachments/305472092978020352/452444510484692993/20180602143613_1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/469218045970219009/high_five.jpg']
         memedesc = ['Evil Hitler or Hitler Evil?', "Don't stand on train tracks kids", "Is he dead?", "NSFW - Not Safe For War", "Dolphin Sniping", "That's art - Evil", "Overwatch", "When Evil is pushed too far", "War, War never changes", ":-)", "For Mother Russia", "I wonder what Lunete does to compensate for his small...", 'Yoga before War', "Just... lol", "Platoon Lead's during every op", "7R mixtape coming at ya", "Hi","... then we meet in the open field and give Alpha high fives"]
-        number = random.randint(0, len(memezimg))
+        number = random.randint(0, (len(memezimg) - 1))
         await bot.say(memezimg[number])
         await bot.say(memedesc[number])
     else:
