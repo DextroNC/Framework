@@ -21,17 +21,15 @@ if (isServer) then {
 SR_SuspicionValue = 0;
 SR_SuspicionSpotted = -60;
 
-// CBA Eventhandler Init
-if (!isDedicated) then {
-	["ParaPort", {(_this select 1)allowDamage false;(_this select 1) moveInCargo [(_this select 0), (_this select 2)]; (_this select 1) assignAsCargo (_this select 0); [(_this select 1)] orderGetIn true; (_this select 1) allowDamage true; }] call CBA_fnc_addEventHandler;
-	["SideChatSS", {(_this select 0) sideChat (_this select 1) }] call CBA_fnc_addEventHandler;
-	["VehicleAmmo", {vehicle (_this select 0) setVehicleAmmo 1}] call CBA_fnc_addEventHandler;
-	["CombatLog", {player createDiaryRecord ["Combat Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
-	["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
-};
+// Client Only Part
+if (isDedicated) exitWith {};
 
-// Client only Part
-if (!hasInterface) exitWith {};
+// CBA Eventhandler
+["ParaPort", {(_this select 1)allowDamage false;(_this select 1) moveInCargo [(_this select 0), (_this select 2)]; (_this select 1) assignAsCargo (_this select 0); [(_this select 1)] orderGetIn true; (_this select 1) allowDamage true; }] call CBA_fnc_addEventHandler;
+["SideChatSS", {(_this select 0) sideChat (_this select 1) }] call CBA_fnc_addEventHandler;
+["VehicleAmmo", {vehicle (_this select 0) setVehicleAmmo 1}] call CBA_fnc_addEventHandler;
+["CombatLog", {player createDiaryRecord ["Combat Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
+["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 
 // Diary Record Category Init
 player createDiarySubject ["Combat Log", "Combat Log"];
@@ -39,7 +37,7 @@ player createDiarySubject ["Mission Log", "Mission Log"];
 
 // Regulations
 player createDiarySubject ["Regulation", "Regulation"];
-player createDiaryRecord ["Regulation", ["Equipment", "
+player createDiaryRecord ["Regu lation", ["Equipment", "
 <br/>
 <font size='18'>Composition Regulations</font>
 <br/>
