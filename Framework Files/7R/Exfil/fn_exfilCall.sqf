@@ -66,7 +66,6 @@ clearweaponcargoGlobal _helo;
 clearmagazinecargoGlobal _helo;  
 clearitemcargoGlobal _helo; 
 clearBackpackCargoGlobal _helo; 
-_helo addmagazinecargoGlobal ["rhs_mag_an_m14_th3",6];
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
 // Add Waypoints at EZ
