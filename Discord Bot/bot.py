@@ -56,11 +56,11 @@ async def ops(ctx):
     
 @bot.command()
 async def time():
-    now = datetime.datetime.now().time()
+    now = datetime.datetime.now() + datetime.timedelta(hours=2)
     print(now)
     hour = now.hour + 2
-    minute = now.minute
-    await bot.say("It is {0}:{1} CE(S)T".format(str(hour), str(minute)))
+    minute = now.minute 
+    await bot.say("It is {:%H:%M} CEST".format(now))
     
 @bot.command(pass_context=True)
 async def steam(ctx):#shows link to steam group
@@ -105,7 +105,7 @@ async def training(ctx):
 @bot.command()
 async def instructors():
     embedinstructors = discord.Embed(title="Instructor", description="List of all Instructors - Message who you need to schedule training/qualifying.", color=0x087B08)
-    embedinstructors.add_field(name="Infantry Qualification", value="Merc and FluffyThumper", inline=False)
+    embedinstructors.add_field(name="Infantry Qualification", value="Merc, FluffyThumper and Alex Vidas", inline=False)
     embedinstructors.add_field(name="Heavy Weapons Qualification", value="Merc", inline=False)
     embedinstructors.add_field(name="Marksman Qualification", value="Evilknievel and Daedalor", inline=False)
     embedinstructors.add_field(name="Engineer Qualification", value="Daedalor", inline=False)
