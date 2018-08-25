@@ -17,7 +17,7 @@ this addaction ["Operator Asst. Medium AT", "loadouts\bw_o_mat_ab.sqf"];
 this addaction ["Operator Grenadier", "loadouts\bw_o_g.sqf"];
 this addaction ["Operator DMR", "loadouts\bw_o_dmr.sqf"];
 this addaction ["Operator Breacher", "loadouts\bw_o_breacher.sqf"];
-this addaction ["Operator Electronics", "loadouts\bw_o_electronic.sqf"];
+this addaction ["Operator Pointman", "loadouts\bw_o_pointman.sqf"];
 this addaction ["Operator UAV", "loadouts\bw_o_uav.sqf"];
 this addaction ["Operator Engineer (Repair)", "loadouts\bw_o_engi.sqf"];
 this addaction ["Operator Engineer (EOD)", "loadouts\bw_o_eod.sqf"];

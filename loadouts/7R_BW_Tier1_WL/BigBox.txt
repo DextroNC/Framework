@@ -10,7 +10,6 @@ this addmagazinecargoGlobal ["rhsusf_10Rnd_762x51_m118_special_Mag", 4];
 this addmagazinecargoGlobal ["tf47_m3maaws_HEDP", 10];  
 this addmagazinecargoGlobal ["tf47_m3maaws_HE", 10];
 this addWeaponcargoGlobal ["BWA3_RGW90", 20];
-this addWeaponcargoGlobal ["BWA3_Pzf3", 10];
 this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];  
 this additemcargoGlobal ["DemoCharge_Remote_Mag", 12];  
 };

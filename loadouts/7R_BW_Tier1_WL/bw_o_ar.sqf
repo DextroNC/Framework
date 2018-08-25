@@ -27,8 +27,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "milgp_bp_Breacher_rgr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-this addHeadgear "milgp_h_airframe_05_RGR_hexagon";
-this addGoggles "shemagh2_goggclr_od";
+_unit addHeadgear "milgp_h_airframe_05_RGR_hexagon";
+_unit addGoggles "shemagh2_goggclr_od";
 
 comment "Add weapons";
 _unit addWeapon "BWA3_MG4";

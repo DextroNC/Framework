@@ -36,7 +36,7 @@ _unit addHeadgear "milgp_h_airframe_03_goggles_RGR_hexagon";
 _unit addGoggles "shemagh_looseodCG";
 
 comment "Add weapons";
-_unit addWeapon "SPS_hk417_13_vfg_black_f";
+_unit addWeapon "SPS_hk417_13_vfg_fde_f";
 _unit addPrimaryWeaponItem "RH_Saker762";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_usp";

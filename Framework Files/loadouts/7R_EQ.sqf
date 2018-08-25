@@ -28,14 +28,14 @@ switch (_type) do {
     case "rhs_1PN138": {_unit linkItem _type;};
     case "B_Parachute": {_unit addBackpack _type;};
     case "ACE_key_lockpick": {_unit addItem _type;};
-    case "Laserdesignator": {_unit addWeapon "Laserdesignator"; _unit addItem "Laserbatteries";};
+    case "Laserdesignator": {_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator"; _unit addItem "Laserbatteries";};
     case "ACE_Vector": {_unit addWeapon _type;};
     case "Binocular": {_unit addWeapon _type;};
     case "B_UavTerminal": {_unit linkItem _type;};
     case "O_UavTerminal": {_unit linkItem _type;};
     case "ItemGPS": {_unit linkItem _type;};
     case "ACE_EntrenchingTool": {
-		if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 1 || groupId _group isEqualTo "PL") then {
+		if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 1 || groupId _group in ["PL","P","P-1","P-2"]) then {
 			_unit addItem "ACE_EntrenchingTool";
 		} else {
 			"Entrenching Tool limit reached!" remoteExec ["hint", _group]; 
