@@ -31,7 +31,7 @@ _unit addHeadgear "rhsusf_ach_helmet_ESS_ucp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_pmag";
+_unit addWeapon "rhs_weap_m4a1_carryhandle_grip";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "tf47_m3maaws";

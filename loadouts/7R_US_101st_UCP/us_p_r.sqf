@@ -29,7 +29,7 @@ _unit addBackpack "gear_FastPack_ACU_01";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addHeadgear "rhsusf_ach_helmet_ucp_norotos";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle";

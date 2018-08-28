@@ -21,7 +21,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
-_unit addVest "rhsusf_iotv_ocp_Teamleader";
+_unit addVest "rhsusf_spcs_ocp_Teamleader";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "tf_rt1523g_big_rhs";
@@ -33,7 +33,7 @@ _unit addHeadgear "rhsusf_ach_helmet_ocp_norotos";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_pmag_grip3";
+_unit addWeapon "rhs_weap_m4a1_pmag_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "RH_m9";
@@ -45,8 +45,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Red";};
+for "_i" from 1 to 10 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToBackpack "ACRE_PRC152";

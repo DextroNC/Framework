@@ -36,8 +36,8 @@ _unit addHeadgear "rhsusf_patrolcap_ocp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_m203s";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addWeapon "rhs_weap_m4a1_m203s";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_Vector";
 
@@ -47,8 +47,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 9 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Red";};
+for "_i" from 1 to 9 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToBackpack "ACRE_PRC152";
@@ -56,13 +56,13 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit addItemToBackpack "rhsusf_ANPVS_14";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addHeadgear "rhsusf_ach_helmet_headset_ess_ocp";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];

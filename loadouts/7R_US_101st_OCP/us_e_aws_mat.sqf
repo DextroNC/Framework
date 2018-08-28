@@ -21,7 +21,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
-_unit addVest "rhsusf_iotv_ocp_Rifleman";
+_unit addVest "rhsusf_spcs_ocp_Rifleman";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -34,7 +34,7 @@ _unit addHeadgear "rhsusf_ach_helmet_ocp_norotos";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_pmag";
+_unit addWeapon "rhs_weap_m4a1";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "RH_m9";
@@ -46,8 +46,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

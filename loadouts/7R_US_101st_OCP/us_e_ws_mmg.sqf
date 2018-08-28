@@ -21,7 +21,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
-_unit addVest "rhsusf_iotv_ocp_Rifleman";
+_unit addVest "rhsusf_spcs_ocp_machinegunner";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addBackpack "rhsusf_assault_eagleaiii_ocp";

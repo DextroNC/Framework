@@ -36,7 +36,7 @@ _unit addHeadgear "rhsusf_ach_helmet_headset_ucp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "SMA_Mk17_Green";
+_unit addWeapon "SMA_Mk17";
 _unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_Vector";

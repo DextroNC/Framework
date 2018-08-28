@@ -21,7 +21,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
-_unit addVest "rhsusf_iotv_ucp_Teamleader";
+_unit addVest "rhsusf_iotv_ucp_Squadleader";
 _unit addItemToVest "SmokeShell";
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
@@ -37,7 +37,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle_m203s";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_Vector";
 
@@ -56,13 +56,13 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit addItemToBackpack "rhsusf_ANPVS_14";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareWhite_F";
-	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addHeadgear "rhsusf_ach_helmet_headset_ess_ucp";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];

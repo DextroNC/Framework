@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_acu_ucp";
+_unit forceAddUniform "rhs_uniform_cu_ucp";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -28,7 +28,7 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "gear_assaultpack_ACU_01";
 _unit addItemToBackpack "ToolKit";
 _unit addHeadgear "rhsusf_cvc_green_helmet";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle";

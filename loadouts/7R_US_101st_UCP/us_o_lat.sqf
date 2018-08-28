@@ -29,11 +29,11 @@ _unit addBackpack "rhsusf_assault_eagleaiii_ucp";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "rhs_m136_hedp_mag";
 _unit addHeadgear "rhsusf_ach_helmet_ucp";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle";
-_unit addPrimaryWeaponItem "rhsusf_acc_grip1";
+_unit addWeapon "rhs_weap_m4a1_carryhandle_grip3";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addWeapon "rhs_weap_M136_hedp";
 _unit addWeapon "RH_m9";

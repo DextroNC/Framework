@@ -31,7 +31,7 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "SR_MAK";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
 _unit addHeadgear "rhsusf_ach_helmet_ucp_norotos";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4_carryhandle_mstock";

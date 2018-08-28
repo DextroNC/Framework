@@ -26,7 +26,7 @@ _unit addItemToVest "SmokeShell";
 _unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addHeadgear "rhsusf_cvc_helmet";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle";
@@ -39,7 +39,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 6 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

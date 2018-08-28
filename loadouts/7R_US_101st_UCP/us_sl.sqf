@@ -38,7 +38,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle_m203";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "RH_m9";
 _unit addWeapon "ACE_Vector";
 

@@ -30,11 +30,11 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 _unit addHeadgear "rhsusf_ach_helmet_ucp";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_m320";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+_unit addWeapon "rhs_weap_m4a1_carryhandle_m203";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "RH_m9";
 _unit addWeapon "Binocular";
 

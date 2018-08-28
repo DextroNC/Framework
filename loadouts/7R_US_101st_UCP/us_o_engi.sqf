@@ -33,10 +33,10 @@ _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addHeadgear "rhsusf_ach_helmet_ucp_norotos";
-_unit addGoggles "rhs_ess_black";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_pmag";
+_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
 _unit addWeapon "RH_m9";
