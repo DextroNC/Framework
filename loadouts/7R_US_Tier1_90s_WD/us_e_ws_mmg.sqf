@@ -26,8 +26,7 @@ _unit addVest "usm_vest_rba_lbv_mg";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 3 do {_unit addItemToVest "RH_12Rnd_45cal_usp";};
-_unit addHeadgear "rhsusf_protech_helmet_ess";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "usm_bdu_boonie_wdl";
 
 comment "Add weapons";
 _unit addWeapon "hlc_lmg_m60";
@@ -50,6 +49,8 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_ess";
+	_unit addGoggles "rhs_googles_clear";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","MMG", true];

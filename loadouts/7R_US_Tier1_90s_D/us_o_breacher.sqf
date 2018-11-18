@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "usm_bdu_dcu";
+_unit forceAddUniform "usm_bdu_d";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "SR_PAK";
@@ -30,12 +30,12 @@ for "_i" from 1 to 3 do {_unit addItemToVest "RH_12Rnd_45cal_usp";};
 
 _unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
+_unit addHeadgear "usm_bdu_cap_des";
 
-_unit addHeadgear "rhsusf_protech_helmet_rhino";
-_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_M590_8RD";
+_unit addWeapon "UK3CB_BAF_L128A1";
+_unit addPrimaryWeaponItem "acc_flashlight";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -47,8 +47,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "rhsusf_8Rnd_00Buck";};
-for "_i" from 1 to 12 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
+for "_i" from 1 to 12 do {_unit addItemToVest "UK3CB_BAF_12G_Slugs";};
+for "_i" from 1 to 12 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -56,6 +56,8 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino";
+	_unit addGoggles "rhsusf_oakley_goggles_clr";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","LAT", true];

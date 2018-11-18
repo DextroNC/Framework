@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "usm_bdu_dcu";
+_unit forceAddUniform "usm_bdu_d";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "SR_PAK";
@@ -28,9 +28,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 for "_i" from 1 to 3 do {_unit addItemToVest "RH_12Rnd_45cal_usp";};
 
 _unit addBackpack "usm_pack_abag_m60";
+_unit addHeadgear "usm_bdu_boonie_des";
 
-_unit addHeadgear "rhsusf_protech_helmet_rhino";
-_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
 _unit addWeapon "hlc_lmg_m60";
@@ -54,6 +53,8 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino";
+	_unit addGoggles "rhsusf_oakley_goggles_clr";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","MMG", true];

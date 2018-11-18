@@ -34,14 +34,12 @@ _unit addItemToBackpack "SmokeShellGreen";
 _unit addItemToBackpack "SmokeShellRed";
 _unit addItemToBackpack "ToolKit";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-
-_unit addHeadgear "rhsusf_protech_helmet_rhino_ess";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "usm_bdu_8point_wdl";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_M14_Rail";
-_unit addPrimaryWeaponItem "RH_Saker762";
-_unit addPrimaryWeaponItem "RH_shortdot";
+_unit addWeapon "BIS_M21";
+_unit addPrimaryWeaponItem "hlc_muzzle_300blk_KAC";
+_unit addPrimaryWeaponItem "RH_ta01nsn";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -62,6 +60,8 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino_ess";
+	_unit addGoggles "rhs_googles_clear";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PE", true];

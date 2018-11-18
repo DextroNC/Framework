@@ -28,14 +28,13 @@ _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 3 do {_unit addItemToVest "RH_12Rnd_45cal_usp";};
 _unit addBackpack "usm_pack_abag_m60";
-_unit addHeadgear "rhsusf_protech_helmet_rhino_ess";
-_unit addGoggles "rhs_googles_clear";
 
+_unit addHeadgear "usm_bdu_8point_wdl";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle";
-_unit addPrimaryWeaponItem "rhsusf_acc_wmx_bk";
-_unit addPrimaryWeaponItem "RH_saker";
+_unit addWeapon "KA_Model_733";
+_unit addPrimaryWeaponItem "KA_M16_Suppressor";
+_unit addPrimaryWeaponItem "KA_M16_flashlight";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -56,6 +55,8 @@ _unit addItemToVest "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino_ess";
+	_unit addGoggles "rhs_googles_clear";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];

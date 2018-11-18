@@ -33,13 +33,12 @@ _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellOrange";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 _unit addItemToBackpack "Laserbatteries";
-_unit addHeadgear "rhsusf_protech_helmet_rhino";
-_unit addGoggles "rhsusf_oakley_goggles_clr";
+_unit addHeadgear "rhsusf_Bowman";
 
 comment "Add weapons";
-_unit addWeapon "hlc_smg_mp5a2";
-_unit addPrimaryWeaponItem "RH_tundra";
-_unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
+_unit addWeapon "KA_MP5SD3";
+_unit addPrimaryWeaponItem "KA_MP5SD3_Suppressor";
+_unit addPrimaryWeaponItem "KA_MP5_flashlight";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -62,6 +61,8 @@ _unit addItemToBackpack "ACRE_PRC117F";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino";
+	_unit addGoggles "rhsusf_oakley_goggles_clr";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","RTO", true];

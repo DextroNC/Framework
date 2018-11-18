@@ -26,6 +26,8 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["30Rnd_9x21_Mag", 16];  
 	_box addmagazinecargoGlobal ["tf47_m3maaws_HEDP", 3];  
 	_box addmagazinecargoGlobal ["tf47_m3maaws_HE", 3];
+	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 12];
+	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Pellets", 12];
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
 	_box addWeaponcargoGlobal ["rhs_weap_m72a7", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];  
@@ -46,6 +48,7 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];   
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];   
 };
+
 
 // Vehicle Supply
 if (_type == 2) then {

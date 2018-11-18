@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "usm_bdu_dcu";
+_unit forceAddUniform "usm_bdu_d";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -35,13 +35,13 @@ _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "MineDetector";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhsusf_protech_helmet_rhino";
-_unit addGoggles "rhsusf_oakley_goggles_clr";
+_unit addHeadgear "usm_bdu_cap_des";
+
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle";
-_unit addPrimaryWeaponItem "rhsusf_acc_wmx_bk";
-_unit addPrimaryWeaponItem "RH_saker";
+_unit addWeapon "KA_Model_723";
+_unit addPrimaryWeaponItem "KA_M16_flashlight";
+_unit addPrimaryWeaponItem "KA_M16_Suppressor";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -62,6 +62,8 @@ _unit addItemToBackpack "ACRE_PRC152";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet_rhino";
+	_unit addGoggles "rhsusf_oakley_goggles_clr";	
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PE", true];

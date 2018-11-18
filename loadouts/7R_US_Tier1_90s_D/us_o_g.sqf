@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "usm_bdu_dcu";
+_unit forceAddUniform "usm_bdu_d";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "SR_PAK";
@@ -30,14 +30,13 @@ for "_i" from 1 to 3 do {_unit addItemToVest "RH_12Rnd_45cal_usp";};
 _unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
+_unit addHeadgear "usm_bdu_boonie_des";
 
-_unit addHeadgear "rhsusf_protech_helmet";
-_unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle_m203";
-_unit addPrimaryWeaponItem "rhsusf_acc_wmx_bk";
-_unit addPrimaryWeaponItem "RH_saker";
+_unit addWeapon "KA_Model_723_m203";
+_unit addPrimaryWeaponItem "KA_M16_flashlight";
+_unit addPrimaryWeaponItem "KA_M16_Suppressor";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
@@ -57,6 +56,8 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addHeadgear "rhsusf_protech_helmet";
+	_unit addGoggles "rhsusf_oakley_goggles_clr";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
