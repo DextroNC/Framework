@@ -25,7 +25,7 @@ _unit addItemToUniform "Chemlight_green";
 _unit addVest "UK3CB_BAF_V_Osprey_Winter";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 _unit addBackpack "UK3CB_BAF_B_Kitbag_Arctic";

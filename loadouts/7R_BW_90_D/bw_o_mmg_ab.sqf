@@ -23,7 +23,7 @@ _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_18Rnd_9x19_VP";};
 _unit addVest "pbw_splitter_mg_h";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 _unit addBackpack "BWA3_Kitbag_tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};

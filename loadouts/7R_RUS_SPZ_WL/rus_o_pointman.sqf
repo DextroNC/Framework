@@ -24,7 +24,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_9x19mm_7n21_20";};
 _unit addVest "rhs_6b23_digi_6sh92_spetsnaz2";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addItemToVest "rhs_mag_9x19mm_7n21_20";
 _unit addBackpack "B_TacticalPack_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};

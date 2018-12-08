@@ -25,7 +25,7 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 _unit addVest "usm_vest_pasgt_lbe_rm";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "RH_15Rnd_9x19_M9";};
 
 _unit addHeadgear "usm_helmet_pasgt_w";

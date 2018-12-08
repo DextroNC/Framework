@@ -24,7 +24,7 @@ _unit addItemToUniform "SmokeShell";
 _unit addVest "milgp_v_mmac_marksman_belt_CB";
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "milgp_bp_Pointman_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addHeadgear "rhsusf_mich_bare_norotos_arc_alt_tan";

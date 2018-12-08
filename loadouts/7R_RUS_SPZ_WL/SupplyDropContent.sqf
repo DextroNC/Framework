@@ -39,7 +39,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_GRD40_Red", 8];  
 	_box addmagazinecargoGlobal ["rhs_VG40OP_white", 8];  
 	_box addmagazinecargoGlobal ["rhs_VG40OP_red", 4];  
-	_box additemcargoGlobal ["ACE_M84", 6];
+	_box additemcargoGlobal ["rhs_mag_mk84", 6];
 	_box additemcargoGlobal ["O_IR_Grenade", 1];   
 	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];  
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];  

@@ -40,7 +40,7 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
 	_box additemcargoGlobal ["ACE_HuntIR_M203", 1];
-	_box additemcargoGlobal ["ACE_M84", 6];
+	_box additemcargoGlobal ["rhs_mag_mk84", 6];
 	_box additemcargoGlobal ["B_IR_Grenade", 1];   
 	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];  
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];  

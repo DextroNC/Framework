@@ -24,7 +24,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "RH_17Rnd_9x19_g17";};
 _unit addVest "milgp_v_marciras_grenadier_belt_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addItemToVest "HandGrenade";
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 12 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToVest "1Rnd_Smoke_Grenade_shell";};
 _unit addBackpack "milgp_bp_Breacher_rgr";

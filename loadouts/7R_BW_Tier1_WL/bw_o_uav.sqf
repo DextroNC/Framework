@@ -24,7 +24,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
 _unit addVest "BWA3_Vest_JPC_Radioman_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "B_UAV_01_backpack_F";
 _unit addHeadgear "milgp_h_airframe_05_goggles_RGR_hexagon";

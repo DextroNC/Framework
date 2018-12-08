@@ -26,7 +26,7 @@ this additemcargoGlobal ["UGL_FlareWhite_F", 10];
 this additemcargoGlobal ["UGL_FlareCIR_F", 10];  
 this additemcargoGlobal ["1Rnd_Smoke_Grenade_shell", 10];  
 this additemcargoGlobal ["1Rnd_SmokeRED_Grenade_shell", 10];  
-this additemcargoGlobal ["ACE_M84", 10];
+this additemcargoGlobal ["rhs_mag_mk84", 10];
 this additemcargoGlobal ["B_IR_Grenade", 10];   
 this additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];  
 this additemcargoGlobal ["DemoCharge_Remote_Mag", 6];  

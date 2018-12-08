@@ -13,6 +13,7 @@
 		class designateMarker{};
 		class isSergeant{};
 		class flag{};
+		class checkStatus{};
 	};
 	class template
 	{

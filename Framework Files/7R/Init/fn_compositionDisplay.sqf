@@ -18,7 +18,7 @@ _aG = [_aG,[],{groupId _x},"ASCEND"] call BIS_fnc_sortBy;
 
 	{
 		_class = _x getVariable ["SR_Class", "UKN"];
-		_sqd = _sqd + _class + " "; 
+		_sqd = _sqd + (_x) + "/" + _class + " - "; 
 	} forEach units _x;
 	_info = _info + "<br/>" +  _sqd;
 	

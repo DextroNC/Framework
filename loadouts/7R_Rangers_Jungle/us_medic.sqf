@@ -25,7 +25,7 @@ _unit addItemToUniform "Chemlight_green";
 _unit addVest "milgp_v_marciras_medic_belt_rgr";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 _unit addBackpack "VSM_MulticamTropic_Backpack_Compact";
