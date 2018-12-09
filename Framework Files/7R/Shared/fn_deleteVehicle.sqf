@@ -13,8 +13,8 @@ _crew = units group _leader;
 
 // Delete Crew
 {
-	_vehicle deleteVehicleCrew _x;
-}forEach _units;
+	deleteVehicle _x;
+}forEach _crew;
 
 // Deletee Vehicle
 deleteVehicle _vehicle;
