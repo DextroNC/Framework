@@ -64,6 +64,7 @@ _helo engineOn true;
 _group setGroupIdGlobal [_callsign];
 _group setBehaviour "CARELESS"; 
 
+
 // Disable Units to react
 {
 	_x disableAi "AUTOCOMBAT";
@@ -89,19 +90,19 @@ _wp1 setWayPointCombatMode "WHITE";
 
 // Slow down and lock to LZ
 waitUntil {sleep 0.5; (!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 1000))};
-if (![_helo] call fw_fnc_checkStatus) exitWith {[] call FNC_END;};
+if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 _group lockWP true;
 _group setSpeedMode "LIMITED"; 
 
 // Landing
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 200))};
-if (![_helo] call fw_fnc_checkStatus) exitWith {[] call FNC_END;};
+if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 _helo land 'land';
 doStop _helo;
 
 // Ensure engine stays on and helo does not lift off when initially landed
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo)) || !isEngineOn _helo};
-if (![_helo] call fw_fnc_checkStatus) exitWith {[] call FNC_END;};
+if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 _helo engineOn true;
 _helo flyInHeight 0;
 _group lockWP false;
@@ -110,7 +111,7 @@ _helo engineOn true;
 
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
-if (![_helo] call fw_fnc_checkStatus) exitWith {[] call FNC_END;};
+if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 force = true;
 publicVariable "force";
 _group setSpeedMode "NORMAL"; 
@@ -139,4 +140,5 @@ _wp3 = _group addWaypoint [_spawn, 0, 2];
 _wp3 setWayPointBehaviour "CARELESS";
 _wp3 setWayPointType "MOVE";
 _wp3 setWayPointSpeed "NORMAL";
-_wp3 setWayPointCombatMode "WHITE";
+_wp3 setWayPointCombatMode "WHITE";´
+_wp3 setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
