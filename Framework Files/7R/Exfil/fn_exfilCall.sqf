@@ -140,5 +140,5 @@ _wp3 = _group addWaypoint [_spawn, 0, 2];
 _wp3 setWayPointBehaviour "CARELESS";
 _wp3 setWayPointType "MOVE";
 _wp3 setWayPointSpeed "NORMAL";
-_wp3 setWayPointCombatMode "WHITE";´
+_wp3 setWayPointCombatMode "WHITE";
 _wp3 setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
