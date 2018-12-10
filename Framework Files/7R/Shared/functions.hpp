@@ -14,6 +14,7 @@
 		class isSergeant{};
 		class flag{};
 		class checkStatus{};
+		class clearArea {};
 	};
 	class template
 	{
