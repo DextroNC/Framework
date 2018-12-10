@@ -23,44 +23,18 @@ async def on_ready():
     print (bot.user.name)
     print (bot.user.id)
     await bot.change_presence(game=discord.Game(name="!help for commands"))
-    
-
-    
-@bot.command()
-async def timetest():
-    now = datetime.datetime.now()
-    channel = bot.get_channel(id='452203814616039475')
-    msg = 'Post on reddit now!'
-    day = datetime.datetime.today().weekday()
-    if (day == 2 or day == 4 or day == 5) and now.hour == 22 and now.minute == 35:
-        await bot.say("test")
-        print(day)
-        print(now.hour)
-        print(now.minute)
-    else:
-        print("not the time")
-        print(day)
-        print(now.hour)
-        print(now.minute)
         
     
 @bot.command(pass_context=True)
 async def ops(ctx):
-    now = datetime.datetime.now().time()
-    print(now)
-    hour = now.hour + 2
-    minute = now.minute
-    
-    embedops = discord.Embed(title="Ops times", description="Wednesdays: 19:00 CEST \nSaturdays: 20:00 CEST\n", color=0x087B08)#creates an embed and sets the title, description and colour
+    embedops = discord.Embed(title="Ops times", description="Wednesdays: 19:00 CET \nSaturdays: 20:00 CET\n", color=0x087B08)#creates an embed and sets the title, description and colour
     await bot.say(embed=embedops) #prints the embed    
     
 @bot.command()
 async def time():
-    now = datetime.datetime.now() + datetime.timedelta(hours=2)
+    now = datetime.datetime.now() + datetime.timedelta(hours=1)
     print(now)
-    hour = now.hour + 2
-    minute = now.minute 
-    await bot.say("It is {:%H:%M} CEST".format(now))
+    await bot.say("It is {:%H:%M} CET".format(now))
     
 @bot.command(pass_context=True)
 async def steam(ctx):#shows link to steam group
@@ -99,13 +73,13 @@ async def info(ctx, user: discord.Member):
     
 @bot.command(pass_context=True)
 async def training(ctx):
-    embedtraining = discord.Embed(title="Training", description="Flight Training is on Mondays 20:00 CEST and run by Gustav1101  \nYou can always ask for training for your qualifications from an authorised instructor. Use !instructors to find out who that is.", color=0x087B08)#creates an embed and sets the title, description and colour
+    embedtraining = discord.Embed(title="Training", description="Flight Training is on Saturdays at 16:00 CET and run by Gustav1101  \nYou can always ask for training for your qualifications from an authorised instructor. Use !instructors to find out who that is.", color=0x087B08)#creates an embed and sets the title, description and colour
     await bot.say(embed=embedtraining) #prints the embed
     
 @bot.command()
 async def instructors():
     embedinstructors = discord.Embed(title="Instructor", description="List of all Instructors - Message who you need to schedule training/qualifying.", color=0x087B08)
-    embedinstructors.add_field(name="Infantry Qualification", value="Merc, FluffyThumper and Alex Vidas", inline=False)
+    embedinstructors.add_field(name="Infantry Qualification", value="Merc and FluffyThumper", inline=False)
     embedinstructors.add_field(name="Heavy Weapons Qualification", value="Merc", inline=False)
     embedinstructors.add_field(name="Marksman Qualification", value="Evilknievel and Daedalor", inline=False)
     embedinstructors.add_field(name="Engineer Qualification", value="Daedalor", inline=False)
@@ -115,7 +89,18 @@ async def instructors():
     
 @bot.command(pass_context=True)
 async def video(ctx): #Link a 7R video
-    await bot.say("https://www.youtube.com/watch?list=PLTB8ytTpqvKDOlqdCBntaqM3k9-5ru7E0&v=bL43U-unJqE")
+    file = open("video.txt", "r")
+    video = file.read()
+    await bot.say(video)
+
+@bot.command()
+@commands.has_any_role('Members', 'NCO', 'Officer')
+async def addvideo(link):
+    file = open("video.txt","w")
+    file.write(link)
+    file.close()
+    await bot.say("Your video has been added.")
+
     
 @bot.command(pass_context=True)
 async def help(ctx): #lists all the commands and what they do
@@ -216,27 +201,14 @@ async def meme(ctx):#shows a meme image
     channel = ctx.message.channel.id
     print(ctx.message.channel.id)
     if channel == "305472012841910272" or "449619348978663444":
-        memezimg = ['https://cdn.discordapp.com/attachments/452195429464145960/452200037875843083/evilhitler.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200351643336715/traintracks.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200441170886658/dedbem.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201039312060436/toilet.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201120627032064/dolphin.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201378023079938/art.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201483321081897/overwatch.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201621544370176/rpg.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201724384641050/wnc.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201875224133652/split.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202500158783499/moru.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202580614053888/compen.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202691599400960/yoga.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202837225766932/weasel.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202922177069057/plteo.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202996764508170/mixtape.jpg', 'https://cdn.discordapp.com/attachments/305472092978020352/452444510484692993/20180602143613_1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/469218045970219009/high_five.jpg']
-        memedesc = ['Evil Hitler or Hitler Evil?', "Don't stand on train tracks kids", "Is he dead?", "NSFW - Not Safe For War", "Dolphin Sniping", "That's art - Evil", "Overwatch", "When Evil is pushed too far", "War, War never changes", ":-)", "For Mother Russia", "I wonder what Lunete does to compensate for his small...", 'Yoga before War', "Just... lol", "Platoon Lead's during every op", "7R mixtape coming at ya", "Hi","... then we meet in the open field and give Alpha high fives"]
+        memezimg = ['https://cdn.discordapp.com/attachments/452195429464145960/452200037875843083/evilhitler.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200351643336715/traintracks.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200441170886658/dedbem.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201039312060436/toilet.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201120627032064/dolphin.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201378023079938/art.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201483321081897/overwatch.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201621544370176/rpg.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201724384641050/wnc.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201875224133652/split.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202500158783499/moru.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202580614053888/compen.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202691599400960/yoga.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202837225766932/weasel.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202922177069057/plteo.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202996764508170/mixtape.jpg', 'https://cdn.discordapp.com/attachments/305472092978020352/452444510484692993/20180602143613_1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/469218045970219009/high_five.jpg', 'https://cdn.discordapp.com/attachments/305472012841910272/507290324012367881/107410_screenshots_20181031212335_1.jpg']
+        memedesc = ['Evil Hitler or Hitler Evil?', "Don't stand on train tracks kids", "Is he dead?", "NSFW - Not Safe For War", "Dolphin Sniping", "That's art - Evil", "Overwatch", "When Evil is pushed too far", "War, War never changes", ":-)", "For Mother Russia", "I wonder what Lunete does to compensate for his small...", 'Yoga before War', "Just... lol", "Platoon Lead's during every op", "7R mixtape coming at ya", "Hi","... then we meet in the open field and give Alpha high fives", "I think there's an IED in here."]
         number = random.randint(0, (len(memezimg) - 1))
         await bot.say(memezimg[number])
         await bot.say(memedesc[number])
     else:
         await bot.say("You can only use that command in the chatbox or the bot command channel.")
         
-@bot.command(pass_context=True)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def memetest(ctx):#shows a meme image
-    channel = ctx.message.channel.id
-    print(ctx.message.channel.id)
-    if channel == "452203814616039475":
-        memezimg = ['https://cdn.discordapp.com/attachments/452195429464145960/452200037875843083/evilhitler.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200351643336715/traintracks.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200441170886658/dedbem.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201039312060436/toilet.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201120627032064/dolphin.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201378023079938/art.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201483321081897/overwatch.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201621544370176/rpg.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201724384641050/wnc.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201875224133652/split.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202500158783499/moru.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202580614053888/compen.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202691599400960/yoga.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202837225766932/weasel.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202922177069057/plteo.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202996764508170/mixtape.jpg', 'https://cdn.discordapp.com/attachments/305472092978020352/452444510484692993/20180602143613_1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/469218045970219009/high_five.jpg']
-        memedesc = ['Evil Hitler or Hitler Evil?', "Don't stand on train tracks kids", "Is he dead?", "NSFW - Not Safe For War", "Dolphin Sniping", "That's art - Evil", "Overwatch", "When Evil is pushed too far", "War, War never changes", ":-)", "For Mother Russia", "I wonder what Lunete does to compensate for his small...", 'Yoga before War', "Just... lol", "Platoon Lead's during every op", "7R mixtape coming at ya", "Hi","... then we meet in the open field and give Alpha high fives"]
-        number = random.randint(0, len(memezimg))
-        await bot.say(memezimg[number])
-        await bot.say(memedesc[number])
-    else:
-        await bot.say("You can only use that command in the chatbox or the bot command channel.")
     
 @bot.command(pass_context=True) 
 @commands.cooldown(1, 30, commands.BucketType.user)
@@ -244,7 +216,7 @@ async def memetest(ctx):#shows a meme image
 async def slav(ctx):
     channel = ctx.message.channel.id
     if channel == "305472012841910272" or "449619348978663444":
-        slavi = ['https://cdn.discordapp.com/attachments/452195429464145960/452195497294299137/slav1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195899758608394/slav2.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195971418292225/slav3.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452196070001475584/slav4.jpg']
+        slavi = ['https://cdn.discordapp.com/attachments/452195429464145960/452195497294299137/slav1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195899758608394/slav2.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195971418292225/slav3.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452196070001475584/slav4.jpg', 'https://cdn.discordapp.com/attachments/305472012841910272/521392543129403393/20181209175448_1.jpg']
         await bot.say(random.choice(slavi))
     else:
         await bot.say("You can only use that command in the chatbox.")
@@ -262,6 +234,7 @@ async def medic():
     await bot.say(random.choice(medic))
     
 @bot.command()
+@commands.has_any_role('Members', 'NCO', 'Officer')
 async def rps(choice):
         botChoices = [ "Rock", "Paper", "Scissors" ]
         botChoice = random.choice(botChoices)
