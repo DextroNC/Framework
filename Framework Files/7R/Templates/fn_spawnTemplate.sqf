@@ -19,6 +19,8 @@
 if (!isServer && hasInterface) exitWith {};
 if (HC in allPlayers && isServer) exitWith {};
 
+// Check Unit Cap
+if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
 
 // Parameter init
 params ["_marker","_type","_number","_params","_params2"];

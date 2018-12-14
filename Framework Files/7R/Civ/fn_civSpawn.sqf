@@ -20,6 +20,10 @@
 if (!isServer && hasInterface) exitWith {};
 if (HC in allPlayers && isServer) exitWith {};
 
+// Check Unit Cap
+if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
+
+
 // Inline Function
 SR_CIV_OCCUPATION = {
 	// Parameter Init
