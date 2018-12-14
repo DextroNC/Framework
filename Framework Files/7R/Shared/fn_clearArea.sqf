@@ -10,12 +10,15 @@
 		nul = [thisTrigger] spawn fw_fnc_clearArea;
 
 */
+// Server only execute
+if(!isServer) exitWith {};
+
 // Parameter Init
-params ["_area","_excl"];
+params ["_area",["_excl",[]]];
 _units = allUnits - allPlayers;
 
 // Filter out excluded units
-_array = [_units, [], {_x}, "ASCEND",{!(_x in _input0)}] call BIS_fnc_sortBy;
+_array = [_units, [_excl], {_x}, "ASCEND",{!(_x in _input0)}] call BIS_fnc_sortBy;
 
 // Delete all units from array
 {
