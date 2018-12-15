@@ -7,37 +7,116 @@ from discord.ext.commands import Bot
 import asyncio
 from itertools import cycle
 import datetime
+from datetime import timedelta
+import os
 
 
 from tokenKeyF import *
+# sets ! as the command prefix
+bot = commands.Bot(command_prefix='!') 
+# Sets an array of extensions 
+extensions = ['fun']
+# removes the help command so own can be used
+bot.remove_command('help') 
 
-bot = commands.Bot(command_prefix='!') #sets ! as the command prefix
 
-bot.remove_command('help') # removes the help command so own can be used
-
-
-
-@bot.event #prints info to console when bot is ready
+#prints info to console when bot is ready
+@bot.event 
 async def on_ready():
     print ("Ready master")
     print (bot.user.name)
     print (bot.user.id)
     await bot.change_presence(game=discord.Game(name="!help for commands"))
-        
-    
+
+# loading command for cogs
+# Params: cog name from extensions
+# Output: Loads cog
+@bot.command(pass_context=True)
+@commands.has_any_role('NCO', 'Officer')
+async def load(ctx, extension_name : str):
+    try:
+        bot.load_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+        await bot.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+        return
+    await bot.say("{} loaded.".format(extension_name))
+
+
+
+# Unloading command for cogs
+# Params: cog name from extensions
+# Output: unloads cogs
+@bot.command(pass_context=True)
+@commands.has_any_role('NCO', 'Officer')
+async def unload(ctx, extension_name : str):
+    bot.unload_extension(extension_name)
+    await bot.say("{} unloaded.".format(extension_name))
+
+
+
+# Reloading command for cogs
+# Params: cog name from extensions
+# Output: reloads cogs
+@bot.command(pass_context=True)
+@commands.has_any_role('NCO', 'Officer')
+async def reload(ctx, extension_name : str):
+    try:
+        bot.unload_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+        await bot.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+        return
+    try:
+        bot.load_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+        await bot.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+        return
+
+
+
+# Shows ops times
+# Params: none
+# Output: Times of ops    
 @bot.command(pass_context=True)
 async def ops(ctx):
     embedops = discord.Embed(title="Ops times", description="Wednesdays: 19:00 CET \nSaturdays: 20:00 CET\n", color=0x087B08)#creates an embed and sets the title, description and colour
     await bot.say(embed=embedops) #prints the embed    
-    
+
+# Shows what time it is in CET
+# Params: none
+# Output: The time    
 @bot.command()
 async def time():
     now = datetime.datetime.now() + datetime.timedelta(hours=1)
+    nowTime = timedelta( hours = now.hour, minutes = now.minute)
+    today = datetime.datetime.now().weekday()
+    dayUntilSatOp = today - datetime.datetime(2018, 12, 15).weekday()
+    dayUntilWedOp = today - datetime.datetime(2018, 12, 12).weekday()
+    satOpTime = timedelta(hours = 20)
+    wedOpTime = timedelta(hours = 19)
     print(now)
+    print(satOpTime)
+    print(wedOpTime)
+    print(nowTime)
+    wed = wedOpTime - nowTime
+    print(wed)
+    print(dayUntilWedOp)
+    sat = satOpTime - nowTime
+    print(sat)
+    print(dayUntilSatOp)
+    wedhours = wed.seconds//3600
     await bot.say("It is {:%H:%M} CET".format(now))
-    
+    if (dayUntilWedOp != 0 and dayUntilWedOp <= 3):
+        await bot.say("The next OP is in " + str(dayUntilWedOp) + " days, " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minutes.")
+    elif (dayUntilWedOp == 0 and wedhours < 18):
+        await bot.say("The next OP is in " + str(dayUntilWedOp) + " days, " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minutes.")
+    else:
+        await bot.say("The next OP is in " + str(dayUntilSatOp) + " days, " + str(sat.seconds//3600) + " hour(s) and " + str((sat.seconds//60)%60) + " minutes.")
+
+# Gives a link to the steam grouo
+# Params: none
+# Output:   
 @bot.command(pass_context=True)
-async def steam(ctx):#shows link to steam group
+async def steam(ctx):
     embedsteam = discord.Embed(title="Steam Group", description="Have a look at our Steam group here:\nhttps://steamcommunity.com/groups/7thRGR", color=0x087B08)
     await bot.say(embed=embedsteam)
     
@@ -156,123 +235,14 @@ async def on_member_join(member):
     await bot.send_message(channel, embed=embedapp)
    
     
-    
-    
-@bot.command(pass_context=True)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def eightball(ctx):#gives an answer to a yes no question
-    possible_responses = ["That's a no from me", 'I doubt it', 'Maybe', 'Probably',  'Definitely']#array with possible responses
-    await bot.say(random.choice(possible_responses))#chooses response 
-    
-@bot.command(pass_context=True)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-@commands.cooldown(1, 30, commands.BucketType.user)#adds cooldown for user for command
-async def ff(ctx):#shoutouts user for friendly fire
-    channel = ctx.message.channel.id
-    print(ctx.message.channel.id)
-    if channel == "305472012841910272" or "449619348978663444":
-        ffbad = ['Maale', 'Merc', 'Nicolai']#array of user IDs
-        ffmsg = [' FRIENDLY FIRE', ' BLUE ON BLUE', ' STOP SHOOTING ME', ' you damn monkey']#array of  jokey responses
-        await bot.say("@" + (random.choice(ffbad)) +  (random.choice(ffmsg)))#adds the choices from the 2 arrays together
-    else:
-        await bot.say("You can only use that command in the chatbox or the bot command channel.")
-    
-@bot.command()
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def roll(num1 : int):#rolls a number between 1 and whatever number said. HAS TO BE AN INT
-        await bot.say("You rolled a {}".format(random.randint(1, num1)))#prints number and text combined
-
-@bot.command()
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def rand(num1 : int, num2 : int):#picks a number between two numbers entered
-        await bot.say(random.randint(num1, num2))#states the result
-    
-@bot.command(pass_context=True)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def monkey(ctx):#chooses a monkey squad
-    squad = ['Alpha', 'Bravo', 'Platoon']#array of squad names
-    await bot.say((random.choice(squad)) + " is the monkey squad.")#picks squad then adds text afterwards and prints
-    
-
-@bot.command(pass_context=True)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-@commands.cooldown(1, 30, commands.BucketType.user)#adds cooldown for user for command
-async def meme(ctx):#shows a meme image
-    channel = ctx.message.channel.id
-    print(ctx.message.channel.id)
-    if channel == "305472012841910272" or "449619348978663444":
-        memezimg = ['https://cdn.discordapp.com/attachments/452195429464145960/452200037875843083/evilhitler.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200351643336715/traintracks.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452200441170886658/dedbem.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201039312060436/toilet.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201120627032064/dolphin.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201378023079938/art.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201483321081897/overwatch.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201621544370176/rpg.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201724384641050/wnc.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452201875224133652/split.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202500158783499/moru.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202580614053888/compen.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202691599400960/yoga.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202837225766932/weasel.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202922177069057/plteo.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452202996764508170/mixtape.jpg', 'https://cdn.discordapp.com/attachments/305472092978020352/452444510484692993/20180602143613_1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/469218045970219009/high_five.jpg', 'https://cdn.discordapp.com/attachments/305472012841910272/507290324012367881/107410_screenshots_20181031212335_1.jpg']
-        memedesc = ['Evil Hitler or Hitler Evil?', "Don't stand on train tracks kids", "Is he dead?", "NSFW - Not Safe For War", "Dolphin Sniping", "That's art - Evil", "Overwatch", "When Evil is pushed too far", "War, War never changes", ":-)", "For Mother Russia", "I wonder what Lunete does to compensate for his small...", 'Yoga before War', "Just... lol", "Platoon Lead's during every op", "7R mixtape coming at ya", "Hi","... then we meet in the open field and give Alpha high fives", "I think there's an IED in here."]
-        number = random.randint(0, (len(memezimg) - 1))
-        await bot.say(memezimg[number])
-        await bot.say(memedesc[number])
-    else:
-        await bot.say("You can only use that command in the chatbox or the bot command channel.")
-        
-    
-@bot.command(pass_context=True) 
-@commands.cooldown(1, 30, commands.BucketType.user)
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def slav(ctx):
-    channel = ctx.message.channel.id
-    if channel == "305472012841910272" or "449619348978663444":
-        slavi = ['https://cdn.discordapp.com/attachments/452195429464145960/452195497294299137/slav1.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195899758608394/slav2.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452195971418292225/slav3.jpg', 'https://cdn.discordapp.com/attachments/452195429464145960/452196070001475584/slav4.jpg', 'https://cdn.discordapp.com/attachments/305472012841910272/521392543129403393/20181209175448_1.jpg']
-        await bot.say(random.choice(slavi))
-    else:
-        await bot.say("You can only use that command in the chatbox.")
-    
-@bot.command()
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def choose(text1 : str, text2 : str):#chooses between two texts
-    choice = [text1, text2] #creates array with the two entered texts
-    await bot.say(random.choice(choice))#chooses one of the two texts and says it
-    
-@bot.command()
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def medic():
-    medic = ["I NEED A MEDIC!", "MEDIC!", "WHERE'S THE DAMN MEDIC", "CORPSMAN!"]
-    await bot.say(random.choice(medic))
-    
-@bot.command()
-@commands.has_any_role('Members', 'NCO', 'Officer')
-async def rps(choice):
-        botChoices = [ "Rock", "Paper", "Scissors" ]
-        botChoice = random.choice(botChoices)
-        result = ""
-        choice=choice.lower()
-        if choice == "rock":
-            if botChoice == "Scissors":
-                result = "Win"
-            elif botChoice == "Rock":
-                result = "Draw"
-            else:
-                result = "Loss"
-        elif choice == "paper":
-            if botChoice == "Rock":
-                result = "Win"
-            elif botChoice == "Paper":
-                result = "Draw"
-            else:
-                result = "Loss"
-        elif choice == "scissors":
-            if botChoice == "Paper":
-                result = "Win"
-            elif botChoice == "Scissors":
-                result = "Draw"
-            else:
-                result = "Loss"
-        else:
-            await bot.say("You need to pick either Rock, Paper or Scissors!")
-
-        if result != "":
-            await bot.say("I picked: {}".format(botChoice))
-        if result == "Win":
-            await bot.say("You won! Congratulations")
-        elif result == "Draw":
-            await bot.say("We drew! Replay?")
-        elif result == "Loss":
-            await bot.say("You lost! Better luck next time!")
             
+if __name__ == "__main__":
+    for extension in extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            exc = '{}: {}'.format(type(e).__name__, e)
+            print('Failed to load extension {}\n{}'.format(extension, exc))
 
     
 #@bot.command()
