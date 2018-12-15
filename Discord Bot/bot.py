@@ -104,13 +104,16 @@ async def time():
     print(sat)
     print(dayUntilSatOp)
     wedhours = wed.seconds//3600
+    sathours = sat.seconds//3600
     await bot.say("It is {:%H:%M} CET".format(now))
     if (dayUntilWedOp != 0 and dayUntilWedOp <= 3):
-        await bot.say("The next OP is in " + str(dayUntilWedOp) + " days, " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minutes.")
+        await bot.say("The next OP is in " + str(dayUntilWedOp) + " day(s), " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minute(s).")
     elif (dayUntilWedOp == 0 and wedhours < 18):
-        await bot.say("The next OP is in " + str(dayUntilWedOp) + " days, " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minutes.")
+        await bot.say("The next OP is in " + str(wed.seconds//3600) + " hour(s) and " + str((wed.seconds//60)%60) + " minute(s).")
+    elif (dayUntilSatOp == 0 and sathours < 19):
+        await bot.say("The next OP is in " + str(sat.seconds//3600) + " hour(s) and " + str((sat.seconds//60)%60) + " minute(s).")
     else:
-        await bot.say("The next OP is in " + str(dayUntilSatOp) + " days, " + str(sat.seconds//3600) + " hour(s) and " + str((sat.seconds//60)%60) + " minutes.")
+        await bot.say("The next OP is in " + str(dayUntilSatOp) + " day(s), " + str(sat.seconds//3600) + " hour(s) and " + str((sat.seconds//60)%60) + " minute(s).")
 
 # Gives a link to the steam grouo
 # Params: none
