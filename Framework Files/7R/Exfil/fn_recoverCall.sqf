@@ -53,6 +53,10 @@ sleep _traveltime;
 
 // Spawning Helicopter
 _helo = [_spawn, -90, _type, SR_Side] call bis_fnc_spawnVehicle;
+// DEBUG************************************
+SR_Debug_Helo = _helo;
+publicVariable "SR_Debug_Helo";
+//*********************************** */
 _group = _helo select 2;
 _helo = _helo select 0;
 _helo engineOn true;
@@ -67,7 +71,7 @@ _group setBehaviour "CARELESS";
 }forEach units _group;
 
 // Add Action for Lift Off
-[_helo] remoteExec ["fw_fnc_recoverAction", 0, true];
+[_helo,1] remoteExec ["fw_fnc_exfilAction", 0, true];
 
 // Clear Inventory of Helo
 clearweaponcargoGlobal _helo;  
@@ -106,10 +110,9 @@ _helo engineOn true;
 
 _timer = CBA_MissionTime;
 // Wait for Liftoff Command and lift off
-waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false]) || CBA_MissionTime - _timer > _groundTime};
+//waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false]) || (CBA_MissionTime - _timer > _groundTime)};
+waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-force = true;
-publicVariable "force";
 _group setSpeedMode "NORMAL"; 
 _helo flyInHeight 100;
 {deleteWaypoint _x}forEach waypoints _group;
@@ -122,7 +125,7 @@ _helo flyInHeight 100;
 // Assign Recover Variable
 {
 	_x setVariable ["SR_Recovered",true,true];
-}forEach assignedCargo  _helo;
+}forEach assignedCargo _helo;
 
 // Final WP to despawn
 _wp3 = _group addWaypoint [_spawn, 0, 2];

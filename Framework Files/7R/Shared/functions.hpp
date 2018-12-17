@@ -15,6 +15,7 @@
 		class flag{};
 		class checkStatus{};
 		class clearArea {};
+		class sortUnitsByGroup{};
 	};
 	class template
 	{
@@ -58,7 +59,6 @@
 		class exfilAction{};
 		class exfilCall{};
 		class recoverCall{};
-		class recoverAction{};
 	};
 	class reinf {
 		file = "7R\REINF";
