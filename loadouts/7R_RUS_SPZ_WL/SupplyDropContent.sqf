@@ -22,7 +22,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["SR_60Rnd_545x39_rpk", 40];    
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 12]; 
 	_box addmagazinecargoGlobal ["rhs_mag_9x19mm_7n21_20", 4];  
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP5", 12]	
+	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP5", 12];	
 	_box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 8];  
 	_box addmagazinecargoGlobal ["rhs_5Rnd_338lapua_t5000", 4];  
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 4];  
