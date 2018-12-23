@@ -17,11 +17,8 @@ params ["_h","_mode"];
 
 switch (_mode) do {
     case 1: {
-		_h addAction ["<t color='#FF9933'>Lift off</t>",{
-			params ["_target"];
-			_target setVariable ['liftoff',true,true];
-			_target land "NONE";
-			_target flyInHeight 100;
+		_h addAction ["<t color='#FF9933'>Lift off</t>",{	
+                (_this select 0) setVariable ['liftoff',true,true];
 		}, [], 0, false, false, "","!(_target getVariable ['liftoff',false])",15];
 	};
     default {
