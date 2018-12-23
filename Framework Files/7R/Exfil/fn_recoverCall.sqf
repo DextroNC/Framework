@@ -5,7 +5,7 @@
 		<-- Type of Helicopter as String
 		<-- Callsign as String
 		<-- Traveltime as Integer (seconds) e.g. Spawn Delay
-		<-- Opt. Delay before leaving as Integer (in Seconds) - default 600 seconds
+		<-- Opt. Delay before leaving as Integer (in Seconds) - default 240 seconds
 
 	Description:
 		Dispatched a Helicopter which will land and take VIPs on board. Once Players tell him to leave, it will fly to a despawn point.
@@ -18,7 +18,7 @@
 */
 
 // Parameter Init
-params ["_tm","_sm","_type","_callsign","_traveltime",["_groundTime",600]];
+params ["_tm","_sm","_type","_callsign","_traveltime",["_groundTime",240]];
 _spawn = markerPos _sm;
 _target = markerPos _tm;
 // Init Lock Variable if not existing
@@ -67,7 +67,7 @@ _group setBehaviour "CARELESS";
 }forEach units _group;
 
 // Add Action for Lift Off
-[_helo] remoteExec ["fw_fnc_recoverAction", 0, true];
+[_helo,1] remoteExec ["fw_fnc_exfilAction", 0, true];
 
 // Clear Inventory of Helo
 clearweaponcargoGlobal _helo;  
@@ -76,12 +76,21 @@ clearitemcargoGlobal _helo;
 clearBackpackCargoGlobal _helo; 
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
+
 // Add Waypoints at EZ
 _wp1 = _group addWaypoint [ _target, 0, 1];
+_wp1 setWayPointType "LOAD";
 _wp1 setWayPointBehaviour "CARELESS";
-_wp1 setWayPointType "MOVE";
 _wp1 setWayPointSpeed "NORMAL";
 _wp1 setWayPointCombatMode "WHITE";
+
+// Create Landing Pad
+_pad = "HeliHEmpty" createVehicle _target;
+
+// Clean up Function
+[{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D  (_this select 2) < 300)}, {
+	[false] call FNC_END;
+}, [_helo,_group,_spawn],(_groundTime + 300),{[false] call FNC_END;}] call CBA_fnc_waitUntilAndExecute;
 
 // Slow down and lock to LZ
 waitUntil {sleep 0.5; (!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 1000))};
@@ -92,42 +101,35 @@ _group setSpeedMode "LIMITED";
 // Landing
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 200))};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-_helo land 'land';
-doStop _helo;
+[_group, _target, _pad] spawn BIS_fnc_wpLand;
 
-// Ensure engine stays on and helo does not lift off when initially landed
+// Ensure engine stays on and helo does not lift off when initially landed, delete helipad
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo)) || !isEngineOn _helo};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 _helo engineOn true;
-_helo flyInHeight 0;
-_group lockWP false;
 sleep 2;
 _helo engineOn true;
-
-_timer = CBA_MissionTime;
-// Wait for Liftoff Command and lift off
-waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false]) || CBA_MissionTime - _timer > _groundTime};
-if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-force = true;
-publicVariable "force";
-_group setSpeedMode "NORMAL"; 
-_helo flyInHeight 100;
-{deleteWaypoint _x}forEach waypoints _group;
+deleteVehicle _pad;
 
 
-[{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D  (_this select 2) < 300)}, {
-	[false] call FNC_END;
-}, [_helo,_group,_spawn]] call CBA_fnc_waitUntilAndExecute;
+// Liftoff Inline Function
+SR_LiftOff = {	
+	params ["_helo","_group","_spawn"];
+	// Create Waypoint
+	[_group] call CBA_fnc_clearWaypoints;
+	_wp = _group addWaypoint [_spawn, 0, 2];
+	_wp setWayPointBehaviour "CARELESS";
+	_wp setWayPointType "MOVE";
+	_wp setWayPointSpeed "NORMAL";
+	_wp setWayPointCombatMode "WHITE";
+	_wp setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
+	// Assign recovered Variable
+	{
+		_x setVariable ["SR_Recovered",true,true];
+	}forEach assignedCargo _helo;
 
-// Assign Recover Variable
-{
-	_x setVariable ["SR_Recovered",true,true];
-}forEach assignedCargo  _helo;
+};
 
-// Final WP to despawn
-_wp3 = _group addWaypoint [_spawn, 0, 2];
-_wp3 setWayPointBehaviour "CARELESS";
-_wp3 setWayPointType "MOVE";
-_wp3 setWayPointSpeed "NORMAL";
-_wp3 setWayPointCombatMode "WHITE";
-_wp3 setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
+// Wait for Liftoff
+[{(!(alive (_this select 0)) || !(canMove (_this select 0))) || (({alive _x} count units (_this select 1)) < 1) || ((_this select 0) getVariable ["liftoff", false])}, SR_LiftOff, [_helo,_group,_spawn],_groundTime, SR_LiftOff] call CBA_fnc_waitUntilAndExecute;
+

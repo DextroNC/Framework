@@ -94,7 +94,7 @@ if (_static) then {
 	[_v] spawn rhs_fnc_infantryParadrop;
 } else {
 	{
-		private _delay =  (1/(((speed _v) max 55)/150));
+		private _delay =  (1/(((speed _v) max 55)/100));
 		_x disableAI "MOVE";
 		_x disableCollisionWith _v;
 		moveout _x;
@@ -104,7 +104,7 @@ if (_static) then {
 		sleep _delay;
 		_x enableAI "MOVE";
 		_v doMove _wpPos;
-	} forEach assignedCargo _v;
+	} forEach (assignedCargo _v) call fw_fnc_sortUnitsByGroup;
 };
 
 
