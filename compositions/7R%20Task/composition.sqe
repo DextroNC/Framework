@@ -1,5 +1,5 @@
 version=53;
-center[]={5667.71,0,11426.018};
+center[]={1004.9163,11.359902,7066.1694};
 class items
 {
 	items=3;
@@ -8,11 +8,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={303.14502,0,-8.5458984};
+			position[]={31.697754,2.109127,4.3056641};
+			angles[]={6.2757678,0,0.010733775};
 		};
-		id=199;
+		id=634;
 		type="ModuleTaskCreate_F";
-		atlOffset=30;
 		class CustomAttributes
 		{
 			class Attribute0
@@ -232,11 +232,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-140.896,0,207.13672};
+			position[]={-15.848816,0.27640915,27.785156};
+			angles[]={6.2605233,0,0};
 		};
-		id=475;
+		id=635;
 		type="ModuleTaskSetState_F";
-		atlOffset=30;
 		class CustomAttributes
 		{
 			class Attribute0
@@ -285,11 +285,11 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-162.25,0,-198.59082};
+			position[]={-15.848938,0,-32.091309};
+			angles[]={6.2627912,0,0.025597071};
 		};
-		id=476;
+		id=636;
 		type="ModuleTaskSetState_F";
-		atlOffset=30;
 		class CustomAttributes
 		{
 			class Attribute0

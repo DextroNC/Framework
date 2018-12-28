@@ -15,7 +15,7 @@ removeGoggles _unit;
 
 comment "Add containers";
 _unit forceAddUniform "VSM_Multicam_Crye_SS_grey_shirt_Camo";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_17Rnd_9x19_g17";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -35,8 +35,8 @@ _unit addWeapon "SMA_Mk16QCB";
 _unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
 _unit addWeapon "tf47_m3maaws";
 _unit addSecondaryWeaponItem "tf47_optic_m3maaws";
-_unit addWeapon "RH_g19t";
-_unit addHandgunItem "RH_X300";
+_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "Binocular";
 
 comment "Add items";

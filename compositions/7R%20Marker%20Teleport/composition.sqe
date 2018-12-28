@@ -1,25 +1,24 @@
 version=53;
-center[]={4973.3193,8.9683102e-044,9880.7949};
+center[]={2783.9932,5,7586.3906};
 class items
 {
 	items=2;
 	class Item0
 	{
 		dataType="Marker";
-		position[]={-0.84716797,0,0.079101563};
+		position[]={-0.60058594,0,1.6884766};
 		name="start";
 		text="Start";
-		type="mil_start";
+		type="hd_start";
 		colorName="ColorWEST";
-		id=449;
-		atlOffset=-339;
+		id=14;
 	};
 	class Item1
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.84765625,339.57538,-0.079101563};
+			position[]={0.92480469,0.58025789,1.40625};
 		};
 		side="Empty";
 		flags=4;
@@ -27,8 +26,8 @@ class items
 		{
 			init="this addAction [""<t color='#FF0000'>Teleport to Start</t>"",fw_fnc_teleport, [1,""start""], 0, true, true, """","""",3];     ";
 		};
-		id=450;
-		type="Land_InfoStand_V1_F";
+		id=16;
+		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{
 			class Attribute0

@@ -1,5 +1,5 @@
 version=53;
-center[]={4966.2881,8.9683102e-044,9874.4766};
+center[]={2792.2026,-334,7581.5742};
 class items
 {
 	items=4;
@@ -8,16 +8,16 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.3549805,339.28406,0.4765625};
+			position[]={-1.5356445,339.28406,1.5249023};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""loadouts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Altimeter"", ""loadouts\7R_EQ.sqf"",[""ACE_Altimeter""]]; " \n "";
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""loadouts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "}";
 			disableSimulation=1;
 		};
-		id=445;
+		id=17;
 		type="Box_NATO_Support_F";
 		class CustomAttributes
 		{
@@ -55,7 +55,7 @@ class items
 								"STRING"
 							};
 						};
-						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 					};
 				};
 			};
@@ -86,7 +86,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.1860352,339.58026,-0.99023438};
+			position[]={-1.3666992,339.58026,0.057617188};
 		};
 		side="Empty";
 		flags=4;
@@ -95,7 +95,7 @@ class items
 			init="this addAction [""<t color='#FF0000'>Start Paradrop All Near Units</t>"",fw_fnc_paraDrop, [""paraDZ"",""paraStart"",2500,""Windrunner 1-1"",false], 0, true, true, """", ""leader player == player"", 3]; ";
 			disableSimulation=1;
 		};
-		id=446;
+		id=18;
 		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{
@@ -143,23 +143,22 @@ class items
 	class Item2
 	{
 		dataType="Marker";
-		position[]={1.2861328,0,1.53125};
+		position[]={1.1054688,0,2.5795898};
 		name="paraDZ";
-		text="Drop Zone";
-		type="mil_start";
+		text="Approach";
+		type="hd_arrow";
 		colorName="ColorWEST";
-		id=447;
+		id=19;
 		atlOffset=-339;
 	};
 	class Item3
 	{
 		dataType="Marker";
-		position[]={1.2539063,0,-1.0195313};
+		position[]={1.7976074,339,-4.1630859};
 		name="paraStart";
 		text="Para Plane Start Marker";
 		type="Empty";
 		colorName="default";
-		id=448;
-		atlOffset=-339;
+		id=20;
 	};
 };

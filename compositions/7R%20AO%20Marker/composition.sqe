@@ -1,22 +1,19 @@
 version=53;
-center[]={4481.5942,7.5644995e+009,10182.897};
+center[]={973.57452,15.764795,7903.2148};
 class items
 {
 	items=1;
 	class Item0
 	{
-		dataType="Marker";
-		position[]={0,0,0};
-		name="ao";
-		text="ao";
-		markerType="RECTANGLE";
-		type="rectangle";
-		colorName="ColorCIV";
-		fillName="Border";
-		a=1500;
-		b=1500;
-		drawBorder=1;
-		id=851;
-		atlOffset=7.5644989e+009;
+		dataType="Logic";
+		class PositionInfo
+		{
+			angles[]={0.007142954,0,0.0032388929};
+		};
+		areaSize[]={1000,0,1000};
+		areaIsRectangle=1;
+		flags=1;
+		id=630;
+		type="ModuleCoverMap_F";
 	};
 };

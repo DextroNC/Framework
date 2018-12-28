@@ -20,7 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_17Rnd_9x19_g17";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
 
 _unit addVest "milgp_v_marciras_teamleader_belt_RGR";
 _unit addItemToVest "SmokeShell";
@@ -41,8 +41,8 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "SMA_Mk16_EGLM";
 _unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
-_unit addWeapon "RH_g19t";
-_unit addHandgunItem "RH_X300";
+_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "ACE_Vector";
 
 comment "Add items";
