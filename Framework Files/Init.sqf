@@ -7,3 +7,4 @@ asr_ai3_main_radiorange = 350;
 
 // ACE Gear Save Disable
 ace_respawn_savePreDeathGear = false;
+

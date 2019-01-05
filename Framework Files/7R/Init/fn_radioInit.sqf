@@ -12,6 +12,16 @@
 ["CombatLog", {player createDiaryRecord ["Combat Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 ["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 
+// Friendly Fire Log
+_id = ["ace_unconscious", {params ["_unit","_state"]; 
+	if (_state) then { 
+		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
+	if (_shooter in allPlayers) then { 
+		_str = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
+		_str remoteExecCall ["diag_log", 2];  
+	}; 
+};}] call CBA_fnc_addEventHandler;
+
 
 // ACRE Settings
 // General
