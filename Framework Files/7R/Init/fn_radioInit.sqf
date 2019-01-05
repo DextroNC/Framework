@@ -13,7 +13,8 @@
 ["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 
 // Friendly Fire Log
-_id = ["ace_unconscious", {params ["_unit","_state"]; 
+_id = ["ace_unconscious", {
+	params ["_unit","_state"]; 
 	if (_state) then { 
 		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
 	if (_shooter in allPlayers) then { 

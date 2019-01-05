@@ -23,6 +23,8 @@ if (HC in allPlayers && isServer) exitWith {};
 // Check Unit Cap
 if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
 
+// Parameter Init
+params ["_zone", "_civs", "_total",["_bomber", 0],["_sleeper",0],["_shooter",0]];
 
 // Inline Function
 SR_CIV_OCCUPATION = {
@@ -112,4 +114,4 @@ SR_CIV_OCCUPATION = {
 };
 
 // Exec Inline Function
-[_this select 0, _this select 1, _this select 2,_this select 3,_this select 4,_this select 5] call SR_CIV_OCCUPATION;
+[_zone, _civs, _total,_bomber,_sleeper,_shooter] call SR_CIV_OCCUPATION;
