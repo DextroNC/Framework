@@ -113,6 +113,33 @@ while {true} do
 					_grp setvariable ["UPSMON_TIMEONTARGET",_timeontarget];
 				};
 			};
+
+//*********************************************************************************************************************
+// 											Static Weapon	
+//*********************************************************************************************************************			
+
+// When group has a static weapon
+If {"static" in _typeofgrp} exitWith {
+	_ldr = leader _grp;
+	// If enemies are detected move along and suppress
+	if (_ldr call BIS_fnc_enemyDetected) then {
+		// get all Targets
+		_targets = _ldr call BIS_fnc_enemyTargets;
+		// Sort by closest Target
+		_closestTargets =  [_targets, [_ldr], { _input0 distance _x }, "ASCEND", { canMove _x }] call BIS_fnc_sortBy;
+		// Suppress Target
+		{
+			_unit = _x;
+			{
+				if ([objNull, "VIEW"] checkVisibility [aimpos _x, aimpos _unit] > 0.5) then {
+					_x doSuppressiveFire (_closestTarget select 0);
+				};
+			}forEach _closestTargets;
+		}forEach units _grp;
+	};
+};
+
+
 //*********************************************************************************************************************
 // 											Reactions	
 //*********************************************************************************************************************				
