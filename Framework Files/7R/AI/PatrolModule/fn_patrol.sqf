@@ -16,7 +16,7 @@ if (!isServer) exitWith {};
 
 // Parameter Init
 params [["_leader",objNull],["_mode","P"]];
-private _modifier = [];
+_modifier = [];
 
 // Debug check (insuffiecent input cancel)
 if (count _this < 3 || !(_mode in ["P","G","R"])) exitWith {
@@ -24,7 +24,8 @@ if (count _this < 3 || !(_mode in ["P","G","R"])) exitWith {
 };
 
 // Create Modifier Array
-private _input = _this deleteAt 1;
+private _input = _this;
+_input deleteRange [0,2];
 {
 	_modifier pushBack _x
 }forEach _input;

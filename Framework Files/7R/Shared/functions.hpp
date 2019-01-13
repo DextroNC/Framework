@@ -129,6 +129,9 @@
 		class patrol{};
 		class patrolInit{preInit = true};
 		class patrolLoop{postInit = true};
-	
+	};
+	class AiCommon {
+		file = "7R\AI\Common";
+		class getRandomPos{};
 	};
 };
