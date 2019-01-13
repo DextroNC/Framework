@@ -124,4 +124,11 @@
 		class dismountVehicle{};
 		class vehiclePatrol{};
 	};
+	class AiPatrol {
+		file = "7R\AI\PatrolModule";
+		class patrol{};
+		class patrolInit{preInit = true};
+		class patrolLoop{postInit = true};
+	
+	};
 };
