@@ -15,6 +15,18 @@ private ["_sample", "_sampleValue", "_sampleType"];
 _sample = selectBestPlaces [
    _this, // sample position
    30, // radius
+   "(1000 * houses) + (100 * forest) + (10 * trees) + (1 * meadow) - (1000 * sea)", // expression
+   10, // precision
+   1 // sourcesCount
+];
+
+if ((count _sample) < 1) exitWith
+{
+   ["undefined", 0]
+};
+
+_sampleValue = (_sample select 0) select 1;
+_sampleType = "meadow";
 
 switch (true) do
 {
