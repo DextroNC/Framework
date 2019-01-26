@@ -16,6 +16,7 @@
 		class checkStatus{};
 		class clearArea {};
 		class sortUnitsByGroup{};
+		class removeNVG{};
 	};
 	class template
 	{

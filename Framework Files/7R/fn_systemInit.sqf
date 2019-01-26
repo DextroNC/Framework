@@ -8,6 +8,7 @@
 
 // Unit Cap (cap of AI)
 SR_Unit_Cap = 200;
+SR_AI_removeNVG = false;
 
 // Night Mission (true/false)
 SR_Night = false;

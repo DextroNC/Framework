@@ -121,7 +121,9 @@ if (_type isEqualTo "GARRISON") Then {
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 		[_unit] join _grp;
-
+		if (SR_AI_removeNVG) then {
+			[_unit] spawn fw_fnc_removeNVG;
+		};
 		If (_i == 0) then
 		{
 			_leader = _unit;
@@ -172,7 +174,7 @@ if (_type isEqualTo "VEHICLE") Then {
 	{
 		private _type = _x select 0;
 		private _slot = _x select 1;
-
+		_unit = objNull;
 		// Process Driver, Gunner, Commander, Cargo or Turret
 		switch (_slot) do {
 			case "driver": {
@@ -212,6 +214,9 @@ if (_type isEqualTo "VEHICLE") Then {
 				_unit assignAsTurret [_veh, _path];
 				[_unit] orderGetIn true; 
 			};
+		};
+		if (SR_AI_removeNVG) then {
+			[_unit] spawn fw_fnc_removeNVG;
 		};
 	} forEach _units;
 
