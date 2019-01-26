@@ -18,7 +18,7 @@ params ["_area",["_excl",[]]];
 _units = allUnits - allPlayers;
 
 // Filter out excluded units
-_array = [_units, [_excl], {_x}, "ASCEND",{!(_x in _input0)}] call BIS_fnc_sortBy;
+_array = [_units, [_excl,_area], {_x}, "ASCEND",{!(_x in _input0) && (_x inArea _input1)}] call BIS_fnc_sortBy;
 
 // Delete all units from array
 {
