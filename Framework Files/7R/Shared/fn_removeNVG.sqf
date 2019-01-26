@@ -3,7 +3,8 @@
 		<-- Unit as Object
 
 	Description:
-		Removes the NVG Mount or Helmet of a unit.
+		Removes the NVG Mount or Helmet of a unit. 
+		If SR_AI_addFlashlight is true it will add a flashlight to the gun of the AI.
 
 	Example:
 		[unit] spawn fw_fnc_removeNVG;
@@ -12,6 +13,12 @@
 
 // Parameter init
 params ["_unit"];
+
+// add Flashlight
+if (SR_AI_addFlashlight) then {
+	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
+	_unit addPrimaryWeaponItem "acc_flashlight";
+};
 
 // Check if Unit has Mounted NVG and remove it
 private _nvg = hmd _unit;
