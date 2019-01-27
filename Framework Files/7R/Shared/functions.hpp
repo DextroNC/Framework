@@ -17,6 +17,7 @@
 		class clearArea {};
 		class sortUnitsByGroup{};
 		class removeNVG{};
+		class zeus{};
 	};
 	class template
 	{
