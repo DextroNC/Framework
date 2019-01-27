@@ -36,3 +36,8 @@ if (SR_Night) then {
 		default {_new setUnitTrait ["camouflageCoef",0.5];};
 	};
 };
+
+// FTL Rank Reset
+ if (_old getVariable ["ACE_FTL",""] in ["RED","BLUE"]) then {
+	 _new setUnitRank "PRIVATE";
+ };
