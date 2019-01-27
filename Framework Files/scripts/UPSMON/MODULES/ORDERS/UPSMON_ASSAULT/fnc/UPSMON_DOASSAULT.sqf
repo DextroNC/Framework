@@ -34,7 +34,7 @@ If ("air" in _typeofgrp) then
 }
 else
 {
-	If (_dist <= 500) then
+	If (_dist <= 100) then
 	{
 		_combatmode = "RED";
 	};

@@ -47,7 +47,7 @@ _dir =[_attackPos,getposATL _npc] call BIS_fnc_DirTo;
 						
 //Establish the type of waypoint
 //DESTROY has worse behavior with and sometimes do not move
-_wptype = "SAD";
+_wptype = "MOVE";
 _wpformation = "WEDGE";
 _CombatMode = "YELLOW";
 _radius = 1;
@@ -98,7 +98,7 @@ If (!("ship" in _typeofgrp)) then
 		{
 			If (_haslos) then
 			{
-				_speedmode = "NORMAL";
+				_speedmode = "LIMITED";
 				_Behaviour = "COMBAT";
 			}
 			else
