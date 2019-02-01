@@ -20,27 +20,25 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
-_unit addVest "rhsusf_spc_rifleman";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+_unit addVest "rhsusf_spc_iar";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-for "_i" from 1 to 5 do {_unit addItemToVest "prpl_6Rnd_12Gauge_Pellets";};
-_unit addBackpack "fatpack_coy";
+for "_i" from 1 to 8 do {_unit addItemToVest "prpl_6Rnd_12Gauge_Pellets";};
+for "_i" from 1 to 8 do {_unit addItemToVest "prpl_6Rnd_12Gauge_Slug";};
+_unit addBackpack "rhsusf_assault_eagleaiii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "RH_SFM952V";
 _unit addItemToBackpack "prpl_benelli_14_rail";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "prpl_6Rnd_12Gauge_Pellets";};
-for "_i" from 1 to 8 do {_unit addItemToBackpack "prpl_6Rnd_12Gauge_Slug";};
-_unit addHeadgear "rhsusf_lwh_helmet_marpatwd";
-_unit addGoggles "rhs_ess_black";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
+_unit addHeadgear "rhsusf_lwh_helmet_marpatwd_ess";
+_unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4a1_carryhandle_mstock_grip2";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
-_unit addWeapon "RH_m9";
+_unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -49,7 +47,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -58,8 +56,9 @@ if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","BR", true];
+_unit setVariable ["SR_Class","B", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];

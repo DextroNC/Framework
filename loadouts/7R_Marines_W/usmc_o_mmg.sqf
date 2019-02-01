@@ -20,10 +20,9 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addVest "rhsusf_spc_mg";
-for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addBackpack "rhsusf_falconii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addHeadgear "rhsusf_lwh_helmet_marpatwd_ess";
@@ -31,7 +30,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m240G";
-_unit addWeapon "RH_m9";
+_unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -41,7 +40,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_100Rnd_762x51";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -53,5 +52,6 @@ if (SR_Night) then {
 _unit setVariable ["SR_Class","MMG", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];

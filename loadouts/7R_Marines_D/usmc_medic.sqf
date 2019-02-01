@@ -20,24 +20,26 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addVest "rhsusf_spc_corpsman";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-_unit addBackpack "VSM_OGA_Backpack_Kitbag";
+_unit addBackpack "rhsusf_assault_eagleaiii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "SR_MAK";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "SR_Bandage_Pack";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "SR_Medicine_Pack";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
 _unit addHeadgear "rhsusf_lwh_helmet_marpatd_ess";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m16a4_carryhandle_pmag";
+_unit addWeapon "rhs_weap_m16a4_carryhandle";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
-_unit addPrimaryWeaponItem "rhsusf_acc_grip1";
-_unit addWeapon "RH_m9";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip2";
+_unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -46,8 +48,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 9 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -58,6 +60,7 @@ if (SR_Night) then {
 };
 _unit setVariable ["SR_Class","M", true];
 _unit setVariable ["ace_isEngineer",0, true];
-_unit setVariable ["ace_medical_medicClass",1,true];
+_unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
