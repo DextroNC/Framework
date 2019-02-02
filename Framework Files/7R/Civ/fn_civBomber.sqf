@@ -50,12 +50,14 @@
 
 			[_unit,_handle] spawn {
 				params ["_unit","_handle"];
-				_target = _unit getVariable "sb_target";
-				group _unit setSpeedMode "FULL"; 
-				_unit doMove position _target;
-				[_unit, "akbar"] remoteExec ["say3D"];
-				sleep 3;
-				"M_PG_AT" createVehicle (position _unit);
+				if ("HandGrenade" in items _unit) then { 
+					_target = _unit getVariable "sb_target";
+					group _unit setSpeedMode "FULL"; 
+					_unit doMove position _target;
+					[_unit, "akbar"] remoteExec ["say3D"];
+					sleep 3;
+					"M_PG_AT" createVehicle (position _unit);
+				};
 				[_handle] call CBA_fnc_removePerFrameHandler;
 			};
 		};	
