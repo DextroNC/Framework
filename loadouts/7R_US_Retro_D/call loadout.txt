@@ -1,1 +1,0 @@
-[objNull, this] call compile preprocessFileLineNumbers "loadouts\us_d_sl.sqf"
