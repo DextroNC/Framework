@@ -25,15 +25,14 @@ _unit addVest "UK3CB_BAF_V_Osprey_Rifleman_D";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HEDP";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
 _unit addHeadgear "UK3CB_BAF_H_Mk7_Net_CESS_B";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L85A2_RIS";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addWeapon "tf47_m3maaws";
-_unit addSecondaryWeaponItem "tf47_optic_m3maaws";
+_unit addWeapon "launch_MRAWS_green_rail_F";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
 

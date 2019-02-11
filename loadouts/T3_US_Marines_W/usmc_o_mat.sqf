@@ -25,7 +25,7 @@ _unit addVest "rhsusf_spc_rifleman";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addBackpack "rhsusf_assault_eagleaiii_coy";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HEDP";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
 _unit addHeadgear "rhsusf_lwh_helmet_marpatwd_ess";
 _unit addGoggles "rhs_googles_clear";
 
@@ -33,8 +33,7 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_m16a4_carryhandle";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
-_unit addWeapon "tf47_m3maaws";
-_unit addSecondaryWeaponItem "tf47_optic_m3maaws";
+_unit addWeapon "launch_MRAWS_olive_rail_F";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 

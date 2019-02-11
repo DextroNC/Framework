@@ -27,9 +27,9 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 _unit addBackpack "VSM_OGA_Backpack_Kitbag";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+_unit addItemToBackpack "MRAWS_HEAT_F";
 _unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addItemToBackpack "tf47_m3maaws_HEDP";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HE";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HE_F";};
 _unit addHeadgear "rhsusf_lwh_helmet_marpatwd";
 _unit addGoggles "rhs_googles_clear";
 

@@ -28,8 +28,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_B";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addItemToBackpack "tf47_m3maaws_HEDP";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HE";};
+_unit addItemToBackpack "MRAWS_HEAT_F";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HE_F";};
 _unit addHeadgear "UK3CB_BAF_H_Mk7_Net_B";
 _unit addGoggles "rhs_googles_clear";
 

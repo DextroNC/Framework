@@ -12,6 +12,7 @@ this addaction ["Combat Medic", "loadouts\baf_medic.sqf"];
 this addaction ["Operator Rifle", "loadouts\baf_o_r.sqf"];
 this addaction ["Operator AR", "loadouts\baf_o_ar.sqf"];
 this addaction ["Operator Light AT", "loadouts\baf_o_lat.sqf"];
+this addaction ["Operator Light AT (NLAW)", "loadouts\baf_o_lat2.sqf"];
 this addaction ["Operator MMG", "loadouts\baf_o_mmg.sqf"];
 this addaction ["Operator Asst. MMG", "loadouts\baf_o_mmg_ab.sqf"];
 this addaction ["Operator Medium AT", "loadouts\baf_o_mat.sqf"];
