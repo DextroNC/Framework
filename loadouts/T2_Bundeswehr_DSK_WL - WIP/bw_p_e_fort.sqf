@@ -36,7 +36,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "SPS_hk417_13_vfg_black_f";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
+_unit addPrimaryWeaponItem "comment "Exported from Arsenal by Dextro";";
 _unit addWeapon "RH_usp";
 _unit addWeapon "ACE_Vector";
 

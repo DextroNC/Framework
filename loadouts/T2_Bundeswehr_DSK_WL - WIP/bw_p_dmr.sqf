@@ -31,7 +31,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L129A1_FGrip";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
+_unit addPrimaryWeaponItem "comment "Exported from Arsenal by Dextro";";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "RH_usp";

@@ -32,7 +32,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L85A2_RIS";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
+_unit addPrimaryWeaponItem "comment "Exported from Arsenal by Dextro";";
 _unit addWeapon "RH_usp";
 _unit addWeapon "rhs_weap_M136_hedp";
 _unit addWeapon "Binocular";
