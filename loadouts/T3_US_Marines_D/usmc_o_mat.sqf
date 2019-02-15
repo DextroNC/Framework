@@ -34,7 +34,6 @@ _unit addWeapon "rhs_weap_m16a4_carryhandle";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
 _unit addWeapon "launch_MRAWS_olive_rail_F";
-_unit addSecondaryWeaponItem "tf47_optic_m3maaws";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
