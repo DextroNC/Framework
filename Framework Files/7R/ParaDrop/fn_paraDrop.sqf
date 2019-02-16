@@ -70,6 +70,9 @@ sleep 3;
 _slot = 2;
 
 // Teleport People into Plane
+if ({_x distance2d _term < 100} count (allPlayers - entities "HeadlessClient_F") > 24) then {
+	_type = "globemaster_c17_altus";
+};
 {
 	if (_x distance2D _term < 100) then {
 		["ParaPort", [_v,_x,_slot], _x] call CBA_fnc_targetEvent;
