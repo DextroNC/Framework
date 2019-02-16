@@ -25,14 +25,14 @@ _unit addVest "usm_vest_pasgtdcu_lbe_rmp";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "B_FieldPack_oli";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HEDP";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
 _unit addHeadgear "usm_helmet_pasgt_g_dcu";
 
 comment "Add weapons";
 _unit addWeapon "gst_m16a2_2";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "tf47_m3maaws";
-_unit addSecondaryWeaponItem "tf47_optic_m3maaws";
+_unit addWeapon "rhs_weap_maaws";
+_unit addSecondaryWeaponItem "rhs_optic_maaws";
 _unit addWeapon "Binocular";
 
 comment "Add items";

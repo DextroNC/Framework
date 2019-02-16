@@ -22,8 +22,8 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 7];  
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 7];  
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];  
-	_box addmagazinecargoGlobal ["tf47_m3maaws_HEDP", 4];  
-	_box addmagazinecargoGlobal ["tf47_m3maaws_HE", 3];
+	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 4];  
+	_box addmagazinecargoGlobal ["MRAWS_HE_F", 3];
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
 	_box addWeaponcargoGlobal ["rhs_weap_m72a7", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];  

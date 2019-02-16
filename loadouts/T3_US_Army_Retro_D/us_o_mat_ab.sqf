@@ -28,8 +28,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "B_FieldPack_oli";
 _unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addItemToBackpack "tf47_m3maaws_HEDP";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "tf47_m3maaws_HE";};
+_unit addItemToBackpack "MRAWS_HEAT_F";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HE_F";};
 _unit addHeadgear "usm_helmet_pasgt_dcu";
 
 comment "Add weapons";

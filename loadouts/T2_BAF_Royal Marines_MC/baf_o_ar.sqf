@@ -42,8 +42,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_BAF_556_200Rnd";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "UK3CB_BAF_556_200Rnd";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_200rnd_556x45_M_SAW";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

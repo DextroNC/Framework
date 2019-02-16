@@ -31,7 +31,8 @@ _unit addHeadgear "rhsusf_ach_helmet_ESS_ucp";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_m249_pip1";
+_unit addWeapon "rhs_weap_m249_pip_L_para";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 

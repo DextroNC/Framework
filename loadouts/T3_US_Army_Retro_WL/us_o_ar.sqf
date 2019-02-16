@@ -30,7 +30,7 @@ _unit addBackpack "usm_pack_abag_m60";
 _unit addHeadgear "usm_helmet_pasgt_g_w";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_M249E2";
+_unit addWeapon "rhs_weap_m249_pip";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
