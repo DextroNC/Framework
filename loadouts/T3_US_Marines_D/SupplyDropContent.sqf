@@ -16,7 +16,7 @@ if (_type == 1) then {
 	clearitemcargoGlobal _box; 
 	clearBackpackCargoGlobal _box; 
 	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 48];  
-	_box addmagazinecargoGlobal ["RH_15Rnd_9x19_M9", 16];  
+	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 16];  
 	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 10];    
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 10]; 
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 6];  
