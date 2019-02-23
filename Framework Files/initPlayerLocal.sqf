@@ -83,6 +83,9 @@ _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
 _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","",{},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _CSH] call ace_interact_menu_fnc_addActionToClass;
 
+_CS0 = ["7R_SD_Spawn","Clear Sling Load Pad","",{nul = [0,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS0] call ace_interact_menu_fnc_addActionToClass;
+
 _CS1 = ["7R_SD_Spawn","Inf Supply Drop","",{nul = [1,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS1] call ace_interact_menu_fnc_addActionToClass;
 
