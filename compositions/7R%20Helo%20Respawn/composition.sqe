@@ -1,5 +1,5 @@
 version=53;
-center[]={4836.1689,339,10146.148};
+center[]={3471.957,19,3628.3306};
 class items
 {
 	items=2;
@@ -8,7 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.15917969,0.034606934,0.99121094};
+			position[]={-1.355957,0.034606934,-1.3618164};
 			angles[]={0,4.1908751,0};
 		};
 		side="Empty";
@@ -16,7 +16,7 @@ class items
 		{
 			name="pad";
 		};
-		id=698;
+		id=218;
 		type="Land_HelipadEmpty_F";
 		atlOffset=0.034606934;
 		class CustomAttributes
@@ -48,17 +48,17 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.15966797,0.58026123,-0.99023438};
+			position[]={1.3562012,0.58025742,1.3618164};
 			angles[]={-0,0.89901906,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH60"", fw_fnc_heloSpawn,[""RHS_UH60M"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH1Y"", fw_fnc_heloSpawn,[""RHS_UH1Y"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn CH47"", fw_fnc_heloSpawn,[""RHS_CH_47F"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn MELB MH6"", fw_fnc_heloSpawn,[""RHS_MELB_MH6M"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 L"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_L"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 M"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_M"",pad]];      " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 T"", fw_fnc_heloSpawn,[""SR_AW159_T_Black"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 Armed"", fw_fnc_heloSpawn,[""SR_AW159_A_Black"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn 7R AW159 Armed Heavy"", fw_fnc_heloSpawn,[""SR_AW159_A_Black"",pad,false,[[""PylonRight1"",""PylonRack_3Rnd_LG_scalpel"",true]]]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 18 GMPG"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC3_18_GPMG"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 32"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC3_32"",pad]];   " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8A"",pad]];   " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed Guided"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8B"",pad]];  }";
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH60"", fw_fnc_heloSpawn,[""RHS_UH60M"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH1Y"", fw_fnc_heloSpawn,[""RHS_UH1Y"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn CH47"", fw_fnc_heloSpawn,[""RHS_CH_47F"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn MELB MH6"", fw_fnc_heloSpawn,[""RHS_MELB_MH6M"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 L"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_L"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 M"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_M"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 H"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_H"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH-1 H"", fw_fnc_heloSpawn,[""rhs_uh1h_hidf"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH-1 H Gunship"", fw_fnc_heloSpawn,[""rhs_uh1h_hidf_gunship"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 18 GMPG"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC4_18_GPMG_MTP"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 32"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC4_32_MTP"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed Guided"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8B"",pad]]; this addaction [""<t color=""""#00FF00"""">"" +""Clear Spawn Pad"", fw_fnc_heloSpawn,["""",pad]];  }";
 			disableSimulation=1;
 		};
-		id=699;
+		id=219;
 		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{
