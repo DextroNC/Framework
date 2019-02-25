@@ -16,7 +16,7 @@ _new setUnitLoadout (_old getVariable ["SR_Loadout",[]]);
 _height = 0;
 
 // Adjust Height
-if (_height > 1) then {
+if (_height > 0) then {
 	hint "adjusting height";
 	private _pos = getPosASL _new;
 	_new setPosASL [_pos select 0, _pos select 1, _height];

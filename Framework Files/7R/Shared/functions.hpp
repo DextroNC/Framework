@@ -18,6 +18,7 @@
 		class sortUnitsByGroup{};
 		class removeNVG{};
 		class zeus{};
+		class recall{};
 	};
 	class template
 	{

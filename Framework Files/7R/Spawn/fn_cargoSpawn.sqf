@@ -19,12 +19,12 @@ params ["_mode","_posObj"];
 hint format ["Sling-Load Box spawned."];
 
 // Clear Landing Pad
-_old = nearestObjects [_posObj,["AllVehicles","B_supplyCrate_F","CargoNet_01_box_F","CargoNet_01_barrels_F","rhsusf_spec_weapons_crate"],5];
+_old = nearestObjects [_posObj,["AllVehicles","B_supplyCrate_F","CargoNet_01_box_F","CargoNet_01_barrels_F","Box_NATO_WpsSpecial_F","Box_NATO_Ammo_F","Box_NATO_AmmoOrd_F"],5];
 {
 	deleteVehicle _x;
 }forEach _old;
 
-sleep 1;
+sleep 2;
 
 // Decide Case
 switch _mode do {
@@ -39,5 +39,11 @@ switch _mode do {
 	};
 	case 4: {
 		[_posObj, objNull, 0, 4, true] spawn fw_fnc_supplyDropBox;	
+	};
+	case 5: {
+		[_posObj, objNull, 0, 5, true] spawn fw_fnc_supplyDropBox;	
+	};
+	case 6: {
+		[_posObj, objNull, 0, 6, true] spawn fw_fnc_supplyDropBox;	
 	};
 };

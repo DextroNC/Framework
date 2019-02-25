@@ -19,11 +19,11 @@ private "_box";
 switch (_mode) do {
     case 1: {
 		_box = createVehicle ["B_supplyCrate_F", [0,0,0], [], 0, "NONE"];
-		[_box, 1] execVM "7R\SupplyDropContent.sqf";
+		[_box, 1] execVM "loadouts\SupplyDropContent.sqf";
 	};
     case 2: {
 		_box = createVehicle ["CargoNet_01_box_F", [0,0,0], [], 0, "NONE"];
-		[_box, 2] execVM "7R\SupplyDropContent.sqf";
+		[_box, 2] execVM "loadouts\SupplyDropContent.sqf";
 		[_box] spawn fw_fnc_supplyDropVehicleInit;
 	};
     case 3: {
@@ -31,9 +31,16 @@ switch (_mode) do {
 		[_box] spawn fw_fnc_supplyDropFortInit;
 	};
 	case 4: {
-		//_box = createVehicle ["rhsusf_spec_weapons_crate", [0,0,0], [], 0, ""];
+		_box = createVehicle ["Box_NATO_AmmoOrd_F", [0,0,0], [], 0, "NONE"];
+		[_box, 3] execVM "loadouts\SupplyDropContent.sqf";
+	};
+	case 5: {
+		_box = createVehicle ["Box_NATO_Ammo_F", [0,0,0], [], 0, "NONE"];
+		[_box, 4] execVM "loadouts\SupplyDropContent.sqf";
+	};
+	case 6: {
 		_box = createVehicle ["Box_NATO_WpsSpecial_F", [0,0,0], [], 0, "NONE"];
-		[_box, 3] execVM "7R\SupplyDropContent.sqf";
+		[_box, 5] execVM "loadouts\SupplyDropContent.sqf";
 	};
 };
 
@@ -45,7 +52,6 @@ if (_cargo) exitWith {
 
 // Attach Box to Plane
 _box attachTo [_plane,_off,_mem];
-//_box setVariable ["rhs_paradrop",true,true];
 
 
 

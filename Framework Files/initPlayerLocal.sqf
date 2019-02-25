@@ -17,9 +17,11 @@ _isLeader = {(leader player == player) || [player] call fw_fnc_isSergeant};
 _headerSupport = ["7R_Header","Command Support","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _headerSupport] call ace_interact_menu_fnc_addActionToClass;
 
+// Supply Drop
 _SSR = ["7R_StatusRep","Status Report","",{null =  [] spawn fw_fnc_supplyDropReport},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _SSR] call ace_interact_menu_fnc_addActionToClass;
 
+// Markers
 _headerMarker = ["7R_Marker","Marker Designation","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerMarker] call ace_interact_menu_fnc_addActionToClass;
 
@@ -36,7 +38,7 @@ _ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget
 _CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
-
+// Supply Drop
 _headerSupply = ["7R_SupplyH","Call Supplies","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
@@ -58,9 +60,12 @@ _CVA5 =  ["7R_SupplyDropAir","Call Fortification Supply Drop","7R\Supplies\7r_SD
 _CVA6 =  ["7R_SupplyDropAir","Call Special Equipment Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 4] spawn fw_fnc_supplyDropInit},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA6] call ace_interact_menu_fnc_addActionToClass;
 
+// Extraction
 _EZC = ["7R_EZ","Call Extraction","",{null = ["EZ","STARTSPAWN", "RHS_CH_47F", "Eagle 1-1", 0,"dropoff"] spawn fw_fnc_exfilCall;},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
+
+// Artillery
 _headerArtillery = ["7R_ArtyH","Call Fire Support","",{},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerArtillery] call ace_interact_menu_fnc_addActionToClass;
 
@@ -76,9 +81,16 @@ _ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","",7,75,10] spa
 _ACAS = ["7R_Artillery","Smoke Barage","",{null = ["ArtilleryTarget","UK3CB_BAF_Smoke_60mm_AMOS",7,100,10,1] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAS] call ace_interact_menu_fnc_addActionToClass;
 
+// CAS
 _CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
+// Pilot Recall
+_CRC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" && (vehicle player == player)};
+_rec = ["7R_SD_SpawnH","Base Recall","",{nul = [_player,_player] spawn fw_fnc_recall;},_CRC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_TeamManagement"], _rec] call ace_interact_menu_fnc_addActionToClass;
+
+// Pilot Supply Spawn
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
 _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","",{},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _CSH] call ace_interact_menu_fnc_addActionToClass;
@@ -98,6 +110,13 @@ _CS3 = ["7R_SD_Spawn","Fortification Supply Drop","",{nul = [3,slingpad] spawn f
 _CS4 = ["7R_SD_Spawn","Special Supply Drop","",{nul = [4,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS4] call ace_interact_menu_fnc_addActionToClass;
 
+_CS5 = ["7R_SD_Spawn","Small Squad Resupply","",{nul = [5,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS5] call ace_interact_menu_fnc_addActionToClass;
+
+_CS6 = ["7R_SD_Spawn","Small Special Weapons Resupply","",{nul = [6,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS6] call ace_interact_menu_fnc_addActionToClass;
+
+// Undercover
 _uc1 = ["7R_UC","Go Undercover","",{nul = [_player] spawn fw_fnc_goUndercover;},{(CBA_MissionTime - SR_SuspicionSpotted > 60) && _player getVariable ["SR_Class","R"] isEqualto "UC" && !(_player getVariable ["SR_UC",false])}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _uc1] call ace_interact_menu_fnc_addActionToClass;
 
