@@ -30,7 +30,7 @@ _unit addHeadgear "UK3CB_BAF_H_Mk7_Win_ESS_A";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_mk48mod1";
+_unit addWeapon "rhs_weap_m240G";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "RH_g19t";
 _unit addHandgunItem "RH_X300";
