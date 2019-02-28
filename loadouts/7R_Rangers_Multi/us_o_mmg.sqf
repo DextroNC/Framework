@@ -30,7 +30,7 @@ _unit addHeadgear "VSM_Mich2000_2_Multicam";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_mk48mod1";
+_unit addWeapon "rhs_weap_m240G";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";

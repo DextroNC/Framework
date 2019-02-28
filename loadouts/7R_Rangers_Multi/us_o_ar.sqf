@@ -34,7 +34,7 @@ _unit addHeadgear "milgp_h_opscore_02_goggles_RGR_hexagon";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_mk46";
+_unit addWeapon "rhs_weap_m249_pip_S";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
