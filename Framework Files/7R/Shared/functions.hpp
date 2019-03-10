@@ -80,7 +80,6 @@
 	};
 	class repair {
 		file = "7R\Repair";
-		class resupplyPost{};
 		class repairStation{};
 		
 	};

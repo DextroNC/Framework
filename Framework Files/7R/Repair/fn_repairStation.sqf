@@ -25,7 +25,7 @@ _arm = "WAITING";
 sleep 1;
 
 // When Vehicle is in Zone conduct services
-while {(position _veh inArea _trg) && !_end} do {
+while {(position _veh inArea _trg)} do {
 	
 	// Timeout until Engine is turned off
 	if (isEngineOn _veh) then {
@@ -48,19 +48,8 @@ while {(position _veh inArea _trg) && !_end} do {
 		_veh setFuel (_fuel + 0.025);
 	};
 	
-	if (_dmg <= 0 && _fuel >= 1 && !_eng) then {
-		_timer = _timer + 1;
-		_arm = str ((30 - _timer)) + "s"; 
-	};
-	if (_timer == 30) then {
-		{
-			["VehicleAmmo", [_x], _x] call CBA_fnc_targetEvent;
-		} forEach (units _veh);
-		_arm = "DONE";
-		_end = true;
-		hint format ["Service Status: \nDamage: %1%4\nFuel: %2%4\nRearm: %3", (round (_dmg * 100)), (round (_fuel * 100)),_arm, "%"];
-		sleep 1;
-		hint "Service complete!";
+	if (_dmg <= 0 && _fuel >= 1 && !_eng) exitWith {
+		[_veh, player, _veh] call ace_rearm_fnc_rearmEntireVehicle;
 	};
 	sleep 1;
 	if (!(position _veh inArea _trg)) then {hint "Service aborted!";};

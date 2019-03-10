@@ -22,5 +22,6 @@ _action2 = ["sr_fort", "Get Spare Wheel", "", {nul = [_this select 0,"ACE_Wheel"
 _action2 = ["sr_fort", "Get Spare Track", "", {nul = [_this select 0,"ACE_Track"] spawn fw_fnc_supplyDropSparePart;}, {(_this select 0) getVariable ["ACE_isRepairFacility", 0] == 1}, {},[_b]] call ace_interact_menu_fnc_createAction;
 [_b, 0, ["ACE_MainActions"], _action2] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, true];
 
-
+// Make unloadable
+[_b, -1] call ace_cargo_fnc_setSize;
 
