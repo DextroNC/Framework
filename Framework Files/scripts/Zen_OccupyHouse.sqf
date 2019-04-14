@@ -105,13 +105,16 @@ _Zen_ArrayShuffle = {
     if (true) exitWith {};
 };
 
-if (_buildingRadius < 0) then {
-    _buildingsArray = nearestObjects [_center, ["building"], 50];
-} else {
-    _buildingsArray0 = nearestObjects [_center, ["house"], _buildingRadius];
-    _buildingsArray1 = nearestObjects [_center, ["building"], _buildingRadius];
-    _buildingsArray = _buildingsArray0 arrayIntersect _buildingsArray1;
+if (_buildingRadius < 0) exitWith {
+    nul = [_center, nil, _units, 20, 0, false, true] call ace_ai_fnc_garrison;
+    //_buildingsArray = nearestObjects [_center, ["building"], 50];
 };
+nul = [_center, nil, _units, _buildingRadius, 0, false, true] call ace_ai_fnc_garrison;
+
+/*
+_buildingsArray0 = nearestObjects [_center, ["house"], _buildingRadius];
+_buildingsArray1 = nearestObjects [_center, ["building"], _buildingRadius];
+_buildingsArray = _buildingsArray0 arrayIntersect _buildingsArray1;
 
 if (count _buildingsArray == 0) exitWith {
     player sideChat str "Zen_Occupy House Error : No buildings found.";
@@ -205,8 +208,9 @@ for [{_j = 0}, {(_unitIndex < count _units) && {(count _buildingPosArray > 0)}},
                                     doStop (_units select _unitIndex);
                                     (_units select _unitIndex) forceSpeed 0;
                                 };
-
+*/
                                //** JBOY_UpDown by JohnnyBoy //*/
+                               /*
                                 #define JBOY_UpDown \
                                     if (!isServer)  exitWith {}; \
                                     _dude = _this select 0; \
@@ -279,6 +283,7 @@ for "_i" from _unitIndex to (count _units - 1) step 1 do {
 };
 
 (_unUsedUnits)
+*/
 
 // Changelog
 // 7/21/15
