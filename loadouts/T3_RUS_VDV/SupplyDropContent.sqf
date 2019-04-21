@@ -30,6 +30,7 @@ if (_type == 1) then {
 	_box addWeaponcargoGlobal ["rhs_weap_rpg26", 2];
 	_box addWeaponcargoGlobal ["rhs_weap_rshg2", 1];
 	_box additemcargoGlobal ["rhs_mag_rgd5", 8];  
+	_box additemcargoGlobal ["rhsgref_mag_rkg3em", 4];  
 	_box additemcargoGlobal ["rhs_mag_rgn", 2];  
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 28];  
 	_box additemcargoGlobal ["rhs_mag_nspd", 8];     
