@@ -37,8 +37,8 @@ _unit addHeadgear "milgp_h_opscore_05_goggles_CB";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L85A2_UGL";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
+_unit addWeapon "rhs_weap_m4a1_blockII_M203";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addWeapon "hgun_ACPC2_F";
 _unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "ACE_Vector";
