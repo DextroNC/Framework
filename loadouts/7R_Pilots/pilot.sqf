@@ -22,18 +22,15 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
 _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
-
-_unit addVest "V_TacVest_oli";
+_unit addVest "V_TacVest_blk";
 _unit addItemToVest "ACE_microDAGR";
-for "_i" from 1 to 2 do {_unit addItemToVest "RH_15Rnd_9x19_M9";};
-
-_unit addHeadgear "rhsusf_hgu56p_visor_mask_black";
-_unit addBackpack "fatpack_od";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+_unit addHeadgear "rhsusf_hgu56p_visor";
 
 comment "Add weapons";
 _unit addWeapon "hlc_smg_mp5a3";
 _unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
-_unit addWeapon "RH_m9";
+_unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "ACE_Vector";
 
 comment "Add items";
@@ -44,9 +41,7 @@ _unit linkItem "ItemGPS";
 
 
 for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
-_unit addItemToVest "ACRE_PRC148";
 _unit addItemToVest "ACRE_PRC152";
-_unit addItemToBackpack "ACRE_PRC117F";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {

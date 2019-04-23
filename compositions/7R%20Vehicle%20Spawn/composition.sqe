@@ -1,5 +1,5 @@
 version=53;
-center[]={4852.5371,339,10125.604};
+center[]={3506.1948,19,3603.8594};
 class items
 {
 	items=2;
@@ -8,7 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-0.81689453,0.11895752,-0.77050781};
+			position[]={0.024658203,0.11895752,-0.79858398};
 			angles[]={0,4.0928965,0};
 		};
 		side="Empty";
@@ -16,7 +16,7 @@ class items
 		{
 			name="v_pad";
 		};
-		id=386;
+		id=242;
 		type="Land_HelipadEmpty_F";
 		atlOffset=0.11895752;
 		class CustomAttributes
@@ -48,17 +48,17 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.81738281,0.58026123,0.77148438};
+			position[]={-0.024658203,0.58025742,0.79858398};
 			angles[]={-0,1.1764042,0};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
-			init="this addaction [""<t color=""""#00FF00"""">"" +""Spawn Vehicle"", fw_fnc_vehicleSpawn,[""rhsusf_rg33_wd"",v_pad]];";
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn Vehicle"", fw_fnc_vehicleSpawn,[""rhsusf_rg33_wd"",v_pad,2]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn Armoured Vehicle"", fw_fnc_vehicleSpawn,[""Cha_LAV25A2"",v_pad,3]];}";
 			disableSimulation=1;
 		};
-		id=387;
+		id=243;
 		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{

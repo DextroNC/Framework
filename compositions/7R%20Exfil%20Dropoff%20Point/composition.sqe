@@ -1,15 +1,29 @@
 version=53;
-center[]={4836.3721,165.62866,9743.3174};
+center[]={8414.875,-61.831337,7007.708};
 class items
 {
-	items=1;
+	items=2;
 	class Item0
 	{
 		dataType="Marker";
-		position[]={0,0,0};
+		position[]={-0.020507813,0,0.11328125};
 		name="dropoff";
 		type="Empty";
-		id=116;
+		id=297;
 		atlOffset=-173.37134;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.01953125,173.37134,-0.11279297};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=298;
+		type="Land_HelipadEmpty_F";
 	};
 };

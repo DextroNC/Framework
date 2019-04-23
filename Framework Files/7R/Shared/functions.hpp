@@ -16,6 +16,9 @@
 		class checkStatus{};
 		class clearArea {};
 		class sortUnitsByGroup{};
+		class removeNVG{};
+		class zeus{};
+		class recall{};
 	};
 	class template
 	{
@@ -77,7 +80,6 @@
 	};
 	class repair {
 		file = "7R\Repair";
-		class resupplyPost{};
 		class repairStation{};
 		
 	};

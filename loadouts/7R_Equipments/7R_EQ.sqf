@@ -47,7 +47,7 @@ switch (_type) do {
     case "O_UavTerminal": {_unit linkItem _type;};
     case "ItemGPS": {_unit linkItem _type;};
     case "ACE_EntrenchingTool": {
-		if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 1 || groupId _group in ["PL","P","P-1","P-2"]) then {
+		if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
 			_unit addItem "ACE_EntrenchingTool";
 		} else {
 			"Entrenching Tool limit reached!" remoteExec ["hint", _group]; 
