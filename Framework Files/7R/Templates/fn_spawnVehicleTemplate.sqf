@@ -4,17 +4,17 @@
 		<-- Leader as Object
 		<-- Target Position Marker as String
 		<-- Limited Speed as Boolean
-		<-- Upsmon Parameters initialized on Target Pos as Array
-		<-- Optional: Upsmon Parameters initialized on Target Pos for Cargo as Array
+		<-- Patrol Parameters initialized on Target Pos as Array
+		<-- Optional: Patrol Parameters initialized on Target Pos for Cargo as Array
 		
 	Description:
 	Handles tempalte spawned Vehicles. First they will get a waypoint at Target Marker Pos. 
-	If engage or waypoint is reached, they get passed into UPSMON.
+	If engage or waypoint is reached, they get passed into Patrol Script.
 
 */
 
 // Parameter Init
-params ["_leader","_marker","_speed","_upsmon","_cargo"];
+params ["_leader","_marker","_speed","_patrolParams","_cargo"];
 private "_ins"; 
 _veh = vehicle _leader;
 if (isNil "_cargo") then {_cargo = []};
@@ -47,4 +47,4 @@ waitUntil {_leader getVariable ["dismount", false] || !alive _leader || !alive (
 
 // Remove Eventhandler
 (vehicle _leader) removeEventHandler ["Dammaged", _index];
-[_leader, _upsmon, _cargo] spawn fw_fnc_dismountVehicle;
+[_leader, _patrolParams, _cargo] spawn fw_fnc_dismountVehicle;

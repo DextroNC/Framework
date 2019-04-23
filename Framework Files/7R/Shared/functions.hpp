@@ -141,5 +141,6 @@
 		class depressedCooldown{};
 		class hasLosses{};
 		class removeDeadGroups{};
+		class garrison{};
 	};
 };

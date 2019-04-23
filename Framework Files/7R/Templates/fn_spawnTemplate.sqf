@@ -58,7 +58,6 @@ if (_type isEqualTo "PATROL") Then {
 	// Pre-Spawn Init
 	_unitNumber = count _units;
 	_grp = createGroup _side;
-	if (isNil "_params2") then {_params2 = false;};
 	
 	// Spawn Loop
 	for [{_i=0}, {_i<_unitNumber}, {_i=_i+1}] do
@@ -71,25 +70,14 @@ if (_type isEqualTo "PATROL") Then {
 			_leader = _unit;
 		};
 	};
-	// Assign Leader and Create UPSMON Array
+	// Assign Leader and Start Patrol
 	_grp selectLeader _leader;
-	_upsmon = [_leader];
-	_upsmon append _params;
+	_patrolParams = [_leader];
+	_patrolParams append _params;
 	_array = units group _leader;
 	
-	if (_params2) then {
-		_ins = [(_params select 0), true] call CBA_fnc_randPosArea;
-		_wp = group _leader addWaypoint [_ins ,0,1];
-		_wp setWaypointType "MOVE";
-		_wp setWaypointSpeed "FULL";
-		_wp setWaypointBehaviour "AWARE";
-		_wp setWaypointCompletionRadius 100;
-		_wp setWaypointStatements ["true", "group this setVariable ['arrived', true]"];
-		[{(_this select 0) getVariable ['arrived', false]}, {nul = (_this select 1) execVM "scripts\UPSMON.sqf"; }, [_grp, _upsmon]] call CBA_fnc_waitUntilAndExecute;
-	} else {
-		// Init UPSMON on spawned Unit
-		[_upsmon, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
-	};
+	// Init Patrol Script on Spawn Units
+	_patrolParams remoteExec ["fw_fnc_patrol",2];
 };
 
 // =================================================================================================
@@ -137,8 +125,7 @@ if (_type isEqualTo "GARRISON") Then {
 	_garrison append _params;
 	_array = units group _leader;
 	// Init Garrison on spawned Unit
-	_garrison execVM "scripts\Zen_OccupyHouse.sqf";
-
+	_garrison spawn fw_fnc_garrison;
 };
 
 // =================================================================================================

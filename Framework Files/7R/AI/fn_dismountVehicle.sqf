@@ -2,15 +2,15 @@
 
 	Parameters:
 		<-- Leader as Object
-		<-- Upsmon Parameters initialized on Target Pos as Array
-		<-- Optional: Upsmon Parameters initialized on Target Pos for Cargo as Array
+		<-- Patrol Parameters initialized on Target Pos as Array
+		<-- Optional: Patrol Parameters initialized on Target Pos for Cargo as Array
 
 	Description:
-		Makes AI dismount and passes it to UPSMON
+		Makes AI dismount and passes it to Patrol Script
 		
 */
 // Parameter Init
-params ["_l","_upsmon","_cargo"];
+params ["_l","_patrolParams","_cargo"];
 _v = vehicle _l;
 _g = group _l;
 
@@ -21,8 +21,8 @@ if (isNull (gunner vehicle _l)) then {
 	units _g allowGetIn false;
 	// Call UPSMON
 	_array = [_l]; 
-	_array append _upsmon;
-	[_array, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	_array append _patrolParams;
+	_array remoteExec ["fw_fnc_patrol",2];
 } else {
 	// Multi Group Dismount
 	_c = count units _g;
@@ -37,9 +37,9 @@ if (isNull (gunner vehicle _l)) then {
 	_array = [leader _g]; 
 	// Patrol Script Init
 	// Check if Second parameter set for crew exists, if not both groups receive same parameters
-	if (isNil "_cargo") then {_array append _upsmon;} else {_array append _cargo;};
-	[_array, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	if (isNil "_cargo") then {_array append _patrolParams;} else {_array append _cargo;};
+	_array remoteExec ["fw_fnc_patrol",2];
 	_array2 = [leader _ng]; 
-	_array2 append _upsmon;
-	[_array2, "scripts\UPSMON.sqf"] remoteExec ["BIS_fnc_execVM",2];
+	_array2 append _patrolParams;
+	_array2 remoteExec ["fw_fnc_patrol",2];
 };

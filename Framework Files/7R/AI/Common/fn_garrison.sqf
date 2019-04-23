@@ -1,23 +1,24 @@
 /*
 	Parameters:
-		<-- Unit as Object
+		<-- Position as Array
+		<-- Units as Array
+		<-- Radius as Integer
 	
 	Return:
 	--> None
 		
 	Description:
-		Makes a Unit surrender, stops surrendering if not enemies are close or too much time passed
+		Makes the unit garrison random buildings
 		
 	Example:
-		[_unit] spawn fw_fnc_surrender;
+		[_position,_units,_radius] spawn fw_fnc_garrison;
 */
 // Parameter Init
-params ["_unit"];
+params ["_position","_units","_radius",["_mode",0]];
 
-// Surrender Unit
-[_unit, true] call ace_captives_setSurrendered;
-
-// If unit is handcuffed do nothing, else unsurrender after timer and continue fighting
-[{{_this getVariable ["ace_captives_isHandcuffed", false]}, {}, _unit, random [30,45,60], {
-	[_this, false] call ace_captives_setSurrendered;
-}] call CBA_fnc_waitUntilAndExecute;
+// Minimum Radius and Garrison Function
+if (_radius < 0) then {
+    [_position, nil, _units, 20, _mode, false, true] call ace_ai_fnc_garrison;
+} else {
+	[_position, nil, _units, _radius, _mode, false, true] call ace_ai_fnc_garrison;
+};
