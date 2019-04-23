@@ -133,5 +133,11 @@
 	class AiCommon {
 		file = "7R\AI\Common";
 		class getRandomPos{};
+		class surrender{};
+		class reinforce{};
+		class suppress{};
+		class depressedCooldown{};
+		class hasLosses{};
+		class removeDeadGroups{};
 	};
 };

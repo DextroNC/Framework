@@ -12,3 +12,7 @@ if (!isServer) exitWith {};
 
 // Variable Init
 SR_PatrolUnits = []; 
+SR_Debug = true;
+SR_Flee = 10;
+SR_Surrender = 10;
+SR_Charge = 10;

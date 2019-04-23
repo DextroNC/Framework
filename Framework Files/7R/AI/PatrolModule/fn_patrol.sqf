@@ -1,7 +1,7 @@
 /*
 	Parameters:
 		<-- Leader as Object
-		<-- Mode Parameter as String ("P","G","R")
+		<-- Mode Parameter as String ("P","G","R","H")
 		<-- Modifier Parameters (modifies Mode)
 		
 	Description:
@@ -19,7 +19,7 @@ params [["_leader",objNull],["_mode","P"]];
 _modifier = [];
 
 // Debug check (insuffiecent input cancel)
-if (count _this < 3 || !(_mode in ["P","G","R"])) exitWith {
+if (count _this < 3 || !(_mode in ["P","G","R","H"])) exitWith {
 	hint format ["%1:Error - Insufficient Input", group objNull];
 };
 
