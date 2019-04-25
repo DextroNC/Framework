@@ -3,39 +3,36 @@
 		<-- Group as Group
 		
 	Description:
-		Upsmon Addition to make Units charge players close to them.
+		Units charge players close to them.
 */
 
 // Parameter Init
 params ["_grp"];
-_last = _grp getVariable ["UPSMON_LastOrder",0];
-_grp setVariable ["UPSMON_Grpmission","RAMPAGE"];
-
-// Check if last run is more than 30sec ago.
-if (CBA_MissionTime - _last < 30) exitWith {};
-_grp setVariable ["UPSMON_LastOrder",CBA_MissionTime];
-
-// Disable what may hold their charge back
-{
-	//_x disableAI "SUPPRESSION";
-	_x disableAI "AUTOCOMBAT";
-} forEach (units _grp);
-_grp setBehaviour "AWARE";
-_grp setCombatMode "RED";
-_grp setSpeedMode "FULL";
 
 // Find neareast Player
 _nearestPlayer = [];
+_nearestPlayer = [position leader _grp, allPlayers, SR_RAMPAGE_DISTANCE, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
+
+// Delete previous Waypoint
 if (count(waypoints _grp) > 0) then {
-	{
-		deleteWaypoint ((waypoints _grp) select 0);
-	}forEach (waypoints _grp);
+	deleteWaypoint [_grp, 1];
+};
+
+// Create Waypoint position
+_position = [];
+
+if (count _nearestPlayer == 0) then {
+	_position = position leader _grp;
+	
+} else {
+	_position = position (selectRandom _nearestPlayer);	
 };
 
 // Create Waypoint
-_nearestPlayer = [position leader _grp, allPlayers, UPSMON_RAMPAGE_DISTANCE, {isTouchingGround (vehicle _x)}] call CBA_fnc_getNearest;
-if (count _nearestPlayer == 0) then {
-	[_grp, position leader _grp] call BIS_fnc_taskAttack;
-} else {
-	[_grp, position (selectRandom _nearestPlayer)] call BIS_fnc_taskAttack;
-};
+[_grp,_position, 50, "SAD", "AWARE", "RED", "FULL",selectRandom ["STAG COLUMN","DIAMOND","WEDGE","ECH LEFT","ECH RIGHT"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
+
+// Time based Reset
+[{deleteWaypoint [_this, 1];}, _grp, 90] call CBA_fnc_waitAndExecute;
+
+// Debug
+if (SR_Debug) then {systemChat format ["%1 on a rampage to %2", _grp, (mapGridPosition _position)];};

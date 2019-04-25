@@ -1,6 +1,7 @@
 /*
 	Parameters:
 		<-- Leader as Object
+		<-- Zone as String (Marker Name)
 		<-- Mode Parameter as String ("P","G","R","H")
 		<-- Modifier Parameters (modifies Mode)
 		
@@ -8,24 +9,38 @@
 		Adds a Unit to the Patrol Module and based on the Parameters
 		
 	Example (Patrol in Zone "A1"):
-		nul = [leader,"P","A1"] spawn fw_fnc_patrol;
+		nul = [leader,"A1","P"] spawn fw_fnc_patrol;
 */
 
 // Server Only Exec
 if (!isServer) exitWith {};
 
 // Parameter Init
-params [["_leader",objNull],["_mode","P"]];
-_modifier = [];
+params [["_leader",objNull],["_zone",""],["_mode","P"]];
+
+// UPSMON Legacy Modifier
+switch (_mode) do {
+	// Phase 0 - Initial
+	case "SAFE": {
+		_mode = "P";
+	};
+	case "AWARE": {
+		_mode = "R";
+	};
+	case "FORTIFY": {
+		_mode = "H";
+	};
+};
 
 // Debug check (insuffiecent input cancel)
-if (count _this < 3 || !(_mode in ["P","G","R","H"])) exitWith {
-	hint format ["%1:Error - Insufficient Input", group objNull];
+if (count _this < 3 || !(_mode in ["P","G","R","H","RP"]) || count _zone == 0) exitWith {
+	systemChat format ["%1:Error - Insufficient Input", group objNull];
 };
 
 // Create Modifier Array
 private _input = _this;
-_input deleteRange [0,2];
+_input deleteRange [0,3];
+_modifier = [_zone];
 {
 	_modifier pushBack _x
 }forEach _input;

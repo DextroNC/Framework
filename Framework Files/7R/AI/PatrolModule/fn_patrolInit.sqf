@@ -16,3 +16,4 @@ SR_Debug = true;
 SR_Flee = 10;
 SR_Surrender = 10;
 SR_Charge = 10;
+SR_RAMPAGE_DISTANCE = 2000;

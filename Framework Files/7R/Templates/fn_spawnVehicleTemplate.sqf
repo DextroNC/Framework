@@ -43,7 +43,7 @@ _wp setWaypointCompletionRadius 20;
 _wp setWaypointStatements ["true", "this setVariable ['dismount', true, true]"];
 
 // Initialize Dismount when at WP or Engaged
-waitUntil {_leader getVariable ["dismount", false] || !alive _leader || !alive (vehicle _leader) || _leader call BIS_fnc_enemyDetected};
+waitUntil {_leader getVariable ["dismount", false] || !alive _leader || !alive (vehicle _leader) || _leader call BIS_fnc_enemyDetected || !((group _leader) getVariable ["SR_State", "PATROL"] isEqualTo "PATROL")};
 
 // Remove Eventhandler
 (vehicle _leader) removeEventHandler ["Dammaged", _index];

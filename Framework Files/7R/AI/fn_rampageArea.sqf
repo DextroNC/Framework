@@ -26,7 +26,8 @@ _allGroups = [];
 } forEach (allUnits - allPlayers);
 
 {
-	if (!(_x getVariable ["UPSMON_Grpmission",""] isEqualTo "RAMPAGE")) then {
-		[_x] spawn fw_fnc_rampageCharge;
+	if (!(_x getVariable ["SR_PatrolMode",""] isEqualTo "RP")) then {
+		_x setVariable ["SR_PatrolMode","RP"];
+		deleteWaypoint [_x, 1];
 	};
 }forEach _allGroups;

@@ -41,7 +41,7 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
             };
             // Hold Order
             case "H": {
-                // Create Garrison Waypoint and lock it
+                // Create Hold Waypoint and lock it
                 [_this,[_this] call fw_fnc_getRandomPos, 25, "HOLD", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
                 _this lockWP true;
                 // Debug
@@ -51,6 +51,12 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
             case "R": {
                 // Exec Reinforcement Function
                 [_this] spawn fw_fnc_reinforce;
+
+           };
+            // Rampage Order
+            case "RP": {
+                // Exec Rampage Function
+                [_this] spawn fw_fnc_rampageCharge;
 
            };
         };

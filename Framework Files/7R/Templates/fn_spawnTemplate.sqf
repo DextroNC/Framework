@@ -74,8 +74,7 @@ if (_type isEqualTo "PATROL") Then {
 	_grp selectLeader _leader;
 	_patrolParams = [_leader];
 	_patrolParams append _params;
-	_array = units group _leader;
-	
+	hint format ["%1", _patrolParams];
 	// Init Patrol Script on Spawn Units
 	_patrolParams remoteExec ["fw_fnc_patrol",2];
 };
@@ -123,9 +122,8 @@ if (_type isEqualTo "GARRISON") Then {
 	_units = units _grp;
 	_garrison = [_pos, _units];
 	_garrison append _params;
-	_array = units group _leader;
 	// Init Garrison on spawned Unit
-	_garrison spawn fw_fnc_garrison;
+	_garrison remoteExec ["fw_fnc_garrison",2];
 };
 
 // =================================================================================================
@@ -211,7 +209,6 @@ if (_type isEqualTo "VEHICLE") Then {
 	private _leader = leader _grp;
 	private _pass = [_leader];
 	_pass append _params;
-	
 	// Init Vehicle Spawn 
 	nul = _pass spawn fw_fnc_spawnVehicleTemplate;
 };

@@ -22,3 +22,6 @@ if (_radius < 0) then {
 } else {
 	[_position, nil, _units, _radius, _mode, false, true] call ace_ai_fnc_garrison;
 };
+
+// Debug
+if (SR_Debug) then {systemChat format ["%1 garrison %2 with radius %3",(group _units select 0), (mapGridPosition _position),_radius];};
