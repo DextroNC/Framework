@@ -27,14 +27,16 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
             // Patrol Order
             case "P": {
                 // Create Random Patrol Point
-                [_this,[_this] call fw_fnc_getRandomPos, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
+                private _position = [_this] call fw_fnc_getRandomPos;
+                [_this,_position, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is patrolling %2", _this, (mapGridPosition _position)];};
             };
             // Garrison Order
             case "G": {
                 // Create Garrison Waypoint and lock it
-                _this addWaypoint [[_this] call fw_fnc_getRandomPos, 0] setWaypointScript "\x\cba\addons\ai\fnc_waypointGarrison.sqf []";
+                private _position = [_this] call fw_fnc_getRandomPos;
+                _this addWaypoint [_position, 0] setWaypointScript "\x\cba\addons\ai\fnc_waypointGarrison.sqf []";
                 _this lockWP true;
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is garrison %2", _this, (mapGridPosition _position)];};
@@ -42,7 +44,8 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
             // Hold Order
             case "H": {
                 // Create Hold Waypoint and lock it
-                [_this,[_this] call fw_fnc_getRandomPos, 25, "HOLD", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
+                private _position = [_this] call fw_fnc_getRandomPos;
+                [_this,_position, 25, "HOLD", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
                 _this lockWP true;
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is holding %2", _this, (mapGridPosition _position)];};
@@ -63,7 +66,8 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
     };
 }, {deleteWaypoint [_this, 1];}, {}, "OffCombatLoop"] call CBA_statemachine_fnc_addState;
 
-private _combatStateMachine = [{SR_PatrolUnits select {(behaviour (leader _x) == "COMBAT") && !(_x getVariable ["SR_Depressed", false])}}, true] call CBA_statemachine_fnc_create;
+// Combat State Loop
+private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_State", "PATROL"] isEqualTo "COMBAT") && !(_x getVariable ["SR_Depressed", false])}}, true] call CBA_statemachine_fnc_create;
 [_combatStateMachine, {
 
     // If Group has suffered substancial losses then...
@@ -106,3 +110,66 @@ private _combatStateMachine = [{SR_PatrolUnits select {(behaviour (leader _x) ==
     [this] spawn fw_fnc_depressedCooldown;
 
 }, "CombatLoop"] call CBA_statemachine_fnc_addState;
+
+// Artillery Support Loop
+if (isNil "AI_ART_Units") then {AI_ART_Units = [];};
+private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_Depressed", false]) && (!isNull ([_x] call fw_fnc_artilleryCheck))}}, true] call CBA_statemachine_fnc_create;
+[_supportStateMachine, {
+
+    // Leave Loop if on cooldown
+    if (SR_ArtilleryCooldown) exitWith {};
+
+    // Get Unit Target Querry
+    private _leader = leader _this;
+    private _group = _this;
+    /*private _targets = _leader targetsQuery [objNull, SR_Side, "VirtualMan_F", [], 0];
+
+    // Sort to find highest accuracy Target
+    private _targetArray = _targets select 0;
+    private _target = (_targetArray select 1);
+    private _targetPos = (_targetArray select 4);*/
+    _target = _leader findNearestEnemy position _leader;
+    if (_target == objNull) exitWith {};
+    private _targetKnowledge = _leader knowsAbout _target;
+    private _targetPos = position _target;
+
+    // Minimum Target Knowledge require to call artillery
+    if ( _targetKnowledge < 1.5) exitWith {};
+    hint format ["%1", _targetKnowledge];
+    // Get Available Artillery
+    _artillery  = [_group] call fw_fnc_artilleryCheck;
+
+    // Rather call for flares during night time (added Random Chance to compensate for high knowledge)
+    if (sunOrMoon < 0.5 && _targetKnowledge < 4 && random 1 > 0.3) then {
+
+        // Request Flares
+            [_artillery,2,_targetPos] spawn fw_fnc_artilleryCall;
+                
+    // Daytime Evaluation
+    } else {
+
+        // If Target to close use smoke else HE
+        if (leader _group distance2D _targetPos < 150) then {
+
+            // Request Smoke
+            [_artillery,1,_targetPos] spawn fw_fnc_artilleryCall;
+        } else {
+            // Request HE
+            [_artillery,0,_targetPos] spawn fw_fnc_artilleryCall;
+        };
+    };
+
+    // Temporary Lock Artillery
+    SR_ArtilleryCooldown = true;
+
+    // Unlock Artillery
+    [{
+        SR_ArtilleryCooldown = false;
+    },objNull, 5] call CBA_fnc_waitAndExecute;
+
+    // Debug
+    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];}; 
+
+}, {}, {}, "SupportLoop"] call CBA_statemachine_fnc_addState;
+
+

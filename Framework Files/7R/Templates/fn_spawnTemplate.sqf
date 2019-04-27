@@ -74,7 +74,6 @@ if (_type isEqualTo "PATROL") Then {
 	_grp selectLeader _leader;
 	_patrolParams = [_leader];
 	_patrolParams append _params;
-	hint format ["%1", _patrolParams];
 	// Init Patrol Script on Spawn Units
 	_patrolParams remoteExec ["fw_fnc_patrol",2];
 };

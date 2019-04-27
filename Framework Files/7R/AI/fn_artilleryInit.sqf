@@ -54,6 +54,9 @@ _unit setVariable ["ART_Ammo", _ammo];
 _unit setVariable ["ART_Range", _range];
 _unit setVariable ["ART_CD", _cool];
 
+// Disable VCOM
+(group _unit) setVariable ["Vcm_Disable",true,true];
+
 /*
  * If the unit should only fire flares
  * */
@@ -65,4 +68,7 @@ if (_flares) then {
 if (isNil "AI_ART_Units") then {AI_ART_Units = [];};
 
 AI_ART_Units pushBack _unit;
+
+// debug
+if (SR_Debug) then {systemChat format ["Ammo: %1 / Count: %2 / Range: %3 / CD: %4",_ammoArray, _ammo, _range, _cool];};
 
