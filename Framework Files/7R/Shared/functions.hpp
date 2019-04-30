@@ -114,18 +114,6 @@
 		class exitUndercover{};
 		class loopUndercover{};
 	};
-	class AI {
-		file = "7R\AI";
-		class rampageCharge{};
-		class rogueCharge{};
-		class rampageArea{};
-		class artilleryInit{};
-		class artilleryCheck{};
-		class artilleryCall{};
-		class overwatchAI{};
-		class dismountVehicle{};
-		class vehiclePatrol{};
-	};
 	class AiPatrol {
 		file = "7R\AI\PatrolModule";
 		class patrol{};
@@ -142,5 +130,15 @@
 		class hasLosses{};
 		class removeDeadGroups{};
 		class garrison{};
+		class rampageCharge{};
+		class rampageArea{};
+		class artilleryInit{};
+		class artilleryCheck{};
+		class artilleryCall{};
+		class dismountVehicle{};
+	};
+	class CleanUp {
+		file = "7R\AI\CleanUp";
+		class cleanUpLoop{postInit = true};
 	};
 };

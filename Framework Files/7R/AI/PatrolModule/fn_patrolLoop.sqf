@@ -63,6 +63,11 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
 
            };
         };
+
+        // Force Flashlights
+        if (SR_AI_forceFlashlight) then {
+            _this enableGunLights "ForceOn";
+        };
     };
 }, {deleteWaypoint [_this, 1];}, {}, "OffCombatLoop"] call CBA_statemachine_fnc_addState;
 
@@ -122,16 +127,11 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Get Unit Target Querry
     private _leader = leader _this;
     private _group = _this;
-    /*private _targets = _leader targetsQuery [objNull, SR_Side, "VirtualMan_F", [], 0];
-
-    // Sort to find highest accuracy Target
-    private _targetArray = _targets select 0;
-    private _target = (_targetArray select 1);
-    private _targetPos = (_targetArray select 4);*/
+  
+    // Find Target
     _target = _leader findNearestEnemy position _leader;
     if (_target == objNull) exitWith {};
     private _targetKnowledge = _leader knowsAbout _target;
-    private _targetPos = position _target;
 
     // Minimum Target Knowledge require to call artillery
     if ( _targetKnowledge < 1.5) exitWith {};
@@ -140,22 +140,22 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     _artillery  = [_group] call fw_fnc_artilleryCheck;
 
     // Rather call for flares during night time (added Random Chance to compensate for high knowledge)
-    if (sunOrMoon < 0.5 && _targetKnowledge < 4 && random 1 > 0.3) then {
+    if (sunOrMoon < 0.5 && random 1 > 0.3) then {
 
         // Request Flares
-            [_artillery,2,_targetPos] spawn fw_fnc_artilleryCall;
+            [_artillery,2,_target] spawn fw_fnc_artilleryCall;
                 
     // Daytime Evaluation
     } else {
 
         // If Target to close use smoke else HE
-        if (leader _group distance2D _targetPos < 150) then {
+        if (leader _group distance2D _target < 150) then {
 
             // Request Smoke
-            [_artillery,1,_targetPos] spawn fw_fnc_artilleryCall;
+            [_artillery,1,_target] spawn fw_fnc_artilleryCall;
         } else {
             // Request HE
-            [_artillery,0,_targetPos] spawn fw_fnc_artilleryCall;
+            [_artillery,0,_target] spawn fw_fnc_artilleryCall;
         };
     };
 

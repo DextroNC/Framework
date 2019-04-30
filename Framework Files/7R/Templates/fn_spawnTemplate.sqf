@@ -24,18 +24,21 @@ if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reac
 
 // Parameter init
 params ["_marker","_type","_number","_params","_params2"];
-private "_pos";
 private _template = [];
 private _units = [];
 private _leader = objNull;
 private _array = [];
+_pos = [];
 
+// Spawn Pos Init
 // Spawn Pos Init
 if (markerSize _marker isEqualTo [1,1]) then {
 	_pos = markerPos _marker;
 } else {
 	_pos = [_marker, true] call CBA_fnc_randPosArea;
 };
+
+hint format ["%1", _pos];
 // =================================================================================================
 
 // Patrol Template Spawn
@@ -65,6 +68,9 @@ if (_type isEqualTo "PATROL") Then {
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 		[_unit] join _grp;
+		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
+			[_unit] spawn fw_fnc_removeNVG;
+		};
 		If (_i == 0) then
 		{
 			_leader = _unit;
@@ -107,7 +113,7 @@ if (_type isEqualTo "GARRISON") Then {
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 		[_unit] join _grp;
-		if (SR_AI_removeNVG) then {
+		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
 			[_unit] spawn fw_fnc_removeNVG;
 		};
 		If (_i == 0) then
@@ -199,7 +205,7 @@ if (_type isEqualTo "VEHICLE") Then {
 				[_unit] orderGetIn true; 
 			};
 		};
-		if (SR_AI_removeNVG) then {
+		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
 			[_unit] spawn fw_fnc_removeNVG;
 		};
 	} forEach _units;

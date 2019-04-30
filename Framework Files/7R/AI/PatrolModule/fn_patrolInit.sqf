@@ -10,11 +10,13 @@
 // Server Only Exec
 if (!isServer) exitWith {};
 
-// Variable Init
+// Variable Init (DO NOT CHANGE)
 SR_PatrolUnits = []; 
-SR_Debug = true;
+SR_ArtilleryCooldown = false;
+
+// Variable Init (TO EDIT)
+SR_Debug = false;
 SR_Flee = 10;
-SR_Surrender = 10;
+SR_Surrender = 15;
 SR_Charge = 10;
 SR_RAMPAGE_DISTANCE = 2000;
-SR_ArtilleryCooldown = false;

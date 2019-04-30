@@ -33,8 +33,14 @@ switch (_mode) do {
 };
 
 // Debug check (insuffiecent input cancel)
-if (count _this < 3 || !(_mode in ["P","G","R","H","RP"]) || count _zone == 0) exitWith {
+if (count _this < 3 || !(_mode in ["P","G","R","H","RP","NW"]) || count _zone == 0) exitWith {
 	systemChat format ["%1:Error - Insufficient Input", group objNull];
+};
+
+// If Param = NoWaypoint then exit patrol script
+if (_mode isEqualTo "NW") exitWith {
+	// Disable VCOM
+	(group _leader) setVariable ["Vcm_Disable",true,true];
 };
 
 // Create Modifier Array
