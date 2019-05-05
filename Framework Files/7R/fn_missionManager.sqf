@@ -26,13 +26,13 @@ params ["_nbr"];
 switch (_nbr) do {
 	// Phase 1
     case 1: {
-		_handle = ["a1","PATROL",7,["a1","SAFE","LIMITED","NOFOLLOW"]] spawn fw_fnc_spawnTemplate; 
+		_handle = ["a1","PATROL",7,["a1","P"]] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
-		_handle = ["os1_2","GARRISON",1,[150,true,true]] spawn fw_fnc_spawnTemplate; 
+		_handle = ["os1_2","GARRISON",1,[150]] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
 		_handle = ["a2",["LOP_CHR_Civ_Random"], 10,0] spawn fw_fnc_civSpawn;
 		waitUntil {scriptDone _handle};
-		_handle = ["vs1","VEHICLE",9,["is1",false,["a1","SAFE"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["vs1","VEHICLE",9,["is1",false,["a1","R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		phase = 1;
