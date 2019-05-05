@@ -37,8 +37,6 @@ if (markerSize _marker isEqualTo [1,1]) then {
 } else {
 	_pos = [_marker, true] call CBA_fnc_randPosArea;
 };
-
-hint format ["%1", _pos];
 // =================================================================================================
 
 // Patrol Template Spawn
