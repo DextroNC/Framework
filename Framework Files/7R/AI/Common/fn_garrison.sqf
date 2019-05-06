@@ -3,13 +3,13 @@
 		<-- Position as Array
 		<-- Units as Array
 		<-- Radius as Integer
-	
+
 	Return:
 	--> None
-		
+
 	Description:
 		Makes the unit garrison random buildings
-		
+
 	Example:
 		[_position,_units,_radius] spawn fw_fnc_garrison;
 */
@@ -24,4 +24,4 @@ if (_radius < 0) then {
 };
 
 // Debug
-if (SR_Debug) then {systemChat format ["%1 garrison %2 with radius %3",(group _units select 0), (mapGridPosition _position),_radius];};
+if (SR_Debug) then { systemChat format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius]; };
