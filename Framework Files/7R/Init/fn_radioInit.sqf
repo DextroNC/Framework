@@ -65,6 +65,11 @@ _id = ["ace_unconscious", {
 ["ACRE_PRC117F", "default", 5, "name", "AIR NET 1"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 6, "name", "AIR NET 2"] call acre_api_fnc_setPresetChannelField;
 
+// Log HC Frames
+if (!hasInterface && !isServer) then {
+	    _handle = [{ (format ["HC Frames: %1", diag_fps]) remoteExec ["diag_log",2];}, 15, []] call CBA_fnc_addPerFrameHandler;
+};
+
 // Client Only Part
 if (!hasInterface) exitWith {};
 

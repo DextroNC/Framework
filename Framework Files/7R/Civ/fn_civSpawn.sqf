@@ -70,7 +70,7 @@ SR_CIV_OCCUPATION = {
 				_unit setPos _pos;
 				};
 			default {
-				nul = [_pos, [_unit], 500, true, true] execVM "scripts\Zen_OccupyHouse.sqf"
+				[_pos, [_unit], 500] spawn fw_fnc_garrison;
 			};
 		};
 	};
