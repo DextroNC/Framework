@@ -20,8 +20,8 @@
 
 */
 
-// Server only exec
-//if(!isServer) exitWith {};
+// Client only Exec
+if(!hasInterface) exitWith {};
 
 // Parameter init
 params ["_object", "_time", "_text",["_info", "Collect Intel"],["_inv", false]];
