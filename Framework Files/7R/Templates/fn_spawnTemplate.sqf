@@ -275,4 +275,4 @@ if (_type isEqualTo "AIR") Then {
 	_x setSkill ["general",0.75];
 }forEach (units group _leader);
 
-_leader spawn fw_fnc_danger;
+//_leader spawn fw_fnc_danger;
