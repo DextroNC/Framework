@@ -141,12 +141,4 @@
 		file = "7R\AI\CleanUp";
 		class cleanUpLoop{postInit = true};
 	};
-	class FSM
-	{
-		file = "7R\AI\FSM";
-		class danger 
-		{
-			ext = ".fsm";
-		};
-	};
 };

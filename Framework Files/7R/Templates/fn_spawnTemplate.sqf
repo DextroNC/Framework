@@ -265,7 +265,7 @@ if (_type isEqualTo "AIR") Then {
 		[(group _leader), _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 	};	
 };
-
+/*
 // AI skill
 {
 	_x setSkill ["spotDistance",0.75];
@@ -274,5 +274,4 @@ if (_type isEqualTo "AIR") Then {
 	_x setSkill ["commanding",0.75];
 	_x setSkill ["general",0.75];
 }forEach (units group _leader);
-
-//_leader spawn fw_fnc_danger;
+*/
