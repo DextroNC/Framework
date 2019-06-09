@@ -78,7 +78,7 @@ _ACA5 = ["7R_Artillery","5 Rounds","",{null = ["ArtilleryTarget","",5,50,10] spa
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA5] call ace_interact_menu_fnc_addActionToClass;
 _ACA7 = ["7R_Artillery","7 Rounds","",{null = ["ArtilleryTarget","",7,75,10] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
-_ACAS = ["7R_Artillery","Smoke Barage","",{null = ["ArtilleryTarget","UK3CB_BAF_Smoke_60mm_AMOS",7,100,10,1] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
+_ACAS = ["7R_Artillery","Smoke Barrage","",{null = ["ArtilleryTarget","UK3CB_BAF_Smoke_60mm_AMOS",7,100,10,1] spawn fw_fnc_artillery},_isLeader] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAS] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS

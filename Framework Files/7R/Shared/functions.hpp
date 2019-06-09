@@ -117,8 +117,8 @@
 	class AiPatrol {
 		file = "7R\AI\PatrolModule";
 		class patrol{};
-		class patrolInit{preInit = true};
-		class patrolLoop{postInit = true};
+		class patrolInit{preInit = 1;};
+		class patrolLoop{postInit = 1;};
 	};
 	class AiCommon {
 		file = "7R\AI\Common";
