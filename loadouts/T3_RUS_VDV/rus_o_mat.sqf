@@ -27,7 +27,7 @@ _unit addBackpack "rhs_rpg_empty";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
 for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_rpg7_PG7VR_mag";};
-_unit addHeadgear "rhs_6b7_1m_bala2_olive";
+_unit addHeadgear "rhs_6b7_1m_bala1_olive";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_aks74n_2";
