@@ -20,7 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
 _unit addVest "milgp_v_mmac_teamleader_belt_CB";
 _unit addItemToVest "SmokeShell";
 _unit addItemToVest "SmokeShellGreen";
