@@ -31,6 +31,7 @@ _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "APERSTripMine_Wire_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mine_tm62m_mag";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addHeadgear "rhs_6b7_1m_ess";
 
 comment "Add weapons";

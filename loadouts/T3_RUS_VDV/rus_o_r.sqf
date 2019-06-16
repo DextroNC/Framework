@@ -27,6 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 _unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addHeadgear "rhs_6b7_1m_bala2_emr";
 
 comment "Add weapons";

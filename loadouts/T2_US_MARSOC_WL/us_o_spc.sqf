@@ -28,6 +28,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "milgp_bp_Breacher_cb";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "MiniGrenade";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addHeadgear "milgp_h_opscore_02_goggles_CB";
 _unit addGoggles "rhs_googles_clear";
 

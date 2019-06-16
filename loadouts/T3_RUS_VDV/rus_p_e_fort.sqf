@@ -24,13 +24,14 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "RH_18Rnd_9x19_gsh";};
 _unit addVest "rhs_6b23_digi_6sh92_radio";
 for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
-_unit addBackpack "B_Kitbag_sgg";
+_unit addBackpack "B_Carryall_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "APERSTripMine_Wire_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mine_tm62m_mag";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addHeadgear "rhs_beret_vdv2";
 
 comment "Add weapons";

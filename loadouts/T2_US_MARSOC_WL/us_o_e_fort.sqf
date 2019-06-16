@@ -32,6 +32,7 @@ _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+for "_i" from 1 to 5 do {_unit addItemToVest "ACE_Fortication_Material";};
 _unit addHeadgear "rhsusf_mich_bare_alt";
 _unit addGoggles "rhs_googles_clear";
 

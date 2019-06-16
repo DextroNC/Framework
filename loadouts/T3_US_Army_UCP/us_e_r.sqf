@@ -26,6 +26,8 @@ for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "gear_Tacticalpack_ACU_01";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+_unit addItemToBackpack "ACE_EntrenchingTool";
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addHeadgear "rhsusf_ach_helmet_ucp_norotos";
 _unit addGoggles "rhs_googles_clear";
 
