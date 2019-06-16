@@ -6,16 +6,28 @@
 		<-- Callsign as String
 		<-- Amount of Boxes as Integer (1-3 boxes)
 		<-- Optional: Type of Supply Drop as Integer (1: Infantry, 2: Vehicle Supply, 3: Fortification Supplies), default : 1
-
+		<-- Optional: Vehicle Array [_vehicleType,_vehicleLoadout]
 	Decription:
 		Init Supply Drop Function
 
 */
 
 // Parameter Init
-params ["_target","_spawn","_type","_callsign","_amount",["_mode",1]];
+params ["_target","_spawn","_type","_callsign","_amount",["_mode",1],["_vehicle",[]]];
 _target = markerPos _target;
 _spawn = markerPos _spawn;
+_class = "";
+_loadout = -1;
+
+// Check if Vehicle Drop
+if (count _vehicle > 0) then {
+	//_type = "globemaster_c17_altus";
+	_class = _vehicle select 0;
+	_loadout = _vehicle select 1;
+	if (isNil "_loadout") then {
+		_loadout = -1;
+	};
+};
 
 // Init Public variables if not initialized in init.sqf or else with default values.
 if (isNil "SupplyDropLock") then {SupplyDropLock = false; publicVariable "SupplyDropLock";};
@@ -67,12 +79,21 @@ leader _planeGroup setGroupIdGlobal [_callsign];
 	_x setVariable ["asr_ai_exclude", true]
 }forEach units _planeGroup;
 
-// Spawn and Attach Boxes in Cargo
-for [{_i= 1},{_i <= _amount},{_i = _i + 1}] do {
-	_adj = _i + (_i * 0.8);
-	_adj = 0.5;
-	_off = [-1.5,_adj,1.1];
-	[_planeacc, "cargo_mem_2", _off, _mode] spawn fw_fnc_supplyDropBox;
+
+if (count _vehicle == 0) then {
+	// Spawn and Attach Boxes in Cargo
+	for [{_i= 1},{_i <= _amount},{_i = _i + 1}] do {
+		_adj = _i + (_i * 0.8);
+		_adj = 0.5;
+		_off = [-1.5,_adj,1.1];
+		[_planeacc, "cargo_mem_2", _off, _mode] spawn fw_fnc_supplyDropBox;
+	};
+} else {
+	_veh = createVehicle [_class, [0,0,0], [], 0, "NONE"];
+	if (_loadout >= 0) then {
+		[_veh, _loadout] execVM "loadouts\VehicleCargoContent.sqf";
+	};
+	_veh attachTo [_planeacc,[0,0,4]];
 };
 
 // Calculate Waypoint and send Aircraft

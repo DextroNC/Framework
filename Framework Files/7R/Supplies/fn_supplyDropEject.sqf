@@ -23,6 +23,7 @@ _array = attachedObjects _v;
 	
 	// Create and Attach Parachute
 	_para = "B_Parachute_02_F" createVehicle [0, 0, 100];
+	_para setDir (direction _v);
 	_para setposASL (getPosASL _x);
 	_x attachTo [_para,[0,0,-.5]];
 	[_x,_para] spawn fw_fnc_supplyDropLanding;

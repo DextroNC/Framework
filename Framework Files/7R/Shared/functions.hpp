@@ -50,12 +50,6 @@
 		class supplyDropEject{};
 		class supplyDropLanding{};
 		class supplyDropReport{};
-		class supplyDropVehicleInit{};
-		class supplyDropVehicleAction{};
-		class supplyDropVehicleTrigger{};
-		class supplyDropFortInit{};
-		class supplyDropFortAction{};
-		class supplyDropSparePart{};
 	};	
 	class exfil {
 		file = "7R\Exfil";

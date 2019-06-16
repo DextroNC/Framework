@@ -40,6 +40,11 @@ _spawnPos = [_spawnPos select 0, _spawnPos select 1, _height];
 _wpPos = [_targetPos, 3000, _dir] call BIS_fnc_relPos;
 _wpPos2 = [_targetPos, 500, _dir] call BIS_fnc_relPos;
 
+// Adjust plane type based on player count
+if ({_x distance2d _term < 100} count (allPlayers - entities "HeadlessClient_F") > 24) then {
+	_type = "globemaster_c17_altus";
+};
+
 // Spawn Plane and Init
 _plane = [_spawnPos, _dir, _type, SR_Side] call bis_fnc_spawnVehicle;
 _planeGroup = _plane select 2;
@@ -70,9 +75,6 @@ sleep 3;
 _slot = 2;
 
 // Teleport People into Plane
-if ({_x distance2d _term < 100} count (allPlayers - entities "HeadlessClient_F") > 24) then {
-	_type = "globemaster_c17_altus";
-};
 {
 	if (_x distance2D _term < 100) then {
 		["ParaPort", [_v,_x,_slot], _x] call CBA_fnc_targetEvent;

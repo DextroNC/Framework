@@ -24,19 +24,18 @@ ace_medical_gasMask = "Mask_M50";
 // ======================================================================================
 /*
 	Recommended if desired:
-	- SupplyDropAmmo = 6;
+	- SupplyDropAmmo = 8;
 	- CASCallAmmo = 6;
 	- ArtilleryCallAmmo 45;
-	- ace_trenches_trenchSupplies = 100; (Trench Supply Drop gives 100 as well)
+	- ace_trenches_trenchSupplies = 250; (Trench Supply Drop gives 250 as well)
 */
 // Support System Availability Variables
 ExfilHelolock = false;
 ReifLock = false;
-SupplyDropAmmo = 6;
+SupplyDropAmmo = 8;
 ArtilleryCallAmmo = 0;
 CASCallAmmo = 0;
-UAV_Ammo = 0;
-ace_trenches_trenchSupplies = 0;
+ace_trenches_trenchSupplies = 250;
 
 
 // ======================================================================================

@@ -17,27 +17,29 @@ private "_box";
 
 // Create Supply Box
 switch (_mode) do {
+	// Infantry
     case 1: {
 		_box = createVehicle ["B_supplyCrate_F", [0,0,0], [], 0, "NONE"];
 		[_box, 1] execVM "loadouts\SupplyDropContent.sqf";
 	};
+	// None
     case 2: {
-		_box = createVehicle ["CargoNet_01_box_F", [0,0,0], [], 0, "NONE"];
-		[_box, 2] execVM "loadouts\SupplyDropContent.sqf";
-		[_box] spawn fw_fnc_supplyDropVehicleInit;
 	};
+	// Fortification
     case 3: {
-		_box = createVehicle ["CargoNet_01_barrels_F", [0,0,0], [], 0, "NONE"];
-		[_box] spawn fw_fnc_supplyDropFortInit;
+		_box = createVehicle ["ACE_Construction_Supplies", [0,0,0], [], 0, "NONE"];
 	};
+	// Special
 	case 4: {
 		_box = createVehicle ["Box_NATO_AmmoOrd_F", [0,0,0], [], 0, "NONE"];
 		[_box, 3] execVM "loadouts\SupplyDropContent.sqf";
 	};
+	// Small Inf 1
 	case 5: {
 		_box = createVehicle ["Box_NATO_Ammo_F", [0,0,0], [], 0, "NONE"];
 		[_box, 4] execVM "loadouts\SupplyDropContent.sqf";
 	};
+	// Small inf 2
 	case 6: {
 		_box = createVehicle ["Box_NATO_WpsSpecial_F", [0,0,0], [], 0, "NONE"];
 		[_box, 5] execVM "loadouts\SupplyDropContent.sqf";
