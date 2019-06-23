@@ -88,8 +88,10 @@ Block 1 Channel 6 - Echo 1<br/>
 Block 1 Channel 7 - Echo 2<br/>
 Block 1 Channel 8 - Sierra 1<br/>
 Block 1 Channel 9 - Sierra 2<br/>
-Block 1 Channel 10 - Hotel 1 (REINF)<br/>
-Block 1 Channel 11 - Hotel 2 (REINF)<br/>
+Block 1 Channel 10 - Foxtrot 1 <br/>
+Block 1 Channel 11 - Foxtrot 2 <br/>
+Block 1 Channel 12 - Hotel 1 (REINF)<br/>
+Block 1 Channel 13 - Hotel 2 (REINF)<br/>
 <br/>
 <font size='16'>Platoon Radio</font>
 <br/>

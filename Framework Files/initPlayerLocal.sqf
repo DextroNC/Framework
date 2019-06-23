@@ -83,7 +83,7 @@ _CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTS
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
 
 // Pilot Recall
-_CRC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot" && (vehicle player == player)};
+_CRC = {(player getVariable ["SR_Class","Rifleman"]) in ["Pilot","TC"] && (vehicle player == player)};
 _rec = ["7R_SD_SpawnH","Base Recall","",{nul = [_player,_player] spawn fw_fnc_recall;},_CRC] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_TeamManagement"], _rec] call ace_interact_menu_fnc_addActionToClass;
 

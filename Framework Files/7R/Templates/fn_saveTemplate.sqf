@@ -81,6 +81,7 @@ if (_leader isKindOf "LandVehicle") then {
 		_unitArray pushBack (typeOf _x);
 		deleteVehicle _x;
 	} forEach units group _leader;
+	deleteVehicle _leader;
 };
 
 // Create Internal Array

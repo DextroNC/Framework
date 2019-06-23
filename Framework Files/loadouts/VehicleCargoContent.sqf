@@ -1,49 +1,61 @@
 /*
 	Parameters:
-		<-- Box as Object
+		<-- vehicle as Object
 		<-- Index as Integer
+
+	Description:
+		Applies Loadouts to Vehicles
 
 */
 
 // Parameter Init
-params ["_box",["_index",0]];
+params ["_vehicle",["_index",0]];
 
 switch (_index) do {
-	// Helicopter Loadout - Loadout 1
+	// Helicopter Loadout - Loadout 1 
 	case 1: {
-		clearweaponcargoGlobal _box;  
-		clearmagazinecargoGlobal _box;  
-		clearitemcargoGlobal _box; 
-		clearBackpackCargoGlobal _box; 
-		_box addItemCargoGlobal ["SR_PAK", 4];  
-		_box additemcargoGlobal ["SmokeShellPurple", 4]; 
-		_box additemcargoGlobal ["ACE_HandFlare_Green", 4]; 
+		clearweaponcargoGlobal _vehicle;  
+		clearmagazinecargoGlobal _vehicle;  
+		clearitemcargoGlobal _vehicle; 
+		clearBackpackCargoGlobal _vehicle; 
+		_vehicle addItemCargoGlobal ["SR_PAK", 4];  
+		_vehicle additemcargoGlobal ["SmokeShellPurple", 4]; 
+		_vehicle additemcargoGlobal ["ACE_HandFlare_Green", 4]; 
 	};
-// Ground Vehicle Loadout - Loadout 2
+	// Ground Vehicle (Infantry) Loadout - Loadout 2
 	case 2: {
-		clearweaponcargoGlobal _box;  
-		clearmagazinecargoGlobal _box;  
-		clearitemcargoGlobal _box; 
-		clearBackpackCargoGlobal _box; 
-		_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 4];  
-		_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 1];
-		_box additemcargoGlobal ["SR_PAK", 8];  
+		clearweaponcargoGlobal _vehicle;  
+		clearmagazinecargoGlobal _vehicle;  
+		clearitemcargoGlobal _vehicle; 
+		clearBackpackCargoGlobal _vehicle; 
+		_vehicle addWeaponcargoGlobal ["rhs_weap_M136_hedp", 1];
+		_vehicle additemcargoGlobal ["SR_PAK", 8];  
 	};
-// Armoured Vehicle Loadout - Loadout 3
+	// Ground Vehicle (Echo) Loadout - Loadout 3
 	case 3: {
-		clearweaponcargoGlobal _box;  
-		clearmagazinecargoGlobal _box;  
-		clearitemcargoGlobal _box; 
-		clearBackpackCargoGlobal _box; 
-		_box addItemCargoGlobal ["SR_PAK", 4];  
-		_box additemcargoGlobal ["SmokeShellGreen", 4]; 
-		_box additemcargoGlobal ["ACE_HandFlare_Green", 4]; 
+		clearweaponcargoGlobal _vehicle;  
+		clearmagazinecargoGlobal _vehicle;  
+		clearitemcargoGlobal _vehicle; 
+		clearBackpackCargoGlobal _vehicle; 
+		_vehicle addItemCargoGlobal ["SR_PAK", 4];  
+		_vehicle addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 1];
 	};
-// Default Case (Fallback)
+	// Armoured (Foxtrot) Vehicle Loadout - Loadout 4
+	case 4: {
+		clearweaponcargoGlobal _vehicle;  
+		clearmagazinecargoGlobal _vehicle;  
+		clearitemcargoGlobal _vehicle; 
+		clearBackpackCargoGlobal _vehicle; 
+		_vehicle addItemCargoGlobal ["SR_PAK", 4];  
+		_vehicle additemcargoGlobal ["SmokeShellGreen", 4]; 
+		_vehicle additemcargoGlobal ["ACE_HandFlare_Green", 4]; 
+		[_vehicle,2] call ace_repair_fnc_addSpareParts;
+	};
+	// Default Case (Fallback)
 	default {
-		clearweaponcargoGlobal _box;  
-		clearmagazinecargoGlobal _box;  
-		clearitemcargoGlobal _box; 
-		clearBackpackCargoGlobal _box; 
+		clearweaponcargoGlobal _vehicle;  
+		clearmagazinecargoGlobal _vehicle;  
+		clearitemcargoGlobal _vehicle; 
+		clearBackpackCargoGlobal _vehicle; 
 	};
 };
