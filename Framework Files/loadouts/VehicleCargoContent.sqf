@@ -49,7 +49,7 @@ switch (_index) do {
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];  
 		_vehicle additemcargoGlobal ["SmokeShellGreen", 4]; 
 		_vehicle additemcargoGlobal ["ACE_HandFlare_Green", 4]; 
-		[_vehicle,2] call ace_repair_fnc_addSpareParts;
+		["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
 	};
 	// Default Case (Fallback)
 	default {
