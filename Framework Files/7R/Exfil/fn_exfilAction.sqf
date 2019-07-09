@@ -11,7 +11,7 @@
 */
 
 // Parameter Init
-params ["_h","_mode"];
+params ["_h",["_mode",0]];
 
 // Add Action to Helicopter
 
