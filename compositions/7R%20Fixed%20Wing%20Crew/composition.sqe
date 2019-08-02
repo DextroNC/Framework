@@ -1,0 +1,214 @@
+version=53;
+center[]={8192.3613,296.04001,2019.6421};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.086914063,0.0014343262,0.57299805};
+					angles[]={0,5.7386951,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupIdGlobal [""W-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_pilot.sqf""; this setVariable [""SR_Class"", ""Pilot"", true];}";
+					description="Helicopter Pilot @Rodeo-1";
+					isPlayable=1;
+					class Inventory
+					{
+						class uniform
+						{
+							typeName="U_B_HeliPilotCoveralls";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="SmokeShellGreen";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item1
+								{
+									name="Chemlight_green";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+					};
+				};
+				id=1845;
+				type="B_Helipilot_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male12ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.99000001;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.0859375,0.0014343262,-0.47302246};
+					angles[]={0,5.7386951,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_crew.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];}";
+					description="Helicopter Co-Pilot";
+					isPlayable=1;
+					class Inventory
+					{
+						class uniform
+						{
+							typeName="U_B_HeliPilotCoveralls";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="SmokeShellGreen";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item1
+								{
+									name="Chemlight_green";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+					};
+				};
+				id=1846;
+				type="B_helicrew_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male01ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.02;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=1844;
+	};
+};
