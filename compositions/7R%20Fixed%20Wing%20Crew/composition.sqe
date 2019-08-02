@@ -24,7 +24,7 @@ class items
 				{
 					rank="SERGEANT";
 					init="call{this setGroupIdGlobal [""W-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_pilot.sqf""; this setVariable [""SR_Class"", ""Pilot"", true];}";
-					description="Helicopter Pilot @Rodeo-1";
+					description="Fixed Wing Pilot @Whiskey-1";
 					isPlayable=1;
 					class Inventory
 					{
@@ -120,8 +120,8 @@ class items
 				flags=5;
 				class Attributes
 				{
-					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_crew.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];}";
-					description="Helicopter Co-Pilot";
+					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_pilot.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];}";
+					description="Fixed Wing Co-Pilot";
 					isPlayable=1;
 					class Inventory
 					{
