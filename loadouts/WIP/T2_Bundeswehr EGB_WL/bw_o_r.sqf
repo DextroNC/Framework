@@ -14,27 +14,27 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "SR_WDL_CombatUniform_Full";
+_unit forceAddUniform "BWA3_Uniform3_idz_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 3 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
-_unit addVest "milgp_v_mmac_assaulter_belt_CB";
+for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+_unit addVest "milgp_v_marciras_assaulter_belt_g";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-_unit addBackpack "milgp_bp_Pointman_cb";
+_unit addBackpack "milgp_bp_Pointman_g";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhsusf_mich_bare_norotos_alt";
+_unit addHeadgear "BWA3_CrewmanKSK_Fleck";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
-_unit addWeapon "hgun_ACPC2_F";
-_unit addHandgunItem "acc_flashlight_pistol";
+_unit addWeapon "hlc_rifle_G36KV";
+_unit addPrimaryWeaponItem "FHQ_acc_LLM01F";
+_unit addWeapon "RH_usp";
+_unit addHandgunItem "RH_M6X";
 _unit addWeapon "Binocular";
 
 comment "Add items";

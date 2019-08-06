@@ -60,5 +60,16 @@ class CfgRemoteExec
 			allowedTargets = 0;
 			jip = 1;
 		};
+		class fw_fnc_exfilAction {
+			allowedTargets = 0;
+			jip = 1;
+		};
+	};
+	class Commands
+	{
+		class addAction {
+			allowedTargets = 0;
+			jip = 1;	
+		};
 	};
 };
