@@ -25,7 +25,6 @@ _unit addVest "UK3CB_BAF_V_Osprey_SL_A";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A";
-for "_i" from 1 to 3 do {this addItemToBackpack "ACE_";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
