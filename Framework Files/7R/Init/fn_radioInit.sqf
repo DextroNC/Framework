@@ -69,6 +69,10 @@ _id = ["ace_unconscious", {
 if (!hasInterface && !isServer) then {
 	    _handle = [{ (format ["HC Frames: %1", diag_fps]) remoteExec ["diag_log",2];}, 15, []] call CBA_fnc_addPerFrameHandler;
 };
+// Log Server Frames
+if (isServer) then {
+	    _handle = [{diag_log format ["Server Frames: %1", diag_fps]; diag_log format ["Unit Count: %1", (count allUnits)]}, 15, []] call CBA_fnc_addPerFrameHandler;
+};
 
 // Client Only Part
 if (!hasInterface) exitWith {};
