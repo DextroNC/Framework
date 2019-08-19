@@ -18,19 +18,20 @@ _unit forceAddUniform "PBW_Uniform4_fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_mg";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 _unit addBackpack "BWA3_AssaultPack_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addHeadgear "PBW_Helm1_fleck";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_lmg_MG3_optic";
-_unit addWeapon "RH_usp";
+_unit addWeapon "BWA3_MG3";
+_unit addPrimaryWeaponItem "BWA3_bipod_MG3";
+_unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
 comment "Add items";

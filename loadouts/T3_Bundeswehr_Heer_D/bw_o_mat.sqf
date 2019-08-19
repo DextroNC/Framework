@@ -18,11 +18,11 @@ _unit forceAddUniform "PBW_Uniform4_tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_mg_h";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 _unit addBackpack "BWA3_AssaultPack_tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
@@ -30,10 +30,10 @@ _unit addHeadgear "PBW_Helm1_tropen";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_G36V";
+_unit addWeapon "BWA3_G36A1";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addWeapon "launch_MRAWS_green_rail_F";
-_unit addWeapon "RH_usp";
+_unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
 comment "Add items";

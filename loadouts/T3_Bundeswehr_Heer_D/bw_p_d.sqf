@@ -18,23 +18,23 @@ _unit forceAddUniform "PBW_Uniform3K_tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_schtz";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_AssaultPack_tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addHeadgear "PBW_muetze1_tropen";
+_unit addHeadgear "BWA3_Booniehat_tropen";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_G36KV";
+_unit addWeapon "BWA3_G36KA0";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "RH_usp";
+_unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -49,7 +49,8 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addHeadgear "PBW_Helm1_tropen_HBOD";
+	_unit addHeadgear "PBW_Helm3_tropen";
+	_unit linkItem "rhsusf_ANPVS_14";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PD", true];

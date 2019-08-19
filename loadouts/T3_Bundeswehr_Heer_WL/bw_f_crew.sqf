@@ -18,21 +18,21 @@ _unit forceAddUniform "BWA3_Uniform_Crew_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_zivil";
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_SmokeShellCableTie";};
-_unit addItemToVest "SmokeShell";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_BWA3_DM25CableTie";};
+_unit addItemToVest "BWA3_DM25";
 _unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addHeadgear "BWA3_CrewmanKSK_Fleck_Headset";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_G36KV";
+_unit addWeapon "BWA3_G36KA0";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "RH_usp";
+_unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
 comment "Add items";

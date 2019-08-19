@@ -14,28 +14,28 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "BWA3_Uniform_Crew_fleck";
+_unit forceAddUniform "BWA3_Uniform_Crew_tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_12Rnd_45cal_usp";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_zivil";
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_SmokeShellCableTie";};
-_unit addItemToVest "SmokeShell";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_BWA3_DM25CableTie";};
+_unit addItemToVest "BWA3_DM25";
 _unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addBackpack "BWA3_AssaultPack_fleck";
+_unit addBackpack "BWA3_AssaultPack_tropen";
 _unit addItemToBackpack "ToolKit";
-_unit addHeadgear "BWA3_CrewmanKSK_fleck_Headset";
+_unit addHeadgear "BWA3_CrewmanKSK_tropen_Headset";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhsusf_weap_MP7A2_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_M952V";
 _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
-_unit addWeapon "RH_usp";
+_unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
 comment "Add items";
