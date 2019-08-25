@@ -31,7 +31,7 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 for "_i" from 1 to 8 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToVest "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "1Rnd_SmokeRed_Grenade_shell";};
-_unit addBackpack "usm_pack_abag_m60";
+_unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addHeadgear "usm_bdu_8point_wdl";
 
@@ -46,19 +46,20 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addItemToVest "UGL_FlareWhite_F";
-	_unit addItemToVest "UGL_FlareWhite_F";
-	_unit addItemToVest "UGL_FlareWhite_F";
-	_unit addItemToVest "UGL_FlareWhite_F";
-	_unit addItemToVest "UGL_FlareRed_F";
-	_unit addItemToVest "UGL_FlareRed_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
+	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

@@ -46,6 +46,7 @@ switch (_type) do {
     case "B_UavTerminal": {_unit linkItem _type;};
     case "O_UavTerminal": {_unit linkItem _type;};
     case "ItemGPS": {_unit linkItem _type;};
+    case "BWA_G36A1_marksman": {_unit addPrimaryWeaponItem _type;};
     case "ACE_EntrenchingTool": {
 		if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
 			_unit addItem "ACE_EntrenchingTool";

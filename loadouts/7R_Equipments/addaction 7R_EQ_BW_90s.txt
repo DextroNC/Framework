@@ -1,10 +1,8 @@
-
-this addaction ["<t color=""#00FF00"">" +"Sight 1", "loadouts\7R_EQ.sqf",["LC_Optic_G36dualoptic15x"]];
-this addaction ["<t color=""#00FF00"">" +"Sight 2", "loadouts\7R_EQ.sqf",["HLC_Optic_G36Export15x"]];
-this addaction ["<t color=""#FF0000"">" +"RM: Zoom 1", "loadouts\7R_EQ.sqf",["LC_Optic_G36dualoptic35x"]];
-this addaction ["<t color=""#FF0000"">" +"RM: Zoom 2", "loadouts\7R_EQ.sqf",["HLC_Optic_G36Export35x"]];
-this addaction ["<t color=""#FF0000"">" +"RM: G3", "loadouts\7R_EQ.sqf",["hlc_optic_accupoint_g3"]];
-this addaction ["<t color=""#FF0000"">" +"DMR: Optic", "loadouts\7R_EQ.sqf",["HLC_Optic_ZFSG1"]];
+this addaction ["<t color=""#FF8C00"">" +"ACOG3", "loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
+this addaction ["<t color=""#FF8C00"">" +"M145", "loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN"]];
+this addaction ["<t color=""#FF8C00"">" +"M150", "loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight - ACOG MDO", "loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_MDO"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight - MOS", "loadouts\7R_EQ.sqf",["optic_SOS"]];
 this addaction ["<t color=""#FF0000"">" +"GPS", "loadouts\7R_EQ.sqf",["ItemGPS"]];
 this addaction ["<t color=""#FF0000"">" +"Vector", "loadouts\7R_EQ.sqf",["ACE_Vector"]];
 this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "loadouts\7R_EQ.sqf",["Laserdesignator"]];

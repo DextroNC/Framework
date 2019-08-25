@@ -27,7 +27,7 @@ _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 for "_i" from 1 to 8 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
-_unit addBackpack "usm_pack_abag_m60";
+_unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
