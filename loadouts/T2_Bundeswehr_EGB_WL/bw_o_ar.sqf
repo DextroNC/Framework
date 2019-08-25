@@ -14,26 +14,25 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform4_tropen";
+_unit forceAddUniform "PBW_Uniform4K_fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_mg_h";
+_unit addVest "pbw_splitter_mg";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-_unit addBackpack "BWA3_AssaultPack_tropen";
+for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM51A1";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+_unit addBackpack "BWA3_AssaultPack_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
-_unit addHeadgear "PBW_Helm1_tropen";
+_unit addHeadgear "PBW_Helm1_fleck_BO";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_G36A1";
+_unit addWeapon "BWA3_MG4";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "rhs_weap_maaws";
-_unit addSecondaryWeaponItem "rhs_optic_maaws";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
@@ -43,7 +42,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_200rnd_556x45_M_SAW";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
@@ -52,7 +52,7 @@ if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","MAT", true];
+_unit setVariable ["SR_Class","AR", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
