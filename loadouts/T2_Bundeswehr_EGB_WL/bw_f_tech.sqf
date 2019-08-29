@@ -36,6 +36,7 @@ _unit addWeapon "rhsusf_weap_MP7A2_grip3";
 _unit addPrimaryWeaponItem "rhsusf_acc_M952V";
 _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 _unit addWeapon "BWA3_P8";
+_unit addHandgunItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -51,7 +52,7 @@ _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

@@ -14,14 +14,14 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform4K_fleck";
+_unit forceAddUniform "BWA3_Uniform_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_grpfhr";
+_unit addVest "BWA3_Vest_Leader_Fleck";
 _unit addItemToVest "BWA3_DM25";
 _unit addItemToVest "BWA3_DM32_Green";
 _unit addItemToVest "BWA3_DM32_Red";
@@ -33,13 +33,14 @@ for "_i" from 1 to 8 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "PBW_Helm2_fleck_H";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "BWA3_OpsCore_Fleck";
+_unit addGoggles "shemagh_loosetanCG";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_G36A1_AG40";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addWeapon "BWA3_G36A3_AG40_tan";
+_unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addWeapon "BWA3_P8";
+_unit addHandgunItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "ACE_Vector";
 
 comment "Add items";
@@ -61,7 +62,7 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

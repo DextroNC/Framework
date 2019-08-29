@@ -14,14 +14,14 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform1_fleck";
+_unit forceAddUniform "BWA3_Uniform2_sleeves_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_sani";
+_unit addVest "BWA3_Vest_Medic_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_Kitbag_Fleck_Medic";
@@ -31,13 +31,14 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
 for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM32_Blue";};
-_unit addHeadgear "PBW_muetze1_fleck";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "BWA3_OpsCore_Fleck";
+_unit addGoggles "shemagh_tight_od";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_G36KA0";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addWeapon "BWA3_G36KA3_tan";
+_unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addWeapon "BWA3_P8";
+_unit addHandgunItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -53,8 +54,7 @@ _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addHeadgear "PBW_Helm1_fleck_H";
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PM", true];

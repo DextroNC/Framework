@@ -14,25 +14,27 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform4K_fleck";
+_unit forceAddUniform "BWA3_Uniform2_sleeves_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_schtz";
+_unit addVest "BWA3_Vest_Marksman_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM51A1";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_AssaultPack_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "PBW_Helm1_fleck_BO";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "BWA3_CrewmanKSK_Fleck";
+_unit addGoggles "shemagh2_goggclr_od";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_g3a3ris";
+_unit addWeapon "SPS_hk417_13_vfg_fde_f";
+_unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addWeapon "BWA3_P8";
+_unit addHandgunItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -48,7 +50,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","BR", true];

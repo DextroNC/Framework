@@ -8,6 +8,7 @@
 
 // Unit Cap (cap of AI)
 SR_Unit_Cap = 200;
+SR_AI_NVG = "";
 SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
 SR_AI_forceFlashlight = false;

@@ -66,6 +66,9 @@ if (_type isEqualTo "PATROL") Then {
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 		[_unit] join _grp;
+		if (count SR_AI_NVG > 0) then {
+			_unit linkItem SR_AI_NVG;
+		};
 		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
 			[_unit] spawn fw_fnc_removeNVG;
 		};
@@ -111,6 +114,9 @@ if (_type isEqualTo "GARRISON") Then {
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 		[_unit] join _grp;
+		if (count SR_AI_NVG > 0) then {
+			_unit linkItem SR_AI_NVG;
+		};
 		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
 			[_unit] spawn fw_fnc_removeNVG;
 		};
@@ -202,6 +208,9 @@ if (_type isEqualTo "VEHICLE") Then {
 				_unit assignAsTurret [_veh, _path];
 				[_unit] orderGetIn true; 
 			};
+		};
+		if (count SR_AI_NVG > 0) then {
+			_unit linkItem SR_AI_NVG;
 		};
 		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
 			[_unit] spawn fw_fnc_removeNVG;
