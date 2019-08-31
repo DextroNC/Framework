@@ -24,7 +24,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addVest "usm_vest_pasgtdcu_lbv_rmp";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
-_unit addItemToVest "DemoCharge_Remote_Mag"
+_unit addItemToVest "DemoCharge_Remote_Mag";
 _unit addBackpack "B_FieldPack_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
