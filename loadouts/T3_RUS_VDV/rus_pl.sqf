@@ -30,6 +30,7 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_GRD40_White";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Green";};
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "rhs_beret_vdv1";
 
 comment "Add weapons";

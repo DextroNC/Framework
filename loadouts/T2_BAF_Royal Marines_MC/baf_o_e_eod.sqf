@@ -30,6 +30,7 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "MineDetector";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintRed";
 _unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_B";
 _unit addGoggles "rhs_googles_clear";
 

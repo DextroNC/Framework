@@ -28,6 +28,7 @@ _unit addBackpack "gear_FastPack_ACU_01";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "rhsusf_patrolcap_ucp";
 _unit addGoggles "rhs_googles_clear";
 

@@ -28,6 +28,7 @@ _unit addBackpack "B_Carryall_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "APERSTripMine_Wire_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mine_tm62m_mag";};

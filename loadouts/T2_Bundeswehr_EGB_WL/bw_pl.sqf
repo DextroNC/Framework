@@ -33,6 +33,7 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeYellow_Grenade_shell";};
 _unit addItemToBackpack "ACE_HuntIR_monitor";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 _unit addHeadgear "BWA3_OpsCore_Fleck";
 _unit addGoggles "shemagh_looseodBG";

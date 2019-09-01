@@ -34,6 +34,7 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";}
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeYellow_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 _unit addItemToBackpack "ACE_HuntIR_monitor";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer_PRR";
 _unit addGoggles "rhs_googles_clear";
 

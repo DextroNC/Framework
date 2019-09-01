@@ -28,6 +28,7 @@ _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer_PRR_Over";
 _unit addGoggles "rhs_googles_clear";
 
