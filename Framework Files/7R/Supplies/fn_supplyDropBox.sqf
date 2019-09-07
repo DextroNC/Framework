@@ -44,6 +44,11 @@ switch (_mode) do {
 		_box = createVehicle ["Box_NATO_WpsSpecial_F", [0,0,0], [], 0, "NONE"];
 		[_box, 5] execVM "loadouts\SupplyDropContent.sqf";
 	};
+	// Medical
+	case 7: {
+		_box = createVehicle ["ACE_medicalSupplyCrate", [0,0,0], [], 0, "NONE"];
+		[_box, 7] execVM "loadouts\SupplyDropContent.sqf";
+	};
 };
 
 // Cargo Spawn Overwrite
