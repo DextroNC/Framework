@@ -100,3 +100,10 @@ if (_type == 5) then {
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2]; 
 	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 1]; 
 };
+
+// Medical Drop 
+If (_type == 7) then {
+	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];   
+	_box addItemCargoGlobal ["SR_Medicine_Pack", 3];   
+	_box addItemCargoGlobal ["SR_BloodIV_Pack", 8];   
+};
