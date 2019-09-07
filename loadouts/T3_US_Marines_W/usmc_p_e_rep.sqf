@@ -28,6 +28,7 @@ _unit addBackpack "VSM_OGA_Backpack_Kitbag";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "rhs_8point_marpatwd";
 _unit addGoggles "rhs_googles_clear";
 

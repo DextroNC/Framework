@@ -28,6 +28,7 @@ _unit addBackpack "B_Carryall_oli";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SatchelCharge_Remote_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addHeadgear "rhs_beret_vdv2";

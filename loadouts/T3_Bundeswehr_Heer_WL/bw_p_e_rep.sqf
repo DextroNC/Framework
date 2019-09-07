@@ -28,6 +28,7 @@ _unit addBackpack "BWA3_Kitbag_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "BWA3_Beret_Jaeger";
 _unit addGoggles "rhs_googles_clear";
 

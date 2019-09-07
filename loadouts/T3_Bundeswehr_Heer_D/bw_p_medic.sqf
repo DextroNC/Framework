@@ -25,6 +25,7 @@ _unit addVest "pbw_splitter_sani";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_Kitbag_tropen_Medic";
+_unit addItemToBackpack "ACE_SpraypaintBlue";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Bandage_Pack";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};

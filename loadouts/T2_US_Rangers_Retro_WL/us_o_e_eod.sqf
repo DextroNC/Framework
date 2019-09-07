@@ -29,6 +29,7 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addItemToVest "ACE_DefusalKit";
 _unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_EntrenchingTool";
+_unit addItemToVest "ACE_SpraypaintRed";
 _unit addHeadgear "usm_bdu_cap_wdl";
 
 comment "Add weapons";

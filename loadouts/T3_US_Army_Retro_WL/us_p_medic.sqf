@@ -25,6 +25,7 @@ _unit addVest "usm_vest_pasgt_lbe_rmp";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "usm_pack_m5_medic_empty";
+_unit addItemToBackpack "ACE_SpraypaintBlue";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Bandage_Pack";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};

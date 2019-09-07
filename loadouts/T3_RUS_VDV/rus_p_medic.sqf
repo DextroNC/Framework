@@ -27,6 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
 _unit addBackpack "rhs_medic_bag";
+_unit addItemToBackpack "ACE_SpraypaintBlue";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Bandage_Pack";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
