@@ -12,6 +12,7 @@
 		class deleteVehicle{};
 		class designateMarker{};
 		class isSergeant{};
+		class isLeader{};
 		class flag{};
 		class checkStatus{};
 		class clearArea {};
@@ -50,6 +51,8 @@
 		class supplyDropEject{};
 		class supplyDropLanding{};
 		class supplyDropReport{};
+		class canCallVehicleDrop{};
+		class vehicleDropAction{};
 	};	
 	class exfil {
 		file = "7R\Exfil";

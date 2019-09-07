@@ -21,11 +21,13 @@ SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
 ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";
 
+// Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
+SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
 
 // ======================================================================================
 /*
 	Recommended if desired:
-	- SupplyDropAmmo = 8;
+	- SupplyDropAmmo = 12;
 	- CASCallAmmo = 6;
 	- ArtilleryCallAmmo 45;
 	- ace_trenches_trenchSupplies = 250; (Trench Supply Drop gives 250 as well)
@@ -33,9 +35,9 @@ ace_medical_gasMask = "Mask_M50";
 // Support System Availability Variables
 ExfilHelolock = false;
 ReifLock = false;
-SupplyDropAmmo = 8;
-ArtilleryCallAmmo = 0;
-CASCallAmmo = 0;
+SupplyDropAmmo = 12;
+ArtilleryCallAmmo = 45;
+CASCallAmmo = 6;
 ace_trenches_trenchSupplies = 250;
 
 

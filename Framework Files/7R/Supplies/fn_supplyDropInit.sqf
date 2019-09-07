@@ -14,7 +14,11 @@
 
 // Parameter Init
 params ["_target","_spawn","_type","_callsign","_amount",["_mode",1],["_vehicle",[]]];
-_target = markerPos _target;
+if (typeName  _target == "STRING") then {
+	_target = markerPos _target;
+} else {
+	_target = getPos _target;
+};
 _spawn = markerPos _spawn;
 _class = "";
 _loadout = -1;
@@ -36,12 +40,15 @@ if (isNil "SupplyDropAmmo") then {SupplyDropAmmo = 5; publicVariable "SupplyDrop
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (SupplyDropLock) exitWith {
 	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Other Missions in progress."] remoteExec ["sideChat", 0];
+	["SD: Currently Busy", 1.5] call ace_common_fnc_displayTextStructured;
 };
 if (SupplyDropAmmo <= 0) exitWith {
 	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Out of Resources."] remoteExec ["sideChat", 0];
+	["SD: Out of Resources", 1.5] call ace_common_fnc_displayTextStructured;
 };
 if (_target isEqualto [0,0,0]) exitWith {
 	[[SR_Side, "HQ"],"No Supply Drop Zone designated."] remoteExec ["sideChat", 0];
+	["SD: No Drop Zone", 1.5] call ace_common_fnc_displayTextStructured;
 };
 
 // Lock
@@ -51,6 +58,7 @@ publicVariable "SupplyDropLock";
 // Confirmation Message + Combat Log
 _str = str(_amount) + "x Supply Drop to Grid " + (mapGridPosition _target) + ".";
 [[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
+["SD: Drop Confirmed", 1.5] call ace_common_fnc_displayTextStructured;
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
 
 // Calculating Spawn Point
@@ -90,6 +98,7 @@ if (count _vehicle == 0) then {
 	};
 } else {
 	_veh = createVehicle [_class, [0,0,0], [], 0, "NONE"];
+	_veh disableCollisionWith _planeacc;
 	if (_loadout >= 0) then {
 		[_veh, _loadout] execVM "loadouts\VehicleCargoContent.sqf";
 	};
