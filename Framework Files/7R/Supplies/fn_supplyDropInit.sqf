@@ -22,12 +22,14 @@ if (typeName  _target == "STRING") then {
 _spawn = markerPos _spawn;
 _class = "";
 _loadout = -1;
+_msg = "Supply";
 
 // Check if Vehicle Drop
 if (count _vehicle > 0) then {
 	//_type = "globemaster_c17_altus";
 	_class = _vehicle select 0;
 	_loadout = _vehicle select 1;
+	_msg = "Vehicle";
 	if (isNil "_loadout") then {
 		_loadout = -1;
 	};
@@ -56,9 +58,9 @@ SupplyDropLock = true;
 publicVariable "SupplyDropLock";
 
 // Confirmation Message + Combat Log
-_str = str(_amount) + "x Supply Drop to Grid " + (mapGridPosition _target) + ".";
+_str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition _target);
 [[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
-["SD: Drop Confirmed", 1.5] call ace_common_fnc_displayTextStructured;
+[_str, 1.5] call ace_common_fnc_displayTextStructured;
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
 
 // Calculating Spawn Point

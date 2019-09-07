@@ -12,8 +12,8 @@
 // Parameter Init
 params ["_markerName","_markerDescription","_color","_sign",["_landingPad",false],["_size", [1,1]]];
 
-
-hint ("Click on Map to assign " + _markerDescription);
+// Hint Msg to Click on Map
+[("Click on Map to assign " + _markerDescription), 1.5] call ace_common_fnc_displayTextStructured;
 
 // On Map Click
 [_markerName,_markerDescription,_color,_sign,_landingPad,_size] onMapSingleClick  {
@@ -41,7 +41,7 @@ hint ("Click on Map to assign " + _markerDescription);
 	};
 
 	// Final Info
-	hint (_markerDescription + " designated");
+	[(_markerDescription + " designated"), 1.5] call ace_common_fnc_displayTextStructured;
 	
 onMapSingleClick "";
 };
