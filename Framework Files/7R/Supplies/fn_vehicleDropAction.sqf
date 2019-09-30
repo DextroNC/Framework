@@ -35,7 +35,9 @@ private _actions = [];
 	] call ace_interact_menu_fnc_createAction;
 
 	_actions pushBack [_code, [], _vehicle];
+	
+	true
 
-} forEach SR_Vehicle_Drop;
+} count SR_Vehicle_Drop;
 
-_actions;
+_actions
