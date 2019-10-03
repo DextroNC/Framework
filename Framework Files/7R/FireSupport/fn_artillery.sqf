@@ -25,20 +25,17 @@ if (isNil "_cost") then {_cost = _rounds};
 
 // Init Public variables if not initialized in init.sqf or else with default values.
 if (isNil "ArtilleryFireMissionLock") then {ArtilleryFireMissionLock = false; publicVariable "ArtilleryFireMissionLock";};
-if (isNil "ArtilleryCallAmmo") then {ArtilleryCallAmmo = 30; publicVariable "ArtilleryCallAmmo";};
+if (isNil "ArtilleryCallAmmo") then {ArtilleryCallAmmo = 45; publicVariable "ArtilleryCallAmmo";};
 
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (ArtilleryFireMissionLock) exitWith {
-	[[SR_Side, "IND"],"Negative: Artillery Fire Support available. Other Mission in progress."] remoteExec ["sideChat", -2];
-	["FS: Currently Busy", 1.5] call ace_common_fnc_displayTextStructured;
+	["Negative: Artillery Fire Support available. Other Mission in progress.","FS: Currently Busy"] spawn fw_fnc_info;
 };
 if (ArtilleryCallAmmo == 0) exitWith {
-	[[SR_Side, "IND"],"Negative: Artillery Fire Support available. Out of Ammunition."] remoteExec ["sideChat", -2];
-	["FS: No Ammunition", 1.5] call ace_common_fnc_displayTextStructured;
+	["Negative: Artillery Fire Support available. Out of Ammunition.","FS: No Ammunition"] spawn fw_fnc_info;
 };
-if (markerPos _target isEqualto [0,0,0]) exitWith {
-	[[SR_Side, "IND"],"No Artillery Target designated."] remoteExec ["sideChat", -2];
-	["FS: No Target", 1.5] call ace_common_fnc_displayTextStructured;
+if (([_target] call fw_fnc_findLocation) isEqualto [0,0,0]) exitWith {
+	["No Artillery Target designated.","FS: No Target"] spawn fw_fnc_info;
 };
 
 // Locks other requests, only one Fire Mission at a time.
@@ -48,25 +45,24 @@ publicVariable "ArtilleryFireMissionLock";
 // if not enough ammo to fulfill mission, remaining will be used.
 if (ArtilleryCallAmmo < _cost) then {_cost = ArtilleryCallAmmo};
 
-// Fire Mission Confirmation Message with Target and Volume + Create Log
-["FS: Mission Confirmed", 1.5] call ace_common_fnc_displayTextStructured;
+// Fire Mission Confirmation Message with Target and Volume + Create logEntities
 _str = "Artillery Fire Mission: " + str (_rounds) + " Rounds to Grid " + (mapGridPosition markerPos _target) + ".";
-[[SR_Side, "IND"],_str] remoteExec ["sideChat", -2];
+[_str,_str] spawn fw_fnc_info;
 ["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
 
 // Delay
 sleep random 3;
 
 // Simulated Firing
-[[SR_Side, "IND"],"Rounds away."] remoteExec ["sideChat", -2];
+["Rounds away."] spawn fw_fnc_info;
 for [{_i=1},{_i<=_rounds},{_i=_i+1}] do {
 	sleep 2;
 };
-[[SR_Side, "IND"],"Rounds complete."] remoteExec ["sideChat", -2];
+["Rounds complete."] spawn fw_fnc_info;
 
 // Simulated Travel Time
 sleep _traveltime + random 2;
-[[SR_Side, "IND"],"Splash out."] remoteExec ["sideChat", -2];
+["Splash out."] spawn fw_fnc_info;
 sleep 1;
 
 // Fire Support and adjust Ammo
@@ -82,8 +78,7 @@ waitUntil {scriptDone _handle};
 // Finish up
 deleteMarker _target;
 _str = "Artillery Fire Mission completed. " + str (ArtilleryCallAmmo) + " Rounds left.";
-[[SR_Side, "IND"], _str] remoteExec ["sideChat", -2];
-["FS: Mission Completed", 1.5] call ace_common_fnc_displayTextStructured;
+[_str,_str] spawn fw_fnc_info;
 
 // Lock release to allow new Fire Missions
 ArtilleryFireMissionLock = false;

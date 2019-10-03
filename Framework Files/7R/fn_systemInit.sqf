@@ -21,6 +21,20 @@ SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
 ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";
 
+// ======================================================================================
+/*
+	Support Asset Class Array
+	SR_Support_Assets = ["ParaDropPlane1","ParaDropPlane2","SupplyDropPlane","CASPlane","ExfilHelicopter"];
+	
+	// Recommended Options
+	ParaDropPlane1 & SupplyDropPlane - "RHS_C130J" (Default), "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR) 
+	ParaDropPlane2 - "globemaster_c17" (Default)
+	CASPlane - "JS_JC_FA18E" (Default, "RHS_A10" (Alternative US/NATO), "RHS_Su25SM_vvs" (Russian/USSR)
+	ExfilHelicopter - "RHS_CH_47F" (Default), "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
+
+*/
+SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","JS_JC_FA18E","RHS_CH_47F"];
+
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
 SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
 

@@ -20,6 +20,8 @@
 		class removeNVG{};
 		class zeus{};
 		class recall{};
+		class info{};
+		class findLocation{};
 	};
 	class template
 	{
@@ -83,6 +85,8 @@
 	class para {
 		file = "7R\ParaDrop";
 		class paraDrop{};
+		class paraDropPlane{};
+		class paraDropPlaneSelection{};
 	};
 	class teleport {
 		file = "7R\Teleport";

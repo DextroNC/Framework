@@ -117,6 +117,8 @@ SR_LiftOff = {
 	params ["_helo","_group","_spawn"];
 	// Create Waypoint
 	[_group] call CBA_fnc_clearWaypoints;
+	_helo land "NONE";
+	_helo doMove _spawn;
 	_wp = _group addWaypoint [_spawn, 0, 2];
 	_wp setWayPointBehaviour "CARELESS";
 	_wp setWayPointType "MOVE";

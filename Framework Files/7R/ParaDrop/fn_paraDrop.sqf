@@ -21,109 +21,58 @@
 // Parameter Init
 Params ["_term", "_caller", "_id","_args"];
 _args Params ["_target", "_spawn", "_height" ,"_callsign",["_static", false]];
-_type = "RHS_C130J";
+private _class = SR_Support_Assets select 0;
+private _badgeSize = 24;
 
-// Check if Static Mode and overwrite Altitude
+// Create Unit array for Drop and Count Units
+private _units = [];
+private _count = {
+	if (_x distance2d _term < 100) then {_units pushBack _x; true} else {false};
+} count (allPlayers - entities "HeadlessClient_F");
+
+// Sort Units by Groups
+_units = [_units] call fw_fnc_sortUnitsByGroup;
+
+// Overwrite Height for Static Drop and Select Plane Class
 if (_static) then {
 	_height = 150;
+	_badgeSize = 16;
+} else {
+	// Select Plane
+	private _array = [_class, (SR_Support_Assets select 1)] call fw_fnc_paraDropPlaneSection;
+	_class = _array select 0;
+	_badgeSize = _array select 1;
 };
-
-// Start Message
-[[SR_Side, "HQ"],"Paradrop Insertion started..."] remoteExec ["sideChat", 0];
 
 // Calculate Spawn and End Point
-_targetPos = markerPos _target;
-_dir = (markerPos _spawn) getDir _targetPos;
-_dirSpawn = _dir - 180;
-_spawnPos = [_targetPos, 4500,_dirSpawn] call BIS_fnc_relPos;
+private _targetPos = markerPos _target;
+private _dir = (markerPos _spawn) getDir _targetPos;
+private _dirSpawn = _dir - 180;
+private _spawnPos = [_targetPos, 4500,_dirSpawn] call BIS_fnc_relPos;
 _spawnPos = [_spawnPos select 0, _spawnPos select 1, _height];
-_wpPos = [_targetPos, 3000, _dir] call BIS_fnc_relPos;
-_wpPos2 = [_targetPos, 500, _dir] call BIS_fnc_relPos;
+private _end = [_targetPos, 3000, _dir] call BIS_fnc_relPos;
+private _dropWP = [_targetPos, 750, _dir] call BIS_fnc_relPos;
 
-// Adjust plane type based on player count
-if ({_x distance2d _term < 100} count (allPlayers - entities "HeadlessClient_F") > 24) then {
-	_type = "globemaster_c17_altus";
-};
 
-// Spawn Plane and Init
-_plane = [_spawnPos, _dir, _type, SR_Side] call bis_fnc_spawnVehicle;
-_planeGroup = _plane select 2;
-_v = _plane select 0;
-if (!_static) then {
-	_v flyInHeightASL [ _height,  _height,  _height];
-};
-_v allowDamage false;
+// Initiate Drop
+["Paradrop Insertion initiated.", "Paradrop Initiated"] spawn fw_fnc_info;
 
-// Make AI non reactive
-_planeGroup setBehaviour "CARELESS"; 
-leader _planeGroup setGroupIdGlobal [_callsign];
-{
-	_x disableAi "FSM";
-	_x disableAi "TARGET";
-	_x disableAi "AUTOTARGET";
-	_x disableAi "AUTOCOMBAT";
-	_x disableAi "COVER";
-	_x disableAi "SUPPRESSION";
-	_x setVariable ["asr_ai_exclude", true]
-}forEach units _planeGroup;
+// Split Group if plane is too small
+private _unitCount = count _units;
+private _split = ceil _unitCount / _badgeSize;
 
-// Send to waypoint
-_v doMove _targetPos;
-sleep 3;
-
-// Cargo Slot offset for C-130
-_slot = 2;
-
-// Teleport People into Plane
-{
-	if (_x distance2D _term < 100) then {
-		["ParaPort", [_v,_x,_slot], _x] call CBA_fnc_targetEvent;
-		_slot = _slot + 1;
-		_x assignAsCargo _v;
-		[_x] orderGetIn true;
-	};
-} forEach (allPlayers - entities "HeadlessClient_F");
-
-// Loop Target update and Ramp opening
-while {_v distance2D _targetPos > 150} do {
-	_v doMove _targetPos;
-	if (_v distance2D _targetPos < 1500) then {
-		_v animate ["Door_1_source",1];
-	}; 
-	sleep 1;
-};
-_v doMove _wpPos2;
-
-// Drop all Units in Cargo
-if (_static) then {
-	[_v] spawn rhs_fnc_infantryParadrop;
-} else {
+// Spawn Planes and exectute Drops in Badges
+// Split into Badges
+for "_i" from 1 to (_split + 1) do {
+	private _badge = [];
 	{
-		private _delay =  (1/(((speed _v) max 55)/100));
-		_x disableAI "MOVE";
-		_x disableCollisionWith _v;
-		moveout _x;
-		unassignVehicle _x;
-		[_x] allowGetIn false;
-		_x setDir (getDir _v);
-		sleep _delay;
-		_x enableAI "MOVE";
-		_v doMove _wpPos;
-	} forEach (assignedCargo _v) call fw_fnc_sortUnitsByGroup;
+		// Exit on full Badge
+		if (_forEachIndex > _badgeSize - 1) exitWith {};
+		// Add Unit to Badge
+		_badge pushBack _x;
+	}forEach _units;
+	_units = _units - _badge;
+	// Call Plane
+	[_targetPos, _spawnPos, _dropWP,  _end, _dir, _badge, _class,  _height, _static] spawn fw_fnc_paraDropPlane;
+	sleep 20;
 };
-
-
-// Check if all Cargo is dropped and send Plane to End Pos
-[{(count crew (_this select 0))< 3}, {
-	Params ["_v", "_wpPos"];
-	[[SR_Side, "HQ"],"All units dropped, Out."] remoteExec ["sideChat", 0];
-	_v animate ["Door_1_source",0];
-	_v doMove _wpPos;
-}, [_v,_wpPos]] call CBA_fnc_waitUntilAndExecute;
-
-// Clean up and delete Plane
-[{((_this select 0) distance2D  (_this select 1)) < 500 || !alive (_this select 0)}, {
-	Params ["_v","_wpPos"];
-	[leader driver _v] call fw_fnc_deleteVehicle;
-}, [_v, _wpPos]] call CBA_fnc_waitUntilAndExecute;
-
