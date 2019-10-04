@@ -28,9 +28,9 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
             case "P": {
                  private _position = [];
                 // Create Random Patrol Point
-                private _poi = [_this] spawn fw_fnc_findPOI;
+                private _poi = [_this, SR_POI_Range] call fw_fnc_findPOI;
                 if (!isNull _poi) then {
-                    _position = [[getPos _poi, 150], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
+                    _position = [[getPos _poi, 250], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
                 } else {
                     _position = [_this] call fw_fnc_getRandomPos;
                 };

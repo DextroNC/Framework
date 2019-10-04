@@ -11,7 +11,7 @@
 		
 
 	Example:
-		_return = [group, 1000] spawn fw_fnc_findPOI;
+		_return = [group, 1000] call fw_fnc_findPOI;
 */
 // Parameter Init
 params ["_group", ["_range",750]];
@@ -25,21 +25,30 @@ if (count _poiArray == 0) exitWith {_return};
 
 // Check if other groups are assigned to POI
 private _poi = objNull;
-private _assignedGroups = _x getVariable ["SR_AssignedGroups",[]];
-if (count _assignedGroups > 0) then {
-	{
-		// Check assigned Groups
-		if ({!alive _x} count _assignedGroups < 4) exitWith {
+private _assignedGroups = [];
+
+nul = {
+	// Check assigned Groups
+	_assignedGroups = _x getVariable ["SR_AssignedGroups",[]];
+	
+	if (count _assignedGroups >= 0) then {
+		hint format ["Return: %1", _assignedGroups];
+		if ({!alive _x} count _assignedGroups < 4 || _group in _assignedGroups) exitWith {
 			_poi = _x; 
-			_poi setVariable ["SR_AssignedGroups",(_assignedGroups pushBackUnique _group)]; 
+			systemChat format ["Return: %1", _assignedGroups];
+			_poi setVariable ["SR_AssignedGroups",(_assignedGroups pushBackUnique _group),true]; 
+			systemChat format ["Return: %1", _assignedGroups];
+			systemChat format ["Return: %1", _poi];
+			_return = _poi;
 			true
 		}; 
-		false
-	} count _poiArray;
-};
+	};
+	false
+} count _poiArray;
+
 
 // Debug
-if (SR_Debug) then {systemChat format ["%1 identified a POI at %2", _group, (mapGridPosition _return)];};
+if (SR_Debug) then {systemChat format ["%1 identified a POI at %2", _group, (mapGridPosition getPos _return)];};
 
 // Return
 _return

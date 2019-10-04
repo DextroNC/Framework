@@ -20,3 +20,4 @@ SR_Flee = 10;
 SR_Surrender = 15;
 SR_Charge = 10;
 SR_RAMPAGE_DISTANCE = 2000;
+SR_POI_Range = 750;
