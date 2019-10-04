@@ -137,6 +137,7 @@
 		class artilleryCheck{};
 		class artilleryCall{};
 		class dismountVehicle{};
+		class findPOI{};
 	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
