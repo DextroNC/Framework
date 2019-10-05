@@ -11,7 +11,7 @@
 if (!isServer) exitWith {};
 
 // Main Loop - State Machine
-private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_State", "PATROL"] isEqualTo "COMBAT")}}, true] call CBA_statemachine_fnc_create;
+private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_State", "PATROL"] in ["COMBAT","GARRISON"])}}, true] call CBA_statemachine_fnc_create;
 [_offCombatStateMachine, {
 
     // Remove Dead Groups
@@ -78,48 +78,60 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
 }, {deleteWaypoint [_this, 1];}, {}, "OffCombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Combat State Loop
-private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_State", "PATROL"] isEqualTo "COMBAT") && !(_x getVariable ["SR_Depressed", false])}}, true] call CBA_statemachine_fnc_create;
+private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_State", "PATROL"] in ["COMBAT","GARRISON"]) && !(_x getVariable ["SR_Depressed", false])}}, true] call CBA_statemachine_fnc_create;
 [_combatStateMachine, {
-
     // If Group has suffered substancial losses then...
-    if ([_this, 45] call fw_fnc_hasLoss) then {
-        if (random 100 < SR_Charge) exitWith {
-            _this setVariable ["SR_Depressed", true];
-            // Each Group member supressive the nearest enemy
-            {
-                [_x] spawn fw_fnc_suppress;
-            }forEach units _this;
-            // Group does not flee
-            _this allowFleeing 0; 
-            // Debug
-            if (SR_Debug) then {systemChat format ["%1 is charging", _this];};
-        };
-        if (random 100 < SR_Flee) exitWith {
-            _this setVariable ["SR_Depressed", true];
-            _this allowFleeing 1;
-            // Debug
-            if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};
-        };
-        if (random 100 < SR_Surrender) exitWith {
-            _this setVariable ["SR_Depressed", true];
-            // If enemies are close than surrender else free
-            if (((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 65) then {
+    if ([_this, 45] call fw_fnc_hasLosses) then {
+        // Select Option
+        private _last = 0;
+        private _index = -1;
+        private _roll = 0;
+        {
+            _roll = random 100;
+            if (_roll < _x && _x > _last) then {
+                // Special Condition for Surrender
+                if (!(_forEachIndex == 2) || ((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 150) then {
+                    _index = _forEachIndex;
+                    _last = _x;
+                };
+            };
+        } forEach [SR_Flee, SR_Charge, SR_Surrender];
+        
+        // Execute selected Option
+        switch (_index) do {
+            // Flee
+            case 0: {
+                _this setVariable ["SR_Depressed", true];
+                _this allowFleeing 1;
+                // Debug
+                if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
+            };
+            // Charge
+            case 1: {
+                _this setVariable ["SR_Depressed", true];
+                // Each Group member supressive the nearest enemy
+                {
+                    [_x] spawn fw_fnc_suppress;
+                }forEach units _this;
+                // Group does not flee
+                _this allowFleeing 0; 
+                // Debug
+                if (SR_Debug) then {systemChat format ["%1 is charging", _this];};
+            };
+            // Surrender
+            case 2: {
+                _this setVariable ["SR_Depressed", true];
                 {   
                     [_x] spawn fw_fnc_surrender;
                 }forEach (units _this);
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is surrendering", _this];};
-            } else {
-                _this allowFleeing 1;
-                // Debug
-                if (SR_Debug) then {systemChat format ["%1 is failed surrender", _this];};
             };
         };
     };
 }, {}, {
     // Once Depressed, reset after 4 min
     [this] spawn fw_fnc_depressedCooldown;
-
 }, "CombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Artillery Support Loop

@@ -26,3 +26,9 @@ params ["_group"];
 	if (SR_Debug) then {systemChat format ["%1 reset depressed", _this];}; 
 },_group, random [200,220,240]] call CBA_fnc_waitAndExecute;
 
+// Stop Fleeing
+[{
+	{
+		_x allowFleeing 0;
+	}forEach units _this;
+},_group, random [60,90,120]] call CBA_fnc_waitAndExecute;

@@ -32,7 +32,6 @@ nul = {
 	_assignedGroups = _x getVariable ["SR_AssignedGroups",[]];
 	
 	if (count _assignedGroups >= 0) then {
-		hint format ["Return: %1", _assignedGroups];
 		if ({count (units _x) > 0} count _assignedGroups < 4 || _group in _assignedGroups) exitWith {
 			_poi = _x; 
 			_assignedGroups pushBackUnique _group;
