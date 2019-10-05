@@ -14,24 +14,24 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "BWA3_Uniform_sleeves_Tropen";
+_unit forceAddUniform "BWA3_Uniform_sleeves_Fleck";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "BWA3_Vest_Leader_Tropen";
+_unit addVest "BWA3_Vest_Leader_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM32_Yellow";};
-_unit addBackpack "BWA3_Kitbag_Tropen";
+_unit addBackpack "BWA3_Kitbag_Fleck";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SatchelCharge_Remote_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "BWA3_OpsCore_Tropen";
+_unit addHeadgear "BWA3_OpsCore_Fleck";
 _unit addGoggles "shemagh_loosetanCG";
 
 comment "Add weapons";
