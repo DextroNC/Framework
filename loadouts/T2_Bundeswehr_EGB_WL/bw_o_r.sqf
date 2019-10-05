@@ -14,21 +14,21 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "BWA3_Uniform2_Fleck";
+_unit forceAddUniform "BWA3_Uniform2_Tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "BWA3_Vest_Rifleman_Fleck";
+_unit addVest "BWA3_Vest_Rifleman_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM51A1";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-_unit addBackpack "BWA3_AssaultPack_Fleck";
+_unit addBackpack "BWA3_AssaultPack_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
-_unit addHeadgear "BWA3_CrewmanKSK_Fleck";
+_unit addHeadgear "BWA3_CrewmanKSK_Tropen";
 _unit addGoggles "shemagh_goggclr_tan";
 
 comment "Add weapons";

@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "BWA3_Uniform_Crew_Fleck";
+_unit forceAddUniform "BWA3_Uniform_Crew_Tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -28,7 +28,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM25_Orange";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_Green";};
 _unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addHeadgear "BWA3_CrewmanKSK_Fleck_Headset";
+_unit addHeadgear "BWA3_CrewmanKSK_Tropen_Headset";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
