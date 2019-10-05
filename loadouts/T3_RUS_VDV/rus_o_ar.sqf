@@ -27,7 +27,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 _unit addBackpack "rhs_assault_umbts";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhs_6b7_1m_ess_bala";
+_unit addHeadgear "rhs_6b7_1m_ess";
+_unit addGoggles "rhs_balaclava1_olive";
 
 comment "Add weapons";
 _unit addWeapon "hlc_rifle_rpk";
