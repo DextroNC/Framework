@@ -33,12 +33,10 @@ nul = {
 	
 	if (count _assignedGroups >= 0) then {
 		hint format ["Return: %1", _assignedGroups];
-		if ({!alive _x} count _assignedGroups < 4 || _group in _assignedGroups) exitWith {
+		if ({count (units _x) > 0} count _assignedGroups < 4 || _group in _assignedGroups) exitWith {
 			_poi = _x; 
-			systemChat format ["Return: %1", _assignedGroups];
-			_poi setVariable ["SR_AssignedGroups",(_assignedGroups pushBackUnique _group),true]; 
-			systemChat format ["Return: %1", _assignedGroups];
-			systemChat format ["Return: %1", _poi];
+			_assignedGroups pushBackUnique _group;
+			_poi setVariable ["SR_AssignedGroups",_assignedGroups,true]; 
 			_return = _poi;
 			true
 		}; 
