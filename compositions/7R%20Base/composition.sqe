@@ -63,7 +63,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -92,7 +92,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
@@ -310,7 +310,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -340,7 +340,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
@@ -563,7 +563,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -593,7 +593,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
