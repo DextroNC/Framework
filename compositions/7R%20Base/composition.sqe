@@ -51,48 +51,6 @@ class items
 				};
 				id=2;
 				type="B_Soldier_SL_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male03ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.98000002;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item1
 			{
@@ -105,7 +63,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -122,48 +80,6 @@ class items
 				};
 				id=3;
 				type="B_Soldier_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1.02;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item2
 			{
@@ -176,7 +92,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
@@ -222,48 +138,6 @@ class items
 				};
 				id=5;
 				type="B_Soldier_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.97000003;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item4
 			{
@@ -380,48 +254,6 @@ class items
 				};
 				id=9;
 				type="B_medic_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male03ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 		};
 		class Attributes
@@ -466,48 +298,6 @@ class items
 				};
 				id=11;
 				type="B_Soldier_SL_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male01ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1.03;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item1
 			{
@@ -520,7 +310,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -550,7 +340,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
@@ -761,48 +551,6 @@ class items
 				};
 				id=20;
 				type="B_Soldier_SL_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male04ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.99000001;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item1
 			{
@@ -815,7 +563,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Red";
 					isPlayable=1;
 					class Inventory
 					{
@@ -845,7 +593,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					description="Operator";
+					description="FTL Blue";
 					isPlayable=1;
 					class Inventory
 					{
@@ -1055,48 +803,6 @@ class items
 				};
 				id=29;
 				type="B_officer_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male03ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1.01;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item1
 			{
@@ -1127,48 +833,6 @@ class items
 				};
 				id=30;
 				type="B_Soldier_TL_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male06ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item2
 			{
@@ -1198,29 +862,6 @@ class items
 				};
 				id=31;
 				type="B_Soldier_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.94999999;
-							};
-						};
-					};
-					nAttributes=1;
-				};
 			};
 			class Item3
 			{
@@ -1250,29 +891,6 @@ class items
 				};
 				id=32;
 				type="B_Soldier_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.94999999;
-							};
-						};
-					};
-					nAttributes=1;
-				};
 			};
 			class Item4
 			{
@@ -1302,29 +920,6 @@ class items
 				};
 				id=33;
 				type="B_Soldier_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.94999999;
-							};
-						};
-					};
-					nAttributes=1;
-				};
 			};
 			class Item5
 			{
@@ -1355,48 +950,6 @@ class items
 				};
 				id=34;
 				type="B_medic_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male03ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1.05;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 		};
 		class Attributes
@@ -1809,48 +1362,6 @@ class items
 				};
 				id=42;
 				type="B_Soldier_SL_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male12ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=1;
-							};
-						};
-					};
-					nAttributes=2;
-				};
 			};
 			class Item1
 			{
