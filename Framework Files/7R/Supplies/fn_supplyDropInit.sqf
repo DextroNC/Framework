@@ -19,16 +19,12 @@ private _spawn = [_spawnMarker] call fw_fnc_findLocation;
 private _msg = "Supply";
 private _vehicleClass = "";
 private _vehicleLoadout = -1;
-
 // Check if Vehicle Drop
 if (count _vehicle > 0) then {
 	//_type = "globemaster_c17_altus";
 	_vehicleClass = _vehicle select 0;
 	_vehicleLoadout = _vehicle select 1;
 	_msg = "Vehicle";
-	if (isNil "_loadout") then {
-		_vehicleLoadout = -1;
-	};
 };
 
 // Init Public variables if not initialized in init.sqf or else with default values.
@@ -94,8 +90,8 @@ if (count _vehicle == 0) then {
 	// Vehicle Drop
 	_veh = createVehicle [_vehicleClass, [0,0,0], [], 0, "NONE"];
 	_veh disableCollisionWith _planeacc;
-	if (_loadout >= 0) then {
-		[_veh, _loadout] execVM "loadouts\VehicleCargoContent.sqf";
+	if (_vehicleLoadout >= 0) then {
+		[_veh, _vehicleLoadout] execVM "loadouts\VehicleCargoContent.sqf";
 	};
 	_veh attachTo [_planeacc,[0,0,4]];
 };
