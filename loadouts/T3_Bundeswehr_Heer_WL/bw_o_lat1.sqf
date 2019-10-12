@@ -33,7 +33,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "BWA3_G36A1";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "BWA3_Pzf3";
+_unit addWeapon "BWA3_PzF3_Tandem_Loaded";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 
