@@ -32,8 +32,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "BWA3_G36A1";
 _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "rhs_weap_maaws";
-_unit addSecondaryWeaponItem "rhs_optic_maaws";
+_unit addWeapon "launch_MRAWS_green_rail_F";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
 

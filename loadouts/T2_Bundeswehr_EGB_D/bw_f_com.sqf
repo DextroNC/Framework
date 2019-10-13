@@ -14,26 +14,29 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform4_tropen";
+_unit forceAddUniform "BWA3_Uniform_Crew_Tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_mg_h";
-for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-_unit addBackpack "BWA3_AssaultPack_tropen";
-for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
-_unit addHeadgear "PBW_Helm1_tropen";
+_unit addVest "pbw_splitter_zivil";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_BWA3_DM25CableTie";};
+_unit addItemToVest "BWA3_DM25";
+for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM25_Orange";};
+for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_Green";};
+_unit addItemToVest "ACE_microDAGR";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
+_unit addHeadgear "BWA3_CrewmanKSK_Tropen_Headset";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_G36A1";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "launch_MRAWS_green_rail_F";
+_unit addWeapon "rhsusf_weap_MP7A2_grip3";
+_unit addPrimaryWeaponItem "rhsusf_acc_M952V";
+_unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 _unit addWeapon "BWA3_P8";
+_unit addHandgunItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -42,16 +45,17 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
 
 _unit addItemToUniform "ACRE_PRC343";
+_unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","MAT", true];
+_unit setVariable ["SR_Class","TC", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];

@@ -14,26 +14,28 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "PBW_Uniform4_tropen";
+_unit forceAddUniform "BWA3_Uniform2_sleeves_Tropen";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-_unit addVest "pbw_splitter_mg_h";
+_unit addVest "BWA3_Vest_Rifleman_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-_unit addBackpack "BWA3_AssaultPack_tropen";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+_unit addBackpack "BWA3_AssaultPack_Tropen";
+for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_mag_40Rnd_46x30_FMJ";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
-_unit addHeadgear "PBW_Helm1_tropen";
-_unit addGoggles "rhs_googles_clear";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM51A1";};
+_unit addHeadgear "BWA3_CrewmanKSK_Tropen";
+_unit addGoggles "shemagh2_goggclr_od";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_G36A1";
-_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
-_unit addWeapon "launch_MRAWS_green_rail_F";
-_unit addWeapon "BWA3_P8";
+_unit addWeapon "BWA3_G36KA3";
+_unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
+_unit addWeapon "BWA3_MP7";
+_unit addHandgunItem "RH_SFM952V";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -42,16 +44,16 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","MAT", true];
+_unit setVariable ["SR_Class","B", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
