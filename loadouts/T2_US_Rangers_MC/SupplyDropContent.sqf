@@ -16,7 +16,7 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 72];  
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 72];  
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP", 36];  
 	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 12];    
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8]; 

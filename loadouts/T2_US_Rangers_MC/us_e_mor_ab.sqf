@@ -25,8 +25,8 @@ _unit addVest "milgp_v_mmac_assaulter_belt_RGR";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShell";};
 _unit addBackpack "milgp_b_patrol_01_RGR";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3RGR_BAF_1Rnd_60mm_Mo_Shells";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3RGR_BAF_1Rnd_60mm_Mo_Smoke_White";};
+for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White";};
 _unit addHeadgear "VSM_Mich2000_Multicam";
 _unit addGoggles "rhs_googles_clear";
 

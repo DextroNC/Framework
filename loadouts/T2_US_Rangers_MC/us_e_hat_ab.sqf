@@ -34,7 +34,7 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "SMA_MK16";
 _unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
-_unit addWeapon "UK3RGR_BAF_Javelin_Slung_Tube";
+_unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "ACE_VectorDay";
