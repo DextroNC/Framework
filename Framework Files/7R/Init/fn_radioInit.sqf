@@ -23,26 +23,6 @@ _id = ["ace_unconscious", {
 	}; 
 };}] call CBA_fnc_addEventHandler;
 
-
-// ACRE Settings
-// General
-[false, false] call acre_api_fnc_setupMission;
-
-// Terrain Loss (Interference)
-[0] call acre_api_fnc_setLossModelScale;
-
-// Full Duplex (Multi people can talk at the same time)
-[true] call acre_api_fnc_setFullDuplex;
-
-// Interference (Multi people sending at same frequency)
-[false] call acre_api_fnc_setInterference;
-
-// AI hearing players
-[true] call acre_api_fnc_setRevealToAI;
-
-// Disables simulation of Antenna Direction
-[true] call acre_api_fnc_ignoreAntennaDirection;
-
 // Channel Names
 ["ACRE_PRC152", "default", 1, "description", "PLT NET"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 2, "description", "COM NET"] call acre_api_fnc_setPresetChannelField;
