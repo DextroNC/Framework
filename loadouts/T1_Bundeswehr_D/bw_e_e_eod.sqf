@@ -26,11 +26,10 @@ for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM32_Purple";};
 _unit addBackpack "BWA3_Kitbag_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-unit addItemToBackpack "ACE_DefusalKit";
+_unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "MineDetector";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_SpraypaintRed";
-_unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addHeadgear "BWA3_CrewmanKSK_Tropen_Headset";
 _unit addGoggles "shemagh_loosetanBG";
@@ -56,7 +55,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","EE", true];
