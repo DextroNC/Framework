@@ -970,6 +970,7 @@ class items
 		class Attributes
 		{
 			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_uniforms_box.sqf""}";
 		};
 		id=35;
 		type="Box_NATO_Uniforms_F";
@@ -1049,6 +1050,7 @@ class items
 		class Attributes
 		{
 			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_equipment_box.sqf""}";
 		};
 		id=36;
 		type="Box_NATO_Equip_F";
@@ -1125,6 +1127,8 @@ class items
 		flags=4;
 		class Attributes
 		{
+			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_big_box.sqf""}";
 		};
 		id=37;
 		type="B_CargoNet_01_ammo_F";
