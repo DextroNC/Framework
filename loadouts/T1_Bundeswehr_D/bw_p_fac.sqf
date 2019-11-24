@@ -29,7 +29,6 @@ for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM32_Orange";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "tf_rt1523g_big_bwmod_tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "PBW_barett_ksk";
 _unit addGoggles "shemagh_loosetanBG";
 
@@ -59,7 +58,7 @@ if (SR_Night) then {
 	removeHeadgear _unit;
 	_unit addHeadgear "milgp_h_airframe_06_khk";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","FAC", true];

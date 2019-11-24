@@ -21,9 +21,9 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
 _unit addVest "pbw_splitter_zivil";
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie"};
 _unit addItemToVest "BWA3_DM25";
-for"_i" 1 to 2 do {_unit addItemToVest "BWA3_DM32_purple";};
+for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM32_purple"};
 _unit addItemToVest "ACE_microDAGR";
 _unit addHeadgear "BWA3_crewmanKSK_headset";
 _unit addGoggles "rhs_googles_clear";
@@ -41,15 +41,15 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag";};
+for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag"};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_15";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
+	_unit linkItem "A3_GPNVG18_BLK_F";
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green"};
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

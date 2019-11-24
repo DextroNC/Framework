@@ -68,7 +68,7 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];

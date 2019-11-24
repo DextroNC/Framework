@@ -27,7 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM51A1";};
 for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_Kitbag_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit add_unit addItemToBackpack "ACE_Clacker";
+_unit addItemToBackpack "ACE_Clacker";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_ConstructionTool";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
@@ -56,7 +56,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","E", true];

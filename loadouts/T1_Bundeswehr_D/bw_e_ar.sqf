@@ -31,7 +31,7 @@ _unit addHeadgear "BWA3_CrewmanKSK_Tropen_Headset";
 _unit addGoggles "shemagh_goggclr_tan";
 
 comment "Add weapons";
-__unit addWeapon "BWA3_MG4";
+_unit addWeapon "BWA3_MG4";
 _unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addPrimaryWeaponItem "BWA3_optic_ZO4x30_brown";
 _unit addWeapon "RH_usp";
@@ -52,7 +52,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","EAR", true];
