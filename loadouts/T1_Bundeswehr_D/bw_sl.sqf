@@ -34,7 +34,6 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeYellow_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addItemToBackpack "ACE_SpraypaintGreen";
 _unit addHeadgear "milgp_h_airframe_03_RGR_hexagon";
 _unit addGoggles "goggles_blk";
 
@@ -67,7 +66,7 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

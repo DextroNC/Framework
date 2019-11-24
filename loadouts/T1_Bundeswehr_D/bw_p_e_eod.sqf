@@ -28,7 +28,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "BWA3_Kitbag_Tropen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ACE_Clacker";
-unit addItemToBackpack "ACE_DefusalKit";
+_unit addItemToBackpack "ACE_DefusalKit";
 _unit addItemToBackpack "MineDetector";
 _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_SpraypaintRed";
@@ -63,7 +63,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	removeHeadgear _unit;
 	_unit addHeadgear "milgp_h_airframe_03_goggles_khk_hexagon";
-	_unit linkItem "rhsusf_ANPVS_15";
+	_unit linkItem "A3_GPNVG18_BLK_F";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PE", true];
