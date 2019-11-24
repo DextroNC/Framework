@@ -1,3 +1,10 @@
+/*
+	Description:
+		Loadouts for T1 Bundeswehr Desert Camo
+
+		Disable a loadout by adding '//' in front of a loadout in this file.
+*/
+
 this addaction ["Platoon Leader", "loadouts\bw_pl.sqf"];
 this addaction ["Platoon FAC", "loadouts\bw_p_fac.sqf"];
 this addaction ["Platoon Engineer (Demo)", "loadouts\bw_p_e_demo.sqf"];
@@ -14,7 +21,7 @@ this addaction ["Operator Rifle", "loadouts\bw_o_r.sqf"];
 this addaction ["Operator AR", "loadouts\bw_o_ar.sqf"];
 this addaction ["Operator Light AT (Pzf-3)", "loadouts\bw_o_lat1.sqf"];
 this addaction ["Operator Light AT (RGW-90)", "loadouts\bw_o_lat2.sqf"];
-this addaction ["Operator MMG (MG3)", "loadouts\bw_o_mmg.sqf"];
+// this addaction ["Operator MMG (MG3)", "loadouts\bw_o_mmg.sqf"];
 this addaction ["Operator MMG (MG5)", "loadouts\bw_o_mmg_mg5.sqf"];
 this addaction ["Operator Asst. MMG", "loadouts\bw_o_mmg_ab.sqf"];
 this addaction ["Operator Medium AT", "loadouts\bw_o_mat.sqf"];
@@ -43,4 +50,4 @@ this addaction ["Fox Commander", "loadouts\bw_f_com.sqf"];
 this addaction ["Fox Crewman", "loadouts\bw_f_crew.sqf"];
 this addaction ["Fox Technician", "loadouts\bw_f_tech.sqf"];
 this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];}];
-this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable ["SR_Loadout",[]]);}];
+this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1) setUnitLoadout ((_this select 1) getVariable ["SR_Loadout",[]]);}];
