@@ -25,7 +25,7 @@ if (!isServer) exitWith {};
 params ["_unit","_markerArray","_dist",["_veh",false]];
 
 // Modify AI Behaviour
-(group _unit) setVariable ["Vcm_Disable",true]
+(group _unit) setVariable ["Vcm_Disable",true];
 _unit disableAI "AUTOCOMBAT";
 
 // Remove HVT from dead body clean up
