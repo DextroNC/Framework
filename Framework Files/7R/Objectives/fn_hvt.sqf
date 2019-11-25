@@ -23,13 +23,18 @@ if (!isServer) exitWith {};
 
 // Parameter Init
 params ["_unit","_markerArray","_dist",["_veh",false]];
-// disable ASR AI
-_unit setVariable ["asr_ai_exclude", true, true];
+
+// Modify AI Behaviour
+(group _unit) setVariable ["Vcm_Disable",true];
 _unit disableAI "AUTOCOMBAT";
 
-// Escape Code
+// Remove HVT from dead body clean up
+_unit setVariable ["SR_NoRemoval", true, true];
+
+// Escape Code: start fleeing if enemy is close
 [{!isNull ((_this select 0) findNearestEnemy (_this select 0))}, {
 	params ["_unit","_markerArray","_dist","_veh"];
+	// If vehicle allowed, find vehicle 
 	if (_veh) then {
 		_wpv = group _unit addWaypoint [position _unit, 25];
 		_wpv setWayPointBehaviour "CARELESS";
@@ -39,6 +44,7 @@ _unit disableAI "AUTOCOMBAT";
 		_wpv setWayPointStatements ["true", ""];
 	};
 	
+	// Create Waypoints along defined path
 	for [{_i=0}, {_i < (count _markerArray)}, {_i = _i + 1}] do {
 		hint format ["%1", markerPos (_markerArray select _i)];
 		_wp = group _unit addWaypoint [markerPos (_markerArray select _i), 10];
@@ -56,14 +62,17 @@ _unit disableAI "AUTOCOMBAT";
 
 // Surrender Condition and Code
 [{
-if(isNull ((_this select 0) findNearestEnemy (_this select 0))) then {
-	false
+	// Surrender Condition
+	if(isNull ((_this select 0) findNearestEnemy (_this select 0))) then {
+		false
 	} else {
-	if ((_this select 0) distance ((_this select 0) findNearestEnemy (_this select 0)) < (_this select 1)) then {
-		true} else {
-	false}
-}}
+		if ((_this select 0) distance ((_this select 0) findNearestEnemy (_this select 0)) < (_this select 1)) then {
+			true} else {
+		false};
+	};
+}
 , {
+	// Surrender Code
 	params ["_unit","_dist"];
 	[_unit, true] call ACE_captives_fnc_setSurrendered;
 }, [_unit,_dist]] call CBA_fnc_waitUntilAndExecute;
