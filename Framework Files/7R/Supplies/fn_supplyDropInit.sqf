@@ -13,7 +13,7 @@
 */
 
 // Parameter Init
-params [["_targetMarker","SupplyDrop"],["_spawnMarker","STARTSPAWN"],["_type","RHS_C130J"],["_callsign",""],["_amount",1],["_mode",1],["_vehicle",[]]];
+params [["_targetMarker","SupplyDrop"],["_spawnMarker","STARTSPAWN"],["_type","RHS_C130J"],["_callsign",""],["_amount",1],["_mode",0],["_vehicle",[]]];
 private _target = [_targetMarker] call fw_fnc_findLocation;
 private _spawn = [_spawnMarker] call fw_fnc_findLocation;
 private _msg = "Supply";

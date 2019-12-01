@@ -21,6 +21,9 @@ SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
 ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";
 
+// Supply Boxes
+SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Construction_Supplies","Fortification Supplies"],["SR_Explosives_Box_Empty","Special Weapons Supplies",3],["SR_Ammo_Box_Empty","Infantry Supplies 1 (Small)",4],["SR_Special_Box_Empty","Infantry Supplies 2 (Small)",5],["SR_Medical_Empty","Medical Supplies",7]];
+
 // ======================================================================================
 /*
 	Support Asset Class Array

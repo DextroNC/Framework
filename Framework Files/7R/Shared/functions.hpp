@@ -22,6 +22,9 @@
 		class recall{};
 		class info{};
 		class findLocation{};
+		class supplyDropAction{};
+		class supplySlingAction{};
+		class supplySpawnAction{};
 	};
 	class template
 	{
@@ -55,6 +58,8 @@
 		class supplyDropReport{};
 		class canCallVehicleDrop{};
 		class vehicleDropAction{};
+		class supplyLoad{};
+		class supplySpawn{};
 	};	
 	class exfil {
 		file = "7R\Exfil";
@@ -80,6 +85,7 @@
 	class repair {
 		file = "7R\Repair";
 		class repairStation{};
+		class repair{};
 		
 	};
 	class para {
