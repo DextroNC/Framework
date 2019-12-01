@@ -38,7 +38,7 @@ private _options = [];
                     {true},
                     {},
                     [_description,_forEachIndex]
-                ] call ace_interact_menu_fnc_createAction,
+                ] call ace_interact_menu_fnc_createAction;
         _actions pushBack [_code,[],_vehicle];
 	};
 } forEach  SR_SupplyBoxes;
