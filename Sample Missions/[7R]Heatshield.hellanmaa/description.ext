@@ -1,0 +1,71 @@
+// enable Debug Console
+enableDebugConsole = 2;
+
+// Disable AI
+disabledAI = 1;
+
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "Job well done!";
+	};
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "We suck!";
+	};
+};
+
+class CfgDebriefingSections
+{
+	class civCasulties
+	{
+		title = "Civilian Casualties";
+		variable = "SR_CC";
+	};
+	class casulties
+	{
+		title = "KIA";
+		variable = "SR_KIA";
+	};
+	class warCrimes
+	{
+		title = "War Criminals";
+		variable = "SR_WC";
+	};
+};
+
+class CfgFunctions
+{
+	#include "7R\Shared\functions.hpp"
+};
+
+class CfgSounds
+{
+	#include "7R\Sounds\sounds.hpp"
+};
+
+class CfgRemoteExec
+{
+	class Functions
+	{
+		mode = 2;
+		jip = 1;
+		class fw_fnc_exfilAction {
+			allowedTargets = 0;
+			jip = 1;
+		};
+	};
+	class Commands
+	{
+		class addAction {
+			allowedTargets = 0;
+			jip = 1;	
+		};
+	};
+};
