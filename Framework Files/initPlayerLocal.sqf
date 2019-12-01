@@ -12,11 +12,16 @@ nul = execVM "briefing.sqf";
 // =====================================================================================================================================================
 
 // Support System Inits
-
 _headerSupport = ["7R_Header","Command Support","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\radio_ca.paa",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _headerSupport] call ace_interact_menu_fnc_addActionToClass;
 
-// Supply Drop
+// Header Vehicle
+_conditionsVehicle  = {count nearestObjects [vehicle _player,["SR_SupplyPadEmpty","SR_SupplyPad"],15,true] > 0 && vehicle _player != _player && isTouchingGround (vehicle _player) && driver vehicle _player == _player};
+_headerSupport = ["7R_VehicleHeader","Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{},_conditionsVehicle] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions"], _headerSupport] call ace_interact_menu_fnc_addActionToClass;
+
+
+// Support Status Report
 _SSR = ["7R_StatusRep","Status Report","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\talk_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _SSR] call ace_interact_menu_fnc_addActionToClass;
 
@@ -38,29 +43,9 @@ _CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", 
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
 // Supply Drop
-_headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",{},{[_player] call fw_fnc_isLeader},{[target, _player, _params] call fw_fnc_supplyDropAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA1 =  ["7R_SupplyDropAir","Call Supply Drop (1 Box)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA1] call ace_interact_menu_fnc_addActionToClass;
-
-_CVA2 =  ["7R_SupplyDropAir","Call Supply Drop (2 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 2, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA2] call ace_interact_menu_fnc_addActionToClass;
-
-_CVA3 =  ["7R_SupplyDropAir","Call Supply Drop (3 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 3, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA3] call ace_interact_menu_fnc_addActionToClass;
-
-_CVA5 =  ["7R_SupplyDropAir","Call Fortification Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 3] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA5] call ace_interact_menu_fnc_addActionToClass;
-
-_CVA6 =  ["7R_SupplyDropAir","Call Special Equipment Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 4] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA6] call ace_interact_menu_fnc_addActionToClass;
-
-_CVA7 =  ["7R_SupplyDropAir","Call Medical Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 7] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA7] call ace_interact_menu_fnc_addActionToClass;
-
-_CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_canCallVehicleDrop},{[_target, _player, []] call fw_fnc_vehicleDropAction}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _CHH] call ace_interact_menu_fnc_addActionToClass;
 
 // Extraction
 _EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{null = ["EZ","STARTSPAWN", "RHS_CH_47F", "Eagle 1-1", 0,"dropoff"] spawn fw_fnc_exfilCall;},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
@@ -96,29 +81,16 @@ _rec = ["7R_SD_SpawnH","Base Recall","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\ex
 
 // Pilot Supply Spawn
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
-_CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{},_CSC] call ace_interact_menu_fnc_createAction;
+_CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{},_CSC,{[target, _player, _params] call fw_fnc_supplySlingAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _CSH] call ace_interact_menu_fnc_addActionToClass;
 
-_CS0 = ["7R_SD_Spawn","Clear Sling Load Pad","",{nul = [0,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS0] call ace_interact_menu_fnc_addActionToClass;
+// Load Supply Spawn
+_SLD = ["7R_SD_Load","Load Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\truck_ca.paa",{},_conditionsVehicle,{[target, _player, _params] call fw_fnc_supplySpawnAction;}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _SLD] call ace_interact_menu_fnc_addActionToClass;
 
-_CS1 = ["7R_SD_Spawn","Inf Supply Drop","",{nul = [1,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS1] call ace_interact_menu_fnc_addActionToClass;
-
-_CS3 = ["7R_SD_Spawn","Fortification Supply Drop","",{nul = [3,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS3] call ace_interact_menu_fnc_addActionToClass;
-
-_CS4 = ["7R_SD_Spawn","Special Supply Drop","",{nul = [4,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS4] call ace_interact_menu_fnc_addActionToClass;
-
-_CS7 = ["7R_SD_Spawn","Medical Supply Drop","",{nul = [7,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS7] call ace_interact_menu_fnc_addActionToClass;
-
-_CS5 = ["7R_SD_Spawn","Small Squad Resupply","",{nul = [5,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS5] call ace_interact_menu_fnc_addActionToClass;
-
-_CS6 = ["7R_SD_Spawn","Small Special Weapons Resupply","",{nul = [6,slingpad] spawn fw_fnc_cargoSpawn;},_CSC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment","7R_SD_SpawnH"], _CS6] call ace_interact_menu_fnc_addActionToClass;
+// Repair
+_REP = ["7R_SD_Load","Repair Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\repair_ca.paa",{nul = [vehicle _player, _player] spawn fw_fnc_repair;},_conditionsVehicle] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _REP] call ace_interact_menu_fnc_addActionToClass;
 
 // Undercover
 _uc1 = ["7R_UC","Go Undercover","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa",{nul = [_player] spawn fw_fnc_goUndercover;},{(CBA_MissionTime - SR_SuspicionSpotted > 60) && _player getVariable ["SR_Class","R"] isEqualto "UC" && !(_player getVariable ["SR_UC",false])}] call ace_interact_menu_fnc_createAction;
