@@ -25,6 +25,7 @@
 		class supplyDropAction{};
 		class supplySlingAction{};
 		class supplySpawnAction{};
+		class debrief{};
 	};
 	class template
 	{

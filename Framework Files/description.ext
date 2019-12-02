@@ -67,5 +67,17 @@ class CfgRemoteExec
 			allowedTargets = 0;
 			jip = 1;	
 		};
+		class diag_log {
+			allowedTargets = 0;
+			jip = 1;	
+		};
+		class createDiarySubject {
+			allowedTargets = 0;
+			jip = 1;	
+		};
+		class createDiaryRecord {
+			allowedTargets = 0;
+			jip = 1;	
+		};
 	};
 };
