@@ -1,1 +1,0 @@
-this addaction ["<t color=""#00FF00"">" +"Parachute", "scripts\7R_EQ.sqf",["B_Parachute"]];
