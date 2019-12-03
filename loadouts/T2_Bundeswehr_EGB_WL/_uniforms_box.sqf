@@ -44,4 +44,3 @@ this addaction ["Fox Crewman", "loadouts\bw_f_crew.sqf"];
 this addaction ["Fox Technician", "loadouts\bw_f_tech.sqf"];
 this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];}];
 this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable ["SR_Loadout",[]]);}];
-
