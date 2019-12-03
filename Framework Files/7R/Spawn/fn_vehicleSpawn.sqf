@@ -1,5 +1,5 @@
 /*
-		
+
 	Parameters:
 		<-- Type as String
 		<-- SpawnPos as Object (Helipad invisible)
@@ -34,5 +34,5 @@ _veh setDir (getDir _posObj);
 
 // Cargo
 if (_cargo > 0) then {
-	[_veh,_cargo] execVM "loadouts\VehicleCargoContent.sqf";	
+	[_veh,_cargo] execVM "loadouts\_vehicle_cargo_content.sqf";
 };

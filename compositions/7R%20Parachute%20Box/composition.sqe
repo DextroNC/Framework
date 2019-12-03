@@ -14,7 +14,7 @@ class items
 		flags=4;
 		class Attributes
 		{
-			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""scripts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "}";
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""7R\Loadouts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "}";
 			disableSimulation=1;
 		};
 		id=17;
