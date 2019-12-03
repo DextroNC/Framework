@@ -39,7 +39,7 @@ if (_static) then {
 	_badgeSize = 16;
 } else {
 	// Select Plane
-	private _array = [_class, (SR_Support_Assets select 1)] call fw_fnc_paraDropPlaneSection;
+	private _array = [_class, (SR_Support_Assets select 1), count _units] call fw_fnc_paraDropPlaneSelection;
 	_class = _array select 0;
 	_badgeSize = _array select 1;
 };
