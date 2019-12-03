@@ -136,7 +136,7 @@ player createDiarySubject ["Mission Log", "Mission Log"];
 
 // Regulations
 player createDiarySubject ["Regulation", "Regulation"];
-player createDiaryRecord ["Regu lation", ["Equipment", "
+player createDiaryRecord ["Regulation", ["Equipment", "
 <br/>
 <font size='18'>Composition Regulations</font>
 <br/>
