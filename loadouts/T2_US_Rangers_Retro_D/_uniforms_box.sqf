@@ -5,8 +5,9 @@ this addaction ["Platoon Engineer (EOD)", "loadouts\us_p_e_eod.sqf"];
 this addaction ["Platoon Engineer (Fortification)", "loadouts\us_p_e_fort.sqf"];
 this addaction ["Platoon Engineer (Repair)", "loadouts\us_p_e_rep.sqf"];
 this addaction ["Platoon DMR", "loadouts\us_p_dmr.sqf"];
-this addaction ["Platoon Driver", "loadouts\us_p_d.sqf"];this addaction ["Platoon AR", "loadouts\us_p_ar.sqf"];
+this addaction ["Platoon Driver", "loadouts\us_p_d.sqf"];
 this addaction ["Platoon Medic", "loadouts\us_p_medic.sqf"];
+this addaction ["Platoon AR", "loadouts\us_p_ar.sqf"];
 this addaction ["Squad Leader", "loadouts\us_sl.sqf"];
 this addaction ["Combat Medic", "loadouts\us_medic.sqf"];
 this addaction ["Operator Rifle", "loadouts\us_o_r.sqf"];
@@ -35,10 +36,9 @@ this addaction ["Echo Heavy Weapons (Mortar)", "loadouts\us_e_mor.sqf"];
 this addaction ["Echo Asst. Heavy Weapons (Mortar)", "loadouts\us_e_mor_ab.sqf"];
 this addaction ["Echo Heavy Weapons (HAT)", "loadouts\us_e_hat.sqf"];
 this addaction ["Echo Asst. Heavy Weapons (HAT)", "loadouts\us_e_hat_ab.sqf"];
-
-this addaction ["Echo Driver", "loadouts\us_e_d.sqf"];this addaction ["Fox Commander", "loadouts\us_f_com.sqf"];
+this addaction ["Echo Driver", "loadouts\us_e_d.sqf"];
+this addaction ["Fox Commander", "loadouts\us_f_com.sqf"];
 this addaction ["Fox Crewman", "loadouts\us_f_crew.sqf"];
 this addaction ["Fox Technician", "loadouts\us_f_tech.sqf"];
 this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];}];
 this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable ["SR_Loadout",[]]);}];
-
