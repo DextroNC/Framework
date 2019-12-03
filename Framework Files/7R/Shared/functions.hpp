@@ -61,7 +61,7 @@
 		class vehicleDropAction{};
 		class supplyLoad{};
 		class supplySpawn{};
-	};	
+	};
 	class exfil {
 		file = "7R\Exfil";
 		class exfilAction{};
@@ -81,13 +81,13 @@
 		class intelCollection{};
 		class hackingAction{};
 		class hackingLoop{};
-		class hackingPickup{};	
+		class hackingPickup{};
 	};
 	class repair {
 		file = "7R\Repair";
 		class repairStation{};
 		class repair{};
-		
+
 	};
 	class para {
 		file = "7R\ParaDrop";
@@ -150,4 +150,8 @@
 		file = "7R\AI\CleanUp";
 		class cleanUpLoop{postInit = true};
 	};
+	class Loadouts {
+		file = "7R\Loadouts";
+		class clearVehicleCargo{};
+	}
 };
