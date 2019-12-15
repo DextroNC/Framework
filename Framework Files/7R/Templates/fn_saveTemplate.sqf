@@ -40,7 +40,7 @@ private _side = side _leader;
 if (_leader isKindOf "Air") then {
 	_unitArray pushBack (typeOf _leader);
 };
-if (_leader isKindOf "LandVehicle") then {
+if (_leader isKindOf "LandVehicle" || _leader isKindOf "Ship") then {
 	_unitArray pushBack (typeOf _leader);
 	{
 		if (!isNull (_x select 0)) then {
