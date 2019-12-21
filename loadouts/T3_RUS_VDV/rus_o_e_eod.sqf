@@ -56,6 +56,6 @@ if (SR_Night) then {
 _unit setVariable ["SR_Class","E", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
-_unit setVariable ["ACE_isEOD",false,true];
+_unit setVariable ["ACE_isEOD",true,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
