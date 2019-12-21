@@ -1,0 +1,53 @@
+/*
+	Description:
+		Loadouts for T1 Bundeswehr Desert Camo
+
+		Disable a loadout by adding '//' in front of a loadout in this file.
+*/
+
+this addaction ["Platoon Leader", "loadouts\bw_pl.sqf"];
+this addaction ["Platoon FAC", "loadouts\bw_p_fac.sqf"];
+this addaction ["Platoon Engineer (Demo)", "loadouts\bw_p_e_demo.sqf"];
+this addaction ["Platoon Engineer (EOD)", "loadouts\bw_p_e_eod.sqf"];
+this addaction ["Platoon Engineer (Fortification)", "loadouts\bw_p_e_fort.sqf"];
+this addaction ["Platoon Engineer (Repair)", "loadouts\bw_p_e_rep.sqf"];
+this addaction ["Platoon DMR", "loadouts\bw_p_dmr.sqf"];
+this addaction ["Platoon Driver", "loadouts\bw_p_d.sqf"];
+this addaction ["Platoon AR", "loadouts\bw_p_ar.sqf"];
+this addaction ["Platoon Medic", "loadouts\bw_p_medic.sqf"];
+this addaction ["Squad Leader", "loadouts\bw_sl.sqf"];
+this addaction ["Combat Medic", "loadouts\bw_medic.sqf"];
+this addaction ["Operator Rifle", "loadouts\bw_o_r.sqf"];
+this addaction ["Operator AR", "loadouts\bw_o_ar.sqf"];
+this addaction ["Operator Light AT (Pzf-3)", "loadouts\bw_o_lat1.sqf"];
+this addaction ["Operator Light AT (RGW-90)", "loadouts\bw_o_lat2.sqf"];
+// this addaction ["Operator MMG (MG3)", "loadouts\bw_o_mmg.sqf"];
+this addaction ["Operator MMG (MG5)", "loadouts\bw_o_mmg_mg5.sqf"];
+this addaction ["Operator Asst. MMG", "loadouts\bw_o_mmg_ab.sqf"];
+this addaction ["Operator Medium AT", "loadouts\bw_o_mat.sqf"];
+this addaction ["Operator Asst. Medium AT", "loadouts\bw_o_mat_ab.sqf"];
+this addaction ["Operator Grenadier", "loadouts\bw_o_g.sqf"];
+this addaction ["Operator DMR (5.56)", "loadouts\bw_o_dmr.sqf"];
+this addaction ["Operator Battlerifle (G3)", "loadouts\bw_o_br.sqf"];
+this addaction ["Operator Specialist (G36K)", "loadouts\bw_o_spc.sqf"];
+this addaction ["Operator Breacher", "loadouts\bw_o_breacher.sqf"];
+this addaction ["Operator Engineer (Demo)", "loadouts\bw_o_e_demo.sqf"];
+this addaction ["Operator Engineer (EOD)", "loadouts\bw_o_e_eod.sqf"];
+this addaction ["Operator Engineer (Fortification)", "loadouts\bw_o_e_fort.sqf"];
+this addaction ["Operator Engineer (Repair)", "loadouts\bw_o_e_rep.sqf"];
+this addaction ["Echo Rifleman", "loadouts\bw_e_r.sqf"];
+this addaction ["Echo AR", "loadouts\bw_e_ar.sqf"];
+this addaction ["Echo Engineer (Demo)", "loadouts\bw_e_e_demo.sqf"];
+this addaction ["Echo Engineer (EOD)", "loadouts\bw_e_e_eod.sqf"];
+this addaction ["Echo Engineer (Fortification)", "loadouts\bw_e_e_fort.sqf"];
+this addaction ["Echo Engineer (Repair)", "loadouts\bw_e_e_rep.sqf"];
+this addaction ["Echo Heavy Weapons (Mortar)", "loadouts\bw_e_mor.sqf"];
+this addaction ["Echo Asst. Heavy Weapons (Mortar)", "loadouts\bw_e_mor_ab.sqf"];
+this addaction ["Echo Heavy Weapons (HAT)", "loadouts\bw_e_hat.sqf"];
+this addaction ["Echo Asst. Heavy Weapons (HAT)", "loadouts\bw_e_hat_ab.sqf"];
+this addaction ["Echo Driver", "loadouts\bw_p_d.sqf"];
+this addaction ["Fox Commander", "loadouts\bw_f_com.sqf"];
+this addaction ["Fox Crewman", "loadouts\bw_f_crew.sqf"];
+this addaction ["Fox Technician", "loadouts\bw_f_tech.sqf"];
+this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];}];
+this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1) setUnitLoadout ((_this select 1) getVariable ["SR_Loadout",[]]);}];

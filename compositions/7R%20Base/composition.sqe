@@ -79,7 +79,7 @@ class items
 					};
 				};
 				id=3;
-				type="B_Soldier_F";
+				type="B_Soldier_TL_F";
 			};
 			class Item2
 			{
@@ -166,7 +166,7 @@ class items
 					};
 				};
 				id=6;
-				type="B_Soldier_F";
+				type="B_Soldier_TL_F";
 			};
 			class Item5
 			{
@@ -326,8 +326,7 @@ class items
 					};
 				};
 				id=12;
-				type="B_Soldier_F";
-				atlOffset=0.00061035156;
+				type="B_Soldier_TL_F";
 			};
 			class Item2
 			{
@@ -357,7 +356,6 @@ class items
 				};
 				id=13;
 				type="B_Soldier_F";
-				atlOffset=0.00061035156;
 			};
 			class Item3
 			{
@@ -387,7 +385,6 @@ class items
 				};
 				id=14;
 				type="B_Soldier_F";
-				atlOffset=0.00061035156;
 			};
 			class Item4
 			{
@@ -416,8 +413,7 @@ class items
 					};
 				};
 				id=15;
-				type="B_Soldier_F";
-				atlOffset=0.00061035156;
+				type="B_Soldier_TL_F";
 			};
 			class Item5
 			{
@@ -447,7 +443,6 @@ class items
 				};
 				id=16;
 				type="B_Soldier_F";
-				atlOffset=0.00061035156;
 			};
 			class Item6
 			{
@@ -477,7 +472,6 @@ class items
 				};
 				id=17;
 				type="B_Soldier_F";
-				atlOffset=0.00061035156;
 			};
 			class Item7
 			{
@@ -579,8 +573,7 @@ class items
 					};
 				};
 				id=21;
-				type="B_Soldier_F";
-				atlOffset=0.00088500977;
+				type="B_Soldier_TL_F";
 			};
 			class Item2
 			{
@@ -639,7 +632,6 @@ class items
 				};
 				id=23;
 				type="B_Soldier_F";
-				atlOffset=0.0012512207;
 			};
 			class Item4
 			{
@@ -668,8 +660,7 @@ class items
 					};
 				};
 				id=24;
-				type="B_Soldier_F";
-				atlOffset=0.00061035156;
+				type="B_Soldier_TL_F";
 			};
 			class Item5
 			{
@@ -699,7 +690,6 @@ class items
 				};
 				id=25;
 				type="B_Soldier_F";
-				atlOffset=0.0012512207;
 			};
 			class Item6
 			{
@@ -729,7 +719,6 @@ class items
 				};
 				id=26;
 				type="B_Soldier_F";
-				atlOffset=0.00061035156;
 			};
 			class Item7
 			{
@@ -970,10 +959,10 @@ class items
 		class Attributes
 		{
 			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_uniforms_box.sqf"";}";
 		};
 		id=35;
 		type="Box_NATO_Uniforms_F";
-		atlOffset=0.0012512207;
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1049,6 +1038,7 @@ class items
 		class Attributes
 		{
 			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_equipment_box.sqf"";}";
 		};
 		id=36;
 		type="Box_NATO_Equip_F";
@@ -1125,6 +1115,8 @@ class items
 		flags=4;
 		class Attributes
 		{
+			disableSimulation=1;
+			init="call{call compile preprocessFileLineNumbers ""loadouts\_big_box.sqf"";}";
 		};
 		id=37;
 		type="B_CargoNet_01_ammo_F";
@@ -1199,7 +1191,6 @@ class items
 		type="Empty";
 		colorName="default";
 		id=38;
-		atlOffset=4.948685e+011;
 	};
 	class Item9
 	{
@@ -1211,7 +1202,6 @@ class items
 		name="zeus";
 		id=39;
 		type="ModuleCurator_F";
-		atlOffset=0.0029983521;
 		class CustomAttributes
 		{
 			class Attribute0

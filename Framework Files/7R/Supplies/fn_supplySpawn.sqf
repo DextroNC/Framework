@@ -25,11 +25,7 @@ private _box = createVehicle [_class, [0,0,0], [], 0, "NONE"];
 _box allowDamage false;
 
 // Apply Loadout
-[_box, _loadout] execVM "loadouts\SupplyDropContent.sqf";
+[_box, _loadout] execVM "loadouts\_supply_drop_content.sqf";
 
 // Return Box
 _box
-
-
-
-
