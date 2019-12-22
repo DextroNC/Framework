@@ -20,6 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addVest "usm_vest_pasgtdcu_lbe_rmp";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};

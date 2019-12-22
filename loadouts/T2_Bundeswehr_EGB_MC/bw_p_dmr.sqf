@@ -20,6 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "BWA3_Vest_JPC_Rifleman_Multi";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};

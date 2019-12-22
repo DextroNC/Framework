@@ -20,6 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "rhs_mag_rdg2_white";
 _unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_18Rnd_9x19_gsh";};
 _unit addVest "rhs_6sh92_radio";
 for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_rdg2_white";};
