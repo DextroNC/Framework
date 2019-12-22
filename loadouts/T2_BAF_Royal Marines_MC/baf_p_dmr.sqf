@@ -20,6 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
 _unit addVest "UK3CB_BAF_V_Osprey_Marksman_A";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
@@ -32,8 +33,8 @@ _unit addGoggles "rhs_googles_clear";
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L129A1_FGrip";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
-_unit addPrimaryWeaponItem "RH_HBLM";
+_unit addPrimaryWeaponItem "UK3CB_BAF_TA648_308";
+_unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_fgrip_bipod";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "ACE_Vector";
 

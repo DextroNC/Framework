@@ -20,6 +20,7 @@ _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "BWA3_DM25";
 _unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 _unit addVest "pbw_splitter_grpfhr";
 for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
@@ -31,7 +32,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "hlc_rifle_g3sg1ris";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
+_unit addPrimaryWeaponItem "RKSL_optic_PMII_312";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "ACE_Vector";
 
