@@ -67,9 +67,6 @@ sleep 1;
 
 // Fire Support and adjust Ammo
 private _handle = [_target,_type,_disp,_rounds,[1.5,4],{},10] spawn BIS_fnc_fireSupportVirtual;
-if (_type isEqualTo "UK3CB_BAF_WPSmoke_81mm_AMOS") then {
-	[_target,"Smoke_120mm_AMOS_White",50,5,[1.5,4],{},10] spawn BIS_fnc_fireSupportVirtual;
-};
 
 ArtilleryCallAmmo = ArtilleryCallAmmo - _cost;
 publicVariable "ArtilleryCallAmmo";
