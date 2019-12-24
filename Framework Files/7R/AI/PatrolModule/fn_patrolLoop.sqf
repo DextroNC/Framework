@@ -90,12 +90,12 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
             _roll = random 100;
             if (_roll < _x && _x > _last) then {
                 // Special Condition for Surrender
-                if (!(_forEachIndex == 2) || ((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 150) then {
+                if (!(_forEachIndex == 1) || ((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 150) then {
                     _index = _forEachIndex;
                     _last = _x;
                 };
             };
-        } forEach [SR_Flee, SR_Charge, SR_Surrender];
+        } forEach [SR_Flee, SR_Surrender];
         
         // Execute selected Option
         switch (_index) do {
@@ -106,20 +106,8 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
             };
-            // Charge
-            case 1: {
-                _this setVariable ["SR_Depressed", true];
-                // Each Group member supressive the nearest enemy
-                {
-                    [_x] spawn fw_fnc_suppress;
-                }forEach units _this;
-                // Group does not flee
-                _this allowFleeing 0; 
-                // Debug
-                if (SR_Debug) then {systemChat format ["%1 is charging", _this];};
-            };
             // Surrender
-            case 2: {
+            case 1: {
                 _this setVariable ["SR_Depressed", true];
                 {   
                     [_x] spawn fw_fnc_surrender;
@@ -131,7 +119,7 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
     };
 }, {}, {
     // Once Depressed, reset after 4 min
-    [this] spawn fw_fnc_depressedCooldown;
+    [this,200] spawn fw_fnc_depressedCooldown;
 }, "CombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Artillery Support Loop
