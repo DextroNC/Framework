@@ -3,7 +3,7 @@ if(isServer) then {
 	clearmagazinecargoGlobal this;
 	clearitemcargoGlobal this;
 	clearBackpackCargoGlobal this;
-	this addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 40];
+	this addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 40];
 	this addmagazinecargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch", 40];
 	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 40];
 	this addmagazinecargoGlobal ["MRAWS_HEAT_F", 10];
