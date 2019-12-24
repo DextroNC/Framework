@@ -18,7 +18,7 @@ clearBackpackCargoGlobal _box;
 if (_type == 1) then {
 	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 72];
 	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 24];
-	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 12];
+	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 12];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 12];
