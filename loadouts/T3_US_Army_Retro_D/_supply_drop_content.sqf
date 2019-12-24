@@ -68,7 +68,7 @@ if (_type == 3) then {
 // Small Squad Supply
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 36];
-	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 6];
+	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 6];
 	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 8];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
