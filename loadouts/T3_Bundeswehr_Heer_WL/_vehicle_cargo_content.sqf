@@ -1,0 +1,35 @@
+/*
+	Parameters:
+		<-- vehicle as Object
+		<-- Index as Integer
+
+	Description:
+		Applies Loadouts to Vehicles
+
+*/
+
+// Parameter Init
+params ["_vehicle",["_index",0]];
+
+[_vehicle] call fw_fnc_clearVehicleCargo;
+
+switch (_index) do {
+	// Helicopter Loadout - Loadout 1
+	case 1: {
+		_vehicle addItemCargoGlobal ["SR_PAK", 4];
+	};
+	// Ground Vehicle (Infantry) Loadout - Loadout 2
+	case 2: {
+		_vehicle additemcargoGlobal ["SR_PAK", 8];
+	};
+	// Ground Vehicle (Echo) Loadout - Loadout 3
+	case 3: {
+		_vehicle addItemCargoGlobal ["SR_PAK", 4];
+	};
+	// Armoured (Foxtrot) Vehicle Loadout - Loadout 4
+	case 4: {
+		["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
+	};
+	// Default Case (Fallback)
+	default {};
+};

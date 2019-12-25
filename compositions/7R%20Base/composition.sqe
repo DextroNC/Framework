@@ -1115,7 +1115,6 @@ class items
 		flags=4;
 		class Attributes
 		{
-			disableSimulation=1;
 			init="call{call compile preprocessFileLineNumbers ""loadouts\_big_box.sqf"";}";
 		};
 		id=37;
