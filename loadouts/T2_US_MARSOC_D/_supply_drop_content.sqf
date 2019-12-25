@@ -18,7 +18,7 @@ clearBackpackCargoGlobal _box;
 if (_type == 1) then {
 	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 72];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 36];
-	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 12];
+	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 12];
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Slug", 12];
@@ -68,7 +68,7 @@ if (_type == 3) then {
 // Small Squad Supply
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 36];
-	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 6];
+	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 6];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 8];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
