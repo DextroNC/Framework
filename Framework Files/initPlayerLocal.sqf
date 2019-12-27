@@ -51,6 +51,9 @@ _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks
 _EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{null = ["EZ","STARTSPAWN", "RHS_CH_47F", "Eagle 1-1", 0,"dropoff"] spawn fw_fnc_exfilCall;},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
+// Vehicle Drop
+_CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_canCallVehicleDrop},{[_target, _player, []] call fw_fnc_vehicleDropAction}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _CHH] call ace_interact_menu_fnc_addActionToClass;
 
 // Artillery
 _headerArtillery = ["7R_ArtyH","Call Fire Support","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
