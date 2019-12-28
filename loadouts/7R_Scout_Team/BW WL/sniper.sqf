@@ -33,7 +33,7 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_m40a5_wd";
 _unit addPrimaryWeaponItem "optic_LRPS";
 _unit addPrimaryWeaponItem "rhsusf_acc_harris_swivel";
-_unit addWeapon "Laserdesignator";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";

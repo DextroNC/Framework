@@ -33,7 +33,7 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_XM2010_d";
 _unit addPrimaryWeaponItem "optic_LRPS";
 _unit addPrimaryWeaponItem "RH_HBLM_des";
-_unit addWeapon "Laserdesignator";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "RH_g19t";
 _unit addHandgunItem "RH_X300";
 _unit addHandgunItem "RH_gemtech9";

@@ -23,6 +23,7 @@ this addaction ["<t color=""#FF8C00"">" +"SU-230", "7R\Loadouts\7R_EQ.sqf",["rhs
 this addaction ["<t color=""#FF8C00"">" +"SU-230 MRDS", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230_mrds"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - ACOG MDO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_MDO"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - MOS", "7R\Loadouts\7R_EQ.sqf",["optic_SOS"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight - MRDS", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_premier_mrds"]];
 this addaction ["<t color=""#FF0000"">" +"UAV Terminal", "7R\Loadouts\7R_EQ.sqf",["B_UavTerminal"]];
 this addaction ["<t color=""#FF0000"">" +"GPS", "7R\Loadouts\7R_EQ.sqf",["ItemGPS"]];
 this addaction ["<t color=""#FF0000"">" +"Vector", "7R\Loadouts\7R_EQ.sqf",["ACE_Vector"]];

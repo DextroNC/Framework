@@ -32,7 +32,7 @@ _unit addItemToVest "UK3CB_BAF_MaxiKite";
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L115A3_Ghillie";
 _unit addPrimaryWeaponItem "optic_LRPS";
-_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
+_unit addWeapon "UK3CB_BAF_Soflam_UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "UK3CB_BAF_L131A1";
 _unit addHandgunItem "muzzle_snds_L";
 _unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";

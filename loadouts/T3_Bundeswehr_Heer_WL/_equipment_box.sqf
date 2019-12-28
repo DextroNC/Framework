@@ -5,6 +5,7 @@ this addaction ["<t color=""#FF8C00"">" +"M145", "7R\Loadouts\7R_EQ.sqf",["rhsus
 this addaction ["<t color=""#FF8C00"">" +"M150", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - ACOG MDO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_MDO"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - MOS", "7R\Loadouts\7R_EQ.sqf",["optic_SOS"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight - PMII", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_PMII_312"]];
 this addaction ["<t color=""#FF0000"">" +"GPS", "7R\Loadouts\7R_EQ.sqf",["ItemGPS"]];
 this addaction ["<t color=""#FF0000"">" +"Vector", "7R\Loadouts\7R_EQ.sqf",["ACE_Vector"]];
 this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "7R\Loadouts\7R_EQ.sqf",["Laserdesignator"]];
