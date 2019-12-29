@@ -36,7 +36,7 @@ _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addPrimaryWeaponItem "RKSL_optic_PMII_312";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";

@@ -36,7 +36,7 @@ _unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addPrimaryWeaponItem "BWA3_optic_PMII_DMR_MicroT1_rear";
 _unit addWeapon "BWA3_P8";
 _unit addHandgunItem "BWA3_acc_LLM01_irlaser";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";

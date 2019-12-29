@@ -44,5 +44,8 @@ this addaction ["Sierra Spotter", "loadouts\us_s_spotter.sqf"];
 this addaction ["Sierra Sniper ()", "loadouts\us_s_sniper.sqf"];
 this addaction ["Sierra Sniper (m107)", "loadouts\us_s_sniper_m107.sqf"];
 this addaction ["Sierra Recon", "loadouts\us_s_recon.sqf"];
+this addaction ["Rodeo Pilot", "loadouts\pilot_rotaryPilot.sqf"];
+this addaction ["Rodeo Co-Pilot (Crewman)", "loadouts\pilot_rotaryPilot.sqf"];
+this addaction ["Whiskey Pilot", "loadouts\pilot_fixedWing.sqf"];
 this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];}];
 this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable ["SR_Loadout",[]]);}];

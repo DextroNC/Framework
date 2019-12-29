@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "U_I_FullGhillie_sard";
+_unit forceAddUniform "UK3CB_CW_SOV_O_Late_U_CombatUniform_Ghillie_01_KLMK";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -22,33 +22,37 @@ _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 _unit addItemToUniform "SmokeShellGreen";
 _unit addItemToUniform "SmokeShellRed";
-_unit addVest "rhs_vydra_3m";
-for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
+_unit addVest "V_TacVest_oli";
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
+_unit addItemToVest "ACE_Kestrel4500";
 _unit addItemToVest "ACE_RangeCard";
+_unit addBackpack "B_Kitbag_sgg";
+_unit addItemToBackpack "ACE_Tripod";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_t5000";
-_unit addPrimaryWeaponItem "optic_LRPS";
-_unit addPrimaryWeaponItem "RH_HBLM";
-_unit addWeapon "Binocular";
+_unit addWeapon "rhs_weap_asval";
+_unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
+_unit addPrimaryWeaponItem "BWA3_muzzle_snds_Rotex_IIIC";
+_unit addWeapon "ACE_Vector";
 _unit addWeapon "rhs_weap_pb_6p9";
-_unit addHandgunItem "rhs_acc_6p9_suppressor";
+_unit addSecondaryWeaponItem "rhs_acc_6p9_suppressor";
 
 comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-for "_i" from 1 to 8 do {_unit addItemToVest "rhs_5Rnd_338lapua_t5000";};
+for "_i" from 1 to 10 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP5";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP5";};
 
 _unit addItemToUniform "ACRE_PRC343";
-_unit addItemToUniform "ACRE_PRC152";
+_unit addItemToBackpack "ACRE_PRC117F";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit setUnitTrait ["camouflageCoef",0.9];
 };
-_unit setVariable ["SR_Class","Sniper", true];
+_unit setVariable ["SR_Class","Spotter", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];

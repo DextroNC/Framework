@@ -22,7 +22,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="this setGroupIdGlobal [""R-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot.sqf""; this setVariable [""SR_Class"", ""Pilot"", true];";
+					init="this setGroupIdGlobal [""R-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
 					description="Helicopter Pilot @Rodeo-1";
 					isPlayable=1;
 					class Inventory
@@ -118,7 +118,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_crew.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];";
+					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryCrew.sqf"";";
 					description="Helicopter Co-Pilot";
 					isPlayable=1;
 					class Inventory
@@ -228,7 +228,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setGroupIdGlobal [""R-2""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot.sqf""; this setVariable [""SR_Class"", ""Pilot"", true];}";
+					init="call{this setGroupIdGlobal [""R-2""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
 					description="Helicopter Pilot @Rodeo-2";
 					isPlayable=1;
 					class Inventory
@@ -324,7 +324,7 @@ class items
 				flags=5;
 				class Attributes
 				{
-					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_crew.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];";
+					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryCrew.sqf"";";
 					description="Helicopter Co-Pilot";
 					isPlayable=1;
 					class Inventory

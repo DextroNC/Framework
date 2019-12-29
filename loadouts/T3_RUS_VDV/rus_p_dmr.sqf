@@ -34,7 +34,7 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_svdp_wd";
 _unit addPrimaryWeaponItem "rhs_acc_pso1m21";
 _unit addWeapon "RH_gsh18";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";
