@@ -60,9 +60,3 @@ if (isServer) then {
 {
 	player setAmmo [_x, 0];
 } forEach weapons player;
-
-// Remove Ammo
-{
-	player removeMagazine _x;
-} forEach magazines player;
-
