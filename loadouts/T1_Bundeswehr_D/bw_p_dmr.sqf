@@ -37,7 +37,7 @@ _unit addPrimaryWeaponItem "FHQ_acc_LLM01F";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";

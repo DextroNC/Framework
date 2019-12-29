@@ -20,6 +20,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 24];
 	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
+	_box addmagazinecargoGlobal ["30Rnd_9x21_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 12];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 12];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
@@ -62,7 +63,9 @@ if (_type == 3) then {
 	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m118_special_Mag", 6];
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m993_Mag", 8];
+	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 6];
 };
 
 // Small Squad Supply

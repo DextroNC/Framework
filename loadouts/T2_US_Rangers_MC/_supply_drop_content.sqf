@@ -62,7 +62,7 @@ if (_type == 3) then {
 	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m993_Mag", 8];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_300winmag_xm2010", 8];
 };
 
 // Small Squad Supply

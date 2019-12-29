@@ -1,5 +1,5 @@
 version=53;
-center[]={8192.3613,296.04001,2019.6421};
+center[]={7046.2271,5,4452.9751};
 class items
 {
 	items=1;
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.086914063,0.0014343262,0.57299805};
+					position[]={0.0859375,0.0014390945,0.57275391};
 					angles[]={0,5.7386951,0};
 				};
 				side="West";
@@ -23,7 +23,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setGroupIdGlobal [""W-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_pilot.sqf""; this setVariable [""SR_Class"", ""Pilot"", true];}";
+					init="call{this setGroupIdGlobal [""W-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_fixedWing.sqf"";}";
 					description="Fixed Wing Pilot @Whiskey-1";
 					isPlayable=1;
 					class Inventory
@@ -63,7 +63,7 @@ class items
 						watch="ItemWatch";
 					};
 				};
-				id=1845;
+				id=11;
 				type="B_Helipilot_F";
 				class CustomAttributes
 				{
@@ -113,14 +113,14 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.0859375,0.0014343262,-0.47302246};
+					position[]={-0.0859375,0.0014390945,-0.47314453};
 					angles[]={0,5.7386951,0};
 				};
 				side="West";
 				flags=5;
 				class Attributes
 				{
-					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\fw_pilot.sqf"";  this setVariable [""SR_Class"", ""Pilot"", true];}";
+					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_fixedWing.sqf"";}";
 					description="Fixed Wing Co-Pilot";
 					isPlayable=1;
 					class Inventory
@@ -160,7 +160,7 @@ class items
 						watch="ItemWatch";
 					};
 				};
-				id=1846;
+				id=12;
 				type="B_helicrew_F";
 				class CustomAttributes
 				{
@@ -209,6 +209,6 @@ class items
 		class Attributes
 		{
 		};
-		id=1844;
+		id=10;
 	};
 };

@@ -37,7 +37,7 @@ _unit addPrimaryWeaponItem "RKSL_optic_PMII_312_wdl";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";

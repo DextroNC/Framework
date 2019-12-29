@@ -16,8 +16,8 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 72];
-	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 36];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 72];
+	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 42];
 	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 12];
@@ -62,12 +62,13 @@ if (_type == 3) then {
 	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m993_Mag", 8];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_AICS_m118_special_Mag", 6];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_AICS_m993_Mag", 2];
 };
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 36];
 	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 6];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 8];
 	_box additemcargoGlobal ["HandGrenade", 6];

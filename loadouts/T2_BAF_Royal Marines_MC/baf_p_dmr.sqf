@@ -36,7 +36,7 @@ _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
 _unit addPrimaryWeaponItem "UK3CB_BAF_TA648_308";
 _unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_fgrip_bipod";
 _unit addWeapon "rhsusf_weap_glock17g4";
-_unit addWeapon "ACE_Vector";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";

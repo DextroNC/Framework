@@ -33,7 +33,7 @@ _unit addBackpack "B_AssaultPack_rgr";
 comment "Add weapons";
 _unit addWeapon "rhs_weap_M107_d";
 _unit addPrimaryWeaponItem "rhsusf_acc_premier";
-_unit addWeapon "Laserdesignator";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";
