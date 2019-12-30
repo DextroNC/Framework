@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "BWA3_Uniform_Helipilot";
+_unit forceAddUniform "rhs_uniform_df15_tan";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
@@ -24,15 +24,13 @@ _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "UK3CB_V_Pouch";
 _unit addItemToVest "ACE_microDAGR";
-for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_15Rnd_9x19_P8";};
-_unit addHeadgear "rhsusf_hgu56p_visor";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_9x19_17";};
+_unit addHeadgear "rhs_zsh7a_mike_green";
 
 comment "Add weapons";
-_unit addWeapon "rhsusf_weap_MP7A2_grip3";
-_unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser_black";
-_unit addPrimaryWeaponItem "BWA3_optic_RSAS";
-_unit addPrimaryWeaponItem "rhsusf_acc_tdstubby_blk";
-_unit addWeapon "BWA3_P8";
+_unit addWeapon "rhs_weap_pp2000";
+_unit addPrimaryWeaponItem "rhs_acc_okp7_picatinny";
+_unit addWeapon "rhs_weap_pya";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -41,13 +39,13 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
+for "_i" from 1 to 5 do {_unit addItemToVest "rhs_mag_9x19mm_7n21_44";};
 _unit addItemToVest "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "A3_GPNVG18_BLK_F";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];
