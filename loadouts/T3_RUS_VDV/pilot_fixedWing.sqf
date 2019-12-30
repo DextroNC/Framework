@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "U_B_PilotCoveralls";
+_unit forceAddUniform "U_I_pilotCoveralls";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
@@ -22,13 +22,11 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
 _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addItemToUniform "ACE_microDAGR";
-for "_i" from 1 to 3 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-
-_unit addHeadgear "H_PilotHelmetFighter_B";
+for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_9x19_17";};
+_unit addHeadgear "H_PilotHelmetFighter_O";
 
 comment "Add weapons";
-_unit addWeapon "BWA3_P8";
-_unit addHandgunItem "acc_flashlight_pistol";
+_unit addWeapon "rhs_weap_pya";
 
 comment "Add items";
 _unit linkItem "ItemMap";
