@@ -19,6 +19,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull", 72];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 32];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_100Rnd_556x45_M855A1_cmag_mixed", 10];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 12];
 	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Slug", 12];

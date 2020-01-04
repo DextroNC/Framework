@@ -44,8 +44,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_100Rnd_556x45_Mk318_cmag";};
-for "_i" from 1 to 7 do {_unit addItemToBackpack "rhs_mag_100Rnd_556x45_Mk318_cmag";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_100Rnd_556x45_M855A1_cmag_mixed";};
+for "_i" from 1 to 7 do {_unit addItemToBackpack "rhs_mag_100Rnd_556x45_M855A1_cmag_mixed";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
