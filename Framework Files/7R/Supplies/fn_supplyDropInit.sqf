@@ -88,8 +88,7 @@ if (count _vehicle == 0) then {
 	};
 } else {
 	// Vehicle Drop
-	_veh = createVehicle [_vehicleClass, [0,0,0], [], 0, "NONE"];
-	_veh allowDamage false;
+	_veh = createVehicle [_vehicleClass, [0,0,1000], [], 0, "NONE"];
 	_veh disableCollisionWith _planeacc;
 	if (_vehicleLoadout >= 0) then {
 		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
