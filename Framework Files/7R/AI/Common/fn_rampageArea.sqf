@@ -1,10 +1,10 @@
 /*
 	Parameters:
 		<-- Trigger as Object
-		
+
 	Description:
 		All enemy units within trigger get set to rampage mode.
-		
+
 	Example:
 		OnActivation of a Trigger:
 		nul = [thisTrigger] spawn fw_fnc_rampageArea;
@@ -27,7 +27,8 @@ _allGroups = [];
 
 {
 	if (!(_x getVariable ["SR_PatrolMode",""] isEqualTo "RP")) then {
+		_x deleteGroupWhenEmpty true;
 		_x setVariable ["SR_PatrolMode","RP"];
 		deleteWaypoint [_x, 1];
 	};
-}forEach _allGroups;
+} forEach _allGroups;

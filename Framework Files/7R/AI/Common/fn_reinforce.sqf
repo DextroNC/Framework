@@ -1,13 +1,13 @@
 /*
 	Parameters:
 		<-- Group as Group
-	
+
 	Return:
 	--> None
-		
+
 	Description:
 		Makes a unit enter the AO as Reinforcements
-		
+
 	Example:
 		[_group] spawn fw_fnc_reinforce;
 */
@@ -27,6 +27,7 @@ if (isNull _enemy) then {_enemy = _position;};
 [_group,_position, 50, "SAD", "AWARE", "RED", "FULL",selectRandom ["STAG COLUMN","DIAMOND","WEDGE","ECH LEFT","ECH RIGHT"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
 
 // Set Group to Patrol Mode
+_group deleteGroupWhenEmpty true;
 _group setVariable ["SR_PatrolMode","P"];
 
 // Debug

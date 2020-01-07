@@ -6,10 +6,10 @@
 		<-- Template Number as Integer
 		<-- Parameters as Array
 		<-- Opt. Parameters
-			
+
 	Description:
 	Spawns a unit of the Templates.
-	
+
 	Example:
 	nul = ["spawn1","PATROL",1,[params]] spawn fw_fnc_spawnTemplate;
 
@@ -55,11 +55,11 @@ if (_type isEqualTo "PATROL") Then {
 	// Pass Template data
 	_side = _template select 1;
 	_units = _template select 2;
-	
+
 	// Pre-Spawn Init
 	_unitNumber = count _units;
 	_grp = createGroup _side;
-	
+
 	// Spawn Loop
 	for [{_i=0}, {_i<_unitNumber}, {_i=_i+1}] do
 	{
@@ -77,6 +77,8 @@ if (_type isEqualTo "PATROL") Then {
 			_leader = _unit;
 		};
 	};
+
+	_grp deleteGroupWhenEmpty true;
 	// Assign Leader and Start Patrol
 	_grp selectLeader _leader;
 	_patrolParams = [_leader];
@@ -126,6 +128,7 @@ if (_type isEqualTo "GARRISON") Then {
 		};
 	};
 
+	_grp deleteGroupWhenEmpty true;
 	// Assign Leader and Create Garrison Array
 	_grp selectLeader _leader;
 	_units = units _grp;
@@ -145,7 +148,7 @@ if (_type isEqualTo "VEHICLE") Then {
 		if (_number in _x) exitWith {
 			_template = _x;
 		};
-	}forEach SR_Template;
+	} forEach SR_Template;
 
 	// Check if Template exists
 	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
@@ -155,14 +158,14 @@ if (_type isEqualTo "VEHICLE") Then {
 	_units = _template select 2;
 
 	// Pre-Spawn Init
-	_dir  = markerDir _marker; 
+	_dir = markerDir _marker;
 	_grp = createGroup _side;
-	
+
 	// Spawn Empty Vehicle
 	_veh = createVehicle [(_units select 0), _pos, [], 0, "NONE"];
 	_veh setDir _dir;
 	_veh disableTIEquipment true;
-	_units = _units - [(_units select 0)]; 
+	_units = _units - [(_units select 0)];
 
 	// Unit Spawn Loop
 	{
@@ -176,29 +179,29 @@ if (_type isEqualTo "VEHICLE") Then {
 				[_unit] join _grp;
 				_unit moveInDriver _veh;
 				_unit assignAsDriver _veh;
-				[_unit] orderGetIn true; 
-				
+				[_unit] orderGetIn true;
+
 			};
 			case "gunner": {
 				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 				[_unit] join _grp;
 				_unit moveInGunner _veh;
 				_unit assignAsGunner _veh;
-				[_unit] orderGetIn true; 
+				[_unit] orderGetIn true;
 			};
 			case "commander": {
 				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 				[_unit] join _grp;
 				_unit moveInCommander _veh;
 				_unit assignAsCommander _veh;
-				[_unit] orderGetIn true; 
+				[_unit] orderGetIn true;
 			};
 			case "cargo": {
 				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
 				[_unit] join _grp;
 				_unit moveInCargo _veh;
 				_unit assignAsCargo _veh;
-				[_unit] orderGetIn true; 
+				[_unit] orderGetIn true;
 			};
 			case "Turret": {
 				private _path = _x select 2;
@@ -206,7 +209,7 @@ if (_type isEqualTo "VEHICLE") Then {
 				[_unit] join _grp;
 				_unit moveInTurret [_veh, _path];
 				_unit assignAsTurret [_veh, _path];
-				[_unit] orderGetIn true; 
+				[_unit] orderGetIn true;
 			};
 		};
 		if (count SR_AI_NVG > 0) then {
@@ -217,11 +220,12 @@ if (_type isEqualTo "VEHICLE") Then {
 		};
 	} forEach _units;
 
+	_grp deleteGroupWhenEmpty true;
 	// Create Array to pass
 	private _leader = leader _grp;
 	private _pass = [_leader];
 	_pass append _params;
-	// Init Vehicle Spawn 
+	// Init Vehicle Spawn
 	nul = _pass spawn fw_fnc_spawnVehicleTemplate;
 };
 
@@ -246,18 +250,20 @@ if (_type isEqualTo "AIR") Then {
 	_units = _template select 2;
 
 	// Pre-Spawn Init
-	_dir  = markerDir _marker; 
+	_dir  = markerDir _marker;
 
 	// Spawn Vehicle
 	_veh = [_pos, _dir, (_units select 0), _side] call bis_fnc_spawnVehicle;
 
 	(_veh select 0) disableTIEquipment true;
-	
+
 	// Initialise
 	private _leader = leader (_veh select 2);
+	_grp = group _leader;
+	_grp deleteGroupWhenEmpty true;
 	_params params ["_tMarker","_wpType","_mode","_pZone"];
 	private "_tPos";
-	
+
 	if (isNil "_pZone") then {
 		if (markerSize _tMarker isEqualTo [1,1]) then {
 			_tPos = markerPos _tMarker;
@@ -271,8 +277,8 @@ if (_type isEqualTo "AIR") Then {
 		_wp setWaypointCompletionRadius 100;
 	} else {
 		_pa = [_pZone] call CBA_fnc_getArea;
-		[(group _leader), _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
-	};	
+		[_grp, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
+	};
 };
 /*
 // AI skill
