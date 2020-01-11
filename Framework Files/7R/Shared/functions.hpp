@@ -153,5 +153,7 @@
 	class Loadouts {
 		file = "7R\Loadouts";
 		class clearVehicleCargo{};
+		class addEquipmentRadios{};
+		class addEquipmentItems{};
 	}
 };
