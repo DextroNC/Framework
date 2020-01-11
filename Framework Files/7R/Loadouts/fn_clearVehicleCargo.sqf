@@ -13,6 +13,7 @@
     Return:
         --> Nil
 */
+
 params ["_vehicle", ["_deleteACECargo", false]];
 
 clearweaponcargoGlobal _vehicle;
