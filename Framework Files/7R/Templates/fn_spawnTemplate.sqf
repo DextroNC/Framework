@@ -57,11 +57,10 @@ if (_type isEqualTo "PATROL") Then {
 	_units = _template select 2;
 
 	// Pre-Spawn Init
-	_unitNumber = count _units;
 	_grp = createGroup _side;
 
 	// Spawn Loop
-	for [{_i=0}, {_i<_unitNumber}, {_i=_i+1}] do
+	for "_i" from 0 to (count _units - 1) do
 	{
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
@@ -107,11 +106,10 @@ if (_type isEqualTo "GARRISON") Then {
 	_units = _template select 2;
 
 	// Pre-Spawn Init
-	_unitNumber = count _units;
 	_grp = createGroup _side;
 
 	// Spawn Loop
-	for [{_i=0}, {_i<_unitNumber}, {_i=_i+1}] do
+	for "_i" from 0 to (count _units - 1) do
 	{
 		_type = _units select _i;
 		_unit = _grp createUnit [_type, _pos, [], 0, "form"];

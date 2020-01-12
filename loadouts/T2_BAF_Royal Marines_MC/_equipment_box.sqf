@@ -17,13 +17,9 @@ this addaction ["<t color=""#FF8C00"">" +"TA31F", "7R\Loadouts\7R_EQ.sqf",["UK3C
 this addaction ["<t color=""#FF8C00"">" +"LDS", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_LDS"]];
 this addaction ["<t color=""#FF8C00"">" +"SUSAT", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_SUSAT"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - TA648", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA648"]];
-this addaction ["<t color=""#FF0000"">" +"UAV Terminal", "7R\Loadouts\7R_EQ.sqf",["B_UavTerminal"]];
-this addaction ["<t color=""#FF0000"">" +"GPS", "7R\Loadouts\7R_EQ.sqf",["ItemGPS"]];
-this addaction ["<t color=""#FF0000"">" +"Vector", "7R\Loadouts\7R_EQ.sqf",["ACE_Vector"]];
-this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "7R\Loadouts\7R_EQ.sqf",["Laserdesignator"]];
-this addaction ["<t color=""#FF0000"">" +"Lockpick", "7R\Loadouts\7R_EQ.sqf",["ACE_key_lockpick"]];
-this addaction ["<t color=""#FF0000"">" +"Entreching Tool", "7R\Loadouts\7R_EQ.sqf",["ACE_EntrenchingTool"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO ACRE_PRC343", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC343"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC152 (SLs, 2ic)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC152"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC148 (Air, Sup, Mech)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC148"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC117F (Long Range)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC117F"]];
+
+// Support items
+[this, 2] call fw_fnc_addEquipmentItems;
+
+// Radios
+[this] call fw_fnc_addEquipmentRadios;
