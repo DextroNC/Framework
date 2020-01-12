@@ -7,6 +7,7 @@ this addaction ["Platoon Engineer (Repair)", "loadouts\us_p_e_rep.sqf"];
 this addaction ["Platoon DMR", "loadouts\us_p_dmr.sqf"];
 this addaction ["Platoon Driver", "loadouts\us_p_d.sqf"];
 this addaction ["Platoon AR", "loadouts\us_p_ar.sqf"];
+this addaction ["Platoon UAV", "loadouts\us_p_uav.sqf"];
 this addaction ["Platoon Medic", "loadouts\us_p_medic.sqf"];
 this addaction ["Squad Leader", "loadouts\us_sl.sqf"];
 this addaction ["Combat Medic", "loadouts\us_medic.sqf"];
