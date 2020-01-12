@@ -1,7 +1,7 @@
 /*
 	Parameters:
 		<-- Group as Group
-		
+
 	Description:
 		Units charge players close to them.
 */
@@ -23,10 +23,12 @@ _position = [];
 
 if (count _nearestPlayer == 0) then {
 	_position = position leader _grp;
-	
+
 } else {
-	_position = position (selectRandom _nearestPlayer);	
+	_position = position (selectRandom _nearestPlayer);
 };
+
+_grp deleteGroupWhenEmpty true;
 
 // Create Waypoint
 [_grp,_position, 50, "SAD", "AWARE", "RED", "FULL",selectRandom ["STAG COLUMN","DIAMOND","WEDGE","ECH LEFT","ECH RIGHT"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;

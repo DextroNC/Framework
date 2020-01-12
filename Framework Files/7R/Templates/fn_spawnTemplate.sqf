@@ -76,6 +76,8 @@ if (_type isEqualTo "PATROL") Then {
 			_leader = _unit;
 		};
 	};
+
+	_grp deleteGroupWhenEmpty true;
 	// Assign Leader and Start Patrol
 	_grp selectLeader _leader;
 	_patrolParams = [_leader];
@@ -124,6 +126,7 @@ if (_type isEqualTo "GARRISON") Then {
 		};
 	};
 
+	_grp deleteGroupWhenEmpty true;
 	// Assign Leader and Create Garrison Array
 	_grp selectLeader _leader;
 	_units = units _grp;
@@ -143,7 +146,7 @@ if (_type isEqualTo "VEHICLE") Then {
 		if (_number in _x) exitWith {
 			_template = _x;
 		};
-	}forEach SR_Template;
+	} forEach SR_Template;
 
 	// Check if Template exists
 	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
@@ -153,7 +156,7 @@ if (_type isEqualTo "VEHICLE") Then {
 	_units = _template select 2;
 
 	// Pre-Spawn Init
-	_dir  = markerDir _marker;
+	_dir = markerDir _marker;
 	_grp = createGroup _side;
 
 	// Spawn Empty Vehicle
@@ -215,6 +218,7 @@ if (_type isEqualTo "VEHICLE") Then {
 		};
 	} forEach _units;
 
+	_grp deleteGroupWhenEmpty true;
 	// Create Array to pass
 	private _leader = leader _grp;
 	private _pass = [_leader];
@@ -253,6 +257,8 @@ if (_type isEqualTo "AIR") Then {
 
 	// Initialise
 	private _leader = leader (_veh select 2);
+	_grp = group _leader;
+	_grp deleteGroupWhenEmpty true;
 	_params params ["_tMarker","_wpType","_mode","_pZone"];
 	private "_tPos";
 
@@ -269,7 +275,7 @@ if (_type isEqualTo "AIR") Then {
 		_wp setWaypointCompletionRadius 100;
 	} else {
 		_pa = [_pZone] call CBA_fnc_getArea;
-		[(group _leader), _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
+		[_grp, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 	};
 };
 /*

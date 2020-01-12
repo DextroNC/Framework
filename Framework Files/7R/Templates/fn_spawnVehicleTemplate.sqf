@@ -6,16 +6,16 @@
 		<-- Limited Speed as Boolean
 		<-- Patrol Parameters initialized on Target Pos as Array
 		<-- Optional: Patrol Parameters initialized on Target Pos for Cargo as Array
-		
+
 	Description:
-	Handles tempalte spawned Vehicles. First they will get a waypoint at Target Marker Pos. 
+	Handles template spawned Vehicles. First they will get a waypoint at Target Marker Pos.
 	If engage or waypoint is reached, they get passed into Patrol Script.
 
 */
 
 // Parameter Init
 params ["_leader","_marker","_speed","_patrolParams",["_cargo",[]],["_groupSize",4]];
-private "_ins"; 
+private "_ins";
 _veh = vehicle _leader;
 
 // Damaged Eventhandler

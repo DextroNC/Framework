@@ -4,10 +4,10 @@
 		<-- Zone as String (Marker Name)
 		<-- Mode Parameter as String ("P","G","R","H")
 		<-- Modifier Parameters (modifies Mode)
-		
+
 	Description:
 		Adds a Unit to the Patrol Module and based on the Parameters
-		
+
 	Example (Patrol in Zone "A1"):
 		nul = [leader,"A1","P"] spawn fw_fnc_patrol;
 */
@@ -53,6 +53,7 @@ _modifier = [_zone];
 
 // Push Group into Patrol script adding Mode and Modifier
 _group = group _leader;
+_group deleteGroupWhenEmpty true;
 _group setVariable ["SR_PatrolMode",_mode];
 _group setVariable ["SR_PatrolModifier",_modifier];
-SR_PatrolUnits pushBackUnique _group; 
+SR_PatrolUnits pushBackUnique _group;

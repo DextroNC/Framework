@@ -23,7 +23,9 @@ if (_radius < 0) then {
 	[_position, nil, _units, _radius, _mode, false, true] call ace_ai_fnc_garrison;
 };
 
-SR_PatrolUnits pushBackUnique (group (_units select 0)); 
+_group = group (_units select 0);
+_group deleteGroupWhenEmpty true;
+SR_PatrolUnits pushBackUnique _group;
 
 // Debug
 if (SR_Debug) then { systemChat format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius]; };
