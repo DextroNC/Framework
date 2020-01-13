@@ -42,6 +42,8 @@
 		class civBomber{};
 		class civSleeper{};
 		class civShooter{};
+		class civEventhandler{};
+		class civBomberAction{};
 	};
 	class arty
 	{

@@ -18,24 +18,42 @@ if(!isServer) exitWith {};
 params [["_unit",objNull],["_mode",1]];
 
 switch (_mode) do {
-	// Suicide Bomber Mode
+	// Suicide Bomber Mode (When Loaded in a Vic he blows himself up)
 	case 1: {
-		_unit addItem "HandGrenade";
+		// Add Explosives
+		_unit addItem "rhs_mag_rgd5";
+
+		// Add EH
 		_unit addEventHandler ["GetInMan", {
 			params ["_unit"];
-			[_unit] spawn fw_fnc_civBomber;
+			[_unit,_handle] spawn fw_fnc_civBomberAction;
 		}];
 	};
 	// Weapon Mode
 	case 2: {
+		// Assign Weapon
+		_array = [[]];
 		_unit addWeapon "hgun_Pistol_01_F";
 		_unit addMagazine "10Rnd_9x21_Mag";
 		_unit addMagazine "10Rnd_9x21_Mag";
 		sleep 2;
+
+		// Hide Weapon
 		[_unit] call ace_weaponselect_fnc_putWeaponAway;
+
+		// Captive EH
 		["ace_captiveStatusChanged", {
 			params ["_unit","_status","_reason"];
 			nul = [_unit] spawn fw_fnc_civShooter; 
 		}] call CBA_fnc_addEventHandler;
+
+		// Fired Near EH
+
+		_unit addEventHandler ["FiredNear", {
+			params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
+			if (_distance < 25) then {
+				nul = [_unit] spawn fw_fnc_civShooter; 
+			};
+		}];
 	};
 };

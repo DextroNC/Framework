@@ -12,7 +12,7 @@
 		In addition it also allows the spawning of suicide bombers.
 		
 		Example:
-		nul = ["civ1",["LOP_CHR_Civ_Random"],8,0] spawn fw_fnc_civSpawn;
+			nul = ["civ1",["LOP_CHR_Civ_Random"],8,0] spawn fw_fnc_civSpawn;
 
 */
 
@@ -24,94 +24,91 @@ if (HC in allPlayers && isServer) exitWith {};
 if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
 
 // Parameter Init
-params ["_zone", "_civs", "_total",["_bomber", 0],["_sleeper",0],["_shooter",0]];
+params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_shooter",0]];
 
-// Inline Function
-SR_CIV_OCCUPATION = {
+// Inline Create Civilian Function
+SR_Civ_Create = {
 	// Parameter Init
-	params ["_zone", "_civs", "_total",["_bomber", 0],["_sleeper",0],["_shooter",0]];
-	_zone setMarkerAlpha 0;
-	private "_unit";
-	private "_v";
+	params ["_position","_classnames"];
 	
-	// Civilian Spawn
-	 for [{_i=0}, {_i < _total}, {_i = _i + 1}] do {
-		_type = _civs call BIS_fnc_selectRandom;
-		_pos = [_zone, true] call CBA_fnc_randPosArea;
-		_grp = createGroup civilian;
-		_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
-		_unit setBehaviour "SAFE";
-		// add Eventhandler to count Civilian Casulties
-		_unit addEventHandler ["Killed", {
-			params ["_dead"];
-			_killer = _dead getVariable ["ace_medical_lastDamageSource", objNull];
-			_murderer = name _killer;
-			_name = name _dead;
-			_str = SR_CC;
-			_str = format [_str + "<br/>" + _name + " has been killed by " + _murderer + "."];
-			SR_CC = _str;
-			publicVariable "SR_CC";
-		}]; 
-		// Civ either Patrols, occupies Building or Idles
-		switch (round random 5) do {
-			case 1: {
-				[_grp,_zone,5] spawn fw_fnc_civPatrol;
-			};
-			case 2: {
-				_list = (position _unit) nearRoads 500;
-				if (isNil "_list") exitWith {
-					[_grp,_zone,5] spawn fw_fnc_civPatrol;
-				};
-				_v = _list call BIS_fnc_selectRandom;
-				if (isNil "_v") exitWith {
-					[_grp,_zone,5] spawn fw_fnc_civPatrol;
-				};
-				_pos = [position _v, 5, random 360] call BIS_fnc_relPos;
-				_unit setPos _pos;
-				};
-			default {
-				[_pos, [_unit], 500] spawn fw_fnc_garrison;
-			};
-		};
+	// Create Civ
+	private _group = createGroup civilian;
+	private _unit = _group createUnit [(selectRandom _classnames), _position,[],2,"NONE"];
+	_group setVariable ["Vcm_Disable",true];
+	_unit setBehaviour "SAFE";
+
+	// Return
+	_unit
+};
+
+// Spawn Civilians
+for [{_i=1}, {_i <= _civilians}, {_i = _i + 1}] do {
+	private _position = [_zone, true] call CBA_fnc_randPosArea;
+	private _roll = round 5;
+	private _roads = _position nearRoads 250;
+	private _task = false;
+
+	// Create Civilians
+	private _unit = [_position,_classnames] call SR_Civ_Create;
+	[_unit] spawn fw_fnc_civEventhandler;
+
+	// Roadside 
+	if (_roll < 2 && count _roads > 0) then {
+		_unit setPos (selectRandom _roads);
+		[_unit,selectRandom ["WATCH_1","WATCH_2","LISTEN_CIV","LISTEN_TO_RADIO","NAVIGATE"],true] spawn Achilles_fnc_ambientAnim;
+		_task = true;
 	};
-	// Suicide Bomber Spawn
-	iF (_bomber > 0) then {
-		for [{_i=0}, {_i < _bomber}, {_i = _i + 1}] do {
-			_type = _civs call BIS_fnc_selectRandom;
-			_pos = [_zone, true] call CBA_fnc_randPosArea;
-			_grp = createGroup civilian;
-			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
-			_unit setBehaviour "SAFE";
-			_unit addItem "HandGrenade";
-			[_grp,_zone,5] spawn fw_fnc_civPatrol;
-			[_unit] spawn fw_fnc_civBomber;
-		};
-	};
-	// Shooter Spawn
-	iF (_shooter > 0) then {
-		for [{_i=0}, {_i < _shooter}, {_i = _i + 1}] do {
-			_type = _civs call BIS_fnc_selectRandom;
-			_pos = [_zone, true] call CBA_fnc_randPosArea;
-			_grp = createGroup civilian;
-			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
-			_unit setBehaviour "SAFE";
-			[_grp,_zone,5] spawn fw_fnc_civPatrol;
-			[_unit, 2] spawn fw_fnc_civSleeper;
-		};
-	};
-	// Sleeper Spawn
-	iF (_sleeper > 0) then {
-		for [{_i=0}, {_i < _sleeper}, {_i = _i + 1}] do {
-			_type = _civs call BIS_fnc_selectRandom;
-			_pos = [_zone, true] call CBA_fnc_randPosArea;
-			_grp = createGroup civilian;
-			_unit = _grp createUnit [_type, _pos,[],2,"NONE"];
-			_unit setBehaviour "SAFE";
-			[_grp,_zone,5] spawn fw_fnc_civPatrol;
-			[_unit, 1] spawn fw_fnc_civSleeper;
-		};
+		
+	// Occupation
+	if (_roll > 4 && _task) then {
+		[_position, [_unit], 250] spawn fw_fnc_garrison;
+		_task = true;
+	};	
+
+	if (!_task) then {
+		[group _unit,_zone,5] spawn fw_fnc_civPatrol;
 	};
 };
 
-// Exec Inline Function
-[_zone, _civs, _total,_bomber,_sleeper,_shooter] call SR_CIV_OCCUPATION;
+// Suicide Bomber Spawn
+if (_bomber > 0) then {
+	for [{_i=1}, {_i <= _bomber}, {_i = _i + 1}] do {
+		private _position = [_zone, true] call CBA_fnc_randPosArea;
+		
+		// Create Civilians
+		private _unit = [_position,_classnames] call SR_Civ_Create;
+
+		// Execute Bomber Actions
+		_unit addItem "rhs_mag_rgd5";
+		[group _unit,_zone,5] spawn fw_fnc_civPatrol;
+		[_unit] spawn fw_fnc_civBomber;
+	};
+};
+
+// Shooter Spawn
+if (_shooter > 0) then {
+	for [{_i=1}, {_i <= _shooter}, {_i = _i + 1}] do {
+		private _position = [_zone, true] call CBA_fnc_randPosArea;
+		
+		// Create Civilians
+		private _unit = [_position,_classnames] call SR_Civ_Create;
+
+		// Execute Shooter Actions
+		[group _unit,_zone,5] spawn fw_fnc_civPatrol;
+		[_unit, 2] spawn fw_fnc_civSleeper;
+	};
+};
+
+// Sleeper Spawn
+if (_sleeper > 0) then {
+	for [{_i=1}, {_i <= _sleeper}, {_i = _i + 1}] do {
+		private _position = [_zone, true] call CBA_fnc_randPosArea;
+		
+		// Create Civilians
+		private _unit = [_position,_classnames] call SR_Civ_Create;
+
+		// Execute Sleeper Actions
+		[group _unit,_zone,5] spawn fw_fnc_civPatrol;
+		[_unit, 1] spawn fw_fnc_civSleeper;
+	};
+};

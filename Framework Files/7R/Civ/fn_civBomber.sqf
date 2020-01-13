@@ -3,7 +3,7 @@
 		<-- Unit as Object
 		
 	Description:
-	
+		Manages Suicide Bombers.
 
 */
 //Per Frame Handler
@@ -43,23 +43,12 @@
 				deleteWaypoint ((waypoints _grp) select 0);
 			} forEach waypoints _grp;
 		};
-		_unit doMove position _target;
+		_unit doMove (position _target);
 		if (_unit distance2d _target < 25) then {
 			// Sets the exploding var to true (prevents multiple explosion)
 			_unit setVariable ["is_exploding", true];
-
-			[_unit,_handle] spawn {
-				params ["_unit","_handle"];
-				if ("HandGrenade" in items _unit) then { 
-					_target = _unit getVariable "sb_target";
-					group _unit setSpeedMode "FULL"; 
-					_unit doMove position _target;
-					[_unit, "akbar"] remoteExec ["say3D"];
-					sleep 3;
-					"M_PG_AT" createVehicle (position _unit);
-				};
-				[_handle] call CBA_fnc_removePerFrameHandler;
-			};
+			
+			[_unit,_handle] spawn fw_fnc_civBomberAction;
 		};	
 	};
 } , 2, [_this select 0]] call CBA_fnc_addPerFrameHandler;
