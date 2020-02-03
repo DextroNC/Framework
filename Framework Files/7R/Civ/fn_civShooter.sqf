@@ -12,8 +12,11 @@ params ["_unit"];
 // Check if Armed
 if (!(handgunWeapon _unit isEqualTo "hgun_Pistol_01_F")) exitWith {};
 
+// Remove Killed echo
+_unit removeAllEventHandlers "killed";
+
 // Delay 
-sleep (6 + (random 8));
+sleep (5 + (random 3));
 
 // Check if Armed
 if (!(handgunWeapon _unit isEqualTo "hgun_Pistol_01_F")) exitWith {};
@@ -25,6 +28,14 @@ _unit addMagazine "10Rnd_9x21_Mag";
 _side = SR_Side call BIS_fnc_enemySides;
 _group = createGroup (_side select 1);
 [_unit] joinSilent  _group;
+/*
 sleep 2;
 _muzzles = getArray(configFile >> "cfgWeapons" >> (handgunWeapon _unit) >> "muzzles");
 _unit selectWeapon (_muzzles select 0);
+*/
+
+_unit reveal (_unit findNearestEnemy _unit); 
+
+
+// Remove all FiredNear EH
+_unit removeAllEventHandlers "FiredNear";
