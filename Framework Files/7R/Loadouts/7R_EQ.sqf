@@ -18,6 +18,10 @@ _group = group _unit;
 // Local only execute
 if( !local _unit ) exitWith {};
 
+if (_type == "B_Parachute") then {
+  _unit addBackpack _type;
+};
+
 if (!(_unit canAdd _type)) exitWith {
   "Not enough space" remoteExec ["hint", _unit];
 };
@@ -36,14 +40,13 @@ switch (_type) do {
       if (({_type in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
         _unit addItem _type;
       } else {
-        "Radio PRC152 limit reached!" remoteExec ["hint", _group];
+        "Radio PRC148 limit reached!" remoteExec ["hint", _group];
       };
     };
     case "ACRE_PRC117F": {_unit addItem _type;};
     case "rhsusf_ANPVS_14": {_unit linkItem _type;};
     case "rhsusf_ANPVS_15": {_unit linkItem _type;};
     case "rhs_1PN138": {_unit linkItem _type;};
-    case "B_Parachute": {_unit addBackpack _type;};
     case "ACE_key_lockpick": {_unit addItem _type;};
     case "Laserdesignator": {_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator"; _unit addItem "Laserbatteries";};
     case "ACE_Vector": {_unit addWeapon _type;};
