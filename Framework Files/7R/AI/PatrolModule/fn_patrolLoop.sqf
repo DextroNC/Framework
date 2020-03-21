@@ -68,10 +68,6 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
                 [_this] spawn fw_fnc_rampageCharge;
 
            };
-           // Defense
-           case "D": {
-               
-           };
         };
 
         // Force Flashlights
