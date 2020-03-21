@@ -33,14 +33,8 @@ switch (_mode) do {
 };
 
 // Debug check (insuffiecent input cancel)
-if (count _this < 3 || !(_mode in ["P","G","R","H","RP","NW"]) || count _zone == 0) exitWith {
+if (count _this < 3 || !(_mode in ["P","G","R","H","RP","D"]) || count _zone == 0) exitWith {
 	systemChat format ["%1:Error - Insufficient Input", group objNull];
-};
-
-// If Param = NoWaypoint then exit patrol script
-if (_mode isEqualTo "NW") exitWith {
-	// Disable VCOM
-	(group _leader) setVariable ["Vcm_Disable",true,true];
 };
 
 // Create Modifier Array
@@ -54,6 +48,13 @@ _modifier = [_zone];
 // Push Group into Patrol script adding Mode and Modifier
 _group = group _leader;
 _group deleteGroupWhenEmpty true;
+
+// If Param = Defense, disable VCOM
+if (_mode isEqualTo "D") then {
+	_group setVariable ["Vcm_Disable",true,true];
+	_group setVariable ["SR_PatrolMode","P"];
+};
+
 _group setVariable ["SR_PatrolMode",_mode];
 _group setVariable ["SR_PatrolModifier",_modifier];
 SR_PatrolUnits pushBackUnique _group;
