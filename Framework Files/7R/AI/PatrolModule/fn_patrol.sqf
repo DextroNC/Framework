@@ -51,7 +51,8 @@ _group deleteGroupWhenEmpty true;
 
 // If Param = Defense, disable VCOM
 if (_mode isEqualTo "D") then {
-	_group setVariable ["Vcm_Disable",true,true];
+	_group setVariable ["VCM_NOFLANK",true,true];
+	_group setVariable ["VCM_NORESCUE",true,true];
 	_group setVariable ["SR_PatrolMode","P"];
 };
 
