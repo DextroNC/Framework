@@ -19,6 +19,9 @@ if (phase == 9999) exitWith {
 
 // Server Only
 if (isServer) then {
+	// Stop recording
+	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
+
 	// Remove Hostiles
 	{
 		if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
@@ -38,7 +41,7 @@ if (isServer) then {
 	} forEach [SR_KIA,SR_CC,SR_WC];
 
 	// Remove Corpses (perFrameEH)
-	[{	
+	[{
 		// Remove Corpses
 		{
 			deleteVehicle _x;
