@@ -1,6 +1,6 @@
 /*
 	Parameters:
-		<-- None
+		<-- Opt: No Deletion as Boolean
 
 	Description:
 		Starts debrief mode, removes hostiles and displays messages.
@@ -9,6 +9,10 @@
 		[] call fw_fnc_debrief; (Global Execute)
 
 */
+// Parameter Init
+params [["_noDelete",false]];
+
+
 // Exit when debrief already in progress
 if (phase == 9999) exitWith {
 	["DEBRIEF IN PROGRESS", 1.5] spawn ace_common_fnc_displayTextStructured;
@@ -23,18 +27,22 @@ if (isServer) then {
 	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 
 	// Remove Hostiles
-	{
-		if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
-			deleteVehicle _x;
-		};
-	} forEach (allUnits-allPlayers);
+	if (!_noDelete) then {
+		// Deny new spawns
+		SR_Unit_Cap = 0;
+		publicVariable "SR_Unit_Cap";
+		// Remove Hostiles
+		{
+			if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
+				deleteVehicle _x;
+			};
+		} forEach (allUnits-allPlayers);
+	};
 
 	// Set Variables
 	phase = 9999;
 	publicVariable "phase";
-	SR_Unit_Cap = 0;
-	publicVariable "SR_Unit_Cap";
-
+	
 	// Server Log
 	{
 		diag_log _x;
@@ -58,6 +66,8 @@ if (isServer) then {
 [player,["Debrief",["Civilian Casulties",SR_CC]]] remoteExec ["createDiaryRecord",0];
 // War Crimes
 [player,["Debrief",["War Crimes",SR_WC]]] remoteExec ["createDiaryRecord",0];
+// Friendly Fire
+[player,["Debrief",["Friendly Fire",SR_FF]]] remoteExec ["createDiaryRecord",0];
 
 // Unload Weapons
 {

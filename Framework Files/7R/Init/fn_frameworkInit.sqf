@@ -17,6 +17,8 @@ if (isServer) then {
 	publicVariable "SR_KIA";
 	SR_WC = "Alleged War Criminals:";
 	publicVariable "SR_WC";
+	SR_FF = "Friendly Fire:";
+	publicVariable "SR_FF";
 };
 SR_SuspicionValue = 0;
 SR_SuspicionSpotted = -60;
