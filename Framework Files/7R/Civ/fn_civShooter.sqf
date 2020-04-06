@@ -34,7 +34,8 @@ _muzzles = getArray(configFile >> "cfgWeapons" >> (handgunWeapon _unit) >> "muzz
 _unit selectWeapon (_muzzles select 0);
 */
 
-_unit reveal (_unit findNearestEnemy _unit); 
+// Reveal Players
+{_unit reveal _x} forEach allPlayers;
 
 
 // Remove all FiredNear EH
