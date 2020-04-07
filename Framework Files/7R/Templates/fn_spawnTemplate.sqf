@@ -135,6 +135,28 @@ if (_type isEqualTo "GARRISON") Then {
 	// Init Garrison on spawned Unit
 	_garrison remoteExec ["fw_fnc_garrison",2];
 };
+// =================================================================================================
+
+// ZEI Garrison
+if (_type isEqualTo "ZEI") Then {
+
+	// Find Template Array
+	{
+		if (_number in _x) exitWith {
+			_template = _x;
+		};
+	}forEach SR_Template;
+
+	// Check if Template exists
+	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
+
+	_side = _template select 1;
+	_units = _template select 2;
+	_grp = createGroup _side;
+	// Init Garrison on spawned Unit
+	[_pos, _units, _grp] remoteExec ["fw_fnc_garrisonZEI",2];
+
+};
 
 // =================================================================================================
 
