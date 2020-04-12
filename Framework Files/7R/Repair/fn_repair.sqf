@@ -13,7 +13,7 @@ params ["_vehicle","_player"];
 private _timer = 0;
 private _fuel = 0;
 private _dmg = 0;
-private _rearmed = false;
+private _hitPoints = false;
 private _end = false;
 private _eng = true;
 private _arm = "WAITING";
@@ -45,6 +45,13 @@ while {_player call FNC_condiction} do {
 
 	if (_dmg > 0 && !_eng) then {
 		_vehicle setDamage (_dmg - 0.025);
+	};
+
+	if (_dmg == 0 && !_hitPoints) then {	
+		{
+			[_vehicle, _x, 0, false] spawn BIS_fnc_setHitPointDamage;
+		}forEach ((getAllHitPointsDamage _vehicle) select 0);
+		_hitPoints = true;
 	};
 
 	if (_dmg == 0 && _fuel < 1 && !_eng) then {
