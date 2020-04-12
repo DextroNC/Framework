@@ -14,27 +14,30 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "OFrP_Uniform_T4S2_Full_DA_FRHV_1CLBV";
+_unit forceAddUniform "OFrP_Uniform_T4S2_UBAS_CE01_FRBV_CPLBV";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-_unit addItemToUniform "ACE_RangeCard";
-for "_i" from 1 to 4 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
-_unit addVest "OFrP_Vest_CIRAS_Marksman2_CB";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-_unit addBackpack "B_AssaultPack_cbr";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+_unit addVest "OFrP_Vest_SMB_Rifleman_Kaki";
+_unit addItemToVest "SmokeShell";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+_unit addItemToVest "SmokeShellGreen";
+_unit addItemToVest "SmokeShellRed";
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellOrange";};
+_unit addBackpack "OFrP_Bag_Felin_45L_Radio";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "rhsusf_acc_anpvs27";
-_unit addHeadgear "H_Booniehat_tan";
+_unit addItemToBackpack "Laserbatteries";
+_unit addHeadgear "OFrP_Helmet_FELIN_CE";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "AMF_RFF2_01_F";
-_unit addPrimaryWeaponItem "RKSL_optic_PMII_312_sunshade";
+_unit addWeapon "SPS_hk416_11_vfg_black_f";
+_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "Binocular";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -42,18 +45,19 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "10Rnd_762x54_Mag";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "10Rnd_762x54_Mag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
+_unit addItemToVest "ACRE_PRC152";
+_unit addItemToBackpack "ACRE_PRC117F";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
-	_unit addHeadgear "OFrP_Helmet_FELIN_TAN";
+	_unit linkItem "rhsusf_ANPVS_15";
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","DMR", true];
+_unit setVariable ["SR_Class","FAC", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
