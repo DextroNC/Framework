@@ -14,26 +14,27 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "OFrP_Uniform_T4S2_Short_CE_FRHV_SGTBV";
+_unit forceAddUniform "OFrP_Uniform_T4S2_Full_DA_FRHV_CPLBV";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
-_unit addVest "OFrP_Vest_CIRAS_TeamLeader_MJK";
+_unit addVest "OFrP_Vest_CIRAS_Grenadier_CB";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
-_unit addBackpack "OFrP_Bag_Felin_45L";
+for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+_unit addBackpack "B_AssaultPack_cbr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "ToolKit";
-_unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addHeadgear "OFrP_Helmet_TC3000_cover_ESSCOVER_CE";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "1Rnd_GAM_40";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_GAM_40_Smoke_White";};
+_unit addHeadgear "OFrP_Helmet_Spectra_01_ESSCOVER_DA";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "AMF_Samas_F1_01_camo_F";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
+_unit addWeapon "AMF_Famas_valo_01_F";
+_unit addPrimaryWeaponItem "BWA3_acc_LLM01_irlaser";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
@@ -50,10 +51,16 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhsusf_ANPVS_14";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
+	_unit addItemToBackpack "1Rnd_GAM_40_Flare_White";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","EE", true];
-_unit setVariable ["ace_isEngineer",2, true];
+_unit setVariable ["SR_Class","G", true];
+_unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 

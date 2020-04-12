@@ -14,25 +14,23 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "OFrP_Uniform_T4S2_Short_CE_FRHV_SGTBV";
+_unit forceAddUniform "OFrP_Uniform_T4S2_Full_SE_FRHV_1CLBV";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
-_unit addVest "OFrP_Vest_CIRAS_TeamLeader_MJK";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
-_unit addBackpack "OFrP_Bag_Felin_45L";
-for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "ToolKit";
-_unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addHeadgear "OFrP_Helmet_TC3000_cover_ESSCOVER_CE";
+_unit addVest "OFrP_Vest_S3_DA";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_SmokeShellCableTie";};
+_unit addItemToVest "SmokeShell";
+_unit addItemToVest "ACE_microDAGR";
+for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
+_unit addHeadgear "rhsusf_cvc_ess";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "AMF_Samas_F1_01_camo_F";
+_unit addWeapon "AMF_Samas_F1_01_F";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
@@ -43,17 +41,18 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
+_unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "rhsusf_ANPVS_14";
+	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","EE", true];
-_unit setVariable ["ace_isEngineer",2, true];
+_unit setVariable ["SR_Class","TC", true];
+_unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
