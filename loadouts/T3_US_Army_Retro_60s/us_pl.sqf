@@ -27,7 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_grenade_mkii_mag";};
 _unit addBackpack "UK3CB_B_B_Radio_Backpack";
 _unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-´for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_m18_purple";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_m18_purple";};
 _unit addHeadgear "H_Beret_02";
 
 comment "Add weapons";
