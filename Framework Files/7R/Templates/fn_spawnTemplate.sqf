@@ -20,270 +20,138 @@ if (!isServer && hasInterface) exitWith {};
 if (HC in allPlayers && isServer) exitWith {};
 
 // Check Unit Cap
-if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
+if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {systemChat "Unit Cap reached."};
 
 // Parameter init
-params ["_marker","_type","_number","_params","_params2"];
-private _template = [];
-private _units = [];
-private _leader = objNull;
-private _array = [];
-_pos = [];
+params ["_marker","_type","_number","_params"];
+private ["_template","_leader","_group","_array","_spawnPos"];
 
-// Spawn Pos Init
-// Spawn Pos Init
+// Find Template
+private _template  = [_number] call fw_fnc_findTemplate;
+if (count _template == 0) exitWith {systemChat "Error: Template does not exist!"};
+_template params ["_side","_units"];
+
+
+// Get Spawn Pos
 if (markerSize _marker isEqualTo [1,1]) then {
-	_pos = markerPos _marker;
+	_spawnPos = markerPos _marker;
 } else {
-	_pos = [_marker, true] call CBA_fnc_randPosArea;
+	_spawnPos = [_marker, true] call CBA_fnc_randPosArea;
 };
+
+// Create Group
+_group = createGroup _side;
+
+
+// =================================================================================================
+// INFANTRY PATROLS
 // =================================================================================================
 
-// Patrol Template Spawn
 if (_type isEqualTo "PATROL") Then {
 
-	// Find Template Array
-	{
-		if (_number in _x) exitWith {
-			_template = _x;
-		};
-	}forEach SR_Template;
+	// Spawn Units
+	_leader = [_group,_units,_spawnPos] call fw_fnc_spawnTemplateUnits;
 
-	// Check if Template exists
-	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
+	// Modify Group
+	_group deleteGroupWhenEmpty true;
+	_group selectLeader _leader;
 
-	// Pass Template data
-	_side = _template select 1;
-	_units = _template select 2;
-
-	// Pre-Spawn Init
-	_grp = createGroup _side;
-
-	// Spawn Loop
-	for "_i" from 0 to (count _units - 1) do
-	{
-		_type = _units select _i;
-		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-		[_unit] join _grp;
-		if (count SR_AI_NVG > 0) then {
-			_unit linkItem SR_AI_NVG;
-		};
-		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
-			[_unit] spawn fw_fnc_removeNVG;
-		};
-		If (_i == 0) then
-		{
-			_leader = _unit;
-		};
-	};
-
-	_grp deleteGroupWhenEmpty true;
-	// Assign Leader and Start Patrol
-	_grp selectLeader _leader;
-	_patrolParams = [_leader];
-	_patrolParams append _params;
 	// Init Patrol Script on Spawn Units
-	_patrolParams remoteExec ["fw_fnc_patrol",2];
+	([_leader] + _params) remoteExec ["fw_fnc_patrol",2];
 };
 
 // =================================================================================================
+// AREA GARRISON
+// =================================================================================================
 
-// Garrison Template Spawn
 if (_type isEqualTo "GARRISON") Then {
 
-	// Find Template Array
-	{
-		if (_number in _x) exitWith {
-			_template = _x;
-		};
-	}forEach SR_Template;
+	// Spawn Units
+	_leader = [_group,_units,_spawnPos] call fw_fnc_spawnTemplateUnits;
 
-	// Check if Template exists
-	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
+	// Modify Group
+	_group deleteGroupWhenEmpty true;
+	_group selectLeader _leader;
 
-	// Pass Template data
-	_side = _template select 1;
-	_units = _template select 2;
-
-	// Pre-Spawn Init
-	_grp = createGroup _side;
-
-	// Spawn Loop
-	for "_i" from 0 to (count _units - 1) do
-	{
-		_type = _units select _i;
-		_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-		[_unit] join _grp;
-		if (count SR_AI_NVG > 0) then {
-			_unit linkItem SR_AI_NVG;
-		};
-		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
-			[_unit] spawn fw_fnc_removeNVG;
-		};
-		If (_i == 0) then
-		{
-			_leader = _unit;
-		};
-	};
-
-	_grp deleteGroupWhenEmpty true;
-	// Assign Leader and Create Garrison Array
-	_grp selectLeader _leader;
-	_units = units _grp;
-	_garrison = [_pos, _units];
-	_garrison append _params;
-	// Init Garrison on spawned Unit
-	_garrison remoteExec ["fw_fnc_garrison",2];
+	// Pass to Garrison Script
+	([_spawnPos, units _group] + _params) remoteExec ["fw_fnc_garrison",2];
 };
+// =================================================================================================
+// SINGLE BUILDING GARRISON
 // =================================================================================================
 
 // ZEI Garrison
 if (_type isEqualTo "ZEI") Then {
 
-	// Find Template Array
-	{
-		if (_number in _x) exitWith {
-			_template = _x;
-		};
-	}forEach SR_Template;
-
-	// Check if Template exists
-	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
-
-	_side = _template select 1;
-	_units = _template select 2;
-	_grp = createGroup _side;
-	// Init Garrison on spawned Unit
-	[_pos, _units, _grp] remoteExec ["fw_fnc_garrisonZEI",2];
+	// Pass to Garrison Script (ZEI)
+	[_spawnPos, _units, _group] remoteExec ["fw_fnc_garrisonZEI",2];
 
 };
 
+// =================================================================================================
+// VEHICLE SPAWN
 // =================================================================================================
 
 // Vehicle Template Spawn
 if (_type isEqualTo "VEHICLE") Then {
 
-	// Find Template Array
-	{
-		if (_number in _x) exitWith {
-			_template = _x;
-		};
-	} forEach SR_Template;
+	// Spawn Units
+	_leader = [_group,_units,_spawnPos,(markerDir _marker)] call fw_fnc_spawnTemplateUnits;
 
-	// Check if Template exists
-	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
+	// Modify Group
+	_group deleteGroupWhenEmpty true;
+	_group selectLeader _leader;
+	_group setVariable ["Vcm_Disable",true,true];
 
-	// Pass Template data
-	_side = _template select 1;
-	_units = _template select 2;
-
-	// Pre-Spawn Init
-	_dir = markerDir _marker;
-	_grp = createGroup _side;
-
-	// Spawn Empty Vehicle
-	_veh = createVehicle [(_units select 0), _pos, [], 0, "NONE"];
-	_veh setDir _dir;
-	_veh disableTIEquipment true;
-	_units = _units - [(_units select 0)];
-
-	// Unit Spawn Loop
-	{
-		private _type = _x select 0;
-		private _slot = _x select 1;
-		_unit = objNull;
-		// Process Driver, Gunner, Commander, Cargo or Turret
-		switch (_slot) do {
-			case "driver": {
-				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-				[_unit] join _grp;
-				_unit moveInDriver _veh;
-				_unit assignAsDriver _veh;
-				[_unit] orderGetIn true;
-
-			};
-			case "gunner": {
-				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-				[_unit] join _grp;
-				_unit moveInGunner _veh;
-				_unit assignAsGunner _veh;
-				[_unit] orderGetIn true;
-			};
-			case "commander": {
-				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-				[_unit] join _grp;
-				_unit moveInCommander _veh;
-				_unit assignAsCommander _veh;
-				[_unit] orderGetIn true;
-			};
-			case "cargo": {
-				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-				[_unit] join _grp;
-				_unit moveInCargo _veh;
-				_unit assignAsCargo _veh;
-				[_unit] orderGetIn true;
-			};
-			case "Turret": {
-				private _path = _x select 2;
-				_unit = _grp createUnit [_type, _pos, [], 0, "form"];
-				[_unit] join _grp;
-				_unit moveInTurret [_veh, _path];
-				_unit assignAsTurret [_veh, _path];
-				[_unit] orderGetIn true;
-			};
-		};
-		if (count SR_AI_NVG > 0) then {
-			_unit linkItem SR_AI_NVG;
-		};
-		if (SR_AI_removeNVG || SR_AI_addFlashlight) then {
-			[_unit] spawn fw_fnc_removeNVG;
-		};
-	} forEach _units;
-
-	_grp deleteGroupWhenEmpty true;
-	// Create Array to pass
-	private _leader = leader _grp;
-	private _pass = [_leader];
-	_pass append _params;
-	// Init Vehicle Spawn
-	nul = _pass spawn fw_fnc_spawnVehicleTemplate;
+	// Pass to Vehicle diag_activeScripts
+	([_leader] + _params) spawn fw_fnc_spawnVehicleTemplate;
 };
-
 
 // =================================================================================================
 
-// Air
+// Bunkers
+if (_type isEqualTo "BUNKER") Then {
+	private _bunkerClasses = ["Land_fortified_nest_big","Land_BagBunker_Large_F","Land_Bunker_01_big_F","Land_Bunker_01_HQ_F","Land_Bunker_01_tall_F","Bunker_02_base_F","Fortress2","Land_Bunker_01_small_F","Land_fortified_nest_small","Fortress1","Land_BagBunker_Small_F"];
+	_params params [["_radius",200]];
+
+	// Find and Populate Bunkers
+	{
+		private _bunkers = _spawnPos nearObjects [_x, _radius];
+		
+		// Populate Bunkers
+		{
+			// Find Slots available
+			private _count = count (_x call BIS_fnc_buildingPositions);
+			private _garrison = _units;
+
+			// Adjust Template
+			if (count _units > _count) then {
+				_garrison resize _count;
+			};
+			// Garrison Bunker (ZEI)
+			[_spawnPos, _garrison, _group] remoteExec ["fw_fnc_garrisonZEI",2];
+		}forEach _bunkers;
+	}forEach _bunkerClasses;
+};
+
+// =================================================================================================
+// Air Units
+// =================================================================================================
+
 if (_type isEqualTo "AIR") Then {
 
-	// Find Template Array
-	{
-		if (_number in _x) exitWith {
-			_template = _x;
-		};
-	}forEach SR_Template;
-
-	// Check if Template exists
-	if (_template isEqualTo []) exitWith {hint "Error: Template does not exist."};
-
-	// Pass Template data
-	_side = _template select 1;
-	_units = _template select 2;
-
-	// Pre-Spawn Init
-	_dir  = markerDir _marker;
-
 	// Spawn Vehicle
-	_veh = [_pos, _dir, (_units select 0), _side] call bis_fnc_spawnVehicle;
+	_vehicle = [_spawnPos, (markerDir _marker), (_units select 0), _side] call bis_fnc_spawnVehicle;
 
-	(_veh select 0) disableTIEquipment true;
+	// Modify Vehicle
+	(_vehicle select 0) disableTIEquipment true;
 
-	// Initialise
+	// Initialise Group
 	private _leader = leader (_veh select 2);
 	_grp = group _leader;
 	_grp deleteGroupWhenEmpty true;
 	_params params ["_tMarker","_wpType","_mode","_pZone"];
 	private "_tPos";
-
 	if (isNil "_pZone") then {
 		if (markerSize _tMarker isEqualTo [1,1]) then {
 			_tPos = markerPos _tMarker;
@@ -300,13 +168,3 @@ if (_type isEqualTo "AIR") Then {
 		[_grp, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 	};
 };
-/*
-// AI skill
-{
-	_x setSkill ["spotDistance",0.75];
-	_x setSkill ["spotTime",0.75];
-	_x setSkill ["courage",0.4];
-	_x setSkill ["commanding",0.75];
-	_x setSkill ["general",0.75];
-}forEach (units group _leader);
-*/
