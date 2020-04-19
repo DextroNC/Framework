@@ -23,13 +23,13 @@ if (HC in allPlayers && isServer) exitWith {};
 if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {systemChat "Unit Cap reached."};
 
 // Parameter init
-params ["_marker","_type","_number","_params"];
+params ["_marker","_type","_number",["_params",[]]];
 private ["_template","_leader","_group","_array","_spawnPos"];
 
 // Find Template
 private _template  = [_number] call fw_fnc_findTemplate;
 if (count _template == 0) exitWith {systemChat "Error: Template does not exist!"};
-_template params ["_side","_units"];
+_template params ["_nbr","_side","_units"];
 
 
 // Get Spawn Pos
@@ -129,7 +129,7 @@ if (_type isEqualTo "BUNKER") Then {
 				_garrison resize _count;
 			};
 			// Garrison Bunker (ZEI)
-			[_spawnPos, _garrison, _group] remoteExec ["fw_fnc_garrisonZEI",2];
+			[(getPos _x), _garrison, _group] remoteExec ["fw_fnc_garrisonZEI",2];
 		}forEach _bunkers;
 	}forEach _bunkerClasses;
 };
