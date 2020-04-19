@@ -9,7 +9,7 @@ class items
 		class PositionInfo
 		{
 			position[]={-5.4912109,339.11066,-5.4306641};
-			angles[]={-0,0.0042870878,0};
+			angles[]={0,0.0042870878,0};
 		};
 		side="Empty";
 		flags=4;
@@ -26,7 +26,7 @@ class items
 		class PositionInfo
 		{
 			position[]={-5.4814453,339.11069,5.4970703};
-			angles[]={-0,0.0042870878,0};
+			angles[]={0,0.0042870878,0};
 		};
 		side="Empty";
 		flags=4;
@@ -42,7 +42,7 @@ class items
 		class PositionInfo
 		{
 			position[]={5.5322266,339.11069,5.4433594};
-			angles[]={-0,0.0042870878,0};
+			angles[]={0,0.0042870878,0};
 		};
 		side="Empty";
 		flags=4;
@@ -58,7 +58,7 @@ class items
 		class PositionInfo
 		{
 			position[]={5.5102539,339.11066,-5.4873047};
-			angles[]={-0,0.0042870878,0};
+			angles[]={0,0.0042870878,0};
 		};
 		side="Empty";
 		flags=4;

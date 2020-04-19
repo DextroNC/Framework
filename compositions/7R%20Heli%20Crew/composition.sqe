@@ -1,5 +1,5 @@
 version=53;
-center[]={1432.8997,5,4446.9014};
+center[]={5615.207,5,3808.3223};
 class items
 {
 	items=2;
@@ -15,55 +15,19 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.0697021,0.0014390945,0.52148438};
+					position[]={-1.0698242,0.0014390945,0.52197266};
 				};
 				side="West";
-				flags=7;
+				flags=6;
 				class Attributes
 				{
 					rank="SERGEANT";
 					init="this setGroupIdGlobal [""R-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
 					description="Helicopter Pilot @Rodeo-1";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=93;
-				type="B_Helipilot_F";
+				id=207;
+				type="SR_HeliPilot";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -112,54 +76,18 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.7593994,0.0014390945,-0.28369141};
+					position[]={-1.7592773,0.0014390945,-0.28320313};
 				};
 				side="West";
-				flags=5;
+				flags=4;
 				class Attributes
 				{
 					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryCrew.sqf"";";
 					description="Helicopter Co-Pilot";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=94;
-				type="B_Helicrew_F";
+				id=212;
+				type="SR_HeliCrewman";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -207,7 +135,7 @@ class items
 		class Attributes
 		{
 		};
-		id=92;
+		id=201;
 	};
 	class Item1
 	{
@@ -221,55 +149,19 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.7595215,0.0014390945,0.3828125};
+					position[]={1.7597656,0.0014390945,0.38330078};
 				};
 				side="West";
-				flags=7;
+				flags=6;
 				class Attributes
 				{
 					rank="SERGEANT";
 					init="call{this setGroupIdGlobal [""R-2""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
 					description="Helicopter Pilot @Rodeo-2";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=96;
-				type="B_Helipilot_F";
+				id=209;
+				type="SR_HeliPilot";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -318,54 +210,18 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.0698242,0.0014390945,-0.421875};
+					position[]={1.0698242,0.0014390945,-0.42138672};
 				};
 				side="West";
-				flags=5;
+				flags=4;
 				class Attributes
 				{
 					init="[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryCrew.sqf"";";
 					description="Helicopter Co-Pilot";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=97;
-				type="B_Helicrew_F";
+				id=211;
+				type="SR_HeliCrewman";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -413,6 +269,6 @@ class items
 		class Attributes
 		{
 		};
-		id=95;
+		id=204;
 	};
 };

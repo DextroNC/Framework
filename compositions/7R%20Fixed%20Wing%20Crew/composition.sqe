@@ -1,5 +1,5 @@
 version=53;
-center[]={7046.2271,5,4452.9751};
+center[]={5614.7041,5,3808.0762};
 class items
 {
 	items=1;
@@ -15,56 +15,20 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.0859375,0.0014390945,0.57275391};
+					position[]={0.0859375,0.0014390945,0.57299805};
 					angles[]={0,5.7386951,0};
 				};
 				side="West";
-				flags=7;
+				flags=6;
 				class Attributes
 				{
 					rank="SERGEANT";
 					init="call{this setGroupIdGlobal [""W-1""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_fixedWing.sqf"";}";
 					description="Fixed Wing Pilot @Whiskey-1";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=11;
-				type="B_Helipilot_F";
+				id=199;
+				type="SR_Pilot";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -117,51 +81,15 @@ class items
 					angles[]={0,5.7386951,0};
 				};
 				side="West";
-				flags=5;
+				flags=4;
 				class Attributes
 				{
 					init="call{[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_fixedWing.sqf"";}";
 					description="Fixed Wing Co-Pilot";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_HeliPilotCoveralls";
-							isBackpack=0;
-							class MagazineCargo
-							{
-								items=2;
-								class Item0
-								{
-									name="SmokeShellGreen";
-									count=1;
-									ammoLeft=1;
-								};
-								class Item1
-								{
-									name="Chemlight_green";
-									count=1;
-									ammoLeft=1;
-								};
-							};
-							class ItemCargo
-							{
-								items=1;
-								class Item0
-								{
-									name="FirstAidKit";
-									count=1;
-								};
-							};
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-					};
 				};
-				id=12;
-				type="B_helicrew_F";
+				id=200;
+				type="SR_Pilot";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -209,6 +137,6 @@ class items
 		class Attributes
 		{
 		};
-		id=10;
+		id=196;
 	};
 };

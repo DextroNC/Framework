@@ -1,0 +1,99 @@
+version=53;
+center[]={5606.3896,5,3803.9351};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.47998047,0.58832455,-0.12866211};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=256;
+		type="SR_Paradrop_Terminal";
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.48046875,0.28405476,0.12890625};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Parachute"", ""7R\Loadouts\7R_EQ.sqf"",[""B_Parachute""]]; " \n "}";
+			disableSimulation=1;
+		};
+		id=262;
+		type="SR_Support_Box_Empty";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+};

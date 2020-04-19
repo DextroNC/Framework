@@ -9,7 +9,7 @@ class items
 		class PositionInfo
 		{
 			position[]={0.096679688,0,0.18261719};
-			angles[]={-0,6.2784142,0};
+			angles[]={0,6.2784142,0};
 		};
 		side="Empty";
 		flags=4;

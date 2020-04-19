@@ -1,5 +1,5 @@
 version=53;
-center[]={3471.957,19,3628.3306};
+center[]={5608.668,5,3809.075};
 class items
 {
 	items=2;
@@ -8,47 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.355957,0.034606934,-1.3618164};
-			angles[]={0,4.1908751,0};
-		};
-		side="Empty";
-		class Attributes
-		{
-			name="pad";
-		};
-		id=218;
-		type="Land_HelipadEmpty_F";
-		atlOffset=0.034606934;
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_isMedicalFacility";
-				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"BOOL"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			nAttributes=1;
-		};
-	};
-	class Item1
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={1.3562012,0.58025742,1.3618164};
+			position[]={1.3564453,0.58832455,1.3620605};
 			angles[]={-0,0.89901906,0};
 		};
 		side="Empty";
@@ -58,7 +18,7 @@ class items
 			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH60"", fw_fnc_heloSpawn,[""RHS_UH60M"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH1Y"", fw_fnc_heloSpawn,[""RHS_UH1Y"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn CH47"", fw_fnc_heloSpawn,[""RHS_CH_47F"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn MELB MH6"", fw_fnc_heloSpawn,[""RHS_MELB_MH6M"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 L"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_L"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 M"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_M"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn AH6 H"", fw_fnc_heloSpawn,[""RHS_MELB_AH6M_H"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH-1 H"", fw_fnc_heloSpawn,[""rhs_uh1h_hidf"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn UH-1 H Gunship"", fw_fnc_heloSpawn,[""rhs_uh1h_hidf_gunship"",pad]];       " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 18 GMPG"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC4_18_GPMG_MTP"",pad]];     " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Merlin 32"", fw_fnc_heloSpawn,[""UK3CB_BAF_Merlin_HC4_32_MTP"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8C_MTP"",pad]];    " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Wildcat Armed Guided"", fw_fnc_heloSpawn,[""UK3CB_BAF_Wildcat_AH1_CAS_8B"",pad]]; this addaction [""<t color=""""#00FF00"""">"" +""Clear Spawn Pad"", fw_fnc_heloSpawn,["""",pad]];  }";
 			disableSimulation=1;
 		};
-		id=219;
+		id=276;
 		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{
@@ -101,6 +61,46 @@ class items
 				};
 			};
 			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.355957,0.034999847,-1.3620605};
+			angles[]={0,4.1908669,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="pad";
+		};
+		id=277;
+		type="SR_SupplyPadEmpty";
+		atlOffset=0.034999847;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
 		};
 	};
 };

@@ -1,0 +1,21 @@
+version=53;
+center[]={5612.4302,5,3807.3831};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0,0.58832455,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=254;
+		type="ACE_FOB_Terminal";
+	};
+};
