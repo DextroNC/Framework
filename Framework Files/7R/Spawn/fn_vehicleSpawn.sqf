@@ -18,7 +18,9 @@ _args params ["_type","_posObj",["_cargo",0]];
 
 _old = nearestObjects [_posObj,["AllVehicles"],10];
 {
-	deleteVehicle _x;
+	if (!((typeOf _x) isEqualTo "Burnes_LCAC_1")) then {
+		deleteVehicle _x;
+	};
 }forEach _old;
 
 // Despawn

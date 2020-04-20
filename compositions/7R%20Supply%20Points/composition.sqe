@@ -1,0 +1,35 @@
+version=53;
+center[]={5608.5557,5,3814.3174};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.012207,0,-4.513916};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=284;
+		type="SR_SupplyPad";
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.0117188,0,4.5141602};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=285;
+		type="SR_SupplyPadEmpty";
+	};
+};

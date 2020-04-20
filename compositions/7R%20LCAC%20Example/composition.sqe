@@ -1,0 +1,180 @@
+version=53;
+center[]={3598.8354,-0.56128263,-268.38318};
+class items
+{
+	items=6;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={3.3239746,4.1577401,2.4790955};
+			angles[]={-0,4.5558171,-0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{if(isServer) then {[lcac, this, objNull] execVM ""Burnes_LCAC\attach.sqf"";};}";
+		};
+		id=382;
+		type="B_Slingload_01_Ammo_F";
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-3.0532227,2.5592358,-0.91540527};
+			angles[]={0,4.6058893,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			init="call{if(isServer) then {[lcac, this, objNull] execVM ""Burnes_LCAC\attach.sqf"";};}";
+			name="pad";
+		};
+		id=386;
+		type="SR_SupplyPadEmpty";
+		atlOffset=20.213249;
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={4.3186035,5.4944062,-1.3147888};
+			angles[]={0,4.560545,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{if(isServer) then {[lcac, this, objNull] execVM ""Burnes_LCAC\attach.sqf"";};[this, 2] execVM ""loadouts\_vehicle_cargo_content.sqf"";}";
+		};
+		id=623;
+		type="UK3CB_BAF_Husky_Passenger_GPMG_Green_MTP_RM";
+		atlOffset=0.00082683563;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""FirstAidKit""],[10]],[[""UK3CB_BAF_762_200Rnd"",""UK3CB_BAF_762_200Rnd_T""],[6,6]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-4.3115234,5.3516746,-2.7118225};
+			angles[]={0,4.5567403,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{if(isServer) then {[lcac, this, objNull] execVM ""Burnes_LCAC\attach.sqf"";};[this, 3] execVM ""loadouts\_vehicle_cargo_content.sqf"";}";
+		};
+		id=624;
+		type="UK3CB_BAF_FV432_Mk3_RWS_Green_MTP_RM";
+		atlOffset=0.00062274933;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""FirstAidKit""],[10]],[[""UK3CB_BAF_127_100Rnd""],[9]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.15820313,3.4329786,-0.65350342};
+			angles[]={0,4.5614529,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="lcac";
+		};
+		id=378;
+		type="Burnes_LCAC_1";
+		atlOffset=17.727083;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""FirstAidKit""],[6]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.29785156,3.3842521,3.1143494};
+			angles[]={-0,1.3877462,-0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{if(isServer) then {[lcac, this, objNull] execVM ""Burnes_LCAC\attach.sqf"";};this addaction [""<t color=""""#00FF00"""">"" +""Spawn Bulldog"", fw_fnc_vehicleSpawn,[""UK3CB_BAF_FV432_Mk3_RWS_Green_MTP_RM"",pad,3]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn Husky"", fw_fnc_vehicleSpawn,[""UK3CB_BAF_Husky_Passenger_GPMG_Green_MTP_RM"",pad,3]];}";
+		};
+		id=625;
+		type="SR_Teleport_Admin";
+	};
+};

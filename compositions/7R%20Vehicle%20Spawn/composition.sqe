@@ -1,5 +1,5 @@
 version=53;
-center[]={3506.1948,19,3603.8594};
+center[]={5609.123,5,3810.9517};
 class items
 {
 	items=2;
@@ -8,47 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={0.024658203,0.11895752,-0.79858398};
-			angles[]={0,4.0928965,0};
-		};
-		side="Empty";
-		class Attributes
-		{
-			name="v_pad";
-		};
-		id=242;
-		type="Land_HelipadEmpty_F";
-		atlOffset=0.11895752;
-		class CustomAttributes
-		{
-			class Attribute0
-			{
-				property="ace_isMedicalFacility";
-				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
-				class Value
-				{
-					class data
-					{
-						class type
-						{
-							type[]=
-							{
-								"BOOL"
-							};
-						};
-						value=0;
-					};
-				};
-			};
-			nAttributes=1;
-		};
-	};
-	class Item1
-	{
-		dataType="Object";
-		class PositionInfo
-		{
-			position[]={-0.024658203,0.58025742,0.79858398};
+			position[]={-0.024414063,0.58832455,0.79833984};
 			angles[]={-0,1.1764042,0};
 		};
 		side="Empty";
@@ -58,7 +18,7 @@ class items
 			init="call{this addaction [""<t color=""""#00FF00"""">"" +""Spawn Vehicle"", fw_fnc_vehicleSpawn,[""rhsusf_rg33_wd"",v_pad,2]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn Armoured Vehicle"", fw_fnc_vehicleSpawn,[""Cha_LAV25A2"",v_pad,3]];}";
 			disableSimulation=1;
 		};
-		id=243;
+		id=279;
 		type="Land_InfoStand_V2_F";
 		class CustomAttributes
 		{
@@ -101,6 +61,46 @@ class items
 				};
 			};
 			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.023925781,0.11899996,-0.79858398};
+			angles[]={0,4.0929017,0};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="v_pad";
+		};
+		id=281;
+		type="SR_SupplyPadEmpty";
+		atlOffset=0.11899996;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
 		};
 	};
 };

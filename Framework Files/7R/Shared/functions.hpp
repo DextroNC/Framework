@@ -33,6 +33,8 @@
 		class saveTemplate{};
 		class spawnTemplate{};
 		class spawnVehicleTemplate{};
+		class findTemplate{};
+		class spawnTemplateUnits{};
 	};
 	class civ
 	{
