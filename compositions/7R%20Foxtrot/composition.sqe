@@ -10,7 +10,68 @@ class items
 		class Entities
 		{
 			items=3;
-			class Item0
+						class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.009765625,0.0014390945,0.80786133};
+				};
+				side="West";
+				flags=6;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupIdGlobal [""F-1""];}";
+					description="Team Leader @Foxtrot";
+					isPlayable=1;
+				};
+				id=229;
+				type="SR_SquadLeader";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
@@ -69,7 +130,7 @@ class items
 					nAttributes=2;
 				};
 			};
-			class Item1
+			class Item2
 			{
 				dataType="Object";
 				class PositionInfo
@@ -122,67 +183,6 @@ class items
 									};
 								};
 								value=1;
-							};
-						};
-					};
-					nAttributes=2;
-				};
-			};
-			class Item2
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-0.009765625,0.0014390945,0.80786133};
-				};
-				side="West";
-				flags=6;
-				class Attributes
-				{
-					rank="SERGEANT";
-					init="call{this setGroupIdGlobal [""F-1""];}";
-					description="Team Leader @Foxtrot";
-					isPlayable=1;
-				};
-				id=229;
-				type="SR_SquadLeader";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="speaker";
-						expression="_this setspeaker _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Male08ENG";
-							};
-						};
-					};
-					class Attribute1
-					{
-						property="pitch";
-						expression="_this setpitch _value;";
-						class Value
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"SCALAR"
-									};
-								};
-								value=0.98000002;
 							};
 						};
 					};
