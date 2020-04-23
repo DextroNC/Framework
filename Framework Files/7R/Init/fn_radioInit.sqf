@@ -20,7 +20,7 @@ _id = ["ace_unconscious", {
 	if (_shooter in allPlayers) then { 
 		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
 		_log remoteExecCall ["diag_log", 2];  
-		private _msg = format [SR_CC + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
+		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
 		SR_FF = _msg;
 		publicVariable "SR_FF";
 	}; 
