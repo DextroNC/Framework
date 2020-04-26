@@ -147,7 +147,7 @@ if (_type isEqualTo "AIR") Then {
 	(_vehicle select 0) disableTIEquipment true;
 
 	// Initialise Group
-	private _leader = leader (_veh select 2);
+	private _leader = leader (_vehicle select 2);
 	_grp = group _leader;
 	_grp deleteGroupWhenEmpty true;
 	_params params ["_tMarker","_wpType","_mode","_pZone"];
