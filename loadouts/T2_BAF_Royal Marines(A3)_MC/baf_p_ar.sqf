@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM";
+_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -23,13 +23,16 @@ _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
 _unit addVest "UK3CB_BAF_V_Osprey_MG_B";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addHeadgear "UK3CB_BAF_H_Mk7_Scrim_E";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+_unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_A";
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+_unit addHeadgear "UK3CB_BAF_H_Boonie_MTP";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m240G";
-_unit addPrimaryWeaponItem "RH_m145";
+_unit addWeapon "UK3CB_BAF_L110A3";
+_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
+_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN_ard";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
 
@@ -39,16 +42,18 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "rhsusf_100Rnd_762x51";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_200rnd_556x45_M_SAW";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "UK3CB_BAF_HMNVS";
+	_unit addHeadgear "UK3CB_BAF_H_Mk7_Net_A";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","MMG", true];
+_unit setVariable ["SR_Class","PAR", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];

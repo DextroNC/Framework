@@ -14,22 +14,22 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM";
+_unit forceAddUniform "UK3CB_BAF_U_HeliPilotCoveralls_Army";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
+_unit addItemToUniform "ACE_Flashlight_XL50";
+for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "UK3CB_BAF_V_Osprey_MG_B";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addHeadgear "UK3CB_BAF_H_Mk7_Scrim_E";
-_unit addGoggles "rhs_googles_clear";
+_unit addItemToUniform "ACE_HandFlare_Green";
+_unit addVest "UK3CB_BAF_V_Pilot_A";
+_unit addItemToVest "ACE_microDAGR";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+_unit addHeadgear "rhsusf_hgu56p_visor";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m240G";
-_unit addPrimaryWeaponItem "RH_m145";
+_unit addWeapon "hlc_smg_mp5a3";
+_unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
 
@@ -39,18 +39,17 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "rhsusf_100Rnd_762x51";};
-
-_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
+_unit addItemToVest "ACRE_PRC343";
+_unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_BAF_HMNVS";
-	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit linkItem "A3_GPNVG18_BLK_F";
+	_unit setUnitTrait ["camouflageCoef",1];
 };
-_unit setVariable ["SR_Class","MMG", true];
+_unit setVariable ["SR_Class","Pilot", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
-_unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];

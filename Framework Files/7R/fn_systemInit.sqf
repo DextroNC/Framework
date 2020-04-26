@@ -22,7 +22,7 @@ ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";
 
 // Supply Boxes
-SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Construction_Supplies","Fortification Supplies"],["SR_Explosives_Box_Empty","Special Weapons Supplies",3],["SR_Ammo_Box_Empty","Infantry Supplies 1 (Small)",4],["SR_Special_Box_Empty","Infantry Supplies 2 (Small)",5],["SR_Medical_Empty","Medical Supplies",7]];
+SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Construction_Supplies","Fortification Supplies"],["SR_basic_Box_Empty","Sniper Supplies",3],["SR_Explosives_Box_Empty","Mortar Supplies",8],["SR_Special_Box_Empty","HAT Supplies",9],["SR_Ammo_Box_Empty","Infantry Supplies 1 (Small)",4],["SR_Special_Box_Empty","Infantry Supplies 2 (Small)",5],["SR_Medical_Empty","Medical Supplies",7]];
 
 // ======================================================================================
 /*
