@@ -37,7 +37,8 @@ _unit addPrimaryWeaponItem "RKSL_optic_PMII_312_wdl";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

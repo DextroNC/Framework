@@ -30,6 +30,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m240G";
+_unit addPrimaryWeaponItem "RH_m145";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 

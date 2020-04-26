@@ -34,7 +34,8 @@ comment "Add weapons";
 _unit addWeapon "AMF_RFF2_01_F";
 _unit addPrimaryWeaponItem "RKSL_optic_PMII_312_sunshade";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

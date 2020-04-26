@@ -37,7 +37,8 @@ _unit addPrimaryWeaponItem "FHQ_acc_LLM01L";
 _unit addPrimaryWeaponItem "RKSL_optic_LDS";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "BWA3_P8";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

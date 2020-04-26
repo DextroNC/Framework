@@ -38,7 +38,8 @@ _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "hgun_ACPC2_F";
 _unit addHandgunItem "acc_flashlight_pistol";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

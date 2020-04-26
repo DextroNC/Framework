@@ -34,7 +34,8 @@ comment "Add weapons";
 _unit addWeapon "rhs_weap_svdp_wd";
 _unit addPrimaryWeaponItem "rhs_acc_pso1m21";
 _unit addWeapon "RH_gsh18";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

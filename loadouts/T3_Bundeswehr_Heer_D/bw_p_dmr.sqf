@@ -34,7 +34,8 @@ comment "Add weapons";
 _unit addWeapon "hlc_rifle_g3sg1ris";
 _unit addPrimaryWeaponItem "RKSL_optic_PMII_312";
 _unit addWeapon "BWA3_P8";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
