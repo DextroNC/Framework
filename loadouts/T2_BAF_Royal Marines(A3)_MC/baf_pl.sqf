@@ -57,6 +57,7 @@ _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "UK3CB_BAF_HMNVS";
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareWhite_F";

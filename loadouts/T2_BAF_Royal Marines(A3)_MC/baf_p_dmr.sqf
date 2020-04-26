@@ -51,6 +51,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "UK3CB_BAF_HMNVS";
 	_unit addHeadgear "UK3CB_BAF_H_Mk7_Scrim_A";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
