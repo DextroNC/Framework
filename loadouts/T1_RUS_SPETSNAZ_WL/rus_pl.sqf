@@ -31,7 +31,7 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_GRD40_White";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Green";};
 _unit addItemToBackpack "ACE_SpraypaintGreen";
-_unit addHeadgear "rhs_beret_vdv1";
+_unit addHeadgear "rhs_fieldcap_digi";
 
 comment "Add weapons";
 _unit addWeapon "hlc_rifle_ak12GL";
@@ -46,15 +46,15 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkitem "ItemGPS";
 
-for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6_AK";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N6_AK";};
+for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N22_AK";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit addItemToBackpack "rhs_VG40OP_white";
 	_unit addItemToBackpack "rhs_VG40OP_white";
 	_unit addItemToBackpack "rhs_VG40OP_white";
@@ -62,6 +62,8 @@ if (SR_Night) then {
 	_unit addItemToBackpack "rhs_VG40OP_red";
 	_unit addItemToBackpack "rhs_VG40OP_red";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "rhs_altyn_novisor";
+	_unit addItemToBackpack "rhs_fieldcap_digi";
 };
 _unit setVariable ["SR_Class","PL", true];
 _unit setVariable ["ace_isEngineer",0, true];

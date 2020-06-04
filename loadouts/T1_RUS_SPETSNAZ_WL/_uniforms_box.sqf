@@ -36,6 +36,8 @@ this addaction ["Echo Heavy Weapons (Mortar)", "loadouts\rus_e_mor.sqf"];
 this addaction ["Echo Asst. Heavy Weapons (Mortar)", "loadouts\rus_e_mor_ab.sqf"];
 this addaction ["Echo Heavy Weapons (HAT)", "loadouts\rus_e_hat.sqf"];
 this addaction ["Echo Asst. Heavy Weapons (HAT)", "loadouts\rus_e_hat_ab.sqf"];
+this addaction ["Echo TOW (Kornet)", "loadouts\rus_e_kornet.sqf"];
+this addaction ["Echo TOW assist (Kornet)", "loadouts\rus_e_kornet_ab.sqf"];
 this addaction ["Echo Driver", "loadouts\rus_e_d.sqf"];
 this addaction ["Fox Commander", "loadouts\rus_f_com.sqf"];
 this addaction ["Fox Crewman", "loadouts\rus_f_crew.sqf"];

@@ -31,7 +31,7 @@ _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "rhs_rpg7_PG7VL_mag";
 _unit addItemToBackpack "rhs_rpg7_PG7VL_mag";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
-_unit addHeadgear "rhs_altyn_novisor_bala";
+_unit addHeadgear "rhs_altyn";
 
 comment "Add weapons";
 _unit addWeapon "hlc_rifle_ak12";
@@ -47,15 +47,16 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkitem "ItemGPS"; 
 
-for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6_AK";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N6_AK";};
+for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N22_AK";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "rhs_altyn_novisor_bala";
 };
 _unit setVariable ["SR_Class","MATAB", true];
 _unit setVariable ["ace_isEngineer",0, true];

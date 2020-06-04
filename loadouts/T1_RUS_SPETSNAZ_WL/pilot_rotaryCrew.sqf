@@ -18,8 +18,8 @@ _unit forceAddUniform "rhs_uniform_df15_tan";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_XL50";
-for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_nspd";};
 _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "UK3CB_V_Pouch";
@@ -48,6 +48,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",1];
+	_unit linkItem "rhs_1PN138";
 };
 _unit setVariable ["SR_Class","Pilot", true];
 _unit setVariable ["ace_isEngineer",0, true];

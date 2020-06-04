@@ -16,13 +16,13 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 72];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N22_AK", 72];
 	_box addmagazinecargoGlobal ["RH_18Rnd_9x19_gsh", 24];
 	_box addmagazinecargoGlobal ["SR_60Rnd_545x39_rpk", 40];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["rhs_mag_9x19mm_7n21_44", 5];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_polymer", 18];
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP5", 20];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_polymer_89", 18];
+	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 20];
 	_box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 10];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VR_mag", 2];
@@ -60,14 +60,16 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 24];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
 	_box addmagazinecargoGlobal ["Vorona_HEAT", 2];
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP5", 8];
+	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 8];
 	_box addmagazinecargoGlobal ["rhs_mag_9x18_8_57N181S", 5];
 	_box addmagazinecargoGlobal ["rhs_5Rnd_338lapua_t5000", 8];
+	_box addbackpackcargoGlobal ["RHS_Kornet_Gun_Bag", 1];
+	_box addbackpackcargoGlobal ["RHS_Kornet_Tripod_Bag", 1];
 };
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 36];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N22_AK", 36];
 	_box addmagazinecargoGlobal ["SR_60Rnd_545x39_rpk", 20];
 	_box addmagazinecargoGlobal ["RH_18Rnd_9x19_gsh", 8];
 	_box additemcargoGlobal ["rhs_mag_rgd5", 6];
@@ -88,14 +90,16 @@ if (_type == 4) then {
 // Small Special Supply
 if (_type == 5) then {
 	_box addWeaponcargoGlobal ["rhs_weap_rpg26", 2];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_polymer", 10];
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP5", 10];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_polymer_89", 10];
+	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 10];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 5];
 	_box addmagazinecargoGlobal ["rhs_mag_9x19mm_7n21_44", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 1];
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2];
 	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 1];
+	_box addbackpackcargoGlobal ["RHS_Kornet_Gun_Bag", 1];
+	_box addbackpackcargoGlobal ["RHS_Kornet_Tripod_Bag", 1];
 };
 
 // Medical Drop

@@ -48,8 +48,9 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "rhs_altyn_novisor_ess_bala";
 };
 _unit setVariable ["SR_Class","PAR", true];
 _unit setVariable ["ace_isEngineer",0, true];

@@ -27,7 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 _unit addBackpack "B_Kitbag_sgg";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhs_altyn_novisor_ess";
+_unit addHeadgear "rhs_altyn_bala";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_ak104_zenitco01_b33";
@@ -43,15 +43,17 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkitem "ItemGPS";
 
-for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_762x39mm_polymer";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_762x39mm_polymer";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_30Rnd_762x39mm_polymer_89";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_762x39mm_polymer_89";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_762x39mm_polymer_89";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "rhs_altyn_novisor_ess";
 };
 _unit setVariable ["SR_Class","BR", true];
 _unit setVariable ["ace_isEngineer",0, true];
