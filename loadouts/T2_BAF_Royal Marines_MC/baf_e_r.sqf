@@ -32,7 +32,7 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L85A3";
+_unit addWeapon "UK3CB_BAF_L85A2_RIS";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
