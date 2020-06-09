@@ -17,6 +17,6 @@ SR_ArtilleryCooldown = false;
 // Variable Init (TO EDIT)
 SR_Debug = false;
 SR_Flee = 10;
-SR_Surrender = 10;
+SR_Surrender = 12;
 SR_RAMPAGE_DISTANCE = 2000;
 SR_POI_Range = 750;

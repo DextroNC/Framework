@@ -6,6 +6,13 @@
 		Manages Suicide Bombers.
 
 */
+// Parmeter Init
+params ["_unit"];
+
+// Diasble Lamps Danger.doFSM
+group _unit setVariable ["lambs_danger_disableGroupAI",true];
+_unit setVariable ["lambs_danger_disableAI",true];
+
 //Per Frame Handler
 [{
 	// Parameter Init

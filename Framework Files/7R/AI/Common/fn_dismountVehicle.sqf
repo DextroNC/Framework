@@ -14,6 +14,7 @@
 params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",4]];
 _v = vehicle _leader;
 _originalGroup = group _leader;
+_originalGroup setVariable ["Vcm_Disable",false,true]; 
 
 // Check if Vehicle is Armed
 if (isNull (gunner vehicle _leader)) then {

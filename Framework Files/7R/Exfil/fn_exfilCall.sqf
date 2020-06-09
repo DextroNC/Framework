@@ -64,12 +64,14 @@ _helo engineOn true;
 _group setGroupIdGlobal [_callsign];
 _group setBehaviour "CARELESS"; 
 
-
+/*
 // Disable Units to react
 {
 	_x disableAi "AUTOCOMBAT";
 	_x setVariable ["asr_ai_exclude", true];
 }forEach units _group;
+*/
+[_group] spawn sr_support_fnc_supportAI;
 
 // Add Action for Lift Off
 [_helo] remoteExec ["fw_fnc_exfilAction", 0, true];
@@ -112,6 +114,7 @@ _helo engineOn true;
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
+_helo land 'NONE';
 force = true;
 publicVariable "force";
 _group setSpeedMode "NORMAL"; 

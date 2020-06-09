@@ -18,8 +18,11 @@ _id = ["ace_unconscious", {
 	if (_state) then { 
 		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
 	if (_shooter in allPlayers) then { 
-		_str = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_str remoteExecCall ["diag_log", 2];  
+		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
+		_log remoteExecCall ["diag_log", 2];  
+		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
+		SR_FF = _msg;
+		publicVariable "SR_FF";
 	}; 
 };}] call CBA_fnc_addEventHandler;
 
@@ -44,15 +47,6 @@ _id = ["ace_unconscious", {
 ["ACRE_PRC117F", "default", 4, "name", "MECH NET"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 5, "name", "AIR NET 1"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 6, "name", "AIR NET 2"] call acre_api_fnc_setPresetChannelField;
-
-// Log HC Frames
-if (!hasInterface && !isServer) then {
-	    _handle = [{ (format ["HC Frames: %1", diag_fps]) remoteExec ["diag_log",2];}, 15, []] call CBA_fnc_addPerFrameHandler;
-};
-// Log Server Frames
-if (isServer) then {
-	    _handle = [{diag_log format ["Server Frames: %1", diag_fps]; diag_log format ["Unit Count: %1", (count allUnits)]}, 15, []] call CBA_fnc_addPerFrameHandler;
-};
 
 // Client Only Part
 if (!hasInterface) exitWith {};

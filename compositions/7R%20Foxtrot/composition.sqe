@@ -1,5 +1,5 @@
 version=53;
-center[]={1428.1096,5,4446.6426};
+center[]={5612.6616,5,3806.3452};
 class items
 {
 	items=1;
@@ -10,36 +10,24 @@ class items
 		class Entities
 		{
 			items=3;
-			class Item0
+						class Item0
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.0096435547,0.0014390945,0.80712891};
+					position[]={-0.009765625,0.0014390945,0.80786133};
 				};
 				side="West";
-				flags=7;
+				flags=6;
 				class Attributes
 				{
 					rank="SERGEANT";
 					init="call{this setGroupIdGlobal [""F-1""];}";
 					description="Team Leader @Foxtrot";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_CombatUniform_mcam_tshirt";
-							isBackpack=0;
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-						gps="ItemGPS";
-					};
 				};
-				id=89;
-				type="B_Soldier_SL_F";
+				id=229;
+				type="SR_SquadLeader";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -88,29 +76,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.71130371,0.0014390945,-0.37011719};
+					position[]={-0.71142578,0.0014390945,-0.36987305};
 				};
 				side="West";
-				flags=5;
+				flags=4;
 				class Attributes
 				{
 					description="Technician";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_CombatUniform_mcam_tshirt";
-							isBackpack=0;
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-						gps="ItemGPS";
-					};
 				};
-				id=90;
-				type="B_Soldier_F";
+				id=227;
+				type="SR_Operator";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -159,29 +135,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.7208252,0.0014390945,-0.28808594};
+					position[]={0.72070313,0.0014390945,-0.2878418};
 				};
 				side="West";
-				flags=5;
+				flags=4;
 				class Attributes
 				{
 					description="Crewman";
 					isPlayable=1;
-					class Inventory
-					{
-						class uniform
-						{
-							typeName="U_B_CombatUniform_mcam_tshirt";
-							isBackpack=0;
-						};
-						map="ItemMap";
-						compass="ItemCompass";
-						watch="ItemWatch";
-						gps="ItemGPS";
-					};
 				};
-				id=91;
-				type="B_Soldier_F";
+				id=228;
+				type="SR_Operator";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -229,6 +193,6 @@ class items
 		class Attributes
 		{
 		};
-		id=88;
+		id=222;
 	};
 };

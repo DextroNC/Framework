@@ -33,6 +33,8 @@
 		class saveTemplate{};
 		class spawnTemplate{};
 		class spawnVehicleTemplate{};
+		class findTemplate{};
+		class spawnTemplateUnits{};
 	};
 	class civ
 	{
@@ -147,6 +149,7 @@
 		class artilleryCall{};
 		class dismountVehicle{};
 		class findPOI{};
+		class garrisonZEI{};
 	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
