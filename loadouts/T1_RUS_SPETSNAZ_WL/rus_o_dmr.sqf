@@ -31,9 +31,10 @@ _unit addItemToBackpack "optic_MRCO";
 _unit addHeadgear "rhs_altyn_novisor_ess_bala";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_vss_grip_npz";
+_unit addWeapon "rhs_weap_vss_grip";
 _unit addPrimaryWeaponItem "rhs_acc_perst1ik_ris";
-_unit addPrimaryWeaponItem "optic_DMS";
+_unit addPrimaryWeaponItem "rhs_acc_pso1m21";
+_unit addPrimaryWeaponItem "rhs_acc_grip_rk2";
 _unit addWeapon "RH_gsh18";
 _unit addWeapon "Binocular";
 
@@ -43,14 +44,14 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkitem "ItemGPS"; 
 
-for "_i" from 1 to 5 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP6";};
-for "_i" from 1 to 7 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
+for "_i" from 1 to 6 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP6";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SDMR", true];

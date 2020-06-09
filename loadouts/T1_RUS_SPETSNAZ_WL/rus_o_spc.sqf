@@ -45,13 +45,13 @@ _unit linkItem "ItemWatch";
 _unit linkitem "ItemGPS";
 
 for "_i" from 1 to 12 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP6";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
 
 _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SPC", true];

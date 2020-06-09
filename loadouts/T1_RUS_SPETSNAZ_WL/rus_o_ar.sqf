@@ -27,7 +27,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 _unit addBackpack "B_Kitbag_sgg";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhs_altyn_novisor_bala";
+_unit addHeadgear "rhs_altyn";
 
 
 comment "Add weapons";
@@ -51,6 +51,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "UK3CB_ANPVS7";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "rhs_altyn_novisor_bala";
 };
 _unit setVariable ["SR_Class","AR", true];
 _unit setVariable ["ace_isEngineer",0, true];

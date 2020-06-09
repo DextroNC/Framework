@@ -41,6 +41,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	ace_nightvision_fogScaling = 0.0;
 	_unit setUnitTrait ["camouflageCoef",1];
+	_unit linkItem "rhs_1PN138";
 };
 _unit setVariable ["SR_Class","Pilot", true];
 _unit setVariable ["ace_isEngineer",0, true];

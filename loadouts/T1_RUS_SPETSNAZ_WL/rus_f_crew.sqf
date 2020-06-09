@@ -14,14 +14,14 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_emr_patchless";
+_unit forceAddUniform "rhs_uniform_vdv_emr_des";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "rhs_mag_rdg2_white";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "RH_18Rnd_9x19_gsh";};
-_unit addVest "rhs_6b23_crew";
+_unit addVest "UK3CB_TKA_O_V_6b23_ML_6sh92_radio_Surpat";
 for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_nspd";};
 _unit addItemToVest "rhs_mag_rdg2_white";
 _unit addItemToVest "ACE_microDAGR";
@@ -30,10 +30,8 @@ _unit addHeadgear "rhs_tsh4";
 _unit addGoggles "G_Bandanna_oli";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_ak105_zenitco01_b33";
-_unit addPrimaryWeaponItem "rhs_acc_dtk";
-_unit addPrimaryWeaponItem "rhs_acc_2dpZenit_ris";
-_unit addPrimaryWeaponItem "rhs_acc_grip_ffg2";
+_unit addWeapon "rhs_weap_aks74n_2_npz";
+_unit addPrimaryWeaponItem "rhs_acc_perst1ik";
 _unit addWeapon "RH_gsh18";
 _unit addWeapon "Binocular";
 
@@ -50,8 +48,9 @@ _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit linkItem "UK3CB_ANPVS7";
+	_unit linkItem "rhs_1PN138";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addHeadgear "UK3CB_TKA_O_H_6b7_1m_bala2_DES";
 };
 _unit setVariable ["SR_Class","TC", true];
 _unit setVariable ["ace_isEngineer",0, true];
