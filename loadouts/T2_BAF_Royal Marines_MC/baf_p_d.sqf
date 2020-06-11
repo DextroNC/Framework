@@ -34,7 +34,7 @@ _unit addHeadgear "UK3CB_BAF_H_Boonie_MTP";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L85A3";
+_unit addWeapon "UK3CB_BAF_L85A2_RIS_AFG";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
