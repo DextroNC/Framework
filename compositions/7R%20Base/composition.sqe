@@ -909,6 +909,7 @@ class items
 				flags=5;
 				class Attributes
 				{
+					rank="SERGEANT";
 					description="Platoon Sergeant";
 					isPlayable=1;
 				};

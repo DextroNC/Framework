@@ -7,7 +7,7 @@
         Adds support equipment as action items to a terminal
 
     Example (in terminal script):
-        [this, "T3"] call fw_fnc_addEquipmentItems;
+        [this, 3] call fw_fnc_addEquipmentItems;
 
     Return:
         --> Nil

@@ -49,7 +49,7 @@ switch (_nbr) do {
 		_handle = ["vs1","VEHICLE",9,["is1",false,["a1","R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
-		phase = 1;
+		phase = 0;
 		publicVariable "phase";
 
 		"Mission Loaded" remoteExec ["systemChat", 0];
