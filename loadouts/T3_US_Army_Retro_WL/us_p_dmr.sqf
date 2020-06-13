@@ -32,7 +32,8 @@ comment "Add weapons";
 _unit addWeapon "hlc_rifle_M14dmr_Rail";
 _unit addPrimaryWeaponItem "optic_SOS";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "BinocularDay";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

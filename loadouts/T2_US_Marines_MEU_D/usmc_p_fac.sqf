@@ -55,6 +55,7 @@ _unit addItemToBackpack "ACRE_PRC117F";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit addHeadgear "rhsusf_opscore_mar_ut_pelt";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};

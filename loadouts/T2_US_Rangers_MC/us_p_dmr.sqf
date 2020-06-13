@@ -37,7 +37,8 @@ _unit addPrimaryWeaponItem "RKSL_optic_PMII_312_wdl";
 _unit addPrimaryWeaponItem "RH_HBLM_tg";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -51,6 +52,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

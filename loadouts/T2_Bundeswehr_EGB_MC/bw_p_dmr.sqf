@@ -36,7 +36,8 @@ _unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
 _unit addPrimaryWeaponItem "BWA3_optic_PMII_DMR_MicroT1_rear";
 _unit addWeapon "BWA3_P8";
 _unit addHandgunItem "BWA3_acc_LLM01_irlaser";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -51,6 +52,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit addHeadgear "BWA3_OpsCore";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];

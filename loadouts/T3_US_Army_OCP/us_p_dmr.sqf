@@ -36,7 +36,8 @@ _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
 _unit addPrimaryWeaponItem "RH_HBLM";
 _unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "Binocular";
+_unit addMagazine "Laserbatteries";
+_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";
 _unit linkItem "ItemMap";

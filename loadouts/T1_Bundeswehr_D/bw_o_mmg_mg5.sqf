@@ -31,6 +31,7 @@ _unit addGoggles "shemagh_goggclr_tan";
 comment "Add weapons";
 _unit addWeapon "BWA3_MG5";
 _unit addPrimaryWeaponItem "BWA3_acc_VarioRay_irlaser";
+_unit addPrimaryWeaponItem "RH_m145";
 _unit addWeapon "RH_usp";
 _unit addHandgunItem "RH_gemtech45";
 _unit addHandgunItem "RH_X300";

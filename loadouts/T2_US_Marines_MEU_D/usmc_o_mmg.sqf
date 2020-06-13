@@ -30,6 +30,7 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m240G";
+_unit addPrimaryWeaponItem "RH_m145";
 _unit addWeapon "hgun_ACPC2_F";
 _unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "Binocular";
@@ -47,6 +48,7 @@ _unit addItemToUniform "ACRE_PRC343";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

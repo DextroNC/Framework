@@ -21,7 +21,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_200rnd_556x45_M_SAW", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["rhsusf_mag_40Rnd_46x30_FMJ", 8];
-	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 12];
 	_box addmagazinecargoGlobal ["BWA3_10Rnd_762x51_G28", 10];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 5];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 3];
@@ -44,6 +44,8 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_HuntIR_M203", 1];
+	_box additemcargoGlobal ["ACE_IR_Strobe_Item", 14];
 	_box addItemCargoGlobal ["SR_PAK", 10];
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
@@ -57,9 +59,6 @@ if (_type == 2) then {
 
 // Special Supply
 if (_type == 3) then {
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 24];
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
-	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
 	_box addmagazinecargoGlobal ["BWA3_10Rnd_86x70_G29", 4];
@@ -106,4 +105,16 @@ If (_type == 7) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 3];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 8];
+	_box addItemCargoGlobal ["SR_Atropine_Pack", 1];
+};
+
+// Mortar Supply Drop
+If (_type == 8) then {
+	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 32];
+	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
+};
+
+// HAT Supply Drop
+If (_type == 9) then {
+	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 4];
 };
