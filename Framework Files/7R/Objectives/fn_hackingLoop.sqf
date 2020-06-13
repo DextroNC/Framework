@@ -32,15 +32,15 @@ if (!isServer) exitWith {};
 
 	// Laptop does not exist anymore (or being picked up) - abbord
 	if (!alive _hack) exitWith {
-		"Hack Aborted" remoteExec ["hint"]; 
+		
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	}; 
 	
 	// Hack completed
-	if (_cur == 95) exitWith {
-		_cur = _cur + 5;
+	if (_cur == 99) exitWith {
+		_cur = _cur + 1;
 		_trg setVariable ["SR_Hack",100,true];
-		"Hack Completed" remoteExec ["hint"]; 
+		["","Hack Completed" ] remoteExec ["fw_fnc_info"];
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
 	
@@ -50,13 +50,13 @@ if (!isServer) exitWith {};
 	// Interrupt if no players close to laptop
 	if ((count (allPlayers inAreaArray _trg))== 0) exitWith{
 		_hack setVariable ["SR_Hack_Interrupt",true,true];
-		"Hack Paused" remoteExec ["hint"]; 
+		["","Hack Paused" ] remoteExec ["fw_fnc_info"];
 	};
 	
 	// Regular Hacking Progress Increase
-	_cur = _cur + 5;
+	_cur = _cur + 1;
 	_trg setVariable ["SR_Hack",_cur,true];
 	_str = format ["Hack Progress: %1 %", _cur];
-	_str remoteExec ["hint"]; 
+	["",_str] remoteExec ["fw_fnc_info"];
 
 } , 2, [_this select 0, _this select 1]] call CBA_fnc_addPerFrameHandler;

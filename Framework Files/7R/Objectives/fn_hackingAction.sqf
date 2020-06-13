@@ -33,7 +33,7 @@ _trg = objNull;
 	_comp = "Land_Laptop_unfolded_F" createVehicle [0,0.5,0];
 	_comp setPos _pos;
 	_comp setDir ((getDir player) - 180);
-	_unit removeItem "ARP_Objects_Laptop_M";
+	_unit removeItem "Land_Laptop_03_olive_F";
 	
 	// Set Variables
 	_trg setVariable ["SR_Hack",0,true];
