@@ -6,11 +6,9 @@ this addaction ["<t color=""#FF8C00"">" +"M150", "7R\Loadouts\7R_EQ.sqf",["rhsus
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - ACOG MDO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_MDO"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - MOS", "7R\Loadouts\7R_EQ.sqf",["optic_SOS"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - PMII", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_PMII_312"]];
-this addaction ["<t color=""#FF0000"">" +"GPS", "7R\Loadouts\7R_EQ.sqf",["ItemGPS"]];
-this addaction ["<t color=""#FF0000"">" +"Vector", "7R\Loadouts\7R_EQ.sqf",["ACE_Vector"]];
-this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "7R\Loadouts\7R_EQ.sqf",["Laserdesignator"]];
-this addaction ["<t color=""#FF0000"">" +"Lockpick", "7R\Loadouts\7R_EQ.sqf",["ACE_key_lockpick"]];
-this addaction ["<t color=""#FF0000"">" +"Entreching Tool", "7R\Loadouts\7R_EQ.sqf",["ACE_EntrenchingTool"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC152 (SLs, 2ic)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC152"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC148 (Air, Sup, Mech)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC148"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC117F (Long Range)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC117F"]];
+
+// Support items
+[this, 3] call fw_fnc_addEquipmentItems;
+
+// Radios
+[this] call fw_fnc_addEquipmentRadios;

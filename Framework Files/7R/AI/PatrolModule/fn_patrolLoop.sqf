@@ -24,20 +24,6 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
 
         // Select Order based on Mode
         switch (_this getVariable ["SR_PatrolMode",""]) do {
-            // Patrol Order
-            case "P": {
-                 private _position = [];
-                // Create Random Patrol Point
-                private _poi = [_this, SR_POI_Range] call fw_fnc_findPOI;
-                if (!isNull _poi) then {
-                    _position = [[[getPos _poi, 350]], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
-                } else {
-                    _position = [_this] call fw_fnc_getRandomPos;
-                };
-                [_this,_position, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
-                // Debug
-                if (SR_Debug) then {systemChat format ["%1 is patrolling %2", _this, (mapGridPosition _position)];};
-            };
             // Garrison Order
             case "G": {
                 // Create Garrison Waypoint and lock it
@@ -68,6 +54,20 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
                 [_this] spawn fw_fnc_rampageCharge;
 
            };
+            // Patrol Order
+            default {
+                 private _position = [];
+                // Create Random Patrol Point
+                private _poi = [_this, SR_POI_Range] call fw_fnc_findPOI;
+                if (!isNull _poi) then {
+                    _position = [[[getPos _poi, 350]], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
+                } else {
+                    _position = [_this] call fw_fnc_getRandomPos;
+                };
+                [_this,_position, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
+                // Debug
+                if (SR_Debug) then {systemChat format ["%1 is patrolling %2", _this, (mapGridPosition _position)];};
+            };
         };
 
         // Force Flashlights

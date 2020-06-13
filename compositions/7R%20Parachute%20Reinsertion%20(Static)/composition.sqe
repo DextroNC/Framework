@@ -1,0 +1,21 @@
+version=53;
+center[]={5615.2188,5,3805.6028};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0,0.58832455,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=255;
+		type="SR_Paradrop_Static_Terminal";
+	};
+};

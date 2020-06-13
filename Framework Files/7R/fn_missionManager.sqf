@@ -11,7 +11,7 @@
 	Make Phase Variable an Integer. On trigger Act. use instead of phase = true; phase = phase + 1 or phase = 2.
 		
 	Example:
-		nul = [1] spawn fw_fnc_missionManager;
+		nul = [0] spawn fw_fnc_missionManager;
 		
 */
 
@@ -24,28 +24,46 @@ params ["_nbr"];
 
 // Phase Case means Phase
 switch (_nbr) do {
-	// Phase 1
-    case 1: {
-		_handle = ["a1","PATROL",7,["a1","P"]] spawn fw_fnc_spawnTemplate; 
+	// Phase 0 - Initial
+    case 0: {
+		"Loading Mission" remoteExec ["systemChat", 0];
+
+
+		for "_i" from 1 to 4 do {
+			_handle = ["a1","PATROL",7,["a1","P"]] spawn fw_fnc_spawnTemplate; 
+			waitUntil {scriptDone _handle};
+		};
+
+		{
+			_handle = [_x,"GARRISON",1,[5,1]] spawn fw_fnc_spawnTemplate; 
+			waitUntil {scriptDone _handle};
+		} forEach ["b1","b2"];
+
+
+		_handle = ["o1","GARRISON",1,[150]] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
-		_handle = ["os1_2","GARRISON",1,[150]] spawn fw_fnc_spawnTemplate; 
+		_handle = ["o2","ZEI",1] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
 		_handle = ["a2",["LOP_CHR_Civ_Random"], 10,0] spawn fw_fnc_civSpawn;
 		waitUntil {scriptDone _handle};
 		_handle = ["vs1","VEHICLE",9,["is1",false,["a1","R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
-		phase = 1;
+		phase = 0;
 		publicVariable "phase";
 
 		"Mission Loaded" remoteExec ["systemChat", 0];
-		["MissionLog", ["Mission", "Phase 1 Loaded"]] spawn CBA_fnc_globalEvent; 
 
 	};
-    case 2: {
+    case 1: {
+
+	};
+	case 2: {
 
 	};
 	case 3: {
 
 	};
 };
+
+["MissionLog", ["Mission", ("Case " + str(_nbr) + " loaded.")]] spawn CBA_fnc_globalEvent; 

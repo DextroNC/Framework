@@ -8,11 +8,9 @@ this addaction ["<t color=""#FF0000"">" +"RM: 1p78", "7R\Loadouts\7R_EQ.sqf",["r
 this addaction ["<t color=""#FF0000"">" +"RM: nita", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_nita"]];
 this addaction ["<t color=""#FF0000"">" +"PL DMR: pso1m2", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_pso1m2"]];
 this addaction ["<t color=""#FF0000"">" +"PL DMR: pso1m21", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_pso1m21"]];
-this addaction ["<t color=""#FF0000"">" +"UAV Terminal", "7R\Loadouts\7R_EQ.sqf",["O_UavTerminal"]];
-this addaction ["<t color=""#FF0000"">" +"Vector", "7R\Loadouts\7R_EQ.sqf",["ACE_Vector"]];
-this addaction ["<t color=""#FF0000"">" +"Laserdesignator", "7R\Loadouts\7R_EQ.sqf",["Laserdesignator"]];
-this addaction ["<t color=""#FF0000"">" +"Lockpick", "7R\Loadouts\7R_EQ.sqf",["ACE_key_lockpick"]];
-this addaction ["<t color=""#FF0000"">" +"Entreching Tool", "7R\Loadouts\7R_EQ.sqf",["ACE_EntrenchingTool"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC152 (SLs, 2ic)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC152"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC148 (Air, Sup, Mech)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC148"]];
-this addaction ["<t color=""#FF0000"">" +"RADIO PRC117F (Long Range)", "7R\Loadouts\7R_EQ.sqf",["ACRE_PRC117F"]];
+
+// Support items
+[this, 3] call fw_fnc_addEquipmentItems;
+
+// Radios
+[this] call fw_fnc_addEquipmentRadios;

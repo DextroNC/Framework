@@ -2,13 +2,13 @@
 	Parameters:
 		<-- Group as Group
 		<-- Treshhold as Integer (Percentage of Loss which is considered substancial)
-	
+
 	Return:
 	--> Boolean (Substancial Loss)
-		
+
 	Description:
 		Evaluate whether a group suffered substancial losses
-		
+
 	Example:
 		[_group,] call fw_fnc_hasLosses;
 */
@@ -24,7 +24,7 @@ private _current = {alive _x} count (units _group);
 if (((_current * 100) / _original) < 45) then {_return = true;};
 
 // Debug
-//if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this];}; 
+//if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this];};
 
 // Return
 _return

@@ -33,6 +33,8 @@
 		class saveTemplate{};
 		class spawnTemplate{};
 		class spawnVehicleTemplate{};
+		class findTemplate{};
+		class spawnTemplateUnits{};
 	};
 	class civ
 	{
@@ -42,6 +44,8 @@
 		class civBomber{};
 		class civSleeper{};
 		class civShooter{};
+		class civEventhandler{};
+		class civBomberAction{};
 	};
 	class arty
 	{
@@ -145,6 +149,7 @@
 		class artilleryCall{};
 		class dismountVehicle{};
 		class findPOI{};
+		class garrisonZEI{};
 	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
@@ -153,5 +158,7 @@
 	class Loadouts {
 		file = "7R\Loadouts";
 		class clearVehicleCargo{};
+		class addEquipmentRadios{};
+		class addEquipmentItems{};
 	}
 };
