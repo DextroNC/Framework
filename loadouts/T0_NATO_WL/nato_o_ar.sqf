@@ -14,6 +14,7 @@ removeGoggles _unit;
 comment "Uniform";
 _unit forceAddUniform "U_B_CombatUniform_tshirt_mcam_wdL_f";
 _unit addVest "V_PlateCarrier2_wdl";
+_unit addBackpack "B_AssaultPack_wdl_F";
 _unit addHeadgear "H_HelmetB_plain_wdl";
 
 comment "Basic";
@@ -34,6 +35,7 @@ for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 
 comment "Role";
 for "_i" from 1 to 4 do {_unit addItemToVest "100Rnd_65x39_caseless_black_mag";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "100Rnd_65x39_caseless_black_mag";};
 
 comment "Add weapons";
 _unit addWeapon "arifle_MX_SW_Black_F";

@@ -35,9 +35,9 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 comment "Role";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
-for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
-for "_i" from 1 to 10 do {_unit addItemToBackpack "30Rnd_65x39_caseless_black_mag";};
+for "_i" from 1 to 20 do {_unit addItemToBackpack "30Rnd_65x39_caseless_black_mag";};
 
 comment "Add weapons";
 _unit addWeapon "arifle_MX_Black_F";

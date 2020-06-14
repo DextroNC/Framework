@@ -36,7 +36,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 
 comment "Role";
 _unit addItemToVest "200Rnd_65x39_cased_Box";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "200Rnd_65x39_cased_Box";};
+_unit addItemToVest "200Rnd_65x39_cased_Box";
+for "_i" from 1 to 3 do {_unit addItemToBackpack "200Rnd_65x39_cased_Box";};
 
 comment "Add weapons";
 _unit addWeapon "LMG_Mk200_F";
