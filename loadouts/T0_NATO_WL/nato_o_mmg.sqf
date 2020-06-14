@@ -53,7 +53,7 @@ if (SR_Night) then {
 	_unit setUnitTrait ["camouflageCoef", SR_Camo_Coef];
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 };
-_unit setVariable ["SR_Class", "LAT", true];
+_unit setVariable ["SR_Class", "MMG", true];
 _unit setVariable ["ace_isEngineer", 0, true];
 _unit setVariable ["ace_medical_medicClass", 0, true];
 _unit setVariable ["ACE_isEOD", false, true];
