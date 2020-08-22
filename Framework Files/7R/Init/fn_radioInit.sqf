@@ -15,6 +15,7 @@
 // Friendly Fire Log
 _id = ["ace_unconscious", {
 	params ["_unit","_state"]; 
+	if (!(isPlayer _unit)) exitWith {};
 	if (_state) then { 
 		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
 	if (_shooter in allPlayers) then { 
