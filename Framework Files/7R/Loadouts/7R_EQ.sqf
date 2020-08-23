@@ -48,6 +48,7 @@ switch (_type) do {
     case "rhsusf_ANPVS_15": {_unit linkItem _type;};
     case "rhs_1PN138": {_unit linkItem _type;};
     case "ACE_key_lockpick": {_unit addItem _type;};
+    case "ACE_wirecutter": {_unit addItem _type;};
     case "Laserdesignator": {_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator"; _unit addItem "Laserbatteries";};
     case "ACE_Vector": {_unit addWeapon _type;};
     case "Binocular": {_unit addWeapon _type;};
