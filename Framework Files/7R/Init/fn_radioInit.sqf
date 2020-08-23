@@ -12,20 +12,6 @@
 ["CombatLog", {player createDiaryRecord ["Combat Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 ["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 
-// Friendly Fire Log
-_id = ["ace_unconscious", {
-	params ["_unit","_state"]; 
-	if (_state) then { 
-		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
-	if (_shooter in allPlayers) then { 
-		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_log remoteExecCall ["diag_log", 2];  
-		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
-		SR_FF = _msg;
-		publicVariable "SR_FF";
-	}; 
-};}] call CBA_fnc_addEventHandler;
-
 // Channel Names
 ["ACRE_PRC152", "default", 1, "description", "PLT NET"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 2, "description", "COM NET"] call acre_api_fnc_setPresetChannelField;
@@ -50,6 +36,22 @@ _id = ["ace_unconscious", {
 
 // Client Only Part
 if (!hasInterface) exitWith {};
+
+// Friendly Fire Log
+_id = ["ace_unconscious", {
+	params ["_unit","_state"]; 
+	if (!(isPlayer _unit)) exitWith {};
+	if (_state) then { 
+		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
+	if (_shooter in allPlayers) then { 
+		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
+		_log remoteExecCall ["diag_log", 2];  
+		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
+		SR_FF = _msg;
+		publicVariable "SR_FF";
+	}; 
+};}] call CBA_fnc_addEventHandler;
+
 
 //Comm Card
 player createDiarySubject ["Communication", "Communication"];
