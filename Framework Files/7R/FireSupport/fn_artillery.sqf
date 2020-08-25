@@ -1,82 +1,132 @@
 /*
 	Parameters:
 		<-- Target Marker Name as String
-		<-- Type of Shell as String
-		<-- Amount of Rounds to Fire as Integer
-		<-- Dispersion as Integer (Impact Radius in meter)
-		<-- Traveltime as Integer (Seconds)
-		<-- Optional: Costs overwrite as Integer
+		<-- Mission Type as String
+		<-- Optional: Traveltime as Integer (Default: 10)
 		
-	Recommended:
-	ModuleOrdnanceMortar_F
-	ModuleOrdnanceHowitzer_F
-	ModuleOrdnanceRocket_F 
-	
 	Description:
 		Handles simulated artillery support.
 
 	Example:
-	nul = ["Marker","ModuleOrdnanceMortar_F",3,50,0] spawn fw_fnc_artillery;
+	nul = ["Marker","spotting"] spawn fw_fnc_artillery;
 */
 
 // Parameter Init
-params ["_target","_type","_rounds","_disp","_traveltime","_cost"];
-if (isNil "_cost") then {_cost = _rounds};
+params ["_target","_type"];
 
-// Init Public variables if not initialized in init.sqf or else with default values.
-if (isNil "ArtilleryFireMissionLock") then {ArtilleryFireMissionLock = false; publicVariable "ArtilleryFireMissionLock";};
-if (isNil "ArtilleryCallAmmo") then {ArtilleryCallAmmo = 45; publicVariable "ArtilleryCallAmmo";};
+// Check availability
+if (!([_target] call fw_fnc_artilleryCheck)) exitWith {};
 
-// Check if other Fire Mission in progress, no Ammunition left and no Target designated.
-if (ArtilleryFireMissionLock) exitWith {
-	["Negative: Artillery Fire Support available. Other Mission in progress.","FS: Currently Busy"] spawn fw_fnc_info;
+
+// Variable Init
+private _ammo = "Sh_155mm_AMOS";
+private _rounds = 3;
+private _cost = 1;
+private _multipler = 1;
+private _cooldown = 24;
+private _dispersion = 25;
+private _delay = [1,2];
+private _altitude = 250;
+private _speed = 150;
+private _safezone = 10;
+private _traveltime = 10;
+private _removal = true;
+
+// Select type
+switch _type do {
+    case "concentrated": {
+		//_ammo = "M_Mo_155mm_AT";
+		_rounds = 18; 
+		_cost = 3;
+		_multipler = 4;
+		_dispersion = 30;
+		_safezone = 0;
+	};
+    case "area": {
+		_rounds = 24; 
+		_cost = 3; 
+		_multipler = 5;
+		_dispersion = 150;
+		_delay = [0.75,1.5];
+	};
+    case "medium": {
+		_rounds = 16; 
+		_cost = 2; 
+		_multipler = 3;
+		_dispersion = 80;
+	};
+    case "cluster": {
+		_ammo = "Cluster_155mm_AMOS";
+		_rounds = 3;
+		_multipler = 4;
+		_cost = 2;
+		_delay = [2.5,4];
+		_dispersion = 70;
+	};
+    case "smoke": {
+		_ammo = "SR_ArtillerySmoke_120mm";
+		_rounds = 9; 
+		_cost = 0;
+		_multipler = 1.5;
+		_dispersion = 80;
+		_safezone = 0;
+	};
+    case "flare": {
+		_ammo = "SR_Artillery_Flare";
+		_rounds = 5;
+		_cost = 0;
+		_delay = [30,45];
+		_dispersion = 200;
+		_multipler = 1.5;
+		_altitude = 250;
+		_speed = 0.10;
+		_removal = false;
+	};
+	// Adjust by Fire
+    default {
+		_removal = false;
+		_safezone = 0;
+		//_multipler = 0.5;
+	};
 };
-if (ArtilleryCallAmmo == 0) exitWith {
-	["Negative: Artillery Fire Support available. Out of Ammunition.","FS: No Ammunition"] spawn fw_fnc_info;
-};
-if (([_target] call fw_fnc_findLocation) isEqualto [0,0,0]) exitWith {
-	["No Artillery Target designated.","FS: No Target"] spawn fw_fnc_info;
-};
 
-// Locks other requests, only one Fire Mission at a time.
-ArtilleryFireMissionLock = true;
-publicVariable "ArtilleryFireMissionLock";
-
-// if not enough ammo to fulfill mission, remaining will be used.
-if (ArtilleryCallAmmo < _cost) then {_cost = ArtilleryCallAmmo};
+// Set cooldown
+ArtilleryFireMissionReady = CBA_MissionTime + (_cooldown * _multipler);
+publicVariable "ArtilleryFireMissionReady";
 
 // Fire Mission Confirmation Message with Target and Volume + Create logEntities
-_str = "Artillery Fire Mission: " + str (_rounds) + " Rounds to Grid " + (mapGridPosition markerPos _target) + ".";
-[_str,_str] spawn fw_fnc_info;
-["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
+private _feedback = "FS: " + _type + " barrage of " + str (_rounds) + " Rounds to Grid " + (mapGridPosition markerPos _target) + ".";
+[_feedback,_feedback] spawn fw_fnc_info;
+["CombatLog", ["Support", _feedback]] spawn CBA_fnc_globalEvent; 
 
 // Delay
 sleep random 3;
 
 // Simulated Firing
 ["Rounds away."] spawn fw_fnc_info;
-for [{_i=1},{_i<=_rounds},{_i=_i+1}] do {
-	sleep 2;
-};
+
+sleep (_rounds min 6);
+
 ["Rounds complete."] spawn fw_fnc_info;
 
 // Simulated Travel Time
-sleep _traveltime + random 2;
+sleep _traveltime * _multipler;
 ["Splash out."] spawn fw_fnc_info;
 sleep 1;
 
-// Fire Support and adjust Ammo
-private _handle = [_target,_type,_disp,_rounds,[1.5,4],{},10] spawn BIS_fnc_fireSupportVirtual;
+// Fire Support Function
+private _handle = [_target,_ammo,_dispersion,_rounds,_delay,{},_safezone,_altitude,_speed] spawn BIS_fnc_fireSupportVirtual;
 
+// Update Ammo
 ArtilleryCallAmmo = ArtilleryCallAmmo - _cost;
 publicVariable "ArtilleryCallAmmo";
+
+// End
 waitUntil {scriptDone _handle};
+_feedback = "Artillery Fire Mission completed. " + str (ArtilleryCallAmmo) + " Artillery Supplies left.";
+[_feedback,_feedback] spawn fw_fnc_info;
 
-// Finish up
-deleteMarker _target;
-_str = "Artillery Fire Mission completed. " + str (ArtilleryCallAmmo) + " Rounds left.";
-[_str,_str] spawn fw_fnc_info;
-
-// Lock release to allow new Fire Missions
-ArtilleryFireMissionLock = false;
-publicVariable "ArtilleryFireMissionLock";
+// Delete Marker
+if (_removal) then {
+	deleteMarker _target;
+};
