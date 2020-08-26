@@ -44,8 +44,8 @@ switch _type do {
 	};
     case "area": {
 		_rounds = 24; 
-		_cost = 3; 
-		_multipler = 5;
+		_cost = 4; 
+		_multipler = 6;
 		_dispersion = 150;
 		_delay = [0.75,1.5];
 	};
@@ -59,7 +59,7 @@ switch _type do {
 		_ammo = "Cluster_155mm_AMOS";
 		_rounds = 3;
 		_multipler = 4;
-		_cost = 2;
+		_cost = 3;
 		_delay = [2.5,4];
 		_dispersion = 70;
 	};

@@ -62,19 +62,19 @@ _headerArtillery = ["7R_ArtyH","Call Fire Support","a3\ui_f\data\IGUI\Cfg\simple
 _headerArty = ["7R_ArtilleryHeader","Artillery Fire Mission","",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _headerArty] call ace_interact_menu_fnc_addActionToClass;
 
-_ACA3 = ["7R_Artillery","Adjust by Fire","",{null = ["ArtilleryTarget","spotting"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA3 = ["7R_Artillery","Adjust by Fire (1)","",{null = ["ArtilleryTarget","spotting"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA3] call ace_interact_menu_fnc_addActionToClass;
-_ACA5 = ["7R_Artillery","Medium Barrage","",{null = ["ArtilleryTarget","medium"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA5 = ["7R_Artillery","Medium Barrage (2)","",{null = ["ArtilleryTarget","medium"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA5] call ace_interact_menu_fnc_addActionToClass;
-_ACA7 = ["7R_Artillery","Heavy Area Barrage","",{null = ["ArtilleryTarget","area"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA7 = ["7R_Artillery","Heavy Area Barrage (4)","",{null = ["ArtilleryTarget","area"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
-_ACA6 = ["7R_Artillery","Concentrated Barrage","",{null = ["ArtilleryTarget","concentrated"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA6 = ["7R_Artillery","Concentrated Barrage (3)","",{null = ["ArtilleryTarget","concentrated"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA6] call ace_interact_menu_fnc_addActionToClass;
-_ACA8 = ["7R_Artillery","Cluster Barrage","",{null = ["ArtilleryTarget","cluster"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA8 = ["7R_Artillery","Cluster Barrage (3)","",{null = ["ArtilleryTarget","cluster"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA8] call ace_interact_menu_fnc_addActionToClass;
-_ACAS = ["7R_Artillery","Smoke Barrage","",{null = ["ArtilleryTarget","smoke"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACAS = ["7R_Artillery","Smoke Barrage (0)","",{null = ["ArtilleryTarget","smoke"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAS] call ace_interact_menu_fnc_addActionToClass;
-_ACAF = ["7R_Artillery","Flare Barrage","",{null = ["ArtilleryTarget","flare"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAF] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS
