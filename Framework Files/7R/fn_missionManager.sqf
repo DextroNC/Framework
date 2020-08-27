@@ -50,7 +50,7 @@ switch (_nbr) do {
 		waitUntil {scriptDone _handle};
 
 		
-		if ((count allPlayers) > 16) then {//additional code to spawn more units when there's more then 16 players};
+		if ((count allPlayers) > 16) then {/*additional code to spawn more units when there's more then 16 players*/};
 	
 
 		phase = 0;
