@@ -7,5 +7,7 @@
 	
 */
 
-hint format ["Artillery Rounds: %1 \nSupply Drops: %2 \nCAS: %3",ArtilleryCallAmmo,SupplyDropAmmo,CASCallAmmo];
 
+private _string = "Artillery Supplies: " + str (ArtilleryCallAmmo) + "<br/>" + "Supply Drops: " + str(SupplyDropAmmo) + "<br/>" + "CAS: " + str (CASCallAmmo);
+
+["",_string] spawn fw_fnc_info;
