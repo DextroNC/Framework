@@ -31,7 +31,7 @@ _unit addHeadgear "BWA3_Booniehat_Fleck";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_g3sg1ris";
+_unit addWeapon "UK3CB_G3SG1_RIS";
 _unit addPrimaryWeaponItem "RKSL_optic_PMII_312";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "Binocular";
