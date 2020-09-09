@@ -10,7 +10,7 @@
 		Check wether artillery is available.
 
 	Example:
-		_return = [] call fw_fnc_artilleryCheck;
+		_return = [] call fw_fnc_artilleryReadyCheck;
 */
 
 // Parameter Init
