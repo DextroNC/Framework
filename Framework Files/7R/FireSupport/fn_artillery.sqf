@@ -15,7 +15,7 @@
 params ["_target","_type"];
 
 // Check availability
-if (!([_target] call fw_fnc_artilleryCheck)) exitWith {};
+if (!([_target] call fw_fnc_artilleryReadyCheck)) exitWith {};
 
 
 // Variable Init
