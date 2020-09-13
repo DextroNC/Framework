@@ -33,7 +33,7 @@ _unit addHeadgear "BWA3_Beret_Jaeger";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_rifle_g3a3ris";
+_unit addWeapon "UK3CB_G3A3_RIS";
 _unit addWeapon "BWA3_P8";
 _unit addWeapon "ACE_Vector";
 
