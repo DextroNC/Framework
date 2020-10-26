@@ -116,11 +116,6 @@
 		class missionManager{};
 		class systemInit{preInit = 1;};
 	};
-	class RP {
-		file = "7R\Rally";
-		class buildRP{};
-		class destroyRP{};
-	};
 	class UC {
 		file = "7R\Undercover";
 		class goUndercover{};
