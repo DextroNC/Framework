@@ -71,7 +71,6 @@
 		file = "7R\Exfil";
 		class exfilAction{};
 		class exfilCall{};
-		class recoverCall{};
 	};
 	class reinf {
 		file = "7R\REINF";
