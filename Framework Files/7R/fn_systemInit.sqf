@@ -35,6 +35,7 @@ SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Constr
 	CASPlane - "JS_JC_FA18E" (Default, "RHS_A10" (Alternative US/NATO), "RHS_Su25SM_vvs" (Russian/USSR)
 	ExfilHelicopter - "RHS_CH_47F" (Default), "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
 
+
 */
 SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","JS_JC_FA18E","RHS_CH_47F"];
 
@@ -47,15 +48,13 @@ SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
 	- SupplyDropAmmo = 12;
 	- CASCallAmmo = 6;
 	- ArtilleryCallAmmo 45;
-	- ace_trenches_trenchSupplies = 250; (Trench Supply Drop gives 250 as well)
+	- ace_trenches_trenchSupplies = 500; (Trench Supply Drop gives 500 as well)
 */
 // Support System Availability Variables
-ExfilHelolock = false;
-ReifLock = false;
 SupplyDropAmmo = 12;
 ArtilleryCallAmmo = 45;
 CASCallAmmo = 6;
-ace_trenches_trenchSupplies = 250;
+ace_trenches_trenchSupplies = 500;
 
 
 // ======================================================================================

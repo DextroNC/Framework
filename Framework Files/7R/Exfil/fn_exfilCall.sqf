@@ -3,9 +3,8 @@
 		<-- Target Marker Name as String
 		<-- Spawn Marker Name as String
 		<-- Type of Helicopter as String
-		<-- Callsign as String
-		<-- Traveltime as Integer (seconds) e.g. Spawn Delay
 		<-- Optional: Dropoff Marker as String  
+		<-- Caller as Object
 
 	Description:
 	Handles AI based Exfiltration, spawning helicopter and picking up units. Optional drop off afterwards.
@@ -17,60 +16,38 @@
 */
 
 // Parameter Init
-params ["_tm","_sm","_type","_callsign","_traveltime","_do"];
-_spawn = markerPos _sm;
-_target = markerPos _tm;
-private "_drop";
-
-
+params [["_targetMarker","EZ"],["_spawnMarker","STARTSPAWN"],["_type","RHS_CH_47F"],["_dopoffMarker","dropoff"],["_caller",objNull]];
+_spawn = markerPos _spawnMarker;
+_target = markerPos _targetMarker;
+private _str = "";
 
 // Check if Target Marker exists if not exit with error msg
 if (_target isEqualto [0,0,0]) exitWith {
-	["Exfil: No EZ designated", 1.5] call ace_common_fnc_displayTextStructured;
-	[[SR_Side, "HQ"],"No Extraction Zone designated."] remoteExec ["sideChat", -2];
+	_str = "Exfil: No EZ designated";
+	[_str,_str] remoteExec ["sr_support_fnc_infoMessage", _caller];
 };
 
 // Check if Exfiltration is locked
-if (ExfilHelolock) exitWith {
-	["Exfil: No Helo available", 1.5] call ace_common_fnc_displayTextStructured;
-	[[SR_Side, "HQ"],"Negative: All Helicopters are in use. Other Mission in progress."] remoteExec ["sideChat", -2];
+if (ExfilReady > CBA_MissionTime) exitWith {
+	private _timeLeft = ExfilReady - CBA_MissionTime;
+	[("Negative: Exfil not available. Try again in " + str(round _timeLeft) + " seconds."),("Exfil: Cooldown " + str(round _timeLeft) + " s")] remoteExec ["sr_support_fnc_infoMessage", _caller];
 };
 
-// Lock Exfil
-ExfilHelolock = false;
-publicVariable "ExfilHeloLock";
-
+// Set Ready
+ExfilReady = CBA_MissionTime + 90;
+publicVariable "ExfilReady";
 
 // Log entry and Confirmation Message
 _str = "Exfil Helicopter dispatched to Grid " + (mapGridPosition _target) + ".";
-[_str, 1.5] call ace_common_fnc_displayTextStructured;
+[_str,_str] remoteExec ["sr_support_fnc_infoMessage", _caller];
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
-[[SR_Side, "HQ"],_str] remoteExec ["sideChat", -2];
-
-// Inline End Function
-FNC_END = {
-	ExfilHelolock = false;
-	publicVariable "ExfilHeloLock";
-};
-
-// Travel Time
-sleep _traveltime;
 
 // Spawning Helicopter
 _helo = [_spawn, -90, _type, SR_Side] call bis_fnc_spawnVehicle;
 _group = _helo select 2;
 _helo = _helo select 0;
-_helo engineOn true;
-_group setGroupIdGlobal [_callsign];
-_group setBehaviour "CARELESS"; 
 
-/*
-// Disable Units to react
-{
-	_x disableAi "AUTOCOMBAT";
-	_x setVariable ["asr_ai_exclude", true];
-}forEach units _group;
-*/
+// Disable AI in Parts
 [_group] spawn sr_support_fnc_supportAI;
 
 // Add Action for Lift Off
@@ -84,64 +61,32 @@ clearBackpackCargoGlobal _helo;
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
 // Add Waypoints at EZ
-_wp1 = _group addWaypoint [ _target, 0, 1];
-_wp1 setWayPointBehaviour "CARELESS";
-_wp1 setWayPointType "MOVE";
-_wp1 setWayPointSpeed "NORMAL";
-_wp1 setWayPointCombatMode "WHITE";
+[_group, _target] spawn BIS_fnc_wpLand;
 
-// Slow down and lock to LZ
-waitUntil {sleep 0.5; (!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 1000))};
-if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-_group lockWP true;
-_group setSpeedMode "LIMITED"; 
-
-// Landing
-waitUntil {(!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 200))};
-if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-_helo land 'land';
-doStop _helo;
-
-// Ensure engine stays on and helo does not lift off when initially landed
-waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo)) || !isEngineOn _helo};
-if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-_helo engineOn true;
-_helo flyInHeight 0;
-_group lockWP false;
-sleep 2;
-_helo engineOn true;
+waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo))};
 
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
-if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
-_helo land 'NONE';
-force = true;
-publicVariable "force";
-_group setSpeedMode "NORMAL"; 
-_helo flyInHeight 100;
 {deleteWaypoint _x}forEach waypoints _group;
 
-
-
-
-[{!alive (_this select 0) || (({alive _x} count units (_this select 0)) < 1) || ((_this select 0) distance2D  (_this select 2) < 300)}, {
-	[false] call FNC_END;
-}, [_helo,_group,_spawn]] call CBA_fnc_waitUntilAndExecute;
+// Assign recovered Variable
+{
+	_x setVariable ["SR_Recovered",true,true];
+}forEach assignedCargo _helo;
 
 // Evaluate Dropoff
- if (!isNil "_do" && !(markerPos _do isEqualTo [0,0,0])) then {
-	_drop = markerPos _do;
-	_wp2 = _group addWaypoint [_drop, 0, 1];
-	_wp2 setWayPointBehaviour "CARELESS";
-	_wp2 setWayPointSpeed "NORMAL";
-	_wp2 setWayPointType "TR UNLOAD";
-	_wp2 setWayPointCombatMode "WHITE";
+ if (!isNil "_dopoffMarker" && !(markerPos _dopoffMarker isEqualTo [0,0,0])) then {
+	private _dropWP = _group addWaypoint [(markerPos _dopoffMarker), 0, 1];
+	_dropWP setWayPointBehaviour "CARELESS";
+	_dropWP setWayPointSpeed "NORMAL";
+	_dropWP setWayPointType "TR UNLOAD";
+	_dropWP setWayPointCombatMode "WHITE";
 };
 
 // Final WP to despawn
-_wp3 = _group addWaypoint [_spawn, 0, 2];
-_wp3 setWayPointBehaviour "CARELESS";
-_wp3 setWayPointType "MOVE";
-_wp3 setWayPointSpeed "NORMAL";
-_wp3 setWayPointCombatMode "WHITE";
-_wp3 setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
+private _despawnWP = _group addWaypoint [_spawn, 0, 2];
+_despawnWP setWayPointBehaviour "CARELESS";
+_despawnWP setWayPointType "MOVE";
+_despawnWP setWayPointSpeed "NORMAL";
+_despawnWP setWayPointCombatMode "WHITE";
+_despawnWP setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];

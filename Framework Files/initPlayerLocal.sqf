@@ -46,9 +46,8 @@ _CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", 
 _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",{},{[_player] call fw_fnc_isLeader},{[target, _player, _params] call fw_fnc_supplyDropAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
-
 // Extraction
-_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{null = ["EZ","STARTSPAWN", "RHS_CH_47F", "Eagle 1-1", 0,"dropoff"] spawn fw_fnc_exfilCall;},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{["EZ","STARTSPAWN", "RHS_CH_47F","dropoff",_player] remoteExec ["fw_fnc_exfilCall",2];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
 // Vehicle Drop
