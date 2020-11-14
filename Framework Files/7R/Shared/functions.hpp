@@ -145,6 +145,7 @@
 		class dismountVehicle{};
 		class findPOI{};
 		class garrisonZEI{};
+		class createWaypoint{};
 	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
