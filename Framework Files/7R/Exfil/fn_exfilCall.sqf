@@ -64,10 +64,15 @@ _helo addItemCargoGlobal ["SR_PAK", 10];
 [_group, _target] spawn BIS_fnc_wpLand;
 
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo))};
+// Fail Safe
+sleep 3;
+if (!(isTouchingGround _helo)) then {
+	_helo setVariable ["liftoff", true,true];
+};
 
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
-{deleteWaypoint _x}forEach waypoints _group;
+{deleteWaypoint _x} forEach waypoints _group;
 
 // Assign recovered Variable
 {
@@ -75,18 +80,9 @@ waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _gro
 }forEach assignedCargo _helo;
 
 // Evaluate Dropoff
- if (!isNil "_dopoffMarker" && !(markerPos _dopoffMarker isEqualTo [0,0,0])) then {
-	private _dropWP = _group addWaypoint [(markerPos _dopoffMarker), 0, 1];
-	_dropWP setWayPointBehaviour "CARELESS";
-	_dropWP setWayPointSpeed "NORMAL";
-	_dropWP setWayPointType "TR UNLOAD";
-	_dropWP setWayPointCombatMode "WHITE";
+ if (!(markerPos _dopoffMarker isEqualTo [0,0,0]) && {_x in allPlayers} count (crew _helo) > 0) then {
+	[_group, (markerPos _dopoffMarker), "TR UNLOAD"] spawn fw_fnc_createWaypoint;
 };
 
 // Final WP to despawn
-private _despawnWP = _group addWaypoint [_spawn, 0, 2];
-_despawnWP setWayPointBehaviour "CARELESS";
-_despawnWP setWayPointType "MOVE";
-_despawnWP setWayPointSpeed "NORMAL";
-_despawnWP setWayPointCombatMode "WHITE";
-_despawnWP setWaypointStatements ["true", "[this] call fw_fnc_deleteVehicle;"];
+[_group, _spawn, "END"] spawn fw_fnc_createWaypoint;
