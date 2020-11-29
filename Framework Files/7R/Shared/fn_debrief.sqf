@@ -73,3 +73,6 @@ if (isServer) then {
 {
 	player setAmmo [_x, 0];
 } forEach weapons player;
+
+// Full Heal Player
+[player] call ace_medical_treatment_fnc_fullHealLocal;
