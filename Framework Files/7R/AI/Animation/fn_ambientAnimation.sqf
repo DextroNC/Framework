@@ -5,7 +5,7 @@
 		<-- Optional: Combat Ready as Boolean (default: false)
 
 	All Animations and Parameters can be found here:
-	
+	https://github.com/DextroNC/Framework/wiki/fw_fnc_ambientAnimation
 		
 	Return:
 		none
