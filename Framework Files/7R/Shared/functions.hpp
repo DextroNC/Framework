@@ -46,6 +46,7 @@
 		class civShooter{};
 		class civEventhandler{};
 		class civBomberAction{};
+		class civUnitSpawn{};
 	};
 	class arty
 	{

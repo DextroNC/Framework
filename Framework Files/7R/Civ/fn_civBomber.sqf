@@ -7,11 +7,13 @@
 
 */
 // Parmeter Init
-params ["_unit"];
+params ["_unit","_zone"];
 
-// Diasble Lamps Danger.doFSM
-group _unit setVariable ["lambs_danger_disableGroupAI",true];
-_unit setVariable ["lambs_danger_disableAI",true];
+// Add Grenade
+_unit addItem "rhs_mag_rgd5";
+
+// Set Patrol
+[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
 
 //Per Frame Handler
 [{

@@ -15,7 +15,10 @@
 if(!isServer) exitWith {};
 
 // Parameter Init
-params [["_unit",objNull],["_mode",1]];
+params [["_unit",objNull],["_mode",1],"_zone"];
+
+// Set Patrol
+[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
 
 switch (_mode) do {
 	// Suicide Bomber Mode (When Loaded in a Vic he blows himself up)
@@ -26,13 +29,12 @@ switch (_mode) do {
 		// Add EH
 		_unit addEventHandler ["GetInMan", {
 			params ["_unit"];
-			[_unit,_handle] spawn fw_fnc_civBomberAction;
+			[_unit] spawn fw_fnc_civBomberAction;
 		}];
 	};
 	// Weapon Mode
 	case 2: {
 		// Assign Weapon
-		_array = [[]];
 		_unit addWeapon "hgun_Pistol_01_F";
 		_unit addMagazine "10Rnd_9x21_Mag";
 		_unit addMagazine "10Rnd_9x21_Mag";
@@ -48,7 +50,6 @@ switch (_mode) do {
 		}] call CBA_fnc_addEventHandler;
 
 		// Fired Near EH
-
 		_unit addEventHandler ["FiredNear", {
 			params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 			if (_distance < 25) then {

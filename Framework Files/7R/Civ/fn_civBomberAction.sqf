@@ -8,7 +8,7 @@
 
 */
 // Parameter Init
-params ["_unit","_handle"];
+params ["_unit"];
 
 // Check if Bomber has Ammunition				
 if ("rhs_mag_rgd5" in (magazines _unit)) then { 
@@ -34,8 +34,6 @@ if ("rhs_mag_rgd5" in (magazines _unit)) then {
 		_unit removeMagazine "rhs_mag_rgd5";
 		"M_PG_AT" createVehicle (position _unit);
 	};
-	// Remove perFrameEH
-	[_handle] call CBA_fnc_removePerFrameHandler;
 };
 
 
