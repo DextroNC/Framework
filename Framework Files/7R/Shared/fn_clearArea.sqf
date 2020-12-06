@@ -22,6 +22,7 @@ _array = [_units, [_excl,_area], {_x}, "ASCEND",{!(_x in _input0) && (_x inArea 
 
 // Delete all units from array
 {
+	_x removeAllEventHandlers "killed";
 	if (vehicle _x != _x) then {
 		deleteVehicle vehicle _x;
 	};
