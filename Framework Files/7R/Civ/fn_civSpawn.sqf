@@ -41,15 +41,15 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 		switch (_mode) do {
 			// Bomber
 			case "bomber": {
-				[_unit] spawn fw_fnc_civBomber;
+				[_unit, _zone] spawn fw_fnc_civBomber;
 			};
 			// Sleeper
 			case "sleeper": {
-				[_unit, 2] spawn fw_fnc_civSleeper;
+				[_unit, 2, _zone] spawn fw_fnc_civSleeper;
 			};
 			// Shooter
 			case "shooter": {
-				[_unit, 1] spawn fw_fnc_civSleeper;
+				[_unit, 1, _zone] spawn fw_fnc_civSleeper;
 			};
 			// Civilian
 			default {

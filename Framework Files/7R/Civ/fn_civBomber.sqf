@@ -7,7 +7,7 @@
 
 */
 // Parmeter Init
-params ["_unit"];
+params ["_unit","_zone"];
 
 // Add Grenade
 _unit addItem "rhs_mag_rgd5";

@@ -15,7 +15,7 @@
 if(!isServer) exitWith {};
 
 // Parameter Init
-params [["_unit",objNull],["_mode",1]];
+params [["_unit",objNull],["_mode",1],"_zone"];
 
 // Set Patrol
 [group _unit, _zone, 4] spawn fw_fnc_civPatrol;
