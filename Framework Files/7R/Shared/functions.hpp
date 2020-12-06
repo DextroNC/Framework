@@ -147,6 +147,10 @@
 		class garrisonZEI{};
 		class createWaypoint{};
 	};
+	class AiAnimationn {
+		file = "7R\AI\Animation";
+		class ambientAnimation{};
+	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
 		class cleanUpLoop{postInit = true};
