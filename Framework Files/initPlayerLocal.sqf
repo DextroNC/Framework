@@ -39,7 +39,7 @@ _SDM = ["7R_SupplyDrop","Mark Supply DZ","",{null = ["SupplyDrop", "Supply DZ", 
 _ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _ATM] call ace_interact_menu_fnc_addActionToClass;
 
-_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_arrow", false, [0.7,0.7],true] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
 // Supply Drop
@@ -47,7 +47,7 @@ _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
 // Extraction
-_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{["EZ","STARTSPAWN", "RHS_CH_47F","dropoff",_player] remoteExec ["fw_fnc_exfilCall",2];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{["EZ","STARTSPAWN",SR_Support_Assets select 4,"dropoff",_player] remoteExec ["fw_fnc_exfilCall",2];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
 // Vehicle Drop
@@ -77,8 +77,10 @@ _ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAF] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS
-_CAS1 = ["7R_CAS","Call CAS","",{["CASTarget",3,"B_Plane_Fighter_01_F",0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
+_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
 
 // Pilot Recall
 _CRC = {(player getVariable ["SR_Class","Rifleman"]) in ["Pilot","TC"] && (vehicle player == player)};
@@ -113,7 +115,3 @@ if (count SR_Hack_Area != 0) then {
 	_hack = ["7R_Hack","Start Hack","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\intel_ca.paa",{[SR_Hack_Area,player] spawn fw_fnc_hackingAction},_hackC] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _hack] call ace_interact_menu_fnc_addActionToClass;
 };
-
-// NVG Adjustments (DO NOT TOUCH)
-ace_nightvision_fogScaling = 0.5;
-ace_nightvision_effectScaling = 0.5;
