@@ -46,7 +46,7 @@ CASFireMissionLock = true;
 publicVariable "CASFireMissionLock";
 
 // Fire Mission Confirmation Message + Create Log
-_str = "CAS Strike: " + (["Gunrun","Misslerun"," Gun and Missle run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
+_str = "CAS Strike: " + (["Gun Run","Missle Run"," Gun and Missle Run","Bomb"] select _type) + " at Grid " + (mapGridPosition markerPos _target) + ".";
 [_str,_str] spawn fw_fnc_info;
 ["CombatLog", ["Support", _str]] spawn CBA_fnc_globalEvent; 
 
@@ -58,15 +58,15 @@ if (_delay > 0) then {
 };
 
 // Module Prep
-_dir = random 360;
-    
+private _direction = markerDir _target;
+  
 // Module Exec
 _cas = createVehicle ["LaserTargetCBase",(markerPos _target), [], 0, "NONE"];
 _cas enableSimulation false; 
 _cas hideObject true;
 _cas setVariable ["vehicle",_plane, true];
 _cas setVariable ["type", _type, true];
-_cas setDir _dir;
+_cas setDir _direction;
 [_cas,nil,true] call BIS_fnc_moduleCAS;
 deleteVehicle _cas;
 

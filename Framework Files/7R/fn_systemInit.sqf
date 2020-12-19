@@ -37,7 +37,7 @@ SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Constr
 
 
 */
-SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","JS_JC_FA18E","RHS_CH_47F"];
+SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","RHS_A10","RHS_CH_47F"];
 
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
 SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
