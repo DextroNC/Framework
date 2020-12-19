@@ -58,7 +58,6 @@ if (_delay > 0) then {
 };
 
 // Module Prep
-//_dir = random 360;
 private _direction = markerDir _target;
   
 // Module Exec
