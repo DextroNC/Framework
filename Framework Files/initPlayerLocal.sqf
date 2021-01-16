@@ -97,7 +97,8 @@ _SLD = ["7R_SD_Load","Load Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\tr
 [(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _SLD] call ace_interact_menu_fnc_addActionToClass;
 
 // Repair
-_REP = ["7R_SD_Load","Repair Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\repair_ca.paa",{nul = [vehicle _player, _player] spawn fw_fnc_repair;},_conditionsVehicle] call ace_interact_menu_fnc_createAction;
+_REP = ["7R_SD_Load","Repair Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\repair_ca.paa",{nul = [vehicle _player, _player] spawn fw_fnc_repair;},
+] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _REP] call ace_interact_menu_fnc_addActionToClass;
 
 // Undercover
