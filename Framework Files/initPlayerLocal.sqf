@@ -96,11 +96,6 @@ _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTa
 _SLD = ["7R_SD_Load","Load Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\truck_ca.paa",{},_conditionsVehicle,{[target, _player, _params] call fw_fnc_supplySpawnAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _SLD] call ace_interact_menu_fnc_addActionToClass;
 
-// Repair
-_REP = ["7R_SD_Load","Repair Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\repair_ca.paa",{nul = [vehicle _player, _player] spawn fw_fnc_repair;},
-] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _REP] call ace_interact_menu_fnc_addActionToClass;
-
 // Undercover
 _uc1 = ["7R_UC","Go Undercover","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\scout_ca.paa",{nul = [_player] spawn fw_fnc_goUndercover;},{(CBA_MissionTime - SR_SuspicionSpotted > 60) && _player getVariable ["SR_Class","R"] isEqualto "UC" && !(_player getVariable ["SR_UC",false])}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _uc1] call ace_interact_menu_fnc_addActionToClass;
@@ -111,8 +106,3 @@ _uc2 = ["7R_UC","Exit Undercover","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rifle
 
 // Hacking
 SR_Hack_Area = [];
-if (count SR_Hack_Area != 0) then {
-	_hackC = {({position player inArea _x} count SR_Hack_Area) > 0 && "ARP_Objects_Laptop_M" in items player};
-	_hack = ["7R_Hack","Start Hack","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\intel_ca.paa",{[SR_Hack_Area,player] spawn fw_fnc_hackingAction},_hackC] call ace_interact_menu_fnc_createAction;
-	[(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _hack] call ace_interact_menu_fnc_addActionToClass;
-};
