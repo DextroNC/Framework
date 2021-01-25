@@ -84,14 +84,10 @@
 		class hvt{};
 		class intelAction{};
 		class intelCollection{};
-		class hackingAction{};
-		class hackingLoop{};
-		class hackingPickup{};
 	};
 	class repair {
 		file = "7R\Repair";
 		class repairStation{};
-		class repair{};
 
 	};
 	class para {
