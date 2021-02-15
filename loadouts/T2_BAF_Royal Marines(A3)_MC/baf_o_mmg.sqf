@@ -17,6 +17,7 @@ comment "Add containers";
 _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
@@ -29,8 +30,9 @@ _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m240G";
-_unit addPrimaryWeaponItem "RH_m145";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN_ard";
+_unit addWeapon "UK3CB_BAF_L131A1";
+_unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";
 _unit addWeapon "Binocular";
 
 comment "Add items";

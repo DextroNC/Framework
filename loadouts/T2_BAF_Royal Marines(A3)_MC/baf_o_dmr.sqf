@@ -17,6 +17,7 @@ comment "Add containers";
 _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_RM";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
@@ -27,14 +28,17 @@ for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+_unit addItemToBackpack "UK3CB_BAF_MaxiKite";
 _unit addHeadgear "UK3CB_BAF_H_Mk7_Scrim_A";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L86A3";
-_unit addPrimaryWeaponItem "RKSL_optic_LDS";
+_unit addWeapon "UK3CB_BAF_L85A3";
+_unit addPrimaryWeaponItem "UK3CB_BAF_TA648";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_grippod_t";
+_unit addWeapon "UK3CB_BAF_L131A1";
+_unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";
 _unit addWeapon "Binocular";
 
 comment "Add items";

@@ -42,7 +42,7 @@ this addaction ["Fox Commander", "loadouts\us_f_com.sqf"];
 this addaction ["Fox Crewman", "loadouts\us_f_crew.sqf"];
 this addaction ["Fox Technician", "loadouts\us_f_tech.sqf"];
 this addaction ["Sierra Spotter", "loadouts\us_s_spotter.sqf"];
-this addaction ["Sierra Sniper ()", "loadouts\us_s_sniper.sqf"];
+this addaction ["Sierra Sniper (M2010)", "loadouts\us_s_sniper.sqf"];
 this addaction ["Sierra Sniper (m107)", "loadouts\us_s_sniper_m107.sqf"];
 this addaction ["Sierra Recon", "loadouts\us_s_recon.sqf"];
 this addaction ["Rodeo Pilot", "loadouts\pilot_rotaryPilot.sqf"];

@@ -19,6 +19,7 @@ comment "Add containers";
 _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
@@ -30,14 +31,16 @@ _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Engineer_L_A";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addHeadgear "UK3CB_BAF_H_Boonie_MTP";
+_unit addItemToBackpack "UK3CB_BAF_H_Boonie_MTP";
+_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_B";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L85A3";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
 _unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_afg_g";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addWeapon "UK3CB_BAF_L131A1";
+_unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -53,7 +56,6 @@ _unit addItemToUniform "ACRE_PRC343";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit addItem "ACE_IR_Strobe_Item";
-	_unit addHeadgear "UK3CB_BAF_H_Mk7_Camo_B";
 	_unit linkItem "UK3CB_BAF_HMNVS";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
