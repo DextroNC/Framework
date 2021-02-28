@@ -36,7 +36,6 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 		private _mode = ["civilian","bomber","sleeper","shooter"] select _forEachIndex;
 		private _position = [_zone, true] call CBA_fnc_randPosArea;
 		private _roll = round (random 4);
-		private _roll = 2;
 		private _unit = [selectRandom _classnames, _position] call fw_fnc_civUnitSpawn;
 		switch (_mode) do {
 			// Bomber
