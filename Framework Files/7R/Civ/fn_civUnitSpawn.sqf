@@ -25,6 +25,7 @@ private _unit = (_group) createUnit [_classname, _position,[],2,"NONE"];
 
 // Adjust behaviour
 _group setVariable ["Vcm_Disable",true];
+_unit setVariable ["acex_headless_blacklist", true,true];
 _unit setBehaviour "SAFE";
 
 // Return
