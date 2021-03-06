@@ -27,3 +27,8 @@ if (!local _unit) exitWith {};
 
 // Add Animation
 [{_this call zen_modules_fnc_moduleAmbientAnimStart;}, [_unit,_animationType,_combatReady]] call CBA_fnc_execNextFrame;
+
+// EH to stop Animation if killed
+_unit addEventHandler ["Killed", {
+     _this call zen_modules_fnc_moduleAmbientAnimEnd;
+}];
