@@ -1,43 +1,42 @@
 // Parameter Init
-params ["_new","_old"];
+params ["_newUnit","_oldUnit"];
 
-// Combat Log Entry
-if (!isNull _old) then {
-	_str = (name _new) + " has rejoined the Action.";
-	["CombatLog", ["REINF", _str]] call CBA_fnc_globalEvent; 
+// Transfer Class
+private _class = _oldUnit getVariable ["SR_Class","R"];
+_newUnit setVariable ["SR_Class", _class, true];
+
+// Transfer Loadout
+private _loadout = _oldUnit getVariable ["SR_Loadout",[]];
+_newUnit setUnitLoadout _loadout;
+
+// Transfer Night Adjustment
+if (SR_Night) then {
+	switch (_class) do {
+	    case "Sniper": {};
+		case "Spotter": {};
+		default {_newUnit setUnitTrait ["camouflageCoef",SR_Camo_Coef];};
+	};
 };
 
-// Carry over Unit Variable
-private _class = _old getVariable ["SR_Class","R"];
-_new setVariable ["SR_Class", _class, true];
-_new setUnitLoadout (_old getVariable ["SR_Loadout",[]]);
-
 // Height Adjustment for Carrier (check height in editor with: hint format ["%1", getPosASL player]. The third value in the array is the height. Change the height accordingly.)
-_height = 0;
-
-// Adjust Height
-if (_height > 0) then {
-	hint "adjusting height";
-	private _pos = getPosASL _new;
-	_new setPosASL [_pos select 0, _pos select 1, _height];
+if (SR_Spawn_Height > 0) then {
+	private _currentPos = getPosASL _newUnit;
+	_newUnit setPosASL [_currentPos select 0, _currentPos select 1, SR_Spawn_Height];
+	["","Height Adjusted"] spawn sr_support_fnc_infoMessage;
 };
 
 // End Spectator
 [false] call acre_api_fnc_setSpectator;
 ["Terminate"] call BIS_fnc_EGSpectator;
-["ace_common_hideObjectGlobal", [_new,false]] call CBA_fnc_serverEvent;
+["ace_common_hideObjectGlobal", [_newUnit,false]] call CBA_fnc_serverEvent;
 
-// Night Unit Trait Adjustment
-if (isNil "SR_Night") then {SR_Night = false};
-if (SR_Night) then {
-	switch (_class) do {
-	    case "Sniper": {};
-		case "Spotter": {};
-		default {_new setUnitTrait ["camouflageCoef",0.5];};
-	};
-};
-
-// FTL Rank Reset
- if (_old getVariable ["ACE_FTL",""] in ["RED","BLUE"]) then {
-	 _new setUnitRank "PRIVATE";
+// Reset FTL Rank
+ if (count (_oldUnit getVariable ["ACE_FTL",""]) > 0) then {
+	 _newUnit setUnitRank "PRIVATE";
  };
+ 
+// Combat Log Entry
+if (!isNull _oldUnit) then {
+	_str = (name _newUnit) + " has rejoined the Action.";
+	["CombatLog", ["REINF", _str]] call CBA_fnc_globalEvent; 
+};
