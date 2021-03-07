@@ -13,6 +13,11 @@ SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
 SR_AI_forceFlashlight = false;
 
+// Respawn Management
+SR_Respawn_Max = 600;
+SR_Wave_Size = 2;
+SR_Spawn_Height = 0;
+
 // Night Mission (true/false)
 SR_Night = false;
 SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
