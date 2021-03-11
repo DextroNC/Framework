@@ -14,30 +14,30 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_Multicam_Crye_SS_Camo";
+_unit forceAddUniform "rhs_uniform_g3_mc";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "milgp_v_mmac_medic_belt_RGR";
+_unit addVest "milgp_v_mmac_medic_mc";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 _unit addBackpack "VSM_Multicam_Backpack_Kitbag";
 _unit addItemToBackpack "ACE_SpraypaintBlue";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Bandage_Pack";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
-for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
-_unit addHeadgear "milgp_h_opscore_05_goggles_RGR_hexagon";
+_unit addItemToBackpack "VSM_Multicam_Cap";
+_unit addHeadgear "rhsusf_opscore_mc_pelt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "SMA_Mk16QCB";
-_unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
+_unit addWeapon "rhs_weap_m4a1_blockII_KAC_d";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip2";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "Binocular";
@@ -49,6 +49,13 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 10 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
+
+_unit addItemToBackpack "ACE_surgicalKit";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_tourniquet";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Bandage_Pack";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "SR_Utility_Pack";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";

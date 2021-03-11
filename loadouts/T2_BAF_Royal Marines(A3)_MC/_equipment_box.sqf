@@ -5,18 +5,14 @@ this addaction ["<t color=""#00FF00"">" +"Aimpoint", "7R\Loadouts\7R_EQ.sqf",["F
 this addaction ["<t color=""#00FF00"">" +"Comp M2", "7R\Loadouts\7R_EQ.sqf",["RH_compm2"]];
 this addaction ["<t color=""#00FF00"">" +"Comp M2 low", "7R\Loadouts\7R_EQ.sqf",["RH_compm2l"]];
 this addaction ["<t color=""#00FF00"">" +"Comp M4", "7R\Loadouts\7R_EQ.sqf",["RH_compm4s"]];
-this addaction ["<t color=""#00FF00"">" +"Comp M4", "7R\Loadouts\7R_EQ.sqf",["RH_compm4s"]];
-this addaction ["<t color=""#00FF00"">" +"Aimpoint T1", "7R\Loadouts\7R_EQ.sqf",["RH_t1"]];
-this addaction ["<t color=""#00FF00"">" +"Aimpoint T1 high", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_T1_high"]];
-this addaction ["<t color=""#00FF00"">" +"Aimpoint T1 low", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_T1_low"]];
-this addaction ["<t color=""#00FF00"">" +"C-more", "7R\Loadouts\7R_EQ.sqf",["RH_cmore"]];
-this addaction ["<t color=""#00FF00"">" +"RX01 no filter", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_RX01_noFilter"]];
-this addaction ["<t color=""#00FF00"">" +"RX01", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_RX01"]];
-this addaction ["<t color=""#00FF00"">" +"Trijicon Reflex", "7R\Loadouts\7R_EQ.sqf",["RH_reflex"]];
-this addaction ["<t color=""#FF8C00"">" +"TA31F", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA31F"]];
+this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA31F"]];
 this addaction ["<t color=""#FF8C00"">" +"LDS", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_LDS"]];
-this addaction ["<t color=""#FF8C00"">" +"SUSAT", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_SUSAT"]];
-this addaction ["<t color=""#FF0000"">" +"DMR Sight - TA648", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA648"]];
+this addaction ["<t color=""#FF8C00"">" +"ECLAN - MMG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN_ard"]];
+this addaction ["<t color=""#FF0000"">" +"TA648 (5.56) - ", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA648"]];
+this addaction ["<t color=""#FF0000"">" +"TA648 (7.62) - ", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_TA648_308"]];
+this addaction ["<t color=""#0000FF"">" +"x4 Night sight - Kite", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_Kite"]];
+this addaction ["<t color=""#0000FF"">" +"x6 Night sight - MaxiKite", "7R\Loadouts\7R_EQ.sqf",["UK3CB_BAF_MaxiKite"]];
+
 
 // Support items
 [this, 2] call fw_fnc_addEquipmentItems;

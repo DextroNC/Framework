@@ -17,6 +17,7 @@ comment "Add containers";
 _unit forceAddUniform "U_B_FullGhillie_sard";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 4 do {_unit addItemToUniform "SmokeShell";};
@@ -26,10 +27,10 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "B_UAV_01_backpack_F";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_d";
-_unit addPrimaryWeaponItem "RH_qdss_nt4_des";
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
-_unit addPrimaryWeaponItem "rhsusf_acc_grip2_d";
+_unit addWeapon "rhs_weap_m4a1_d_mstock";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip3";
+_unit addPrimaryWeaponItem "RH_spr_mbs_des";
 _unit addWeapon "ACE_MX2A";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_acc_omega9k";
@@ -41,7 +42,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "B_UavTerminal";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToBackpack "ACRE_PRC117F";

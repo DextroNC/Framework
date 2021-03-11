@@ -17,6 +17,7 @@ comment "Add containers";
 _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
@@ -35,13 +36,15 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeYellow_Grenade_shell
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 _unit addItemToBackpack "ACE_HuntIR_monitor";
 _unit addItemToBackpack "ACE_SpraypaintGreen";
-_unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer_PRR";
+_unit addItemToBackpack "UK3CB_BAF_H_Beret_RM_Officer_PRR";
+_unit addHeadgear "UK3CB_BAF_H_Mk7_Net_ESS_A";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L85A3_UGL";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addWeapon "UK3CB_BAF_L131A1";
+_unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";
 _unit addWeapon "ACE_Vector";
 
 comment "Add items";
@@ -65,7 +68,6 @@ if (SR_Night) then {
 	_unit addItemToBackpack "UGL_FlareWhite_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
 	_unit addItemToBackpack "UGL_FlareRed_F";
-	_unit addHeadgear "UK3CB_BAF_H_Mk7_Net_ESS_A";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];
