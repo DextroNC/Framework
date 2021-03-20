@@ -62,7 +62,7 @@ if (isServer) then {
 [player,["Debrief", "Debrief"]] remoteExec ["createDiarySubject",0];
 // KIAs
 [player,["Debrief",["Casulties",SR_KIA]]] remoteExec ["createDiaryRecord",0];
-// Civilian Casulties
+// Civilian Casualties
 [player,["Debrief",["Civilian Casulties",SR_CC]]] remoteExec ["createDiaryRecord",0];
 // War Crimes
 [player,["Debrief",["War Crimes",SR_WC]]] remoteExec ["createDiaryRecord",0];
