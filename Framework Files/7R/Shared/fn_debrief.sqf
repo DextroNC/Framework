@@ -61,8 +61,8 @@ if (isServer) then {
 // Create Category
 [player,["Debrief", "Debrief"]] remoteExec ["createDiarySubject",0];
 // KIAs
-[player,["Debrief",["Casulties",SR_KIA]]] remoteExec ["createDiaryRecord",0];
-// Civilian Casulties
+[player,["Debrief",["Casualties",SR_KIA]]] remoteExec ["createDiaryRecord",0];
+// Civilian Casualties
 [player,["Debrief",["Civilian Casualties",SR_CC]]] remoteExec ["createDiaryRecord",0];
 // War Crimes
 [player,["Debrief",["War Crimes",SR_WC]]] remoteExec ["createDiaryRecord",0];
