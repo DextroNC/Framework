@@ -13,12 +13,11 @@
 // Paramter Init
 private _unit = (_this select 1);
 private _type = (_this select 3) select 0;
-_group = group _unit;
 
 // Local only execute
-if( !local _unit ) exitWith {};
+if(!local _unit) exitWith {};
 
-if (_type == "B_Parachute") then {
+if (_type == "B_Parachute") exitWith {
   _unit addBackpack _type;
 };
 
@@ -30,20 +29,14 @@ if (!(_unit canAdd _type)) exitWith {
 switch (_type) do {
     case "ACRE_PRC343": {_unit addItem _type;};
     case "ACRE_PRC152": {
-      if (({_type in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
-			  _unit addItem _type;
-		  } else {
-        ["","Radio PRC152 limit reached!"] remoteExec ["fw_fnc_info", _group];
-		  };
+      [_unit,_type,3] spawn fw_fnc_conditionEquipment;
     };
     case "ACRE_PRC148": {
-      if (({_type in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
-        _unit addItem _type;
-      } else {
-        ["","Radio PRC148 limit reached!"] remoteExec ["fw_fnc_info", _group];
-      };
+      [_unit,_type,3] spawn fw_fnc_conditionEquipment;
     };
-    case "ACRE_PRC117F": {_unit addItem _type;};
+    case "ACRE_PRC117F": {
+      [_unit,_type,3] spawn fw_fnc_conditionEquipment;
+    };
     case "rhsusf_ANPVS_14": {_unit linkItem _type;};
     case "rhsusf_ANPVS_15": {_unit linkItem _type;};
     case "rhs_1PN138": {_unit linkItem _type;};
@@ -56,22 +49,13 @@ switch (_type) do {
     case "O_UavTerminal": {_unit linkItem _type;};
     case "ItemGPS": {_unit linkItem _type;};
     case "ACE_EntrenchingTool": {
-      if (({"ACE_EntrenchingTool" in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
-        _unit addItem "ACE_EntrenchingTool";
-      } else {
-        ["","Entrenching Tool limit reached!"] remoteExec ["fw_fnc_info", _group];
-      };
+      [_unit,_type] spawn fw_fnc_conditionEquipment;
 	  };
     case "MineDetector": {
-      if (({"MineDetector" in items _x}count (units _group)) < 1 || groupId _group in ["PL","P","P-1","P-2"]) then {
-        _unit addItem "MineDetector";
-      } else {
-        ["","Mine Detector limit reached!"] remoteExec ["fw_fnc_info", _group];
-      };
+      [_unit,_type] spawn fw_fnc_conditionEquipment;
 	  };
     default {_unit addPrimaryWeaponItem _type;};
 };
 
 // Save Loadout (not when Parachute)
-if (_type isEqualTo "B_Parachute") exitWith {};
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];

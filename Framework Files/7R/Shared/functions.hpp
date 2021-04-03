@@ -157,5 +157,6 @@
 		class clearVehicleCargo{};
 		class addEquipmentRadios{};
 		class addEquipmentItems{};
+		class conditionEquipment{};
 	}
 };
