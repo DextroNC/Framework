@@ -1,6 +1,7 @@
 /*
 	Parameters:
 		<-- Unit as Object
+		<-- Panic as Boolean (default: true)
 		
 	Description:
 		Applies a killed Eventhandler tracking civilian casualties.
@@ -11,30 +12,12 @@
 */
 
 // Parameter Init
-params ["_unit"];
+params ["_unit",["_panic",true]];
 
 // Killed Eventhandler
-_unit addEventHandler ["Killed", {
-	// Parameter Init
-	params ["_dead"];
-
-	// Find Killer and create info string
-	private _killer = name (_dead getVariable ["ace_medical_lastDamageSource", objNull]);
-	private _victim = name _dead;
-	private _str = format [SR_CC + "<br/>" + _victim + " has been killed by " + _killer + "."];
-
-	// Publish info string
-	SR_CC = _str;
-	publicVariable "SR_CC";
-}]; 
+[_unit] spawn fw_fnc_civKilledEH;
 
 // Panic Eventhandler
-_unit addEventHandler ["FiredNear", {
-	params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
-	// last panic
-	private _lastPanic = _unit getVariable ["lastPanic", 0];
-	if (CBA_MissionTime - _lastPanic > 30 && round (random 5) <= 2) then {
-			_unit playMoveNow selectRandom ["ApanPknlMsprSnonWnonDf", "ApanPercMsprSnonWnonDf", "ApanPpneMsprSnonWnonDf", "ApanPpneMrunSnonWnonDf"];
-			_unit setVariable ["lastPanic", CBA_MissionTime];
-	};
-}];
+if (_panic) then {
+	[_unit] spawn fw_fnc_civPanicEH;
+};
