@@ -15,10 +15,12 @@
 if(!isServer) exitWith {};
 
 // Parameter Init
-params [["_unit",objNull],["_mode",1],"_zone"];
+params [["_unit",objNull],["_mode",1],["_zone",""]];
 
 // Set Patrol
-[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
+if (count _zone > 0) then {
+	[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
+};
 
 switch (_mode) do {
 	// Suicide Bomber Mode (When Loaded in a Vic he blows himself up)

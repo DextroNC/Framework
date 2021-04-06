@@ -1,6 +1,7 @@
 /*
 	Parameters:
 		<-- Unit as Object
+		<-- Break as Boolean (default: true)
 
 	Return:
 	--> None
@@ -12,21 +13,26 @@
 		[_unit] spawn fw_fnc_surrender;
 */
 // Parameter Init
-params ["_unit"];
+params ["_unit",["_break",true]];
 
 // Surrender Unit
 [_unit, true] call ace_captives_fnc_setSurrendered;
 
+// Set EH
+[_unit] spawn  fw_fnc_powKilledEH;
+
 // If unit is handcuffed do nothing, else unsurrender after timer and continue fighting
-[
-	// Condition
-	{_this getVariable ["ace_captives_isHandcuffed", false]},
-	// Statement
-	{},
-	// Args
-	_unit,
-	// Timeout
-	random [30, 45, 60],
-	// TimeoutCode
-	{[_this, false] call ace_captives_fnc_setSurrendered;}
-] call CBA_fnc_waitUntilAndExecute;
+if (_break) then {
+	[
+		// Condition
+		{_this getVariable ["ace_captives_isHandcuffed", false]},
+		// Statement
+		{},
+		// Args
+		_unit,
+		// Timeout
+		random [30, 45, 60],
+		// TimeoutCode
+		{[_this , false] call ace_captives_fnc_setSurrendered; _this removeAllEventHandlers "Killed"}
+	] call CBA_fnc_waitUntilAndExecute;
+};

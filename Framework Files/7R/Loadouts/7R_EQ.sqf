@@ -59,3 +59,4 @@ switch (_type) do {
 
 // Save Loadout (not when Parachute)
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+

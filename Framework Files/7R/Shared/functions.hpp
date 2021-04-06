@@ -82,6 +82,7 @@
 	class Objectives {
 		file = "7R\Objectives";
 		class hvt{};
+		class vip{};
 		class intelAction{};
 		class intelCollection{};
 	};
@@ -151,6 +152,12 @@
 	class CleanUp {
 		file = "7R\AI\CleanUp";
 		class cleanUpLoop{postInit = true};
+	};
+	class AIEH {
+		file = "7R\AI\Eventhandler";
+		class civKilledEH{};
+		class civPanicEH{};
+		class powKilledEH{};
 	};
 	class Loadouts {
 		file = "7R\Loadouts";
