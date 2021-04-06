@@ -18,7 +18,7 @@ _group = group _unit;
 // Local only execute
 if( !local _unit ) exitWith {};
 
-if (_type == "B_Parachute") then {
+if (_type == "B_Parachute") exitWith {
   _unit addBackpack _type;
 };
 
@@ -63,7 +63,7 @@ switch (_type) do {
       };
 	  };
     case "MineDetector": {
-      if (({"MineDetector" in items _x}count (units _group)) < 1 || groupId _group in ["PL","P","P-1","P-2"]) then {
+      if (({"MineDetector" in items _x}count (units _group)) < 2 || groupId _group in ["PL","P","P-1","P-2"]) then {
         _unit addItem "MineDetector";
       } else {
         ["","Mine Detector limit reached!"] remoteExec ["fw_fnc_info", _group];
@@ -71,7 +71,3 @@ switch (_type) do {
 	  };
     default {_unit addPrimaryWeaponItem _type;};
 };
-
-// Save Loadout (not when Parachute)
-if (_type isEqualTo "B_Parachute") exitWith {};
-_unit setVariable ["SR_Loadout",getUnitLoadout _unit];
