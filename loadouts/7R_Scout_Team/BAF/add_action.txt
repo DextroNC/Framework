@@ -1,2 +1,0 @@
-this addaction ["Scout Spotter (TL)", "loadouts\baf_spotter.sqf"];
-this addaction ["Scout Sniper", "loadouts\baf_sniper.sqf"];
