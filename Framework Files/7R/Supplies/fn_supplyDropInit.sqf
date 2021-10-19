@@ -94,6 +94,7 @@ if (count _vehicle == 0) then {
 		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
 	};
 	_veh attachTo [_planeacc,[0,0,4]];
+	_veh hideObject true;
 };
 
 // Calculate Waypoint and send Aircraft
