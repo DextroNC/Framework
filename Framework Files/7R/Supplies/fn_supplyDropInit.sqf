@@ -93,6 +93,7 @@ if (count _vehicle == 0) then {
 	if (_vehicleLoadout >= 0) then {
 		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
 	};
+	_veh hideObject true;
 	_veh attachTo [_planeacc,[0,0,4]];
 };
 

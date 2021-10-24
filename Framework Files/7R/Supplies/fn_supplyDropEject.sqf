@@ -5,7 +5,7 @@
 	Descriptions:
 		Ejects attached objects from Plane
 
-	
+
 */
 
 // Parameter Init
@@ -19,8 +19,9 @@ _array = attachedObjects _v;
 	// Prepare and Detach
 	_x setOwner (owner _v);
 	_x disableCollisionWith _v;
-	detach _x;	
-	
+	_x hideObject false;
+	detach _x;
+
 	// Create and Attach Parachute
 	_para = "B_Parachute_02_F" createVehicle [0, 0, 100];
 	_para setDir (direction _v);
@@ -29,6 +30,3 @@ _array = attachedObjects _v;
 	[_x,_para] spawn fw_fnc_supplyDropLanding;
 	sleep 0.25;
 } forEach _array;
-
-
-
