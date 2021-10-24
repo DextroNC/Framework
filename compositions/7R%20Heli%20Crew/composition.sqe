@@ -156,7 +156,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setGroupIdGlobal [""R-2""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
+					init="this setGroupIdGlobal [""R-2""];[objNull, this] call compile preprocessFileLineNumbers ""loadouts\pilot_rotaryPilot.sqf"";";
 					description="Helicopter Pilot @Rodeo-2";
 					isPlayable=1;
 				};
