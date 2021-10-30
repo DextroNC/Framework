@@ -12,7 +12,9 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (HC in allPlayers && isServer) exitWith {};
+if (!isNil "HC") then {
+	if (HC in allPlayers && isServer) exitWith {};
+};
 
 // Parameter Init
 params ["_trg"];

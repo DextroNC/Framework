@@ -17,7 +17,9 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (HC in allPlayers && isServer) exitWith {};
+if (!isNil "HC") then {
+	if (HC in allPlayers && isServer) exitWith {};
+};
 
 // Check Unit Cap
 if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {systemChat "Unit Cap reached."};
@@ -117,7 +119,7 @@ if (_type isEqualTo "BUNKER") Then {
 	// Find and Populate Bunkers
 	{
 		private _bunkers = _spawnPos nearObjects [_x, _radius];
-		
+
 		// Populate Bunkers
 		{
 			// Find Slots available

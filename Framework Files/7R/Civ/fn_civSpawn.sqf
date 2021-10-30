@@ -6,11 +6,11 @@
 		<-- Opt: Suicide Bombers as Integer - default: 0
 		<-- Opt: Sleeper as Integer - default : 0
 		<-- Opt: Shooter as Integer - default : 0
-		
+
 		Description:
-		Spawn Civilians randomly in an area which they either patrol, occupy houses or idle near roads. 
+		Spawn Civilians randomly in an area which they either patrol, occupy houses or idle near roads.
 		In addition it also allows the spawning of suicide bombers.
-		
+
 		Example:
 			nul = ["civ1",["LOP_CHR_Civ_Random"],8,0] spawn fw_fnc_civSpawn;
 
@@ -18,7 +18,9 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (HC in allPlayers && isServer) exitWith {};
+if (!isNil "HC") then {
+	if (HC in allPlayers && isServer) exitWith {};
+};
 
 // Check Unit Cap
 if (count (allUnits - allPlayers) > SR_Unit_Cap) exitWith {diag_log "Unit Cap reached."};
@@ -28,7 +30,7 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 
 // Spawn Units
 {
-	
+
 	private _count  = _x;
 	for [{_i = 1}, {_i <= _count}, {_i = _i + 1}] do {
 
@@ -77,6 +79,6 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 					};
 				};
 			};
-		};	
+		};
 	};
 } forEach [_civilians, _bomber, _sleeper , _shooter];
