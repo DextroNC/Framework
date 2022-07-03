@@ -1,68 +1,64 @@
 /*
-	Info:
-	Parameters regulate available Support Options.
-
+	 Mission Parameters.
 */
+SR_Unit_Cap = 200; // Maximum AI unit count, only change if absolutely necessary.
 
-// Mission Parameter
-
-// Unit Cap (cap of AI)
-SR_Unit_Cap = 200;
+// Night mission settings
 SR_AI_NVG = "";
 SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
-SR_AI_forceFlashlight = false;
+SR_AI_forceFlashlight = false; // Force AI to turn flashlight on.
+SR_Night = false; // Set to 'true' when the mission is played entirely at night.
+SR_Camo_Coef = 0.75; // For Night Missions, default: 0.75
 
 // Respawn Management
-SR_Respawn_Max = 600;
-SR_Wave_Size = 2;
-SR_Spawn_Height = 0;
+SR_Respawn_Max = 600; // Maximum wait time for respawn.
+SR_Wave_Size = 2; // Minimum players needed to start a respawn wave.
+SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships).
 
-// Night Mission (true/false)
-SR_Night = false;
-SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
-
-// First GasMask Equip give Atropine (true/false)
-ace_medical_poisonKit = true;
-ace_medical_gasMask = "Mask_M50";
-
-// Supply Boxes
-SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Construction_Supplies","Fortification Supplies"],["SR_basic_Box_Empty","Sniper Supplies",3],["SR_Explosives_Box_Empty","Mortar Supplies",8],["SR_Special_Box_Empty","HAT Supplies",9],["SR_Ammo_Box_Empty","Infantry Supplies 1 (Small)",4],["SR_Special_Box_Empty","Infantry Supplies 2 (Small)",5],["SR_Medical_Empty","Medical Supplies",7]];
-
-// ======================================================================================
 /*
-	Support Asset Class Array
-	SR_Support_Assets = ["ParaDropPlane1","ParaDropPlane2","SupplyDropPlane","CASPlane","ExfilHelicopter"];
-	
-	// Recommended Options
-	ParaDropPlane1 & SupplyDropPlane - "RHS_C130J" (Default), "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR) 
-	ParaDropPlane2 - "globemaster_c17" (Default)
-	CASPlane - "JS_JC_FA18E" (Default, "RHS_A10" (Alternative US/NATO), "RHS_Su25SM_vvs" (Russian/USSR)
-	ExfilHelicopter - "RHS_CH_47F" (Default), "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
-
-
+	Available supply boxes.
 */
-SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","RHS_A10","RHS_CH_47F"];
+SR_SupplyBoxes = [
+    // ["Box_Class", "Display name", Box number from _supply_drop_content.sqf, Max amount (default: 1)]
+    ["SR_Supply_Crate_Empty", "Infantry Supplies", 1, 3],
+    ["ACE_Construction_Supplies", "Fortification Supplies"],
+    ["SR_basic_Box_Empty", "Sniper Supplies", 3],
+    ["SR_Explosives_Box_Empty", "Mortar Supplies", 8],
+    ["SR_Special_Box_Empty", "HAT Supplies", 9],
+    ["SR_Ammo_Box_Empty", "Infantry Supplies 1 (Small)", 4],
+    ["SR_Special_Box_Empty", "Infantry Supplies 2 (Small)", 5],
+    ["SR_Medical_Empty", "Medical Supplies", 7]
+];
 
-// Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
-SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
-
-// ======================================================================================
 /*
-	Recommended if desired:
-	- SupplyDropAmmo = 12;
-	- CASCallAmmo = 6;
-	- ArtilleryCallAmmo 45;
-	- ace_trenches_trenchSupplies = 500; (Trench Supply Drop gives 500 as well)
+	Support Asset Class Array.
 */
-// Support System Availability Variables
+SR_Support_Assets = [
+    /* ParaDropPlane (small) */ "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
+    /* ParaDropPlane (big) */   "globemaster_c17",
+    /* SupplyDropPlane */       "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF), "UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
+    /* CASPlane */              "RHS_A10", // Alternatives: "RHS_Su25SM_vvs" (Russian/USSR)
+    /* ExfilHelicopter */       "RHS_CH_47F" // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
+];
+
+/*
+	Available vehicle drops.
+*/
+SR_Vehicle_Drop = [
+    // ["Display name", "Vehicle_Class", Loadout number]
+    ["Quad", "B_Quadbike_01_F", 0]
+];
+
+/*
+	Available support assets.
+*/
 SupplyDropAmmo = 12;
 ArtilleryCallAmmo = 45;
 CASCallAmmo = 6;
 ace_trenches_trenchSupplies = 500;
 
-
-// ======================================================================================
-
-// Additional Variable Init for Mission Triggers
+/*
+	Phase to start at mission load.
+*/
 phase = 0;
