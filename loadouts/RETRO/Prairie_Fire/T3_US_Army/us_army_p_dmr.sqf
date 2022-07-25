@@ -25,7 +25,7 @@ _unit addHandgunItem "vn_m1911_mag";
 
 comment "Add containers";
 _unit forceAddUniform "vn_b_uniform_macv_01_07";
-_unit addVest "milgp_v_marciras_marksman_belt_b";
+_unit addVest "vn_b_vest_usarmy_08";
 _unit addBackpack "vn_b_pack_lw_01";
 
 comment "Add binoculars";
