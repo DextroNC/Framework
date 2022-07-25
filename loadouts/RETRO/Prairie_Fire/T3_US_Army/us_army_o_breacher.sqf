@@ -14,8 +14,8 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add weapons";
-_unit addWeapon "vn_m1928_tommy";
-
+_unit addWeapon "vn_m1897";
+_unit addPrimaryWeaponItem "vn_b_m1897";
 _unit addWeapon "vn_m1911";
 
 _unit addHandgunItem "vn_m1911_mag";
@@ -36,8 +36,11 @@ _unit addItemToUniform "vn_m1911_mag";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
 _unit addItemToBackpack "vn_m34_grenade_mag";
-for "_i" from 1 to 3 do {_unit addItemToVest "vn_m1928_mag";};
-for "_i" from 1 to 9 do {_unit addItemToBackpack "vn_m1928_mag";};
+_unit addItemToBackpack "vn_xm177e1";
+for "_i" from 1 to 7 do {_unit addItemToVest "vn_m1897_buck_mag";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "vn_m1897_fl_mag";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "vn_m16_20_mag";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "vn_m1897_buck_mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 _unit addHeadgear "vn_b_helmet_m1_03_01";
 
