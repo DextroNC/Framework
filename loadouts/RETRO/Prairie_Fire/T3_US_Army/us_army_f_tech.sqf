@@ -39,7 +39,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_Green";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 for "_i" from 1 to 4 do {_unit addItemToUniform "vn_m3a1_mag";};
 _unit addItemToBackpack "ToolKit";
-_unit addHeadgear "vn_b_helmet_m1_11_01";
+_unit addHeadgear "vn_b_helmet_t56_02_03";
 
 _unit addItemToBackpack "SR_PAK";
 
