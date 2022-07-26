@@ -35,11 +35,10 @@ _unit addItemToUniform "vn_m1911_mag";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_Green";};
-_unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 4 do {_unit addItemToUniform "vn_m3a1_mag";};
-_unit addHeadgear "vn_b_helmet_m1_11_01";
+_unit addHeadgear "vn_b_helmet_t56_02_03";
 
 _unit addItemToBackpack "SR_PAK";
 
