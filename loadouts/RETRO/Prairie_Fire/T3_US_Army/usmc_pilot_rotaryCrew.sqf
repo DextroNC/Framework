@@ -23,7 +23,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "vn_b_vest_aircrew_03";
-_unit addHeadgear "vn_b_helmet_aph6_02_04";
+_unit addHeadgear "vn_b_helmet_svh4_02_06";
 
 comment "Add weapons";
 _unit addWeapon "vn_gau5a";
