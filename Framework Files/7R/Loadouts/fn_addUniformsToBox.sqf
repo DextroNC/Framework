@@ -11,22 +11,16 @@
 
         _uniforms should be in this format:
         [
-            [
-                ["Element name", "Element color", "Element icon"],
-                [
-                    ["Uniform name", "UniformFile"],
-                    ["Uniform name", "UniformFile"],
-                    ["Uniform name", "UniformFile"]
-                ]
-            ],
-            [
-                ["Element name", "Element color", "Element icon"],
-                [
-                    ["Uniform name", "UniformFile"],
-                    ["Uniform name", "UniformFile"],
-                    ["Uniform name", "UniformFile"]
-                ]
-            ]
+            ["Element name", "Element color", "Element icon", [
+                ["Uniform name", "UniformFile"],
+                ["Uniform name", "UniformFile"],
+                ["Uniform name", "UniformFile"]
+            ]],
+            ["Element name", "Element color", "Element icon", [
+                ["Uniform name", "UniformFile"],
+                ["Uniform name", "UniformFile"],
+                ["Uniform name", "UniformFile"]
+            ]]
         ]
 
     Return:
@@ -55,11 +49,10 @@ private _uniformsBoxAction = [
 [_box, 0, [], _uniformsBoxAction] call ace_interact_menu_fnc_addActionToObject;
 
 { // Loop over every element in the uniforms array.
-    private _element = _x select 0;
-    private _element_name = _element select 0;
-    private _element_color = _element select 1;
-    private _element_icon = _element select 2;
-    private _element_uniforms = _x select 1;
+    private _element_name = _x select 0;
+    private _element_color = _x select 1;
+    private _element_icon = _x select 2;
+    private _element_uniforms = _x select 3;
     private _elementAction = [_element_name, [_element_name, _element_color] call fw_fnc_makeColor, _element_icon, {}, {true}, {}, [], "", _maxSelectionDistance] call ace_interact_menu_fnc_createAction;
     [_box, 0, [_uniformsBoxActionName], _elementAction] call ace_interact_menu_fnc_addActionToObject;
 
