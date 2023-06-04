@@ -167,5 +167,10 @@
 		class addEquipmentRadios{};
 		class addEquipmentItems{};
 		class conditionEquipment{};
+		class addUniformsToBox{};
+	};
+	class Text {
+		file = "7R\Text";
+		class makeColor{};
 	}
 };
