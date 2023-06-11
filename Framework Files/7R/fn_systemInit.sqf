@@ -1,5 +1,5 @@
 /*
-	 Mission Parameters.
+	Mission Parameters.
 */
 SR_Unit_Cap = 200; // Maximum AI unit count, only change if absolutely necessary.
 
@@ -57,8 +57,3 @@ SupplyDropAmmo = 12;
 ArtilleryCallAmmo = 45;
 CASCallAmmo = 6;
 ace_trenches_trenchSupplies = 500;
-
-/*
-	Phase to start at mission load.
-*/
-phase = 0;
