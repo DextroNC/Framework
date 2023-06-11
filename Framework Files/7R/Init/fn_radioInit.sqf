@@ -41,17 +41,19 @@ if (!hasInterface) exitWith {};
 _id = ["ace_unconscious", {
 	params ["_unit","_state"]; 
 	if (!(isPlayer _unit)) exitWith {};
-	if (_state) then { 
-		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
-	if (_shooter in allPlayers) then { 
-		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_log remoteExecCall ["diag_log", 2];  
-		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
-		SR_FF = _msg;
-		publicVariable "SR_FF";
-	}; 
-};}] call CBA_fnc_addEventHandler;
-
+	if (_state) then {
+		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""];
+		private _shooterName = name _shooter;
+		private _unitName = name _unit;
+		if (_shooter in allPlayers && _shooterName != _unitName) then {
+			private _log = format ["[Friendly Fire] - %1 shot at %2", _shooterName, _unitName];
+			_log remoteExecCall ["diag_log", 2];
+			private _msg = format [SR_FF + "<br/>" + _shooterName + " shot at " + _unitName + "."];
+			SR_FF = _msg;
+			publicVariable "SR_FF";
+		};
+	};
+}] call CBA_fnc_addEventHandler;
 
 //Comm Card
 player createDiarySubject ["Communication", "Communication"];
