@@ -1,7 +1,7 @@
 /*
 	Parameters:
 		<--- None
-		
+
 	Auto Exec on Start.
 
 */
@@ -39,19 +39,31 @@ if (!hasInterface) exitWith {};
 
 // Friendly Fire Log
 _id = ["ace_unconscious", {
-	params ["_unit","_state"]; 
+	params ["_unit","_state"];
 	if (!(isPlayer _unit)) exitWith {};
-	if (_state) then { 
-		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
-	if (_shooter in allPlayers) then { 
-		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_log remoteExecCall ["diag_log", 2];  
-		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
-		SR_FF = _msg;
-		publicVariable "SR_FF";
-	}; 
-};}] call CBA_fnc_addEventHandler;
+	if (_state) then {
+		private _shooter = _unit getVariable ["ace_medical_lastDamageSource", ""];
+		private _shooterName = name _shooter;
+		private _unitName = name _unit;
 
+		if (_shooter in allPlayers) then {
+			if (_shooterName != _unitName) then {
+				private _log = format ["[Friendly Fire] - %1 shot at %2", _shooterName, _unitName];
+				private _msg = format [SR_FF + "<br/>" + _shooterName + " shot at " + _unitName + "."];
+				_log remoteExecCall ["diag_log", 2];
+				SR_FF = _msg;
+			} else {
+				// Player hurt themselves.
+				private _log = format ["[Friendly Fire] - %1 hurt themselves", _shooterName];
+				private _msg = format [SR_FF + "<br/>" + _shooterName + " hurt themselves."];
+				_log remoteExecCall ["diag_log", 2];
+				SR_FF = _msg;
+			};
+
+			publicVariable "SR_FF";
+		};
+	};
+}] call CBA_fnc_addEventHandler;
 
 //Comm Card
 player createDiarySubject ["Communication", "Communication"];
@@ -158,7 +170,7 @@ player createDiaryRecord ["Regulation", ["Equipment", "
 // Composition
 player createDiarySubject ["Composition", "Composition"];
 player createDiaryRecord ["Composition", ["Platoon Composition", "
-<execute expression='nul = [] spawn fw_fnc_compositionDisplay'>Display Composition</execute> 
+<execute expression='nul = [] spawn fw_fnc_compositionDisplay'>Display Composition</execute>
 "]];
 
 player createDiarySubject ["Mortar", "Mortar"];
