@@ -172,5 +172,12 @@
 	class Text {
 		file = "7R\Text";
 		class makeColor{};
+	};
+	class AddItem {
+		file = "7R\AddItem";
+		class addItemToUniform{};
+		class addItemToVest{};
+		class addItemToBackpack{};
+		class addItem{};
 	}
 };
