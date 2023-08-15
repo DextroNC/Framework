@@ -158,6 +158,14 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "VSM_Shemagh_Goggles_OD", 0.2
         ];
     };
+    
+    //Sierra Goggles On Helmet
+    if (_Class == 4.5) then{
+        _goggleArray = [
+            "VSM_Shemagh_OD", 0.525,
+            "rhs_googles_clear", 0.465
+        ];
+    };
 
     //Selects random googles from determined array
 _unit addGoggles selectRandomWeighted _goggleArray;
