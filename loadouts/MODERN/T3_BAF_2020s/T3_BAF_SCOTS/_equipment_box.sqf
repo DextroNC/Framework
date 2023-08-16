@@ -14,7 +14,7 @@ this addaction ["<t color=""#0000FF"">" +"x4 Night sight - ACOG", "7R\Loadouts\7
 this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_premier_anpvs27"]];
 
 // Support items
-[this, 2] call fw_fnc_addEquipmentItems;
+[this, 3] call fw_fnc_addEquipmentItems;
 
 // Radios
 [this] call fw_fnc_addEquipmentRadios;

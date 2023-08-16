@@ -46,15 +46,15 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_USP";
-    _unit addHandgunItem "UK3CB_USP_9_15Rnd";
+    _unit addWeapon "UK3CB_BHP";
+    _unit addHandgunItem "UK3CB_BHP_9_13Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
     _unit addMagazine "Laserbatteries";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_USP_9_15Rnd";};
+    for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_BHP_9_13Rnd";};
     for "_i" from 1 to 4 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_M33";};
     for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_mk211";};
 

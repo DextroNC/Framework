@@ -40,6 +40,7 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "uk3cb_auga3_blk",
+            "uk3cb_auga3_blk",
             "uk3cb_auga3"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
@@ -48,8 +49,9 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "uk3cb_auga3_blk",
-            "uk3cb_auga3"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_wd"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -57,6 +59,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
+            "uk3cb_auga3_gl_blk",
             "uk3cb_auga3_gl_blk",
             "uk3cb_auga3_gl"
         ];
@@ -93,7 +96,7 @@
         _primaryArray = [
             "rhs_weap_hk416d10",
             "rhs_weap_hk416d10_LMT",
-            "rhs_weap_hk416d10_LMT_d"
+            "rhs_weap_hk416d10_LMT_wd"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -103,7 +106,7 @@
         _primaryArray = [
             "rhs_weap_hk416d145",
             "rhs_weap_hk416d145",
-            "rhs_weap_hk416d145_d"
+            "rhs_weap_hk416d145_wd"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -112,7 +115,8 @@
     if (_Rifle == 9) then{
         _primaryArray = [
             "rhs_weap_sr25_ec",
-            "rhs_weap_sr25_ec_d"
+            "rhs_weap_sr25_ec",
+            "rhs_weap_sr25_ec_wd"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -120,8 +124,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "uk3cb_auga3_blk",
-            "uk3cb_auga3"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_wd"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -135,7 +140,7 @@
             "uk3cb_baf_llm_ir_black"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10)) then{
+    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_rvg_blk"
@@ -145,7 +150,7 @@
     if (_Rifle >= 1) then{
         _unit addPrimaryWeaponItem selectRandom _attachmentArray;
     };
-    if ((_Rifle <= 4) or (_Rifle == 10)) then{
+    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
         _unit addPrimaryWeaponItem selectRandom _gripArray;
     };
 
@@ -182,7 +187,7 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "UK3CB_USP";
-    _unit addHandgunItem "UK3CB_USP_9_15Rnd";
-    _unit addItem "UK3CB_USP_9_15Rnd";
-    _unit addItem "UK3CB_USP_9_15Rnd";
+    _unit addWeapon "UK3CB_BHP";
+    _unit addHandgunItem "UK3CB_BHP_9_13Rnd";
+    _unit addItem "UK3CB_BHP_9_13Rnd";
+    _unit addItem "UK3CB_BHP_9_13Rnd";

@@ -46,14 +46,14 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_USP";
-    _unit addHandgunItem "UK3CB_USP_9_15Rnd";
+    _unit addWeapon "UK3CB_BHP";
+    _unit addHandgunItem "UK3CB_BHP_9_13Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_MX2A";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_USP_9_15Rnd";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_BHP_9_13Rnd";};
     for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG";};
 
 comment "Add Navigation";

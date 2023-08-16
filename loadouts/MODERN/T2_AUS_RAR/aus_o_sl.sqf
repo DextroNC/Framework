@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_Operator_Multicam";
+    _unit addVest "VSM_LBT6094_Operator_OGA_OD";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
     _unit addItemToVest "SmokeShellGreen";
     _unit addItemToVest "SmokeShellRed";
@@ -35,7 +35,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "VSM_OGA_OD_Backpack_Compact";
+_unit addBackpack "B_AssaultPack_rgr";
 
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
 
@@ -58,6 +58,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
+_unit linkItem "ItemGPS";
 
 
 comment "Other Variables";

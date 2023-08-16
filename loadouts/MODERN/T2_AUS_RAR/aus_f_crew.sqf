@@ -35,17 +35,17 @@ comment "Add Drip";
     _unit addHeadgear "H_HelmetCrew_I";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_MP510";
+    _unit addWeapon "SMG_05_F";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_USP";
-    _unit addHandgunItem "UK3CB_USP_9_15Rnd";
+    _unit addWeapon "UK3CB_BHP";
+    _unit addHandgunItem "UK3CB_BHP_9_13Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_USP_9_15Rnd";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_BHP_9_13Rnd";};
     for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
 
 comment "Add Navigation";

@@ -30,7 +30,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_Backpack_Compact";
+    _unit addBackpack "B_AssaultPack_rgr";
 
 comment "Add Drip";
 

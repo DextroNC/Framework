@@ -30,7 +30,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_carryall";
+    _unit addBackpack "UK3CB_LSM_B_B_CARRYALL_KHK";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
 
 comment "Add Drip";

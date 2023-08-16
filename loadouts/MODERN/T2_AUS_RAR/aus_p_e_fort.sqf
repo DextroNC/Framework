@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_Operator_Multicam";
+    _unit addVest "VSM_LBT6094_Operator_OGA_OD";
     for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_carryall";
+    _unit addBackpack "UK3CB_LSM_B_B_CARRYALL_KHK";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintGreen";
@@ -43,7 +43,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "VSM_Multicam_Cap";
+    _unit addItemToBackpack "7r_amcu_patrolcap";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -61,6 +61,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
+_unit linkItem "ItemGPS";
 
 
 comment "Other Variables";

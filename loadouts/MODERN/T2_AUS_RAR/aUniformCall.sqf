@@ -30,24 +30,27 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",
-            "7r_amcu_aus_uniform_ssl"
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2_ssl"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",
-            "7r_amcu_aus_uniform_ssl"
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2_ssl"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",
-            "7r_amcu_aus_uniform_ssl"
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2",
+            "7r_amcu_aus_uniform2_ssl"
         ];
     };
 
@@ -65,40 +68,65 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "VSM_OGA_OD_OPS",
+            "VSM_OD_spray_OPS",
+            "VSM_OGA_OD_OPS_2",
+            "VSM_OD_spray_OPS_2"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "VSM_OGA_OD_OPS",
+            "VSM_OD_spray_OPS",
+            "VSM_OGA_OD_OPS_2",
+            "VSM_OD_spray_OPS_2"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "VSM_OGA_OD_OPS",
+            "VSM_OD_spray_OPS",
+            "VSM_OGA_OD_OPS_2",
+            "VSM_OD_spray_OPS_2"
+            
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "7r_misc_amcu_opscore",
+            "7r_misc_amcu_opscore_2",
+            "VSM_OGA_OD_OPS",
+            "VSM_OD_spray_OPS",
+            "VSM_OGA_OD_OPS_2",
+            "VSM_OD_spray_OPS_2"
         ];
     };
     //Selects random hat from determined array, runs
@@ -108,7 +136,7 @@ _unit addHeadgear selectRandom _hatArray;
     //Appends array of goggleswith desired values
     if (_Class == 1) then{
         _goggleArray = [
-            "7r_scrim_arid", 0.425,
+            "7r_scrim_forest", 0.425,
             "VSM_Shemagh_od", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
@@ -119,7 +147,7 @@ _unit addHeadgear selectRandom _hatArray;
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "7r_scrim_arid", 0.425,
+            "7r_scrim_forest", 0.425,
             "VSM_Shemagh_od", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,

@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "7r_amcu_aus_uniform";
+    _unit forceAddUniform "7r_amcu_aus_uniform2";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -29,24 +29,26 @@ comment "Add Vest/Items";
     _unit addVest "V_TacVest_oli";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+    _unit addBackpack "UK3CB_B_Invisible";
+    _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
     _unit addHeadgear "H_PilotHelmetHeli_I_E";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_MP510";
+    _unit addWeapon "SMG_05_F";
     _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_USP";
-    _unit addHandgunItem "UK3CB_USP_9_15Rnd";
+    _unit addWeapon "UK3CB_BHP";
+    _unit addHandgunItem "UK3CB_BHP_9_13Rnd";
     _unit addHandgunItem "acc_flashlight_pistol";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "UK3CB_USP_9_15Rnd";};
+    for "_i" from 1 to 1 do {_unit addItemToUniform "UK3CB_BHP_9_13Rnd";};
     for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
 
 comment "Add Navigation";

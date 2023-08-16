@@ -26,12 +26,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_Operator_Multicam";
+    _unit addVest "VSM_LBT6094_Operator_OGA_OD";
     for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_carryall";
+    _unit addBackpack "UK3CB_LSM_B_B_CARRYALL_KHK";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
@@ -39,7 +39,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

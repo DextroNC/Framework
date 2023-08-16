@@ -27,14 +27,14 @@ _unit addVest "UK3CB_V_Invisible";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ToolKit";
 _unit addItemToVest "G_Aviator";
-for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_USP_9_15Rnd";};
+for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_BHP_9_13Rnd";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "H_Beret_blk";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_USP";
+_unit addWeapon "UK3CB_BHP";
 _unit addWeapon "Binocular";
 
 comment "Add items";

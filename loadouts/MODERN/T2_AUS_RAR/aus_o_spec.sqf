@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Compact";
+    _unit addBackpack "B_AssaultPack_rgr";
     for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "MiniGrenade";};
 
@@ -54,6 +54,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
+_unit linkItem "ItemGPS";
 
 
 comment "Other Variables";

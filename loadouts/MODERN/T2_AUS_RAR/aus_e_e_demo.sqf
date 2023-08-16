@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_carryall";
+    _unit addBackpack "UK3CB_LSM_B_B_CARRYALL_KHK";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112x4_mag";};
