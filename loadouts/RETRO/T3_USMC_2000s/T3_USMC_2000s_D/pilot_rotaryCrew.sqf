@@ -61,7 +61,6 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "Y_Headlamp_01";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];
