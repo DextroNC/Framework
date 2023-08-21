@@ -22,7 +22,7 @@ if (isServer) then {
 };
 SR_InstigatorDistance = 20;
 SR_ReleaseDistance = 50;
-SR_ReleaseProbability = 0.33;
+SR_ReleaseRatio = 0.33;
 SR_SuspicionValue = 0;
 SR_SuspicionSpotted = -60;
 ArtilleryCallAmmo = 60;
