@@ -43,6 +43,7 @@ SR_PatrolUnits pushBackUnique _group;
 
 							if (selectRandomWeighted [true,SR_ReleaseProbability,false,1-SR_ReleaseProbability]) then {
 								_x enableAI "PATH";
+								_x setCombatBehaviour "COMBAT";
 
 								// Debug
 								if (SR_Debug) then { format ["%1 now has pathing enabled", _x] remoteExec ["systemChat", 0]; };
