@@ -27,19 +27,24 @@ _unit addEventHandler ["Killed", {
 	if (_killer in allPlayers && _killer distance2d _dead < SR_InstigatorDistance) then {
 		// Calculate number of AI to release
 		private _groupUnits = (units group _dead) call BIS_fnc_arrayShuffle;
-		private _releaseCount = floor (count _groupUnits * SR_ReleaseRatio) - {_x checkAIFeature "PATH"} count _groupUnits;
-		if (_releaseCount == 0) exitWith {};
+		private _maxCount = floor (count _groupUnits * SR_MaxRatio) - ({_x checkAIFeature "PATH" && alive _x} count _groupUnits);
+		if (_maxCount <= 0) then {_maxCount = 0};
 
 		// Filter all relevant units
 		private _releaseUnits =  [];
 		{
 			// Filter based on distance and disabled path finding
-			if (_x distance2D _dead < SR_ReleaseDistance && _x distance2d _killer < SR_InstigatorDistance && !(_x checkAIFeature "PATH")) then {
+			if (_x distance2D _dead < SR_ReleaseDistance && alive _x && !(_x checkAIFeature "PATH") && selectRandomWeighted [true,SR_ReleaseProb,false,1-SR_ReleaseProb]) then {
 				_releaseUnits pushBackUnique _x;
-				// Exit when enough units are pulled
-				if (count _releaseUnits == _releaseCount) exitWith {};
  			};
+
+			// Remove EH - Global
+			[_x ,"Killed"] remoteExec ["removeAllEventHandlers", 0];
+
 		} forEach _groupUnits;
+
+		// Clip _releaseUnits to _maxCount
+		if (count _releaseUnit > _maxCount) then {_releaseUnits resize _maxCount;};
 
 		{
 			// Release units
