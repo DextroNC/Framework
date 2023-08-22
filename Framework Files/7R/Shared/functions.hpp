@@ -160,6 +160,7 @@
 		class civKilledEH{};
 		class civPanicEH{};
 		class powKilledEH{};
+		class garrisonKilledEH{};
 	};
 	class Loadouts {
 		file = "7R\Loadouts";

@@ -27,5 +27,11 @@ _group = group (_units select 0);
 _group deleteGroupWhenEmpty true;
 SR_PatrolUnits pushBackUnique _group;
 
+// Add event handler  to enable pathing on nearby group members when ally is killed
+{
+	[_x] spawn fw_fnc_garrisonKilledEH;
+} forEach _units;
+
+
 // Debug
-if (SR_Debug) then { systemChat format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius]; };
+if (SR_Debug) then { format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius] remoteExec ["systemChat", 0]; };

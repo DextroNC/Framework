@@ -34,5 +34,10 @@ private _bldPos = (_building select 0) buildingPos -1;
 	[_group, _x, _rndPos, (_building select 0)] call ZEI_fnc_garrisonUnit;
 } forEach _units;
 
+// Add event handler  to enable pathing on nearby group members when ally is killed
+{
+	[_x] spawn fw_fnc_garrisonKilledEH;
+} forEach units _group;
+
 // Debug
 if (SR_Debug) then { systemChat format ["%1 garrison %2", group (_units select 0), mapGridPosition _position];};

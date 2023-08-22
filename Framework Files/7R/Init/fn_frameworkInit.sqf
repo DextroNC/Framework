@@ -20,6 +20,10 @@ if (isServer) then {
 	SR_FF = "Friendly Fire:";
 	publicVariable "SR_FF";
 };
+SR_InstigatorDistance = 20;
+SR_ReleaseDistance = 50;
+SR_MaxRatio = 0.67;
+SR_ReleaseProb = 0.4;
 SR_SuspicionValue = 0;
 SR_SuspicionSpotted = -60;
 ArtilleryCallAmmo = 60;
