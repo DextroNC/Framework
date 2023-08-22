@@ -38,8 +38,8 @@ _unit addEventHandler ["Killed", {
 				_releaseUnits pushBackUnique _x;
  			};
 
-			// Remove EH - Global
-			[_x ,"Killed"] remoteExec ["removeAllEventHandlers", 0];
+			// Remove EH
+			_x removeAllEventHandlers "Killed";
 
 		} forEach _groupUnits;
 
@@ -50,7 +50,7 @@ _unit addEventHandler ["Killed", {
 			// Release units
 			_x enableAI "PATH";
 			_x setCombatMode "RED";
-
+			
 			// Debug
 			if (SR_Debug) then { format ["%1 now has pathing enabled", _x] remoteExec ["systemChat", 0]; };
 		} forEach _releaseUnits;
