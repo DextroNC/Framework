@@ -28,4 +28,4 @@ _group deleteGroupWhenEmpty true;
 SR_PatrolUnits pushBackUnique _group;
 
 // Debug
-if (SR_Debug) then { systemChat format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius]; };
+if (SR_Debug) then { format ["%1 garrison %2 with radius %3", group (_units select 0), mapGridPosition _position, _radius] remoteExec ["systemChat", 0]; };

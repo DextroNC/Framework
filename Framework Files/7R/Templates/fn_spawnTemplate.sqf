@@ -73,6 +73,12 @@ if (_type isEqualTo "GARRISON") Then {
 	_group deleteGroupWhenEmpty true;
 	_group selectLeader _leader;
 
+	// Add event handler  to enable pathing on nearby group members when ally is killed
+	{
+		[_x] spawn fw_fnc_garrisonKilledEH;
+	} forEach units _group;
+
+
 	// Pass to Garrison Script
 	([_spawnPos, units _group] + _params) remoteExec ["fw_fnc_garrison",2];
 };
