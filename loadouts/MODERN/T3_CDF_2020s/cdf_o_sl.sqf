@@ -37,7 +37,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
 _unit addBackpack "B_TacticalPack_blk";
 
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
 
@@ -64,7 +64,7 @@ _unit linkItem "ItemGPS";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_ANPVS7";
+    _unit linkItem "UK3CB_BAF_HMNVS";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";

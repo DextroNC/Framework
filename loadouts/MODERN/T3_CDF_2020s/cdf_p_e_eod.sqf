@@ -41,7 +41,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintRed";
     _unit addItemToBackpack "ACE_SpraypaintGreen";
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
     _unit addItemToBackpack "H_MilCap_grn";
@@ -68,7 +68,7 @@ _unit linkItem "ItemGPS";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_ANPVS7";
+    _unit linkItem "UK3CB_BAF_HMNVS";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

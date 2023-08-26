@@ -90,17 +90,17 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_pip"
+            "rhs_weap_pkp"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_box";
+        _primaryAmmo = "rhs_100Rnd_762x54mmR";
     };
 
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_fnmag"
+            "rhs_weap_pkp"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
+        _primaryAmmo = "rhs_100Rnd_762x54mmR";
     };
 
     //7 - SPC
@@ -142,7 +142,25 @@
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
     
-if (_Rifle == 7 or _Rifle <= 2 or _Rifle == 10) then{
+    if ( _Rifle <= 3 or _Rifle == 10 or _Rifle == 8) then{
+        _attachmentArray = [
+            "rhs_acc_perst1ik"
+        ];
+    };
+    
+    if (_Rifle == 7) then{
+        _attachmentArray = [
+            "rhs_acc_perst1ik_ris"
+        ];
+    };
+    
+    if (_Rifle == 4 or _Rifle == 5) then{
+        _attachmentArray = [
+            "uk3cb_baf_llm_ir_black"
+        ];
+    };
+
+    if (_Rifle == 7 or _Rifle <= 2 or _Rifle == 10) then{
         _gripArray = [
             "",
             "",
@@ -174,7 +192,7 @@ if (_Rifle == 7 or _Rifle <= 2 or _Rifle == 10) then{
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{

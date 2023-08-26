@@ -33,6 +33,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_TacticalPack_blk";
+    _unit addItemToBackpack "ACE_RangeCard";
 
 comment "Add Drip";
 
@@ -40,7 +41,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "optic_dms";
-    _unit addPrimaryWeaponItem "rhsgref_acc_zendl";
+    _unit addPrimaryWeaponItem "rhs_acc_tgpa";
     _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 
 comment "Add Secondary/Attachments";
@@ -61,7 +62,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_ANPVS7";
+    _unit linkItem "UK3CB_BAF_HMNVS";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SDMR", true];

@@ -21,8 +21,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
 	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6M_AK", 72];
 	_box addmagazinecargoGlobal ["UK3CB_CZ75_9_20Rnd", 24];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_box", 12];
-    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 8];
+	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 20];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
@@ -43,8 +42,8 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
 	_box additemcargoGlobal ["rhs_mag_mk84", 10];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 4];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];
 	_box additemcargoGlobal ["SLAMDirectionalMine_Wire_Mag", 4];
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
@@ -76,7 +75,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
 	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6M_AK", 36];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_box", 6];
+	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 10];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 12];
 	_box addmagazinecargoGlobal ["UK3CB_CZ75_9_20Rnd", 8];
@@ -102,13 +101,12 @@ if (_type == 4) then {
 
 // Small Special Supply
 if (_type == 5) then {
-	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 5];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 6];
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 3];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 1];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 1];
 };
 
 // Medical Drop
