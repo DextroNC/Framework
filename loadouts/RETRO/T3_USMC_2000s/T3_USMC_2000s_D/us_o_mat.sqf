@@ -44,13 +44,15 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_maaws";
-    _unit addSecondaryWeaponItem "rhs_optic_maaws";
-    _unit addSecondaryWeaponItem "rhs_mag_maaws_HEAT";
+    _unit addWeapon "rhs_weap_smaw";
+    _unit addSecondaryWeaponItem "rhs_weap_optic_smaw";
+    _unit addSecondaryWeaponItem "rhs_mag_smaw_HEAA";
+    _unit addSecondaryWeaponItem "rhs_mag_smaw_SR";
 
+    
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_mag_maaws_HEAT";};
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_maaws_HE";};
+    for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_mag_smaw_HEAA";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_smaw_HEDP";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
