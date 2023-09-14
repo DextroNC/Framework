@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_corpsman";
+    _unit addVest "rhsusf_mbav_medic";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -40,7 +40,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 7] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

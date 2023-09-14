@@ -35,7 +35,6 @@ comment "Add Backpack/Items";
 
 comment "Add Drip";
     _unit addHeadgear "H_HelmetCrew_I";
-    _unit addGoggles "rhssaf_veil_Green";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "SMG_05_F";

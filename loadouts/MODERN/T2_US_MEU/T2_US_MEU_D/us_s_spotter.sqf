@@ -43,7 +43,7 @@ comment "Add Drip";
     _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4a1_carryhandle_mstock";
+    _unit addWeapon "rhs_weap_HK416 D10_carryhandle_mstock";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";

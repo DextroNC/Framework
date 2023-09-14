@@ -26,7 +26,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_light";
+    _unit addVest "rhsusf_mbav_light";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
 
 comment "Add Backpack/Items";

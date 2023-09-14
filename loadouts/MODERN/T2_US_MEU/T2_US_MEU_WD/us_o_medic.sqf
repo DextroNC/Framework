@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_corpsman";
+    _unit addVest "rhsusf_mbav_medic";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};

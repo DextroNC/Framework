@@ -84,7 +84,7 @@
             "rhs_weap_SCARH_CQC",
             "rhs_weap_SCARH_FDE_CQC"
         ];
-        _primaryAmmo = "rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //5 - AutoRifle

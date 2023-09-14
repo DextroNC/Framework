@@ -68,7 +68,7 @@
         _primaryArray = [
             "rhs_weap_mk17_STD"
         ];
-        _primaryAmmo = "rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //5 - AutoRifle
@@ -93,9 +93,11 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "UK3CB_MP5A4"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "30Rnd_9x21_Mag_SMG_02";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //8 - DMR
@@ -143,7 +145,6 @@
     };
     if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
-            "",
             "",
             "rhsusf_acc_grip1",
             "rhsusf_acc_kac_grip",

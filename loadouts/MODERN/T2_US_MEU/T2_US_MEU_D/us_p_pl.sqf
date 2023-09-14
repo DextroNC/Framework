@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_teamleader";
+    _unit addVest "rhsusf_mbav_grenadier";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
     _unit addItemToVest "SmokeShellGreen";
     _unit addItemToVest "SmokeShellRed";
@@ -41,7 +41,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_Cap_tan";
+    _unit addItemToBackpack "rhs_8point_marpatd";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

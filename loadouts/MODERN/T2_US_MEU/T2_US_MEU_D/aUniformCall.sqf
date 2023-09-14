@@ -61,26 +61,27 @@ _unit forceAddUniform selectRandom _uniformArray;
 _headset_list = [
     "H_HelmetSpecB_sand",
     "H_HelmetSpecB_paint2",
-    "H_HelmetSpecB_blk",
-    "VSM_OGA_Helmet1",
     "H_HelmetSpecB_sand",
     "H_HelmetSpecB_paint2",
-    "H_HelmetSpecB_blk",
-    "VSM_OGA_Helmet1",
     "H_HelmetSpecB_sand",
     "H_HelmetSpecB_paint2",
-    "H_HelmetSpecB_blk",
-    "VSM_OGA_Helmet1",
     "H_HelmetSpecB_sand",
     "H_HelmetSpecB_paint2",
-    "H_HelmetSpecB_blk",
+    "rhsusf_mich_bare_norotos_arc_tan",
+    "rhsusf_mich_bare_norotos_arc_alt_tan",
+    "rhsusf_mich_bare_norotos_arc_alt_tan_headset",
+    "rhsusf_mich_helmet_marpatd_norotos_arc",
+    "rhsusf_mich_helmet_marpatd_norotos_arc_headset",
+    "rhsusf_mich_helmet_marpatd_norotos_arc_headset",
+    "VSM_OGA_Helmet1",
+    "VSM_OGA_Helmet1",
+    "VSM_OGA_Helmet1",
     "VSM_OGA_Helmet1"
 ];
 
 _noheadset_list = [
     "H_HelmetB_sand",
-    "H_HelmetB_desert",
-    "H_HelmetB_black"
+    "H_HelmetB_desert"
 
 ];
 
@@ -161,20 +162,9 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
     };
 
     //Platoon 
-    if (_Class == 3) then{
+    if (_Class == 3 or _Class == 3.5) then{
         _goggleArray = [
             "", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
-        ];
-    };
-    
-    //Platoon No Headset
-    if (_Class == 3.5) then{
-        _goggleArray = [
-            "VSM_Peltor_coyote_glasses", 0.425,
             "VSM_Shemagh_TAN", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,

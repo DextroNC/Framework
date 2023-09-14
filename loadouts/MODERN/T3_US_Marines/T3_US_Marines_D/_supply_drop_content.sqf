@@ -25,7 +25,7 @@ if (_type == 1) then {
     _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
-	_box addmagazinecargoGlobal ["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk", 20];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addWeaponCargoGlobal ["rhs_weap_m136_HEDP", 4];
 	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 2];
@@ -101,7 +101,7 @@ if (_type == 4) then {
 
 // Small Special Supply
 if (_type == 5) then {
-	_box addmagazinecargoGlobal ["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk", 8];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 4];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
