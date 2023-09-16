@@ -1,0 +1,12 @@
+this addaction ["Instructor Basic", "loadouts\us_i_r.sqf"];
+this addaction ["Instructor Medic", "loadouts\us_i_m.sqf"];
+this addaction ["Trainne Rifleman", "loadouts\us_o_r.sqf"];
+this addaction ["Trainne Autorifleman", "loadouts\us_o_ar.sqf"];
+this addaction ["Trainne Grenadier", "loadouts\us_o_g.sqf"];
+this addaction ["Trainne DMR", "loadouts\us_o_dmr.sqf"];
+this addaction ["Trainne Medic", "loadouts\us_o_m.sqf"];
+this addaction ["Trainne MMG", "loadouts\us_o_mmg.sqf"];
+this addaction ["Trainne MAT", "loadouts\us_o_mat.sqf"];
+this addaction ["Trainne MAT (HE)", "loadouts\us_o_mat_he.sqf"];
+this addaction ["<t color=""#0000FF"">" +"Save Loadout", {(_this select 1) setVariable ["SR_Loadout",getUnitLoadout (_this select 1)];},nil,1.5,true,true,"","true",5];
+this addaction ["<t color=""#0000FF"">" +"Load Loadout", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable ["SR_Loadout",[]]);},nil,1.5,true,true,"","true",5];

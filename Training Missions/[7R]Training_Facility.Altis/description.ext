@@ -1,0 +1,60 @@
+respawnOnStart = -1;
+//allowFunctionsRecompile = 1;
+// enable Debug Console
+enableDebugConsole = 2;
+
+// Disable AI
+disabledAI = 1;
+
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "Job well done!";
+	};
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "We suck!";
+	};
+};
+
+class CfgDebriefingSections
+{
+	class civCasulties
+	{
+		title = "Civilian Casualties";
+		variable = "SR_CC";
+	};
+	class casulties
+	{
+		title = "KIA";
+		variable = "SR_KIA";
+	};
+	class warCrimes
+	{
+		title = "War Criminals";
+		variable = "SR_WC";
+	};
+};
+
+class CfgSounds
+{
+	#include "7R\Sounds\sounds.hpp"
+};
+
+class CfgFunctions
+{
+	class fw {
+		#include "7R\Shared\functions.hpp"
+		#include "7R\Training\trainingFunctions.hpp"
+	};
+
+	#include "LARs\spawnComp\functions\functions.hpp"
+};
+
+#include "compositions\compositions.cfg"
