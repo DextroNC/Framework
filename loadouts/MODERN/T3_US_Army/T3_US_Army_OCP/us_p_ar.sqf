@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_ASS_DES_01";
+    _unit addBackpack "VSM_Multicam_Backpack_Compact";
 
 comment "Add Drip";
     _unit addItemToBackpack "rhs_Booniehat_ocp";

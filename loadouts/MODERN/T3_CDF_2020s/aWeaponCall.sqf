@@ -90,9 +90,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_pkp"
+            "rhs_weap_minimi_para_railed"
         ];
-        _primaryAmmo = "rhs_100Rnd_762x54mmR";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_box";
     };
 
     //6 - MMG
