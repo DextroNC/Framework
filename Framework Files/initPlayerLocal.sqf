@@ -42,6 +42,9 @@ _ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget
 _CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_arrow", false, [0.7,0.7],true] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
+_UAM = ["7R_Artillery","Designate UAV Loiter Point","",{null = ["UAVTarget", "ISR", "ColorWest", "mil_triangle", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _UAM] call ace_interact_menu_fnc_addActionToClass;
+
 // Supply Drop
 _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",{},{[_player] call fw_fnc_isLeader},{[target, _player, _params] call fw_fnc_supplyDropAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
@@ -55,32 +58,36 @@ _CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTask
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _CHH] call ace_interact_menu_fnc_addActionToClass;
 
 // Artillery
-_headerArtillery = ["7R_ArtyH","Call Fire Support","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_headerArtillery = ["7R_ArtyH","Call Fire Support","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa",{},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerArtillery] call ace_interact_menu_fnc_addActionToClass;
 
 _headerArty = ["7R_ArtilleryHeader","Artillery Fire Mission","",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _headerArty] call ace_interact_menu_fnc_addActionToClass;
 
-_ACA3 = ["7R_Artillery","Adjust by Fire (1)","",{null = ["ArtilleryTarget","spotting"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA3 = ["7R_Artillery","Adjust by Fire (1)","",{null = ["ArtilleryTarget","spotting"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA3] call ace_interact_menu_fnc_addActionToClass;
-_ACA5 = ["7R_Artillery","Medium Barrage (2)","",{null = ["ArtilleryTarget","medium"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA5 = ["7R_Artillery","Medium Barrage (2)","",{null = ["ArtilleryTarget","medium"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA5] call ace_interact_menu_fnc_addActionToClass;
-_ACA7 = ["7R_Artillery","Heavy Area Barrage (4)","",{null = ["ArtilleryTarget","area"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA7 = ["7R_Artillery","Heavy Area Barrage (4)","",{null = ["ArtilleryTarget","area"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA7] call ace_interact_menu_fnc_addActionToClass;
-_ACA6 = ["7R_Artillery","Concentrated Barrage (3)","",{null = ["ArtilleryTarget","concentrated"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA6 = ["7R_Artillery","Concentrated Barrage (3)","",{null = ["ArtilleryTarget","concentrated"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA6] call ace_interact_menu_fnc_addActionToClass;
-_ACA8 = ["7R_Artillery","Cluster Barrage (3)","",{null = ["ArtilleryTarget","cluster"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACA8 = ["7R_Artillery","Cluster Barrage (3)","",{null = ["ArtilleryTarget","cluster"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACA8] call ace_interact_menu_fnc_addActionToClass;
-_ACAS = ["7R_Artillery","Smoke Barrage (0)","",{null = ["ArtilleryTarget","smoke"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACAS = ["7R_Artillery","Smoke Barrage (0)","",{null = ["ArtilleryTarget","smoke"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAS] call ace_interact_menu_fnc_addActionToClass;
-_ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare"] spawn fw_fnc_artillery},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAF] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS
-_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
-_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
+
+// UAV
+_UAV = ["7R_UAV","Call UAV","",{["UAVTarget","STARTSPAWN",SR_Support_Assets select 5] remoteExec ["fw_fnc_uav",0];},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _UAV] call ace_interact_menu_fnc_addActionToClass;
 
 // Pilot Recall
 _CRC = {(player getVariable ["SR_Class","Rifleman"]) in ["Pilot","TC"] && (vehicle player == player)};

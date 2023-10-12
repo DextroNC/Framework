@@ -54,6 +54,7 @@
 		class artillery{};
 		class artilleryReadyCheck{};
 		class CAS{};
+		class UAV{};
 	};
 	class supply
 	{

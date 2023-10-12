@@ -29,11 +29,11 @@ if (isNil "CASCallAmmo") then {CASCallAmmo = 30; publicVariable "CASCallAmmo";};
 
 // Check if other Fire Mission in progress, no Ammunition left and no Target designated.
 if (CASFireMissionLock) exitWith {
-	["Negative: Close Air Support available. Other Mission in progress.","FS: Currently Busy"] spawn fw_fnc_info;
+	["Negative: Close Air Support unavailable. Other Mission in progress.","FS: Currently Busy"] spawn fw_fnc_info;
 	
 };
 if (CASCallAmmo == 0) exitWith {
-	["Negative: Close Air Support available. Out of Ammunition.","FS: No Ammunition"] spawn fw_fnc_info;
+	["Negative: Close Air Support unavailable. Out of Ammunition.","FS: No Ammunition"] spawn fw_fnc_info;
 };
 if (markerPos _target isEqualto [0,0,0]) exitWith {
 	["No CAS Target designated.","FS: No Target"] spawn fw_fnc_info;
