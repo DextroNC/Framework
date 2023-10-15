@@ -22,7 +22,7 @@ _headerSupport = ["7R_VehicleHeader","Vehicle","a3\ui_f\data\IGUI\Cfg\simpleTask
 
 
 // Support Status Report
-_SSR = ["7R_StatusRep","Status Report","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\talk_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_SSR = ["7R_StatusRep","Status Report","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\talk_ca.paa",{null =  [] spawn fw_fnc_supportStatusReport},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _SSR] call ace_interact_menu_fnc_addActionToClass;
 
 // Markers

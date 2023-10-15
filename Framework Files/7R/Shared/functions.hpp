@@ -48,9 +48,16 @@
 		class civBomberAction{};
 		class civUnitSpawn{};
 	};
+	class support {
+		file = "7R\Support";
+		class supportStatusReport{};
+	};
+	
+	
+
 	class arty
 	{
-		file = "7R\FireSupport";
+		file = "7R\Support\FireSupport";
 		class artillery{};
 		class artilleryReadyCheck{};
 		class CAS{};
@@ -58,19 +65,18 @@
 	};
 	class supply
 	{
-		file = "7R\Supplies";
+		file = "7R\Support\Supplies";
 		class supplyDropInit{};
 		class supplyDropBox{};
 		class supplyDropEject{};
 		class supplyDropLanding{};
-		class supplyDropReport{};
 		class canCallVehicleDrop{};
 		class vehicleDropAction{};
 		class supplyLoad{};
 		class supplySpawn{};
 	};
 	class exfil {
-		file = "7R\Exfil";
+		file = "7R\Support\Exfil";
 		class exfilAction{};
 		class exfilCall{};
 	};
