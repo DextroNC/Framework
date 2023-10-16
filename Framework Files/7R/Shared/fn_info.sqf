@@ -27,7 +27,7 @@ if (count _hint > 0) then {
 	// Adjust Size on Text length
 	private _count = count _hint;
 	if (_count > 30) then {
-		_size = _size + (floor (_count/30) * 0.5);
+		_size = _size + (floor (_count/30) * 0.7);
 	};
 
 	// Display Hint
