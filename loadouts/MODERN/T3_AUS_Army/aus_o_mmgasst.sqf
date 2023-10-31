@@ -33,6 +33,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Carryall_cbr";
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m80a1epr";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";

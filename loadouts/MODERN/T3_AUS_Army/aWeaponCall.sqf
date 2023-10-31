@@ -105,9 +105,7 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_hk416d145",
-            "rhs_weap_hk416d145",
-            "rhs_weap_hk416d145_wd"
+            "rhs_weap_hk416d145"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -115,9 +113,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec",
-            "rhs_weap_sr25_ec",
-            "rhs_weap_sr25_ec_wd"
+            "rhs_weap_sr25_ec"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
