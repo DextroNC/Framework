@@ -51,7 +51,7 @@
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_ard"
         ];
     };
     
@@ -104,19 +104,22 @@ if (_helmet in _ess_list) then {_class = 5};
     //Appends array of goggleswith desired values
     if (_Class <= 3) then{
         _goggleArray = [
-            "VSM_Shemagh_OD", 0.325,
+            "VSM_Shemagh_OD", 0.1625,
+            "VSM_Shemagh_Facemask_OD", 0.1625,
             "rhs_googles_clear", 0.325,
-            "UK3CB_G_Gloves_Black", 0.1,
-            "VSM_Goggles", 0.25
+            "rhs_scarf", 0.1,
+            "VSM_Goggles", 0.125,
+            "VSM_Shemagh_Facemask_OD_Goggles", 0.125
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "VSM_Shemagh_OD", 0.4,
+            "VSM_Shemagh_OD", 0.2,
+            "VSM_Shemagh_Facemask_OD", 0.2,
             "rhs_googles_clear", 0.35,
-            "UK3CB_G_Gloves_Black", 0.05,
+            "rhs_scarf", 0.05,
             "VSM_Goggles", 0.2
         ];
     };
@@ -124,9 +127,10 @@ if (_helmet in _ess_list) then {_class = 5};
     //ESS On Helmet 
     if (_Class == 5) then{
         _goggleArray = [
-            "VSM_Shemagh_OD", 0.65,
-            "UK3CB_G_Gloves_Black", 0.175,
-            "", 0.175
+            "VSM_Shemagh_OD", 0.325,
+            "VSM_Shemagh_Facemask_OD", 0.325,
+            "rhs_scarf", 0.075,
+            "", 0.275
         ];
     };
 

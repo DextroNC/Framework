@@ -30,7 +30,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_ENG_BRN";
+    _unit addBackpack "UK3CB_B_TacticalPack_Oli";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
 
 comment "Add Drip";
@@ -49,6 +49,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
+    _unit linkItem "ItemGPS";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";

@@ -40,11 +40,11 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "rhs_weap_pm63",
+            "rhs_weap_pm63",
+            "rhs_weap_pm63",
             "rhs_weap_akm",
             "rhs_weap_akm",
-            "rhs_weap_akm",
-            "rhs_weap_m70b1",
-            "rhs_weap_m70b3n"
+            "rhs_weap_m70b1"
         ];
         _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
@@ -81,18 +81,17 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "uk3cb_enfield_no4_walnut",
-            "uk3cb_enfield_no4"
+            "rhs_weap_l1a1_wood"
         ];
-        _primaryAmmo = "uk3cb_no4_enfield_303_10Rnd_magazine";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_rpk_wood"
+            "rhs_weap_rpk74_wood"
         ];
-        _primaryAmmo = "rhs_75Rnd_762x39mm";
+        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK";
     };
 
     //6 - MMG
@@ -106,9 +105,9 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "uk3cb_ppsh41"
+            "rhs_weap_m4_carryhandle"
         ];
-        _primaryAmmo = "uk3cb_PPSH_71rnd_magazine_Y";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //8 - DMR
@@ -123,7 +122,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_svdo"
+            "UK3CB_SVD_OLD_NPZ"
         ];
         _primaryAmmo = "rhs_10Rnd_762x54mmR_7N1";
     };
@@ -140,20 +139,13 @@
     _unit addWeapon selectRandom _primaryArray;
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
-    if ((_Rifle >= 1) && ((_Rifle != 7) || (_Rifle != 9))) then{
-        _attachmentArray = [];
-    };
-    if ((_Rifle == 7) || (_Rifle == 9)) then{
-        _attachmentArray = [];
-    };
-    if ((_Rifle <= 4) or (_Rifle == 10)) then{
-        _gripArray = []
+    if (_Rifle == 7) then{
+        _attachmentArray = ["rhsusf_acc_m952v"];
+        _gripArray = ["rhsusf_acc_grip1","rhsusf_acc_grip1",""];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
-    if (_Rifle >= 1) then{
-        _unit addPrimaryWeaponItem selectRandom _attachmentArray;
-        _unit addPrimaryWeaponItem selectRandom _gripArray;
-    };
+    _unit addPrimaryWeaponItem selectRandom _attachmentArray;
+     _unit addPrimaryWeaponItem selectRandom _gripArray;
 
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
@@ -168,11 +160,11 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 20 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{

@@ -18,7 +18,8 @@ _uniforms = [
 		["Combat Medic", "loadouts\pmc_o_medic.sqf"],
 		["Operator Rifleman", "loadouts\pmc_o_rifleman.sqf"],
 		["Operator AR", "loadouts\pmc_o_ar.sqf"],
-		["Operator LAT", "loadouts\pmc_o_lat.sqf"],
+		["Operator LAT", "loadouts\pmc_o_lat2.sqf"],
+		["Operator LAT (NLAW)", "loadouts\pmc_o_lat.sqf"],
 		["Operator MMG", "loadouts\pmc_o_mmg.sqf"],
 		["Operator Asst. MMG", "loadouts\pmc_o_mmgAsst.sqf"],
 		["Operator MAT", "loadouts\pmc_o_mat.sqf"],
@@ -27,6 +28,7 @@ _uniforms = [
 
 	["Specialists", "#00ff00", "a3\ui_f\data\Map\Markers\NATO\b_inf.paa",
 		[["Operator Grenadier", "loadouts\pmc_o_Grenadier.sqf"],
+		["Operator Grenadier (M32 MGL)", "loadouts\pmc_o_Grenadier2.sqf"],
 		["Operator DMR", "loadouts\pmc_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\pmc_o_br.sqf"],
 		["Operator Specialist (FN-P90)", "loadouts\pmc_o_spec.sqf"],

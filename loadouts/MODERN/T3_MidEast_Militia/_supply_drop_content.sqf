@@ -17,14 +17,13 @@ clearBackpackCargoGlobal _box;
 // Infantry Supply
 if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 72];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag", 18];
 	_box addmagazinecargoGlobal ["rhs_mag_762x25_8", 16];
-	_box addmagazinecargoGlobal ["rhs_75Rnd_762x39mm", 12];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 40];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["ACE_2Rnd_12Gauge_Pellets_No4_Buck", 20];
 	_box addmagazinecargoGlobal ["2Rnd_12Gauge_Slug", 20];
-	_box addmagazinecargoGlobal ["uk3cb_no4_enfield_303_10Rnd_magazine", 10];
-	_box addmagazinecargoGlobal ["uk3cb_no4_enfield_303_10Rnd_magazine", 16];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 5];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VR_mag", 1];
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 2];
@@ -71,10 +70,10 @@ if (_type == 3) then {
 // Small Squad Supply
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 36];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 6];
-	_box addmagazinecargoGlobal ["rhs_75Rnd_762x39mm", 6];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag", 9];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 6];
 	_box addmagazinecargoGlobal ["rhs_mag_762x25_8", 8];
-	_box addmagazinecargoGlobal ["uk3cb_no4_enfield_303_10Rnd_magazine", 8];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box additemcargoGlobal ["rhs_mag_f1", 6];
 	_box additemcargoGlobal ["rhs_grenade_khattabka_vog17_mag", 2];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 16];
@@ -100,8 +99,8 @@ if (_type == 4) then {
 // Small Special Supply
 if (_type == 5) then {
 	_box addWeaponcargoGlobal ["rhs_weap_rpg26", 2];
-	_box addmagazinecargoGlobal ["uk3cb_no4_enfield_303_10Rnd_magazine", 8];
-	_box addmagazinecargoGlobal ["uk3cb_no4_enfield_303_10Rnd_magazine", 10];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 5];
 	_box addmagazinecargoGlobal ["ACE_2Rnd_12Gauge_Pellets_No4_Buck", 10];
 	_box addmagazinecargoGlobal ["2Rnd_12Gauge_Slug", 10];

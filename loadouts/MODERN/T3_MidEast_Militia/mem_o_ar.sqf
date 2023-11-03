@@ -26,19 +26,19 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_TKA_I_V_6Sh92_Khk";
+    _unit addVest "V_HarnessO_brn";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_f1";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_CW_SOV_O_EARLY_B_RIF";
+    _unit addBackpack "UK3CB_B_TacticalPack_Oli";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 6] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
@@ -49,6 +49,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
+    _unit linkItem "ItemGPS";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
@@ -58,7 +59,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","MMG", true];
+_unit setVariable ["SR_Class","AR", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];

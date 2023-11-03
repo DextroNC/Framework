@@ -51,7 +51,7 @@ comment "Add Secondary/Attachments";
     _unit addHandgunItem "rhs_mag_762x25_8";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "Binocular";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_762x25_8";};
@@ -59,6 +59,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
+    _unit linkItem "ItemGPS";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";

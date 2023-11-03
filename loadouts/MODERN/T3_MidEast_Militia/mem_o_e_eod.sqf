@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_f1";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_CW_SOV_O_EARLY_B_RIF";
+    _unit addBackpack "B_Kitbag_tan";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
     _unit addItemToBackpack "MineDetector";
@@ -53,6 +53,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
+    _unit linkItem "ItemGPS";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";

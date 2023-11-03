@@ -26,13 +26,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_RAV_MG_OGA_OD";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    _unit addVest "VSM_LBT6094_MG_OGA_OD";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_Carryall_green_F";
+    _unit addBackpack "UK3CB_B_Largepack";
     for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

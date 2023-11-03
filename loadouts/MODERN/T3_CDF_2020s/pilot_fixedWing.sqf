@@ -19,21 +19,21 @@ _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_XL50";
-for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_whitePurple";};
 _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "UK3CB_V_Invisible";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ToolKit";
 _unit addItemToVest "G_Aviator";
-for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_CZ75_9_20Rnd";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_CZ75";
+_unit addWeapon "rhsusf_weap_glock17g4";
 _unit addWeapon "Binocular";
 
 comment "Add items";

@@ -29,7 +29,13 @@ _npz_list = [
 	"rhs_weap_ak74m_fullplum_gp25_npz",
 	"rhs_weap_asval_grip_npz",
 	"rhs_weap_asval_npz_grip1",
-	"rhs_weap_asval_npz_afg"
+	"rhs_weap_asval_npz_afg",
+	"rhs_weap_ak103_zenitco01_b33",
+	"rhs_weap_ak103_zenitco01_b33_grip1",
+	"rhs_weap_ak103_zenitco01_b33_afg",
+	"rhs_weap_ak103_npz",
+	"rhs_weap_akmn_npz",
+	"rhs_weap_rpk74m_npz"
 ];
 
 _dvt_list = [
@@ -53,7 +59,13 @@ _dvt_list = [
 	"rhs_weap_ak74m_fullplum_gp25",
 	"rhs_weap_asval_grip",
 	"rhs_weap_asval_grip1",
-	"rhs_weap_asval_afg"
+	"rhs_weap_asval_afg",
+	"rhs_weap_ak103_zenitco01",
+	"rhs_weap_ak103_zenitco01_grip1",
+	"rhs_weap_ak103_zenitco01_afg",
+	"rhs_weap_ak103",
+	"rhs_weap_akmn",
+	"rhs_weap_rpk74m"
 ];
 
 if (!(_weapon in _npz_list) && !(_weapon in _dvt_list)) exitWith {};

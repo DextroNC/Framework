@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_TKA_I_V_6Sh92_Radio_Khk";
+    _unit addVest "V_HarnessO_brn";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -54,6 +54,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
+_unit linkItem "ItemGPS";
 
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";

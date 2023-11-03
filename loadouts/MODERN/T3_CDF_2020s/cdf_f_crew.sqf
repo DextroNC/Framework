@@ -26,8 +26,8 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_MD99_VEST_Net_Radio_OLI";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_crew_black_F";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
 
@@ -35,18 +35,18 @@ comment "Add Drip";
     _unit addHeadgear "H_Tank_black_F";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_Sten";
+    _unit addWeapon "rhs_weap_aks74un";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_CZ75";
-    _unit addHandgunItem "UK3CB_CZ75_9_20Rnd";
+    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_CZ75_9_20Rnd";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "UK3CB_Sten_34Rnd_Magazine";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -58,7 +58,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

@@ -28,33 +28,33 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "milgp_v_jpc_Marksman_rgr";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShell";
-    _unit addItemToVest "SmokeShellRed";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    _unit addItemToVest "rhs_mag_rdg2_white";
+    _unit addItemToVest "rhs_mag_nspn_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Tomahawk_rgr";
+    _unit addBackpack "B_Carryall_invisible";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
+    _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
     _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";
-    _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
+    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_CZ75";
-    _unit addHandgunItem "UK3CB_CZ75_9_20Rnd";
+    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
     _unit addMagazine "Laserbatteries";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_CZ75_9_20Rnd";};
+    for "_i" from 1 to 4 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
     for "_i" from 1 to 4 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_M33";};
     for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_mk211";};
 
@@ -68,7 +68,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

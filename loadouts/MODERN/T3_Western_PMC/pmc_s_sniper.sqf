@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     _unit addItemToVest "SmokeShellRed";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Tomahawk_rgr";
+    _unit addBackpack "B_AssaultPack_invisible";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
@@ -68,7 +68,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "NVGoggles_OPFOR";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

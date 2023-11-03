@@ -27,11 +27,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_MD99_VEST_Rifleman_Radio_OLI";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShellGreen";
-    _unit addItemToVest "SmokeShellRed";
-    _unit addItemToVest "SmokeShellOrange";
+    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    _unit addItemToVest "rhs_mag_nspn_green";
+    _unit addItemToVest "rhs_mag_nspn_red";
+    _unit addItemToVest "rhs_mag_rdg2_whiteOrange";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
@@ -65,7 +65,7 @@ _unit linkItem "ItemGPS";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

@@ -28,18 +28,18 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspn_green";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_TKA_I_V_6Sh92_Radio_Khk";
+    _unit addVest "V_HarnessO_brn";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_ENG_BRN";
+    _unit addBackpack "UK3CB_B_TacticalPack_Oli";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 7] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
@@ -59,6 +59,7 @@ comment "Add Medical";
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
+_unit linkItem "ItemGPS";
 
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";

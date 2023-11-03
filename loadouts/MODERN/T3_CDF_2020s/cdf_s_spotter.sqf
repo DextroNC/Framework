@@ -28,9 +28,9 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
 _unit addVest "milgp_v_jpc_Marksman_rgr";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShell";
-    _unit addItemToVest "SmokeShellRed";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    _unit addItemToVest "rhs_mag_rdg2_white";
+    _unit addItemToVest "rhs_mag_nspn_red";
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
@@ -43,21 +43,22 @@ comment "Add Drip";
     _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_asval_grip_npz";
-    _unit addPrimaryWeaponItem "rhsusf_acc_grip2";
-    _unit addPrimaryWeaponItem "rhs_acc_perst1ik_ris";
-    _unit addPrimaryWeaponItem "optic_arco_blk_f";
+    _unit addWeapon "rhs_weap_ak105_zenitco01_b33";
+    _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
+    _unit addPrimaryWeaponItem "rhs_acc_tgpa";
+    _unit addPrimaryWeaponItem "rhs_acc_perst1ik";
+    _unit addPrimaryWeaponItem "rhsusf_acc_acog3_usmc";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_CZ75";
-    _unit addHandgunItem "UK3CB_CZ75_9_20Rnd";
+    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_CZ75_9_20Rnd";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP6";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -69,7 +70,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_ENG_BRN";
+    _unit addBackpack "UK3CB_B_TacticalPack_Oli";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "SatchelCharge_Remote_Mag";};
@@ -48,12 +48,13 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "Binocular";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
+_unit linkItem "ItemGPS";
 
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";

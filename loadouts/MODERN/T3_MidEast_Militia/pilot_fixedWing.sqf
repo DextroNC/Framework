@@ -39,6 +39,7 @@ _unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";
+_unit linkItem "ItemGPS";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 

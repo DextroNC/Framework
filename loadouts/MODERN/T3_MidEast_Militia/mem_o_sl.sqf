@@ -35,7 +35,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_f1";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "UK3CB_UN_B_B_ASS";
+_unit addBackpack "B_Kitbag_invisible";
 
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_ec400_mag";};
 
@@ -48,13 +48,14 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "Binocular";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
+_unit linkItem "ItemGPS";
 
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";

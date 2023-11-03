@@ -26,13 +26,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_MD99_VEST_Rifleman_OLI";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_TacticalPack_blk";
+    _unit addBackpack "B_AssaultPack_invisible";
     _unit addItemToBackpack "ACE_RangeCard";
 
 comment "Add Drip";
@@ -40,7 +40,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "optic_dms";
+    _unit addPrimaryWeaponItem "rhs_acc_pso1m21";
     _unit addPrimaryWeaponItem "rhs_acc_tgpa";
     _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 
@@ -62,7 +62,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SDMR", true];

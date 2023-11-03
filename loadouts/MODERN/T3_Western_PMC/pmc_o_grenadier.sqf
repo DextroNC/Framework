@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "milgp_bp_Breacher_rgr";
+_unit addBackpack "B_AssaultPack_invisible";
 
 comment "Add Drip";
 
@@ -57,7 +57,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "NVGoggles_OPFOR";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";
