@@ -57,5 +57,5 @@ SR_Vehicle_Drop = [
 SupplyDropAmmo = 12;
 ArtilleryCallAmmo = 45;
 CASCallAmmo = 6;
-UAVCallAmmo = 5;
+UAVCallAmmo = 2;
 ace_trenches_trenchSupplies = 500;
