@@ -63,9 +63,14 @@ _uav lockDriver true;
 _uav enableuavwaypoints false;
 _uav disableAI "AUTOCOMBAT";
 _uav disableAI "AUTOTARGET";
-if (!_weaponized) then {
-	_uav setAmmo 0;
+if (_weaponized) then {
+	_uav setVehicleAmmo 0.5;
+} else{
+	_uav setVehicleAmmo 0;
 };
+
+_uav setAmmo ["UK3CB_BAF_Laserdesignator_mounted",1];
+_uav setAmmo ["Laserdesignator_mounted",1];
 
 _uav setVariable ["arrivalOnTarget", CBA_MissionTime + 30];
 _uav setVariable ["targetLocation",_targetPos];

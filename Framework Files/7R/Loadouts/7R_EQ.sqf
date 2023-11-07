@@ -14,8 +14,8 @@
 private _unit = (_this select 1);
 private _class = (_this select 3) select 0;
 
-// Checks if item is attachment
-private _type = [101, 201, 301, 302] find getNumber(configFile >> "CfgWeapons" >> _class >> "itemInfo" >> "type");
+// Checks if item is attachment/terminal/nvg
+private _linkable = getNumber(configFile >> "CfgWeapons" >> _class >> "itemInfo" >> "type") in [101, 201, 301, 302, 621, 616];
 
 // Local only execute
 if(!local _unit) exitWith {};
@@ -24,7 +24,11 @@ if (_class == "B_Parachute") exitWith {
   _unit addBackpack _class;
 };
 
-if (!(_unit canAdd _class) && (_type < 0)) exitWith {
+if (_class isKindOf ["Binocular", configFile >> "CfgWeapons"] && (_class != "Laserdesignator")) exitWith {
+  _unit addWeapon _class;
+};
+
+if (!(_unit canAdd _class) && !_linkable) exitWith {
   ["","Not enough space"] spawn fw_fnc_info;
 };
 
