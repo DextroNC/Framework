@@ -27,7 +27,7 @@ this addaction ["<t color=""#FF8C00"">" +"AR/MMG sight - 1p78", "7R\Loadouts\7R_
 this addaction ["<t color=""#FF8C00"">" +"AR sight - M145", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_m8541_mrds"]];
 this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_kite"]];
-this addaction ["<t color=""#0000FF"">" +"x8 Night sight - MAXIKITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
+this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
 
 // Support items
 [this, 3] call fw_fnc_addEquipmentItems;

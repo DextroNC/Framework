@@ -8,6 +8,7 @@ _uniforms = [
 		["Platoon Engineer (Fortification)", "loadouts\us_p_e_fort.sqf"],
 		["Platoon Engineer (Repair)", "loadouts\us_p_e_repair.sqf"],
 		["Platoon DMR", "loadouts\us_p_dmr.sqf"],
+		["Platoon UAV Operator", "loadouts\us_p_uav.sqf"],
 		["Platoon Driver", "loadouts\us_p_driver.sqf"],
 		["Platoon AR", "loadouts\us_p_ar.sqf"],
 		["Platoon Medic", "loadouts\us_p_medic.sqf"]

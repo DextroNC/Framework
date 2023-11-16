@@ -30,36 +30,21 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_tan_shirt_Camo",
-            "VSM_Multicam_Crye_SS_tan_shirt_Camo"
+            "rhs_uniform_acu_oefcp"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_tan_shirt_Camo",
-            "VSM_Multicam_Crye_SS_tan_shirt_Camo"
+            "rhs_uniform_acu_oefcp"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_SS_Camo",
-            "VSM_Multicam_Crye_tan_shirt_Camo",
-            "VSM_Multicam_Crye_SS_tan_shirt_Camo"
+            "rhs_uniform_acu_oefcp"
         ];
     };
 
@@ -115,10 +100,10 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "", 0.325,
             "7r_scrim_arid", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
         ];
     };
 
@@ -127,10 +112,10 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "", 0.325,
             "7r_scrim_arid", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
         ];
     };
 
@@ -138,10 +123,10 @@ _unit addHeadgear _helmet;
     if (_Class == 3) then{
         _goggleArray = [
             "", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
         ];
     };
 
@@ -149,10 +134,10 @@ _unit addHeadgear _helmet;
     if (_Class == 4) then{
         _goggleArray = [
             "", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
         ];
     };
 

@@ -97,9 +97,10 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_light_S",
-            "rhs_weap_m249_pip_S_para",
-            "rhs_weap_m249_pip_S"
+            "rhs_weap_m249_pip_ris",
+            "rhs_weap_m249_light_L",
+            "rhs_weap_m249_pip_L_para",
+            "rhs_weap_m249_pip_L"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
     };
@@ -112,7 +113,7 @@
             "rhs_weap_m240B",
             "rhs_weap_m240G"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC

@@ -17,7 +17,7 @@ if(isServer) then {
         this additemcargoGlobal ["ACE_IR_Strobe_Item", 40];
         this additemcargoGlobal ["ACE_HandFlare_Red", 40];
         this additemcargoGlobal ["ACE_HandFlare_Green", 40];
-        this additemcargoGlobal ["Chemlight_green", 40];
+        this additemcargoGlobal ["ACE_Chemlight_HiRed", 40];
         this additemcargoGlobal ["B_IR_Grenade", 40];
     };
 };

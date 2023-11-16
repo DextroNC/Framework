@@ -21,13 +21,13 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "Chemlight_green";
+    _unit addItemToUniform "ACE_Chemlight_HiRed";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_mbav_rifleman";
+    _unit addVest "rhsusf_spc_corpsman";
     for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
