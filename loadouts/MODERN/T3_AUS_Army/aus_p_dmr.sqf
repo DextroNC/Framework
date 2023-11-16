@@ -34,7 +34,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_FieldPack_cbr";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "optic_Nightstalker";
+    _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
     _unit addItemToBackpack "7r_amcu_boonie";

@@ -44,7 +44,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "launch_MRAWS_olive_F";
+    _unit addWeapon "launch_MRAWS_olive_rail_F";
     _unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 
 comment "Add Ammunition";

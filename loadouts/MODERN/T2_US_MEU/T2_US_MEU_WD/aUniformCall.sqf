@@ -67,12 +67,9 @@ _headset_list = [
     "H_HelmetSpecB_paint1",
     "H_HelmetSpecB_snakeskin",
     "H_HelmetSpecB_paint1",
-    "rhsusf_mich_bare_norotos_arc_semi",
-    "rhsusf_mich_bare_norotos_arc_alt_semi",
-    "rhsusf_mich_bare_norotos_arc_alt_semi_headset",
-    "rhsusf_mich_helmet_marpatwd_norotos_arc",
-    "rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
-    "rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
+    "rhsusf_mich_bare_norotos_arc",
+    "rhsusf_mich_bare_norotos_arc_alt",
+    "rhsusf_mich_bare_norotos_arc_alt_headset",
     "VSM_OGA_OD_Helmet1",
     "VSM_OGA_OD_Helmet1",
     "VSM_OGA_OD_Helmet1",
@@ -80,6 +77,8 @@ _headset_list = [
 ];
 
 _noheadset_list = [
+    "H_HelmetB_snakeskin",
+    "H_HelmetB_grass",
     "H_HelmetB_snakeskin",
     "H_HelmetB_grass"
 
@@ -118,10 +117,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
         _goggleArray = [
             "", 0.325,
             "7r_scrim_forest", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
     
@@ -130,10 +129,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
         _goggleArray = [
             "VSM_Peltor_coyote_glasses", 0.325,
             "7r_scrim_forest", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
 
@@ -142,10 +141,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
         _goggleArray = [
             "", 0.325,
             "7r_scrim_forest", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
     
@@ -154,10 +153,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
         _goggleArray = [
             "VSM_Peltor_coyote_glasses", 0.325,
             "7r_scrim_forest", 0.1,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
 
@@ -165,10 +164,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
     if (_Class == 3 or _Class == 3.5) then{
         _goggleArray = [
             "", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
 
@@ -176,10 +175,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
     if (_Class == 4) then{
         _goggleArray = [
             "", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
     
@@ -187,10 +186,10 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
     if (_Class == 4.5) then{
         _goggleArray = [
             "VSM_Peltor_coyote_glasses", 0.425,
-            "VSM_Shemagh_TAN", 0.1,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_TAN", 0.2
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.2
         ];
     };
 

@@ -34,7 +34,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "VSM_ProjectHonor_Backpack_Compact";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "optic_Nightstalker";
+    _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
     _unit addItemToBackpack "VSM_ProjectHonor_Boonie";

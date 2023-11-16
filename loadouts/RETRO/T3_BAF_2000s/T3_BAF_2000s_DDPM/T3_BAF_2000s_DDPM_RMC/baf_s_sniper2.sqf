@@ -36,7 +36,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "milgp_bp_Tomahawk_rgr";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
+    _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
     _unit addGoggles "VSM_Shemagh_Tan";

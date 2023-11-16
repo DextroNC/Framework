@@ -33,6 +33,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Bergen_DPMT_Rifleman_B";
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";

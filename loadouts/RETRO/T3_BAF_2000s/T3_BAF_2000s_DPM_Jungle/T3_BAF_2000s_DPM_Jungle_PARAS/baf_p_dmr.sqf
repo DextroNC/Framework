@@ -34,7 +34,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "rhsusf_falconii";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
+    _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
     _unit addItemToBackpack "UK3CB_BAF_H_Boonie_DPMW_PRR";
