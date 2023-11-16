@@ -21,33 +21,38 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
+    _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_corpsman";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShellGreen";
-    _unit addItemToVest "SmokeShellRed";
-    _unit addItemToVest "SmokeShellOrange";
+    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_whiteYellow";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_UAV_01_backpack_F";
-    _unit addItem "ACE_UAVBattery";
+    _unit addBackpack "VSM_OGA_OD_carryall";
+    _unit addItemToBackpack "ACE_Clacker";
+    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addItemToBackpack "ACE_SpraypaintGreen";
+    _unit addItemToBackpack "ACE_ConstructionTool";
+    for "_i" from 1 to 4 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhs_booniehat2_marpatwd";
+    _unit addItemToBackpack "rhsusf_patrolcap_ocp";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 4] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "Binocular";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
 
@@ -56,7 +61,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "B_UavTerminal";
+_unit linkItem "ItemGPS";
 
 
 comment "Other Variables";
@@ -66,7 +71,7 @@ if (SR_Night) then {
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","UO", true];
+_unit setVariable ["SR_Class","PE", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
