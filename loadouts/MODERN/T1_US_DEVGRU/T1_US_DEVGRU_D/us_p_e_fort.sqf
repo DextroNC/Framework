@@ -1,7 +1,7 @@
 _unit = (_this select 1);
 if( !local _unit ) exitWith {};
 
-comment "Exported from Arsenal by Dextro";
+comment "Arsenal Gameplay by Roy, Ionaru";
 
 comment "Remove existing items";
 removeAllWeapons _unit;
@@ -13,57 +13,63 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-comment "Add containers";
-_unit forceAddUniform "VSM_AOR1_Crye_Camo";
-_unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "SR_PAK";
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
-_unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
-_unit addVest "milgp_v_mmac_marksman_belt_KHK";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
-_unit addBackpack "VSM_AOR1_Backpack_Kitbag";
-for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addItemToBackpack "ACE_Clacker";
-_unit addItemToBackpack "ACE_EntrenchingTool";
-_unit addItemToBackpack "ACE_SpraypaintGreen";
-_unit addItemToBackpack "ACE_ConstructionTool";
-for "_i" from 1 to 4 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
-for "_i" from 1 to 5 do {_unit addItemToVest "ACE_Fortication_Material";};
-_unit addItemToBackpack "milgp_h_cap_backwards_03_khk";
-_unit addHeadgear "rhsusf_opscore_aor1_pelt_nsw";
-_unit addGoggles "shemagh_loosetanCG";
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
-comment "Add weapons";
-_unit addWeapon "rhs_weap_mk17_CQC";                                                           
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";                     
-_unit addPrimaryWeaponItem "rhsusf_acc_rvg_de";  
-_unit addWeapon "RH_kimber";
-_unit addHandgunItem "RH_M6X";
-_unit addHandgunItem "RH_osprey";
-_unit addWeapon "ACE_Vector";
+comment "Add Uniforms/Items";
+    _unit addItemToUniform "ACE_MapTools";
+    _unit addItemToUniform "SR_PAK";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACRE_PRC343";
+    _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add items";
+comment "Add Vest/Items";
+    _unit addVest "VSM_LBT6094_operator_OGA";
+    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+
+comment "Add Backpack/Items";
+    _unit addBackpack "VSM_OGA_carryall";
+    _unit addItemToBackpack "ACE_Clacker";
+    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addItemToBackpack "ACE_SpraypaintGreen";
+    _unit addItemToBackpack "ACE_ConstructionTool";
+    for "_i" from 1 to 4 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
+
+comment "Add Drip";
+    _unit addItemToBackpack "UK3CB_H_Beanie_02_BLK";
+
+comment "Add Primary/Attachments";
+    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
+    [_unit, 4] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+
+comment "Add Secondary/Attachments";
+
+comment "Add Tertiary equipment";
+    _unit addWeapon "ACE_Vector";
+
+comment "Add Ammunition";
+
+comment "Add Navigation";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
+_unit linkItem "ItemRadioAcreFlagged";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 8 do {_unit addItemToVest "rhs_mag_20Rnd_SCAR_762x51_m80_ball";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_20Rnd_SCAR_762x51_m80_ball";};
 
-_unit addItemToUniform "ACRE_PRC343";
-_unit addItemToVest "ACRE_PRC152";
-
+comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addItem "ACE_IR_Strobe_Item";
-	_unit linkItem "A3_GPNVG18_F";
-	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+    _unit linkItem "rhsusf_ANPVS_15";
+    _unit addItem "ACE_IR_Strobe_Item";
+    _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PE", true];
 _unit setVariable ["ace_isEngineer",0, true];

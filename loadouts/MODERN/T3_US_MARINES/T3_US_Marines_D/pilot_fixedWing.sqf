@@ -19,17 +19,23 @@ _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_XL50";
+for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
-_unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_Chemlight_HiRed";
 _unit addItemToUniform "ACE_HandFlare_Green";
-_unit addItemToUniform "ACE_microDAGR";
-for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-
-_unit addHeadgear "H_PilotHelmetFighter_B";
+_unit addVest "UK3CB_V_Invisible";
+_unit addItemToVest "ACE_microDAGR";
+_unit addItemToVest "ToolKit";
+_unit addItemToVest "G_Aviator";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
+_unit addHeadgear "H_PilotHelmetFighter_O";
+_unit addBackpack "UK3CB_B_Invisible";
+_unit addItemToBackpack "ToolKit";
+_unit addItemToBackpack "rhs_8point_marpatd";
 
 comment "Add weapons";
-_unit addWeapon "rhsusf_weap_glock17g4";
-_unit addHandgunItem "acc_flashlight_pistol";
+_unit addWeapon "rhsusf_weap_m9";
+_unit addWeapon "Binocular";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -37,12 +43,11 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-_unit addItemToUniform "ACRE_PRC343";
-_unit addItemToUniform "ACRE_PRC152";
+_unit addItemToVest "ACRE_PRC343";
+_unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	ace_nightvision_fogScaling = 0.0;
 	_unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

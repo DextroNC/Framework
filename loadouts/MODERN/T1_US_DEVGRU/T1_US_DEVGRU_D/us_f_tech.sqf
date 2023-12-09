@@ -1,7 +1,7 @@
 _unit = (_this select 1);
 if( !local _unit ) exitWith {};
 
-comment "Exported from Arsenal by Dextro";
+comment "Arsenal Gameplay by Roy, Ionaru";
 
 comment "Remove existing items";
 removeAllWeapons _unit;
@@ -13,45 +13,58 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-comment "Add containers";
-_unit forceAddUniform "rhs_uniform_g3_mc";
-_unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "SR_PAK";
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
-_unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
-_unit addVest "rhsusf_spcs_ocp_crewman";
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_SmokeShellCableTie";};
-_unit addItemToVest "SmokeShell";
-_unit addItemToVest "ACE_microDAGR";
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addBackpack "rhsusf_falconii_mc";
-_unit addItemToBackpack "ToolKit";
-_unit addHeadgear "rhsusf_cvc_alt_helmet";
-_unit addGoggles "rhs_googles_clear";
+comment "Add Uniforms/Items";
+    _unit forceAddUniform "UK3CB_CW_US_B_LATE_U_SF_CombatUniform_01_BLK";
+    _unit addItemToUniform "ACE_MapTools";
+    _unit addItemToUniform "SR_PAK";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACRE_PRC343";
+    _unit addItemToUniform "ACRE_PRC152";
+    _unit addItemToUniform "ACE_microDAGR";
+    for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_carryhandle";
-_unit addWeapon "rhsusf_weap_m9";
-_unit addWeapon "Binocular";
+comment "Add Vest/Items";
+    _unit addVest "dr_BLKfacp_op";
+    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 
-comment "Add items";
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch";
-_unit linkItem "ItemGPS";
+comment "Add Backpack/Items";
+    _unit addBackpack "VSM_OGA_Backpack_Compact";
+    _unit addItemToBackpack "ToolKit";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+comment "Add Drip";
+    _unit addHeadgear "rhsusf_cvc_green_alt_helmet";
+    _unit addGoggles "rhssaf_veil_Green";
 
-_unit addItemToUniform "ACRE_PRC343";
-_unit addItemToVest "ACRE_PRC152";
+comment "Add Primary/Attachments";
+    _unit addWeapon "SMG_05_F";
 
+comment "Add Secondary/Attachments";
+    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "acc_flashlight_pistol";
+    _unit addHandgunItem "rhsusf_acc_omega9k";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+
+comment "Add Tertiary equipment";
+    _unit addWeapon "Binocular";
+
+comment "Add Ammunition";
+    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
+
+comment "Add Navigation";
+    _unit linkItem "ItemMap";
+    _unit linkItem "ItemCompass";
+    _unit linkItem "ItemWatch";
+    _unit linkItem "ItemRadioAcreFlagged";
+    _unit linkItem "ItemGPS";
+
+comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addItem "ACE_IR_Strobe_Item";
-	_unit linkItem "rhsusf_ANPVS_14";
-	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+    _unit linkItem "rhsusf_ANPVS_15";
+    _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];
 _unit setVariable ["ace_isEngineer",1, true];
