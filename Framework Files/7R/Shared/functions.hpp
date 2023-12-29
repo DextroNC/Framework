@@ -180,5 +180,9 @@
 	class Text {
 		file = "7R\Text";
 		class makeColor{};
-	}
+	};
+	class Breach {
+		file = "7R\Breach";
+		class lockAreaDoors{};
+	};
 };
