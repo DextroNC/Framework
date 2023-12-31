@@ -4,6 +4,7 @@ call compile preprocessFileLineNumbers "swaps\swaps_T2_US_75th_Rangers.sqf";
 this addaction ["<t color=""#FFFF00"">" +"Swap to SAS (T1)", "swaps\swaps_T1_BAF.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to DEVGRU (T1)", "swaps\swaps_T1_US_DEVGRU.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to Green Berets (T1)", "swaps\swaps_T1_US_Green_Berets.sqf"];
+this addaction ["<t color=""#FFFF00"">" +"Swap to NATO - 2035 (T2)", "swaps\swaps_T2_NATO.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to CDF Airborne (T2)", "swaps\swaps_T2_CDF_Airborne.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to Spanish GOE (T2)", "swaps\swaps_T2_ESP_GOE.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to 75th Rangers Regiment (T2)", "swaps\swaps_T2_US_75th_Rangers.sqf"];
@@ -21,6 +22,7 @@ this addaction ["<t color=""#FFFF00"">" +"Swap to Middle East Militia (T3)", "sw
 //Retro
 this addaction ["<t color=""#FFFF00"">" +"Swap to Australian Army - 2000s (Retro)", "swaps\swaps_T3_AUS_RAR_2000s.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to BAF - 2000s (Retro)", "swaps\swaps_T3_BAF_2000s.sqf"];
+this addaction ["<t color=""#FFFF00"">" +"Swap to CDF - 1990s - 2000s (Retro)", "swaps\swaps_T3_CDF_90s_2000s.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to LPDF - 1980s (Retro)", "swaps\swaps_T3_LPDF_80s_90s.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to US Army - 1980s (Retro)", "swaps\swaps_T3_US_Army_80s_90s.sqf"];
 this addaction ["<t color=""#FFFF00"">" +"Swap to USMC - 2000s (Retro)", "swaps\swaps_T3_USMC_2000s.sqf"];

@@ -36,7 +36,7 @@ display_1 addPrimaryWeaponItem selectRandom ["rhs_acc_1p78"];
 display_6 addPrimaryWeaponItem selectRandom ["optic_ACO"];
 
 {
-	_x setObjectTextureGlobal [0, "ca\Ca_E\data\flag_cdf_co.paa"]
+	_x setObjectTextureGlobal [0, "\7r_factions\7R_factions_cdf\data\7r_cdf_ensign_co.paa"]
 } forEach [banner,banner_1];
 
 format ["Now showcasing: CDF - 2020s (T3)"] remoteExec ["systemChat", 0];

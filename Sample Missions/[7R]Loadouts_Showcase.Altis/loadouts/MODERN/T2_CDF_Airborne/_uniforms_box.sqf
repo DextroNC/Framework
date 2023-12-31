@@ -31,7 +31,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_br.sqf"],
-		["Operator Specialist (P90)", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_spec.sqf"],
+		["Operator Specialist (M4A1)", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_spec.sqf"],
 		["Operator Breacher", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\MODERN\T2_CDF_Airborne\cdf_o_e_eod.sqf"],

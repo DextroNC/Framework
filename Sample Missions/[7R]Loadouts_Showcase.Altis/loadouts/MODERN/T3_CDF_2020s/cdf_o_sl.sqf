@@ -28,7 +28,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    _unit addVest selectRandomWeighted [
+		"JCA_MCRP_V_CarrierRigKBT_01_recon_olive_F",1,
+		"JCA_MCRP_V_CarrierRigKBT_01_compact_olive_F",1,
+		"7r_ttsko_modvest_recon",2,
+		"7r_ttsko_modvest_compact",2];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -36,7 +40,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "VSM_OGA_OD_Backpack_Compact";
+_unit addBackpack "B_TacticalPack_blk";
 
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
@@ -65,14 +69,14 @@ _unit linkItem "ItemGPS";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_14";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_red";
+    _unit addItem "rhs_VG40OP_red";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

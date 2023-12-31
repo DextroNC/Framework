@@ -27,7 +27,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
 	_box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 10];
-	_box addmagazinecargoGlobal ["50Rnd_570x28_SMG_03", 24];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 24];
 	_box addWeaponCargoGlobal ["rhs_weap_m136_hedp", 4];
 	_box addWeaponCargoGlobal ["launch_NLAW_F", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 3];
@@ -81,7 +81,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 12];
     _box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 5];
-	_box addmagazinecargoGlobal ["50Rnd_570x28_SMG_03", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 12];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
 	_box addWeaponCargoGlobal ["rhs_weap_m136_hedp", 2];
 	_box addWeaponCargoGlobal ["launch_NLAW_F", 1];

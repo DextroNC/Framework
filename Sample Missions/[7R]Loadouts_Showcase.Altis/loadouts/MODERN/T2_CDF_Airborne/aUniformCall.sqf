@@ -30,36 +30,30 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_02_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
-            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
@@ -71,7 +65,7 @@
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 //Echo
     if (_Class == 1) then{

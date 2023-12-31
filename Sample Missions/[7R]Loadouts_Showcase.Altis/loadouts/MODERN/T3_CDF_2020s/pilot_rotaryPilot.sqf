@@ -40,14 +40,14 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addWeapon "rhs_weap_makarov_pm";
+    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 1 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
     for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 
 comment "Add Navigation";
@@ -60,7 +60,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_15";
+    _unit linkItem "USP_PVS14";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

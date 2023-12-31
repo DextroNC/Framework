@@ -45,7 +45,7 @@
             "rhs_weap_aks74n_2",
             "rhs_weap_ak74m",
             "rhs_weap_ak74m",
-            "rhs_weap_ak74m",
+            "rhs_weap_ak74m_desert",
             "rhs_weap_ak74m_fullplum"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
@@ -198,9 +198,9 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addWeapon "rhs_weap_makarov_pm";
+    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
+    _unit addItem "rhs_mag_9x18_8_57N181S";
+    _unit addItem "rhs_mag_9x18_8_57N181S";
 
     

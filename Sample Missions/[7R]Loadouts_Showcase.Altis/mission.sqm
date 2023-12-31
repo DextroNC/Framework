@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=14;
 	};
 	class Camera
 	{
-		pos[]={21932.65,21.355976,20987.15};
-		dir[]={0.47724104,-0.31633571,-0.81986535};
-		up[]={0.15914068,0.94864786,-0.27339175};
-		aside[]={-0.8642472,-6.4843334e-008,-0.50307512};
+		pos[]={21929.305,21.124945,20990.395};
+		dir[]={-0.95103431,-0.29929477,-0.077318914};
+		up[]={-0.29831377,0.95416212,-0.024252992};
+		aside[]={-0.081034116,-1.915032e-008,0.99672472};
 	};
 };
 binarizationWanted=0;
@@ -221,6 +221,9 @@ class ScenarioData
 {
 	author="Skitz";
 };
+class CustomAttributes
+{
+};
 class Mission
 {
 	class Intel
@@ -305,7 +308,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={21919.936,19.712744,20994.836};
-						angles[]={-0,0.68359351,6.2826972};
+						angles[]={0,0.68359351,6.2826972};
 					};
 					side="Empty";
 					class Attributes
@@ -366,7 +369,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={21921.359,19.746119,20996.459};
-						angles[]={-0,0.6835317,6.2826972};
+						angles[]={0,0.6835317,6.2826972};
 					};
 					side="Empty";
 					class Attributes
@@ -2501,7 +2504,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={21941.023,19.204645,20991.303};
-						angles[]={-0,1.3193442,0.017329043};
+						angles[]={0,1.3193442,0.017329043};
 					};
 					side="Empty";
 					flags=4;
@@ -2961,7 +2964,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={21927.781,21.09586,21002.564};
-				angles[]={0,0.71549314,-0};
+				angles[]={0,0.71549314,0};
 			};
 			side="Empty";
 			flags=1;
