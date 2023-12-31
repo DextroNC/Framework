@@ -145,13 +145,10 @@
     if (_Rifle >= 1) then{
         _attachmentArray = [
             "rhsusf_acc_anpeq15",
-            "rhsusf_acc_anpeq15_bk",
-            "rhsusf_acc_anpeq15",
-            "rhsusf_acc_anpeq15_bk",
-            "rhsusf_acc_anpeq15side_bk"
+            "rhsusf_acc_anpeq15_bk"
         ];
     };
-    if (_Rifle == 5) then{
+    if (_Rifle == 5 or _Rifle == 3) then{
         _attachmentArray = [
             "rhsusf_acc_anpeq15side_bk"
         ];
