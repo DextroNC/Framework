@@ -13,15 +13,15 @@ if(isServer) then {
     _unit addSecondaryWeaponItem "rhs_mag_smaw_HEAA";
     _unit addSecondaryWeaponItem "rhs_mag_smaw_SR";
 
-	this additemcargoGlobal ["rhsusf_m112x4_mag", 6];
-	this additemcargoGlobal ["rhsusf_m112_mag", 12];
+	this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];
+	this additemcargoGlobal ["DemoCharge_Remote_Mag", 12];
     
     if (isNil "SR_Night") then {SR_Night = false};
     if (SR_Night) then {
         this additemcargoGlobal ["ACE_IR_Strobe_Item", 40];
         this additemcargoGlobal ["ACE_HandFlare_Red", 40];
         this additemcargoGlobal ["ACE_HandFlare_Green", 40];
-        this additemcargoGlobal ["ACE_Chemlight_HiRed", 40];
+        this additemcargoGlobal ["ACE_Chemlight_HiGreen", 40];
         this additemcargoGlobal ["B_IR_Grenade", 40];
     };
 };

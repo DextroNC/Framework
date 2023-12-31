@@ -35,7 +35,8 @@ _npz_list = [
 	"rhs_weap_ak103_zenitco01_b33_afg",
 	"rhs_weap_ak103_npz",
 	"rhs_weap_akmn_npz",
-	"rhs_weap_rpk74m_npz"
+	"rhs_weap_rpk74m_npz",
+	"rhs_weap_ak74m_desert_npz"
 ];
 
 _dvt_list = [
@@ -65,7 +66,8 @@ _dvt_list = [
 	"rhs_weap_ak103_zenitco01_afg",
 	"rhs_weap_ak103",
 	"rhs_weap_akmn",
-	"rhs_weap_rpk74m"
+	"rhs_weap_rpk74m",
+	"rhs_weap_ak74m_desert"
 ];
 
 if (!(_weapon in _npz_list) && !(_weapon in _dvt_list)) exitWith {};

@@ -21,14 +21,14 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_mmac_assaulter_belt_mc";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
+    _unit addVest "milgp_v_jpc_assaulter_belt_mc";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_multicam_carryall";
@@ -62,8 +62,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_15";
-    _unit addHeadgear selectRandom ["rhsusf_opscore_ut","rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam","rhsusf_opscore_ut_pelt_nsw","rhsusf_opscore_ut_pelt_nsw_cam"];
+    _unit linkItem "USP_PVS31";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

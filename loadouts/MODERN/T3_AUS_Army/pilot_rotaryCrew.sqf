@@ -19,25 +19,25 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_V_Pilot_Vest_Black";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+    _unit addVest "7r_amcu_modvest_compact";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_green";};
     _unit addBackpack "B_Kitbag_invisible";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "H_CrewHelmetHeli_I_E";
+    _unit addHeadgear "rhsusf_hgu56p_black";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_hk416d10";
-    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
+    _unit addWeapon "7r_weap_ef88_c_black";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BHP";
@@ -61,7 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "USP_GPNVG18";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

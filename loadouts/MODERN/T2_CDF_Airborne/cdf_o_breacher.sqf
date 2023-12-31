@@ -21,30 +21,31 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "Chemlight_green";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    _unit addVest selectRandomWeighted [
+		"VSM_LBT6094_operator_OGA_OD",1,
+		"VSM_LBT6094_operator_multicam",2];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_Backpack_Kitbag";
-    for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
-    for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
+    _unit addBackpack "VSM_multicam_Backpack_Kitbag";
+    for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
+    for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Slugs";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
-    _unit addItemToVest "tsp_frameCharge_mag";
-    _unit addItemToVest "ACE_Clacker";
+    _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 10] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addItem "rhs_weap_M590_8RD";
+    _unit addItem "UK3CB_BAF_L128A1";
 
 comment "Add Secondary/Attachments";
 
@@ -64,7 +65,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_14";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

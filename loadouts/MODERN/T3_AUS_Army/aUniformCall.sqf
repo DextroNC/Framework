@@ -30,30 +30,24 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",2,
-            "7r_amcu_aus_uniform_ssl",1,
-            "7r_amcu_aus_uniform2",8,
-            "7r_amcu_aus_uniform2_ssl",4
+            "7r_amcu_aus_uniform2",2,
+            "7r_amcu_aus_uniform2_ssl",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",2,
-            "7r_amcu_aus_uniform_ssl",1,
-            "7r_amcu_aus_uniform2",8,
-            "7r_amcu_aus_uniform2_ssl",4
+            "7r_amcu_aus_uniform2",2,
+            "7r_amcu_aus_uniform2_ssl",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_amcu_aus_uniform",2,
-            "7r_amcu_aus_uniform_ssl",1,
-            "7r_amcu_aus_uniform2",8,
-            "7r_amcu_aus_uniform2_ssl",4
+            "7r_amcu_aus_uniform2",2,
+            "7r_amcu_aus_uniform2_ssl",1
         ];
     };
 
@@ -71,30 +65,29 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_amcu_opscore",1,
-            "7r_amcu_opscore_2",3,
-            "7r_amcu_opscore_3",3,
-            "7r_amcu_opscore_4",3
+            "VSM_oga_OPS_2",1,
+            "VSM_Tan_spray_OPS_2",1,
+            "VSM_oga_OPS",1,
+            "VSM_Tan_spray_OPS",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "7r_amcu_opscore",1,
-            "7r_amcu_opscore_2",3,
-            "7r_amcu_opscore_3",3,
-            "7r_amcu_opscore_4",3
+            "7r_amcu_opscore_2",1,
+            "7r_amcu_opscore_3",1,
+            "7r_amcu_opscore_4",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_amcu_opscore",1,
-            "7r_amcu_opscore_2",3,
-            "7r_amcu_opscore_3",3,
-            "7r_amcu_opscore_4",3
+            "VSM_oga_OPS_2",1,
+            "VSM_Tan_spray_OPS_2",1,
+            "VSM_oga_OPS",1,
+            "VSM_Tan_spray_OPS",1
             
         ];
     };
@@ -102,10 +95,9 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_amcu_opscore",1,
-            "7r_amcu_opscore_2",3,
-            "7r_amcu_opscore_3",3,
-            "7r_amcu_opscore_4",3
+            "7r_amcu_opscore_2",1,
+            "7r_amcu_opscore_3",1,
+            "7r_amcu_opscore_4",1
         ];
     };
     //Selects random hat from determined array, runs
@@ -116,12 +108,10 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 1) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.15,
+            "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "milgp_f_face_shield_shemagh_khk", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_khk", 0.05
+            "7r_scrim_forest", 0.4,
+            "UK3CB_G_Neck_Shemag_Tan", 0.15
         ];
     };
 
@@ -129,12 +119,10 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 2) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.15,
+            "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "milgp_f_face_shield_shemagh_khk", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_khk", 0.05
+            "7r_scrim_forest", 0.4,
+            "UK3CB_G_Neck_Shemag_Tan", 0.15
         ];
     };
 
@@ -142,12 +130,9 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 3) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.15,
+            "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "milgp_f_face_shield_shemagh_khk", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_khk", 0.05
+            "UK3CB_G_Neck_Shemag_Tan", 0.65
         ];
     };
 
@@ -155,12 +140,9 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 4) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.15,
+            "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "milgp_f_face_shield_shemagh_khk", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_khk", 0.05
+            "UK3CB_G_Neck_Shemag_Tan", 0.65
         ];
     };
 

@@ -31,7 +31,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\cdf_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\cdf_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\cdf_o_br.sqf"],
-		["Operator Specialist (P90)", "loadouts\cdf_o_spec.sqf"],
+		["Operator Specialist (M4A1)", "loadouts\cdf_o_spec.sqf"],
 		["Operator Breacher", "loadouts\cdf_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\cdf_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\cdf_o_e_eod.sqf"],

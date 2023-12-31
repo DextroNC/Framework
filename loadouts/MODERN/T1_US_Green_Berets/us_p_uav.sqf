@@ -21,15 +21,15 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_mmac_assaulter_belt_mc";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShellGreen";
-    _unit addItemToVest "SmokeShellRed";
+    _unit addVest "milgp_v_jpc_assaulter_belt_mc";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    _unit addItemToVest "rhs_mag_m18_green";
+    _unit addItemToVest "rhs_mag_m18_red";
     _unit addItemToVest "SmokeShellOrange";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -38,6 +38,7 @@ comment "Add Backpack/Items";
     _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
+    _unit addItemToBackpack "rhs_Booniehat_ocp";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -61,7 +62,7 @@ _unit linkItem "B_UavTerminal";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_15";
+    _unit linkItem "USP_PVS31";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

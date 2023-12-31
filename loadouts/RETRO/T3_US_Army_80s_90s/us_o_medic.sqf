@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Medic_Vest";
-    for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 

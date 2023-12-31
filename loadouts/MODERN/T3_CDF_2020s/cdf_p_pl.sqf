@@ -21,13 +21,18 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    _unit addVest selectRandomWeighted [
+		"JCA_MCRP_V_CarrierRigKBT_01_recon_olive_F",1,
+		"JCA_MCRP_V_CarrierRigKBT_01_compact_olive_F",1,
+		"7r_ttsko_modvest_recon",2,
+		"7r_ttsko_modvest_compact",2];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -35,11 +40,11 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_OD_Backpack_Compact";
+    _unit addBackpack "B_TacticalPack_blk";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhs_beret_milp";
+    _unit addItemToBackpack "7r_cdf_beret";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -66,12 +71,12 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem "rhsusf_ANPVS_14";
     _unit addItem "ACE_IR_Strobe_Item";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_red";
+    _unit addItem "rhs_VG40OP_red";
     _unit addItemToBackpack "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

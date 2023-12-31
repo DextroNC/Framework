@@ -92,12 +92,6 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
             "BLK2_opscore",
             "VSM_Black_OPS",
             "BLK_opscore_2",
@@ -113,23 +107,13 @@ _unit forceAddUniform selectRandom _uniformArray;
             "VSM_OPS_multicam",
             "VSM_OPS_2_multicam",
             "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "BLK2_opscore",
-            "VSM_Black_OPS",
-            "BLK_opscore_2",
-            "VSM_Black_OPS_2"
+            "VSM_OPS_2_multicam"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
             "BLK2_opscore",
             "VSM_Black_OPS",
             "BLK_opscore_2",

@@ -21,7 +21,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_XL50";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_nspd";};
-_unit addItemToUniform "ACE_Chemlight_HiRed";
+_unit addItemToUniform "ACE_Chemlight_HiGreen";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "UK3CB_V_Chicom_Desert";
 _unit addItemToVest "ACE_microDAGR";

@@ -86,18 +86,6 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
             "VSM_oga_od_OPS",
             "VSM_od_spray_OPS",
             "VSM_oga_od_OPS_2",
@@ -109,40 +97,13 @@ _unit forceAddUniform selectRandom _uniformArray;
     if (_Class == 2) then{
         _hatArray = [
             "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "VSM_oga_od_OPS",
-            "VSM_od_spray_OPS",
-            "VSM_oga_od_OPS_2",
-            "VSM_od_spray_OPS_2"
+            "AOR2_opscore_2"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "VSM_oga_od_OPS",
             "VSM_od_spray_OPS",
             "VSM_oga_od_OPS_2",
             "VSM_od_spray_OPS_2"
@@ -154,21 +115,7 @@ _unit forceAddUniform selectRandom _uniformArray;
     if (_Class == 4) then{
         _hatArray = [
             "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "AOR2_opscore",
-            "AOR2_opscore_2",
-            "VSM_oga_od_OPS",
-            "VSM_od_spray_OPS",
-            "VSM_oga_od_OPS_2",
-            "VSM_od_spray_OPS_2"
+            "AOR2_opscore_2"
         ];
     };
     //Selects random hat from determined array, runs

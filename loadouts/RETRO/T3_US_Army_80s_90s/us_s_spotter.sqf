@@ -28,9 +28,9 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
 _unit addVest "VSM_OGA_OD_IOTV_1";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShell";
-    _unit addItemToVest "SmokeShellRed";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    _unit addItemToVest "rhs_mag_an_m8hc";
+    _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
@@ -53,7 +53,7 @@ comment "Add Secondary/Attachments";
     _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};

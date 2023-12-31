@@ -19,7 +19,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -41,14 +41,14 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_aks74un";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addWeapon "rhs_weap_makarov_pm";
+    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 
 comment "Add Navigation";

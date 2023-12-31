@@ -92,15 +92,12 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 //Appends array of hats with desired uniforms based on _Class
-    //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
             "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
         ];
     };
 
@@ -110,33 +107,27 @@ _unit forceAddUniform selectRandom _uniformArray;
             "VSM_OPS_multicam",
             "VSM_OPS_2_multicam",
             "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "VSM_OPS_2_multicam"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
             "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_2_multicam",
             "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS"
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
         ];
     };
     //Selects random hat from determined array, runs

@@ -48,7 +48,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};

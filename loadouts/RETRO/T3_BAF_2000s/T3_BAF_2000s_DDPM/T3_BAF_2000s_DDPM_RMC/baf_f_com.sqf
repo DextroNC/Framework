@@ -19,7 +19,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_BAF_V_Osprey_DDPM1";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
 
@@ -36,18 +36,18 @@ comment "Add Drip";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_BAF_L91A1";
+    _unit addWeapon "UK3CB_BAF_L22";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BAF_L105A1";
     _unit addHandgunItem "UK3CB_BAF_9_13Rnd";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_BAF_9_13Rnd";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

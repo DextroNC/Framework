@@ -19,7 +19,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -27,10 +27,10 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "rhsusf_spc_crewman";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_Backpack_Compact";
+    _unit addBackpack "B_AssaultPack_invisible";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
@@ -38,7 +38,7 @@ comment "Add Drip";
     _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_mk18_bk";
+    _unit addWeapon "rhs_weap_m4a1_carryhandle";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "hgun_ACPC2_F";

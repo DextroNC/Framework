@@ -91,9 +91,12 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "SMG_05_F"
+            "rhs_weap_mk18",
+            "rhs_weap_mk18_bk",
+            "rhs_weap_mk18_KAC",
+            "rhs_weap_mk18_KAC_bk"
         ];
-        _primaryAmmo = "30Rnd_9x21_Mag_SMG_02";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //8 - DMR

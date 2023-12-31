@@ -28,9 +28,9 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShellGreen";
-    _unit addItemToVest "SmokeShellRed";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    _unit addItemToVest "rhs_mag_m18_green";
+    _unit addItemToVest "rhs_mag_m18_red";
     _unit addItemToVest "SmokeShellOrange";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 

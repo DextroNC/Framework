@@ -34,17 +34,19 @@ if (_type == 1) then {
     _box addmagazinecargoGlobal ["rhs_mag_smaw_SR", 10];
 	_box additemcargoGlobal ["HandGrenade", 8];
 	_box additemcargoGlobal ["MiniGrenade", 2];
-	_box additemcargoGlobal ["SmokeShell", 28];
-	_box additemcargoGlobal ["SmokeShellGreen", 2];
-	_box additemcargoGlobal ["SmokeShellRed", 2];
+	_box additemcargoGlobal ["rhs_mag_an_m8hc", 28];
+	_box additemcargoGlobal ["rhs_mag_m18_green", 2];
+	_box additemcargoGlobal ["rhs_mag_m18_red", 2];
 	_box additemcargoGlobal ["SmokeShellBlue", 2];
 	_box additemcargoGlobal ["SmokeShellOrange", 2];
+	_box additemcargoGlobal ["ACE_Chemlight_HiGreen", 28];
+	_box additemcargoGlobal ["ACE_Chemlight_HiRed", 8];
 	_box additemcargoGlobal ["SR_HE_Pack", 4];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
 	_box additemcargoGlobal ["rhs_mag_mk84", 10];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 4];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];
 	_box additemcargoGlobal ["SLAMDirectionalMine_Wire_Mag", 4];
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
@@ -83,11 +85,13 @@ if (_type == 4) then {
     _box addweaponcargoGlobal ["rhs_weap_M136_hedp", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
-	_box additemcargoGlobal ["SmokeShell", 16];
-	_box additemcargoGlobal ["SmokeShellGreen", 2];
-	_box additemcargoGlobal ["SmokeShellRed", 2];
+	_box additemcargoGlobal ["rhs_mag_an_m8hc", 16];
+	_box additemcargoGlobal ["rhs_mag_m18_green", 2];
+	_box additemcargoGlobal ["rhs_mag_m18_red", 2];
 	_box additemcargoGlobal ["SmokeShellBlue", 2];
 	_box additemcargoGlobal ["SmokeShellOrange", 2];
+	_box additemcargoGlobal ["ACE_Chemlight_HiGreen", 16];
+	_box additemcargoGlobal ["ACE_Chemlight_HiRed", 4];
 	_box additemcargoGlobal ["SR_HE_Pack", 2];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 2];
 	_box additemcargoGlobal ["SR_Flare_Pack", 2];
@@ -109,8 +113,8 @@ if (_type == 5) then {
 	_box addmagazinecargoGlobal ["rhs_mag_maaws_HEAT", 6];
 	_box addmagazinecargoGlobal ["rhs_mag_maaws_HE", 3];
     _box addmagazinecargoGlobal ["rhs_mag_smaw_SR", 10];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 1];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 1];
 };
 
 // Medical Drop

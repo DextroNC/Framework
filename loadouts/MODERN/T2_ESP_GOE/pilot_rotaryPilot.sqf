@@ -14,12 +14,12 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "UK3CB_CW_US_B_LATE_U_SF_CombatUniform_01_BLK";
+    _unit forceAddUniform "VSM_Multicam_Crye_Camo";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -27,8 +27,8 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "dr_BLKfacp_op";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_green";};
     _unit addBackpack "UK3CB_B_Invisible";
     _unit addItemToBackpack "ToolKit";
 
@@ -61,7 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "USP_GPNVG18";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

@@ -9,7 +9,7 @@ _uniforms = [
 		["Platoon Engineer (Repair)", "loadouts\lpdf_p_e_repair.sqf"],
 		["Platoon DMR", "loadouts\lpdf_p_dmr.sqf"],
 		["Platoon Driver", "loadouts\lpdf_p_driver.sqf"],
-		["Platoon LSW", "loadouts\lpdf_p_lsw.sqf"],
+		["Platoon AR", "loadouts\lpdf_p_ar.sqf"],
 		["Platoon Medic", "loadouts\lpdf_p_medic.sqf"]
 	]],
 
@@ -17,12 +17,12 @@ _uniforms = [
 		[["Squad Leader", "loadouts\lpdf_o_sl.sqf"],
 		["Combat Medic", "loadouts\lpdf_o_medic.sqf"],
 		["Operator Rifleman", "loadouts\lpdf_o_rifleman.sqf"],
-		["Operator AR", "loadouts\lpdf_o_ar.sqf"],
-		["Operator Asst. AR", "loadouts\lpdf_o_arAsst.sqf"],
 		["Operator LAT", "loadouts\lpdf_o_lat.sqf"],
-		["Operator LSW", "loadouts\lpdf_o_lsw.sqf"],
+		["Operator AR", "loadouts\lpdf_o_ar.sqf"],
 		["Operator MAT", "loadouts\lpdf_o_mat.sqf"],
-		["Operator Asst. MAT", "loadouts\lpdf_o_matAsst.sqf"]
+		["Operator Asst. MAT", "loadouts\lpdf_o_matAsst.sqf"],
+		["Operator MMG", "loadouts\lpdf_o_mmg.sqf"],
+		["Operator Asst. MMG", "loadouts\lpdf_o_mmgAsst.sqf"]
 	]],
 
 	["Specialists", "#00ff00", "a3\ui_f\data\Map\Markers\NATO\b_inf.paa",
@@ -39,7 +39,7 @@ _uniforms = [
 
 	["Echo", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
 		[["Echo Rifleman", "loadouts\lpdf_e_rifleman.sqf"],
-		["Echo LSW", "loadouts\lpdf_e_lsw.sqf"],
+		["Echo AR", "loadouts\lpdf_e_ar.sqf"],
 		["Echo Engineer (Demo)", "loadouts\lpdf_e_e_demo.sqf"],
 		["Echo Engineer (EOD)", "loadouts\lpdf_e_e_eod.sqf"],
 		["Echo Engineer (Fortification)", "loadouts\lpdf_e_e_fort.sqf"],
@@ -74,4 +74,4 @@ _uniforms = [
 	]]
 ];
 					
-[this, _uniforms] call fw_fnc_addUniformsToBox;
+[uniBox, _uniforms] call fw_fnc_addUniformsToBox;

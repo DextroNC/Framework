@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
@@ -36,8 +36,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
-    _unit addItemToVest "tsp_frameCharge_mag";
-    _unit addItemToVest "ACE_Clacker";
+    _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";
 

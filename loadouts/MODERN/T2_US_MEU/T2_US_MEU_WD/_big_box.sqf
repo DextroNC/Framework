@@ -9,9 +9,8 @@ if(isServer) then {
     this addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 60];
     this addweaponcargoGlobal ["rhs_weap_m136_HEDP", 20];
     this addweaponcargoGlobal ["rhs_weap_m72a7", 10];
-	this addmagazinecargoGlobal ["rhs_mag_smaw_HEAA", 20];
-	this addmagazinecargoGlobal ["rhs_mag_smaw_HEDP", 10];
-	this addmagazinecargoGlobal ["rhs_mag_smaw_SR", 10];
+	this addmagazinecargoGlobal ["MRAWS_HEAT_F", 20];
+	this addmagazinecargoGlobal ["MRAWS_HE_F", 10];
 	this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];
 	this additemcargoGlobal ["DemoCharge_Remote_Mag", 12];
     
@@ -20,7 +19,7 @@ if(isServer) then {
         this additemcargoGlobal ["ACE_IR_Strobe_Item", 40];
         this additemcargoGlobal ["ACE_HandFlare_Red", 40];
         this additemcargoGlobal ["ACE_HandFlare_Green", 40];
-        this additemcargoGlobal ["ACE_Chemlight_HiRed", 40];
+        this additemcargoGlobal ["ACE_Chemlight_HiGreen", 40];
         this additemcargoGlobal ["B_IR_Grenade", 40];
     };
 };

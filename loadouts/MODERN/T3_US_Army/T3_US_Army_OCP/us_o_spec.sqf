@@ -41,8 +41,6 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 7] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "muzzle_snds_l";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
     
 
 comment "Add Secondary/Attachments";

@@ -21,7 +21,8 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
@@ -35,7 +36,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_f1";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "UK3CB_UN_B_B_ASS";
+_unit addBackpack "B_FieldPack_invisible";
 
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_ec400_mag";};
 
@@ -64,12 +65,12 @@ _unit linkItem "ItemRadioAcreFlagged";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_red";
+    _unit addItem "rhs_VG40OP_red";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

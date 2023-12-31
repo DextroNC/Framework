@@ -99,5 +99,8 @@ if ((_newWeapon != "") && (_newWeapon != _weapon)) then {
 if (_newWeapon in ["SMG_03C_TR_khaki","SMG_03C_TR_black"]) then {_unit addPrimaryWeaponItem "rhs_acc_perst1ik_ris";};
 
 _newMag = (primaryWeaponMagazine _unit) select 0;
-_unit removePrimaryWeaponItem _newMag;
-_unit addItem _newMag;
+//_unit removePrimaryWeaponItem _newMag;
+//_unit addItem _newMag;
+
+// Save Loadout (not when Parachute)
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];

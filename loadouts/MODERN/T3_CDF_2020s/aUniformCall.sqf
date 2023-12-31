@@ -30,58 +30,57 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "rhsgref_uniform_para_ttsko_mountain"
+            "7r_combatsmocks_ttsko",2,
+            "7r_combatsmocks_ttsko_gloves",2,
+            "7r_combatsmocks_ttsko_odg",1,
+            "7r_combatsmocks_ttsko_odg_gloves",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "rhsgref_uniform_para_ttsko_mountain"
+            "7r_combatsmocks_ttsko",2,
+            "7r_combatsmocks_ttsko_gloves",2,
+            "7r_combatsmocks_ttsko_odg",1,
+            "7r_combatsmocks_ttsko_odg_gloves",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "rhsgref_uniform_para_ttsko_mountain"
+            "7r_combatsmocks_ttsko",2,
+            "7r_combatsmocks_ttsko_gloves",2,
+            "7r_combatsmocks_ttsko_odg",1,
+            "7r_combatsmocks_ttsko_odg_gloves",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_ard"
+            "U_B_FullGhillie_ard",1
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
-
-_noess_list = [
-    "rhssaf_helmet_m97_olive_nocamo",
-    "rhssaf_helmet_m97_olive_nocamo"
-];
-
-_ess_list = [
-    "rhssaf_helmet_m97_olive_nocamo_black_ess",
-    "rhssaf_helmet_m97_olive_nocamo_black_ess_bare"
-];
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = ["7r_odg_modhelm"];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = ["7r_ttsko_modhelm"];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = ["7r_odg_modhelm"];
     };
 
     //Sierra
@@ -98,39 +97,30 @@ _ess_list = [
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
-if (_helmet in _ess_list) then {_class = 5};
-
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
     if (_Class <= 3) then{
         _goggleArray = [
-            "VSM_Shemagh_OD", 0.1625,
-            "VSM_Shemagh_Facemask_OD", 0.1625,
+            "milgp_f_face_shield_goggles_RGR", 0.08125,
+            "milgp_f_face_shield_RGR", 0.08125,
+            "rhsusf_shemagh2_od", 0.1625,
             "rhs_googles_clear", 0.325,
             "rhs_scarf", 0.1,
-            "VSM_Goggles", 0.125,
-            "VSM_Shemagh_Facemask_OD_Goggles", 0.125
+            "rhsusf_oakley_goggles_clr", 0.125,
+            "rhsusf_shemagh2_gogg_od", 0.125
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "VSM_Shemagh_OD", 0.2,
-            "VSM_Shemagh_Facemask_OD", 0.2,
-            "rhs_googles_clear", 0.35,
-            "rhs_scarf", 0.05,
-            "VSM_Goggles", 0.2
-        ];
-    };
-
-    //ESS On Helmet 
-    if (_Class == 5) then{
-        _goggleArray = [
-            "VSM_Shemagh_OD", 0.325,
-            "VSM_Shemagh_Facemask_OD", 0.325,
-            "rhs_scarf", 0.075,
-            "", 0.275
+            "milgp_f_face_shield_goggles_RGR", 0.08125,
+            "milgp_f_face_shield_RGR", 0.08125,
+            "rhsusf_shemagh2_od", 0.1625,
+            "rhs_googles_clear", 0.325,
+            "rhs_scarf", 0.1,
+            "rhsusf_oakley_goggles_clr", 0.125,
+            "rhsusf_shemagh2_gogg_od", 0.125
         ];
     };
 

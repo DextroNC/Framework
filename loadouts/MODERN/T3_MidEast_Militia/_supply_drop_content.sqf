@@ -35,6 +35,8 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];
 	_box additemcargoGlobal ["rhs_mag_nspd", 2];
+	_box additemcargoGlobal ["ACE_Chemlight_HiGreen", 28];
+	_box additemcargoGlobal ["ACE_Chemlight_HiRed", 8];
 	_box additemcargoGlobal ["SR_HE_Pack", 4];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
@@ -81,6 +83,8 @@ if (_type == 4) then {
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspd", 2];
+	_box additemcargoGlobal ["ACE_Chemlight_HiGreen", 16];
+	_box additemcargoGlobal ["ACE_Chemlight_HiRed", 4];
 	_box additemcargoGlobal ["SR_HE_Pack", 2];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 2];
 	_box additemcargoGlobal ["SR_Flare_Pack", 2];

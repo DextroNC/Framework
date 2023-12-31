@@ -43,7 +43,7 @@ comment "Add Secondary/Attachments";
     _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};

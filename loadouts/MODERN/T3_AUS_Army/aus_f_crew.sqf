@@ -19,7 +19,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_crew_black_F";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
 
@@ -35,7 +35,8 @@ comment "Add Drip";
     _unit addHeadgear "H_HelmetCrew_I";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_hk416d10";
+    _unit addWeapon "7r_weap_ef88_c_black";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BHP";
@@ -58,7 +59,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "USP_PVS14";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

@@ -30,24 +30,24 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_DPMT",
-            "UK3CB_BAF_U_CombatUniform_DPMT_ShortSleeve"
+            "UK3CB_BAF_U_CombatUniform_DPMW",
+            "UK3CB_BAF_U_CombatUniform_DPMW_ShortSleeve"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_DPMT",
-            "UK3CB_BAF_U_CombatUniform_DPMT_ShortSleeve"
+            "UK3CB_BAF_U_CombatUniform_DPMW",
+            "UK3CB_BAF_U_CombatUniform_DPMW_ShortSleeve"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_DPMT",
-            "UK3CB_BAF_U_CombatUniform_DPMT_ShortSleeve"
+            "UK3CB_BAF_U_CombatUniform_DPMW",
+            "UK3CB_BAF_U_CombatUniform_DPMW_ShortSleeve"
         ];
     };
 
@@ -62,8 +62,8 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 //Appends array of hats with desired uniforms based on _Class
-_ess_list = ["UK3CB_BAF_H_Mk6_DPMT_D","UK3CB_BAF_H_Mk6_DPMT_E","UK3CB_BAF_H_Mk6_DPMT_F","UK3CB_BAF_H_Mk6_DPMT_F"];
-_noess_list = ["UK3CB_BAF_H_Mk6_DPMT_A","UK3CB_BAF_H_Mk6_DPMT_B","UK3CB_BAF_H_Mk6_DPMT_C","UK3CB_BAF_H_Mk6_DPMT_C"];
+_ess_list = ["UK3CB_BAF_H_Mk6_DPMW_D","UK3CB_BAF_H_Mk6_DPMW_E","UK3CB_BAF_H_Mk6_DPMW_F","UK3CB_BAF_H_Mk6_DPMW_F"];
+_noess_list = ["UK3CB_BAF_H_Mk6_DPMW_A","UK3CB_BAF_H_Mk6_DPMW_B","UK3CB_BAF_H_Mk6_DPMW_C","UK3CB_BAF_H_Mk6_DPMW_C"];
 
     //Echo
     if (_Class == 1) then{

@@ -36,8 +36,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
-    _unit addItemToVest "tsp_frameCharge_mag";
-    _unit addItemToVest "ACE_Clacker";
+    _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";
 

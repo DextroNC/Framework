@@ -21,17 +21,17 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 
 comment "Add Vest/Items";
-_unit addVest "VSM_OGA_OD_IOTV_1";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    _unit addItemToVest "SmokeShell";
-    _unit addItemToVest "SmokeShellRed";
+_unit addVest "VSM_LBT6094_operator_OGA_OD";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    _unit addItemToVest "rhs_mag_an_m8hc";
+    _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_UAV_01_backpack_F";
@@ -40,7 +40,7 @@ comment "Add Drip";
     _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_HK416 D10_carryhandle_mstock";
+    _unit addWeapon "rhs_weap_hk416d10";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
@@ -67,7 +67,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_14";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

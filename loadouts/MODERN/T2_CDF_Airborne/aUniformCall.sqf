@@ -30,36 +30,30 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_MTP"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_MTP"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_MTP_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_MTP"
+            "7r_combatsmocks_mc_gloves",1,
+            "7r_combatsmocks_mc",1,
+            "7r_combatsmocks_mc_odg_gloves",1,
+            "7r_combatsmocks_mc_odg",1
         ];
     };
 
@@ -71,7 +65,7 @@
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 //Echo
     if (_Class == 1) then{
@@ -79,15 +73,18 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhsusf_opscore_fg",
             "rhsusf_opscore_fg_pelt",
             "rhsusf_opscore_fg_pelt",
-            "rhsusf_opscore_fg_pelt_nsw",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_paint",
+            "rhsusf_opscore_paint_pelt",
+            "rhsusf_opscore_paint_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt"
+            "rhsusf_opscore_rg_cover"
         ];
     };
 
@@ -97,15 +94,18 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhsusf_opscore_fg",
             "rhsusf_opscore_fg_pelt",
             "rhsusf_opscore_fg_pelt",
-            "rhsusf_opscore_fg_pelt_nsw",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_paint",
+            "rhsusf_opscore_paint_pelt",
+            "rhsusf_opscore_paint_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt"
+            "rhsusf_opscore_rg_cover"
         ];
     };
 
@@ -115,15 +115,18 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhsusf_opscore_fg",
             "rhsusf_opscore_fg_pelt",
             "rhsusf_opscore_fg_pelt",
-            "rhsusf_opscore_fg_pelt_nsw",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_paint",
+            "rhsusf_opscore_paint_pelt",
+            "rhsusf_opscore_paint_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt"
+            "rhsusf_opscore_rg_cover"
         ];
     };
 
@@ -133,15 +136,18 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhsusf_opscore_fg",
             "rhsusf_opscore_fg_pelt",
             "rhsusf_opscore_fg_pelt",
-            "rhsusf_opscore_fg_pelt_nsw",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_ut_pelt",
+            "rhsusf_opscore_paint",
+            "rhsusf_opscore_paint_pelt",
+            "rhsusf_opscore_paint_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
             "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt",
-            "rhsusf_opscore_rg_cover",
-            "rhsusf_opscore_rg_cover_pelt"
+            "rhsusf_opscore_rg_cover"
         ];
     };
     //Selects random hat from determined array, runs
@@ -157,23 +163,6 @@ _unit addHeadgear selectRandom _hatArray;
             "rhsusf_oakley_goggles_blk", 0.225,
             "milgp_f_face_shield_goggles_RGR", 0.075
         ]; 
-        if (selectRandomWeighted [true,1,false,2]) then {
-            if !(SR_Night) then{
-            _unit linkItem selectRandom [
-                "7r_mitz2_cover_nvg",
-                "7r_mitz2_cover2_nvg",
-                "7r_mitz2_cover3_nvg",
-                "7r_mitz2_cover4_nvg"
-            ];
-            } else {
-                _goggleArray = _goggleArray + [
-                    "7r_mitz2_cover",.2,
-                    "7r_mitz2_cover2",.2,
-                    "7r_mitz2_cover3",.2,
-                    "7r_mitz2_cover4",.2
-                ];
-            };
-        };
     };
 
     //Squad
@@ -185,7 +174,7 @@ _unit addHeadgear selectRandom _hatArray;
             "rhsusf_oakley_goggles_blk", 0.225,
             "milgp_f_face_shield_goggles_RGR", 0.075
         ];
-        if (selectRandomWeighted [true,1,false,2]) then {
+        if (selectRandomWeighted [true,2,false,1]) then {
             if !(SR_Night) then{
             _unit linkItem selectRandom [
                 "7r_mitz2_cover_nvg",

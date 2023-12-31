@@ -1,4 +1,4 @@
-this addaction ["<t color=""#00FFFF"">" +"Switch Optics Mount", "Loadouts\optic_switch.sqf"];
+this addaction ["<t color=""#00FFFF"">" +"Switch Optics Mount", "loadouts\optic_switch.sqf"];
 this addaction ["<t color=""#00FF00"">" +"PKAS (AK-Mount)", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_pkas"]];
 this addaction ["<t color=""#00FF00"">" +"1P63 (AK-Mount)", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_1p63"]];
 this addaction ["<t color=""#00FF00"">" +"EKP1 (AK-Mount)", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_ekp1"]];

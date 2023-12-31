@@ -27,8 +27,8 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_Alice_K";
@@ -36,7 +36,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_DefusalKit";
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_SpraypaintRed";
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
 

@@ -21,17 +21,21 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA_OD";
+    _unit addVest selectRandomWeighted [
+		"JCA_MCRP_V_CarrierRigKBT_01_recon_olive_F",1,
+		"JCA_MCRP_V_CarrierRigKBT_01_compact_olive_F",1,
+		"7r_ttsko_modvest_recon",2,
+		"7r_ttsko_modvest_compact",2];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_whitePurple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_Largepack";
+    _unit addBackpack "B_Carryall_green_F";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

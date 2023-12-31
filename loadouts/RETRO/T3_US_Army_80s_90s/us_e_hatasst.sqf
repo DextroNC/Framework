@@ -27,11 +27,11 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_FieldPack_green_F";
+    _unit addBackpack "B_FieldPack_invisible";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
@@ -43,7 +43,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
     _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 
 comment "Add Ammunition";

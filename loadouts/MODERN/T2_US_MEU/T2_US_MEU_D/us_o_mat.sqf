@@ -21,13 +21,13 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
     _unit addVest "rhsusf_spc_light";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
@@ -44,15 +44,13 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_smaw";
-    _unit addSecondaryWeaponItem "rhs_weap_optic_smaw";
-    _unit addSecondaryWeaponItem "rhs_mag_smaw_HEAA";
-    _unit addSecondaryWeaponItem "rhs_mag_smaw_SR";
+    _unit addWeapon "launch_MRAWS_olive_rail_F";
+    _unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 
     
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_mag_smaw_HEAA";};
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_smaw_HEDP";};
+    for "_i" from 1 to 1 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HE_F";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -66,7 +64,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_14";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

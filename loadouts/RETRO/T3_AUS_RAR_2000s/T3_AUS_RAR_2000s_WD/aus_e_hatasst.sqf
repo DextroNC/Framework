@@ -43,7 +43,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
     _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 
 comment "Add Ammunition";

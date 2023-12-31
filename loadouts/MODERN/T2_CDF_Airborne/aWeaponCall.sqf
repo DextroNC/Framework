@@ -39,13 +39,6 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_aks74n",
-            "rhs_weap_aks74n",
-            "rhs_weap_aks74n",
-            "rhs_weap_aks74n_2",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
             "rhs_weap_ak74m_zenitco01"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
@@ -54,9 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_ak105_zenitco01",
-            "rhs_weap_ak105_zenitco01",
-            "rhs_weap_ak105"
+            "rhs_weap_ak105_zenitco01"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
     };
@@ -64,10 +55,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_aks74n_gp25",
-            "rhs_weap_aks74n_gp25",
-            "rhs_weap_ak74m_gp25",
-            "rhs_weap_ak74m_fullplum_gp25"
+            "rhs_weap_ak74m_gp25"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
     };
@@ -99,10 +87,11 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "SMG_03C_TR_khaki",
-            "SMG_03C_TR_black"
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_mstock",
+            "rhs_weap_m4a1_d_mstock"
         ];
-        _primaryAmmo = "50Rnd_570x28_SMG_03";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //8 - DMR
@@ -135,19 +124,19 @@
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
     
-    if ( _Rifle <= 5 or _Rifle == 10 or _Rifle == 8) then{
+    if (_Rifle == 7 or _Rifle <= 5 or _Rifle == 10 or _Rifle == 8) then{
         _attachmentArray = [
-            "rhs_acc_perst1ik"
+            "rhsusf_acc_anpeq16a"
         ];
     };
     
-    if (_Rifle == 7 or _Rifle == 4) then{
+    if (_Rifle == 4) then{
         _attachmentArray = [
             "rhs_acc_perst1ik_ris"
         ];
     };
 
-    if (_Rifle <= 4 or _Rifle == 10) then{
+    if (_Rifle <= 4 or _Rifle == 10 or _Rifle == 7) then{
         _gripArray = [
             "",
             "rhsusf_acc_grip2",

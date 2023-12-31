@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
@@ -34,8 +34,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_tan";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "tsp_stickCharge_auto_mag";};
-    _unit addItemToBackpack "tsp_frameCharge_mag";
-    _unit addItemToBackpack "ACE_Clacker";
+    _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";
 

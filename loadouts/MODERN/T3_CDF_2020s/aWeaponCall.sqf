@@ -40,20 +40,13 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "rhs_weap_ak74n",
-            "rhs_weap_ak74n",
-            "rhs_weap_ak74n",
             "rhs_weap_ak74n_2",
             "rhs_weap_aks74n",
-            "rhs_weap_aks74n",
-            "rhs_weap_aks74n",
             "rhs_weap_aks74n_2",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01",
-            "rhs_weap_ak74m_zenitco01"
+            "rhs_weap_ak74m",
+            "rhs_weap_ak74m",
+            "rhs_weap_ak74m_desert",
+            "rhs_weap_ak74m_fullplum"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
     };
@@ -61,8 +54,6 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_ak105_zenitco01",
-            "rhs_weap_ak105_zenitco01",
             "rhs_weap_ak105"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
@@ -76,7 +67,11 @@
             "rhs_weap_aks74n_gp25",
             "rhs_weap_ak74n_gp25",
             "rhs_weap_ak74n_2_gp25",
-            "rhs_weap_ak74m_gp25"
+            "rhs_weap_ak74m_gp25",
+            "rhs_weap_ak74m_gp25",
+            "rhs_weap_ak74m_gp25",
+            "rhs_weap_ak74m_gp25",
+            "rhs_weap_ak74m_fullplum_gp25"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
     };
@@ -84,14 +79,10 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_savz58v_ris",
-            "rhs_weap_savz58v_ris",
-            "rhs_weap_savz58v_ris",
-            "rhs_weap_savz58v_rail",
-            "rhs_weap_savz58p_rail",
-            "rhs_weap_savz58p_rail"
+            "rhs_weap_akmn",
+            "rhs_weap_ak103"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_Savz58";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
     //5 - AutoRifle
@@ -141,7 +132,6 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_ak105_zenitco01",
             "rhs_weap_ak105"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
@@ -164,7 +154,7 @@
         ];
     };
 
-    if (_Rifle == 7 or _Rifle <= 4 or _Rifle == 10) then{
+    if (_Rifle == 7) then{
         _gripArray = [
             "",
             "rhsusf_acc_grip2",
@@ -208,9 +198,9 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addWeapon "rhs_weap_makarov_pm";
+    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
+    _unit addItem "rhs_mag_9x18_8_57N181S";
+    _unit addItem "rhs_mag_9x18_8_57N181S";
 
     

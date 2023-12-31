@@ -58,54 +58,57 @@
 //Selects random uniform from determined array, runs
 _unit forceAddUniform selectRandom _uniformArray;
 
-_headset_list = [
-    "H_HelmetSpecB_snakeskin",
-    "H_HelmetSpecB_paint1",
-    "H_HelmetSpecB_snakeskin",
-    "H_HelmetSpecB_paint1",
-    "H_HelmetSpecB_snakeskin",
-    "H_HelmetSpecB_paint1",
-    "H_HelmetSpecB_snakeskin",
-    "H_HelmetSpecB_paint1",
-    "VSM_OGA_OD_Helmet1",
-    "VSM_OGA_OD_Helmet1",
-    "VSM_OGA_OD_Helmet1",
-    "VSM_OGA_OD_Helmet1"
-];
-
-_noheadset_list = [
-    "H_HelmetB_snakeskin",
-    "H_HelmetB_grass",
-    "H_HelmetB_snakeskin",
-    "H_HelmetB_grass"
-
-];
-
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _headset_list + _noheadset_list;
+        _hatArray = [
+            "VSM_oga_OPS",
+            "VSM_oga_OPS",
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
+        ];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _headset_list + _noheadset_list;
+        _hatArray = [
+            "H_HelmetSpecB_blk",
+            "H_HelmetSpecB_sand",
+            "H_HelmetSpecB_blk",
+            "H_HelmetSpecB_sand",
+            "H_HelmetSpecB_snakeskin"
+        ];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _headset_list + _noheadset_list;
+        _hatArray = [
+            "VSM_oga_OPS",
+            "VSM_oga_OPS",
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
+        ];
     };
 
     //Sierra
     if (_Class == 4) then{
-        _hatArray = _headset_list + _noheadset_list;
+        _hatArray = [
+            "VSM_oga_OPS",
+            "VSM_oga_OPS",
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
+        ];;
     };
     
     //Selects random hat from determined array, runs
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
-if (_helmet in _noheadset_List) then {_class = _class + 0.5};
 
 //Appends array of goggleswith desired values
 
@@ -120,35 +123,11 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
             "rhsusf_shemagh2_gogg_tan", 0.2
         ];
     };
-    
-    //Echo No Headset
-    if (_Class == 1.5) then{
-        _goggleArray = [
-            "VSM_Peltor_coyote_glasses", 0.025,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "rhsusf_shemagh2_gogg_tan", 0.2
-        ];
-    };
 
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
             "", 0.025,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "rhsusf_shemagh2_gogg_tan", 0.2
-        ];
-    };
-    
-    //Squad No Headset
-    if (_Class == 2.5) then{
-        _goggleArray = [
-            "VSM_Peltor_coyote_glasses", 0.025,
             "7r_scrim_forest", 0.3,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
@@ -172,17 +151,6 @@ if (_helmet in _noheadset_List) then {_class = _class + 0.5};
     if (_Class == 4) then{
         _goggleArray = [
             "", 0.425,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "rhsusf_shemagh2_gogg_tan", 0.2
-        ];
-    };
-    
-    //Sierra No Headset
-    if (_Class == 4.5) then{
-        _goggleArray = [
-            "VSM_Peltor_coyote_glasses", 0.425,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "VSM_Goggles", 0.05,

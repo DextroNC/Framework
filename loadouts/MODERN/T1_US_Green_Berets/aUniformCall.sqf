@@ -32,9 +32,8 @@
         _uniformArray = [
             "milgp_u_g3_field_set_rolled_mc",
             "milgp_u_g3_field_set_mc",
-            "milgp_u_fleece_rgr_g3_field_pants_mc",
             "milgp_u_fleece_khk_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_fleece_khk_g3_field_pants_mc"
         ];
     };
 
@@ -43,9 +42,10 @@
         _uniformArray = [
             "milgp_u_g3_field_set_rolled_mc",
             "milgp_u_g3_field_set_mc",
+            "milgp_u_g3_field_set_rolled_mc",
+            "milgp_u_g3_field_set_mc",
             "milgp_u_fleece_rgr_g3_field_pants_mc",
-            "milgp_u_fleece_khk_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_fleece_rgr_g3_field_pants_mc"
         ];
     };
 
@@ -54,9 +54,8 @@
         _uniformArray = [
             "milgp_u_g3_field_set_rolled_mc",
             "milgp_u_g3_field_set_mc",
-            "milgp_u_fleece_rgr_g3_field_pants_mc",
             "milgp_u_fleece_khk_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_fleece_khk_g3_field_pants_mc"
         ];
     };
 
@@ -74,100 +73,36 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_US",
-            "VSM_BackwardsHat_Peltor_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_OD",
-            "VSM_Beanie_tan",
-            "VSM_Peltor_OD",
-            "VSM_Bowman_cap_Black",
-            "VSM_Bowman_cap_Tan",
-            "rhsusf_bowman_cap",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Cap_blk",
-            "H_Cap_tan",
-            "H_Cap_headphones"
+            "VSM_oga_OPS",
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_US",
-            "VSM_BackwardsHat_Peltor_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_OD",
-            "VSM_Beanie_tan",
-            "VSM_Peltor_OD",
-            "VSM_Bowman_cap_Black",
-            "VSM_Bowman_cap_Tan",
-            "rhsusf_bowman_cap",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Cap_blk",
-            "H_Cap_tan",
-            "H_Cap_headphones"
+            "VSM_OPS_2_multicam",
+            "VSM_OPS_multicam"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_US",
-            "VSM_BackwardsHat_Peltor_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_OD",
-            "VSM_Beanie_tan",
-            "VSM_Peltor_OD",
-            "VSM_Bowman_cap_Black",
-            "VSM_Bowman_cap_Tan",
-            "rhsusf_bowman_cap",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Cap_blk",
-            "H_Cap_tan",
-            "H_Cap_headphones"
+            "VSM_oga_OPS",
+            "VSM_Tan_spray_OPS",
+            "VSM_oga_OPS_2",
+            "VSM_Tan_spray_OPS_2"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_US",
-            "VSM_BackwardsHat_Peltor_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_tan",
-            "VSM_Beanie_Black",
-            "VSM_Beanie_OD",
-            "VSM_Beanie_tan",
-            "VSM_Peltor_OD",
-            "VSM_Bowman_cap_Black",
-            "VSM_Bowman_cap_Tan",
-            "rhsusf_bowman_cap",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Booniehat_khk",
-            "UK3CB_LSM_B_H_BoonieHat_BLK",
-            "H_Cap_blk",
-            "H_Cap_tan",
-            "H_Cap_headphones"
+            "VSM_OPS_2_multicam",
+            "VSM_OPS_multicam"
         ];
     };
     //Selects random hat from determined array, runs
@@ -196,8 +131,19 @@ _unit addHeadgear selectRandom _hatArray;
         ];
     };
 
+    //Squad
+    if (_Class == 2.5) then{
+        _goggleArray = [
+            "", 0.125,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "rhs_googles_clear", 0.225,
+            "VSM_Goggles", 0.25,
+            "rhsusf_shemagh2_gogg_tan", 0.2
+        ];
+    };
+
     //Platoon 
-    if (_Class == 3 or _Class == 3.5) then{
+    if (_Class == 3) then{
         _goggleArray = [
             "", 0.225,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,

@@ -14,21 +14,21 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhs_uniform_FROG01_wd";
+    _unit forceAddUniform "U_B_HeliPilotCoveralls";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_crewman";
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+    _unit addVest "V_TacVest_oli";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_green";};
     _unit addBackpack "UK3CB_B_Invisible";
     _unit addItemToBackpack "ToolKit";
 
@@ -36,7 +36,7 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p_visor";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_mk18_bk";
+    _unit addWeapon "rhs_weap_m4a1_carryhandle";
     _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
