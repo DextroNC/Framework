@@ -16,23 +16,25 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 72];
+	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
+	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
+	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 72];
 	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 24];
-	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 12];
-	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
-	_box addmagazinecargoGlobal ["30Rnd_9x21_Mag", 8];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_box", 12];
+    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
+	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
+	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
+	_box addWeaponCargoGlobal ["rhs_weap_m136_HEDP", 4];
+	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 2];
+	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEAA", 6];
+	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEDP", 4];
 	_box addmagazinecargoGlobal ["rhs_mag_smaw_SR", 2];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 12];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 12];
-	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
-	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEAA", 5];
-	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEDP", 3];
-	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
-	_box addWeaponcargoGlobal ["rhs_weap_m72a7", 1];
-	_box additemcargoGlobal ["rhs_mag_m67", 8];
+	_box additemcargoGlobal ["HandGrenade", 8];
 	_box additemcargoGlobal ["MiniGrenade", 2];
 	_box additemcargoGlobal ["SmokeShell", 28];
-	_box additemcargoGlobal ["SmokeShellGREEN", 2];
+	_box additemcargoGlobal ["SmokeShellGreen", 2];
 	_box additemcargoGlobal ["SmokeShellRed", 2];
 	_box additemcargoGlobal ["SmokeShellBlue", 2];
 	_box additemcargoGlobal ["SmokeShellOrange", 2];
@@ -57,25 +59,31 @@ if (_type == 2) then {
 
 };
 
-// Special Supply
+// Sierra Supply
 if (_type == 3) then {
-	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
-	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m118_special_Mag", 6];
-	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m993_Mag", 8];
-	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 6];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m118_special_Mag", 10];
+	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
+	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 12];
+	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 };
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["30Rnd_556x45_Stanag", 36];
-	_box addmagazinecargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 6];
+	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
+	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
+	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_box", 6];
+    _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 8];
-	_box additemcargoGlobal ["rhs_mag_m67", 6];
+	_box addWeaponCargoGlobal ["rhs_weap_m136_HEDP", 2];
+	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 1];
+	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
 	_box additemcargoGlobal ["SmokeShell", 16];
-	_box additemcargoGlobal ["SmokeShellGREEN", 2];
+	_box additemcargoGlobal ["SmokeShellGreen", 2];
 	_box additemcargoGlobal ["SmokeShellRed", 2];
 	_box additemcargoGlobal ["SmokeShellBlue", 2];
 	_box additemcargoGlobal ["SmokeShellOrange", 2];
@@ -92,13 +100,12 @@ if (_type == 4) then {
 
 // Small Special Supply
 if (_type == 5) then {
-	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 3];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Slug", 3];
-	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEAA", 2];
-	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEDP", 1];
+	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
+	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];
+	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEAA", 6];
+	_box addmagazinecargoGlobal ["rhs_mag_smaw_HEDP", 3];
 	_box addmagazinecargoGlobal ["rhs_mag_smaw_SR", 2];
 	_box additemcargoGlobal ["rhsusf_m112_mag", 2];
 	_box additemcargoGlobal ["rhsusf_m112x4_mag", 1];

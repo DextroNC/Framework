@@ -1,7 +1,7 @@
 _unit = (_this select 1);
 if( !local _unit ) exitWith {};
 
-comment "Exported from Arsenal by Dextro";
+comment "Arsenal Gameplay by Roy, Ionaru";
 
 comment "Remove existing items";
 removeAllWeapons _unit;
@@ -13,48 +13,68 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-comment "Add containers";
-_unit forceAddUniform "U_B_FullGhillie_ard";
-_unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "SR_PAK";
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-_unit addItemToUniform "SmokeShellGreen";
-_unit addItemToUniform "SmokeShellRed";
-_unit addVest "V_BandollierB_cbr";
-for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addItemToVest "ACE_RangeCard";
-_unit addItemToVest "Laserbatteries";
-_unit addItemToVest "RH_anpvs10";
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 4] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
-comment "Add weapons";
-_unit addWeapon "rhs_weap_m24sws_d";
-_unit addPrimaryWeaponItem "rhsusf_acc_M8541_low_d";
-_unit addPrimaryWeaponItem "rhsusf_acc_harris_swivel";
-_unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
-_unit addWeapon "RH_m9";
-_unit addHandgunItem "RH_m9qd";
-_unit addHandgunItem "RH_M6X";
+comment "Add Uniforms/Items";
+    _unit addItemToUniform "ACE_MapTools";
+    _unit addItemToUniform "SR_PAK";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACRE_PRC343";
+    _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add items";
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch";
+comment "Add Vest/Items";
+    _unit addVest "VSM_OGA_OD_IOTV_1";
+    for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+    _unit addItemToVest "SmokeShell";
+    _unit addItemToVest "SmokeShellRed";
 
-for "_i" from 1 to 6 do {_unit addItemToVest "rhsusf_5Rnd_762x51_m118_special_Mag";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_5Rnd_762x51_m993_Mag";};
+comment "Add Backpack/Items";
+    _unit addBackpack "milgp_bp_Tomahawk_rgr";
+    _unit addItemToBackpack "Laserbatteries";
+    _unit addItemToBackpack "ACE_RangeCard";
+    _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
-_unit addItemToUniform "ACRE_PRC343";
-_unit addItemToUniform "ACRE_PRC152";
+comment "Add Drip";
+    _unit addGoggles "VSM_Shemagh_OD";
 
+comment "Add Primary/Attachments";
+    _unit addWeapon "rhs_weap_m24sws";
+    _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
+    _unit addPrimaryWeaponItem "rhsusf_acc_harris_swivel";
+
+comment "Add Secondary/Attachments";
+    _unit addWeapon "rhsusf_weap_m9";
+    _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
+
+comment "Add Tertiary equipment";
+    _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
+    _unit addMagazine "Laserbatteries";
+
+comment "Add Ammunition";
+    for "_i" from 1 to 4 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+    for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_762x51_m118_special_Mag";};
+
+comment "Add Navigation";
+    _unit linkItem "ItemMap";
+    _unit linkItem "ItemCompass";
+    _unit linkItem "ItemWatch";
+    _unit linkItem "ItemRadioAcreFlagged";
+    _unit linkItem "ItemGPS";
+
+comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit setUnitTrait ["camouflageCoef",0.9];
-	_unit linkItem "UK3CB_ANPVS7";
+    _unit linkItem "UK3CB_ANPVS7";
+    _unit addItem "ACE_IR_Strobe_Item";
+    _unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Sniper", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
+
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];

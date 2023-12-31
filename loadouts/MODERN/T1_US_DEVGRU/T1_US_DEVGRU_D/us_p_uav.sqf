@@ -1,7 +1,7 @@
 _unit = (_this select 1);
 if( !local _unit ) exitWith {};
 
-comment "Exported from Arsenal by Dextro";
+comment "Arsenal Gameplay by Roy, Ionaru";
 
 comment "Remove existing items";
 removeAllWeapons _unit;
@@ -13,50 +13,60 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-comment "Add containers";
-_unit forceAddUniform "VSM_AOR1_Crye_Camo";
-_unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "SR_PAK";
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "SmokeShell";
-_unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
-_unit addVest "milgp_v_mmac_teamleader_KHK";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addBackpack "B_UAV_01_backpack_F";
-_unit addHeadgear "rhsusf_opscore_aor1_pelt";
-_unit addGoggles "shemagh_loosetanOG";
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
-comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d10_LMT_d";                                                
-_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";                      
-_unit addPrimaryWeaponItem "rhsusf_acc_rvg_de";   
-_unit addWeapon "RH_kimber";
-_unit addHandgunItem "RH_M6X";
-_unit addHandgunItem "RH_osprey";
-_unit addWeapon "Binocular";
+comment "Add Uniforms/Items";
+    _unit addItemToUniform "ACE_MapTools";
+    _unit addItemToUniform "SR_PAK";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
+    _unit addItemToUniform "ACRE_PRC343";
+    for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add items";
+comment "Add Vest/Items";
+    _unit addVest "VSM_LBT6094_operator_OGA";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    _unit addItemToVest "rhs_mag_m18_green";
+    _unit addItemToVest "rhs_mag_m18_red";
+    _unit addItemToVest "SmokeShellOrange";
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+
+comment "Add Backpack/Items";
+    _unit addBackpack "B_UAV_01_backpack_F";
+    _unit addItem "ACE_UAVBattery";
+
+comment "Add Drip";
+    _unit addItemToBackpack "VSM_AOR1_Boonie";
+
+comment "Add Primary/Attachments";
+    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
+    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+
+comment "Add Secondary/Attachments";
+
+comment "Add Tertiary equipment";
+    _unit addWeapon "Binocular";
+
+comment "Add Ammunition";
+
+comment "Add Navigation";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
+_unit linkItem "ItemRadioAcreFlagged";
 _unit linkItem "B_UavTerminal";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
 
-_unit addItemToUniform "ACRE_PRC343";
-
+comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-	_unit addItem "ACE_IR_Strobe_Item";
-	_unit linkItem "A3_GPNVG18_F";
-	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+    _unit linkItem "USP_PVS31";
+    _unit addItem "ACE_IR_Strobe_Item";
+    _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","UAV", true];
+_unit setVariable ["SR_Class","UO", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
