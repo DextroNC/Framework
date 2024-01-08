@@ -48,7 +48,7 @@ if ((_units select 0) isKindOf "Man") then {
 if (!((_units select 0) isKindOf "Man")) then {
 	// Spawn Vehicle
 	_vehicle = createVehicle [(_units select 0), _spawnPos, [], 0, "NONE"];
-	
+
 	// Modify Vehicle
 	_vehicle setDir _direction;
 	_vehicle disableTIEquipment true;
@@ -85,7 +85,7 @@ if (!((_units select 0) isKindOf "Man")) then {
 				_unit moveInCargo _vehicle;
 				_unit assignAsCargo _vehicle;
 			};
-			case "Turret": {
+			case "turret": {
 				private _path = _x select 2;
 				_unit moveInTurret [_vehicle, _path];
 				_unit assignAsTurret [_vehicle, _path];

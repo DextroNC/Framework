@@ -11,13 +11,15 @@
 
 */
 // Parameter Init
-params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",4]];
-_v = vehicle _leader;
+params ["_leader", "_patrolParams", ["_cargo", []], ["_groupSize", 4]];
+_vehicle = vehicle _leader;
 _originalGroup = group _leader;
-_originalGroup setVariable ["Vcm_Disable",false,true]; 
+_originalGroup setVariable ["Vcm_Disable", false, true];
 
 // Check if Vehicle is Armed
 if (isNull (gunner vehicle _leader)) then {
+	if (SR_Debug) then {systemChat format ["%1 hard dismount", _leader];};
+
 	// Single Group Dismount
 	units _originalGroup orderGetIn false;
 	units _originalGroup allowGetIn false;
@@ -43,42 +45,44 @@ if (isNull (gunner vehicle _leader)) then {
 	_array remoteExec ["fw_fnc_patrol",2];
 } else {
 	// Multi Group Dismount
+	if (SR_Debug) then {systemChat format ["%1 soft dismount", _leader];};
 
-	// Create a group of cargo seats
-	_ng =  createGroup (side _originalGroup);
+	// Move all cargo units into a new group
+	_ng = createGroup (side _originalGroup);
 	{
-		if (!isNull (_x select 0)) then {
-			[_x select 0] join _ng;
+		_unit = _x select 0;
+		if (!isNull _unit) then {
+			[_unit] joinSilent _ng;
 		};
-	}forEach fullCrew [_v, "cargo", true];
-	{
-		if (!isNull (_x select 0)) then {
-			[_x select 0] join _ng;
-		};
-	}forEach fullCrew [_v, "turret", true];
+	} forEach fullCrew [_vehicle, "cargo"];
 
 	// Cargo leave Vehicle
 	units _ng orderGetIn false;
 	units _ng allowGetIn false;
 
-	while {((count units _ng) / _groupSize) > 1} do {
-		_units = units _ng;
-		// Create new Group
-		_newGroup =  createGroup (side _originalGroup);
-		// Move Units to new Group
-		for "_i" from 1 to (_groupSize - 1 ) do {
-			[_units select _i] join _newGroup;
-		};
-		// Check if Cargo has special Patrol Script Params
-		_array = [leader _newGroup];
-		if (count _cargo == 0) then {_array append _patrolParams;} else {_array append _cargo;};
-		// Cargo Patrol Init
-		_array remoteExec ["fw_fnc_patrol",2];
+	// Split cargo group into smaller ones
+	_cargo_groups = [];
+	while {(count units _ng) > 0} do {
+		_unit_to_move = units _ng select 0;
+		_moved_into_group = false;
+		{
+			if (count units _x < _groupSize) then {
+				[_unit_to_move] join _x;
+				_moved_into_group = true;
+			};
+		} forEach _cargo_groups;
 
-		// Patrol Script Params for Vehicle
-		_array2 = [leader _newGroup];
-		_array2 append _patrolParams;
-		// Patrol Script init Vehicle
-		_array2 remoteExec ["fw_fnc_patrol",2];
+		if (!_moved_into_group) then {
+			_cargo_group = createGroup (side _originalGroup);
+			[_unit_to_move] join _cargo_group;
+			_cargo_groups pushBack _cargo_group;
+		};
 	};
+
+	{
+		_patrolInput = [leader _x];
+		_patrolInput append _patrolParams;
+		// Hand units to patrol script.
+		_patrolInput remoteExec ["fw_fnc_patrol",2];
+	} forEach _cargo_groups + [_originalGroup];
 };
