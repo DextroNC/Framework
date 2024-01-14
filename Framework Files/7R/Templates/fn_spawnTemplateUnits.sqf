@@ -85,7 +85,7 @@ if (!((_units select 0) isKindOf "Man")) then {
 				_unit moveInCargo _vehicle;
 				_unit assignAsCargo _vehicle;
 			};
-			case "Turret": {
+			case "turret": {
 				private _path = _x select 2;
 				_unit moveInTurret [_vehicle, _path];
 				_unit assignAsTurret [_vehicle, _path];

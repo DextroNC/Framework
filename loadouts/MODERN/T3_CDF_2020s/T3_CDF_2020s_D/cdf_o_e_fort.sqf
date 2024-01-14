@@ -13,43 +13,49 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhsgref_uniform_para_ttsko_mountain";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
-    _unit addItemToUniform "ACRE_PRC152";
-    _unit addItemToUniform "ACE_microDAGR";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_crew_black_F";
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    _unit addVest selectRandomWeighted [
+		"JCA_MCRP_V_CarrierRigKBT_01_recon_coyote_F",1,
+		"JCA_MCRP_V_CarrierRigKBT_01_compact_coyote_F",1,
+		"7r_ttsko_d_modvest_recon",2,
+		"7r_ttsko_d_modvest_compact",2];
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
-    _unit addItemToBackpack "ToolKit";
+    _unit addBackpack "B_Kitbag_rgr";
+    _unit addItemToBackpack "ACE_Clacker";
+    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addItemToBackpack "ACE_ConstructionTool";
+    for "_i" from 1 to 4 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 
 comment "Add Drip";
-    _unit addHeadgear "H_Tank_black_F";
-    _unit addGoggles "rhssaf_veil_Green";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_aks74un";
+    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhs_weap_makarov_pm";
-    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -57,15 +63,17 @@ comment "Add Navigation";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
     _unit linkItem "ItemGPS";
+    
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem "USP_PVS14";
+    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","TC", true];
-_unit setVariable ["ace_isEngineer",1, true];
+_unit setVariable ["SR_Class","E", true];
+_unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 

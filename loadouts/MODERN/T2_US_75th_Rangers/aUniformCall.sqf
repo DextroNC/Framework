@@ -59,15 +59,17 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 _helmet_list = [
-    "VSM_OPS_multicam",
-    "VSM_OPS_2_multicam"
+    "7r_ocp_opscore_2",
+    "7r_ocp_opscore_3",
+    "7r_ocp_opscore_4",
+    "7r_ocp_opscore_2"
 ];
 
 _helmet_list_pl_and_echo = [
-    "VSM_Tan_spray_OPS_2",
-    "VSM_Tan_spray_OPS",
-    "VSM_oga_OPS",
-    "VSM_oga_OPS_2"
+    "7r_khk_opscore_2",
+    "7r_khk_opscore_3",
+    "7r_khk_opscore_4",
+    "7r_khk_opscore_2"
 ];
 
 //Appends array of hats with desired uniforms based on _Class

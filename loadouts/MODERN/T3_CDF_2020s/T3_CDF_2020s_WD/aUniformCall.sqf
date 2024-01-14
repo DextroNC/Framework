@@ -60,7 +60,7 @@
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_ard",1
+            "U_B_FullGhillie_sard",1
         ];
     };
     
@@ -103,11 +103,11 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "milgp_f_face_shield_goggles_RGR", 0.08125,
             "milgp_f_face_shield_RGR", 0.08125,
-            "rhsusf_shemagh2_od", 0.1625,
-            "rhs_googles_clear", 0.325,
+            "rhsusf_shemagh2_od", 0.025,
+            "rhs_googles_clear", 0.425,
             "rhs_scarf", 0.1,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.225,
+            "rhsusf_shemagh2_gogg_od", 0.0625
         ];
     };
 
@@ -116,11 +116,11 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "milgp_f_face_shield_goggles_RGR", 0.08125,
             "milgp_f_face_shield_RGR", 0.08125,
-            "rhsusf_shemagh2_od", 0.1625,
-            "rhs_googles_clear", 0.325,
+            "rhsusf_shemagh2_od", 0.025,
+            "rhs_googles_clear", 0.425,
             "rhs_scarf", 0.1,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.225,
+            "rhsusf_shemagh2_gogg_od", 0.0625
         ];
     };
 

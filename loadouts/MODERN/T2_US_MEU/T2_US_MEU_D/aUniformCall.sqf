@@ -63,12 +63,10 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_oga_OPS",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS_2",
-            "VSM_Tan_spray_OPS_2"
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_khk_opscore_2"
         ];
     };
 
@@ -86,24 +84,20 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_oga_OPS",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS_2",
-            "VSM_Tan_spray_OPS_2"
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_khk_opscore_2"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_oga_OPS",
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS_2",
-            "VSM_Tan_spray_OPS_2"
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_khk_opscore_2"
         ];;
     };
     

@@ -62,7 +62,7 @@ if (_leader isKindOf "LandVehicle" || _leader isKindOf "Ship") then {
 				case "cargo": {
 					_args = [_class , _type];
 				};
-				case "Turret": {
+				case "turret": {
 					_args = [_class , _type, _x select 3];
 				};
 				default {};
