@@ -27,5 +27,5 @@ if (_tier <= 3) then {
 
 _terminal addaction ["<t color=""#FF0000"">Lockpicks", "7R\Loadouts\7R_EQ.sqf", ["ACE_key_lockpick"]];
 _terminal addaction ["<t color=""#FF0000"">Entrenching Tool", "7R\Loadouts\7R_EQ.sqf", ["ACE_EntrenchingTool"]];
-_terminal addaction ["<t color=""#FF0000"">Wirecutter", "7R\Loadouts\7R_EQ.sqf", ["ACE_wirecutter"]];
+_terminal addaction ["<t color=""#FF0000"">Breaching Kit", "7R\Loadouts\7R_EQ.sqf", ["ACE_wirecutter"]];
 _terminal addaction ["<t color=""#FF0000"">Mine Detector", "7R\Loadouts\7R_EQ.sqf", ["MineDetector"]];

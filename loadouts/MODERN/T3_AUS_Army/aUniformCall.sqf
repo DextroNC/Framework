@@ -65,10 +65,9 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_oga_OPS_2",1,
-            "VSM_Tan_spray_OPS_2",1,
-            "VSM_oga_OPS",1,
-            "VSM_Tan_spray_OPS",1
+            "7r_khk_opscore_2",1,
+            "7r_khk_opscore_3",1,
+            "7r_khk_opscore_4",1
         ];
     };
 
@@ -84,10 +83,9 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_oga_OPS_2",1,
-            "VSM_Tan_spray_OPS_2",1,
-            "VSM_oga_OPS",1,
-            "VSM_Tan_spray_OPS",1
+            "7r_khk_opscore_2",1,
+            "7r_khk_opscore_3",1,
+            "7r_khk_opscore_4",1
             
         ];
     };
