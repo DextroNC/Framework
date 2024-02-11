@@ -65,19 +65,16 @@ if (isServer) exitWith {
 // Full Heal Player
 [player] call ace_medical_treatment_fnc_fullHealLocal;
 
+// Individual Score Calculation
+(getPlayerScores player) params ["_infKills","_vicKills","_armorKills", "_airKills", "_deaths", "_totalScore"];
+private _scoreRecord = format ["Your Score:" + "<br/>" + "Kills: " + str(_infKills) + "<br/>" + "Vehicle Kills: " + str(_vicKills) + "<br/>" + "Armor Kills: " + str(_armorKills) + "<br/>" + "Air Kills: " + str(_airKills) + "<br/>" + "Deaths: " + str(_deaths) + "<br/>" + "Total Score: " + str(_totalScore)];
+
 // Debrief Diary Records
 // Create Category
-player createDiarySubject ["Debrief", "Debrief"];
-
-// KIA, Civilian Casualties, War Crimes, Friendly Fire
-player createDiaryRecord ["Casualties",SR_KIA];
-player createDiaryRecord ["Civilia Casulties",SR_CC];
-player createDiaryRecord ["War Crimes",SR_WC];
-player createDiaryRecord ["Friendly Fire",SR_FF];
-
-// Individual Score
-private _score = getPlayerScores player;
-_score params ["_infKills","_vicKills","_armorKills", "_airKills", "_deaths", "_totalScore"];
-private _scoreRecord = format ["Your Score:" + "<br/>" + "Kills: " + str(_infKills) + "<br/>" + "Vehicle Kills: " + str(_vicKills) + "<br/>" + "Armor Kills: " + str(_armorKills) + "<br/>" + "Air Kills: " + str(_airKills) + "<br/>" + "Deaths: " + str(_deaths) + "<br/>" + "Total Score: " + str(_totalScore)];
-player createDiaryRecord ["Score",_scoreRecord];
-
+player createDiarySubject ["Debrief","Debrief"];
+// Records
+player createDiaryRecord ["Debrief", ["Casualties", SR_KIA]];
+player createDiaryRecord ["Debrief", ["Civilian Casulties", SR_CC]];
+player createDiaryRecord ["Debrief", ["War Crimes", SR_WC]];
+player createDiaryRecord ["Debrief", ["Friendly Fire", SR_FF]];
+player createDiaryRecord ["Debrief", ["Score", _scoreRecord]];
