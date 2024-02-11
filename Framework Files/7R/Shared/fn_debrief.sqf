@@ -22,7 +22,7 @@ if (phase == 9999) exitWith {
 ["DEBRIEF STARTED", 1.5] spawn ace_common_fnc_displayTextStructured;
 
 // Server Only
-if (isServer) then {
+if (isServer) exitWith {
 	// Stop recording
 	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 
@@ -57,18 +57,6 @@ if (isServer) then {
 	} , 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// Debrief Diary Records
-// Create Category
-[player,["Debrief", "Debrief"]] remoteExec ["createDiarySubject",0];
-// KIAs
-[player,["Debrief",["Casualties",SR_KIA]]] remoteExec ["createDiaryRecord",0];
-// Civilian Casualties
-[player,["Debrief",["Civilian Casualties",SR_CC]]] remoteExec ["createDiaryRecord",0];
-// War Crimes
-[player,["Debrief",["War Crimes",SR_WC]]] remoteExec ["createDiaryRecord",0];
-// Friendly Fire
-[player,["Debrief",["Friendly Fire",SR_FF]]] remoteExec ["createDiaryRecord",0];
-
 // Unload Weapons
 {
 	player setAmmo [_x, 0];
@@ -76,3 +64,17 @@ if (isServer) then {
 
 // Full Heal Player
 [player] call ace_medical_treatment_fnc_fullHealLocal;
+
+// Individual Score Calculation
+(getPlayerScores player) params ["_infKills","_vicKills","_armorKills", "_airKills", "_deaths", "_totalScore"];
+private _scoreRecord = format ["Your Score:" + "<br/>" + "Kills: " + str(_infKills) + "<br/>" + "Vehicle Kills: " + str(_vicKills) + "<br/>" + "Armor Kills: " + str(_armorKills) + "<br/>" + "Air Kills: " + str(_airKills) + "<br/>" + "Deaths: " + str(_deaths) + "<br/>" + "Total Score: " + str(_totalScore)];
+
+// Debrief Diary Records
+// Create Category
+player createDiarySubject ["Debrief","Debrief"];
+// Records
+player createDiaryRecord ["Debrief", ["Casualties", SR_KIA]];
+player createDiaryRecord ["Debrief", ["Civilian Casulties", SR_CC]];
+player createDiaryRecord ["Debrief", ["War Crimes", SR_WC]];
+player createDiaryRecord ["Debrief", ["Friendly Fire", SR_FF]];
+player createDiaryRecord ["Debrief", ["Score", _scoreRecord]];
