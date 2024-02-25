@@ -133,5 +133,5 @@ If (_type == 8) then {
 
 // HAT Supply Drop
 If (_type == 9) then {
-	_box addWeaponcargoGlobal ["Titan_AT", 4];
+	_box addMagazinecargoGlobal ["Titan_AT", 4];
 };

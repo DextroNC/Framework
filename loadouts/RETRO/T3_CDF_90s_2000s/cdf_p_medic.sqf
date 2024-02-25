@@ -25,7 +25,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_whiteBlue";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_black";};
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [

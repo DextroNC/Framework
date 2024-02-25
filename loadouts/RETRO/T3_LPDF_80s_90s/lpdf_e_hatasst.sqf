@@ -29,10 +29,10 @@ comment "Add Vest/Items";
     _unit addVest "rhs_belt_AK";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
+    _unit addItemToVest "ACE_EntrenchingTool";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_FieldPack_invisible";
-    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addBackpack "RHS_Kornet_Tripod_Bag";
 
 comment "Add Drip";
 
@@ -44,7 +44,6 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 
 comment "Add Ammunition";
 

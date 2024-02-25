@@ -138,5 +138,6 @@ If (_type == 8) then {
 
 // HAT Supply Drop
 If (_type == 9) then {
-	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 4];
+	_box addBackpackCargoGlobal ["RHS_Kornet_Gun_Bag", 1];
+	_box addBackpackCargoGlobal ["RHS_Kornet_Tripod_Bag", 1];
 };

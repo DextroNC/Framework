@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack selectRandomWeighted ["7r_backpanel_klmk",2,"7r_backpanel_klmk_flag",1];
+    _unit addBackpack "RHS_Kornet_Gun_Bag";
 
 comment "Add Drip";
 
@@ -43,8 +43,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "UK3CB_BAF_Javelin_CLU";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
 
