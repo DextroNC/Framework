@@ -30,32 +30,30 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "VSM_M81_Crye_Camo",
-            "VSM_M81_Crye_SS_Camo",
-            "VSM_M81_Crye_SS_grey_shirt_Camo",
-            "VSM_M81_Crye_grey_shirt_Camo"
+            "milgp_u_g3_field_set_m81",
+            "milgp_u_g3_field_set_rolled_m81",
+            "milgp_u_fleece_rgr_g3_field_pants_M81",
+            "milgp_u_fleece_grey_g3_field_pants_M81"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "VSM_M81_Crye_Camo",
-            "VSM_M81_Crye_SS_Camo",
-            "VSM_M81_Crye_Camo",
-            "VSM_M81_Crye_SS_Camo",
-            "VSM_M81_Crye_SS_od_shirt_Camo",
-            "VSM_M81_Crye_od_shirt_Camo"
+            "milgp_u_g3_field_set_m81",
+            "milgp_u_g3_field_set_rolled_m81",
+            "milgp_u_fleece_rgr_g3_field_pants_M81",
+            "milgp_u_fleece_grey_g3_field_pants_M81"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "VSM_M81_Crye_Camo",
-            "VSM_M81_Crye_SS_Camo",
-            "VSM_M81_Crye_SS_grey_shirt_Camo",
-            "VSM_M81_Crye_grey_shirt_Camo"
+            "milgp_u_g3_field_set_m81",
+            "milgp_u_g3_field_set_rolled_m81",
+            "milgp_u_fleece_rgr_g3_field_pants_M81",
+            "milgp_u_fleece_grey_g3_field_pants_M81"
         ];
     };
 

@@ -39,11 +39,11 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_BAF_L115A3";
+    _unit addWeapon "UK3CB_BAF_L115A3_BL";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
+    _unit addPrimaryWeaponItem "uk3cb_baf_silencer_l115a3";
     _unit addPrimaryWeaponItem "uk3cb_underbarrel_acc_bipod";
 
 comment "Add Secondary/Attachments";

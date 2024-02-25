@@ -62,10 +62,10 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_khk_opscore_2",
-            "7r_khk_opscore_3",
-            "7r_khk_opscore_4",
-            "7r_khk_opscore_2"
+            "rhsusf_opscore_ut_pelt_cam",
+            "rhsusf_opscore_coy_cover_pelt",
+            "rhsusf_opscore_paint_pelt_nsw",
+            "rhsusf_opscore_ut_pelt_cam"
         ];
     };
 
@@ -83,20 +83,20 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_khk_opscore_2",
-            "7r_khk_opscore_3",
-            "7r_khk_opscore_4",
-            "7r_khk_opscore_2"
+            "rhsusf_opscore_ut_pelt_cam",
+            "rhsusf_opscore_coy_cover_pelt",
+            "rhsusf_opscore_paint_pelt_nsw",
+            "rhsusf_opscore_ut_pelt_cam"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_khk_opscore_2",
-            "7r_khk_opscore_3",
-            "7r_khk_opscore_4",
-            "7r_khk_opscore_2"
+            "rhsusf_opscore_ut_pelt_cam",
+            "rhsusf_opscore_coy_cover_pelt",
+            "rhsusf_opscore_paint_pelt_nsw",
+            "rhsusf_opscore_ut_pelt_cam"
         ];;
     };
     

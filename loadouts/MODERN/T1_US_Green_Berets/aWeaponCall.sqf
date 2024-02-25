@@ -182,7 +182,7 @@
             "rhsusf_acc_anpeq15side_bk"
         ];
     };
-    if (_Rifle == 5 or _Rifle == 7) then{
+    if (_Rifle == 5 or _Rifle == 3 or _Rifle == 7) then{
         _attachmentArray = [
             "rhsusf_acc_anpeq15side_bk"
         ];

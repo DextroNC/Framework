@@ -89,15 +89,17 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "UK3CB_BAF_L7A2"
+            "UK3CB_BAF_L110A2RIS",
+            "UK3CB_BAF_L110A3"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch";
+    };
     };
 
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "UK3CB_BAF_L7A2"
+            "rhs_weap_m240G"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51";
     };
@@ -152,7 +154,9 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "uk3cb_baf_llm_ir_black"
+            "uk3cb_baf_llm_ir_black",
+            "uk3cb_baf_llm_ir_black",
+            "UK3CB_BAF_LLM_IR_Tan"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

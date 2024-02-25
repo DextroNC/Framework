@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Pointman_mc";
+    _unit addBackpack selectRandomWeighted ["milgp_bp_Pointman_mc",2,"7r_backpanel_mc",2,"7r_backpanel_mc_flag_us",1];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
@@ -43,9 +43,9 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_aac_762sd_silencer";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
 
 comment "Add Secondary/Attachments";
 

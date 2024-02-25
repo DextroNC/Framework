@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_carryall_amcu";
+    _unit addBackpack "UK3CB_ION_B_B_RIF_BRN_01";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

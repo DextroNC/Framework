@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "V_SmershVest_01_F";
+    _unit addVest "milgp_v_jpc_marksman_belt_rgr";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_an_m8hc";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -39,7 +39,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
-    _unit addGoggles "UK3CB_G_Neck_Shemag_Tan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";

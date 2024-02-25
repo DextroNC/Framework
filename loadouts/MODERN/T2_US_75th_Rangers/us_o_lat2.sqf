@@ -32,7 +32,7 @@ _unit addVest "milgp_v_mmac_assaulter_belt_MC";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "milgp_bp_Pointman_mc";
+_unit addBackpack selectRandomWeighted ["milgp_bp_Pointman_mc",2,"7r_backpanel_mc",2,"7r_backpanel_mc_flag_us",1];
 
 comment "Add Drip";
 

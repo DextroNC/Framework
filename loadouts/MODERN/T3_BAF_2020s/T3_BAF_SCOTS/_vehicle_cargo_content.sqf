@@ -20,7 +20,7 @@ switch (_index) do {
 	// Helicopter Loadout - Loadout 1
 	case 1: {
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];
-		_vehicle additemcargoGlobal ["SmokeShellPurple", 2]; 
+		_vehicle additemcargoGlobal ["rhs_mag_m18_purple", 2]; 
 		_vehicle additemcargoGlobal ["ACE_HandFlare_Green", 2]; 
 	};
 	// Ground Vehicle (Infantry) Loadout - Loadout 2
@@ -47,7 +47,7 @@ switch (_index) do {
 		_vehicle addMagazineCargoGlobal ["UK3CB_BAF_6Rnd_30mm_L21A1_APDS", 17];
 		_vehicle addMagazineCargoGlobal ["UK3CB_BAF_6Rnd_30mm_L21A1_HE", 17];
 		_vehicle addMagazineCargoGlobal ["UK3CB_BAF_762_800Rnd_T", 1];
-		_vehicle additemcargoGlobal ["SmokeShellPurple", 2]; 
+		_vehicle additemcargoGlobal ["rhs_mag_m18_purple", 2]; 
 		_vehicle additemcargoGlobal ["ACE_HandFlare_Green", 2]; 
 	};
 	// Default Case (Fallback)

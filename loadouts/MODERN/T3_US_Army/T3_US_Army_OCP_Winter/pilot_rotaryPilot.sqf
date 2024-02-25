@@ -19,9 +19,10 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     _unit addItemToUniform "ACE_microDAGR";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
@@ -36,7 +37,7 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p_visor_black";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_mk18_bk";
+    _unit addWeapon "rhs_weap_m4a1_carryhandle";
     _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";

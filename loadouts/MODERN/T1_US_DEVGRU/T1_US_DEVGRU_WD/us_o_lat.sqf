@@ -44,7 +44,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_M136";
+    _unit addWeapon "rhs_weap_m136_hedp";
 
 comment "Add Ammunition";
 

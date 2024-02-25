@@ -63,14 +63,15 @@ _noess_list = [
     "rhsusf_ach_helmet_ocp_alt",
     "rhsusf_ach_helmet_headset_ocp",
     "rhsusf_ach_helmet_headset_ocp_alt",
-    "rhsusf_ach_helmet_camo_ocp",
-    "rhsusf_ach_helmet_camo_ocp",
-    "rhsusf_ach_helmet_camo_ocp"
+    "rhsusf_ach_helmet_headset_ocp",
+    "rhsusf_ach_helmet_headset_ocp_alt"
 ];
 
 _ess_list = [
     "rhsusf_ach_helmet_ESS_ocp",
     "rhsusf_ach_helmet_ESS_ocp_alt",
+    "rhsusf_ach_helmet_headset_ess_ocp",
+    "rhsusf_ach_helmet_headset_ess_ocp_alt",
     "rhsusf_ach_helmet_headset_ess_ocp",
     "rhsusf_ach_helmet_headset_ess_ocp_alt"
 ];
@@ -83,7 +84,7 @@ _ess_list = [
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = _ess_list + _noess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"];
     };
 
     //Platoon 
@@ -105,7 +106,7 @@ _ess_list = [
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
-if (_helmet in _ess_list) then {_class = 5};
+if (_helmet in _ess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"]) then {_class = 5};
 
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values

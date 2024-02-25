@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 // 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
-[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+[_unit, 1] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_RIF_BRN_01";
+    _unit addBackpack "VSM_OGA_OD_Backpack_Compact";
 
 comment "Add Drip";
 

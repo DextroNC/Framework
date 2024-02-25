@@ -33,13 +33,12 @@ comment "Add Vest/Items";
     _unit addItemToVest "SmokeShellRed";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Tomahawk_rgr";
+    _unit addBackpack "7r_backpanel_odg";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "srifle_GM6_F";

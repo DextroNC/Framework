@@ -26,7 +26,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_recon_coyote_F";
+    _unit addVest "7r_amcu_modvest_recon";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";

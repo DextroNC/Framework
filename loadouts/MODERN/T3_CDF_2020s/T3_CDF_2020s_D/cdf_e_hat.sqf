@@ -27,14 +27,12 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"JCA_MCRP_V_CarrierRigKBT_01_recon_coyote_F",1,
-		"JCA_MCRP_V_CarrierRigKBT_01_compact_coyote_F",1,
 		"7r_ttsko_d_modvest_recon",2,
 		"7r_ttsko_d_modvest_compact",2];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack selectRandomWeighted ["7r_backpanel_ttsko_d",2,"7r_backpanel_ttsko_d_flag",1];
 
 comment "Add Drip";
 

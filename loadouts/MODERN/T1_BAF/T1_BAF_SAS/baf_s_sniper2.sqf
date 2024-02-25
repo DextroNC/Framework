@@ -39,7 +39,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";

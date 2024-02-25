@@ -57,8 +57,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m4_urgi",
-            "rhs_weap_m4_urgi_kac"
+            "rhs_weap_mk18_m320"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";
     };
@@ -108,11 +107,7 @@
             "rhs_weap_m4a1_blockII",
             "rhs_weap_m4a1_blockII_kac",
             "rhs_weap_m4a1_blockII_d",
-            "rhs_weap_m4a1_blockII_kac_d",
-            "rhs_weap_m4a1_blockII_d",
-            "rhs_weap_m4a1_blockII_kac_d",
-            "rhs_weap_m4a1_blockII_bk",
-            "rhs_weap_m4a1_blockII_kac_bk"
+            "rhs_weap_m4a1_blockII_kac_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";
     };
@@ -196,6 +191,7 @@
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
+        _unit addPrimaryWeaponItem _uglHE;
         for "_i" from 1 to 7 do {_unit addItem _uglHE;};
         for "_i" from 1 to 6 do {_unit addItem _uglSmoke;};
     };
@@ -220,13 +216,8 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
 
-    if (_Rifle == 3) then {
-        _unit addWeapon "rhs_weap_M320";
-        _unit addHandgunItem _uglHE;
-    } else {
-        _unit addWeapon "rhsusf_weap_glock17g4";
-        _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
-        _unit addHandgunItem "acc_flashlight_pistol";
-        _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
-        _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
-    };
+    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "acc_flashlight_pistol";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";

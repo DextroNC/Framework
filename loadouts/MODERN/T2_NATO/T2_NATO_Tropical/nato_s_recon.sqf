@@ -37,7 +37,6 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_UAV_01_backpack_F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "arifle_MX_khk_F";

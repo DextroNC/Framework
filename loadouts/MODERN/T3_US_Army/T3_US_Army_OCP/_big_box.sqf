@@ -7,7 +7,7 @@ if(isServer) then {
 	this addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch_coyote", 60];
 	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 40];
     this addmagazinecargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 60];
-    this addweaponcargoGlobal ["rhs_weap_M136", 20];
+    this addweaponcargoGlobal ["rhs_weap_m136_hedp", 20];
     this addweaponcargoGlobal ["rhs_weap_m72a7", 10];
 	this addmagazinecargoGlobal ["MRAWS_HEAT_F", 20];
 	this addmagazinecargoGlobal ["MRAWS_HE_F", 10];
@@ -19,7 +19,7 @@ if(isServer) then {
         this additemcargoGlobal ["ACE_IR_Strobe_Item", 40];
         this additemcargoGlobal ["ACE_HandFlare_Red", 40];
         this additemcargoGlobal ["ACE_HandFlare_Green", 40];
-        this additemcargoGlobal ["ACE_Chemlight_HiRed", 40];
+        this additemcargoGlobal ["ACE_Chemlight_HiGreen", 40];
         this additemcargoGlobal ["B_IR_Grenade", 40];
     };
 };

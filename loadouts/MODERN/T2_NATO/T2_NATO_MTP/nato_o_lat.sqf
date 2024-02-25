@@ -32,7 +32,7 @@ _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_compact_mtp_F";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "B_AssaultPack_invisible";
+_unit addBackpack "7r_backpanel_mc";
 
 comment "Add Drip";
 
@@ -44,7 +44,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_M136";
+    _unit addWeapon "rhs_weap_m136_hedp";
 
 comment "Add Ammunition";
 

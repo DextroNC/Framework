@@ -27,20 +27,19 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-_unit addVest "V_SmershVest_01_F";
+_unit addVest "milgp_v_jpc_marksman_belt_rgr";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_an_m8hc";
     _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
+    _unit addBackpack "B_Kitbag_invisible";
     _unit addItemToBackpack "ACE_Kestrel4500";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "ACE_Tripod";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_G36_TAC";

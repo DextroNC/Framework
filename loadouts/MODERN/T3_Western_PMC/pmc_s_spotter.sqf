@@ -33,14 +33,13 @@ _unit addVest "VSM_FAPC_Operator_OGA_OD";
     _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
+    _unit addBackpack "B_Kitbag_invisible";
     _unit addItemToBackpack "ACE_Kestrel4500";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "ACE_Tripod";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d145";
