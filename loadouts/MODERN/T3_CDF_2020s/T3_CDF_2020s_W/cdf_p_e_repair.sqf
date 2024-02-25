@@ -32,7 +32,7 @@ comment "Add Vest/Items";
 		"7r_klmk_modvest_recon",2,
 		"7r_klmk_modvest_compact",2];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_whiteYellow";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
