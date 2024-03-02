@@ -31,6 +31,7 @@ switch (_index) do {
 	// Ground Vehicle (Echo) Loadout - Loadout 3
 	case 3: {
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];
+		_vehicle addmagazinecargoGlobal["Vorona_HEAT", 2];
 		_vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 20];
         _vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 10];
         _vehicle addWeaponcargoGlobal ["UK3CB_BAF_M6", 1];

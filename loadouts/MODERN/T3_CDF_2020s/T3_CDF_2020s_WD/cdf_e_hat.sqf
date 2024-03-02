@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "RHS_Kornet_Gun_Bag";
+    _unit addBackpack "7r_fieldpack_ttsko";
 
 comment "Add Drip";
 
@@ -44,8 +44,11 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
+    _unit addWeapon "launch_O_Vorona_green_F";
+    _unit addSecondaryWeaponItem "Vorona_HEAT";
 
 comment "Add Ammunition";
+    _unit addItemToBackpack "Vorona_HEAT";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
