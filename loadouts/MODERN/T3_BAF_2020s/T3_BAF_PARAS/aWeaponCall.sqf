@@ -94,7 +94,6 @@
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch";
     };
-    };
 
     //6 - MMG
     if (_Rifle == 6) then{
