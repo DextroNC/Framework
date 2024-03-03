@@ -32,7 +32,7 @@ _unit addVest "7r_amcu_modvest_recon";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "B_AssaultPack_invisible";
+_unit addBackpack "7r_backpanel_amcu";
 
 comment "Add Drip";
 

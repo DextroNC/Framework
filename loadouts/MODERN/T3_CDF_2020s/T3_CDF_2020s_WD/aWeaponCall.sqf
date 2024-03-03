@@ -148,7 +148,7 @@
         ];
     };
     
-    if (_Rifle == 7 or _Rifle == 4) then{
+    if (_Rifle == 7) then{
         _attachmentArray = [
             "rhs_acc_perst1ik_ris"
         ];

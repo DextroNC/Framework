@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
 
 comment "Add Drip";
-    _unit addHeadgear "H_CrewHelmetHeli_I_E";
+    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor","rhsusf_hgu56p_visor","rhsusf_hgu56p"];
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_BAF_L91A1";

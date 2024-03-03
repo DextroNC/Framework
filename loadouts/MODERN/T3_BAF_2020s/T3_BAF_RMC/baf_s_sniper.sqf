@@ -39,7 +39,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
-    _unit addGoggles "UK3CB_G_Neck_Shemag_Tan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_BAF_L115A3";
@@ -69,7 +68,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

@@ -32,7 +32,7 @@ _unit addVest "rhsusf_iotv_ocp_Rifleman";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "B_AssaultPack_invisible";
+_unit addBackpack "milgp_bp_Pointman_mc";
 
 comment "Add Drip";
 
@@ -44,7 +44,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_M136";
+    _unit addWeapon "rhs_weap_m136_hedp";
 
 comment "Add Ammunition";
 

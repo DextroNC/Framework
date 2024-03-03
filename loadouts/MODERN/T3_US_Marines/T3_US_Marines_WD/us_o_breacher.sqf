@@ -33,8 +33,8 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "rhsusf_assault_eagleaiii_coy";
-    for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
-    for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
+    for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
+    for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Slugs";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
     _unit addItemTobackpack "ACE_wirecutter";
 
@@ -43,7 +43,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 10] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addItem "rhs_weap_M590_8RD";
+    _unit addItem "UK3CB_BAF_L128A1";
 
 comment "Add Secondary/Attachments";
 

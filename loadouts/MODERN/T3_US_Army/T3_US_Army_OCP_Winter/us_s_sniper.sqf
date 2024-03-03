@@ -21,9 +21,10 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
@@ -39,7 +40,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_XM2010";

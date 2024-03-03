@@ -24,7 +24,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
-    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
@@ -36,7 +36,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ADA_B_B_ASS";
+    _unit addBackpack "VSM_OGA_OD_Backpack_Compact";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";

@@ -27,7 +27,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
-	_box addWeaponCargoGlobal ["rhs_weap_M136", 4];
+	_box addWeaponCargoGlobal ["rhs_weap_m136_hedp", 4];
 	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 2];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 4];
@@ -78,7 +78,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["200Rnd_65x39_cased_Box", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addmagazinecargoGlobal ["16Rnd_9x21_Mag", 8];
-	_box addWeaponCargoGlobal ["rhs_weap_M136", 2];
+	_box addWeaponCargoGlobal ["rhs_weap_m136_hedp", 2];
 	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
@@ -133,5 +133,5 @@ If (_type == 8) then {
 
 // HAT Supply Drop
 If (_type == 9) then {
-	_box addWeaponcargoGlobal ["Titan_AT", 4];
+	_box addMagazinecargoGlobal ["Titan_AT", 4];
 };

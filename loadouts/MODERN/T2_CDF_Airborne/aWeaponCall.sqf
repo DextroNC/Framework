@@ -63,7 +63,7 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_SCARH_CQC"
+            "rhs_weap_m14_socom_rail"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -129,14 +129,8 @@
             "rhsusf_acc_anpeq16a"
         ];
     };
-    
-    if (_Rifle == 4) then{
-        _attachmentArray = [
-            "rhs_acc_perst1ik_ris"
-        ];
-    };
 
-    if (_Rifle <= 4 or _Rifle == 10 or _Rifle == 7) then{
+    if (_Rifle <= 2 or _Rifle == 10 or _Rifle == 7) then{
         _gripArray = [
             "",
             "rhsusf_acc_grip2",

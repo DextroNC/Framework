@@ -39,7 +39,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_XM2010";

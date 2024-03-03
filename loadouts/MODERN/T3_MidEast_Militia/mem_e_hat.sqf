@@ -41,8 +41,8 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "UK3CB_BAF_Javelin_CLU";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
+    _unit addWeapon "Binocular";
+    _unit addWeapon "RHS_Kornet_Gun_Bag";
 
 comment "Add Ammunition";
 

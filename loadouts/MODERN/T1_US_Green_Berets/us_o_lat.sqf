@@ -32,7 +32,7 @@ _unit addVest "milgp_v_jpc_assaulter_belt_mc";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "milgp_bp_Pointman_mc";
+_unit addBackpack selectRandomWeighted ["milgp_bp_Pointman_mc",2,"7r_backpanel_mc",2,"7r_backpanel_mc_flag_us",1];
 
 comment "Add Drip";
 
@@ -44,7 +44,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_M136";
+    _unit addWeapon "rhs_weap_m136_hedp";
 
 comment "Add Ammunition";
 

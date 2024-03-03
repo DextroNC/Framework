@@ -41,7 +41,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhssaf_booniehat_woodland";
+    _unit addItemToBackpack "rhs_Booniehat_m81";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

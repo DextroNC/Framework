@@ -33,14 +33,13 @@ _unit addVest "VSM_CarrierRig_Gunner_OGA_OD";
     _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
+    _unit addBackpack "B_Kitbag_invisible";
     _unit addItemToBackpack "ACE_Kestrel4500";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "ACE_Tripod";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_BAF_L119A1_RIS";
@@ -69,7 +68,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

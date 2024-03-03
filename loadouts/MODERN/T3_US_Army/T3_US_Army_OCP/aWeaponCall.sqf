@@ -44,10 +44,7 @@
             "rhs_weap_m4a1",
             "rhs_weap_m4a1_carryhandle_mstock",
             "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle",
-            "rhs_weap_m4a1_d",
-            "rhs_weap_m4a1_d_mstock",
-            "rhs_weap_m4a1_d_mstock"
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -55,12 +52,12 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_mk18",
-            "rhs_weap_mk18_bk",
-            "rhs_weap_mk18_KAC_bk",
-            "rhs_weap_mk18_KAC",
-            "rhs_weap_mk18_d",
-            "rhs_weap_mk18_KAC_d"
+            "rhs_weap_m4a1_mstock",
+            "rhs_weap_m4a1_mstock",
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -68,11 +65,6 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m4a1_m203s",
-            "rhs_weap_m4a1_m203s",
-            "rhs_weap_m4a1_carryhandle_m203S",
-            "rhs_weap_m4a1_carryhandle_m203S",
-            "rhs_weap_m4a1_m320",
             "rhs_weap_m4a1_m320"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
@@ -108,10 +100,15 @@
         _primaryAmmo = "rhsusf_100Rnd_762x51";
     };
 
+    
+
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_m16a4_imod"
+            "rhs_weap_mk18",
+            "rhs_weap_m4a1_carryhandle",
+            "rhs_weap_mk18_KAC_bk",
+            "rhs_weap_mk18_KAC"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -119,7 +116,10 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m16a4_imod"
+            "rhs_weap_m4a1_blockII",
+            "rhs_weap_m4a1_blockII_bk",
+            "rhs_weap_m4a1_blockII_KAC_bk",
+            "rhs_weap_m4a1_blockII_KAC"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -135,12 +135,12 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_mk18",
-            "rhs_weap_mk18_bk",
-            "rhs_weap_mk18_KAC_bk",
-            "rhs_weap_mk18_KAC",
-            "rhs_weap_mk18_d",
-            "rhs_weap_mk18_KAC_d"
+            "rhs_weap_m4a1_mstock",
+            "rhs_weap_m4a1_mstock",
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -166,6 +166,8 @@
         _gripArray = [
             "",
             "",
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_kac_grip",
             "rhsusf_acc_grip2",
             "rhsusf_acc_grip2",
             "rhsusf_acc_rvg_blk",

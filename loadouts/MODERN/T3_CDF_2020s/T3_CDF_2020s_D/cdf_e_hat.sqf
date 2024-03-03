@@ -27,14 +27,12 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"JCA_MCRP_V_CarrierRigKBT_01_recon_coyote_F",1,
-		"JCA_MCRP_V_CarrierRigKBT_01_compact_coyote_F",1,
 		"7r_ttsko_d_modvest_recon",2,
 		"7r_ttsko_d_modvest_compact",2];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack "7r_fieldpack_ttsko_d";
 
 comment "Add Drip";
 
@@ -45,10 +43,12 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "UK3CB_BAF_Javelin_CLU";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
+    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "launch_O_Vorona_brown_F";
+    _unit addSecondaryWeaponItem "Vorona_HEAT";
 
 comment "Add Ammunition";
+    _unit addItemToBackpack "Vorona_HEAT";
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

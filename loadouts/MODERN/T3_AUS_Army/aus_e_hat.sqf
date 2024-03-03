@@ -30,7 +30,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack "7r_backpanel_amcu";
 
 comment "Add Drip";
 

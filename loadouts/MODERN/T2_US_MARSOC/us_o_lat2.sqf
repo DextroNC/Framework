@@ -32,7 +32,7 @@ _unit addVest "milgp_v_marciras_assaulter_belt_cb";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "B_AssaultPack_invisible";
+_unit addBackpack "milgp_bp_Pointman_cb";
 
 comment "Add Drip";
 

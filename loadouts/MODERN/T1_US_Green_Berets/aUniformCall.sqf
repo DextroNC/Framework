@@ -80,7 +80,15 @@ _helmet_list_pl_and_echo = [
     "7r_khk_opscore_2",
     "7r_khk_opscore_3",
     "7r_khk_opscore_4",
-    "7r_khk_opscore_2"
+    "7r_khk_opscore_2",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_fg_pelt_nsw",
+    "rhsusf_opscore_fg_pelt_cam",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_fg_pelt_nsw",
+    "rhsusf_opscore_fg_pelt_cam"
 ];
 
 //Appends array of hats with desired uniforms based on _Class

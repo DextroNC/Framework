@@ -25,19 +25,17 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_whiteBlue";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_black";};
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"JCA_MCRP_V_CarrierRigKBT_01_recon_olive_F",1,
-		"JCA_MCRP_V_CarrierRigKBT_01_compact_olive_F",1,
 		"7r_ttsko_modvest_recon",2,
 		"7r_ttsko_modvest_compact",2];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_Carryall_green_F";
+    _unit addBackpack "7r_carryall_ttsko";
 
 comment "Add Drip";
     _unit addItemToBackpack "H_Booniehat_mgrn";

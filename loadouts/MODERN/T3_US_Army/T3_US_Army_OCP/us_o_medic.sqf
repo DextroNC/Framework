@@ -14,32 +14,32 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 // 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
-[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+[_unit, 1] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
     _unit addVest "rhsusf_iotv_ocp_Medic";
-    for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
+    for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Kitbag";
+    _unit addBackpack "VSM_Multicam_Backpack_Compact";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

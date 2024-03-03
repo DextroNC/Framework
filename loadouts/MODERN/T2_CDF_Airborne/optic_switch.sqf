@@ -81,7 +81,7 @@ if (_weapon in _npz_list) then{
 } else {
 	_weaponIndex = _dvt_list find _weapon;
 	_unit addWeapon (_npz_list select _weaponIndex);
-	if ((_unit getVariable ["SR_Class", "R"]) == "SDMR") then {_unit addPrimaryWeaponItem "optic_dms";};
+	if ((_unit getVariable ["SR_Class", "R"]) == "SDMR") then {_unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";};
 };
 
 _unit addPrimaryWeaponItem _grip;

@@ -29,7 +29,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_FieldPack_invisible";
+    _unit addBackpack "RHS_Kornet_Gun_Bag";
 
 comment "Add Drip";
 
@@ -40,8 +40,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "UK3CB_BAF_Javelin_CLU";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
+    _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
 

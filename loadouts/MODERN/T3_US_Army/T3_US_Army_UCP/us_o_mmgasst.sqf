@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_Carryall_cbr";
+    _unit addBackpack "milgp_b_patrol_01_rgr";
     for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

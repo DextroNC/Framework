@@ -21,7 +21,9 @@ _uniforms = [
 		["Operator LAT", "loadouts\baf_o_lat.sqf"],
 		["Operator LAT (NLAW)", "loadouts\baf_o_lat2.sqf"],
 		["Operator MAT", "loadouts\baf_o_mat.sqf"],
-		["Operator Asst. MAT", "loadouts\baf_o_matAsst.sqf"]
+		["Operator Asst. MAT", "loadouts\baf_o_matAsst.sqf"],
+		["Operator MMG", "loadouts\baf_o_mmg.sqf"],
+		["Operator Asst. MMG", "loadouts\baf_o_mmgAsst.sqf"]
 	]],
 
 	["Specialists", "#00ff00", "a3\ui_f\data\Map\Markers\NATO\b_inf.paa",

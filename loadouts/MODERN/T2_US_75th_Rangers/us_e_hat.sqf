@@ -30,7 +30,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack selectRandomWeighted ["milgp_bp_Pointman_mc",2,"7r_backpanel_mc",2,"7r_backpanel_mc_flag_us",1];
 
 comment "Add Drip";
 

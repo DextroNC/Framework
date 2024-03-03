@@ -30,33 +30,33 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp"
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp"
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp"
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_sard",1
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _helmet_list = [
     "7r_ocp_opscore_2",
@@ -69,7 +69,15 @@ _helmet_list_pl_and_echo = [
     "7r_khk_opscore_2",
     "7r_khk_opscore_3",
     "7r_khk_opscore_4",
-    "7r_khk_opscore_2"
+    "7r_khk_opscore_2",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_fg_pelt_nsw",
+    "rhsusf_opscore_fg_pelt_cam",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_rg_cover_pelt",
+    "rhsusf_opscore_fg_pelt_nsw",
+    "rhsusf_opscore_fg_pelt_cam"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
@@ -104,35 +112,34 @@ _unit addHeadgear _helmet;
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.325,
+            "", 0.125,
             "7r_scrim_arid", 0.1,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "rhs_googles_clear", 0.325,
+            "rhsusf_oakley_goggles_blk", 0.25,
+            "rhsusf_shemagh2_gogg_tan", 0.1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "", 0.325,
+            "", 0.125,
             "7r_scrim_arid", 0.1,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "rhs_googles_clear", 0.325,
+            "rhsusf_oakley_goggles_blk", 0.25,
+            "rhsusf_shemagh2_gogg_tan", 0.1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _goggleArray = [
-            "", 0.425,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "", 0.125,
+            "UK3CB_G_Neck_Shemag_Tan", 0.2,
+            "rhs_googles_clear", 0.425,
+            "rhsusf_oakley_goggles_blk", 0.25
         ];
     };
 
@@ -142,8 +149,8 @@ _unit addHeadgear _helmet;
             "", 0.425,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
-            "VSM_Goggles", 0.05,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "rhsusf_oakley_goggles_blk", 0.15,
+            "rhsusf_shemagh2_gogg_tan", 0.1
         ];
     };
 

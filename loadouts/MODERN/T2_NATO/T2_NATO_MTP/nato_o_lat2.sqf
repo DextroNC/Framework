@@ -32,7 +32,7 @@ _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_compact_olive_F";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "B_AssaultPack_invisible";
+_unit addBackpack "7r_backpanel_odg";
 
 comment "Add Drip";
 

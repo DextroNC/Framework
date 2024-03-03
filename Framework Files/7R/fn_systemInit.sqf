@@ -28,7 +28,8 @@ SR_SupplyBoxes = [
     ["SR_Special_Box_Empty", "HAT Supplies", 9],
     ["SR_Ammo_Box_Empty", "Infantry Supplies 1 (Small)", 4],
     ["SR_Special_Box_Empty", "Infantry Supplies 2 (Small)", 5],
-    ["SR_Medical_Empty", "Medical Supplies", 7]
+    ["SR_Medical_Empty", "Medical Supplies", 7],
+    ["SR_CSW_Supplies", "Crew Served Weapon Supplies", 10]
 ];
 
 /*

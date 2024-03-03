@@ -28,13 +28,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"VSM_LBT6094_operator_OGA_OD",1,
-		"VSM_LBT6094_operator_multicam",2];
+    _unit addVest "VSM_LBT6094_operator_multicam";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
-    _unit addItemToVest "rhs_mag_rdg2_whiteOrange";
+    _unit addItemToVest "rhs_mag_nspd";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
