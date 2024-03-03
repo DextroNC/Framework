@@ -30,30 +30,21 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp",3,
-            "rhs_uniform_g3_us_mc",1,
-            "rhs_uniform_g3_us_mc_tan",1,
-            "rhs_uniform_g3_us_mc_grn",1
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp",3,
-            "rhs_uniform_g3_us_mc",1,
-            "rhs_uniform_g3_us_mc_tan",1,
-            "rhs_uniform_g3_us_mc_grn",1
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "rhs_uniform_acu_oefcp",3,
-            "rhs_uniform_g3_us_mc",1,
-            "rhs_uniform_g3_us_mc_tan",1,
-            "rhs_uniform_g3_us_mc_grn",1
+            "rhs_uniform_acu_oefcp",3
         ];
     };
 

@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "H_PilotHelmetHeli_I_E";
+    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor","rhsusf_hgu56p_visor","rhsusf_hgu56p"];
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_g36c";
