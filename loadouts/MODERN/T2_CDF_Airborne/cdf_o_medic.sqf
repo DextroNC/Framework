@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
 comment "Add Vest/Items";
     _unit addVest "VSM_LBT6094_operator_multicam";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";

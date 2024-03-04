@@ -30,7 +30,7 @@ comment "Add Vest/Items";
 		"7r_ttsko_modvest_crew",2,
 		"7r_ttsko_modvest_cqb",2];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "7r_kitbag_ttsko";
