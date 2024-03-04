@@ -33,8 +33,8 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VR_mag", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 3];
-	_box additemcargoGlobal ["HandGrenade", 8];
-	_box additemcargoGlobal ["MiniGrenade", 2];
+	_box additemcargoGlobal ["rhs_mag_rgo", 8];
+	_box additemcargoGlobal ["rhs_mag_rgo", 2];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 28];
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];
@@ -44,7 +44,7 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["SR_HE_Pack", 4];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
-	_box additemcargoGlobal ["rhs_mag_mk84", 10];
+	_box additemcargoGlobal ["rhs_mag_plamyam", 10];
 	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];
 	_box additemcargoGlobal ["SLAMDirectionalMine_Wire_Mag", 4];
@@ -85,8 +85,8 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
 	_box addWeaponCargoGlobal ["rhs_weap_rpg26", 2];
 	_box addWeaponCargoGlobal ["rhs_weap_rshg2", 1];
-	_box additemcargoGlobal ["HandGrenade", 6];
-	_box additemcargoGlobal ["MiniGrenade", 2];
+	_box additemcargoGlobal ["rhs_mag_rgo", 6];
+	_box additemcargoGlobal ["rhs_mag_rgo", 2];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 16];
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];
@@ -96,7 +96,7 @@ if (_type == 4) then {
 	_box additemcargoGlobal ["SR_HE_Pack", 2];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 2];
 	_box additemcargoGlobal ["SR_Flare_Pack", 2];
-	_box additemcargoGlobal ["rhs_mag_mk84", 6];
+	_box additemcargoGlobal ["rhs_mag_plamyam", 6];
 	_box additemcargoGlobal ["ACE_CableTie", 16];
 	_box addItemCargoGlobal ["SR_PAK", 8];
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];

@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
     _unit addItemToVest "SmokeShellOrange";
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_UAV_01_backpack_F";
