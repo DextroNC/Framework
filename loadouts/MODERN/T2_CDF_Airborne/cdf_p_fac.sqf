@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
     _unit addItemToVest "rhs_mag_nspd";
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_RadioBag_01_mtp_F";

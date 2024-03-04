@@ -30,7 +30,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_black";};
 comment "Add Vest/Items";
     _unit addVest "VSM_LBT6094_operator_multicam";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Carryall_MTP";
