@@ -42,7 +42,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
 
-for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_plum_AK";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6_AK";};
 _unit addItemToVest "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 

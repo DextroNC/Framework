@@ -43,7 +43,7 @@
             "rhs_weap_hk416d145",
             "rhs_weap_hk416d145_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
     //2 - Rifle 2
@@ -53,7 +53,7 @@
             "rhs_weap_hk416d10_LMT",
             "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
     //3 - Grenadier
@@ -62,7 +62,7 @@
             "rhs_weap_hk416d10_m320",
             "rhs_weap_hk416d10_m320_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
     //4 - BattleRifle
@@ -81,7 +81,7 @@
             "rhs_weap_m249_pip_S_para",
             "rhs_weap_m249_pip_S"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -101,7 +101,7 @@
             "rhs_weap_mk18_KAC",
             "rhs_weap_mk18_KAC_bk"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
     //8 - DMR
@@ -111,7 +111,7 @@
             "rhs_weap_hk416d145",
             "rhs_weap_hk416d145_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
     //9 - PDMR
@@ -130,7 +130,7 @@
             "rhs_weap_hk416d10_LMT",
             "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
     };
 
 //Selects random weapon from determined array, runs
@@ -183,8 +183,7 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 3 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 5 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{

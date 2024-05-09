@@ -39,25 +39,28 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_vhsd2"
+            "arifle_Mk20_plain_F",
+            "arifle_Mk20_F"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_vhsk2"
+            "arifle_Mk20C_plain_F",
+            "arifle_Mk20C_F"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_vhsd2_bg"
+            "arifle_Mk20_GL_plain_F",
+            "arifle_Mk20_GL_F"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
     //4 - BattleRifle
@@ -73,7 +76,7 @@
         _primaryArray = [
             "rhs_weap_minimi_para_railed"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -87,36 +90,34 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_g36kv",
-            "UK3CB_G36V_K"
+            "rhs_weap_g36kv"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "UK3CB_G36V",
-            "UK3CB_G36V",
-            "UK3CB_G36_TAC"
+            "UK3CB_HK33KA2_RIS"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec"
+            "UK3CB_PSG1A1_RIS"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_Savz58";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_vhsk2"
+            "arifle_Mk20C_plain_F",
+            "arifle_Mk20C_F"
         ];
-        _primaryAmmo = "rhssaf_30rnd_556x45_EPR_G36";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
 
 //Selects random weapon from determined array, runs
@@ -160,8 +161,7 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 3 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 5 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{

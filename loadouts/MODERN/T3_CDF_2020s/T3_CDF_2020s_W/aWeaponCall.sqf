@@ -45,10 +45,12 @@
             "rhs_weap_aks74n_2",
             "rhs_weap_ak74m",
             "rhs_weap_ak74m",
+            "rhs_weap_ak74m",
+            "rhs_weap_ak74m_desert",
             "rhs_weap_ak74m_desert",
             "rhs_weap_ak74m_fullplum"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
     };
 
     //2 - Rifle 2
@@ -56,7 +58,7 @@
         _primaryArray = [
             "rhs_weap_ak105"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
     };
 
     //3 - Grenadier
@@ -73,7 +75,7 @@
             "rhs_weap_ak74m_gp25",
             "rhs_weap_ak74m_fullplum_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
     };
 
     //4 - BattleRifle
@@ -90,7 +92,7 @@
         _primaryArray = [
             "rhs_weap_rpk74m_npz"
         ];
-        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK";
+        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
 
     //6 - MMG
@@ -114,7 +116,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
     };
 
     //9 - PDMR
@@ -126,7 +128,7 @@
             "UK3CB_SVD_OLD_NPZ",
             "UK3CB_SVD_OLD_NPZ"
         ];
-        _primaryAmmo = "rhs_10Rnd_762x54mmR_7N1";
+        _primaryAmmo = "10Rnd_762x54_Mag";
     };
 
     //10 - Breacher
@@ -134,7 +136,7 @@
         _primaryArray = [
             "rhs_weap_ak105"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
     };
 
 //Selects random weapon from determined array, runs

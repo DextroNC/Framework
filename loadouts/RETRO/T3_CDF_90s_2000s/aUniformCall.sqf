@@ -30,28 +30,28 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "rhs_uniform_afghanka_ttsko",1
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "rhs_uniform_afghanka_ttsko",1
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "rhs_uniform_afghanka_ttsko",1
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "rhs_uniform_gorka_1_b",2,
+            "rhsgref_uniform_gorka_1_f",3,
             "rhs_uniform_gorka_1_a",1,
             "rhs_uniform_gorka_1_green",1
         ];
@@ -63,17 +63,17 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = ["rhs_ssh68_2"];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_TAN"];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = ["rhs_ssh68_2"];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_CDF"];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = ["rhs_ssh68_2"];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_TAN"];
     };
 
     //Sierra
@@ -93,18 +93,26 @@ _unit addHeadgear _helmet;
     //Appends array of goggleswith desired values
     if (_Class <= 3) then{
         _goggleArray = [
-            "rhs_scarf", 0.2,
-            "", 0.6,
-            "rhs_ess_black", 0.2
+            "UK3CB_G_Neck_Shemag_Tan",0.0625,
+            "rhs_balaclava",0.0625,
+            "G_Squares",0.0625,
+            "rhs_scarf",0.0625,
+            "UK3CB_G_Gloves_Black",0.125,
+            "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,
+            "",0.25
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "rhs_scarf", 0.6,
-            "", 0.2,
-            "rhs_ess_black", 0.2
+            "UK3CB_G_Neck_Shemag_Tan",0.0625,
+            "rhs_balaclava",0.0625,
+            "G_Squares",0.0625,
+            "rhs_scarf",0.0625,
+            "UK3CB_G_Gloves_Black",0.125,
+            "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,
+            "",0.25
         ];
     };
 

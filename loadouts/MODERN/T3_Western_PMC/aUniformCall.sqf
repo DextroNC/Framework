@@ -40,7 +40,15 @@
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_OGA_tan_casual_Camo",
-            "VSM_OGA_tan_casual_Camo"
+            "VSM_OGA_tan_casual_Camo",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_TAN",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_TAN",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
         ];
     };
 
@@ -57,7 +65,15 @@
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_OGA_tan_casual_Camo",
-            "VSM_OGA_tan_casual_Camo"
+            "VSM_OGA_tan_casual_Camo",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_TAN",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_TAN",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
         ];
     };
 
@@ -74,7 +90,13 @@
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_Multicam_Crye_Tee_Camo",
             "VSM_OGA_tan_casual_Camo",
-            "VSM_OGA_tan_casual_Camo"
+            "VSM_OGA_tan_casual_Camo",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_OLIVE",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM_TAN",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM",
+            "UK3CB_GAF_B_U_SF_CombatSmock_06_MULTICAM"
         ];
     };
 
@@ -94,9 +116,8 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "rhs_beanie_green",
             "rhs_beanie_green",
-            "rhssaf_bandana_smb",
-            "rhssaf_bandana_smb",
-            "UK3CB_H_Ballistic_Mask_Snakeskin_B",
+            "VSM_Multicam_Cap",
+            "VSM_Multicam_Cap",
             "VSM_Multicam_Boonie",
             "VSM_Multicam_Boonie",
             "H_Booniehat_tan",
@@ -104,25 +125,32 @@ _unit forceAddUniform selectRandom _uniformArray;
             "H_Cap_blk",
             "H_Cap_blk",
             "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_black"
+            "VSM_BackwardsHat_Peltor_black",
+            "VSM_Bowman_cap_Black",
+            "VSM_Bowman_cap_Green",
+            "VSM_Bowman_cap_Tan"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_2_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_multicam",
-            "VSM_OPS_multicam",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS_2",
-            "VSM_oga_OPS",
-            "VSM_oga_OPS",
-            "VSM_oga_OPS"
+            "rhsusf_mich_bare_norotos_arc",
+            "rhsusf_mich_bare_norotos_arc_alt",
+            "rhsusf_mich_bare_norotos_arc_alt_headset",
+            "rhsusf_mich_bare_norotos_arc_headset",
+            "rhsusf_mich_bare_norotos_arc_tan",
+            "rhsusf_mich_bare_norotos_arc_alt_tan",
+            "rhsusf_mich_bare_norotos_arc_alt_tan_headset",
+            "rhssaf_helmet_m97_olive_nocamo",
+            "rhssaf_helmet_m97_olive_nocamo_black_ess",
+            "rhssaf_helmet_m97_olive_nocamo_black_ess_bare",
+            "rhssaf_helmet_m97_black_nocamo",
+            "rhssaf_helmet_m97_black_nocamo_black_ess",
+            "rhssaf_helmet_m97_black_nocamo_black_ess_bare",
+            "rhssaf_helmet_m97_black_nocamo",
+            "rhssaf_helmet_m97_black_nocamo_black_ess",
+            "rhssaf_helmet_m97_black_nocamo_black_ess_bare"
         ];
     };
 
@@ -133,7 +161,6 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhs_beanie_green",
             "rhssaf_bandana_smb",
             "rhssaf_bandana_smb",
-            "UK3CB_H_Ballistic_Mask_Snakeskin_B",
             "VSM_Multicam_Boonie",
             "VSM_Multicam_Boonie",
             "H_Booniehat_tan",
@@ -141,7 +168,10 @@ _unit forceAddUniform selectRandom _uniformArray;
             "H_Cap_blk",
             "H_Cap_blk",
             "VSM_BackwardsHat_Peltor_black",
-            "VSM_BackwardsHat_Peltor_black"
+            "VSM_BackwardsHat_Peltor_black",
+            "VSM_Bowman_cap_Black",
+            "VSM_Bowman_cap_Green",
+            "VSM_Bowman_cap_Tan"
         ];
     };
 
@@ -156,21 +186,24 @@ _unit addHeadgear selectRandom _hatArray;
 
 //Appends array of goggleswith desired values
     _goggleArray =[
-        "VSM_Shemagh_goggles_tan",
-        "VSM_Shemagh_goggles_OD",
-        "VSM_Shemagh_Facemask_Tan",
-        "VSM_Shemagh_Facemask_OD",
-        "rhs_googles_clear",
-        "rhs_googles_clear",
-        "rhs_googles_clear",
-        "rhs_googles_clear",
-        "UK3CB_G_Tactical_Clear_Shemagh_Green",
-        "UK3CB_G_Tactical_Clear_Shemagh_Tan",
-        "UK3CB_G_Tactical_Clear_Shemagh_White",
-        "",
-        "",
-        ""
+        "milgp_f_face_shield_RGR", 0.0625,
+        "rhs_googles_clear", 0.3875,
+        "rhs_scarf", 0.1,
+        "G_Bandanna_oli", 0.05,
+        "rhsusf_oakley_goggles_blk", 0.1625,
+        "rhsusf_oakley_goggles_clr", 0.1625,
+        "milgp_f_face_shield_goggles_RGR", 0.075
     ];
 
+    if (headgear _unit in ["rhssaf_helmet_m97_black_nocamo_black_ess","rhssaf_helmet_m97_black_nocamo_black_ess_bare","rhssaf_helmet_m97_olive_nocamo_black_ess","rhssaf_helmet_m97_olive_nocamo_black_ess_bare"]) then {
+        _goggleArray =[
+            "milgp_f_face_shield_RGR", 0.07,
+            "rhs_googles_clear", 0.3875,
+            "rhs_scarf", 0.1,
+            "G_Bandanna_oli", 0.05,
+            "", 0.325
+        ];
+    };
+
     //Selects random googles from determined array
-_unit addGoggles selectRandom _goggleArray;
+_unit addGoggles selectRandomWeighted _goggleArray;

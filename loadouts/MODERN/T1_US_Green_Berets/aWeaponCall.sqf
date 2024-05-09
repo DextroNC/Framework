@@ -100,7 +100,7 @@
             "rhs_weap_m249_pip_S_para",
             "rhs_weap_m249_pip_S"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -218,8 +218,7 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 3 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 5 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{

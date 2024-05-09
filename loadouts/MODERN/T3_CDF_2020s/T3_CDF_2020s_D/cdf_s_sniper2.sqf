@@ -42,7 +42,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";
-    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
+    _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhs_weap_makarov_pm";

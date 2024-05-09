@@ -28,7 +28,8 @@ comment "Add Uniforms/Items";
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
 		"7r_ttsko_modvest_recon",2,
-		"7r_ttsko_modvest_compact",2];
+		"7r_ttsko_modvest_compact",2,
+		"7r_ttsko_modvest_combat",2];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";

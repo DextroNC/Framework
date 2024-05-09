@@ -45,15 +45,15 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addWeapon "UK3CB_P320_DES";
+    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
     _unit addMagazine "Laserbatteries";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 4 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+    for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
     for "_i" from 1 to 4 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_M33";};
     for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_mk211";};
 

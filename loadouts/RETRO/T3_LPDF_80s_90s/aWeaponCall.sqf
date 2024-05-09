@@ -42,7 +42,7 @@
             "rhs_weap_aks74n_2",
             "rhs_weap_ak74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //2 - Rifle 2
@@ -50,7 +50,7 @@
         _primaryArray = [
             "rhs_weap_aks74un"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //3 - Grenadier
@@ -58,7 +58,7 @@
         _primaryArray = [
             "rhs_weap_ak74n_2_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //4 - BattleRifle
@@ -75,7 +75,7 @@
         _primaryArray = [
             "rhs_weap_rpk74_wood"
         ];
-        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK";
+        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
 
     //6 - MMG
@@ -100,7 +100,7 @@
             "rhs_weap_aks74n_2",
             "rhs_weap_ak74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //9 - PDMR

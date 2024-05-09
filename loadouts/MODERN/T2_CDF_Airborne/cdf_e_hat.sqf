@@ -26,11 +26,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_multicam";
+    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack selectRandom ["milgp_bp_Tomahawk_mc","milgp_bp_Pointman_mc","7r_backpanel_mc_flag_cdf","7r_backpanel_mc"];
 
 comment "Add Drip";
 

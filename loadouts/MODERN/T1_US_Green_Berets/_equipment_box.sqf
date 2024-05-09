@@ -15,6 +15,7 @@ this addaction ["<t color=""#FF8C00"">" +"HAMR", "7R\Loadouts\7R_EQ.sqf",["optic
 this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG (Tan)", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_acog_d"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG RMR", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_RMR"]];
+this addaction ["<t color=""#FF8C00"">" +"MRCO", "7R\Loadouts\7R_EQ.sqf",["optic_MRCO"]];
 this addaction ["<t color=""#FF8C00"">" +"EXPS3 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_xps3"]];
 this addaction ["<t color=""#FF8C00"">" +"SU278 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_t1"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 - 5.56mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230"]];

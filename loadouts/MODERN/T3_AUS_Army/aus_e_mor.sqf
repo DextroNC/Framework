@@ -26,11 +26,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "7r_amcu_modvest_recon";
+    _unit addVest selectRandom ["7r_amcu_modvest_recon","7r_amcu_modvest_combat",selectRandom ["7r_amcu_modvest_recon","7r_amcu_modvest_combat","7r_amcu_modvest_compact"]];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_RIF_BRN_01";
+    _unit addBackpack "7r_carryall_amcu";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
 
 comment "Add Drip";

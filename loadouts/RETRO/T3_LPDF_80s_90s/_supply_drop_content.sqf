@@ -16,10 +16,10 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N10_plum_AK", 72];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N10_plum_AK", 12];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 72];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 12];
 	_box addmagazinecargoGlobal ["rhs_mag_9x18_8_57N181S", 16];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 12];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 12];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["ACE_2Rnd_12Gauge_Pellets_No4_Buck", 20];
 	_box addmagazinecargoGlobal ["2Rnd_12Gauge_Slug", 20];
@@ -82,9 +82,9 @@ if (_type == 3) then {
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N10_plum_AK", 36];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N10_plum_AK", 6];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 6];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 36];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 6];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 6];
 	_box addmagazinecargoGlobal ["rhs_mag_9x18_8_57N181S", 8];
 	_box addmagazinecargoGlobal ["rhssaf_30Rnd_762x39mm_M67", 8];
 	_box additemcargoGlobal ["rhs_mag_f1", 6];

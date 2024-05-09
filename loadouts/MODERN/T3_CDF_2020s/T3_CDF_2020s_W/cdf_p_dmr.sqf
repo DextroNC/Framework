@@ -28,7 +28,8 @@ comment "Add Uniforms/Items";
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
 		"7r_klmk_modvest_recon",2,
-		"7r_klmk_modvest_compact",2];
+		"7r_klmk_modvest_compact",2,
+		"7r_klmk_modvest_combat",2];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
@@ -45,7 +46,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhs_acc_tgpv2";
-    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
+    _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
 
 comment "Add Secondary/Attachments";
 

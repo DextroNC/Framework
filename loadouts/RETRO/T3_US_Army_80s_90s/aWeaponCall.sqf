@@ -39,7 +39,7 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m16a2"
+            "UK3CB_M16A2"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -47,7 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_m16a2"
+            "UK3CB_M16A2"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -55,7 +55,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m16a2_M203"
+            "UK3CB_M16A2_UGL"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -74,13 +74,12 @@
         _primaryArray = [
             "rhs_weap_m249"
         ];
-        _primaryAmmo = "rhsusf_200rnd_556x45_M855_box";
+        _primaryAmmo = "rhsusf_200rnd_556x45_M855_mixed_box";
     };
 
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_m240B",
             "rhs_weap_m240G"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51";
@@ -89,7 +88,7 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_m4a1_handguard"
+            "UK3CB_M16A3"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -97,7 +96,7 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m16a4"
+            "UK3CB_M16A2"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -105,8 +104,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_m14_rail",
-            "rhs_weap_m14_rail_fiberglass"
+            "UK3CB_M21"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };

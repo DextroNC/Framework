@@ -40,7 +40,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_BAF_L119A1";

@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_multicam";
+    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "rhs_rpg_2";
+    _unit addBackpack "rhs_rpg_6b2";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};

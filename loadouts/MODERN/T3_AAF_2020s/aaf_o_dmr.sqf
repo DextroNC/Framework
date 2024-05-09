@@ -39,9 +39,9 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rksl_optic_lds_pip";
-    _unit addPrimaryWeaponItem "muzzle_snds_m";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "RKSL_optic_LDS";
+    _unit addPrimaryWeaponItem "uk3cb_muzzle_snds_HK33";
+    _unit addPrimaryWeaponItem "bipod_01_F_blk";
 
 comment "Add Secondary/Attachments";
 

@@ -42,9 +42,9 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_G36_TAC";
+    _unit addWeapon "rhs_weap_g36kv";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
@@ -56,7 +56,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhssaf_30rnd_556x45_EPR_G36";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

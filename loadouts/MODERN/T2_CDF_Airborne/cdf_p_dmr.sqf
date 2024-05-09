@@ -26,12 +26,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_multicam";
+    _unit addVest "milgp_v_marciras_marksman_belt_mc";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack selectRandom ["milgp_bp_Tomahawk_mc","milgp_bp_Pointman_mc","7r_backpanel_mc_flag_cdf","7r_backpanel_mc"];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_kite";
@@ -43,7 +43,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhs_acc_tgpv2";
-    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
+    _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
 
 comment "Add Secondary/Attachments";
 

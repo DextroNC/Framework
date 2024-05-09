@@ -26,14 +26,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_FAPC_Operator_OGA_OD";
+    _unit addVest "milgp_v_marciras_grenadier_belt_rgr";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_OGA_OD_Backpack_Kitbag";
-    _unit addItemToBackpack "rhs_weap_m32";
     for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_6Rnd_M441_HE";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_6Rnd_M714_white";};
 
@@ -42,6 +41,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 32] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    _unit addItemToBackpack "rhs_weap_m32";
 
 comment "Add Secondary/Attachments";
 
@@ -60,7 +60,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "NVGoggles_OPFOR";
+    _unit linkItem "USP_PVS14";
     _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "rhsusf_mag_6Rnd_M583A1_white";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];

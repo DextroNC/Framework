@@ -19,14 +19,15 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhssaf_30rnd_556x45_EPR_G36", 72];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 72];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 24];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch_coyote", 12];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
     _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 24];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 12];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 6];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 4];
@@ -65,7 +66,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["UK3CB_BAF_338_5Rnd", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhssaf_30rnd_556x45_EPR_G36", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 12];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 };
@@ -75,8 +76,8 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhssaf_30rnd_556x45_EPR_G36", 36];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch_coyote", 6];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 6];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 5];
     _box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 12];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 8];
@@ -104,7 +105,8 @@ if (_type == 4) then {
 // Small Special Supply
 if (_type == 5) then {
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 5];
-    _box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 12];
+    _box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 6];
+	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 5];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];

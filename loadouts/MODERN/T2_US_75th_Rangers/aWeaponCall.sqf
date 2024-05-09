@@ -78,7 +78,7 @@
             "rhs_weap_m249_pip_L_para",
             "rhs_weap_m249_pip_L"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -216,8 +216,8 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
 
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addWeapon "UK3CB_P320_DES";
+    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
     _unit addHandgunItem "acc_flashlight_pistol";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addItem "UK3CB_P320_9x19_17Rnd";
+    _unit addItem "UK3CB_P320_9x19_17Rnd";

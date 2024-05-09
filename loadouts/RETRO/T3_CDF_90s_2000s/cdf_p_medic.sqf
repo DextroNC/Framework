@@ -37,7 +37,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_CHC_C_B_HIKER";
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhs_beanie_green";
+    _unit addItemToBackpack "UK3CB_H_Panamka_CDF";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

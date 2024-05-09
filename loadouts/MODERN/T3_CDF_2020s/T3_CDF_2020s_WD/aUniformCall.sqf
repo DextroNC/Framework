@@ -104,8 +104,10 @@ _unit addHeadgear _helmet;
             "rhsusf_shemagh2_od", 0.025,
             "rhs_googles_clear", 0.325,
             "rhs_scarf", 0.1,
-            "rhsusf_oakley_goggles_clr", 0.325,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.1625,
+            "rhsusf_shemagh2_gogg_od", 0.0625,
+            "rhsusf_oakley_goggles_blk", 0.1625,
+            "rhsusf_shemagh2_clear_gogg_od", 0.0625
         ];
     } else {
         _goggleArray = [
@@ -113,8 +115,10 @@ _unit addHeadgear _helmet;
             "rhsusf_shemagh2_od", 0.025,
             "rhs_googles_clear", 0.2,
             "rhs_scarf", 0.075,
-            "rhsusf_oakley_goggles_clr", 0.2,
-            "rhsusf_shemagh2_gogg_od", 0.1
+            "rhsusf_oakley_goggles_clr", 0.1,
+            "rhsusf_shemagh2_gogg_od", 0.05,
+            "rhsusf_oakley_goggles_blk", 0.1,
+            "rhsusf_shemagh2_clear_gogg_od", 0.05
         ];
     };
 

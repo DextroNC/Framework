@@ -38,7 +38,6 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_CHC_C_B_HIKER";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
     _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";

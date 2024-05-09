@@ -10,6 +10,7 @@ this addaction ["<t color=""#00FF00"">" +"M68 CCO", "7R\Loadouts\7R_EQ.sqf",["rh
 this addaction ["<t color=""#FF8C00"">" +"HAMR", "7R\Loadouts\7R_EQ.sqf",["optic_Hamr"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG RMR", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_RMR"]];
+this addaction ["<t color=""#FF8C00"">" +"MRCO", "7R\Loadouts\7R_EQ.sqf",["optic_MRCO"]];
 this addaction ["<t color=""#FF8C00"">" +"EXPS3 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_xps3"]];
 this addaction ["<t color=""#FF8C00"">" +"SU278 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_t1"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 - 5.56mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230"]];
@@ -17,7 +18,7 @@ this addaction ["<t color=""#FF8C00"">" +"SU-230 MRDS - 5.56mm", "7R\Loadouts\7R
 this addaction ["<t color=""#FF8C00"">" +"SU-230 - 7.62mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230a"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 MRDS - 7.62mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230a_mrds"]];
 this addaction ["<t color=""#FF8C00"">" +"AR/MMG sight - M145", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN"]];
-this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_premier_mrds"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_M8541_mrds"]];
 this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_kite"]];
 this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
 

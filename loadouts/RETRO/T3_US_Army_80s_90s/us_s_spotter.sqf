@@ -20,33 +20,31 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 
 comment "Add Vest/Items";
-_unit addVest "VSM_OGA_OD_IOTV_1";
+_unit addVest "rhsgref_alice_webbing";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_an_m8hc";
     _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
+    _unit addBackpack "UK3CB_CSAT_O_B_TACPACK_GRN";
     _unit addItemToBackpack "ACE_Kestrel4500";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "ACE_Tripod";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addGoggles "shemagh_loosetan";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4a1_carryhandle_mstock";
+    _unit addWeapon "rhs_weap_m4a1_handguard";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";

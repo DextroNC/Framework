@@ -33,7 +33,7 @@ _unit addVest "rhs_lifchik";
     _unit addItemToVest "rhs_mag_nspn_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_B_Backpack_Radio_Chem_OLI";
+    _unit addBackpack "UK3CB_KDF_B_B_Sidor_RIF_OLI";
     _unit addItemToBackpack "ACE_Kestrel4500";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "ACE_Tripod";
@@ -56,7 +56,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItem "rhs_mag_762x25_8";};
-    for "_i" from 1 to 12 do {_unit addItem "rhs_30Rnd_545x39_7N6M_AK";};
+    for "_i" from 1 to 12 do {_unit addItem "rhs_30Rnd_545x39_7N6_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

@@ -1,0 +1,27 @@
+this addaction ["<t color=""#FFFF00"">" +"Suppressor - L119", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_silencer_l85"]];
+this addaction ["<t color=""#FFFF00"">" +"Suppressor - L110", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_silencer_l110"]];
+this addaction ["<t color=""#FFFF00"">" +"Suppressor - L129", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_silencer_l115a3"]];
+this addaction ["<t color=""#00FF00"">" +"C-More", "7R\Loadouts\7R_EQ.sqf",["optic_ACO"]];
+this addaction ["<t color=""#00FF00"">" +"EOT552", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_EOT552"]];
+this addaction ["<t color=""#00FF00"">" +"EXPS3", "7R\Loadouts\7R_EQ.sqf",["optic_holosight_blk_f"]];
+this addaction ["<t color=""#00FF00"">" +"EXPS3 (Tan)", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_eotech"]];
+this addaction ["<t color=""#00FF00"">" +"XPS3", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_eotech_xps3"]];
+this addaction ["<t color=""#00FF00"">" +"MRDS", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_mrds"]];
+this addaction ["<t color=""#00FF00"">" +"MRDS (Tan)", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_mrds_c"]];
+this addaction ["<t color=""#00FF00"">" +"SU278", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_t1_high"]];
+this addaction ["<t color=""#00FF00"">" +"RX01", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_rx01_nofilter"]];
+this addaction ["<t color=""#00FF00"">" +"M68 CCO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_compm4"]];
+this addaction ["<t color=""#FF8C00"">" +"Elcan LDS", "7R\Loadouts\7R_EQ.sqf",["rksl_optic_lds"]];
+this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
+this addaction ["<t color=""#FF8C00"">" +"ACOG RMR", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_RMR"]];
+this addaction ["<t color=""#FF8C00"">" +"MRCO", "7R\Loadouts\7R_EQ.sqf",["optic_MRCO"]];
+this addaction ["<t color=""#FF8C00"">" +"EXPS3 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_xps3"]];
+this addaction ["<t color=""#FF8C00"">" +"SU278 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_t1"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_premier_mrds"]];
+this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_kite"]];
+this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
+// Support items
+[this, 1] call fw_fnc_addEquipmentItems;
+
+// Radios
+[this] call fw_fnc_addEquipmentRadios;

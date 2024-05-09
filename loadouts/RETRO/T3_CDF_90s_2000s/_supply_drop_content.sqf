@@ -16,12 +16,9 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
-	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
-	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6M_AK", 72];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 72];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 24];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 40];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 40];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
@@ -67,18 +64,15 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6M_AK", 12];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 12];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 };
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
-	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
-	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6M_AK", 36];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 6];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_545x39_7N6_AK", 36];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 6];
     _box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 12];
     _box addmagazinecargoGlobal ["rhs_10Rnd_762x54mmR_7N1", 5];
 	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 12];

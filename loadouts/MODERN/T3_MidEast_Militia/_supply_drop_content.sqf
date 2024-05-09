@@ -19,7 +19,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 72];
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag", 18];
 	_box addmagazinecargoGlobal ["rhs_mag_762x25_8", 16];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 40];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 40];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["ACE_2Rnd_12Gauge_Pellets_No4_Buck", 20];
 	_box addmagazinecargoGlobal ["2Rnd_12Gauge_Slug", 20];
@@ -73,7 +73,7 @@ if (_type == 3) then {
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 36];
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag", 9];
-	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK", 6];
+	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 6];
 	_box addmagazinecargoGlobal ["rhs_mag_762x25_8", 8];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box additemcargoGlobal ["rhs_mag_f1", 6];

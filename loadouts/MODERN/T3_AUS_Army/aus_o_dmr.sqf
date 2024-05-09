@@ -26,7 +26,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "7r_amcu_modvest_recon";
+    _unit addVest selectRandom ["7r_amcu_modvest_recon","7r_amcu_modvest_combat",selectRandom ["7r_amcu_modvest_recon","7r_amcu_modvest_combat","7r_amcu_modvest_compact"]];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};

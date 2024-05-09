@@ -39,19 +39,9 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_mk18",
-            "rhs_weap_mk18_bk",
-            "rhs_weap_mk18_d",
-            "rhs_weap_mk18",
-            "rhs_weap_mk18_bk",
-            "rhs_weap_mk18_d",
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10",
             "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock"
+            "rhs_weap_m4a1_d_mstock",
+            "rhs_weap_m4a1_mstock"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -59,14 +49,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "arifle_TRG20_F",
-            "arifle_TRG20_F",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "arifle_Mk20C_plain_F",
-            "arifle_Mk20C_plain_F"
+            "arifle_TRG20_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -74,14 +57,8 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_mk18_m320",
-            "rhs_weap_mk18_m320",
-            "rhs_weap_mk18_m320",
             "rhs_weap_hk416d10_m320",
-            "rhs_weap_hk416d10_m320",
-            "rhs_weap_m4a1_carryhandle_m203S",
-            "rhs_weap_m4a1_carryhandle_m203S",
-            "rhs_weap_m4a1_carryhandle_m203S"
+            "rhs_weap_hk416d10_m320_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -89,14 +66,7 @@
     //3 - Grenadier
     if (_Rifle == 32) then{
         _primaryArray = [
-            "arifle_TRG20_F",
-            "arifle_TRG20_F",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "arifle_Mk20C_plain_F",
-            "arifle_Mk20C_plain_F"
+            "arifle_TRG20_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -104,9 +74,8 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_m14_ris_fiberglass",
-            "rhs_weap_m14_ris",
-            "rhs_weap_m14_ris_d"
+            "rhs_weap_m14_rail",
+            "rhs_weap_m14_rail_fiberglass"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -120,7 +89,7 @@
             "rhs_weap_m249_pip_S_para",
             "rhs_weap_m249_pip_S"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -137,7 +106,6 @@
     if (_Rifle == 7) then{
         _primaryArray = [
             "SMG_03C_TR_black",
-            "SMG_03C_TR_camo",
             "SMG_03C_TR_khaki"
         ];
         _primaryAmmo = "50Rnd_570x28_SMG_03";
@@ -146,11 +114,9 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m27iar_grip",
-            "rhs_weap_m27iar_grip",
-            "rhs_weap_m4a1_blockII",
-            "rhs_weap_m4a1_blockII_blk",
-            "rhs_weap_m4a1_blockII_d"
+            "rhs_weap_hk416d145",
+            "rhs_weap_hk416d145_d",
+            "rhs_weap_hk416d145"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -158,8 +124,8 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec",
-            "rhs_weap_sr25_ec_d"
+            "UK3CB_M14DMR_Railed_BLK",
+            "UK3CB_M14DMR_Railed"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -167,14 +133,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "arifle_TRG20_F",
-            "arifle_TRG20_F",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c",
-            "7r_weap_ef88_c_black",
-            "arifle_Mk20C_plain_F",
-            "arifle_Mk20C_plain_F"
+            "arifle_TRG20_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };

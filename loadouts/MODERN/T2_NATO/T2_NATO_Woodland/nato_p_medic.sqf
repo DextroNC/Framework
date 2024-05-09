@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_tactical_woodland_F";
+    _unit addVest "V_PlateCarrierSpec_wdl";
     for "_i" from 1 to 6 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
