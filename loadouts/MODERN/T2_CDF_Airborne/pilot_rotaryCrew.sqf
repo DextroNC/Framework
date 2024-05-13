@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor_black","rhsusf_hgu56p_black","rhsusf_hgu56p","rhsusf_hgu56p_visor","rhsusf_hgu56p","rhsusf_hgu56p_visor"];;
+    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor_black","rhsusf_hgu56p_black","rhsusf_hgu56p","rhsusf_hgu56p_visor","rhsusf_hgu56p","rhsusf_hgu56p_visor"];
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_aks74un";

@@ -107,7 +107,7 @@
             "H_HelmetB_light_desert",
             "H_HelmetB_light_snakeskin",
             "H_HelmetB_light_grass"
-        ];;
+        ];
     };
     
     //Selects random hat from determined array, runs

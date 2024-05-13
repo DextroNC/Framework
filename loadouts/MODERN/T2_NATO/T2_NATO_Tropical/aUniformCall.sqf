@@ -91,7 +91,7 @@
         _hatArray = [
             "H_HelmetB_light_black",
             "H_HelmetB_Light_tna_F"
-        ];;
+        ];
     };
     
     //Selects random hat from determined array, runs
