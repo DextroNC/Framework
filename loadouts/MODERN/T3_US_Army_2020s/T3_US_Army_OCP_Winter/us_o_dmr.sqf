@@ -61,7 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_15";
+    _unit linkItem selectRandom ["USP_PVS15_WP", "USP_PVS15_WP_TAR"];
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SDMR", true];

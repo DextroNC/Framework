@@ -42,7 +42,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
@@ -61,7 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_PVS14";
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

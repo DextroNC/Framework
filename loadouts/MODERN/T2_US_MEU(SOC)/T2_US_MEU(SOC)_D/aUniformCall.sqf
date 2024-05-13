@@ -62,10 +62,9 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "rhsusf_opscore_ut_pelt",
-            "rhsusf_opscore_ut_pelt_cam",
-            "rhsusf_opscore_ut_pelt_nsw",
-            "rhsusf_opscore_ut_pelt_nsw_cam"
+            "7r_marine_d_opscore_2",
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4"
         ];
     };
 
@@ -81,20 +80,18 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "rhsusf_opscore_ut_pelt",
-            "rhsusf_opscore_ut_pelt_cam",
-            "rhsusf_opscore_ut_pelt_nsw",
-            "rhsusf_opscore_ut_pelt_nsw_cam"
+            "7r_marine_d_opscore_2",
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "rhsusf_opscore_ut_pelt",
-            "rhsusf_opscore_ut_pelt_cam",
-            "rhsusf_opscore_ut_pelt_nsw",
-            "rhsusf_opscore_ut_pelt_nsw_cam"
+            "7r_marine_d_opscore_2",
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4"
         ];
     };
     
@@ -107,8 +104,7 @@ _unit addHeadgear _helmet;
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.025,
-            "7r_scrim_arid", 0.3,
+            "7r_scrim_arid", 0.325,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "rhsusf_oakley_goggles_blk", 0.025,
@@ -121,8 +117,7 @@ _unit addHeadgear _helmet;
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "", 0.025,
-            "7r_scrim_arid", 0.3,
+            "7r_scrim_arid", 0.325,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "rhsusf_oakley_goggles_blk", 0.025,
@@ -135,9 +130,8 @@ _unit addHeadgear _helmet;
     //Platoon 
     if (_Class == 3) then{
         _goggleArray = [
-            "", 0.425,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
+            "UK3CB_G_Neck_Shemag_Tan", 0.3,
+            "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.025,
             "rhsusf_oakley_goggles_clear", 0.025,
             "rhsusf_shemagh2_gogg_tan", 0.1,
@@ -148,9 +142,8 @@ _unit addHeadgear _helmet;
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "", 0.425,
-            "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "rhs_googles_clear", 0.225,
+            "UK3CB_G_Neck_Shemag_Tan", 0.3,
+            "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.025,
             "rhsusf_oakley_goggles_clear", 0.025,
             "rhsusf_shemagh2_gogg_tan", 0.1,

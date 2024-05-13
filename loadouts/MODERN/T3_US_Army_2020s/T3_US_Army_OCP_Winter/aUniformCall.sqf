@@ -30,27 +30,48 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_pcu_g3_field_pants_mc",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_pcu_g3_field_pants_mc",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
+            "milgp_u_fleece_grey_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
             "milgp_u_pcu_g3_field_pants_mc",
-            "milgp_u_fleece_grey_g3_field_pants_mc"
+            "milgp_u_pcu_g3_field_pants_mc",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_pcu_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine",
+            "milgp_u_fleece_grey_g3_field_pants_mcalpine"
         ];
     };
 

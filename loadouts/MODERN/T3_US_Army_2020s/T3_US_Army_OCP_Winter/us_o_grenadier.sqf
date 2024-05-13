@@ -58,7 +58,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_15";
+    _unit linkItem selectRandom ["USP_PVS15_WP", "USP_PVS15_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";

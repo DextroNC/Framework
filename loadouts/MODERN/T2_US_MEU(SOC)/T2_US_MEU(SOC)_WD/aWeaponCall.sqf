@@ -41,7 +41,7 @@
         _primaryArray = [
             "rhs_weap_m27iar"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //2 - Rifle 2
@@ -54,7 +54,7 @@
             "rhs_weap_m4a1_mstock",
             "rhs_weap_m4a1_mstock"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //3 - Grenadier
@@ -62,7 +62,7 @@
         _primaryArray = [
             "rhs_weap_m27iar"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //4 - BattleRifle
@@ -100,7 +100,7 @@
             "rhs_weap_mk18_KAC_bk",
             "rhs_weap_mk18_KAC"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //8 - DMR
@@ -108,7 +108,7 @@
         _primaryArray = [
             "rhs_weap_m27iar_grip"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //9 - PDMR
@@ -129,7 +129,7 @@
             "rhs_weap_m4a1_mstock",
             "rhs_weap_m4a1_mstock"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
 //Selects random weapon from determined array, runs

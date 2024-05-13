@@ -49,7 +49,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "9Rnd_45ACP_Mag";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_PMAG";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -61,6 +61,8 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+    _unit linkItem selectRandom ["USP_PVS31_WP", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID","USP_PVS31_WP_TAR_MID_TAN"];
+    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

@@ -66,7 +66,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "UK3CB_BAF_HMNVS";
+    _unit linkItem selectRandom ["USP_PVS31_WP", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID","USP_PVS31_WP_TAR_MID_TAN"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
