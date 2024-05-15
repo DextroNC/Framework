@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_oga_carryall";
+    _unit addBackpack "B_Carryall_cbr";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
     for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White";};
     _unit addItemToBackpack "ACE_EntrenchingTool";

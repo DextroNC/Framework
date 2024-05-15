@@ -144,9 +144,10 @@
     if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "",
-            "rhsusf_acc_grip1",
+            "rhsusf_acc_grip2",
             "rhsusf_acc_kac_grip",
-            "rhsusf_acc_rvg_blk"
+            "rhsusf_acc_grip3",
+            "rhsusf_acc_tdstubby_blk"
         ];
     };
     if (_Rifle == 5) then{

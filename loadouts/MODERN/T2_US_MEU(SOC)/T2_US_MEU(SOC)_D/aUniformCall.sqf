@@ -107,10 +107,10 @@ _unit addHeadgear _helmet;
             "7r_scrim_arid", 0.325,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
-            "rhsusf_oakley_goggles_blk", 0.025,
-            "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "rhsusf_oakley_goggles_blk", 0.075,
+            "rhsusf_oakley_goggles_clear", 0.075,
+            "rhsusf_shemagh2_gogg_tan", 0.05,
+            "rhsusf_shemagh2_clear_gogg_tan", 0.05
         ];
     };
 
@@ -120,10 +120,10 @@ _unit addHeadgear _helmet;
             "7r_scrim_arid", 0.325,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
-            "rhsusf_oakley_goggles_blk", 0.025,
-            "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "rhsusf_oakley_goggles_blk", 0.075,
+            "rhsusf_oakley_goggles_clear", 0.075,
+            "rhsusf_shemagh2_gogg_tan", 0.05,
+            "rhsusf_shemagh2_clear_gogg_tan", 0.05
         ];
     };
 
@@ -132,10 +132,10 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan", 0.3,
             "rhs_googles_clear", 0.35,
-            "rhsusf_oakley_goggles_blk", 0.025,
-            "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "rhsusf_oakley_goggles_blk", 0.075,
+            "rhsusf_oakley_goggles_clear", 0.075,
+            "rhsusf_shemagh2_gogg_tan", 0.05,
+            "rhsusf_shemagh2_clear_gogg_tan", 0.05
         ];
     };
 
@@ -144,10 +144,10 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan", 0.3,
             "rhs_googles_clear", 0.35,
-            "rhsusf_oakley_goggles_blk", 0.025,
-            "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "rhsusf_oakley_goggles_blk", 0.075,
+            "rhsusf_oakley_goggles_clear", 0.075,
+            "rhsusf_shemagh2_gogg_tan", 0.05,
+            "rhsusf_shemagh2_clear_gogg_tan", 0.05
         ];
     };
 

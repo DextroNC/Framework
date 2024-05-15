@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_OGA_Backpack_Compact";
+    _unit addBackpack "B_AssaultPack_cbr";
     for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 
 comment "Add Drip";
