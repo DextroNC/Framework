@@ -43,7 +43,7 @@
             "rhs_weap_ak74n_2",
             "rhs_weap_ak74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //2 - Rifle 2
@@ -53,7 +53,7 @@
             "rhs_weap_aks74n_2",
             "rhs_weap_aks74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //3 - Grenadier
@@ -64,7 +64,7 @@
             "rhs_weap_ak74n_2_gp25",
             "rhs_weap_ak74n_2_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //4 - BattleRifle
@@ -80,7 +80,7 @@
         _primaryArray = [
             "rhs_weap_rpk74_wood"
         ];
-        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK";
+        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
 
     //6 - MMG
@@ -121,7 +121,7 @@
             "rhs_weap_aks74n",
             "rhs_weap_aks74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
 //Selects random weapon from determined array, runs
@@ -144,7 +144,7 @@
     if (_Rifle == 7) then{
         _gripArray = [
             "",
-            "rhsusf_acc_kac_grip"
+            "rhs_acc_grip_rk2"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

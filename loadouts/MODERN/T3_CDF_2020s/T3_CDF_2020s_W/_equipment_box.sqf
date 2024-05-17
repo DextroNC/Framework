@@ -22,12 +22,13 @@ this addaction ["<t color=""#FF8C00"">" +"1p78 (AK-Mount)", "7R\Loadouts\7R_EQ.s
 this addaction ["<t color=""#FF8C00"">" +"HAMR", "7R\Loadouts\7R_EQ.sqf",["optic_Hamr"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG RMR", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_RMR"]];
+this addaction ["<t color=""#FF8C00"">" +"MRCO", "7R\Loadouts\7R_EQ.sqf",["optic_MRCO"]];
 this addaction ["<t color=""#FF8C00"">" +"EXPS3 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_xps3"]];
 this addaction ["<t color=""#FF8C00"">" +"SU278 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_t1"]];
 this addaction ["<t color=""#FF8C00"">" +"ELCAN SpecterOS", "7R\Loadouts\7R_EQ.sqf",["optic_arco_ak_blk_f"]];
 this addaction ["<t color=""#FF8C00"">" +"AR/MMG sight - 1p78", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_1p78"]];
 this addaction ["<t color=""#FF8C00"">" +"AR sight - M145", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN"]];
-this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_m8541_mrds"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_M8541_mrds"]];
 this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_kite"]];
 this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
 

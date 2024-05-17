@@ -26,12 +26,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_recon_mtp_F";
+    _unit addVest "V_PlateCarrier1_rgr";
     for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_BAF_B_Carryall_MTP";
+    _unit addBackpack "VSM_multicam_Backpack_Kitbag";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

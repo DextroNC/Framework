@@ -57,7 +57,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_plum_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -69,7 +69,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_PVS14";
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

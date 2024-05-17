@@ -26,18 +26,17 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_compact_black_F";
+    _unit addVest "7r_ttsko_modvest_compact";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspn_green";};
     _unit addBackpack "UK3CB_B_Invisible";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "rhsusf_hgu56p_black";
+    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor_black","rhsusf_hgu56p_black","rhsusf_hgu56p","rhsusf_hgu56p_visor","rhsusf_hgu56p","rhsusf_hgu56p_visor"];
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_aks74un";
-    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
@@ -48,7 +47,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
+    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -60,7 +59,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_GPNVG18";
+    _unit linkItem "USP_GPNVG18_WP_BLK";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

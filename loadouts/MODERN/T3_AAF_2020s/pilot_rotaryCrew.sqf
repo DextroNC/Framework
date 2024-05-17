@@ -49,7 +49,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhssaf_30rnd_556x45_EPR_G36";};
+    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -61,7 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_GPNVG18";
+    _unit linkItem "USP_GPNVG18_WP_BLK";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

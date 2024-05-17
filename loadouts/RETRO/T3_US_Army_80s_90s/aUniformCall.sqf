@@ -30,31 +30,28 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "VSM_M81_BDU_Camo",
-            "VSM_M81_Camo_TShirt"
+            "rhsgref_uniform_woodland"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "VSM_M81_BDU_Camo",
-            "VSM_M81_Camo_TShirt"
+            "rhsgref_uniform_woodland"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "VSM_M81_BDU_Camo",
-            "VSM_M81_Camo_TShirt"
+            "rhsgref_uniform_woodland"
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "VSM_M81_Camo_TShirt"
         ];
     };
     
@@ -67,6 +64,8 @@ _ess_list = [
 ];
 
 _noess_list = [
+    "rhssaf_helmet_m97_woodland",
+    "rhssaf_helmet_m97_woodland",
     "rhssaf_helmet_m97_woodland",
     "rhssaf_helmet_m97_woodland"
 ];
@@ -102,76 +101,82 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.35,
-            "7r_scrim_forest", 0.3,
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_OD", 0.2
+            "rhsusf_oakley_goggles_blk", 0.2,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
     
     //Echo Goggles On Helmet
     if (_Class == 1.5) then{
         _goggleArray = [
-            "", 0.35,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.35
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "", 0.35,
-            "7r_scrim_forest", 0.3,
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_OD", 0.2
+            "rhsusf_oakley_goggles_blk", 0.2,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
     
     //Squad Goggles On Helmet
     if (_Class == 2.5) then{
         _goggleArray = [
-            "", 0.35,
-            "7r_scrim_forest", 0.3,
-            "UK3CB_G_Neck_Shemag_Tan", 0.35
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _goggleArray = [
+            "", 0.2,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "", 0.65,
-            "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_OD", 0.2
+            "rhsusf_oakley_goggles_blk", 0.2,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
     
     //Platoon Goggles On Helmet
     if (_Class == 3.5) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.525,
-            "", 0.465
+            "", 0.2,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
-            "", 0.65,
-            "VSM_Goggles", 0.05,
-            "VSM_Shemagh_Goggles_OD", 0.2
+            "rhsusf_oakley_goggles_blk", 0.2,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
     
     //Sierra Goggles On Helmet
     if (_Class == 4.5) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.525,
-            "", 0.465
+            "", 0.2,
+            "7r_scrim_semi", 0.3,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "UK3CB_G_KLR_BLK", 0.2
         ];
     };
 

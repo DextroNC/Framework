@@ -48,7 +48,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItem "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 4 do {_unit addItem "rhs_30Rnd_545x39_7N10_plum_AK";};
+    for "_i" from 1 to 4 do {_unit addItem "rhs_30Rnd_545x39_7N6_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

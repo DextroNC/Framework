@@ -7,7 +7,7 @@ this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7
 this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
 
 // Support items
-[this, 3] call fw_fnc_addEquipmentItems;
+[this, 4] call fw_fnc_addEquipmentItems;
 
 // Radios
 [this] call fw_fnc_addEquipmentRadios;

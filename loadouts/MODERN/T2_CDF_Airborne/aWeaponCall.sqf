@@ -41,7 +41,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
     };
 
     //2 - Rifle 2
@@ -49,7 +49,7 @@
         _primaryArray = [
             "rhs_weap_ak105_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
     };
 
     //3 - Grenadier
@@ -57,7 +57,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
     };
 
     //4 - BattleRifle
@@ -73,7 +73,7 @@
         _primaryArray = [
             "rhs_weap_rpk74m_npz"
         ];
-        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK";
+        _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
 
     //6 - MMG
@@ -88,8 +88,7 @@
     if (_Rifle == 7) then{
         _primaryArray = [
             "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_mstock",
-            "rhs_weap_m4a1_d_mstock"
+            "rhs_weap_m4a1_mstock"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -99,7 +98,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
     };
 
     //9 - PDMR
@@ -108,7 +107,7 @@
             "rhs_weap_svdp_npz",
             "rhs_weap_svdp_wd_npz"
         ];
-        _primaryAmmo = "rhs_10Rnd_762x54mmR_7N1";
+        _primaryAmmo = "10Rnd_762x54_Mag";
     };
 
     //10 - Breacher
@@ -116,7 +115,7 @@
         _primaryArray = [
             "rhs_weap_ak105_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N6M_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
     };
 
 //Selects random weapon from determined array, runs
@@ -124,9 +123,15 @@
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
     
-    if (_Rifle == 7 or _Rifle <= 5 or _Rifle == 10 or _Rifle == 8) then{
+    if (_Rifle <= 4 or _Rifle == 7 or _Rifle == 10 or _Rifle == 8) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a"
+            "UK3CB_BAF_LLM_IR_Black"
+        ];
+    };
+    
+    if (_Rifle == 5) then{
+        _attachmentArray = [
+            "rhs_acc_perst1ik"
         ];
     };
 
@@ -135,9 +140,8 @@
             "",
             "rhsusf_acc_grip2",
             "rhsusf_acc_grip2",
-            "rhsusf_acc_grip2",
-            "rhsusf_acc_rvg_blk",
-            "rhsusf_acc_rvg_blk"
+            "rhs_acc_grip_ffg2",
+            "rhs_acc_grip_ffg2"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

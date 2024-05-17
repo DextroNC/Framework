@@ -42,10 +42,10 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_hk416d145";
+    _unit addWeapon "rhs_weap_m4a1_blockII";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
+    _unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BHP";
@@ -68,7 +68,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_PVS14";
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

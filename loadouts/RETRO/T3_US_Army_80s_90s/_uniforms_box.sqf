@@ -29,7 +29,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\us_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\us_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\us_o_br.sqf"],
-		["Operator Specialist (M4A1)", "loadouts\us_o_spec.sqf"],
+		["Operator Specialist (M16A3)", "loadouts\us_o_spec.sqf"],
 		["Operator Breacher", "loadouts\us_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\us_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\us_o_e_eod.sqf"],
@@ -60,8 +60,7 @@ _uniforms = [
 	["Sierra", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_recon.paa",
 		[["Sierra Spotter", "loadouts\us_s_spotter.sqf"],
 		["Sierra Sniper", "loadouts\us_s_sniper.sqf"],
-		["Sierra Sniper (M82A1)", "loadouts\us_s_sniper2.sqf"],
-		["Sierra Recon", "loadouts\us_s_recon.sqf"]
+		["Sierra Sniper (M82A1)", "loadouts\us_s_sniper2.sqf"]
 	]],
 
 	["Air", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_air.paa",
@@ -76,4 +75,4 @@ _uniforms = [
 	]]
 ];
 					
-[uniBox, _uniforms] call fw_fnc_addUniformsToBox;
+[this, _uniforms] call fw_fnc_addUniformsToBox;

@@ -76,7 +76,7 @@
         _primaryArray = [
             "rhs_weap_minimi_para_railed"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -90,8 +90,8 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "rhs_weap_m4a1_carryhandle_mstock",
+            "rhs_weap_m4a1_mstock"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -99,7 +99,10 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_hk416d145"
+            "rhs_weap_m4a1_blockII",
+            "rhs_weap_m4a1_blockII_KAC",
+            "rhs_weap_m4a1_blockII_bk",
+            "rhs_weap_m4a1_blockII_KAC_bk"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -138,7 +141,7 @@
     if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
-            "rhsusf_acc_rvg_blk"
+            "rhsusf_acc_kac_grip"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

@@ -26,7 +26,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_recon_mtp_F";
+    _unit addVest "V_PlateCarrier1_rgr";
     for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -39,7 +39,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
+    _unit addPrimaryWeaponItem "optic_Hamr";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "bipod_01_f_blk";
 

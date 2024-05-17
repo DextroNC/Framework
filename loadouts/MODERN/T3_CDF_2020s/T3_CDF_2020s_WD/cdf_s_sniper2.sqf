@@ -42,7 +42,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";
-    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
+    _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhs_weap_makarov_pm";
@@ -67,7 +67,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_PVS14";
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };

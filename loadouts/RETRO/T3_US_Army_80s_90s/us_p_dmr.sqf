@@ -20,7 +20,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
@@ -31,10 +31,10 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_FieldPack_invisible";
+    _unit addBackpack "UK3CB_B_Bedroll_Shovel_Backpack_GRN";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "uk3cb_baf_kite";
+    _unit addItemToBackpack "uk3cb_optic_PVS4_M14";
 
 comment "Add Drip";
     _unit addItemToBackpack "rhssaf_booniehat_woodland";
@@ -42,9 +42,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
-    _unit addPrimaryWeaponItem "rhsusf_acc_m14_bipod";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "uk3cb_optic_artel_m14";
 
 comment "Add Secondary/Attachments";
 

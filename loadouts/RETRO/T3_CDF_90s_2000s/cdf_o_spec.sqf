@@ -35,7 +35,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack "UK3CB_B_Bedroll_Backpack_KHK";
     for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgo";};
 

@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhs_uniform_afghanka_ttsko";
+    _unit forceAddUniform "rhsgref_uniform_ttsko_mountain";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -46,7 +46,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_762x25_8";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

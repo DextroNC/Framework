@@ -92,7 +92,7 @@
             "UK3CB_BAF_L110A2RIS",
             "UK3CB_BAF_L110A3"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
     };
 
     //6 - MMG

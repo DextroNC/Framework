@@ -44,7 +44,6 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "UK3CB_BAF_M6";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";

@@ -33,7 +33,7 @@ comment "Add Backpack/Items";
 
 comment "Add Drip";
     _unit addHeadgear "rhs_tsh4";
-    _unit addGoggles "G_Aviator";
+    _unit addGoggles selectRandomWeighted ["G_Balaclava_blk",1,"G_Bandanna_oli",1,"",3];
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m92";

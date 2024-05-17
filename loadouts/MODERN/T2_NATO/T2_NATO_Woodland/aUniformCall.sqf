@@ -91,7 +91,7 @@
         _hatArray = [
             "H_HelmetB_light_black",
             "H_HelmetB_light_wdl"
-        ];;
+        ];
     };
     
     //Selects random hat from determined array, runs
@@ -107,8 +107,10 @@ _unit forceAddUniform selectRandom _uniformArray;
         _goggleArray = [
             "",.325,
             "rhs_googles_clear", 0.425,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.0625,
+            "rhsusf_oakley_goggles_blk", 0.0625,
+            "rhsusf_shemagh2_gogg_od", 0.0625,
+            "rhsusf_shemagh2_clear_gogg_od", 0.0625
         ];
     };
 
@@ -117,8 +119,10 @@ _unit forceAddUniform selectRandom _uniformArray;
         _goggleArray = [
             "",.325,
             "rhs_googles_clear", 0.425,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.0625,
+            "rhsusf_oakley_goggles_blk", 0.0625,
+            "rhsusf_shemagh2_gogg_od", 0.0625,
+            "rhsusf_shemagh2_clear_gogg_od", 0.0625
         ];
     };
 
@@ -127,8 +131,10 @@ _unit forceAddUniform selectRandom _uniformArray;
         _goggleArray = [
             "",.325,
             "rhs_googles_clear", 0.425,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.0625,
+            "rhsusf_oakley_goggles_blk", 0.0625,
+            "rhsusf_shemagh2_gogg_od", 0.0625,
+            "rhsusf_shemagh2_clear_gogg_od", 0.0625
         ];
     };
 
@@ -137,8 +143,10 @@ _unit forceAddUniform selectRandom _uniformArray;
         _goggleArray = [
             "",.325,
             "rhs_googles_clear", 0.425,
-            "rhsusf_oakley_goggles_clr", 0.125,
-            "rhsusf_shemagh2_gogg_od", 0.125
+            "rhsusf_oakley_goggles_clr", 0.0625,
+            "rhsusf_oakley_goggles_blk", 0.0625,
+            "rhsusf_shemagh2_gogg_od", 0.0625,
+            "rhsusf_shemagh2_clear_gogg_od", 0.0625
         ];
     };
 

@@ -20,7 +20,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
@@ -35,7 +35,6 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_US_Backpack";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};
     _unit addItemTobackpack "ACE_wirecutter";
 
 comment "Add Drip";

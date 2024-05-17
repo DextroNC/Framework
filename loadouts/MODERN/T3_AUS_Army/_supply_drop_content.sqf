@@ -21,7 +21,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
 	_box addmagazinecargoGlobal ["7r_mag_aug_m855a1", 72];
 	_box addmagazinecargoGlobal ["UK3CB_BHP_9_13Rnd", 24];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch_coyote", 12];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
     _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
@@ -75,7 +75,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
 	_box addmagazinecargoGlobal ["7r_mag_aug_m855a1", 36];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch_coyote", 6];
+	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["UK3CB_BHP_9_13Rnd", 8];
 	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 3];

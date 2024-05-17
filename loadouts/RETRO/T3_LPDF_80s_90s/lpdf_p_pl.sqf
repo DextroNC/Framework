@@ -39,7 +39,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_ec400_mag";};
 
 comment "Add Drip";
-    _unit addGoggles "G_Aviator";
+    _unit addGoggles selectRandomWeighted ["G_Balaclava_blk",1,"G_Bandanna_oli",1,"",3];
     _unit addHeadgear "7r_beret_lpdf";
 
 comment "Add Primary/Attachments";

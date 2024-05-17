@@ -46,8 +46,8 @@ _uniforms = [
 		["Echo Engineer (Repair)", "loadouts\cdf_e_e_repair.sqf"],
 		["Echo Heavy Weapons (Mortar)", "loadouts\cdf_e_mor.sqf"],
 		["Echo Asst. Heavy Weapons (Mortar)", "loadouts\cdf_e_morAsst.sqf"],
-		["Echo Heavy Weapons (Mortar)", "loadouts\cdf_e_hat.sqf"],
-		["Echo Asst. Heavy Weapons (Mortar)", "loadouts\cdf_e_hatAsst.sqf"],
+		["Echo Heavy Weapons (HAT)", "loadouts\cdf_e_hat.sqf"],
+		["Echo Asst. Heavy Weapons (HAT)", "loadouts\cdf_e_hatAsst.sqf"],
 		["Echo Driver", "loadouts\cdf_e_driver.sqf"]
 	]],
 

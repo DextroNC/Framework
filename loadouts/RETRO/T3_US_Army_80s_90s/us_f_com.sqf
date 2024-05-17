@@ -14,11 +14,11 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "VSM_M81_Camo_TShirt";
+    _unit forceAddUniform "rhsgref_uniform_woodland";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
@@ -36,7 +36,7 @@ comment "Add Drip";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_handguard";
+    _unit addWeapon "rhs_weap_m3a1";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";
@@ -47,7 +47,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhsgref_30rnd_1143x23_M1911B_SMG";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

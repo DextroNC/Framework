@@ -8,7 +8,7 @@ this addaction ["<t color=""#0000FF"">" +"x2 Night sight - 1pn93-1", "7R\Loadout
 this addaction ["<t color=""#0000FF"">" +"x3 Night sight - 1pn93-2", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_1pn93_2"]];
 
 // Support items
-[this, 3] call fw_fnc_addEquipmentItems;
+[this, 4] call fw_fnc_addEquipmentItems;
 
 // Radios
 [this] call fw_fnc_addEquipmentRadios;

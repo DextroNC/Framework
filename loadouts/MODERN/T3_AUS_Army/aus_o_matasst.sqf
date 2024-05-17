@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-    _unit addVest "7r_amcu_modvest_compact";
+    _unit addVest selectRandom ["7r_amcu_modvest_recon","7r_amcu_modvest_combat","7r_amcu_modvest_compact"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_RIF_BRN_01";
+    _unit addBackpack "7r_carryall_amcu";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 3 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HE_F";};
@@ -62,7 +62,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "USP_PVS14";
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

@@ -124,9 +124,11 @@ _unit addHeadgear selectRandom _hatArray;
             "milgp_f_face_shield_goggles_shemagh_khk",0.05,
             "milgp_f_face_shield_goggles_khk",0.05,
             "milgp_f_face_shield_goggles_MC",0.05,
-            "rhsusf_shemagh2_gogg_tan",0.175,
+            "rhsusf_shemagh2_gogg_tan",.0875,
+            "rhsusf_shemagh2_clear_gogg_tan",.0875,
             "G_Balaclava_blk",0.175,
-            "rhsusf_oakley_goggles_blk",0.175,
+            "rhsusf_oakley_goggles_blk",.0875,
+            "rhsusf_oakley_goggles_clr",.0875,
             "rhs_googles_clear",0.175
         ];
     };
@@ -140,9 +142,11 @@ _unit addHeadgear selectRandom _hatArray;
             "milgp_f_face_shield_goggles_shemagh_khk",0.05,
             "milgp_f_face_shield_goggles_khk",0.05,
             "milgp_f_face_shield_goggles_MC",0.05,
-            "rhsusf_shemagh2_gogg_tan",0.175,
+            "rhsusf_shemagh2_gogg_tan",.0875,
+            "rhsusf_shemagh2_clear_gogg_tan",.0875,
             "G_Balaclava_blk",0.175,
-            "rhsusf_oakley_goggles_blk",0.175,
+            "rhsusf_oakley_goggles_blk",.0875,
+            "rhsusf_oakley_goggles_clr",.0875,
             "rhs_googles_clear",0.175
         ];
     };
@@ -170,9 +174,11 @@ _unit addHeadgear selectRandom _hatArray;
             "milgp_f_face_shield_goggles_shemagh_khk",0.05,
             "milgp_f_face_shield_goggles_khk",0.05,
             "milgp_f_face_shield_goggles_MC",0.05,
-            "rhsusf_shemagh2_gogg_tan",0.175,
+            "rhsusf_shemagh2_gogg_tan",.0875,
+            "rhsusf_shemagh2_clear_gogg_tan",.0875,
             "G_Balaclava_blk",0.175,
-            "rhsusf_oakley_goggles_blk",0.175,
+            "rhsusf_oakley_goggles_blk",.0875,
+            "rhsusf_oakley_goggles_clr",.0875,
             "rhs_googles_clear",0.175
         ];
     };

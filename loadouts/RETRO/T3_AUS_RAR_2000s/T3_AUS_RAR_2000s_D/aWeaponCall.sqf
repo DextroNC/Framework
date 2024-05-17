@@ -78,7 +78,7 @@
         _primaryArray = [
             "rhs_weap_m249"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
