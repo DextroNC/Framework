@@ -141,7 +141,7 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle == 7) then{
         _attachmentArray = ["rhsusf_acc_m952v"];
-        _gripArray = ["rhsusf_acc_grip1","rhsusf_acc_grip1",""];
+        _gripArray = ["rhsusf_acc_grip3","rhsusf_acc_grip3",""];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     _unit addPrimaryWeaponItem selectRandom _attachmentArray;

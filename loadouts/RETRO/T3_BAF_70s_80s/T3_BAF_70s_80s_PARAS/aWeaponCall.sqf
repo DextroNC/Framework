@@ -133,7 +133,7 @@
 //         _gripArray = [
 //             "",
 //             "",
-//             "rhsusf_acc_grip1",
+//             "rhsusf_acc_grip3",
 //             "rhsusf_acc_kac_grip",
 //             "rhsusf_acc_rvg_blk"
 //         ];
