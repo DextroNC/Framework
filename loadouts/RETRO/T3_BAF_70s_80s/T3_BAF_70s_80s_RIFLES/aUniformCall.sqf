@@ -108,8 +108,7 @@ _unit addHeadgear _helmet;
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.375,
-            "7r_scrim_forest", 0.475,
+            "", 0.875,
             "rhs_scarf", 0.1,
             "G_Squares",0.05
         ];

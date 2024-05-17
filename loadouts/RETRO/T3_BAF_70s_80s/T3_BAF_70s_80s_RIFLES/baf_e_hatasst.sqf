@@ -29,10 +29,10 @@ comment "Add Vest/Items";
     _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+    _unit addItemToVest "ACE_EntrenchingTool";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_Bedroll_Shovel_Backpack_GRN";
-    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addBackpack "rhs_TOW_Tripod_Bag";
 
 comment "Add Drip";
 
@@ -44,7 +44,6 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_VectorDay";
-    _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 
 comment "Add Ammunition";
 
