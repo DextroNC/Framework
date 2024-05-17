@@ -40,7 +40,6 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_d_mstock",
             "rhs_weap_m4a1_mstock"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
@@ -57,8 +56,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_hk416d10_m320",
-            "rhs_weap_hk416d10_m320_d"
+            "rhs_weap_hk416d10_m320"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
@@ -83,11 +81,7 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_pip",
-            "rhs_weap_m249_pip_ris",
-            "rhs_weap_m249_light_S",
-            "rhs_weap_m249_pip_S_para",
-            "rhs_weap_m249_pip_S"
+            "7r_weap_negev_ng5"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
@@ -97,6 +91,8 @@
         _primaryArray = [
             "rhs_weap_m240B",
             "rhs_weap_m240G",
+            "rhs_weap_fnmag",
+            "rhs_weap_fnmag",
             "rhs_weap_fnmag"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51";
@@ -105,8 +101,8 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "SMG_03C_TR_black",
-            "SMG_03C_TR_khaki"
+            "UK3CB_P90_TR_black",
+            "UK3CB_P90_TR_khaki"
         ];
         _primaryAmmo = "50Rnd_570x28_SMG_03";
     };
