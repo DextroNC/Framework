@@ -67,9 +67,7 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "UK3CB_BAF_H_Beret_Rifles",
             "UK3CB_BAF_H_Beret_Rifles_PRR",
-            "UK3CB_BAF_H_Wool_Hat",
-            "UK3CB_BAF_H_Boonie_DPMW",
-            "UK3CB_BAF_H_Boonie_DPMW_PRR"
+            "UK3CB_BAF_H_Wool_Hat"
         ];
     };
 
@@ -85,9 +83,7 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "UK3CB_BAF_H_Beret_Rifles",
             "UK3CB_BAF_H_Beret_Rifles_PRR",
-            "UK3CB_BAF_H_Wool_Hat",
-            "UK3CB_BAF_H_Boonie_DPMW",
-            "UK3CB_BAF_H_Boonie_DPMW_PRR"
+            "UK3CB_BAF_H_Wool_Hat"
         ];
     };
 
