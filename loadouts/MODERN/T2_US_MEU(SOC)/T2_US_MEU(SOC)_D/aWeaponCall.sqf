@@ -141,7 +141,7 @@
             "rhsusf_acc_anpeq16a"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "",
             "rhsusf_acc_grip2",
