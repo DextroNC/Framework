@@ -8,13 +8,12 @@
 */
 // Parameter Init
 params ["_leader"];
-_vehicle = vehicle _leader;
-_crew = units group _leader;
+private _vehicle = vehicle _leader;
 
 // Delete Crew
 {
 	deleteVehicle _x;
-}forEach _crew;
+}forEach (units group _leader);
 
 // Deletee Vehicle
 deleteVehicle _vehicle;

@@ -37,11 +37,6 @@ _units = [_units] call fw_fnc_sortUnitsByGroup;
 if (_static) then {
 	_height = 150;
 	_badgeSize = 16;
-} else {
-	// Select Plane
-	private _array = [_class, (SR_Support_Assets select 1), count _units] call fw_fnc_paraDropPlaneSelection;
-	_class = _array select 0;
-	_badgeSize = _array select 1;
 };
 
 // Calculate Spawn and End Point

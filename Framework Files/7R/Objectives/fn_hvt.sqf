@@ -22,10 +22,13 @@
 if (!isServer) exitWith {};
 
 // Parameter Init
-params ["_unit","_mode","_dist",["_veh",false]];
+params ["_unit","_mode",["_dist",20],["_vehicleUse",false]];
+private _group = group _unit;
 
-// Modify AI Behaviour
-(group _unit) setVariable ["Vcm_Disable",true];
+// Modify AI Behaviour and disable AI Mods
+_group setVariable ["Vcm_Disable",true];
+_group setVariable ["lambs_danger_disableGroupAI", true];
+_unit setVariable ["lambs_danger_disableAI", true];
 _unit disableAI "AUTOCOMBAT";
 
 // Remove from HC transfer
@@ -38,9 +41,9 @@ _unit setVariable ["SR_NoRemoval", true, true];
 if (typeName _mode == "ARRAY") then {
 // Escape Code: start fleeing if enemy is close
 	[{!isNull ((_this select 0) findNearestEnemy (_this select 0))}, {
-		params ["_unit","_markerArray","_dist","_veh"];
+		params ["_unit","_markerArray","_dist","_vehicleUse"];
 		// If vehicle allowed, find vehicle 
-		if (_veh) then {
+		if (_vehicleUse) then {
 			_wpv = group _unit addWaypoint [position _unit, 25];
 			_wpv setWayPointBehaviour "CARELESS";
 			_wpv setWayPointSpeed "FULL";
@@ -63,7 +66,7 @@ if (typeName _mode == "ARRAY") then {
 			};
 		};
 		
-	}, [_unit,_mode,_dist,_veh]] call CBA_fnc_waitUntilAndExecute;
+	}, _this] call CBA_fnc_waitUntilAndExecute;
 } else {
 	// Staying Mode
 	_unit disableAI "PATH";

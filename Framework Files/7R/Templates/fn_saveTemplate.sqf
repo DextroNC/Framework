@@ -37,10 +37,10 @@ if (_check) exitWith { hint format ["Error: Template %1 already exists.", _templ
 private _side = side _leader;
 
 // Check if units are in a Vehicle and depeding on Result create inner Array
-if (_leader isKindOf "Air") then {
-	_unitArray pushBack (typeOf _leader);
-};
-if (_leader isKindOf "LandVehicle" || _leader isKindOf "Ship") then {
+// if (_leader isKindOf "Air") then {
+// 	_unitArray pushBack (typeOf _leader);
+// };
+if (_leader isKindOf "LandVehicle" || _leader isKindOf "Ship" || _leader isKindOf "Air") then {
 	_unitArray pushBack (typeOf _leader);
 	{
 		if (!isNull (_x select 0)) then {
