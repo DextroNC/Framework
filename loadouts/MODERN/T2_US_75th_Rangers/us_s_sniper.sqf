@@ -44,7 +44,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_XM2010";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
     _unit addPrimaryWeaponItem "rhsusf_acc_m2010s_wd";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_P320_DES";

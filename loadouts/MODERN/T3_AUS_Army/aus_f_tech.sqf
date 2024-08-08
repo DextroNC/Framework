@@ -38,7 +38,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "7r_weap_ef88_c_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a_blk";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BHP";

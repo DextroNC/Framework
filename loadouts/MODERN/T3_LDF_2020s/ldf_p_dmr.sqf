@@ -45,7 +45,7 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhs_acc_tgpv2";
     _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
 

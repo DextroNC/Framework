@@ -115,7 +115,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec"
+            "rhs_weap_mk17_LB"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };

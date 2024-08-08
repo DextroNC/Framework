@@ -125,7 +125,7 @@
     
     if (_Rifle <= 4 or _Rifle == 7 or _Rifle == 10 or _Rifle == 8) then{
         _attachmentArray = [
-            "UK3CB_BAF_LLM_IR_Black"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     
@@ -140,7 +140,9 @@
             "",
             "rhsusf_acc_grip2",
             "rhsusf_acc_grip2",
-            "rhs_acc_grip_ffg2",
+            "rhsusf_acc_rvg_blk",
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_kac_grip",
             "rhs_acc_grip_ffg2"
         ];
     };
@@ -181,6 +183,7 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
     _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addHandgunItem "acc_flashlight_pistol";
     _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
     _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
     _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";

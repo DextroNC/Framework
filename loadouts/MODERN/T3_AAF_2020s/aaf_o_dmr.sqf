@@ -41,7 +41,7 @@ comment "Add Primary/Attachments";
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "RKSL_optic_LDS";
     _unit addPrimaryWeaponItem "uk3cb_muzzle_snds_HK33";
-    _unit addPrimaryWeaponItem "bipod_01_F_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
 

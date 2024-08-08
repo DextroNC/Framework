@@ -34,7 +34,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_invisible";
-    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_asval_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_rvg_blk"], 1];
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_asval_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_kac_grip"], 1];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
@@ -45,7 +45,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_XM2010";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
     _unit addPrimaryWeaponItem "rhsusf_acc_m2010s_wd";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";

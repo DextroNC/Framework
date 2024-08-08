@@ -40,6 +40,7 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "7r_weap_ef88_black",
+            "7r_weap_ef88_black",
             "7r_weap_ef88"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -49,6 +50,7 @@
     if (_Rifle == 2) then{
         _primaryArray = [
             "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c_black",
             "7r_weap_ef88_c"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -57,6 +59,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
+            "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl"
         ];
@@ -118,8 +121,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -130,12 +134,12 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     if ((_Rifle == 4) or (_Rifle == 10) or (_Rifle == 7) or (_Rifle == 8)) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{

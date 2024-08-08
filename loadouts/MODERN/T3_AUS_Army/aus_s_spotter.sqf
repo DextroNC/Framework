@@ -44,7 +44,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m4a1_blockII";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a_blk";
     _unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
 
 comment "Add Secondary/Attachments";
