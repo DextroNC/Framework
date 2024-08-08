@@ -35,8 +35,8 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Bergen_DDPM_Rifleman_B";
     _unit addItemToBackpack "ACE_EntrenchingTool";
-    for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
+    for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_mag_maaws_HEAT";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_maaws_HE";};
 
 comment "Add Drip";
 

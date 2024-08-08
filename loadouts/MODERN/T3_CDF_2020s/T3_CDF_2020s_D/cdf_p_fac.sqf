@@ -39,7 +39,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_I_B_RadioBag_OLI";
+    _unit addBackpack "UK3CB_ION_I_B_RadioBag_DES";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
 

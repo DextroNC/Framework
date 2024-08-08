@@ -46,8 +46,8 @@
             "rhs_weap_ak74m",
             "rhs_weap_ak74m",
             "rhs_weap_ak74m",
-            "rhs_weap_ak74m_desert",
-            "rhs_weap_ak74m_desert",
+            "rhs_weap_ak74m_fullplum",
+            "rhs_weap_ak74m_fullplum",
             "rhs_weap_ak74m_fullplum"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
@@ -69,10 +69,11 @@
             "rhs_weap_aks74n_gp25",
             "rhs_weap_ak74n_gp25",
             "rhs_weap_ak74n_2_gp25",
+            "rhs_weap_ak74n_2_gp25",
             "rhs_weap_ak74m_gp25",
             "rhs_weap_ak74m_gp25",
-            "rhs_weap_ak74m_gp25",
-            "rhs_weap_ak74m_gp25",
+            "rhs_weap_ak74m_fullplum_gp25",
+            "rhs_weap_ak74m_fullplum_gp25",
             "rhs_weap_ak74m_fullplum_gp25"
         ];
         _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
@@ -81,10 +82,10 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_akmn",
-            "rhs_weap_ak103"
+            "rhs_weap_m14_rail",
+            "rhs_weap_m14_rail_fiberglass"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //5 - AutoRifle
@@ -100,7 +101,7 @@
         _primaryArray = [
             "rhs_weap_pkp"
         ];
-        _primaryAmmo = "rhs_100Rnd_762x54mmR";
+        _primaryAmmo = "rhs_100Rnd_762x54mmR_7N13";
     };
 
     //7 - SPC

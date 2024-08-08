@@ -45,7 +45,13 @@ comment "Add Secondary/Attachments";
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
     _unit addWeapon "rhs_weap_rpg7";
-    _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+        _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+        _unit addItem "rhs_acc_1pn93_2";
+    } else {
+        _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+    };
     _unit addSecondaryWeaponItem "rhs_rpg7_PG7VL_mag";
 
 comment "Add Ammunition";
