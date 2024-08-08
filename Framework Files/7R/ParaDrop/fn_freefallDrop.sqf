@@ -46,4 +46,4 @@ _vehicle animate ["Door_1_source",1];
 // Close door
 _group setSpeedMode "NORMAL";
 _vehicle animate ["Door_1_source",0];
-["Paradrop Plane  has dropped its units dropped."] spawn fw_fnc_info;
+["Paradrop Plane has dropped its units dropped."] spawn fw_fnc_info;

@@ -70,7 +70,7 @@ switch (typeName _uavClassArray) do
 };
 
 // Spawn UAV
-private _uavSpawnReturn = [_spawnPos, (_dirSpawn)-180, (_uavClassArray select 0), SR_Side] call bis_fnc_spawnVehicle;
+private _uavSpawnReturn = [_spawnPos, (_dirSpawn)-180, (_uavClass), SR_Side] call bis_fnc_spawnVehicle;
 _uavSpawnReturn params ["_uav", "_crew", "_group"];
 [_uav, _altitude] call BIS_fnc_setHeight;
 _uav flyInHeight _altitude;
