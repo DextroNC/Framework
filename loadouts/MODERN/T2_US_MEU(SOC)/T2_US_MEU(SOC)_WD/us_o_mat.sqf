@@ -44,7 +44,12 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "launch_MRAWS_green_F";
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+        _unit addWeapon "launch_MRAWS_green_F";
+    } else {
+        _unit addWeapon "launch_MRAWS_green_rail_F";
+    };
     _unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 
     

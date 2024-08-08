@@ -33,7 +33,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_multicam_Backpack_Kitbag";
-    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_7N13";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";

@@ -44,7 +44,12 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "launch_MRAWS_green_F";
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+        _unit addWeapon "launch_MRAWS_green_F";
+    } else {
+        _unit addWeapon "launch_MRAWS_green_rail_F";
+    };
     _unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 
 comment "Add Ammunition";
@@ -62,7 +67,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS31_WP","USP_PVS31_WP_HIGH","USP_PVS31_WP_MID","USP_PVS31_WP_TAR","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_MID"];
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

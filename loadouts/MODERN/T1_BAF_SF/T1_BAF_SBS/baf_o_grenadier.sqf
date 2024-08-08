@@ -58,7 +58,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS31_WP", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID","USP_PVS31_WP_TAR_MID_TAN"];
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_TAN","USP_GPNVG18_WP_TAN2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAN","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_GM_TAR_TAN","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2","USP_GPNVG18_WP_TAR_TAN","USP_GPNVG18_WP_TAR_TAN2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";

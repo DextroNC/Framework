@@ -32,8 +32,10 @@
         _uniformArray = [
             "7r_combatsmocks_mc_gloves",2,
             "7r_combatsmocks_mc",2,
-            "7r_combatsmocks_mc_odg_gloves",3,
-            "7r_combatsmocks_mc_odg",3
+            "7r_combatsmocks_mc_odg_gloves",1.5,
+            "7r_combatsmocks_mc_odg",1.5,
+            "7r_combatsmocks_mc_khk_gloves",1.5,
+            "7r_combatsmocks_mc_khk",1.5
         ];
     };
 
@@ -42,8 +44,10 @@
         _uniformArray = [
             "7r_combatsmocks_mc_gloves",2,
             "7r_combatsmocks_mc",2,
-            "7r_combatsmocks_mc_odg_gloves",3,
-            "7r_combatsmocks_mc_odg",3
+            "7r_combatsmocks_mc_odg_gloves",1.5,
+            "7r_combatsmocks_mc_odg",1.5,
+            "7r_combatsmocks_mc_khk_gloves",1.5,
+            "7r_combatsmocks_mc_khk",1.5
         ];
     };
 
@@ -52,8 +56,10 @@
         _uniformArray = [
             "7r_combatsmocks_mc_gloves",2,
             "7r_combatsmocks_mc",2,
-            "7r_combatsmocks_mc_odg_gloves",3,
-            "7r_combatsmocks_mc_odg",3
+            "7r_combatsmocks_mc_odg_gloves",1.5,
+            "7r_combatsmocks_mc_odg",1.5,
+            "7r_combatsmocks_mc_khk_gloves",1.5,
+            "7r_combatsmocks_mc_khk",1.5
         ];
     };
 

@@ -45,7 +45,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
-    _unit addWeapon "launch_O_Vorona_brown_F";
+    _unit addWeapon "launch_O_Vorona_green_F";
     _unit addSecondaryWeaponItem "Vorona_HEAT";
 
 comment "Add Ammunition";

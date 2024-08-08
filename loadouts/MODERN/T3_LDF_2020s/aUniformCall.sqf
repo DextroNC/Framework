@@ -65,45 +65,47 @@
 _unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _ess_list = [
-    "UK3CB_LDF_B_H_HB97_ESS_GEO",
-    "UK3CB_LDF_B_H_HB97_ESS_Cover_GEO",
-    "rhssaf_helmet_m97_olive_nocamo_black_ess",
-    "rhssaf_helmet_m97_olive_nocamo_black_ess_bare"
+    "7r_ldf_wz2005_ess",
+    "7r_ldf_wz2005_headset_ess",
+    "7r_odg_wz2005_ess",
+    "7r_odg_wz2005_headset_ess"
 ];
 
 _noess_list = [
-    "rhssaf_helmet_m97_olive_nocamo",
-    "UK3CB_LDF_B_H_HB97_GEO"
+    "7r_ldf_wz2005_headset",
+    "7r_ldf_wz2005",
+    "7r_odg_wz2005_headset",
+    "7r_odg_wz2005"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "rhssaf_helmet_m97_olive_nocamo",
-            "rhssaf_helmet_m97_olive_nocamo",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess"
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_headset_ess"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "UK3CB_LDF_B_H_HB97_GEO",
-            "UK3CB_LDF_B_H_HB97_GEO",
-            "UK3CB_LDF_B_H_HB97_ESS_GEO",
-            "UK3CB_LDF_B_H_HB97_ESS_Cover_GEO"
+            "7r_ldf_wz2005_headset",
+            "7r_ldf_wz2005",
+            "7r_ldf_wz2005_ess",
+            "7r_ldf_wz2005_headset_ess"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "rhssaf_helmet_m97_olive_nocamo",
-            "rhssaf_helmet_m97_olive_nocamo",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess"
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_headset_ess"
         ];
     };
 

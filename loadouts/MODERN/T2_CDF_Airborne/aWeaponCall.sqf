@@ -81,7 +81,7 @@
         _primaryArray = [
             "rhs_weap_pkp"
         ];
-        _primaryAmmo = "rhs_100Rnd_762x54mmR";
+        _primaryAmmo = "rhs_100Rnd_762x54mmR_7N13";
     };
 
     //7 - SPC
