@@ -26,7 +26,7 @@ private _actions = [];
 		{
 			private _dz = (_player nearObjects ["ACE_DropZone", 150]) select 0;
 			_this select 2 params ["_class", "_loadout", "_textureArray"];
-			nul = [_dz, "STARTSPAWN", "RHS_C130J", "Pegasus 5-1", 1, 1, [_class, _loadout,_textureArray]] spawn fw_fnc_supplyDropInit;
+			nul = [_dz, "STARTSPAWN", (SR_Support_Assets select 1) , "Pegasus 5-1", 1, 1, [_class, _loadout,_textureArray]] spawn fw_fnc_supplyDropInit;
 		},
 		{[_player] call fw_fnc_canCallVehicleDrop},
 		{},

@@ -27,5 +27,8 @@ _box allowDamage false;
 // Apply Loadout
 [_box, _loadout] execVM "loadouts\_supply_drop_content.sqf";
 
+// Adjust box name
+_box setVariable ["ace_cargo_customName", _description, true];
+
 // Return Box
 _box
