@@ -39,7 +39,7 @@ switch (_type) do
 	case "END": {	
 		_type = "MOVE";
 		_statement = ["true", "nul = [this] spawn fw_fnc_deleteVehicle;"];
-		_completionRadius = 50;
+		_completionRadius = 50	;
 	};
 	// Drop cargo by parachute
 	case "DROP": {

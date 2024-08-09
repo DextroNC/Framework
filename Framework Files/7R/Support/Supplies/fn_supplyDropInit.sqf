@@ -101,7 +101,7 @@ private _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition 
 
 
 // Calculating waypoints drop and end
-private _wpDrop = [_target, 25,_dir] call BIS_fnc_relPos;
+private _wpDrop = [_target, 100,_dir] call BIS_fnc_relPos;
 private _wpEnd = [_target, 3500, _dir] call BIS_fnc_relPos;
 
 
