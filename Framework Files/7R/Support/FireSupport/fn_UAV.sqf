@@ -78,7 +78,6 @@ _uav lockDriver true;
 _uav enableuavwaypoints false;
 [_group] spawn sr_support_fnc_supportAI;
 
-systemChat str(_pylons);
 // Adjust weaponry
 if (count _pylons > 0 && _weaponized) then {
 	[_uav, _pylons] spawn fw_fnc_changePylons;
