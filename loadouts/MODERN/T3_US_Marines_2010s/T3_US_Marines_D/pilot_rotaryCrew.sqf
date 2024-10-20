@@ -36,8 +36,8 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_handguard";
-    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
+    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addPrimaryWeaponItem "rhsusf_acc_kac_grip";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";
@@ -69,3 +69,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

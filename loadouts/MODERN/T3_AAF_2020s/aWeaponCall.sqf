@@ -39,8 +39,7 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "arifle_Mk20_plain_F",
-            "arifle_Mk20_F"
+            "arifle_TRG21_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -48,8 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "arifle_Mk20C_plain_F",
-            "arifle_Mk20C_F"
+            "arifle_TRG20_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -57,8 +55,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "arifle_Mk20_GL_plain_F",
-            "arifle_Mk20_GL_F"
+            "arifle_TRG21_GL_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -66,15 +63,15 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_savz58v_ris"
+            "UK3CB_G3KA4"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_Savz58";
+        _primaryAmmo = "20Rnd_762x51_Mag";
     };
 
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_minimi_para_railed"
+            "7r_weap_negev_ng5"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
@@ -90,7 +87,8 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_g36kv"
+            "UK3CB_BAF_L85A2_RIS",
+            "UK3CB_BAF_L85A2_RIS_AFG"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -98,7 +96,7 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "UK3CB_HK33KA2_RIS"
+            "UK3CB_BAF_L86A3"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -106,7 +104,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "UK3CB_PSG1A1_RIS"
+            "UK3CB_BAF_L129A1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -114,8 +112,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "arifle_Mk20C_plain_F",
-            "arifle_Mk20C_F"
+            "arifle_TRG20_F"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -129,7 +126,7 @@
             "uk3cb_baf_llm_ir_black"
         ];
     };
-    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if ((_Rifle <= 4) or (_Rifle == 10)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_rvg_blk"
@@ -150,14 +147,14 @@
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
     if (_Rifle <= 4 or _Rifle == 7) then{
-        for "_i" from 1 to 10 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
         _unit addPrimaryWeaponItem _uglHE;
-        for "_i" from 1 to 7 do {_unit addItemToBackpack _uglHE;};
-        for "_i" from 1 to 6 do {_unit addItemToBackpack _uglSmoke;};
+        for "_i" from 1 to 7 do {_unit addItem _uglHE;};
+        for "_i" from 1 to 6 do {_unit addItem _uglSmoke;};
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
@@ -165,17 +162,17 @@
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 2 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 4 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 4 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
-        for "_i" from 1 to 8 do {_unit addItemToVest _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItemToBackpack _primaryAmmo;};
+        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
     };
     //Breacher - 8 Magazines
     if (_Rifle == 10) then{
-        for "_i" from 1 to 8 do {_unit addItemToVest _primaryAmmo;};
+        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments

@@ -44,7 +44,6 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "arifle_MX_khk_F";
     _unit addPrimaryWeaponItem "muzzle_snds_H";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";

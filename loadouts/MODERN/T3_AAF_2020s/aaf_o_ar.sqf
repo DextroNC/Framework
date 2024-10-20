@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_AAF_B_B_ASS_DIGI_BRN";
+    _unit addBackpack "UK3CB_AAF_B_B_FIELDPACK_DIGI_BRN";
 
 comment "Add Drip";
 
@@ -68,3 +68,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

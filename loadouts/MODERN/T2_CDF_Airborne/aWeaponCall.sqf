@@ -79,9 +79,9 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_pkp"
+            "7r_weap_ukm2013p"
         ];
-        _primaryAmmo = "rhs_100Rnd_762x54mmR_7N13";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC

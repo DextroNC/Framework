@@ -46,7 +46,7 @@
             "rhs_weap_m4a1_carryhandle_mstock",
             "rhs_weap_m4a1_carryhandle"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
     //2 - Rifle 2
@@ -59,7 +59,7 @@
             "rhs_weap_m4a1_carryhandle_mstock",
             "rhs_weap_m4a1_carryhandle"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
     //3 - Grenadier
@@ -67,7 +67,7 @@
         _primaryArray = [
             "rhs_weap_m4a1_m320"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
     //4 - BattleRifle
@@ -106,7 +106,7 @@
             "rhs_weap_mk18_KAC_bk",
             "rhs_weap_mk18_KAC"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
     //8 - DMR
@@ -117,7 +117,7 @@
             "rhs_weap_m4a1_blockII_KAC_bk",
             "rhs_weap_m4a1_blockII_KAC"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
     //9 - PDMR
@@ -138,7 +138,7 @@
             "rhs_weap_m4a1_carryhandle_mstock",
             "rhs_weap_m4a1_carryhandle"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
 
 //Selects random weapon from determined array, runs
@@ -153,7 +153,7 @@
             "rhsusf_acc_anpeq15_bk"
         ];
     };
-    if (_Rifle == 3 or _Rifle == 5) then{
+    if (_Rifle == 5) then{
         _attachmentArray = [
             "rhsusf_acc_anpeq15side_bk"
         ];
@@ -173,7 +173,9 @@
     if (_Rifle == 5) then{
         _gripArray = [
             "rhsusf_acc_saw_lw_bipod",
-            "rhsusf_acc_saw_bipod"
+            "rhsusf_acc_saw_bipod",
+            "rhsusf_acc_grip4_bipod",
+            "rhsusf_acc_kac_grip_saw_bipod"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

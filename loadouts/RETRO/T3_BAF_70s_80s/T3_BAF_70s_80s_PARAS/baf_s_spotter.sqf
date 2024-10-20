@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
-    _unit addItemToUniform "Chemlight_green";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
@@ -50,7 +50,7 @@ comment "Add Secondary/Attachments";
     _unit addHandgunItem "UK3CB_BAF_9_13Rnd";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_VectorDay";
+    _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_BAF_9_13Rnd";};
@@ -66,7 +66,7 @@ comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem "UK3CB_ANPVS7";
-    _unit addItem "ACE_IR_Strobe_Item";
+    
     _unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Sniper", true];
@@ -75,3 +75,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

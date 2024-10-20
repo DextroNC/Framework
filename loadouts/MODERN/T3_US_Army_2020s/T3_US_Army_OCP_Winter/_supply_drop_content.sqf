@@ -19,7 +19,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 72];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 72];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 24];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
     _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
@@ -76,7 +76,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 36];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];

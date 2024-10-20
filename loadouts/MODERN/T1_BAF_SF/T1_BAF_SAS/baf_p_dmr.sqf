@@ -45,7 +45,6 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "uk3cb_baf_silencer_l115a3";
     _unit addPrimaryWeaponItem "uk3cb_underbarrel_acc_fgrip_bipod";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 
 comment "Add Secondary/Attachments";
 
@@ -76,3 +75,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

@@ -38,6 +38,8 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "7r_compact_amcu";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
+    _unit addItemToBackpack "ACE_HuntIR_monitor";
+    for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 
 comment "Add Drip";
     _unit addItemToBackpack "H_Beret_blk";
@@ -82,3 +84,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

@@ -30,8 +30,8 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",4,
-            "7r_combatsmocks_mc",4,
+            "7r_combatsmocks_mc_gloves",3,
+            "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
             "7r_combatsmocks_dpm_mc_gloves",4,
@@ -44,8 +44,8 @@
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",4,
-            "7r_combatsmocks_mc",4,
+            "7r_combatsmocks_mc_gloves",3,
+            "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
             "7r_combatsmocks_dpm_mc_gloves",4,
@@ -58,8 +58,8 @@
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",4,
-            "7r_combatsmocks_mc",4,
+            "7r_combatsmocks_mc_gloves",3,
+            "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
             "7r_combatsmocks_dpm_mc_gloves",4,

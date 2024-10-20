@@ -36,8 +36,7 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p_visor";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_handguard";
-    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
+    _unit addWeapon "rhs_weap_m4_carryhandle";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_P320_DES";
@@ -62,6 +61,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_GM_BLK", "USP_GPNVG18_WP_GM_TAR_BLK"];
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];
@@ -70,3 +70,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

@@ -36,7 +36,7 @@ comment "Add Drip";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_g36c";
+    _unit addWeapon "arifle_TRG20_F";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "hgun_ACPC2_F";
@@ -69,3 +69,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

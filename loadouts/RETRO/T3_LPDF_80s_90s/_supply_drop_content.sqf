@@ -52,9 +52,6 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];
 	if (isNil "SR_Night") then {SR_Night = false};
-    if (SR_Night) then {
-    _box addItemCargoGlobal ["ACE_IR_Strobe_Item", 50];
-    };
 };
 
 // Vehicle Supply
@@ -106,9 +103,6 @@ if (_type == 4) then {
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 2];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 2];
 	if (isNil "SR_Night") then {SR_Night = false};
-    if (SR_Night) then {
-    _box addItemCargoGlobal ["ACE_IR_Strobe_Item", 25];
-    };
 };
 
 // Small Special Supply

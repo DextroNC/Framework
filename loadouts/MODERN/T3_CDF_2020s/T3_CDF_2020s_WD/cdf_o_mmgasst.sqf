@@ -35,7 +35,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "7r_carryall_ttsko";
-    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_7N13";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m80a1epr";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
@@ -72,3 +72,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

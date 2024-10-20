@@ -45,7 +45,6 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_aac_762sd_silencer";
     _unit addPrimaryWeaponItem "bipod_01_f_blk";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 
 comment "Add Secondary/Attachments";
 

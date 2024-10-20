@@ -82,3 +82,4 @@ _unit setVariable ["ace_medical_medicClass",2,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

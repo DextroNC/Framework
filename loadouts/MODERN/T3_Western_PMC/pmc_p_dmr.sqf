@@ -43,7 +43,6 @@ comment "Add Primary/Attachments";
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "uk3cb_muzzle_snds_M14";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
     _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
@@ -76,3 +75,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

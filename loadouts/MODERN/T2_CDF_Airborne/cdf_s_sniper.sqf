@@ -34,7 +34,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_invisible";
-    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_asval_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_kac_grip"], 1];
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_vss_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_kac_grip"], 1];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
@@ -70,7 +70,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS31_WP", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID","USP_PVS31_WP_TAR_MID_TAN","USP_PVS31_WP_BLK2", "USP_PVS31_WP_TAN2", "USP_PVS31_WP_HIGH_BLK2", "USP_PVS31_WP_HIGH_TAN2", "USP_PVS31_WP_MID_BLK2", "USP_PVS31_WP_MID_TAN2", "USP_PVS31_WP_TAR_BLK2", "USP_PVS31_WP_TAR_TAN2", "USP_PVS31_WP_TAR_HIGH_BLK2", "USP_PVS31_WP_TAR_HIGH_TAN_BLK2", "USP_PVS31_WP_TAR_MID_BLK2", "USP_PVS31_WP_TAR_MID_TAN2"];
+    _unit linkItem selectRandom ["USP_PVS31_WP_BLK", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH_BLK","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID_BLK","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR_BLK", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH_BLK","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID_BLK","USP_PVS31_WP_TAR_MID_TAN","USP_PVS31_WP_BLK2", "USP_PVS31_WP_TAN2", "USP_PVS31_WP_HIGH_BLK2", "USP_PVS31_WP_HIGH_TAN2", "USP_PVS31_WP_MID_BLK2", "USP_PVS31_WP_MID_TAN2", "USP_PVS31_WP_TAR_BLK2", "USP_PVS31_WP_TAR_TAN2", "USP_PVS31_WP_TAR_HIGH_BLK2", "USP_PVS31_WP_TAR_HIGH_TAN_BLK2", "USP_PVS31_WP_TAR_MID_BLK2", "USP_PVS31_WP_TAR_MID_TAN2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };
@@ -80,3 +80,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

@@ -41,7 +41,8 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 6] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhs_acc_1p78";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
 
@@ -71,3 +72,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

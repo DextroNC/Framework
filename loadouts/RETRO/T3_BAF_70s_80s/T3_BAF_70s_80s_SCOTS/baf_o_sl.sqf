@@ -21,9 +21,10 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
-    _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
@@ -48,7 +49,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_VectorDay";
+    _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
@@ -64,7 +65,7 @@ _unit linkItem "ItemRadioAcreFlagged";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit addItem "ACE_IR_Strobe_Item";
+    
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";
     _unit addItem "UGL_FlareWhite_F";
@@ -79,3 +80,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

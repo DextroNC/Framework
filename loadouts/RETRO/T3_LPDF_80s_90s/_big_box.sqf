@@ -12,8 +12,5 @@ if(isServer) then {
 	bigBox addWeaponcargoGlobal ["rhs_weap_rshg2", 10];
 	bigBox additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];
 	bigBox additemcargoGlobal ["rhs_ec400_mag", 12];
-	if (isNil "SR_Night") then {SR_Night = false};
-    if (SR_Night) then {
-    bigBox addItemCargoGlobal ["ACE_IR_Strobe_Item", 50];
-    };
+	if (isNil "SR_Night") then {SR_Night = false};s
 };

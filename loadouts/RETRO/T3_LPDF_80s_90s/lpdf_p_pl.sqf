@@ -69,7 +69,7 @@ if (SR_Night) then {
     _unit addItem "rhs_VG40OP_white";
     _unit addItem "rhs_VG40OP_red";
     _unit addItem "rhs_VG40OP_red";
-    _unit addItemToBackpack "ACE_IR_Strobe_Item";
+    
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];
@@ -78,3 +78,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

@@ -41,7 +41,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d145";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
@@ -53,7 +53,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -76,3 +76,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

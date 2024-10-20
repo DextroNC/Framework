@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spcs_ocp_teamleader_alt";
+    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -76,3 +76,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

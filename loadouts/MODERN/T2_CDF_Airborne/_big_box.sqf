@@ -5,7 +5,7 @@ if(isServer) then {
 	clearBackpackCargoGlobal this;
 	this addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	this addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 160];
-	this addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR_7N13", 40];
+	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 40];
     this addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 60];
     this addweaponcargoGlobal ["rhs_weap_m72a7", 20];
     this addweaponcargoGlobal ["launch_NLAW_F", 10];

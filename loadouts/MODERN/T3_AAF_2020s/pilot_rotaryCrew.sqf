@@ -36,7 +36,7 @@ comment "Add Drip";
     _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor","rhsusf_hgu56p_visor","rhsusf_hgu56p"];
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_g36c";
+    _unit addWeapon "arifle_TRG20_F";
     _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
@@ -70,3 +70,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

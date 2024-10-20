@@ -31,7 +31,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
-_unit addItemToBackpack "rhs_8point_marpatwd";
+_unit addItemToBackpack "rhs_8point_marpatd";
 
 comment "Add weapons";
 _unit addWeapon "rhsusf_weap_m9";
@@ -55,3 +55,4 @@ _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

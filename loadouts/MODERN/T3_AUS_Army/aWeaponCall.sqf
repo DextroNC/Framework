@@ -69,7 +69,8 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "arifle_SPAR_03_blk_F"
+            "7r_weap_hk417",
+            "7r_weap_hk417vfg"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -142,17 +143,23 @@
             "rhsusf_acc_anpeq16a_blk"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if (_Rifle == 7) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_kac_grip"
+        ];
+    };
+    if (_Rifle == 5) then{
+        _gripArray = [
+            "rhsusf_acc_kac_grip_saw_bipod",
+            "rhsusf_acc_grip4_bipod"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     if (_Rifle >= 1) then{
         _unit addPrimaryWeaponItem selectRandom _attachmentArray;
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if ((_Rifle <= 5) or (_Rifle == 10) or (_Rifle == 7)) then{
         _unit addPrimaryWeaponItem selectRandom _gripArray;
     };
 

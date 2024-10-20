@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Pointman_cb";
+    _unit addBackpack "B_AssaultPack_invisible";
 
 comment "Add Drip";
 
@@ -40,8 +40,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "RKSL_optic_LDS";
-    _unit addPrimaryWeaponItem "uk3cb_muzzle_snds_HK33";
-    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_Silencer_L85";
 
 comment "Add Secondary/Attachments";
 
@@ -70,3 +69,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

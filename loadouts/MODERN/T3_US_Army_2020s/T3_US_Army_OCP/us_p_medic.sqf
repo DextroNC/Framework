@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spcs_ocp_medic";
+    _unit addVest "milgp_v_marciras_medic_belt_mc";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -80,3 +80,4 @@ _unit setVariable ["ace_medical_medicClass",2,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

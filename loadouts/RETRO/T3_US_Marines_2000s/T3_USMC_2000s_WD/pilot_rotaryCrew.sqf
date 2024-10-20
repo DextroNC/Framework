@@ -19,7 +19,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
-    _unit addItemToUniform "Chemlight_green";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     _unit addItemToUniform "ACE_microDAGR";
@@ -36,8 +36,8 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_handguard";
-    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
+    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addPrimaryWeaponItem "rhsusf_acc_kac_grip";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";
@@ -61,7 +61,9 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit setUnitTrait ["camouflageCoef",1];
+    _unit linkItem selectRandom ["USP_PVS14","USP_PVS14"];
+    _unit addItem "ACE_IR_Strobe_Item";
+    _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","Pilot", true];
 _unit setVariable ["ace_isEngineer",0, true];
@@ -69,3 +71,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

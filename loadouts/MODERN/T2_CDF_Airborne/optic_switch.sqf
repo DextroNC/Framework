@@ -27,9 +27,9 @@ _npz_list = [
 	"rhs_weap_ak74n_2_gp25_npz",
 	"rhs_weap_ak74m_gp25_npz",
 	"rhs_weap_ak74m_fullplum_gp25_npz",
-	"rhs_weap_asval_grip_npz",
-	"rhs_weap_asval_npz_grip1",
-	"rhs_weap_asval_npz_afg",
+	"rhs_weap_vss_grip_npz",
+	"rhs_weap_vss_npz_grip1",
+	"rhs_weap_vss_npz_afg",
 	"rhs_weap_ak103_zenitco01_b33",
 	"rhs_weap_ak103_zenitco01_b33_grip1",
 	"rhs_weap_ak103_zenitco01_b33_afg",
@@ -59,9 +59,9 @@ _dvt_list = [
 	"rhs_weap_ak74n_2_gp25",
 	"rhs_weap_ak74m_gp25",
 	"rhs_weap_ak74m_fullplum_gp25",
-	"rhs_weap_asval_grip",
-	"rhs_weap_asval_grip1",
-	"rhs_weap_asval_afg",
+	"rhs_weap_vss_grip",
+	"rhs_weap_vss_grip1",
+	"rhs_weap_vss_afg",
 	"rhs_weap_ak103_zenitco01",
 	"rhs_weap_ak103_zenitco01_grip1",
 	"rhs_weap_ak103_zenitco01_afg",
@@ -104,3 +104,4 @@ _newMag = (primaryWeaponMagazine _unit) select 0;
 
 // Save Loadout (not when Parachute)
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];
