@@ -81,9 +81,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_pip_ris",
-            "rhs_weap_m249_pip_L",
-            "rhs_weap_m249_pip_L_para"
+            "rhs_weap_m249_pip_S",
+            "rhs_weap_m249_light_S",
+            "rhs_weap_m249_pip_S_para"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
