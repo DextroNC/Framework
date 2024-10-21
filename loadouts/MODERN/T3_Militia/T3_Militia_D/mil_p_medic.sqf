@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -56,6 +57,7 @@ comment "Add Medical";
     for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
     for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "SR_Utility_Pack";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "CBRN_gasmaskFilter";};
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";

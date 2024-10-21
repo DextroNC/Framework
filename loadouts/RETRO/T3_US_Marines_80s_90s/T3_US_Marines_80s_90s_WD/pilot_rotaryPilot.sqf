@@ -17,6 +17,7 @@ comment "Add Uniforms/Items";
     _unit forceAddUniform "UK3CB_CW_US_B_LATE_U_H_Pilot_Uniform_01_NATO";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";

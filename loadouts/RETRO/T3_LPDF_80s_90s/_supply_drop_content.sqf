@@ -51,6 +51,7 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];
+	_box addItemCargoGlobal ["CBRN_gasmaskFilter", 12];
 	if (isNil "SR_Night") then {SR_Night = false};
 };
 
@@ -102,6 +103,7 @@ if (_type == 4) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 2];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 2];
+	_box addItemCargoGlobal ["CBRN_gasmaskFilter", 6];
 	if (isNil "SR_Night") then {SR_Night = false};
 };
 
@@ -124,6 +126,7 @@ If (_type == 7) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 3];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 8];
+	_box addItemCargoGlobal ["CBRN_gasmaskFilter", 8];
 };
 
 // Mortar Supply Drop
