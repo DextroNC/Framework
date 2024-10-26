@@ -17,6 +17,7 @@ comment "Add Uniforms/Items";
     _unit forceAddUniform "7r_g3_amcu";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -37,7 +38,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "7r_weap_ef88_c_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a_blk";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_BHP";
@@ -70,3 +71,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

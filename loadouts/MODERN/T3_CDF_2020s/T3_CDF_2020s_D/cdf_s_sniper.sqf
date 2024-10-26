@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -34,7 +35,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_invisible";
-    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_asval_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_rvg_blk"], 1];
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_vss_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_rvg_blk"], 1];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
@@ -45,7 +46,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_XM2010";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
     _unit addPrimaryWeaponItem "rhsusf_acc_m2010s_wd";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhs_weap_makarov_pm";
@@ -80,3 +81,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

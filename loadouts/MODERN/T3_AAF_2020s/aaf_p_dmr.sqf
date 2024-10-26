@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -31,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Pointman_cb";
+    _unit addBackpack "B_AssaultPack_invisible";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
@@ -42,10 +43,10 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "uk3cb_muzzle_snds_g3";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_Silencer_L115A3";
     _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_fgrip_bipod";
 
 comment "Add Secondary/Attachments";
 
@@ -76,3 +77,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

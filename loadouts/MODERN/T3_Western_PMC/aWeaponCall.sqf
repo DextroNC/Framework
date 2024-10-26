@@ -30,8 +30,8 @@
 //Creates array of weapons, ammunition
     _primaryArray = "";
     _primaryAmmo = "";
-    _attachmentArray = "";
-    _gripArray = "";
+    _attachmentArray = [];
+    _gripArray = [];
     _uglHE = "1Rnd_HE_Grenade_shell";
     _uglSmoke = "1Rnd_Smoke_Grenade_shell";
 
@@ -39,18 +39,23 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_mstock"
+            "rhs_weap_hk416d15_smr",
+            "rhs_weap_hk416d15_smr_kac",
+            "rhs_weap_hk416d15_smr_tan",
+            "rhs_weap_hk416d15_smr_tan_kac"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "arifle_TRG20_F"
+            "rhs_weap_hk416d10_smr",
+            "rhs_weap_hk416d10_smr_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
     //3 - Grenadier
@@ -58,15 +63,18 @@
         _primaryArray = [
             "rhs_weap_hk416d10_m320"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
     //3 - Grenadier
     if (_Rifle == 32) then{
         _primaryArray = [
-            "arifle_TRG20_F"
+            "rhs_weap_hk416d10_smr",
+            "rhs_weap_hk416d10_smr_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
     //4 - BattleRifle
@@ -114,7 +122,7 @@
             "rhs_weap_hk416d145_d",
             "rhs_weap_hk416d145"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
     //9 - PDMR
@@ -129,9 +137,12 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "arifle_TRG20_F"
+            "rhs_weap_hk416d10_smr",
+            "rhs_weap_hk416d10_smr_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Pull";
     };
 
 //Selects random weapon from determined array, runs
@@ -143,10 +154,20 @@
             "uk3cb_baf_llm_flashlight_black"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10)) then{
+    if (_Rifle in [1]) then{
         _gripArray = [
-            "rhsusf_acc_grip2",
-            "rhsusf_acc_rvg_blk"
+            "rhs_acc_m4_smr_bcm",
+            "rhs_acc_m4_smr_d_bcm",
+            "rhs_acc_m4_smr",
+            "rhs_acc_m4_smr_d"
+        ];
+    };
+    if (_Rifle in [2,32,10]) then{
+        _gripArray = [
+            "rhs_acc_mk18_smr_bcm",
+            "rhs_acc_mk18_smr_d_bcm",
+            "rhs_acc_mk18_smr",
+            "rhs_acc_mk18_smr_d"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

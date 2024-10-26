@@ -19,21 +19,23 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
-    _unit addItemToUniform "Chemlight_green";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_CW_US_B_LATE_V_PASGT_Rif_Vest";
+    _unit addVest "usm_vest_pasgt_lbe_rmpr";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_yellow";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_Alice_pack_01_M81";
+    _unit addBackpack "UK3CB_B_Alice_pack_04_M81";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintGreen";
@@ -67,7 +69,7 @@ _unit linkItem "ItemRadioAcreFlagged";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem "rhsusf_ANPVS_14";
+    _unit linkItem selectRandom ["USP_PVS14_TAR","USP_PVS14"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
@@ -77,3 +79,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

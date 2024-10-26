@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -26,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spcs_ocp_sniper";
+    _unit addVest "milgp_v_marciras_marksman_belt_mc";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -43,7 +44,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_aac_762sd_silencer";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
     _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 
@@ -76,3 +77,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

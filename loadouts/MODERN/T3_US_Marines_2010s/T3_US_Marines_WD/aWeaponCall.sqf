@@ -41,7 +41,7 @@
         _primaryArray = [
             "rhs_weap_m16a4_carryhandle",
             "rhs_weap_m16a4_carryhandle",
-            "rhs_weap_m16a4_carryhandle",
+            "rhs_weap_m16a4_imod",
             "rhs_weap_m16a4"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
@@ -61,7 +61,9 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m16a4_carryhandle_M203"
+            "rhs_weap_m16a4_carryhandle_M203",
+            "rhs_weap_m16a4_carryhandle_M203",
+            "rhs_weap_m16a4_imod_M203"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
     };
@@ -69,7 +71,7 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_mk17_STD"
+            "rhs_weap_mk17_CQC"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -107,7 +109,7 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m27iar"
+            "rhs_weap_m27iar_grip"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
     };
@@ -143,10 +145,16 @@
     if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "",
-            "",
-            "rhsusf_acc_grip3",
+            "rhsusf_acc_tdstubby_blk",
+            "rhsusf_acc_kac_grip",
             "rhsusf_acc_kac_grip",
             "rhsusf_acc_rvg_blk"
+        ];
+    };
+    if (_Rifle == 3) then{
+        _gripArray = [
+            "",
+            "rhsusf_acc_grip_m203_blk"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

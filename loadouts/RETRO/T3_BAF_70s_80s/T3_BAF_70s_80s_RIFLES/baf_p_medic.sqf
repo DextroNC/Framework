@@ -19,9 +19,10 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
-    _unit addItemToUniform "Chemlight_green";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
@@ -56,6 +57,7 @@ comment "Add Medical";
     for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
     for "_i" from 1 to 4 do {_unit addItemToBackpack "SR_Medicine_Pack";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "SR_Utility_Pack";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "CBRN_gasmaskFilter";};
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
@@ -68,7 +70,7 @@ _unit linkItem "ItemRadioAcreFlagged";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit addItem "ACE_IR_Strobe_Item";
+    
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PM", true];
@@ -77,3 +79,4 @@ _unit setVariable ["ace_medical_medicClass",2,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

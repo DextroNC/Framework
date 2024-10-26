@@ -17,6 +17,7 @@ comment "Add Uniforms/Items";
     _unit forceAddUniform "rhsgref_uniform_para_ttsko_mountain";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -39,14 +40,14 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_aks74un";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addWeapon "rhs_weap_makarov_pm";
+    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
 
 comment "Add Navigation";
@@ -59,7 +60,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS31_WP", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID","USP_PVS31_WP_TAR_MID_TAN","USP_PVS31_WP_BLK2", "USP_PVS31_WP_TAN2", "USP_PVS31_WP_HIGH_BLK2", "USP_PVS31_WP_HIGH_TAN2", "USP_PVS31_WP_MID_BLK2", "USP_PVS31_WP_MID_TAN2", "USP_PVS31_WP_TAR_BLK2", "USP_PVS31_WP_TAR_TAN2", "USP_PVS31_WP_TAR_HIGH_BLK2", "USP_PVS31_WP_TAR_HIGH_TAN_BLK2", "USP_PVS31_WP_TAR_MID_BLK2", "USP_PVS31_WP_TAR_MID_TAN2"];
+    _unit linkItem selectRandom ["USP_PVS31_WP_BLK", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH_BLK","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID_BLK","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR_BLK", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH_BLK","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID_BLK","USP_PVS31_WP_TAR_MID_TAN","USP_PVS31_WP_BLK2", "USP_PVS31_WP_TAN2", "USP_PVS31_WP_HIGH_BLK2", "USP_PVS31_WP_HIGH_TAN2", "USP_PVS31_WP_MID_BLK2", "USP_PVS31_WP_MID_TAN2", "USP_PVS31_WP_TAR_BLK2", "USP_PVS31_WP_TAR_TAN2", "USP_PVS31_WP_TAR_HIGH_BLK2", "USP_PVS31_WP_TAR_HIGH_TAN_BLK2", "USP_PVS31_WP_TAR_MID_BLK2", "USP_PVS31_WP_TAR_MID_TAN2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
@@ -69,3 +70,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

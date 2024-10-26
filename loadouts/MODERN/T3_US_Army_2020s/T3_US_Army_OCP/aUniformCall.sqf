@@ -106,7 +106,7 @@ _ess_list = [
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
-if (_helmet in _ess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"]) then {_class = 5};
+if (_helmet in _ess_list) then {_class = 5};
 
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values

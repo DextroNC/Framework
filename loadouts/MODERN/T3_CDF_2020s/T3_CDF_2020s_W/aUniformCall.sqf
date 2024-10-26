@@ -64,17 +64,50 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = ["7r_odg_modhelm"];
+        _hatArray = [
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset_ess",
+            "7r_odg_wz2005_headset_ess",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005"
+        ];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = ["7r_klmk_modhelm"];
+        _hatArray = [
+            "7r_klmk_wz2005_ess",
+            "7r_klmk_wz2005_ess",
+            "7r_klmk_wz2005_headset",
+            "7r_klmk_wz2005_headset",
+            "7r_klmk_wz2005_headset",
+            "7r_klmk_wz2005_headset_ess",
+            "7r_klmk_wz2005_headset_ess",
+            "7r_klmk_wz2005",
+            "7r_klmk_wz2005",
+            "7r_klmk_wz2005"
+        ];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = ["7r_odg_modhelm"];
+        _hatArray = [
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_ess",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset",
+            "7r_odg_wz2005_headset_ess",
+            "7r_odg_wz2005_headset_ess",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005",
+            "7r_odg_wz2005"
+        ];
     };
 
     //Sierra
@@ -91,29 +124,58 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
+_goggleList = [
+    "7r_odg_wz2005_ess",
+    "7r_odg_wz2005_headset_ess",
+    "7r_klmk_wz2005_headset_ess",
+    "7r_klmk_wz2005_ess"
+];
+
+_goggles = false;
+if (_helmet in _goggleList) then {_goggles = true;};
+
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
     if (_Class > 2) then{
-        _goggleArray = [
-            "rhsusf_shemagh2_od", 0.025,
-            "rhs_googles_clear", 0.325,
-            "rhs_scarf", 0.1,
-            "rhsusf_oakley_goggles_clr", 0.1625,
-            "rhsusf_shemagh2_gogg_od", 0.0625,
-            "rhsusf_oakley_goggles_blk", 0.1625,
-            "rhsusf_shemagh2_clear_gogg_od", 0.0625
-        ];
+        if _goggles then {
+            _goggleArray = [
+                "rhsusf_shemagh2_white", 0.15,
+                "rhs_googles_clear", 0.325,
+                "rhs_scarf", 0.1,
+                "", 0.325
+            ];
+        } else {
+            _goggleArray = [
+                "rhsusf_shemagh2_white", 0.025,
+                "rhs_googles_clear", 0.325,
+                "rhs_scarf", 0.1,
+                "rhsusf_oakley_goggles_clr", 0.1625,
+                "rhsusf_shemagh2_gogg_white", 0.0625,
+                "rhsusf_oakley_goggles_blk", 0.1625,
+                "rhsusf_shemagh2_clear_gogg_white", 0.0625
+            ];
+        };
     } else {
-        _goggleArray = [
-            "7r_scrim_winter", .4,
-            "rhsusf_shemagh2_od", 0.025,
-            "rhs_googles_clear", 0.2,
-            "rhs_scarf", 0.075,
-            "rhsusf_oakley_goggles_clr", 0.1,
-            "rhsusf_shemagh2_gogg_od", 0.05,
-            "rhsusf_oakley_goggles_blk", 0.1,
-            "rhsusf_shemagh2_clear_gogg_od", 0.05
-        ];
+        if _goggles then {
+            _goggleArray = [
+                "7r_scrim_winter", .4,
+                "rhsusf_shemagh2_white", 0.125,
+                "rhs_googles_clear", 0.2,
+                "rhs_scarf", 0.075,
+                "", 0.2
+            ];
+        } else {
+            _goggleArray = [
+                "7r_scrim_winter", .4,
+                "rhsusf_shemagh2_white", 0.025,
+                "rhs_googles_clear", 0.2,
+                "rhs_scarf", 0.075,
+                "rhsusf_oakley_goggles_clr", 0.1,
+                "rhsusf_shemagh2_gogg_white", 0.05,
+                "rhsusf_oakley_goggles_blk", 0.1,
+                "rhsusf_shemagh2_clear_gogg_white", 0.05
+            ];
+        };
     };
 
     //Selects random googles from determined array

@@ -16,10 +16,8 @@ if(isServer) then {
     
     if (isNil "SR_Night") then {SR_Night = false};
     if (SR_Night) then {
-        this additemcargoGlobal ["ACE_IR_Strobe_Item", 40];
         this additemcargoGlobal ["ACE_HandFlare_Red", 40];
         this additemcargoGlobal ["ACE_HandFlare_Green", 40];
-        this additemcargoGlobal ["Chemlight_green", 40];
-        this additemcargoGlobal ["B_IR_Grenade", 40];
+        this additemcargoGlobal ["ACE_Chemlight_HiGreen", 40];
     };
 };

@@ -21,7 +21,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_m18_purple";};
-_unit addItemToUniform "Chemlight_green";
+_unit addItemToUniform "ACE_Chemlight_HiGreen";
 _unit addItemToUniform "ACE_HandFlare_Green";
 _unit addVest "UK3CB_V_Invisible";
 _unit addItemToVest "ACE_microDAGR";
@@ -55,3 +55,4 @@ _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

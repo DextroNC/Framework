@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -35,8 +36,8 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_OGA_Backpack_Kitbag";
     _unit addItemToBackpack "ACE_EntrenchingTool";
-    for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
+    for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_mag_maaws_HEAT";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_maaws_HE";};
 
 comment "Add Drip";
 
@@ -72,3 +73,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

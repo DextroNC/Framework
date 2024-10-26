@@ -33,7 +33,9 @@
             "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_02",
-            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02"
+            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN"
         ];
     };
 
@@ -43,7 +45,9 @@
             "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_02",
-            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02"
+            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN"
         ];
     };
 
@@ -53,7 +57,9 @@
             "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01",
             "UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_02",
-            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02"
+            "UK3CB_AAF_B_U_CombatUniform_Digi_Mix_02",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN",
+            "UK3CB_AAF_B_U_JumperUniform_DIGI_GRN"
         ];
     };
 

@@ -73,10 +73,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_pip_ris",
-            "rhs_weap_m249_light_L",
-            "rhs_weap_m249_pip_L_para",
-            "rhs_weap_m249_pip_L"
+            "rhs_weap_m249_light_S",
+            "rhs_weap_m249_pip_S_para",
+            "rhs_weap_m249_pip_S"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
@@ -115,7 +114,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec"
+            "rhs_weap_mk17_LB"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };

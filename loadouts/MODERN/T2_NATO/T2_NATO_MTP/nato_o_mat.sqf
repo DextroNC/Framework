@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -44,7 +45,12 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "launch_MRAWS_green_F";
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+        _unit addWeapon "launch_MRAWS_green_F";
+    } else {
+        _unit addWeapon "launch_MRAWS_green_rail_F";
+    };
     _unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 
 comment "Add Ammunition";

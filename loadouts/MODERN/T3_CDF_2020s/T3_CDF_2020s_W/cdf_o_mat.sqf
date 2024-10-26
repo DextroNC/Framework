@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -48,7 +49,13 @@ comment "Add Secondary/Attachments";
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
     _unit addWeapon "rhs_weap_rpg7";
-    _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+        _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+        _unit addItem "rhs_acc_1pn93_2";
+    } else {
+        _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
+    };
     _unit addSecondaryWeaponItem "rhs_rpg7_PG7VL_mag";
 
 comment "Add Ammunition";
@@ -76,3 +83,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","G_CBRN_M04"];

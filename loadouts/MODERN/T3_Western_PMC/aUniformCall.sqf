@@ -177,15 +177,16 @@ _unit forceAddUniform selectRandom _uniformArray;
             "rhsusf_mich_bare_norotos_arc_tan",
             "rhsusf_mich_bare_norotos_arc_alt_tan",
             "rhsusf_mich_bare_norotos_arc_alt_tan_headset",
-            "rhssaf_helmet_m97_olive_nocamo",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess",
-            "rhssaf_helmet_m97_olive_nocamo_black_ess_bare",
-            "rhssaf_helmet_m97_black_nocamo",
-            "rhssaf_helmet_m97_black_nocamo_black_ess",
-            "rhssaf_helmet_m97_black_nocamo_black_ess_bare",
-            "rhssaf_helmet_m97_black_nocamo",
-            "rhssaf_helmet_m97_black_nocamo_black_ess",
-            "rhssaf_helmet_m97_black_nocamo_black_ess_bare"
+            "rhsusf_opscore_rg_cover",
+            "rhsusf_opscore_rg_cover_pelt",
+            "rhsusf_opscore_fg",
+            "rhsusf_opscore_fg_pelt",
+            "rhsusf_opscore_fg_pelt_cam",
+            "rhsusf_opscore_fg_pelt_nsw",
+            "7r_ocp_opscore",
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_3",
+            "7r_ocp_opscore_4"
         ];
     };
 
@@ -213,7 +214,23 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "UK3CB_H_Ballistic_Mask_Snakeskin_B"
+            "rhsusf_mich_bare_norotos_arc",
+            "rhsusf_mich_bare_norotos_arc_alt",
+            "rhsusf_mich_bare_norotos_arc_alt_headset",
+            "rhsusf_mich_bare_norotos_arc_headset",
+            "rhsusf_mich_bare_norotos_arc_tan",
+            "rhsusf_mich_bare_norotos_arc_alt_tan",
+            "rhsusf_mich_bare_norotos_arc_alt_tan_headset",
+            "rhsusf_opscore_rg_cover",
+            "rhsusf_opscore_rg_cover_pelt",
+            "rhsusf_opscore_fg",
+            "rhsusf_opscore_fg_pelt",
+            "rhsusf_opscore_fg_pelt_cam",
+            "rhsusf_opscore_fg_pelt_nsw",
+            "7r_ocp_opscore",
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_3",
+            "7r_ocp_opscore_4"
         ];
     };
     //Selects random hat from determined array, runs
@@ -229,16 +246,6 @@ _unit addHeadgear selectRandom _hatArray;
         "rhsusf_oakley_goggles_clr", 0.1625,
         "milgp_f_face_shield_goggles_RGR", 0.075
     ];
-
-    if (headgear _unit in ["rhssaf_helmet_m97_black_nocamo_black_ess","rhssaf_helmet_m97_black_nocamo_black_ess_bare","rhssaf_helmet_m97_olive_nocamo_black_ess","rhssaf_helmet_m97_olive_nocamo_black_ess_bare"]) then {
-        _goggleArray =[
-            "milgp_f_face_shield_RGR", 0.07,
-            "rhs_googles_clear", 0.3875,
-            "rhs_scarf", 0.1,
-            "G_Bandanna_oli", 0.05,
-            "", 0.325
-        ];
-    };
 
     //Selects random googles from determined array
 _unit addGoggles selectRandomWeighted _goggleArray;

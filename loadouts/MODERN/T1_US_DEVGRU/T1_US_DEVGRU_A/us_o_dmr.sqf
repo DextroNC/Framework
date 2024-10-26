@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -41,7 +42,7 @@ comment "Add Primary/Attachments";
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_su230";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "bipod_01_f_blk";
+    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
 
@@ -61,7 +62,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS31_WP","USP_PVS31_WP_HIGH","USP_PVS31_WP_MID","USP_PVS31_WP_TAR","USP_PVS31_WP_TAR_HIGH","USP_PVS31_WP_TAR_MID"];
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2"];
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SDMR", true];
@@ -70,3 +71,4 @@ _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 
 _unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","7r_m50_gasmask"];

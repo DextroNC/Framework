@@ -69,7 +69,7 @@
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_sard",1
         ];
     };
     

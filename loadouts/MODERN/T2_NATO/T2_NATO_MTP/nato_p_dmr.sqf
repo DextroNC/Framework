@@ -19,6 +19,7 @@ removeGoggles _unit;
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -45,7 +46,6 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_aac_762sd_silencer";
     _unit addPrimaryWeaponItem "bipod_01_f_blk";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 
 comment "Add Secondary/Attachments";
 

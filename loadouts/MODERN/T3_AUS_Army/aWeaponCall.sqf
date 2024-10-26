@@ -40,6 +40,7 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "7r_weap_ef88_black",
+            "7r_weap_ef88_black",
             "7r_weap_ef88"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -48,6 +49,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
+            "7r_weap_ef88_c_black",
             "7r_weap_ef88_c_black",
             "7r_weap_ef88_c"
         ];
@@ -58,6 +60,7 @@
     if (_Rifle == 3) then{
         _primaryArray = [
             "7r_weap_ef88_gl_black",
+            "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -66,7 +69,8 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "arifle_SPAR_03_blk_F"
+            "7r_weap_hk417",
+            "7r_weap_hk417vfg"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -118,8 +122,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -130,25 +135,31 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     if ((_Rifle == 4) or (_Rifle == 10) or (_Rifle == 7) or (_Rifle == 8)) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if (_Rifle == 7) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_kac_grip"
+        ];
+    };
+    if (_Rifle == 5) then{
+        _gripArray = [
+            "rhsusf_acc_kac_grip_saw_bipod",
+            "rhsusf_acc_grip4_bipod"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     if (_Rifle >= 1) then{
         _unit addPrimaryWeaponItem selectRandom _attachmentArray;
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if ((_Rifle <= 5) or (_Rifle == 10) or (_Rifle == 7)) then{
         _unit addPrimaryWeaponItem selectRandom _gripArray;
     };
 
