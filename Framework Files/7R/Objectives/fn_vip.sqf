@@ -20,18 +20,21 @@ if (!isServer) exitWith {};
 
 // Parameter Init
 params ["_unit",["_animation", 32],["_sleeper",0]];
+private _group = group _unit;
 
-// Remove VCOM
-(group _unit) setVariable ["Vcm_Disable",true];
+// Modify AI Behaviour and disable AI Mods
+_group setVariable ["Vcm_Disable",true];
+_group setVariable ["lambs_danger_disableGroupAI", true];
+_unit setVariable ["lambs_danger_disableAI", true];
 
-// Remove HC transfer
+// Remove from HC transfer
 _unit setVariable ["acex_headless_blacklist", true];
+
+// Remove HVT from dead body clean up
+_unit setVariable ["SR_NoRemoval", true, true];
 
 // Ambient Animation
 [_unit, _animation] spawn fw_fnc_ambientAnimation;
-
-// Remove VIP from dead body clean up
-_unit setVariable ["SR_NoRemoval", true, true];
 
 // Add Sleeper mode
 if (_sleeper > 0) exitWith {

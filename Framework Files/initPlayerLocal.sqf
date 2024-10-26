@@ -50,7 +50,7 @@ _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
 // Extraction
-_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{["EZ","STARTSPAWN",SR_Support_Assets select 4,"dropoff",_player] remoteExec ["fw_fnc_exfilCall",2];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_ca.paa",{["EZ","STARTSPAWN",SR_Support_Assets select 3,"dropoff",_player] remoteExec ["fw_fnc_exfilCall",2];},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
 // Vehicle Drop
@@ -80,27 +80,22 @@ _ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAF] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS
-_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 2,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
-_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 2,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
 
 // UAV
-_UAV = ["7R_UAV","Call UAV","",{["UAVTarget","STARTSPAWN",SR_Support_Assets select 5] remoteExec ["fw_fnc_uav",0];},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+_UAV = ["7R_UAV","Call UAV","",{["UAVTarget","STARTSPAWN",SR_Support_Assets select 4] remoteExec ["fw_fnc_uav",0];},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _UAV] call ace_interact_menu_fnc_addActionToClass;
-
-// Pilot Recall
-_CRC = {(player getVariable ["SR_Class","Rifleman"]) in ["Pilot","TC"] && (vehicle player == player)};
-_rec = ["7R_SD_SpawnH","Base Recall","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\exit_ca.paa",{nul = [_player,_player] spawn fw_fnc_recall;},_CRC] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","ACE_TeamManagement"], _rec] call ace_interact_menu_fnc_addActionToClass;
 
 // Pilot Supply Spawn
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
-_CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{},_CSC,{[target, _player, _params] call fw_fnc_supplySlingAction;}] call ace_interact_menu_fnc_createAction;
+_CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{},_CSC,{[_target, _player, _params] call fw_fnc_supplySlingAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","ACE_Equipment"], _CSH] call ace_interact_menu_fnc_addActionToClass;
 
 // Load Supply Spawn
-_SLD = ["7R_SD_Load","Load Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\truck_ca.paa",{},_conditionsVehicle,{[target, _player, _params] call fw_fnc_supplySpawnAction;}] call ace_interact_menu_fnc_createAction;
+_SLD = ["7R_SD_Load","Load Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\truck_ca.paa",{},_conditionsVehicle,{[_target, _player, _params] call fw_fnc_supplySpawnAction;}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_VehicleHeader"], _SLD] call ace_interact_menu_fnc_addActionToClass;
 
 // Undercover
@@ -112,4 +107,5 @@ _uc2 = ["7R_UC","Exit Undercover","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rifle
 
 
 // Hacking
-SR_Hack_Area = [];
+//Example: SR_Hack = [hack1,hack2]; both hack1 and hack2 being variable names of the area triggers
+SR_Hack = [];

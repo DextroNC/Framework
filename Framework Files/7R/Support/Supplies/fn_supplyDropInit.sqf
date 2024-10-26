@@ -32,15 +32,15 @@ if (isNil "SupplyDropAmmo") then {SupplyDropAmmo = 12; publicVariable "SupplyDro
 // Check availability
 // Cooldown check
 if (CBA_MissionTime - SupplyDropLast < 30 && !_forced) exitWith {
-	["Negative: No Supply Drop available. Other Missions in progress.","SD: Currently Busy"] spawn fw_fnc_info;
+	["Negative: No Supply Drop available. Other Missions in progress."] spawn fw_fnc_info;
 };
 // Ammo check
 if (SupplyDropAmmo <= 0 && !_forced) exitWith {
-	["Negative: No Supply Drop available. Out of Resources.","SD: Out of Resources"] spawn fw_fnc_info;
+	["Negative: No Supply Drop available. Out of Resources."] spawn fw_fnc_info;
 };
 // No target location check
 if (_target isEqualto [0,0,0]) exitWith {
-	["No Supply Drop Zone designated.","SD: No Drop Zone"] spawn fw_fnc_info;
+	["Negative: No Supply Drop Zone designated."] spawn fw_fnc_info;
 };
 
 // Create reference for lock
@@ -101,37 +101,17 @@ private _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition 
 
 
 // Calculating waypoints drop and end
-private _wpDrop = [_target, 150,_dir] call BIS_fnc_relPos;
+private _wpDrop = [_target, 100,_dir] call BIS_fnc_relPos;
 private _wpEnd = [_target, 3500, _dir] call BIS_fnc_relPos;
 
 
-// Send aircraft to drop waypoint
-_aircraft doMove _wpDrop;
+// Create Waypoints
+[_group, _wpDrop, "DROP"] call fw_fnc_createWaypoint;
+[_group, _wpEnd, "END"] call fw_fnc_createWaypoint;
 
-// Open ramp once close to drop
-waitUntil {(_aircraft distance2D _wpDrop) < 800 || !(alive _aircraft)};
-_aircraft animate ["ramp_bottom",1];
-_aircraft animate ["ramp_top",1];
-_aircraft doMove _wpDrop;
-
-// Drop attached boxes or vehicles
-waitUntil {(_aircraft distance2D _wpDrop) < 150 + random 20};
-[_aircraft] spawn fw_fnc_supplyDropEject;
-["Supply Drop delivered."] spawn fw_fnc_info;
-
-// Send aircraft to end waypoint
-waitUntil {(_aircraft distance2D _wpDrop) < (20 + (15 * _amount)) || !(alive _aircraft)};
-_aircraft doMove _wpEnd;
-
-// Close ramp
-_aircraft animate ["ramp_bottom",0];
-_aircraft animate ["ramp_top",0];
-
-// Move to end point
-_aircraft doMove _wpEnd;
 
 // Wait until aircraft reaches end point and then delete aircraft
-waitUntil{(_aircraft distance2D  _wpEnd) < 500 || !(alive _aircraft) || (CBA_MissionTime - SupplyDropLast > 360)};
+waitUntil{!(alive _aircraft) || (CBA_MissionTime - SupplyDropLast > 360)};
 [leader _group] call fw_fnc_deleteVehicle;
 
 
@@ -140,4 +120,4 @@ SupplyDropAmmo = SupplyDropAmmo - _amount;
 publicVariable 'SupplyDropAmmo';
 
 // End message
-["Supply Drop Mission completed."] spawn fw_fnc_info;
+[(_msg + " Drop Mission completed.")] spawn fw_fnc_info;

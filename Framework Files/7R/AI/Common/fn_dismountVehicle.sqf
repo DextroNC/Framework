@@ -17,7 +17,7 @@ _originalGroup = group _leader;
 _originalGroup setVariable ["Vcm_Disable",false,true]; 
 
 // Check if Vehicle is Armed
-if (isNull (gunner vehicle _leader)) then {
+if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 	// Single Group Dismount
 	units _originalGroup orderGetIn false;
 	units _originalGroup allowGetIn false;
@@ -51,11 +51,13 @@ if (isNull (gunner vehicle _leader)) then {
 			[_x select 0] join _ng;
 		};
 	}forEach fullCrew [_v, "cargo", true];
-	{
-		if (!isNull (_x select 0)) then {
-			[_x select 0] join _ng;
-		};
-	}forEach fullCrew [_v, "turret", true];
+	if !(_v isKindOf "Air") then {
+		{
+			if (!isNull (_x select 0)) then {
+				[_x select 0] join _ng;
+			};
+		}forEach fullCrew [_v, "turret", true];
+	};
 
 	// Cargo leave Vehicle
 	units _ng orderGetIn false;
@@ -76,9 +78,14 @@ if (isNull (gunner vehicle _leader)) then {
 		_array remoteExec ["fw_fnc_patrol",2];
 
 		// Patrol Script Params for Vehicle
-		_array2 = [leader _newGroup];
+		_array2 = [leader _originalGroup];
 		_array2 append _patrolParams;
 		// Patrol Script init Vehicle
-		_array2 remoteExec ["fw_fnc_patrol",2];
+		if (_v isKindOf "Air") then {
+			_pa = [_array2 select 1] call CBA_fnc_getArea;
+			[_originalGroup, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
+		} else {
+			_array2 remoteExec ["fw_fnc_patrol",2];
+		};
 	};
 };

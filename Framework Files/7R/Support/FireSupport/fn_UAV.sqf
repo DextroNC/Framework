@@ -22,7 +22,7 @@
 if (!isServer) exitWith {};
 
 // Parameter Init
-Params ["_targetMarker","_spawnMarker",["_uavClass","UK3CB_BAF_MQ9_Reaper"],["_weaponized", true],["_altitude",1500],["_loiterRadius",1500],["_timeOnTarget",600],["_delay",0]];
+Params ["_targetMarker","_spawnMarker",["_uavClassArray","UK3CB_BAF_MQ9_Reaper"],["_weaponized", true],["_altitude",1500],["_loiterRadius",1500],["_timeOnTarget",600],["_delay",0]];
 private _targetPos = markerPos _targetMarker;
 private _infoStr = "";
 
@@ -52,25 +52,41 @@ publicVariable "UAVCallAmmo";
 private _dirSpawn = _targetPos getDir (markerPos _spawnMarker);
 private _spawnPos = [_targetPos, 3000,_dirSpawn] call BIS_fnc_relPos;
 
+
 // Spawn UAV and set it up
+private _uavClass = "";
+private _pylons = [];
+switch (typeName _uavClassArray) do
+{
+	// Default without pylon adjustment
+	case "STRING": {
+		_uavClass = _uavClassArray;
+	};
+	// Check if pylons to apply
+	case "ARRAY": {
+		_uavClass = _uavClassArray select 0;
+		_pylons = _uavClassArray select 1;
+	};
+};
 
-private _uavSpawnReturn = [_spawnPos, (_dirSpawn)-180, _uavClass, SR_Side] call bis_fnc_spawnVehicle;
+// Spawn UAV
+private _uavSpawnReturn = [_spawnPos, (_dirSpawn)-180, (_uavClass), SR_Side] call bis_fnc_spawnVehicle;
 _uavSpawnReturn params ["_uav", "_crew", "_group"];
-
 [_uav, _altitude] call BIS_fnc_setHeight;
 _uav flyInHeight _altitude;
 _uav lockDriver true;
 _uav enableuavwaypoints false;
-_uav disableAI "AUTOCOMBAT";
-_uav disableAI "AUTOTARGET";
-if (_weaponized) then {
-	_uav setVehicleAmmo 0.5;
-} else{
-	_uav setVehicleAmmo 0;
-};
+[_group] spawn sr_support_fnc_supportAI;
 
-_uav setAmmo ["UK3CB_BAF_Laserdesignator_mounted",1];
-_uav setAmmo ["Laserdesignator_mounted",1];
+// Adjust weaponry
+if (count _pylons > 0 && _weaponized) then {
+	[_uav, _pylons] spawn fw_fnc_changePylons;
+};
+if (!_weaponized) then {
+	_uav setVehicleAmmo 0;
+	_uav setAmmo ["UK3CB_BAF_Laserdesignator_mounted",1];
+	_uav setAmmo ["Laserdesignator_mounted",1];
+};
 
 _uav setVariable ["arrivalOnTarget", CBA_MissionTime + 30];
 _uav setVariable ["targetLocation",_targetPos];

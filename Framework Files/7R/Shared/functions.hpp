@@ -18,13 +18,8 @@
 		class clearArea {};
 		class sortUnitsByGroup{};
 		class removeNVG{};
-		class zeus{};
-		class recall{};
 		class info{};
 		class findLocation{};
-		class supplyDropAction{};
-		class supplySlingAction{};
-		class supplySpawnAction{};
 		class debrief{};
 	};
 	class template
@@ -74,6 +69,9 @@
 		class vehicleDropAction{};
 		class supplyLoad{};
 		class supplySpawn{};
+		class supplyDropAction{};
+		class supplySlingAction{};
+		class supplySpawnAction{};
 	};
 	class exfil {
 		file = "7R\Support\Exfil";
@@ -81,7 +79,7 @@
 		class exfilCall{};
 	};
 	class reinf {
-		file = "7R\REINF";
+		file = "7R\Support\REINF";
 		class reinfInit{};
 		class reinfMove{};
 		class reinfAction{};
@@ -102,7 +100,7 @@
 		file = "7R\ParaDrop";
 		class paraDrop{};
 		class paraDropPlane{};
-		class paraDropPlaneSelection{};
+		class freefallDrop{};
 	};
 	class teleport {
 		file = "7R\Teleport";
@@ -114,6 +112,7 @@
 		class vehicleSpawn{};
 		class heloSpawn{};
 		class cargoSpawn{};
+		class changePylons{};
 	};
 	class special {
 		file = "7R";
