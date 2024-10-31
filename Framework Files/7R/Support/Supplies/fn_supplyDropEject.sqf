@@ -23,8 +23,7 @@ _vehicle animate ["ramp_top",1];
 {
 	// Prepare and Detach
 	_x setOwner (owner _vehicle);
-	_x disableCollisionWith _vehicle;
-	_x hideObject false;
+	_x hideObjectGlobal false;
 	detach _x;
 
 	// Create and Attach Parachute

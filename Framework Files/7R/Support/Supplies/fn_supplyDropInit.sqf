@@ -67,8 +67,7 @@ if (count _vehicleArray == 0) then {
 	// Spawn and attach boxes to memory points of the aircraft
 	for [{_i= 1},{_i <= _amount},{_i = _i + 1}] do {
 		_adj = _i + (_i * 0.8);
-		_adj = 0.5;
-		_off = [-1.5,_adj,1.1];
+		_off = [0,-5-_adj,0];
 		[_aircraft, "cargo_mem_2", _off, _mode] spawn fw_fnc_supplyDropBox;
 	};
 } else {
@@ -76,12 +75,11 @@ if (count _vehicleArray == 0) then {
 	// Spawn and attach vehicles to memory points of the aircraft
 	_msg = "Vehicle";
 	for [{_i= 1},{_i <= _amount},{_i = _i + 1}] do {
-		_adj = _i + (_i * 0.8);
-		_adj = 0.5;
-		_off = [-1.5,_adj,1.1];
+		_adj = _i + (_i * 3);
+		_off = [0,-12-_adj,0];
 		private _vehicle = createVehicle [_vehicleClass, [0,0,1000], [], 0, "NONE"];
 		_vehicle disableCollisionWith _aircraft;
-		_vehicle hideObject true;
+		_vehicle hideObjectGlobal true;
 		_vehicle attachTo [_aircraft,_off];
 		// Load vehicle inventory
 		if (_vehicleLoadout >= 0) then {
@@ -101,7 +99,7 @@ private _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition 
 
 
 // Calculating waypoints drop and end
-private _wpDrop = [_target, 100,_dir] call BIS_fnc_relPos;
+private _wpDrop = [_target, 80 + random(40),_dir] call BIS_fnc_relPos;
 private _wpEnd = [_target, 3500, _dir] call BIS_fnc_relPos;
 
 
