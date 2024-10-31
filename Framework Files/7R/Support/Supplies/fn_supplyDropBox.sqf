@@ -16,7 +16,7 @@ params["_plane","_mem","_off",["_mode", 0]];
 
 // Create Supply Box
 private _box = [_mode] call fw_fnc_supplySpawn;
-_box hideObject true;
+_box hideObjectGlobal true;
 
 // Attach Box to Plane
 _box attachTo [_plane,_off,_mem];
