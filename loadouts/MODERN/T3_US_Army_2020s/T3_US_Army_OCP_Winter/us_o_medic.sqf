@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 // 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
-[_unit, 1] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";

@@ -14,7 +14,6 @@
 // Parameter Init
 params ["_vehicle"];
 private _cargo = assignedCargo _vehicle;
-systemChat "Start Drop";
 
 // Exit if vehicle is not local
 if(!local _vehicle) exitWith {};
@@ -26,7 +25,6 @@ private _delay =  (1 / (((speed _vehicle) max 55) / 100));
 private _group = group leader _vehicle;
 deleteWaypoint [_group, currentWaypoint _group];
 _group setSpeedMode "LIMITED";
-
 
 // Open door
 _vehicle animate ["Door_1_source",1];
@@ -46,4 +44,4 @@ _vehicle animate ["Door_1_source",1];
 // Close door
 _group setSpeedMode "NORMAL";
 _vehicle animate ["Door_1_source",0];
-["Paradrop Plane has dropped its units dropped."] spawn fw_fnc_info;
+["Paradrop complete."] spawn fw_fnc_info;
