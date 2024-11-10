@@ -128,7 +128,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "7r_scrim_semi", 0.425,
+            "7r_scrim_lush", 0.425,
             "UK3CB_G_Neck_Shemag_Tan", 0.2,
             "rhs_googles_clear", 0.125,
             "", 0.05,
@@ -140,7 +140,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
     //Echo Goggles On Helmet
     if (_Class == 1.5) then{
         _goggleArray = [
-            "7r_scrim_semi", 0.475,
+            "7r_scrim_lush", 0.475,
             "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.125
         ];
@@ -149,7 +149,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "7r_scrim_semi", 0.425,
+            "7r_scrim_lush", 0.425,
             "UK3CB_G_Neck_Shemag_Tan", 0.2,
             "rhs_googles_clear", 0.125,
             "", 0.05,
@@ -161,7 +161,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
     //Squad Goggles On Helmet
     if (_Class == 2.5) then{
         _goggleArray = [
-            "7r_scrim_semi", 0.475,
+            "7r_scrim_lush", 0.475,
             "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.125
         ];
