@@ -9,6 +9,7 @@ this addaction ["<t color=""#00FF00"">" +"SU278 (Low)", "7R\Loadouts\7R_EQ.sqf",
 this addaction ["<t color=""#00FF00"">" +"MRDS", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_mrds"]];
 this addaction ["<t color=""#00FF00"">" +"MRDS (Tan)", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_mrds_c"]];
 this addaction ["<t color=""#00FF00"">" +"RX01", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_rx01_nofilter"]];
+this addaction ["<t color=""#00FF00"">" +"RX01 (Tan)", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_RX01_NoFilter_tan"]];
 this addaction ["<t color=""#00FF00"">" +"M68 CCO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_compm4"]];
 this addaction ["<t color=""#FF8C00"">" +"HAMR", "7R\Loadouts\7R_EQ.sqf",["optic_Hamr"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG3_USMC"]];
