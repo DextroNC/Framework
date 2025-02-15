@@ -28,13 +28,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest selectRandom ["usm_vest_lbe_rm","usm_vest_lbe_rm2","usm_vest_lbe_rmp"];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_US_Medic_Backpack";
+    _unit addBackpack "B_FieldPack_green_F";
     
 comment "Add Drip";
 

@@ -33,7 +33,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
 
 comment "Add Drip";
-    _unit addHeadgear "H_HelmetCrew_I";
+    _unit addHeadgear "rhsusf_cvc_green_alt_helmet";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";

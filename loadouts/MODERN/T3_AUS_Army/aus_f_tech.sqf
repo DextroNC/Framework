@@ -35,7 +35,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "H_HelmetCrew_I";
+    _unit addHeadgear "rhsusf_cvc_green_ess";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "7r_weap_ef88_c_black";

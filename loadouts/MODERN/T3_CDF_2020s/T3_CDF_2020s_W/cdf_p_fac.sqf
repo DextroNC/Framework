@@ -28,11 +28,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"7r_klmk_modvest_recon",2,
-		"7r_klmk_modvest_compact",2,
-		"7r_klmk_modvest_combat",2];
+comment "Add Vest/Items";    
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_klmk_modvest_recon","7r_klmk_modvest_combat","7r_klmk_modvest_compact"];
+    } else {
+        _unit addVest selectRandom ["7r_ttsko_modvest_recon","7r_ttsko_modvest_combat","7r_ttsko_modvest_compact"];
+    };
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -43,6 +45,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_O_RadioBag_KHK";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
+    _unit addItem "7r_compact_drone";
+    _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
     _unit addItemToBackpack "H_MilCap_grn";
@@ -64,7 +68,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+_unit linkItem "B_UavTerminal";
 
 
 comment "Other Variables";

@@ -34,13 +34,14 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_Alice_pack_04_M81";
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

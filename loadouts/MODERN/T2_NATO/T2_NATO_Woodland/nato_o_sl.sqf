@@ -39,7 +39,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
 _unit addBackpack "B_AssaultPack_tna_F";
 
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
 

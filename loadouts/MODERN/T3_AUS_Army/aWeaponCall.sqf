@@ -41,6 +41,7 @@
         _primaryArray = [
             "7r_weap_ef88_black",
             "7r_weap_ef88_black",
+            "7r_weap_ef88_black",
             "7r_weap_ef88"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -51,6 +52,7 @@
         _primaryArray = [
             "7r_weap_ef88_c_black",
             "7r_weap_ef88_c_black",
+            "7r_weap_ef88_c_black",
             "7r_weap_ef88_c"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
@@ -59,6 +61,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
+            "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl_black",
             "7r_weap_ef88_gl"
@@ -122,6 +125,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
+            "7r_weap_ef88_c_black",
             "7r_weap_ef88_c_black",
             "7r_weap_ef88_c_black",
             "7r_weap_ef88_c"

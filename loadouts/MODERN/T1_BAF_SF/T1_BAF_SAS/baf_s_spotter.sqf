@@ -43,23 +43,24 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_BAF_L119A1_RIS";
-    _unit addPrimaryWeaponItem "uk3cb_baf_silencer_l85";
+    _unit addWeapon "rhs_weap_m4_nsr_d";
+    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
+    _unit addPrimaryWeaponItem "rhs_acc_m4_nsr_d_bcm";
     _unit addPrimaryWeaponItem "uk3cb_baf_llm_ir_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
+    _unit addPrimaryWeaponItem "RKSL_optic_LDS";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
     _unit addHandgunItem "acc_flashlight_pistol";
     _unit addHandgunItem "rhsusf_acc_omega9k";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

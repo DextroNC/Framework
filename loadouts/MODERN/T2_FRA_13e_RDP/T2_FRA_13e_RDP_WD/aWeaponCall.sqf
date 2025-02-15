@@ -185,6 +185,6 @@
 //Adds sidearm, secondary as well as ammunition, attachments
     _unit addWeapon "rhsusf_weap_glock17g4";
     _unit addHandgunItem "acc_flashlight_pistol";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";

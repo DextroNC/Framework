@@ -4,10 +4,11 @@ if(isServer) then {
 	clearitemcargoGlobal this;
 	clearBackpackCargoGlobal this;
 	this addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
-	this addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 60];
-	this addmagazinecargoGlobal ["UK3CB_MG3_250rnd_762x51_RM", 40];
-    this addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 60];
-    this addweaponcargoGlobal ["rhs_weap_m72a7", 30];
+	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 60];
+	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 40];
+    this addmagazinecargoGlobal ["11Rnd_45ACP_Mag", 60];
+    this addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3","","","",["7r_mag_dm12",1],[],""], 20];
+    this addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3_mp","","","",["7r_mag_dm32",1],[],""], 10];
 	this addmagazinecargoGlobal ["MRAWS_HEAT_F", 20];
 	this addmagazinecargoGlobal ["MRAWS_HE_F", 10];
 	this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];

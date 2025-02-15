@@ -42,7 +42,7 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "UK3CB_SVD_OLD_NPZ";
+    _unit addWeapon "rhs_weap_svdp_npz";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
     _unit addPrimaryWeaponItem "rhs_acc_tgpv";
 

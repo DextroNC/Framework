@@ -30,27 +30,36 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_ldf_uniform_ssl",1,
-            "7r_ldf_uniform",1,
-            "U_I_E_Uniform_01_sweater_F",2
+            "7r_bdu_ldf",2,
+            "7r_bdu_bti_ldf",2,
+            "7r_bdu_btisrl_ldf",3,
+            "7r_bdu_srl_ldf",1,
+            "7r_bdu_srh_ldf",1,
+            "7r_bdu_bnu_ldf",3
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_ldf_uniform_ssl",1,
-            "7r_ldf_uniform",1,
-            "U_I_E_Uniform_01_sweater_F",2
+            "7r_bdu_ldf",2,
+            "7r_bdu_bti_ldf",2,
+            "7r_bdu_btisrl_ldf",3,
+            "7r_bdu_srl_ldf",1,
+            "7r_bdu_srh_ldf",1,
+            "7r_bdu_bnu_ldf",3
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_ldf_uniform_ssl",1,
-            "7r_ldf_uniform",1,
-            "U_I_E_Uniform_01_sweater_F",2
+            "7r_bdu_ldf",2,
+            "7r_bdu_bti_ldf",2,
+            "7r_bdu_btisrl_ldf",3,
+            "7r_bdu_srl_ldf",1,
+            "7r_bdu_srh_ldf",1,
+            "7r_bdu_bnu_ldf",3
         ];
     };
 

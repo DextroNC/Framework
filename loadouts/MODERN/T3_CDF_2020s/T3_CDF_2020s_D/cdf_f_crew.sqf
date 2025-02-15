@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhsgref_uniform_para_ttsko_mountain";
+    _unit forceAddUniform selectRandomWeighted ["7r_bdu_bti_ttsko_d",2,"7r_bdu_btisrl_ttsko_d",2,"7r_bdu_srl_ttsko_d",1];
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "7r_ttsko_modvest_crew";
+    _unit addVest "7r_ttsko_d_modvest_crew";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 
 comment "Add Backpack/Items";

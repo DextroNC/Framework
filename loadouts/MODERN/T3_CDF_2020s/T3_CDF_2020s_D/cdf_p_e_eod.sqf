@@ -42,6 +42,8 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintRed";
@@ -49,7 +51,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_MilCap_grn";
+    _unit addItemToBackpack selectRandomWeighted ["H_Bandanna_sand",1,"H_Cap_headphones",1,"rhsusf_bowman_cap",1,"VSM_Bowman_cap_Tan",1,"rhs_headband",1,"VSM_Beanie_tan",1];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

@@ -39,8 +39,8 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -48,8 +48,8 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -121,8 +121,8 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_carryhandle"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -199,6 +199,6 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
     _unit addWeapon "rhsusf_weap_m9";
-    _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_15Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_15Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_15Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_15Rnd_9x19_FMJ";

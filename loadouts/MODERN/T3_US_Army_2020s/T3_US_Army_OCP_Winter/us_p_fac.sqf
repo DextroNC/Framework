@@ -40,9 +40,11 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_RadioBag_01_mtp_F";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
+    _unit addItem "7r_compact_drone";
+    _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_Watchcap_cbr";
+    _unit addItemToBackpack "VSM_Beanie_tan";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -61,7 +63,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+_unit linkItem "B_UavTerminal";
 
 
 comment "Other Variables";

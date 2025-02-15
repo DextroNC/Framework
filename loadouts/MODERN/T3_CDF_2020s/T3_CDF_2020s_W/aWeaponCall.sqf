@@ -115,7 +115,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "UK3CB_SVD_OLD_NPZ"
+            "rhs_weap_svdp_npz"
         ];
         _primaryAmmo = "10Rnd_762x54_Mag";
     };

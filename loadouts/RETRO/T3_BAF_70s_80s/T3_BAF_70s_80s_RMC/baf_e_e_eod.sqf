@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest selectRandom ["usm_vest_lbe_rm","usm_vest_lbe_rm2","usm_vest_lbe_rmp"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
@@ -35,6 +35,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_B_Alice_pack_01";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_SpraypaintRed";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};

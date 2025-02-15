@@ -80,8 +80,8 @@
             "UK3CB_BAF_L129A1_afg",
             "UK3CB_BAF_L129A1_afg_t",
             "UK3CB_BAF_L129A1_afg_g",
-            "UK3CB_BAF_L129A1_grippod",
-            "UK3CB_BAF_L129A1_grippod"
+            "UK3CB_BAF_L129A1_Fgrip",
+            "UK3CB_BAF_L129A1_Fgrip"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -89,10 +89,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "UK3CB_BAF_L110A2RIS",
-            "UK3CB_BAF_L110A3"
+            "rhs_weap_minimi_para_railed"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -106,13 +105,9 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "UK3CB_BAF_L119A1_RIS",
-            "UK3CB_BAF_L119A1_RIS",
-            "UK3CB_BAF_L119A1_RIS_afg",
-            "UK3CB_BAF_L119A1_RIS_afg_t",
-            "UK3CB_BAF_L119A1_RIS_afg_g",
-            "UK3CB_BAF_L119A1_RIS_grippod",
-            "UK3CB_BAF_L119A1_RIS_grippod"
+            "rhs_weap_mk18_nsr_d",
+            "rhs_weap_mk18_nsr_d",
+            "rhs_weap_mk18_nsr"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -136,13 +131,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "UK3CB_BAF_L119A1_RIS",
-            "UK3CB_BAF_L119A1_RIS",
-            "UK3CB_BAF_L119A1_RIS_afg",
-            "UK3CB_BAF_L119A1_RIS_afg_t",
-            "UK3CB_BAF_L119A1_RIS_afg_g",
-            "UK3CB_BAF_L119A1_RIS_grippod",
-            "UK3CB_BAF_L119A1_RIS_grippod"
+            "rhs_weap_mk18_nsr_d",
+            "rhs_weap_mk18_nsr_d",
+            "rhs_weap_mk18_nsr"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -158,9 +149,30 @@
             "UK3CB_BAF_LLM_IR_Tan"
         ];
     };
+    if (_Rifle == 5) then{
+        _gripArray = [
+            "rhsusf_acc_kac_grip_saw_bipod",
+            "rhsusf_acc_saw_bipod"
+        ];
+    };
+    if (_Rifle in [7,10]) then{
+        _gripArray = [
+            "rhs_acc_mk18_nsr",
+            "rhs_acc_mk18_nsr_bcm",
+            "rhs_acc_mk18_nsr_d",
+            "rhs_acc_mk18_nsr_d_bcm",
+            "rhs_acc_mk18_nsr_d",
+            "rhs_acc_mk18_nsr_d_bcm",
+            "rhs_acc_mk18_nsr_d",
+            "rhs_acc_mk18_nsr_d_bcm"
+        ];
+    };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     if (_Rifle >= 1) then{
         _unit addPrimaryWeaponItem selectRandom _attachmentArray;
+    };
+    if (_Rifle in [5,7,10]) then{
+        _unit addPrimaryWeaponItem selectRandom _gripArray;
     };
 
 //Checks rifle type, adds ammunition based on ammount
@@ -195,6 +207,6 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
     _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_17Rnd_9x19_FMJ";

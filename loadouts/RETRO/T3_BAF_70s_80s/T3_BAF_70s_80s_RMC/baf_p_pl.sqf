@@ -30,7 +30,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest "usm_vest_lbe_rmpr";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -38,7 +38,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_CHC_C_B_HIKER";
+    _unit addBackpack "B_FieldPack_green_F";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";

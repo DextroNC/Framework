@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Rifleman_A";
+    _unit addVest "milgp_v_mmac_assaulter_belt_MC";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_multicam_Backpack_Kitbag";
+    _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_PointMan_L_A";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Slugs";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};

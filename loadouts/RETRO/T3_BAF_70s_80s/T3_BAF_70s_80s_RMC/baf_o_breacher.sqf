@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest selectRandom ["usm_vest_lbe_rm","usm_vest_lbe_rm2","usm_vest_lbe_rmp"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_B_US_Backpack";
+    _unit addBackpack "UK3CB_ION_B_B_ENG_OLI";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
     _unit addItemTobackpack "ACE_wirecutter";

@@ -44,12 +44,13 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
 	_box additemcargoGlobal ["rhs_mag_mk84", 10];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 4];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 4];
 	_box additemcargoGlobal ["SLAMDirectionalMine_Wire_Mag", 4];
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 	_box addItemCargoGlobal ["SR_PAK", 10];
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
@@ -70,6 +71,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 12];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 };
 
 // Small Squad Supply
@@ -112,8 +114,8 @@ if (_type == 5) then {
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 3];
-	_box additemcargoGlobal ["rhsusf_m112_mag", 2];
-	_box additemcargoGlobal ["rhsusf_m112x4_mag", 1];
+	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2];
+	_box additemcargoGlobal ["SatchelCharge_Remote_Mag", 1];
 };
 
 // Medical Drop

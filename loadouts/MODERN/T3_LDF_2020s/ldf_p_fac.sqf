@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandom ["JCA_MCRP_V_CarrierRigKBT_01_command_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_CQB_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_combat_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_recon_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_compact_EAF_F"];
+    _unit addVest selectRandom ["JCA_V_CarrierRigKBT_01_command_EAF_F","JCA_V_CarrierRigKBT_01_CQB_EAF_F","JCA_V_CarrierRigKBT_01_combat_EAF_F","JCA_V_CarrierRigKBT_01_recon_EAF_F","JCA_V_CarrierRigKBT_01_compact_EAF_F"];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -40,6 +40,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_RadioBag_01_eaf_F";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
+    _unit addItem "7r_compact_drone";
+    _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
     _unit addItemToBackpack "UK3CB_LDF_B_H_CP04_GEO";
@@ -61,7 +63,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+_unit linkItem "B_UavTerminal";
 
 
 comment "Other Variables";

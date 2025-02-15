@@ -30,36 +30,50 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_OLI"
+            "7r_bdu_dpm",2,
+            "7r_bdu_btisrl_dpm",1,
+            "7r_bdu_bti_dpm",1,
+            "7r_bdu_srh_dpm",2,
+            "7r_bdu_srl_dpm",2,
+            "7r_bdu_bnu_dpm",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_OLI"
+            "7r_bdu_dpm",2,
+            "7r_bdu_btisrl_dpm",1,
+            "7r_bdu_bti_dpm",1,
+            "7r_bdu_srh_dpm",2,
+            "7r_bdu_srl_dpm",2,
+            "7r_bdu_bnu_dpm",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_Smock_DPMW",
-            "UK3CB_BAF_U_Smock_DPMW_OLI"
+            "7r_bdu_dpm",2,
+            "7r_bdu_btisrl_dpm",1,
+            "7r_bdu_bti_dpm",1,
+            "7r_bdu_srh_dpm",2,
+            "7r_bdu_srl_dpm",2,
+            "7r_bdu_bnu_dpm",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "UK3CB_BAF_U_JumperUniform_DPMW"
+            "7r_bdu_srh_dpm",1.5,
+            "7r_bdu_srl_dpm",1.5,
+            "7r_bdu_bnu_dpm",3
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 //Appends array of hats with desired uniforms based on _Class
     //Echo

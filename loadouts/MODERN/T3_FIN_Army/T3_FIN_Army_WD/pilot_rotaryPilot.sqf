@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "JCA_MCRP_V_CarrierRigKBT_01_compact_black_F";
+    _unit addVest "JCA_V_CarrierRigKBT_01_compact_black_F";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_green";};
     _unit addBackpack "B_Kitbag_invisible";
@@ -42,14 +42,14 @@ comment "Add Primary/Attachments";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
     _unit addHandgunItem "acc_flashlight_pistol";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+    for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
     for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_762x39mm_89";};
 
 comment "Add Navigation";

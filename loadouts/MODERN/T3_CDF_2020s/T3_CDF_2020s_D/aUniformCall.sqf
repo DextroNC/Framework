@@ -30,37 +30,55 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "7r_combatsmocks_ttsko_d",1,
+            "7r_combatsmocks_ttsko_d_gloves",1,
+            "7r_combatsmocks_ttsko_d_khk",1,
+            "7r_combatsmocks_ttsko_d_khk_gloves",1,
+            "7r_bdu_ttsko_d",4,
+            "7r_bdu_bti_ttsko_d",2,
+            "7r_bdu_btisrl_ttsko_d",2,
+            "7r_bdu_srl_ttsko_d",4,
+            "7r_bdu_srh_ttsko_d",6,
+            "7r_bdu_bnu_ttsko_d",6
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "7r_combatsmocks_ttsko_d",1,
+            "7r_combatsmocks_ttsko_d_gloves",1,
+            "7r_combatsmocks_ttsko_d_khk",1,
+            "7r_combatsmocks_ttsko_d_khk_gloves",1,
+            "7r_bdu_ttsko_d",4,
+            "7r_bdu_bti_ttsko_d",2,
+            "7r_bdu_btisrl_ttsko_d",2,
+            "7r_bdu_srl_ttsko_d",4,
+            "7r_bdu_srh_ttsko_d",6,
+            "7r_bdu_bnu_ttsko_d",6
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "7r_combatsmocks_ttsko_d",1,
+            "7r_combatsmocks_ttsko_d_gloves",1,
+            "7r_combatsmocks_ttsko_d_khk",1,
+            "7r_combatsmocks_ttsko_d_khk_gloves",1,
+            "7r_bdu_ttsko_d",4,
+            "7r_bdu_bti_ttsko_d",2,
+            "7r_bdu_btisrl_ttsko_d",2,
+            "7r_bdu_srl_ttsko_d",4,
+            "7r_bdu_srh_ttsko_d",6,
+            "7r_bdu_bnu_ttsko_d",6
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_ard",1
+            "U_B_FullGhillie_sard",1
         ];
     };
     
@@ -71,62 +89,67 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005"
+            "7r_ttsko_d_wz2005_ess",2,
+            "7r_ttsko_d_wz2005_headset",2,
+            "7r_ttsko_d_wz2005",2,
+            "7r_ttsko_d_wz2005_headset_ess",2,
+            "7r_khk_wz2005_ess",1,
+            "7r_khk_wz2005_headset",1,
+            "7r_khk_wz2005_headset_ess",1,
+            "7r_khk_wz2005",1,
+            "7r_ttsko_d_opscore_2",2,
+            "7r_ttsko_d_opscore_3",1,
+            "7r_ttsko_d_opscore_4",1,
+            "7r_cdf_d_opscore",2,
+            "7r_cdf_d_opscore_3",1,
+            "7r_cdf_d_opscore_4",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "7r_ttsko_d_wz2005_ess",
-            "7r_ttsko_d_wz2005_ess",
-            "7r_ttsko_d_wz2005_headset",
-            "7r_ttsko_d_wz2005_headset",
-            "7r_ttsko_d_wz2005_headset_ess",
-            "7r_ttsko_d_wz2005_headset_ess",
-            "7r_ttsko_d_wz2005",
-            "7r_ttsko_d_wz2005",
-            "7r_ttsko_d_wz2005"
+            "7r_ttsko_d_wz2005_ess",2,
+            "7r_ttsko_d_wz2005_headset",2,
+            "7r_ttsko_d_wz2005",2,
+            "7r_ttsko_d_wz2005_headset_ess",2,
+            "7r_ttsko_d_opscore_2",2,
+            "7r_ttsko_d_opscore_3",1,
+            "7r_ttsko_d_opscore_4",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005"
+            "7r_ttsko_d_wz2005_ess",2,
+            "7r_ttsko_d_wz2005_headset",2,
+            "7r_ttsko_d_wz2005",2,
+            "7r_ttsko_d_wz2005_headset_ess",2,
+            "7r_khk_wz2005_ess",1,
+            "7r_khk_wz2005_headset",1,
+            "7r_khk_wz2005_headset_ess",1,
+            "7r_khk_wz2005",1,
+            "7r_ttsko_d_opscore_2",2,
+            "7r_ttsko_d_opscore_3",1,
+            "7r_ttsko_d_opscore_4",1,
+            "7r_cdf_d_opscore",2,
+            "7r_cdf_d_opscore_3",1,
+            "7r_cdf_d_opscore_4",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OGA_OD_OPS",
-            "VSM_OD_spray_OPS",
-            "VSM_OGA_OD_OPS_2",
-            "VSM_OD_spray_OPS_2"
+            "7r_cdf_d_opscore",2,
+            "7r_cdf_d_opscore_3",1,
+            "7r_cdf_d_opscore_4",1
         ];
     };
     //Selects random hat from determined array, runs
 
-_helmet = selectRandom _hatArray;
+_helmet = selectRandomWeighted _hatArray;
 _unit addHeadgear _helmet;
 
 _goggleList = [

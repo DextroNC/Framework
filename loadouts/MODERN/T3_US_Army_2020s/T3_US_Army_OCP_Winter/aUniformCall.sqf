@@ -163,7 +163,7 @@ if (_helmet in _ess_list) then {_class = 5};
         _goggleArray = [
             "milgp_f_face_shield_MC", 0.65,
             "rhsusf_shemagh2_tan", 0.175,
-            "VSM_FaceMask_tan", 0.175
+            "milgp_f_face_shield_khk", 0.175
         ];
     };
 

@@ -33,6 +33,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_Multicam_carryall";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
+    if (SR_Night) then {for "_i" from 1 to 4 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White";};};
 
 comment "Add Drip";
 

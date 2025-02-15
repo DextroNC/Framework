@@ -46,7 +46,7 @@ comment "Add Secondary/Attachments";
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
     _unit addWeapon "7r_weap_pzf3";
-    _unit addSecondaryWeaponItem"7r_mag_dm12";
+    _unit addSecondaryWeaponItem "7r_mag_dm12";
 
 comment "Add Ammunition";
 

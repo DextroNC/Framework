@@ -27,7 +27,7 @@ _unit addVest "UK3CB_V_Invisible";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ToolKit";
 _unit addItemToVest "G_Aviator";
-for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_FMJ";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";

@@ -199,6 +199,6 @@
 
 //Adds sidearm, secondary as well as ammunition, attachments
     _unit addWeapon "rhsusf_weap_m9";
-    _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_15Rnd_9x19_JHP";
-    _unit addItem "rhsusf_mag_15Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_15Rnd_9x19_FMJ";
+    _unit addItem "rhsusf_mag_15Rnd_9x19_FMJ";

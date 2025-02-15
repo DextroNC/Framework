@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Rifleman_C";
+    _unit addVest "7r_virtus_platecarrier_tl";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
@@ -35,6 +35,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Sapper_L_A";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_SpraypaintRed";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};

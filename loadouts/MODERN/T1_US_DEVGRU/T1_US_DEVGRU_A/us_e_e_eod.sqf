@@ -35,6 +35,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "Alpine_carryall";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_SpraypaintRed";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};

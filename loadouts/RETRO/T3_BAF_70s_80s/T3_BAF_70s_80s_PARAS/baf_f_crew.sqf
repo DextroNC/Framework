@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhsgref_uniform_dpm";
+    _unit forceAddUniform selectRandomWeighted ["7r_bdu_dpm",2,"7r_bdu_btisrl_dpm",1,"7r_bdu_bti_dpm",1,"7r_bdu_srh_dpm",2,"7r_bdu_srl_dpm",2,"7r_bdu_bnu_dpm",1];
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest selectRandom ["usm_vest_lbe_rm","usm_vest_lbe_rm2","usm_vest_lbe_rmp"];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
