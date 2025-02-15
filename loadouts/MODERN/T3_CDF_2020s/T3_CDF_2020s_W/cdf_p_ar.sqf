@@ -27,14 +27,21 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"7r_klmk_modvest_crew",2,
-		"7r_klmk_modvest_cqb",2];
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_klmk_modvest_crew","7r_klmk_modvest_cqb"];
+    } else {
+        _unit addVest selectRandom ["7r_ttsko_modvest_crew","7r_ttsko_modvest_cqb"];
+    };
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_kitbag_klmk";
+    if (_winter) then {
+        _unit addBackpack "7r_kitbag_klmk";
+    } else {
+        _unit addBackpack "7r_kitbag_ttsko";
+    };
 
 comment "Add Drip";
     _unit addItemToBackpack "H_Booniehat_odg";

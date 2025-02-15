@@ -40,14 +40,14 @@ comment "Add Primary/Attachments";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
     _unit addHandgunItem "acc_flashlight_pistol";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+    for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
     for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
 
 comment "Add Navigation";

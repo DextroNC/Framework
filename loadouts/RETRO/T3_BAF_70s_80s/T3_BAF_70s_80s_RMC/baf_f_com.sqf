@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhsgref_uniform_dpm";
+    _unit forceAddUniform selectRandomWeighted ["7r_bdu_dpm",2,"7r_bdu_btisrl_dpm",1,"7r_bdu_bti_dpm",1,"7r_bdu_srh_dpm",2,"7r_bdu_srl_dpm",2,"7r_bdu_bnu_dpm",1];
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,14 +27,14 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_PLCE_Webbing_Plate_DPMW";
+    _unit addVest "usm_vest_lbe_rmpr";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
 
 comment "Add Drip";
     _unit addHeadgear "UK3CB_BAF_H_CrewHelmet_B";
-    _unit addGoggles "rhsusf_oakley_goggles_clr";
+    _unit addGoggles "usm_swdgoggles";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_Sten";

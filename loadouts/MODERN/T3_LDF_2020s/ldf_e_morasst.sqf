@@ -27,12 +27,14 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandom ["JCA_MCRP_V_CarrierRigKBT_01_command_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_CQB_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_combat_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_recon_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_compact_EAF_F"];
+    _unit addVest selectRandom ["JCA_V_CarrierRigKBT_01_command_EAF_F","JCA_V_CarrierRigKBT_01_CQB_EAF_F","JCA_V_CarrierRigKBT_01_combat_EAF_F","JCA_V_CarrierRigKBT_01_recon_EAF_F","JCA_V_CarrierRigKBT_01_compact_EAF_F"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Carryall_eaf_F";
+    _unit addItem "7r_compact_drone";
+    _unit addItem "ACE_UAVBattery";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
     for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
@@ -55,7 +57,7 @@ comment "Add Navigation";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
-    _unit linkItem "ItemGPS";
+    _unit linkItem "B_UavTerminal";
     
 
 comment "Other Variables";

@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandom ["JCA_MCRP_V_CarrierRigKBT_01_command_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_CQB_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_combat_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_recon_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_compact_EAF_F"];
+    _unit addVest selectRandom ["JCA_V_CarrierRigKBT_01_command_EAF_F","JCA_V_CarrierRigKBT_01_CQB_EAF_F","JCA_V_CarrierRigKBT_01_combat_EAF_F","JCA_V_CarrierRigKBT_01_recon_EAF_F","JCA_V_CarrierRigKBT_01_compact_EAF_F"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -36,6 +36,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_sgg";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_SpraypaintRed";
 
@@ -43,7 +45,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

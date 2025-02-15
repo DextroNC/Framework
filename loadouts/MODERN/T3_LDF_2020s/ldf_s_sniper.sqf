@@ -48,15 +48,15 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
-    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
+    _unit addWeapon "hgun_Pistol_heavy_01_green_F";
+    _unit addHandgunItem "11Rnd_45ACP_Mag";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
     _unit addMagazine "Laserbatteries";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
+    for "_i" from 1 to 4 do {_unit addItemToUniform "11Rnd_45ACP_Mag";};
     for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_762x51_m993_Mag";};
 
 comment "Add Navigation";

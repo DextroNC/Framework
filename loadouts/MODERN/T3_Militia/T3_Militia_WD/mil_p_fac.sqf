@@ -56,7 +56,7 @@ comment "Add Ammunition";
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
-_unit linkItem "ItemGPS";
+_unit linkItem "B_UavTerminal";
 
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";

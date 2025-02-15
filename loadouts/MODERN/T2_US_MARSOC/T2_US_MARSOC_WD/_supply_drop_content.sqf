@@ -50,6 +50,7 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 	_box addItemCargoGlobal ["SR_PAK", 10];
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
@@ -70,6 +71,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_MK318_PMAG_Tan", 12];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 };
 
 // Small Squad Supply

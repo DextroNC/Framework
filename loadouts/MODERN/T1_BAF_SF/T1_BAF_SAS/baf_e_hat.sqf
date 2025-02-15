@@ -27,11 +27,11 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Rifleman_E";
+    _unit addVest "milgp_v_mmac_assaulter_belt_MC";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Pointman_mc";
+    _unit addBackpack selectRandomWeighted ["7r_backpanel_mtp_flag",2,"7r_backpanel_mtp",1];
 
 comment "Add Drip";
 

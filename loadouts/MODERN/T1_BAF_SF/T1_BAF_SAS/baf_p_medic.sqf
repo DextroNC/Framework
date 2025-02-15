@@ -29,12 +29,12 @@ comment "Add Uniforms/Items";
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Medic_B";
+    _unit addVest "milgp_v_mmac_medic_belt_MC";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_multicam_carryall";
+    _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Medic_L_B";
 
 comment "Add Drip";
     _unit addItem selectRandom ["UK3CB_BAF_H_Beret_SAS","UK3CB_BAF_H_Beret_SAS_PRR","UK3CB_BAF_H_Beret_SAS_PRR_Over"];

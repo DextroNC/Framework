@@ -27,12 +27,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandom ["JCA_MCRP_V_CarrierRigKBT_01_command_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_CQB_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_combat_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_recon_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_compact_EAF_F"];
+    _unit addVest selectRandom ["JCA_V_CarrierRigKBT_01_command_EAF_F","JCA_V_CarrierRigKBT_01_CQB_EAF_F","JCA_V_CarrierRigKBT_01_combat_EAF_F","JCA_V_CarrierRigKBT_01_recon_EAF_F","JCA_V_CarrierRigKBT_01_compact_EAF_F"];
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Carryall_eaf_F";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};
+    if (SR_Night) then {for "_i" from 1 to 4 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White";};};
 
 comment "Add Drip";
 

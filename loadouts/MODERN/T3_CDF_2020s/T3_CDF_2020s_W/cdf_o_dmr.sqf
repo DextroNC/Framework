@@ -26,17 +26,23 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"7r_klmk_modvest_recon",2,
-		"7r_klmk_modvest_compact",2,
-		"7r_klmk_modvest_combat",2];
+comment "Add Vest/Items";    
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_klmk_modvest_recon","7r_klmk_modvest_combat","7r_klmk_modvest_compact"];
+    } else {
+        _unit addVest selectRandom ["7r_ttsko_modvest_recon","7r_ttsko_modvest_combat","7r_ttsko_modvest_compact"];
+    };
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack selectRandomWeighted ["7r_backpanel_klmk",2,"7r_backpanel_klmk_flag",1];
+    if (_winter) then {
+        _unit addBackpack selectRandomWeighted ["7r_backpanel_klmk",2,"7r_backpanel_klmk_flag",1];
+    } else {
+        _unit addBackpack selectRandomWeighted ["7r_backpanel_ttsko",2,"7r_backpanel_ttsko_flag",1];
+    };
 
 comment "Add Drip";
 
@@ -44,7 +50,6 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhs_acc_pso1m21";
-    _unit addPrimaryWeaponItem "rhs_acc_tgpa";
     _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 
 comment "Add Secondary/Attachments";

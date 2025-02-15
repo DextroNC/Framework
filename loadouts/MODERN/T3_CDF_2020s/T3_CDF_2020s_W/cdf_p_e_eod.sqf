@@ -28,20 +28,28 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiRed";};
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"7r_klmk_modvest_recon",2,
-		"7r_klmk_modvest_compact",2,
-		"7r_klmk_modvest_combat",2];
+comment "Add Vest/Items";    
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_klmk_modvest_recon","7r_klmk_modvest_combat","7r_klmk_modvest_compact"];
+    } else {
+        _unit addVest selectRandom ["7r_ttsko_modvest_recon","7r_ttsko_modvest_combat","7r_ttsko_modvest_compact"];
+    };
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_carryall_klmk";
+    if (_winter) then {
+        _unit addBackpack "7r_carryall_klmk";
+    } else {
+        _unit addBackpack "7r_carryall_ttsko";
+    };
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintRed";

@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "VSM_Multicam_Crye_Camo";
+    _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -31,7 +31,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Pointman_mc";
+    _unit addBackpack selectRandomWeighted ["7r_backpanel_mtp_flag",2,"7r_backpanel_mtp",1];
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
@@ -44,13 +44,13 @@ comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
     _unit addHandgunItem "acc_flashlight_pistol";
     _unit addHandgunItem "rhsusf_acc_omega9k";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
     for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
 
 comment "Add Navigation";

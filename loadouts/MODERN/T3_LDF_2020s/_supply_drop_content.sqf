@@ -19,15 +19,16 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 72];
-	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 24];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 12];
-    _box addmagazinecargoGlobal ["UK3CB_MG3_250rnd_762x51_RM", 8];
+	_box addmagazinecargoGlobal ["rhsgref_30rnd_556x45_vhs2", 72];
+	_box addmagazinecargoGlobal ["11Rnd_45ACP_Mag", 24];
+	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 12];
+    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_89", 20];
 	_box addmagazinecargoGlobal ["10Rnd_762x54_Mag", 10];
-	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 6];
+	_box addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3","","","",["7r_mag_dm12",1],[],""], 4];
+	_box addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3_mp","","","",["7r_mag_dm32",1],[],""], 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VR_mag", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 3];
@@ -50,6 +51,7 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["ClaymoreDirectionalMine_Remote_Mag", 4];
 	_box additemcargoGlobal ["ACE_CableTie", 24];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 	_box addItemCargoGlobal ["SR_PAK", 10];
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
@@ -67,9 +69,10 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m993_Mag", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 12];
-	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];
+	_box addmagazinecargoGlobal ["rhsgref_30rnd_556x45_vhs2", 12];
+	_box addmagazinecargoGlobal ["11Rnd_45ACP_Mag", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 };
 
 // Small Squad Supply
@@ -77,11 +80,12 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 36];
-	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 6];
+	_box addmagazinecargoGlobal ["rhsgref_30rnd_556x45_vhs2", 36];
+	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 6];
     _box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_89", 8];
-	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];
-	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 3];
+	_box addmagazinecargoGlobal ["11Rnd_45ACP_Mag", 8];
+	_box addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3","","","",["7r_mag_dm12",1],[],""], 2];
+	_box addWeaponWithAttachmentsCargoGlobal [["7r_weap_pzf3_mp","","","",["7r_mag_dm32",1],[],""], 1];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
 	_box additemcargoGlobal ["rhs_mag_an_m8hc", 16];
@@ -106,7 +110,7 @@ if (_type == 4) then {
 // Small Special Supply
 if (_type == 5) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_89", 8];
-	_box addmagazinecargoGlobal ["UK3CB_MG3_250rnd_762x51_RM", 5];
+	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 5];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 6];

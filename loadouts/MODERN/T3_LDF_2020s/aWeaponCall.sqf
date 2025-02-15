@@ -39,25 +39,25 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "UK3CB_HK33KA2_RIS"
+            "rhs_weap_vhsd2"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_g36c"
+            "rhs_weap_vhsk2"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "UK3CB_HK33KA2_RIS_GL"
+            "rhs_weap_vhsd2_bg"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
     //4 - BattleRifle
@@ -71,34 +71,33 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_minimi_para_railed"
+            "7r_weap_ukm2013p"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "UK3CB_MG3_KWS_B"
+            "7r_weap_ukm2013p"
         ];
-        _primaryAmmo = "UK3CB_MG3_250rnd_762x51_RM";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "rhs_weap_g36c"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_hk416d145"
+            "rhs_weap_vhsd2"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
     //9 - PDMR
@@ -113,9 +112,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_g36c"
+            "rhs_weap_vhsk2"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
+        _primaryAmmo = "rhsgref_30rnd_556x45_vhs2";
     };
 
 //Selects random weapon from determined array, runs
@@ -124,18 +123,21 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "UK3CB_BAF_LLM_IR_Black"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     if ((_Rifle == 4) or (_Rifle == 10) or (_Rifle == 7) or (_Rifle == 8)) then{
         _attachmentArray = [
-            "UK3CB_BAF_LLM_IR_Black"
+            "rhsusf_acc_anpeq16a_blk"
         ];
     };
     if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
-            "rhs_acc_grip_ffg2"
+            "rhs_acc_grip_ffg2",
+            "rhsusf_acc_kac_grip",
+            "",
+            ""
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
@@ -160,12 +162,11 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 3 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 3 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
@@ -178,7 +179,7 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "UK3CB_P320_BLK";
-    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
-    _unit addItem "UK3CB_P320_9x19_17Rnd";
-    _unit addItem "UK3CB_P320_9x19_17Rnd";
+    _unit addWeapon "hgun_Pistol_heavy_01_green_F";
+    _unit addHandgunItem "11Rnd_45ACP_Mag";
+    _unit addItem "11Rnd_45ACP_Mag";
+    _unit addItem "11Rnd_45ACP_Mag";

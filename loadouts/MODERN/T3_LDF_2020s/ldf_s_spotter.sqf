@@ -45,19 +45,19 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d145";
     _unit addPrimaryWeaponItem "rhsusf_acc_rotex5_grey";
-    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a_blk";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
-    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
+    _unit addWeapon "hgun_Pistol_heavy_01_green_F";
+    _unit addHandgunItem "11Rnd_45ACP_Mag";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "11Rnd_45ACP_Mag";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhsgref_30rnd_556x45_vhs2";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

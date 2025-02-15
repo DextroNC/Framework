@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_SL_A";
+    _unit addVest "7r_virtus_platecarrier_tl";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -40,6 +40,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_JTAC_L_A";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
+    _unit addItem "7r_compact_drone";
+    _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
     _unit addItemToBackpack "UK3CB_BAF_H_BERET_Rifles_PRR";
@@ -61,7 +63,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+_unit linkItem "B_UavTerminal";
 
 
 comment "Other Variables";

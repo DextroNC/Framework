@@ -2,7 +2,7 @@ _uniforms = [
 
 	["Platoon", "#ffff00", "a3\ui_f\data\Map\Markers\NATO\b_hq.paa",
 		[["Platoon Leader", "loadouts\baf_p_pl.sqf"],
-		["Platoon FAC", "loadouts\baf_p_fac.sqf"],
+		["Platoon Forward Observer", "loadouts\baf_p_fac.sqf"],
 		["Platoon Engineer (Demo)", "loadouts\baf_p_e_demo.sqf"],
 		["Platoon Engineer (EOD)", "loadouts\baf_p_e_eod.sqf"],
 		["Platoon Engineer (Fortification)", "loadouts\baf_p_e_fort.sqf"],
@@ -31,7 +31,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\baf_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\baf_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\baf_o_br.sqf"],
-		["Operator Specialist (HK416)", "loadouts\baf_o_spec.sqf"],
+		["Operator Specialist (L119A1)", "loadouts\baf_o_spec.sqf"],
 		["Operator Breacher", "loadouts\baf_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\baf_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\baf_o_e_eod.sqf"],

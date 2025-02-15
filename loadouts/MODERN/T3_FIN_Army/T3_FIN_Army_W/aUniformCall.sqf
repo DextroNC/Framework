@@ -140,7 +140,32 @@ if (_helmet in _goggleList) then {_goggles = true;};
                 "rhsusf_shemagh2_clear_gogg_white", 0.0625
             ];
         };
-    } else {
+    };
+    
+    if (_Class == 1) then{
+        if _goggles then {
+            _goggleArray = [
+                "7r_scrim_lush", .4,
+                "rhsusf_shemagh2_white", 0.125,
+                "rhs_googles_clear", 0.2,
+                "rhs_scarf", 0.075,
+                "", 0.2
+            ];
+        } else {
+            _goggleArray = [
+                "7r_scrim_lush", .4,
+                "rhsusf_shemagh2_white", 0.025,
+                "rhs_googles_clear", 0.2,
+                "rhs_scarf", 0.075,
+                "rhsusf_oakley_goggles_clr", 0.1,
+                "rhsusf_shemagh2_gogg_white", 0.05,
+                "rhsusf_oakley_goggles_blk", 0.1,
+                "rhsusf_shemagh2_clear_gogg_white", 0.05
+            ];
+        };
+    };
+    
+    if (_Class == 2) then{
         if _goggles then {
             _goggleArray = [
                 "7r_scrim_winter", .4,

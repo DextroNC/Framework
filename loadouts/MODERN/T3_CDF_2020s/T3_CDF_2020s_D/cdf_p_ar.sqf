@@ -37,7 +37,7 @@ comment "Add Backpack/Items";
     _unit addBackpack "7r_kitbag_ttsko_d";
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_Booniehat_khk";
+    _unit addItemToBackpack selectRandomWeighted ["H_Bandanna_sand",1,"H_Cap_headphones",1,"rhsusf_bowman_cap",1,"VSM_Bowman_cap_Tan",1,"rhs_headband",1,"VSM_Beanie_tan",1];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

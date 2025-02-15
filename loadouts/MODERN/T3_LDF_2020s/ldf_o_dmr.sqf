@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandom ["JCA_MCRP_V_CarrierRigKBT_01_command_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_CQB_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_combat_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_recon_EAF_F","JCA_MCRP_V_CarrierRigKBT_01_compact_EAF_F"];
+    _unit addVest selectRandom ["JCA_V_CarrierRigKBT_01_command_EAF_F","JCA_V_CarrierRigKBT_01_CQB_EAF_F","JCA_V_CarrierRigKBT_01_combat_EAF_F","JCA_V_CarrierRigKBT_01_recon_EAF_F","JCA_V_CarrierRigKBT_01_compact_EAF_F"];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -42,7 +42,7 @@ comment "Add Primary/Attachments";
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_su230";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
+    _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 
 comment "Add Secondary/Attachments";
 

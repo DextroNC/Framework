@@ -40,7 +40,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_Booniehat_mgrn";
+    _unit addItemToBackpack "rhssaf_booniehat_digital";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

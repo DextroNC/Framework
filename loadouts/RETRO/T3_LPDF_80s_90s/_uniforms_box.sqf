@@ -2,7 +2,7 @@ _uniforms = [
 
 	["Platoon", "#ffff00", "a3\ui_f\data\Map\Markers\NATO\b_hq.paa",
 		[["Platoon Leader", "loadouts\lpdf_p_pl.sqf"],
-		["Platoon FAC", "loadouts\lpdf_p_fac.sqf"],
+		[Platoon Forward Observer, "loadouts\lpdf_p_fac.sqf"],
 		["Platoon Engineer (Demo)", "loadouts\lpdf_p_e_demo.sqf"],
 		["Platoon Engineer (EOD)", "loadouts\lpdf_p_e_eod.sqf"],
 		["Platoon Engineer (Fortification)", "loadouts\lpdf_p_e_fort.sqf"],
@@ -74,4 +74,4 @@ _uniforms = [
 	]]
 ];
 					
-[uniBox, _uniforms] call fw_fnc_addUniformsToBox;
+[this, _uniforms] call fw_fnc_addUniformsToBox;

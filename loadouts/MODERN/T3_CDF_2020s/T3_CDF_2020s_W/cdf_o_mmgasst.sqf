@@ -27,15 +27,22 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest selectRandomWeighted [
-		"7r_klmk_modvest_crew",2,
-		"7r_klmk_modvest_cqb",2];
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_klmk_modvest_crew","7r_klmk_modvest_cqb"];
+    } else {
+        _unit addVest selectRandom ["7r_ttsko_modvest_crew","7r_ttsko_modvest_cqb"];
+    };
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_carryall_klmk";
+    if (_winter) then {
+        _unit addBackpack "7r_carryall_klmk";
+    } else {
+        _unit addBackpack "7r_carryall_ttsko";
+    };
     for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m80a1epr";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
@@ -43,7 +50,7 @@ comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 2] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 

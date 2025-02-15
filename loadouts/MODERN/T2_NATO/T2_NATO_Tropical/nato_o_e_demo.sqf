@@ -36,8 +36,8 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_rgr";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112x4_mag";};
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "SatchelCharge_Remote_Mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
 

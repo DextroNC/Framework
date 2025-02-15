@@ -68,6 +68,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 12];
 	_box addmagazinecargoGlobal ["rhs_mag_762x25_8", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 };
 
 // Small Squad Supply

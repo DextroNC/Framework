@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-_unit addVest "rhsgref_alice_webbing";
+_unit addVest "usm_vest_lbe_rmpr";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_an_m8hc";
     _unit addItemToVest "rhs_mag_m18_red";

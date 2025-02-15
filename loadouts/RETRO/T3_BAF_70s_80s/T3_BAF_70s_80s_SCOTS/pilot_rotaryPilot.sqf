@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "UK3CB_BAF_U_HeliPilotCoveralls_RN";
+    _unit forceAddUniform selectRandomWeighted ["7r_bdu_dpm",2,"7r_bdu_btisrl_dpm",1,"7r_bdu_bti_dpm",1,"7r_bdu_srh_dpm",2,"7r_bdu_srl_dpm",2,"7r_bdu_bnu_dpm",1];
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -34,7 +34,7 @@ comment "Add Vest/Items";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "rhsusf_hgu56p_visor";
+    _unit addHeadgear "UK3CB_H_Pilot_Helmet";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "UK3CB_Sten";
