@@ -2,7 +2,7 @@ _uniforms = [
 
 	["Platoon", "#ffff00", "a3\ui_f\data\Map\Markers\NATO\b_hq.paa",
 		[["Platoon Leader", "loadouts\cdf_p_pl.sqf"],
-		[Platoon Forward Observer, "loadouts\cdf_p_fac.sqf"],
+		["Platoon Forward Observer", "loadouts\cdf_p_fac.sqf"],
 		["Platoon Engineer (Demo)", "loadouts\cdf_p_e_demo.sqf"],
 		["Platoon Engineer (EOD)", "loadouts\cdf_p_e_eod.sqf"],
 		["Platoon Engineer (Fortification)", "loadouts\cdf_p_e_fort.sqf"],
