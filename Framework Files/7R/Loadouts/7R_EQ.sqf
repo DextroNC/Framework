@@ -67,7 +67,8 @@ switch (_class) do {
       [_unit,_class] spawn fw_fnc_conditionEquipment;
 	  };
     case "7r_compact_drone": {
-      if ([_unit,_class,1,false,["7r_mag_compact_drone"]] spawn fw_fnc_conditionEquipment) then {
+      private _allowed = [_unit,_class,1,false,["7r_mag_compact_drone"]] spawn fw_fnc_conditionEquipment;
+      if _allowed then {
         _unit linkItem (["O_UavTerminal","B_UavTerminal","I_UavTerminal","C_UavTerminal"] select _side);
         _unit addItem "ACE_UAVBattery";
       };
