@@ -40,3 +40,5 @@ if (_underLimit || ((groupId _group in _excluded) && _squadLevel)) then {
     ["",_displayName + " limit reached!"] remoteExec ["fw_fnc_info", _group];
     _return = false;
 };
+
+_return;
