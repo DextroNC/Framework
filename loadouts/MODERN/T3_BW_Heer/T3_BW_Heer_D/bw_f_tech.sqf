@@ -38,7 +38,8 @@ comment "Add Drip";
     _unit addHeadgear "H_HelmetCrew_I";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_g36c";
+    _unit addWeapon "rhsusf_weap_MP7A2";
+    _unit addPrimaryWeaponItem "rhs_acc_grip_ffg2";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
 
 comment "Add Secondary/Attachments";
@@ -50,7 +51,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_USP_9_15Rnd";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhssaf_30rnd_556x45_EPR_G36";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_mag_40Rnd_46x30_FMJ";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
