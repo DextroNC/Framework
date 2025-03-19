@@ -34,10 +34,10 @@
             "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",4,
-            "7r_combatsmocks_dpm_mc",4,
-            "7r_combatsmocks_mc_dpm_gloves",4,
-            "7r_combatsmocks_mc_dpm",4
+            "7r_combatsmocks_dpm_mc_gloves",5,
+            "7r_combatsmocks_dpm_mc",5,
+            "7r_combatsmocks_mc_dpm_gloves",5,
+            "7r_combatsmocks_mc_dpm",5
         ];
     };
 
@@ -48,10 +48,10 @@
             "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",4,
-            "7r_combatsmocks_dpm_mc",4,
-            "7r_combatsmocks_mc_dpm_gloves",4,
-            "7r_combatsmocks_mc_dpm",4
+            "7r_combatsmocks_dpm_mc_gloves",5,
+            "7r_combatsmocks_dpm_mc",5,
+            "7r_combatsmocks_mc_dpm_gloves",5,
+            "7r_combatsmocks_mc_dpm",5
         ];
     };
 
@@ -62,10 +62,10 @@
             "7r_combatsmocks_mc",3,
             "7r_combatsmocks_dpm_gloves",1,
             "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",4,
-            "7r_combatsmocks_dpm_mc",4,
-            "7r_combatsmocks_mc_dpm_gloves",4,
-            "7r_combatsmocks_mc_dpm",4
+            "7r_combatsmocks_dpm_mc_gloves",5,
+            "7r_combatsmocks_dpm_mc",5,
+            "7r_combatsmocks_mc_dpm_gloves",5,
+            "7r_combatsmocks_mc_dpm",5
         ];
     };
 
@@ -110,7 +110,11 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "rhsusf_ach_helmet_headset_ocp_alt",4,
             "rhsusf_ach_helmet_headset_ess_ocp",4,
             "rhsusf_ach_helmet_headset_ess_ocp_alt",4,
-            "rhsusf_ach_helmet_camo_ocp",16
+            "rhsusf_ach_helmet_camo_ocp",16,
+            "7r_ocp_opscore",6,
+            "7r_ocp_opscore_2",8,
+            "7r_ocp_opscore_3",8,
+            "7r_ocp_opscore_4",8
         ];
     };
 

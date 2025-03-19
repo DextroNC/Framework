@@ -41,7 +41,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_AK";
     };
 
     //2 - Rifle 2
@@ -49,7 +49,7 @@
         _primaryArray = [
             "rhs_weap_ak105_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_AK";
     };
 
     //3 - Grenadier
@@ -57,7 +57,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_AK";
     };
 
     //4 - BattleRifle
@@ -98,7 +98,7 @@
         _primaryArray = [
             "rhs_weap_ak74m_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_AK";
     };
 
     //9 - PDMR
@@ -115,7 +115,7 @@
         _primaryArray = [
             "rhs_weap_ak105_zenitco01"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N22_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N10_AK";
     };
 
 //Selects random weapon from determined array, runs
