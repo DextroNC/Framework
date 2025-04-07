@@ -577,7 +577,7 @@ switch (_nbr) do {
 	};
 	// Shoot House
 	case 11: {
-
+		/*	
 		// Target Array
 		private _targets = [sh1,sh2,sh3,sh4,sh5,sh6,sh7,sh8,sh9,sh10,sh11,sh12,sh13,sh14,sh15,sh16,sh17,sh18];
 
@@ -626,7 +626,73 @@ switch (_nbr) do {
 		[[_targets]] spawn fw_fnc_resetPopTargets;
 		deleteVehicle _vip;
 		_replace setPos _pos;
+		_terminal setVariable ["SR_Test",false,true];*/
+		
+		// Get Hostile Spawns
+		private _hostilePos = cqb_qual nearObjects ["CBA_BuildingPos", 30];
+
+		// Prep Doors
+
+		// Spawn Hostiles
+		private _groupOPFOR = createGroup east;
+		{
+			private _hostile = _groupOPFOR createUnit ["SR_Training_OPFOR", getPos _x, [], 0, "NONE"];
+			_hostile disableAI "PATH";
+			_hostile setPos getPos _x;
+			_hostile setDir direction _x;
+			_hostile setUnitPos "UP";
+			_hostile 
+		} forEach _hostilePos;
+
+		// Set Doors
+		private _doors = cqb_qual nearObjects ["Land_WiredFence_01_gate_F", 30];;
+		{
+			[_x, 1, 0] call BIS_fnc_Door;
+			_x setVariable ['bis_disabled_Door_1',1,true]
+		}forEach _doors;
+		
+
+		// Spawn VIP
+		private _groupCIV = createGroup civilian;
+		private _vip = _groupCIV createUnit ["C_man_w_worker_F", [0,0,0], [],0,"NONE"];
+		_vip disableAi "ALL";
+		_vip addItem "HandGrenade";
+		_vip setDir direction vip_pos;
+		_vip setPos position vip_pos;
+		[_vip, true] call ACE_captives_fnc_setSurrendered;
+
+		// Start Horn
+		[qi_range_horn3,_g] spawn fw_fnc_courseStart;
+		private _start = CBA_MissionTime;
+		
+		// WaitUntil End
+		waitUntil {!(_terminal getVariable ["SR_Test",false])};
+		
+		// Result Message
+		private _time = (CBA_missionTime - _start);
+		private _result = "";
+		if (("HandGrenade" in items _vip ) || (!alive _vip)) then {_result = "Failed"} else {_result = "Passed"};
+		private _str = format ["Time Passed (in sec): %1\nCourse: %2",_time,_result];
+		_str remoteExec ["hint", _g]; 
+		_terminal setVariable ["SR_Hit",0,true];
+
+		// End Horn
+		[qi_range_horn3,_g] spawn fw_fnc_courseEnd;
+
+		// Reset Course
+		private _allUnits = (units _groupCIV ) + (units _groupOPFOR);
+		{
+			deleteVehicle _x;
+		} forEach _allUnits;
+		{ 
+			if (_x inArea cqb_qual) then {
+				deleteVehicle _x
+			};
+		} forEach allDead;
+		deleteGroup _groupCIV;
+		deleteGroup _groupOPFOR;
 		_terminal setVariable ["SR_Test",false,true];
+
 	};
 	// Navigation
 	case 12: {

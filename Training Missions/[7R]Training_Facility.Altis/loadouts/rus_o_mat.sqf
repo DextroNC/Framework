@@ -14,27 +14,28 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_emr_patchless";
+_unit forceAddUniform "7r_bdu_srl_ttsko_d";
 _unit addItemToUniform "ACE_MapTools";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "rhs_mag_rdg2_white";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "RH_18Rnd_9x19_gsh";};
-_unit addVest "rhs_6b23_digi_6sh92_spetsnaz2";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
+_unit addVest "7r_ttsko_d_modvest_compact";
 for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-_unit addBackpack "rhs_rpg_empty";
+_unit addBackpack "rhs_rpg_2";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
 for "_i" from 1 to 1 do {_unit addItemToBackpack "rhs_rpg7_PG7VR_mag";};
-_unit addHeadgear "rhs_6b7_1m_bala2_emr";
+_unit addHeadgear "7r_ttsko_d_wz2005_headset_ess";
+_unit addGoggles "7r_scrim_arid";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_aks74n_2";
 _unit addPrimaryWeaponItem "rhs_acc_dtk";
 _unit addWeapon "rhs_weap_rpg7";
 _unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
-_unit addWeapon "RH_gsh18";
+_unit addWeapon "rhs_weap_makarov_pm";
 _unit addWeapon "Binocular";
 
 comment "Add items";

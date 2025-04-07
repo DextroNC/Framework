@@ -84,12 +84,6 @@ class cqbTrain {
 	class CQBcourse{};
 	class cqbPracTerm;
 };
-class tbootcamp {
-	file = "7R\Training\BootCamp";
-	class terminalInitBC ;
-	class bootcamp{};
-	class spawnWoundedBC{};
-};
 class tfoxtrot {
 	file = "7R\Training\Foxtrot";
 	class termFox ;

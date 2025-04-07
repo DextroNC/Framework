@@ -41,8 +41,14 @@ waituntil {scriptdone _handle};
 _handle = [] spawn fw_fnc_cqbPracTerm;
 waituntil {scriptdone _handle};
 
-_handle = [] spawn fw_fnc_terminalInitBC;
-waituntil {scriptdone _handle};
-
 _handle = [] spawn fw_fnc_termFox;
 waituntil {scriptdone _handle};
+
+
+// Training OPFOR EH
+["ace_unconscious", {
+	params ["_unit","_unconcious"];
+	if (_unconcious && typeOf _unit == "SR_Training_OPFOR") then {
+		[_unit] call ace_medical_status_fnc_setDead;
+	};
+}] call CBA_fnc_addEventHandler;

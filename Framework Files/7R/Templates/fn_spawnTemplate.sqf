@@ -170,7 +170,7 @@ if (_type isEqualTo "AIR") Then {
 		_wp setWaypointBehaviour _mode;
 		_wp setWaypointCompletionRadius 100;
 	} else {
-		_pa = [_pZone] call CBA_fnc_getArea;
+		_pa = [_pZone] call BIS_fnc_getArea;
 		[_grp, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 	};
 };

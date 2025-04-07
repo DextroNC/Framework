@@ -52,7 +52,7 @@ if (_noMsg) then {
 };
 
 // Evaluate success
-private _wheels = [_vehicle] call ace_repair_fnc_getWheelHitPointsWithSelections;
+private _wheels = [_vehicle] call ace_common_fnc_getWheelHitPointsWithSelections;
 private _damage = 0;
 while {_terminal getVariable ["SR_Test",false] && _damage < _required} do {
  	_damage = 0;

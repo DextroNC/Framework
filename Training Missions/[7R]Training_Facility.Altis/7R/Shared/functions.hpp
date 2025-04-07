@@ -124,3 +124,11 @@ class CleanUp {
 	file = "7R\AI\CleanUp";
 	class cleanUpLoop{postInit = 1;};
 };
+class Loadouts {
+	file = "7R\Loadouts";
+	class clearVehicleCargo{};
+	class addEquipmentRadios{};
+	class addEquipmentItems{};
+	class conditionEquipment{};
+	class addUniformsToBox{};
+};

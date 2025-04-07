@@ -82,7 +82,7 @@ if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 		_array2 append _patrolParams;
 		// Patrol Script init Vehicle
 		if (_v isKindOf "Air") then {
-			_pa = [_array2 select 1] call CBA_fnc_getArea;
+			_pa = [_array2 select 1] call BIS_fnc_getArea;
 			[_originalGroup, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
 		} else {
 			_array2 remoteExec ["fw_fnc_patrol",2];

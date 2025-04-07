@@ -26,7 +26,6 @@ _flag addaction ["Teleport Specialist Weapons Practice Course", fw_fnc_teleport,
 _flag addaction ["Teleport Engineer Practice Course", fw_fnc_teleport,[1,"m_e_prac"]]; 
 _flag addaction ["Teleport Qualification Courses", fw_fnc_teleport,[1,"m_qual"]]; 
 _flag addaction ["Teleport Flight School", fw_fnc_teleport,[1,"m_flight"]]; 
-_flag addaction ["Teleport BootCamp", fw_fnc_teleport,[1,"m_boot"]];
 _flag addAction ["Teleport Armour Practice Course", fw_fnc_teleport, [1,"m_foxtrot_1"]];
 _flag addAction ["Teleport Armour Practice Course 2", fw_fnc_teleport, [1,"m_foxtrot_2"]];
 _flag addaction ["Teleport USS Freedom", fw_fnc_teleport,[1,"freedom"]];

@@ -4,7 +4,7 @@ respawnOnStart = -1;
 enableDebugConsole = 2;
 
 // Disable AI
-disabledAI = 1;
+// disabledAI = 1;
 
 
 class CfgDebriefing

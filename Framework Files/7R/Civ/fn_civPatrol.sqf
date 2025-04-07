@@ -15,5 +15,5 @@
 params ["_grp","_zone",["_amount", 4]];
 
 // Task Patrol
-_pa = [_zone] call CBA_fnc_getArea;
+_pa = [_zone] call BIS_fnc_getArea;
 [_grp, _pa select 0, _pa select 1, _amount, "MOVE", "SAFE", "BLUE", "LIMITED", "COLUMN", "", [3,6,9]] call CBA_fnc_taskPatrol;
