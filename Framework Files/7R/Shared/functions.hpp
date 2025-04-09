@@ -21,6 +21,8 @@
 		class info{};
 		class findLocation{};
 		class debrief{};
+		class forceRespawn{};
+		class spawnMessage{};
 	};
 	class template
 	{

@@ -78,3 +78,6 @@ player createDiaryRecord ["Debrief", ["Civilian Casulties", SR_CC]];
 player createDiaryRecord ["Debrief", ["War Crimes", SR_WC]];
 player createDiaryRecord ["Debrief", ["Friendly Fire", SR_FF]];
 player createDiaryRecord ["Debrief", ["Score", _scoreRecord]];
+
+// Force Respawn
+[] spawn fw_fnc_forceRespawn;
