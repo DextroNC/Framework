@@ -10,13 +10,13 @@
 
 if !(isServer) then {};
 
-private _recentlyRun = missionNamespace getVariable ["recentRunGlobal",false];
+private _recentlyRun = missionNamespace getVariable ["spawnMessageSentRecently",false];
 
 sleep (0.5 + random 2); // random staggering to avoid running more than once
 
 if !(_recentlyRun) then {
-	missionNamespace setVariable ["recentRunGlobal",true]; // stop this from running more than once per wave
+	missionNamespace setVariable ["spawnMessageSentRecently",true]; // stop this from running more than once per wave
 	"Reinforcements have spawned" remoteExec ["systemChat", 0];
 	sleep 60; // generous sleep to allow for staggered spawns due to desync
-	missionNamespace setVariable ["recentRunGlobal",false];
+	missionNamespace setVariable ["spawnMessageSentRecently",false];
 };

@@ -21,23 +21,26 @@ if (phase == 9999) exitWith {
 // Message
 ["DEBRIEF STARTED", 1.5] spawn ace_common_fnc_displayTextStructured;
 
-// Server Only
-if (isServer) exitWith {
-	// Stop recording
-	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
-
+// Server only execute or HC if present
+if (isServer || (!hasInterface && !isDedicated)) then {
 	// Remove Hostiles
 	if (!_noDelete) then {
 		// Deny new spawns
 		SR_Unit_Cap = 0;
 		publicVariable "SR_Unit_Cap";
-		// Remove Hostiles
+		// Delete existing units
 		{
 			if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
 				deleteVehicle _x;
 			};
 		} forEach (allUnits-allPlayers);
 	};
+};
+
+// Server Only
+if (isServer) exitWith {
+	// Stop recording
+	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 
 	// Set Variables
 	phase = 9999;

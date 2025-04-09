@@ -43,7 +43,7 @@ if (!isNull _oldUnit) then {
 
 // Check Wave Condition and send wave spawn message
 private _pilot = (_newUnit getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot";
-private _hasDied = _oldUnit getVariable ["SR_hasDied",false];
+private _hasDied = _oldUnit getVariable ["SR_HasDied",false];
 if ((!SR_RespawnLock && !_pilot) && _hasDied) then {
 	[] spawn fw_fnc_spawnMessage;
 };

@@ -36,4 +36,4 @@ SR_KIA = SR_KIA + "<br/>" + _nameDead + " [" + _nameGroup + "]" ;
 publicVariable "SR_KIA";
 
 // Respawn tracking variable
-_unit setVariable ["SR_hasDied",true];
+_unit setVariable ["SR_HasDied",true];
