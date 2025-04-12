@@ -4,12 +4,14 @@
 		Uses systemChat to announce new spawn wave
 
 	Example:
-	[] spawn fw_fnc_spawnMessage;
+	[player] spawn fw_fnc_spawnMessage;
 
 */
 
-//Server only execute
-if !(isServer) exitWith{};
+params ["_unit"];
+
+//Player only execute
+if !(local _unit) exitWith{};
 
 private _recentlyRun = missionNamespace getVariable ["spawnMessageSentRecently",false];
 
