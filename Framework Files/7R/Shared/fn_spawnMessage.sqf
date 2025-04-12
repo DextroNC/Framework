@@ -8,7 +8,8 @@
 
 */
 
-if !(isServer) then {};
+//Server only execute
+if !(isServer) exitWith{};
 
 private _recentlyRun = missionNamespace getVariable ["spawnMessageSentRecently",false];
 
