@@ -58,7 +58,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
