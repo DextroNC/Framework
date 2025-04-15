@@ -34,7 +34,6 @@ UAVCallAmmo = 5;
 UAVFireMissionLock = false;
 ExfilReady = 0;
 ReifLock = false;
-SR_RespawnWave = false;
 SR_RespawnForce = false;
 SR_RespawnLock = false;
 phase = 0;

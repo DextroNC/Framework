@@ -40,3 +40,10 @@ if (!isNull _oldUnit) then {
 	_str = (name _newUnit) + " has rejoined the Action.";
 	["CombatLog", ["REINF", _str]] call CBA_fnc_globalEvent; 
 };
+
+// Check Wave Condition and send wave spawn message
+private _pilot = (_newUnit getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot";
+private _hasDied = _oldUnit getVariable ["SR_HasDied",false];
+if ((!SR_RespawnLock && !_pilot) && _hasDied) then {
+	[_newUnit] spawn fw_fnc_spawnMessage;
+};

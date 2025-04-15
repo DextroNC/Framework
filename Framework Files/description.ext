@@ -1,3 +1,11 @@
+// respawn in waves
+respawnButton = 1;
+respawnTemplates[] = {"Wave","Spectator","Counter"};
+respawn = 3;
+respawndelay = 150; //Minimum respawn delay (in seconds), Maximum is 2x this value, Avg. respawn delay will be 1.5x this value
+respawnDialog = 0;
+respawnOnStart = 0;
+
 // enable Debug Console
 enableDebugConsole = 2;
 

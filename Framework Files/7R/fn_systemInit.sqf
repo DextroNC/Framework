@@ -12,8 +12,6 @@ SR_Night = false; // Set to 'true' when the mission is played entirely at night.
 SR_Camo_Coef = 1; // For Night Missions, default: 1
 
 // Respawn Management
-SR_Respawn_Max = 600; // Maximum wait time for respawn.
-SR_Wave_Size = 2; // Minimum players needed to start a respawn wave.
 SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships).
 
 /*
