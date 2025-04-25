@@ -17,6 +17,7 @@ params ["_terminal", "_tier"];
 
 if (_tier <= 3) then {
     _terminal addaction ["<t color=""#FF0000"">Compact Drone", "7R\Loadouts\7R_EQ.sqf", ["7r_compact_drone"]];
+    SR_SupplyBoxes = SR_SupplyBoxes + [["SR_Support_Box_Empty", "Compact Drone Supplies", 11]];
 };
 
 if (_tier <= 3.5) then {

@@ -13,7 +13,7 @@
        [_unit,_class] call fw_fnc_conditionEquipment
 
     Return:
-        --> None
+        --> boolean
 */
 
 params ["_unit","_class",["_max",2],["_squadLevel",true],["_equivalentItems",[]],["_excluded",["PL","P","P-1","P-2"]]];
@@ -22,6 +22,7 @@ private _group = group _unit;
 private _units = units _group;
 private _displayName = getText (configFile >> "CfgWeapons" >> _class >> "displayName");
 private _underLimit = true;
+private _return = false;
 
 if !(_squadLevel) then {_units = allPlayers - entities "HeadlessClient_F"};
 
