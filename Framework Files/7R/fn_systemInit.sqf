@@ -12,7 +12,7 @@ SR_Night = false; // Set to 'true' when the mission is played entirely at night.
 SR_Camo_Coef = 1; // For Night Missions, default: 1
 
 // Respawn Management
-SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships).
+SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships). (check height in editor with: hint format ["%1", (getPosASL player) select 2])
 
 /*
 	Available supply boxes.
