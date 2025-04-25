@@ -19,6 +19,7 @@ _uniforms = [
 		["Operator Rifleman", "loadouts\fin_o_rifleman.sqf"],
 		["Operator AR", "loadouts\fin_o_ar.sqf"],
 		["Operator LAT", "loadouts\fin_o_lat.sqf"],
+		["Operator LAT (NLAW)", "loadouts\fin_o_lat2.sqf"],
 		["Operator MAT", "loadouts\fin_o_mat.sqf"],
 		["Operator Asst. MAT", "loadouts\fin_o_matAsst.sqf"]
 	]],
@@ -27,7 +28,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\fin_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\fin_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\fin_o_br.sqf"],
-		["Operator Specialist (SCAR-L)", "loadouts\fin_o_spec.sqf"],
+		["Operator Specialist (Sako M23)", "loadouts\fin_o_spec.sqf"],
 		["Operator Breacher", "loadouts\fin_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\fin_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\fin_o_e_eod.sqf"],

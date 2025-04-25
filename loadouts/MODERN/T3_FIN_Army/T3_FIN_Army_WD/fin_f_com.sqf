@@ -37,7 +37,7 @@ comment "Add Drip";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "7r_weap_rk95";
+    _unit addWeapon "rhs_weap_m92";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
 
 comment "Add Secondary/Attachments";
@@ -49,7 +49,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_762x39mm_89";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_762x39mm";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

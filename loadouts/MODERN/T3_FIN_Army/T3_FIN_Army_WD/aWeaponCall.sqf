@@ -41,7 +41,7 @@
         _primaryArray = [
             "7r_weap_rk95"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_89";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
     //2 - Rifle 2
@@ -49,7 +49,7 @@
         _primaryArray = [
             "7r_weap_rk95"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_89";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
     //3 - Grenadier
@@ -57,7 +57,7 @@
         _primaryArray = [
             "7r_weap_rk95"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_89";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
     //4 - BattleRifle
@@ -87,24 +87,23 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "7r_weap_scar_l",
-            "7r_weap_scar_l_grip"
+            "7r_weap_m23s_nsr"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "7r_weap_scar_l"
+            "7r_weap_m23_nsr"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_SCARH_LB"
+            "7r_weap_hk417_16in"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -114,7 +113,7 @@
         _primaryArray = [
             "7r_weap_rk95"
         ];
-        _primaryAmmo = "rhs_30Rnd_762x39mm_89";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
 //Selects random weapon from determined array, runs
@@ -131,9 +130,21 @@
             "UK3CB_BAF_LLM_IR_Black"
         ];
     };
+    if (_Rifle == 7) then{
+        _gripArray = [
+            "rhs_acc_mk18_nsr_bcm",
+            "rhs_acc_mk18_nsr"
+        ];
+    };
+    if (_Rifle == 8) then{
+        _gripArray = [
+            "rhs_acc_m4_nsr_bcm"
+        ];
+    };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     if (_Rifle >= 1) then{
         _unit addPrimaryWeaponItem selectRandom _attachmentArray;
+        _unit addPrimaryWeaponItem selectRandom _gripArray;
     };
 
 //Checks rifle type, adds ammunition based on ammount
