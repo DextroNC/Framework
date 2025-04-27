@@ -63,7 +63,7 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_SCARH_CQC"
+            "7r_weap_hk417","7r_weap_hk417vfg"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
