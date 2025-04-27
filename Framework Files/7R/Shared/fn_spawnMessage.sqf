@@ -13,9 +13,9 @@ params ["_unit"];
 //Player only execute
 if !(local _unit) exitWith{};
 
-private _recentlyRun = missionNamespace getVariable ["spawnMessageSentRecently",false];
-
 sleep (0.5 + random 2); // random staggering to avoid running more than once
+
+private _recentlyRun = missionNamespace getVariable ["spawnMessageSentRecently",false];
 
 if !(_recentlyRun) then {
 	missionNamespace setVariable ["spawnMessageSentRecently",true]; // stop this from running more than once per wave
