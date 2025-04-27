@@ -30,7 +30,7 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-		    "7r_combatsmocks_m05w_m05_gloves",1,
+		    "7r_combatsmocks_m05w_m05_gloves",2,
 		    "7r_combatsmocks_m05_m05w_gloves",2,
             "7r_combatsmocks_m05w_gloves",3
         ];
@@ -39,7 +39,7 @@
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-		    "7r_combatsmocks_m05w_m05_gloves",1,
+		    "7r_combatsmocks_m05w_m05_gloves",2,
 		    "7r_combatsmocks_m05_m05w_gloves",2,
             "7r_combatsmocks_m05w_gloves",3
         ];
@@ -48,7 +48,7 @@
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-		    "7r_combatsmocks_m05w_m05_gloves",1,
+		    "7r_combatsmocks_m05w_m05_gloves",2,
 		    "7r_combatsmocks_m05_m05w_gloves",2,
             "7r_combatsmocks_m05w_gloves",3
         ];
@@ -71,65 +71,48 @@ if (_uniform in ["7r_combatsmocks_m05_m05w_gloves","7r_combatsmocks_m05w_gloves"
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_m92_m05",1,
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5,
-            "7r_m92_m05_ess",1
+            "7r_m05_opscore",1,
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "7r_m92_m05w",1,
-            "7r_m92_m05w_headset_ess",2.5,
-            "7r_m92_m05w_headset",2.5,
-            "7r_m92_m05w_ess",1
+            "7r_m05w_opscore",1,
+            "7r_m05w_opscore_2",2,
+            "7r_m05w_opscore_3",2,
+            "7r_m05w_opscore_4",2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_m92_m05w",1,
-            "7r_m92_m05w_headset_ess",2.5,
-            "7r_m92_m05w_headset",2.5,
-            "7r_m92_m05w_ess",1
+            "7r_m05w_opscore",1,
+            "7r_m05w_opscore_2",2,
+            "7r_m05w_opscore_3",2,
+            "7r_m05w_opscore_4",2
         ];
     };
     //Selects random hat from determined array, runs
 _helmet = selectRandomWeighted _hatArray;
 _unit addHeadgear _helmet;
 
-_goggleList = [
-    "7r_m92_m05w_headset_ess",
-    "7r_m92_m05w_ess",
-    "7r_m92_m05_headset_ess",
-    "7r_m92_m05_ess"
-];
-
-_goggles = false;
-if (_helmet in _goggleList) then {_goggles = true;};
-
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
     if (_Class > 2) then{
-        if _goggles then {
-            _goggleArray = [
-                "rhsusf_shemagh2_white", 0.15,
-                "rhs_googles_clear", 0.325,
-                "rhs_scarf", 0.1,
-                "", 0.325
-            ];
-        } else {
             _goggleArray = [
                 "rhsusf_shemagh2_white", 0.025,
                 "rhs_googles_clear", 0.325,
@@ -139,21 +122,11 @@ if (_helmet in _goggleList) then {_goggles = true;};
                 "rhsusf_oakley_goggles_blk", 0.1625,
                 "rhsusf_shemagh2_clear_gogg_white", 0.0625
             ];
-        };
     };
     
     if (_Class == 1) then{
-        if _goggles then {
             _goggleArray = [
-                "7r_scrim_lush", .4,
-                "rhsusf_shemagh2_white", 0.125,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.075,
-                "", 0.2
-            ];
-        } else {
-            _goggleArray = [
-                "7r_scrim_lush", .4,
+                "7r_scrim_forest", .4,
                 "rhsusf_shemagh2_white", 0.025,
                 "rhs_googles_clear", 0.2,
                 "rhs_scarf", 0.075,
@@ -162,19 +135,9 @@ if (_helmet in _goggleList) then {_goggles = true;};
                 "rhsusf_oakley_goggles_blk", 0.1,
                 "rhsusf_shemagh2_clear_gogg_white", 0.05
             ];
-        };
     };
     
     if (_Class == 2) then{
-        if _goggles then {
-            _goggleArray = [
-                "7r_scrim_winter", .4,
-                "rhsusf_shemagh2_white", 0.125,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.075,
-                "", 0.2
-            ];
-        } else {
             _goggleArray = [
                 "7r_scrim_winter", .4,
                 "rhsusf_shemagh2_white", 0.025,
@@ -185,7 +148,6 @@ if (_helmet in _goggleList) then {_goggles = true;};
                 "rhsusf_oakley_goggles_blk", 0.1,
                 "rhsusf_shemagh2_clear_gogg_white", 0.05
             ];
-        };
     };
 
     //Selects random googles from determined array

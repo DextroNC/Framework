@@ -40,7 +40,7 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "7r_weap_scar_l_grip";
+    _unit addWeapon "7r_weap_m23_nsr";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3";
@@ -54,7 +54,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_PMAG";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

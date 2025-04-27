@@ -33,7 +33,7 @@ _unit addVest selectRandom ["7r_m05_modvest_recon","7r_m05_modvest_combat","7r_m
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "7r_fieldpack_m05";
+_unit addBackpack "7r_backpanel_m05";
 
 comment "Add Drip";
 
@@ -45,7 +45,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_m72a7";
+    _unit addWeapon "launch_NLAW_F";
 
 comment "Add Ammunition";
 

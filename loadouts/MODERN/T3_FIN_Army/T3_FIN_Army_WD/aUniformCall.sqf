@@ -31,7 +31,9 @@
     if (_Class == 1) then{
         _uniformArray = [
 		    "7r_combatsmocks_m05",1,
-		    "7r_combatsmocks_m05_gloves",1
+		    "7r_combatsmocks_m05_gloves",1,
+            "7r_g3_m05_ssl",1,
+            "7r_g3_m05",1
         ];
     };
 
@@ -39,7 +41,9 @@
     if (_Class == 2) then{
         _uniformArray = [
 		    "7r_combatsmocks_m05",1,
-		    "7r_combatsmocks_m05_gloves",1
+		    "7r_combatsmocks_m05_gloves",1,
+            "7r_g3_m05_ssl",1,
+            "7r_g3_m05",1
         ];
     };
 
@@ -47,7 +51,9 @@
     if (_Class == 3) then{
         _uniformArray = [
 		    "7r_combatsmocks_m05",1,
-		    "7r_combatsmocks_m05_gloves",1
+		    "7r_combatsmocks_m05_gloves",1,
+            "7r_g3_m05_ssl",1,
+            "7r_g3_m05",1
         ];
     };
 
@@ -65,86 +71,62 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_m92_m05",1,
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5,
-            "7r_m92_m05_ess",1
+            "7r_m05_opscore",1,
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "7r_m92_m05",1,
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5,
-            "7r_m92_m05_ess",1
+            "7r_m05_opscore",1,
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_m92_m05",1,
-            "7r_m92_m05_headset_ess",2.5,
-            "7r_m92_m05_headset",2.5,
-            "7r_m92_m05_ess",1
+            "7r_m05_opscore",1,
+            "7r_m05_opscore_2",2,
+            "7r_m05_opscore_3",2,
+            "7r_m05_opscore_4",2
         ];
     };
     //Selects random hat from determined array, runs
 _helmet = selectRandomWeighted _hatArray;
 _unit addHeadgear _helmet;
 
-_goggleList = [
-    "7r_m92_m05_headset_ess",
-    "7r_m92_m05_ess"
-];
-
-_goggles = false;
-if (_helmet in _goggleList) then {_goggles = true;};
-
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
     if (_Class > 2) then{
-        if _goggles then {
-            _goggleArray = [
-                "rhs_googles_clear", 0.325,
-                "rhs_scarf", 0.25,
-                "", 0.325
-            ];
-        } else {
-            _goggleArray = [
-                "rhs_googles_clear", 0.325,
-                "rhs_scarf", 0.25,
-                "rhsusf_oakley_goggles_clr", 0.1625,
-                "rhsusf_oakley_goggles_blk", 0.1625
-            ];
-        };
+        _goggleArray = [
+            "rhs_googles_clear", 0.325,
+            "rhs_scarf", 0.25,
+            "rhsusf_oakley_goggles_clr", 0.1625,
+            "rhsusf_oakley_goggles_blk", 0.1625
+        ];
     } else {
-        if _goggles then {
-            _goggleArray = [
-                "7r_scrim_forest", 0.4,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.2,
-                "", 0.2
-            ];
-        } else {
-            _goggleArray = [
-                "7r_scrim_forest", 0.4,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.2,
-                "rhsusf_oakley_goggles_clr", 0.1,
-                "rhsusf_oakley_goggles_blk", 0.1
-            ];
-        };
+        _goggleArray = [
+            "7r_scrim_forest", 0.4,
+            "rhs_googles_clear", 0.2,
+            "rhs_scarf", 0.2,
+            "rhsusf_oakley_goggles_clr", 0.1,
+            "rhsusf_oakley_goggles_blk", 0.1
+        ];
     };
 
     //Selects random googles from determined array

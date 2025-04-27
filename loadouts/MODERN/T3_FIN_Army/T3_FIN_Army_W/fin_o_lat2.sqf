@@ -27,13 +27,22 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-_unit addVest selectRandom ["7r_m05w_modvest_recon","7r_m05w_modvest_combat","7r_m05w_modvest_compact"];
+    _winter = _unit getVariable ["SR_Winter",true];
+    if (_winter) then {
+        _unit addVest selectRandom ["7r_m05w_modvest_recon","7r_m05w_modvest_combat","7r_m05w_modvest_compact"];
+    } else {
+        _unit addVest selectRandom ["7r_m05_modvest_recon","7r_m05_modvest_combat","7r_m05_modvest_compact"];
+    };
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "7r_fieldpack_m05w";
+    if (_winter) then {
+        _unit addBackpack "7r_backpanel_m05w";
+    } else {
+        _unit addBackpack "7r_backpanel_m05";
+    };
 
 comment "Add Drip";
 
@@ -45,7 +54,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_m72a7";
+    _unit addWeapon "launch_NLAW_F";
 
 comment "Add Ammunition";
 

@@ -146,3 +146,9 @@ If (_type == 8) then {
 If (_type == 9) then {
 	_box addmagazinecargoGlobal["Vorona_HEAT", 4];
 };
+
+// Drone Supply Drop
+If (_type == 11) then {
+	_box additemcargoGlobal ["7r_compact_drone", 1];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
+};

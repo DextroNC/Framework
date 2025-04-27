@@ -19,15 +19,16 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_89", 72];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 24];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 72];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG", 24];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 24];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 12];
     _box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 8];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 16];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
-	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 6];
+	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 4];
+	_box addWeaponCargoGlobal ["launch_NLAW_F", 2];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 4];
 	_box additemcargoGlobal ["HandGrenade", 8];
@@ -67,7 +68,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["UK3CB_BAF_338_5Rnd", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG", 12];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 	_box additemcargoGlobal ["ACE_UAVBattery", 2];
@@ -78,11 +79,12 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_89", 36];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm", 36];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
-	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 3];
+	_box addWeaponCargoGlobal ["rhs_weap_m72a7", 2];
+	_box addWeaponCargoGlobal ["launch_NLAW_F", 1];
 	_box additemcargoGlobal ["HandGrenade", 6];
 	_box additemcargoGlobal ["MiniGrenade", 2];
 	_box additemcargoGlobal ["rhs_mag_an_m8hc", 16];
@@ -108,7 +110,7 @@ if (_type == 4) then {
 if (_type == 5) then {
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhs_100Rnd_762x54mmR", 5];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_SCAR_Ranger", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG", 12];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_00Buck", 3];
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 3];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];
@@ -142,4 +144,10 @@ If (_type == 8) then {
 // HAT Supply Drop
 If (_type == 9) then {
 	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 4];
+};
+
+// Drone Supply Drop
+If (_type == 11) then {
+	_box additemcargoGlobal ["7r_compact_drone", 1];
+	_box additemcargoGlobal ["ACE_UAVBattery", 2];
 };
