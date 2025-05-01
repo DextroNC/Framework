@@ -89,6 +89,11 @@ _CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 
 _UAV = ["7R_UAV","Call UAV","",{["UAVTarget","STARTSPAWN",SR_Support_Assets select 4] remoteExec ["fw_fnc_uav",0];},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _UAV] call ace_interact_menu_fnc_addActionToClass;
 
+// Pilot Recall
+_CRC = {(player getVariable ["SR_Class","Rifleman"]) in ["Pilot","TC"] && (vehicle player == player)};
+_rec = ["7R_SD_SpawnH","Base Recall","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\exit_ca.paa",{nul = [_player,_player] spawn fw_fnc_recall;},_CRC] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","ACE_TeamManagement"], _rec] call ace_interact_menu_fnc_addActionToClass;
+
 // Pilot Supply Spawn
 _CSC = {(player getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot"};
 _CSH = ["7R_SD_SpawnH","Sling Load Supply Spawn","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{},_CSC,{[_target, _player, _params] call fw_fnc_supplySlingAction;}] call ace_interact_menu_fnc_createAction;
