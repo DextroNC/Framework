@@ -36,6 +36,7 @@ ExfilReady = 0;
 ReifLock = false;
 SR_RespawnForce = false;
 SR_RespawnLock = false;
+SR_SpawnCount = 0;
 phase = 0;
 
 SR_lockBlacklist = [ 

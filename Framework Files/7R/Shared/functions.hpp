@@ -24,7 +24,7 @@
 		class findLocation{};
 		class debrief{};
 		class forceRespawn{};
-		class spawnMessage{};
+		class spawnMessageHandler{};
 	};
 	class template
 	{

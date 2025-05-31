@@ -45,5 +45,6 @@ if (!isNull _oldUnit) then {
 private _pilot = (_newUnit getVariable ["SR_Class","Rifleman"]) isEqualTo "Pilot";
 private _hasDied = _oldUnit getVariable ["SR_HasDied",false];
 if ((!SR_RespawnLock && !_pilot) && _hasDied) then {
-	[_newUnit] spawn fw_fnc_spawnMessage;
+	SR_SpawnCount = SR_SpawnCount + 1;
+	publicVariable "SR_SpawnCount";
 };
