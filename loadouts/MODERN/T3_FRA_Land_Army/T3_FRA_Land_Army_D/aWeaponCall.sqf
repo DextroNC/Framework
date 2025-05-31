@@ -64,7 +64,7 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_SCARH_CQC"
+            "rhs_weap_SCARH_FDE_CQC"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -105,7 +105,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_SCARH_LB"
+            "rhs_weap_SCARH_FDE_LB"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };

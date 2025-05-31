@@ -36,7 +36,7 @@
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
-            "7r_field_uniform_fleck_tee"
+            "7r_field_uniform_fleck"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
-            "7r_field_uniform_fleck_tee"
+            "7r_field_uniform_fleck"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
             "7r_field_uniform_fleck_ssl",
-            "7r_field_uniform_fleck_tee"
+            "7r_field_uniform_fleck"
         ];
     };
 

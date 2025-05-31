@@ -36,7 +36,7 @@
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
-            "7r_field_uniform_cadpat_mt_tee"
+            "7r_field_uniform_cadpat_mt"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
-            "7r_field_uniform_cadpat_mt_tee"
+            "7r_field_uniform_cadpat_mt"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
             "7r_field_uniform_cadpat_mt_ssl",
-            "7r_field_uniform_cadpat_mt_tee"
+            "7r_field_uniform_cadpat_mt"
         ];
     };
 

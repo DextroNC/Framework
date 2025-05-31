@@ -41,7 +41,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_SpraypaintGreen";
 
 comment "Add Drip";
-    _unit addItemToBackpack "7r_amcu_patrolcap";
+    _unit addItemToBackpack selectRandom ["7r_beret_aus_army_prr","7r_beret_aus_army_prr_over","7r_amcu_patrolcap","7r_amcu_patrolcap"];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

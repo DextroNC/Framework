@@ -42,7 +42,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "7r_cadpat_mt_patrolcap";
+    _unit addItemToBackpack selectRandom ["7r_beret_can_army_prr","7r_beret_can_army_prr_over","7r_cadpat_mt_patrolcap","7r_cadpat_mt_patrolcap"];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
