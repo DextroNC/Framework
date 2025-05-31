@@ -32,7 +32,7 @@
         _uniformArray = [
 		    "7r_g3_amcu",8,
 		    "7r_g3_amcu_ssl",6,
-		    "7r_g3_amcu_tee",3
+		    "7r_g3_amcu",3
         ];
     };
 
@@ -41,7 +41,7 @@
         _uniformArray = [
 		    "7r_g3_amcu",8,
 		    "7r_g3_amcu_ssl",6,
-		    "7r_g3_amcu_tee",3
+		    "7r_g3_amcu",3
         ];
     };
 
@@ -50,7 +50,7 @@
         _uniformArray = [
 		    "7r_g3_amcu",8,
 		    "7r_g3_amcu_ssl",6,
-		    "7r_g3_amcu_tee",3
+		    "7r_g3_amcu",3
         ];
     };
 

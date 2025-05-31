@@ -36,7 +36,7 @@
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
-            "7r_field_uniform_tropen_tee"
+            "7r_field_uniform_tropen"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
-            "7r_field_uniform_tropen_tee"
+            "7r_field_uniform_tropen"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
             "7r_field_uniform_tropen_ssl",
-            "7r_field_uniform_tropen_tee"
+            "7r_field_uniform_tropen"
         ];
     };
 

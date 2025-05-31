@@ -36,7 +36,7 @@
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
-            "7r_field_uniform_cce_tee"
+            "7r_field_uniform_cce"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
-            "7r_field_uniform_cce_tee"
+            "7r_field_uniform_cce"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
             "7r_field_uniform_cce_ssl",
-            "7r_field_uniform_cce_tee"
+            "7r_field_uniform_cce"
         ];
     };
 

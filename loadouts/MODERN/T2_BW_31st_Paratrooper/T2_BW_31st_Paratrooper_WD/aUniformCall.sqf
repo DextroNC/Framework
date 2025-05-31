@@ -36,7 +36,7 @@
             "7r_g3_fleck_khk_ssl",
             "7r_g3_fleck_ssl",
             "7r_g3_fleck_ssl",
-            "7r_g3_fleck_tee"
+            "7r_g3_fleck"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_g3_fleck_khk_ssl",
             "7r_g3_fleck_ssl",
             "7r_g3_fleck_ssl",
-            "7r_g3_fleck_tee"
+            "7r_g3_fleck"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_g3_fleck_khk_ssl",
             "7r_g3_fleck_ssl",
             "7r_g3_fleck_ssl",
-            "7r_g3_fleck_tee"
+            "7r_g3_fleck"
         ];
     };
 

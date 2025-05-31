@@ -36,7 +36,7 @@
             "7r_g3_tropen_khk_ssl",
             "7r_g3_tropen_ssl",
             "7r_g3_tropen_ssl",
-            "7r_g3_tropen_tee"
+            "7r_g3_tropen"
         ];
     };
 
@@ -49,7 +49,7 @@
             "7r_g3_tropen_khk_ssl",
             "7r_g3_tropen_ssl",
             "7r_g3_tropen_ssl",
-            "7r_g3_tropen_tee"
+            "7r_g3_tropen"
         ];
     };
 
@@ -62,7 +62,7 @@
             "7r_g3_tropen_khk_ssl",
             "7r_g3_tropen_ssl",
             "7r_g3_tropen_ssl",
-            "7r_g3_tropen_tee"
+            "7r_g3_tropen"
         ];
     };
 

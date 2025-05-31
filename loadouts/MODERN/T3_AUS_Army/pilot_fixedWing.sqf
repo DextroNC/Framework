@@ -31,7 +31,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_BHP_9_13Rnd";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "B_Kitbag_invisible";
 _unit addItemToBackpack "ToolKit";
-_unit addItemToBackpack "7r_amcu_patrolcap";
+_unit addItemToBackpack selectRandom ["7r_beret_aus_army_prr","7r_beret_aus_army_prr_over","7r_amcu_patrolcap","7r_amcu_patrolcap"];
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BHP";

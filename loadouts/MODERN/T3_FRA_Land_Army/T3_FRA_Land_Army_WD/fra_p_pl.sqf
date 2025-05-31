@@ -43,7 +43,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "7r_cce_patrolcap";
+    _unit addItemToBackpack selectRandom ["7r_beret_fra_13rdp_prr","7r_beret_fra_13rdp_prr_over"];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

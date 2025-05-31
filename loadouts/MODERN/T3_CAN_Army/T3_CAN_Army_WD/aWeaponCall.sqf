@@ -126,12 +126,19 @@
             "rhsusf_acc_anpeq16a_blk"
         ];
     };
-    if (_Rifle <= 4 or _Rifle == 10) then{
+    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
         _gripArray = [
             "",
-            "",
+            "rhsusf_acc_tdstubby_blk",
             "rhsusf_acc_kac_grip",
-            "rhsusf_acc_kac_grip"
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_grip2"
+        ];
+    };
+    if (_Rifle == 3) then{
+        _gripArray = [
+            "",
+            "rhsusf_acc_grip_m203_blk"
         ];
     };
     if (_Rifle == 5) then{
