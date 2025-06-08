@@ -34,7 +34,7 @@
             "7r_g3_mc_fra_ssl",3,
             "7r_g3_mc_fra_khk_ssl",2,
             "7r_g3_mc_fra_khk",2,
-            "7r_g3_mc_fra_tee",1
+            "7r_g3_mc_fra",1
         ];
     };
 
@@ -45,7 +45,7 @@
             "7r_g3_mc_fra_ssl",3,
             "7r_g3_mc_fra_khk_ssl",2,
             "7r_g3_mc_fra_khk",2,
-            "7r_g3_mc_fra_tee",1
+            "7r_g3_mc_fra",1
         ];
     };
 
@@ -56,7 +56,7 @@
             "7r_g3_mc_fra_ssl",3,
             "7r_g3_mc_fra_khk_ssl",2,
             "7r_g3_mc_fra_khk",2,
-            "7r_g3_mc_fra_tee",1
+            "7r_g3_mc_fra",1
         ];
     };
 
