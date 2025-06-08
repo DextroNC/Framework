@@ -132,6 +132,7 @@
             "rhsusf_acc_tdstubby_blk",
             "rhsusf_acc_kac_grip",
             "rhsusf_acc_kac_grip",
+            "rhsusf_acc_kac_grip",
             "rhsusf_acc_grip2"
         ];
     };

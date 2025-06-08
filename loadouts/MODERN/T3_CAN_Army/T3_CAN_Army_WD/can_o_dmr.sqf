@@ -42,7 +42,7 @@ comment "Add Primary/Attachments";
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "7r_acc_c79";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
+    _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 
 comment "Add Secondary/Attachments";
 
