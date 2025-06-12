@@ -144,26 +144,22 @@ player createDiarySubject ["Mission Log", "Mission Log"];
 
 // Regulations
 player createDiarySubject ["Regulation", "Regulation"];
-player createDiaryRecord ["Regulation", ["Equipment", "
+player createDiaryRecord ["Regulation", ["Equipment Regulations", "
 <br/>
-<font size='18'>Composition Regulations</font>
-<br/>
-- Loadouts must remain untouched (do not drop or replace content, Engineers may change explosives) </br>
-- 2 Machine Guns max per Squad </br>
-- 1 Grenadier max per Squad </br>
-- 1 Entreching Tool per Squad (except Platoon is allowed more) </br>
-- 1 DMR per Platoon <br/>
-- Up to 1 Scope per Squad <br/>
--- perferly Rifleman, Asst. or IAR <br/>
--- Not allowed for SL, Medic, AR, MAT, MMG, Breacher, Grenadier or Saboteur <br/>
-- maximum weight per soldier 40kg or default kit weight </br>
-- Additional Ammunition can be carried by other members than the weapon operator (for AR, MAT or MMG Ammo) <br/>
-- Additional Light AT Launchers can be carried (max 1 Nlaw per Squad)<br/>
--- 3 launchers total per Squad (incl. LAT, MAT) <br/>
--- Not to carry on AR or MMG <br/>
-- Lockpicks may be carried by one Squad Member (not SL) <br/>
-- One Entrenching Tool may be carried by the Squad (same restriction on roles like Scopes) <br/>
-- The Platoon Leader or Sergeant may take a Laser Designator <br/>
+1. Loadouts must remain untouched. Do not drop or replace content. Engineers may change explosives to meet mission requirements. <br/><br/>
+2. Up to 2 Machine Guns or ARs are allowed per squad. <br/><br/>
+3. Only one orange optic is allowed per infantry squad. <br/>
+--- Not allowed for PL, SLs, medics, ARs, MAT, breachers, or grenadiers. <br/><br/>
+4. Maximum weight per soldier is 40kg or default kit weight if it is higher. <br/><br/>
+5. Additional ammunition can be carried by other members than the weapon operator (for AR, MAT or MMG ammo). <br/><br/>
+6. Additional Light AT Launchers can be carried by the squad.<br/>
+--- Only one NLAW is allowed per squad <br/>
+--- No more than three launchers total per Squad (incl. LAT, MAT). <br/>
+--- Not to carried by an AR or MMG. <br/><br/>
+7. Lockpicks may be carried by one squad member (not the SL) <br/><br/>
+8. Up to two entrenching tools may be carried by the squad (same restriction on roles like optics). <br/><br/>
+9. The platoon leader, sergeant, or marksman may take a laser designator. <br/><br/>
+10. One compact UAV may be carried by the platoon as a whole. <br/><br/>
 <br/>
 "]];
 
