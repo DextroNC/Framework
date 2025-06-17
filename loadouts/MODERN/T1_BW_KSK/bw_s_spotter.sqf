@@ -46,7 +46,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d145";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
+    _unit addPrimaryWeaponItem "7r_acc_zo4x30i";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";

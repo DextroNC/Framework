@@ -24,6 +24,7 @@ this addaction ["<t color=""#FF8C00"">" +"EXPS3 + G33", "7R\Loadouts\7R_EQ.sqf",
 this addaction ["<t color=""#FF8C00"">" +"SU278 + G33", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_g33_t1"]];
 this addaction ["<t color=""#FF8C00"">" +"Elcan LDS", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_LDS"]];
 this addaction ["<t color=""#FF8C00"">" +"Elcan C79", "7R\Loadouts\7R_EQ.sqf",["7r_acc_c79_blk"]];
+this addaction ["<t color=""#FF8C00"">" +"ZO 4x30i", "7R\Loadouts\7R_EQ.sqf",["7r_acc_zo4x30i"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 - 5.56mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 MRDS - 5.56mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230_mrds"]];
 this addaction ["<t color=""#FF8C00"">" +"SU-230 - 7.62mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_su230a"]];
