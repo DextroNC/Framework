@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
+    _unit addVest "milgp_v_marciras_hgunner_belt_mc";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};

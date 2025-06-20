@@ -83,7 +83,7 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_minimi_para_railed"
+            "7r_weap_mg4"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
@@ -159,12 +159,6 @@
         _gripArray = [
             "rhs_acc_mk18_smr_d_bcm",
             "rhs_acc_mk18_smr_d"
-        ];
-    };
-    if (_Rifle == 5) then{
-        _gripArray = [
-            "rhsusf_acc_kac_grip_saw_bipod",
-            "rhsusf_acc_grip4_bipod"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs

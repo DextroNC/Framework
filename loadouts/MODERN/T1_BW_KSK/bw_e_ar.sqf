@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_jpc_assaulter_belt_rgr";
+    _unit addVest "milgp_v_jpc_hgunner_belt_rgr";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -40,7 +40,7 @@ comment "Add Drip";
 comment "Add Weapons/Attachments";
     //1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_su230";
+    _unit addPrimaryWeaponItem "7r_acc_zo4x30i";
 
 comment "Add Secondary/Attachments";
 
