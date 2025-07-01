@@ -37,18 +37,18 @@ _uniforms = [
 		["Operator Engineer (Repair)", "loadouts\can_o_e_repair.sqf"]
 	]],
 
-	["Echo", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
-		[["Echo Rifleman", "loadouts\can_e_rifleman.sqf"],
-		["Echo AR", "loadouts\can_e_ar.sqf"],
-		["Echo Engineer (Demo)", "loadouts\can_e_e_demo.sqf"],
-		["Echo Engineer (EOD)", "loadouts\can_e_e_eod.sqf"],
-		["Echo Engineer (Fortification)", "loadouts\can_e_e_fort.sqf"],
-		["Echo Engineer (Repair)", "loadouts\can_e_e_repair.sqf"],
-		["Echo Heavy Weapons (Mortar)", "loadouts\can_e_mor.sqf"],
-		["Echo Asst. Heavy Weapons (Mortar)", "loadouts\can_e_morAsst.sqf"],
-		["Echo Heavy Weapons (HAT)", "loadouts\can_e_hat.sqf"],
-		["Echo Asst. Heavy Weapons (HAT)", "loadouts\can_e_hatAsst.sqf"],
-		["Echo Driver", "loadouts\can_e_driver.sqf"]
+	["Support", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
+		[["Support Rifleman", "loadouts\can_e_rifleman.sqf"],
+		["Support AR", "loadouts\can_e_ar.sqf"],
+		["Support Engineer (Demo)", "loadouts\can_e_e_demo.sqf"],
+		["Support Engineer (EOD)", "loadouts\can_e_e_eod.sqf"],
+		["Support Engineer (Fortification)", "loadouts\can_e_e_fort.sqf"],
+		["Support Engineer (Repair)", "loadouts\can_e_e_repair.sqf"],
+		["Support Heavy Weapons (Mortar)", "loadouts\can_e_mor.sqf"],
+		["Support Asst. Heavy Weapons (Mortar)", "loadouts\can_e_morAsst.sqf"],
+		["Support Heavy Weapons (HAT)", "loadouts\can_e_hat.sqf"],
+		["Support Asst. Heavy Weapons (HAT)", "loadouts\can_e_hatAsst.sqf"],
+		["Support Driver", "loadouts\can_e_driver.sqf"]
 	]],
 
 	["Foxtrot", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_armor.paa",
@@ -68,11 +68,6 @@ _uniforms = [
 		[["Rodeo Pilot", "loadouts\pilot_rotaryPilot.sqf"],
 		["Rodeo Co-Pilot (Crewman)", "loadouts\pilot_rotaryCrew.sqf"],
 		["Whiskey Pilot", "loadouts\pilot_fixedWing.sqf"]
-	]],
-
-	["Lima", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_support.paa",
-		[["Lima Technician", "loadouts\can_e_e_repair.sqf"],
-		["Lima Operator", "loadouts\can_e_rifleman.sqf"]
 	]]
 ];
 					
