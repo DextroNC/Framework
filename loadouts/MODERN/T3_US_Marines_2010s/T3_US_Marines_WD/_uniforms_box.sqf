@@ -27,6 +27,7 @@ _uniforms = [
 
 	["Specialists", "#00ff00", "a3\ui_f\data\Map\Markers\NATO\b_inf.paa",
 		[["Operator Grenadier", "loadouts\us_o_Grenadier.sqf"],
+		["Operator Grenadier (M32 MGL)", "loadouts\us_o_Grenadier2.sqf"],
 		["Operator DMR", "loadouts\us_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\us_o_br.sqf"],
 		["Operator Specialist (M4A1)", "loadouts\us_o_spec.sqf"],

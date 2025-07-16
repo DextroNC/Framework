@@ -22,27 +22,27 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_XL50";
-    _unit addItemToUniform "ACE_Chemlight_HiRed";
+    _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_iar";
-    for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+    _unit addVest "rhsusf_spc_corpsman";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_cbr";
+    _unit addBackpack "rhsusf_assault_eagleaiii_coy";
+    for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M441_HE";};
+    for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M714_white";};
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
-    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
-    _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
+    [_unit, 32] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_m32","","","",["rhsusf_mag_6Rnd_M441_HE",6],[],""], 1];
 
 comment "Add Secondary/Attachments";
 
@@ -65,9 +65,10 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem selectRandom ["USP_PVS31_WP_BLK", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH_BLK","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID_BLK","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR_BLK", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH_BLK","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID_BLK","USP_PVS31_WP_TAR_MID_TAN"];
     _unit addItem "ACE_IR_Strobe_Item";
+    _unit addItem "rhsusf_mag_6Rnd_M583A1_white";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","SDMR", true];
+_unit setVariable ["SR_Class","G", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];

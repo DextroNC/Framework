@@ -39,20 +39,21 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m27iar"
+            "rhs_weap_m27iar",
+            "rhs_weap_m27iar_d",
+            "rhs_weap_m27iar_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
 
     //2 - Rifle 2
-    if (_Rifle == 2) then{
+    if (_Rifle == 2 or _Rifle == 32) then{
         _primaryArray = [
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle",
-            "rhs_weap_m4a1",
-            "rhs_weap_m4a1_mstock",
-            "rhs_weap_m4a1_mstock"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_d",
+            "rhs_weap_hk416d10_LMT_d",
+            "rhs_weap_hk416d10_LMT_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
@@ -60,7 +61,9 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m27iar"
+            "rhs_weap_hk416d10_m320",
+            "rhs_weap_hk416d10_m320_d",
+            "rhs_weap_hk416d10_m320_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
@@ -96,8 +99,8 @@
     if (_Rifle == 7) then{
         _primaryArray = [
             "rhs_weap_mk18",
-            "rhs_weap_mk18_bk",
-            "rhs_weap_mk18_KAC_bk",
+            "rhs_weap_mk18_d",
+            "rhs_weap_mk18_KAC_d",
             "rhs_weap_mk18_KAC"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
@@ -106,7 +109,8 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m27iar_grip"
+            "rhs_weap_m27iar_grip",
+            "rhs_weap_m27iar_d_grip"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
@@ -122,12 +126,10 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle",
-            "rhs_weap_m4a1",
-            "rhs_weap_m4a1_mstock",
-            "rhs_weap_m4a1_mstock"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_d",
+            "rhs_weap_hk416d10_LMT_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
     };
@@ -141,13 +143,18 @@
             "rhsusf_acc_anpeq16a"
         ];
     };
-    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7) or (_Rifle == 32)) then{
         _gripArray = [
             "",
             "rhsusf_acc_grip2",
             "rhsusf_acc_kac_grip",
             "rhsusf_acc_grip3",
-            "rhsusf_acc_tdstubby_blk"
+            "rhsusf_acc_tdstubby_blk",
+            "",
+            "rhsusf_acc_grip2_tan",
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_tdstubby_tan"
         ];
     };
     if (_Rifle == 5) then{
@@ -186,8 +193,8 @@
         for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
         for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
     };
-    //Breacher - 8 Magazines
-    if (_Rifle == 10) then{
+    //Breacher & M32 MGL - 8 Magazines
+    if (_Rifle == 10 or _Rifle == 32) then{
         for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
     };
 
@@ -196,8 +203,3 @@
     _unit addHandgunItem "9Rnd_45ACP_Mag";
     _unit addItem "9Rnd_45ACP_Mag";
     _unit addItem "9Rnd_45ACP_Mag";
-
-    if (_Rifle == 3) then{
-        _unit addWeapon "rhs_weap_M320";
-        _unit addHandgunItem _uglHE;
-    };

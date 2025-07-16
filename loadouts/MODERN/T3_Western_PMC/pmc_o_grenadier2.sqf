@@ -34,15 +34,15 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "VSM_OGA_OD_Backpack_Kitbag";
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_6Rnd_M441_HE";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_6Rnd_M714_white";};
+    for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M441_HE";};
+    for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M714_white";};
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 32] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addItemToBackpack "rhs_weap_m32";
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_m32","","","",["rhsusf_mag_6Rnd_M441_HE",6],[],""], 1];
 
 comment "Add Secondary/Attachments";
 

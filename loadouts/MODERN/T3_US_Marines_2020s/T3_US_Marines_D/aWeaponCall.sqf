@@ -39,18 +39,13 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m27iar"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
     };
 
     //2 - Rifle 2
-    if (_Rifle == 2) then{
+    if (_Rifle == 2 or _Rifle == 32) then{
         _primaryArray = [
             "rhs_weap_m4_mstock",
             "rhs_weap_m4_mstock",
@@ -150,7 +145,7 @@
             "rhsusf_acc_anpeq16a"
         ];
     };
-    if (_Rifle <= 4 or _Rifle == 10) then{
+    if (_Rifle <= 4 or _Rifle == 10 or _Rifle == 32) then{
         _gripArray = [
             "",
             "",
@@ -198,8 +193,8 @@
         for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
         for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
     };
-    //Breacher - 8 Magazines
-    if (_Rifle == 10) then{
+    //Breacher & M32 MGL - 8 Magazines
+    if (_Rifle == 10 or _Rifle == 32) then{
         for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
     };
 
