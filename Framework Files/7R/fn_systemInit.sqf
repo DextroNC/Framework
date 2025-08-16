@@ -39,7 +39,7 @@ SR_Support_Assets = [
     /* ParaDropPlane */         "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
     /* SupplyDropPlane */       "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF), "UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
     /* CASPlane */              "RHS_A10", // Alternatives: "RHS_Su25SM_vvs" (Russian/USSR)
-    /* ExfilHelicopter */       "RHS_CH_47F", // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
+    /* ExfilHelicopter */       "RHS_CH_47F_10", // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
     /* UAV*/                    "UK3CB_BAF_MQ9_Reaper_Generic" // Alternatives: "B_UAV_02_dynamicLoadout_F" / "UK3CB_BAF_MQ9_Reaper_Generic" (BLUEFOR), "rhs_pchela1t_vvs" (Russian/USSR), "O_UAV_02_dynamicLoadout_F" (OPFOR)
 ];
 /*
