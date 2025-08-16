@@ -34,7 +34,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "rhsusf_assault_eagleaiii_coy";
-    for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M441_HE";};
+    _unit addItem "rhsusf_mag_6Rnd_M441_HE";
     for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_6Rnd_M714_white";};
 
 comment "Add Drip";

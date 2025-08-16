@@ -43,7 +43,7 @@ if (_type == 1) then {
 	_box additemcargoGlobal ["SR_HE_Pack", 4];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 4];
 	_box additemcargoGlobal ["SR_Flare_Pack", 4];
-	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M441_HE", 3];
+	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M441_HE", 2];
 	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M714_white", 2];
 	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M583A1_white", 1];
 	_box additemcargoGlobal ["rhs_mag_mk84", 10];
@@ -100,7 +100,7 @@ if (_type == 4) then {
 	_box additemcargoGlobal ["SR_HE_Pack", 2];
 	_box additemcargoGlobal ["SR_Smoke_Pack", 2];
 	_box additemcargoGlobal ["SR_Flare_Pack", 2];
-	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M441_HE", 2];
+	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M441_HE", 1];
 	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M714_white", 1];
 	_box additemcargoGlobal ["rhsusf_mag_6Rnd_M583A1_white", 1];
 	_box additemcargoGlobal ["rhs_mag_mk84", 6];
