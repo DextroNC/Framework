@@ -30,8 +30,8 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "VSM_M81_Crye_SS_Camo",1,
-            "VSM_M81_Crye_Camo",1,
+            "VSM_M81_Crye_SS_Camo",2,
+            "VSM_M81_Crye_Camo",2,
             "VSM_M81_casual_Camo",2,
             "VSM_M81_Crye_SS_grey_shirt_Camo",1,
             "VSM_M81_Crye_grey_shirt_Camo",1,
@@ -43,8 +43,8 @@
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "VSM_M81_Crye_SS_Camo",1,
-            "VSM_M81_Crye_Camo",1,
+            "VSM_M81_Crye_SS_Camo",2,
+            "VSM_M81_Crye_Camo",2,
             "VSM_M81_casual_Camo",2,
             "VSM_M81_Crye_SS_grey_shirt_Camo",1,
             "VSM_M81_Crye_grey_shirt_Camo",1,
@@ -56,8 +56,8 @@
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "VSM_M81_Crye_SS_Camo",1,
-            "VSM_M81_Crye_Camo",1,
+            "VSM_M81_Crye_SS_Camo",2,
+            "VSM_M81_Crye_Camo",2,
             "VSM_M81_casual_Camo",2,
             "VSM_M81_Crye_SS_grey_shirt_Camo",1,
             "VSM_M81_Crye_grey_shirt_Camo",1,
