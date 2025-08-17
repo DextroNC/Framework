@@ -16,7 +16,7 @@
 */
 
 // Parameter Init
-params [["_targetMarker","EZ"],["_spawnMarker","STARTSPAWN"],["_type","RHS_CH_47F"],["_dopoffMarker","dropoff"],["_caller",objNull]];
+params [["_targetMarker","EZ"],["_spawnMarker","STARTSPAWN"],["_type","RHS_CH_47F"],["_dropoffMarker","dropoff"],["_caller",objNull]];
 _spawn = markerPos _spawnMarker;
 _target = markerPos _targetMarker;
 private _str = "";
@@ -79,10 +79,43 @@ waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _gro
 	_x setVariable ["SR_Recovered",true,true];
 }forEach assignedCargo _helo;
 
-// Evaluate Dropoff
- if (!(markerPos _dopoffMarker isEqualTo [0,0,0]) && {_x in allPlayers} count (crew _helo) > 0) then {
-	[_group, (markerPos _dopoffMarker), "TR UNLOAD"] spawn fw_fnc_createWaypoint;
+fnc_checkPlayerCrewCount = {
+	params ["_group"];
+	_crew = [];
+	{
+		_crew = _crew + crew vehicle _x;
+		_crew
+	} forEach _group;
+	private _count = {_x in allPlayers && alive _x} count (_crew);
+	_count == 0;
 };
 
-// Final WP to despawn
-[_group, _spawn, "END"] spawn fw_fnc_createWaypoint;
+private _wpScript = toString {
+	if !(isServer) exitWith{};
+	waitUntil {[thisList] call fnc_checkPlayerCrewCount;};
+
+	private _wpEnd = [markerPos "STARTSPAWN", 2000, this getDir markerPos "STARTSPAWN"] call BIS_fnc_relPos;
+	_wpEnd set [2, 50];	
+	[group this, _wpEnd, "END"] call fw_fnc_createWaypoint;
+};
+
+// Evaluate Dropoff - Check where we should send the helo. If defined, go to dropoff marker, else back to spawn.
+if !(markerPos _dropoffMarker isEqualTo [0,0,0]) then {
+	if ({_x in allPlayers || side _x == civilian} count (crew _helo) > 0) then { // Check if helo has players or civvies in it
+		_wp = [_group, (markerPos _dropoffMarker), "TR UNLOAD"] call fw_fnc_createWaypoint;
+		_wp setWaypointStatements ["true", _wpScript];
+	} else { // If not, go away and despawn
+		private _wpEnd = [markerPos "STARTSPAWN", 2000, _helo getDir markerPos "STARTSPAWN"] call BIS_fnc_relPos;
+		_wpEnd set [2, 50];	
+		[_group, _wpEnd, "END"] call fw_fnc_createWaypoint;
+	};
+} else {
+	if ({_x in allPlayers || side _x == civilian} count (crew _helo) > 0) then { // Check if helo has players or civvies in it
+		_wp = [_group, _spawn, "TR UNLOAD"] call fw_fnc_createWaypoint;
+		_wp setWaypointStatements ["true", _wpScript];
+	} else { // If not, go away and despawn
+		private _wpEnd = [markerPos "STARTSPAWN", 2000, _helo getDir markerPos "STARTSPAWN"] call BIS_fnc_relPos;
+		_wpEnd set [2, 50];	
+		[_group, _wpEnd, "END"] call fw_fnc_createWaypoint;
+	};
+};
