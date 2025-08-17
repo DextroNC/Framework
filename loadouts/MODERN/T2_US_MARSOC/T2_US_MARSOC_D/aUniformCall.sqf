@@ -30,39 +30,39 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "VSM_AOR1_Crye_SS_Camo",1,
-            "VSM_AOR1_Crye_Camo",1,
+            "VSM_AOR1_Crye_SS_Camo",2,
+            "VSM_AOR1_Crye_Camo",2,
             "VSM_AOR1_casual_Camo",2,
             "VSM_AOR1_Crye_SS_grey_shirt_Camo",1,
             "VSM_AOR1_Crye_grey_shirt_Camo",1,
-            "VSM_AOR1_Crye_SS_od_shirt_Camo",1,
-            "VSM_AOR1_Crye_od_shirt_Camo",1
+            "VSM_AOR1_Crye_SS_tan_shirt_Camo",1,
+            "VSM_AOR1_Crye_tan_shirt_Camo",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "VSM_AOR1_Crye_SS_Camo",1,
-            "VSM_AOR1_Crye_Camo",1,
+            "VSM_AOR1_Crye_SS_Camo",2,
+            "VSM_AOR1_Crye_Camo",2,
             "VSM_AOR1_casual_Camo",2,
             "VSM_AOR1_Crye_SS_grey_shirt_Camo",1,
             "VSM_AOR1_Crye_grey_shirt_Camo",1,
-            "VSM_AOR1_Crye_SS_od_shirt_Camo",1,
-            "VSM_AOR1_Crye_od_shirt_Camo",1
+            "VSM_AOR1_Crye_SS_tan_shirt_Camo",1,
+            "VSM_AOR1_Crye_tan_shirt_Camo",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "VSM_AOR1_Crye_SS_Camo",1,
-            "VSM_AOR1_Crye_Camo",1,
+            "VSM_AOR1_Crye_SS_Camo",2,
+            "VSM_AOR1_Crye_Camo",2,
             "VSM_AOR1_casual_Camo",2,
             "VSM_AOR1_Crye_SS_grey_shirt_Camo",1,
             "VSM_AOR1_Crye_grey_shirt_Camo",1,
-            "VSM_AOR1_Crye_SS_od_shirt_Camo",1,
-            "VSM_AOR1_Crye_od_shirt_Camo",1
+            "VSM_AOR1_Crye_SS_tan_shirt_Camo",1,
+            "VSM_AOR1_Crye_tan_shirt_Camo",1
         ];
     };
 

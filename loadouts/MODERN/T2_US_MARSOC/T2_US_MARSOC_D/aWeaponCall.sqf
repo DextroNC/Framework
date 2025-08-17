@@ -50,7 +50,7 @@
     };
 
     //2 - Rifle 2
-    if (_Rifle == 2) then{
+    if (_Rifle == 2 or _Rifle == 32) then{
         _primaryArray = [
             "rhs_weap_mk18",
             "rhs_weap_mk18_d",
@@ -153,7 +153,7 @@
             "rhsusf_acc_anpeq15side"
         ];
     };
-    if (_Rifle <= 4 or _Rifle == 10) then{
+    if (_Rifle <= 4 or _Rifle == 10 or _Rifle == 32) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_grip2",
@@ -203,7 +203,7 @@
         for "_i" from 1 to 2 do {_unit addItemToBackpack _primaryAmmo;};
     };
     //Breacher - 8 Magazines
-    if (_Rifle == 10) then{
+    if (_Rifle == 10 or _Rifle == 32) then{
         for "_i" from 1 to 8 do {_unit addItemToVest _primaryAmmo;};
     };
 
