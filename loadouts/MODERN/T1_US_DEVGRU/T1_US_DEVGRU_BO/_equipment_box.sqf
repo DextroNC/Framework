@@ -1,6 +1,7 @@
 this addaction ["<t color=""#FFFF00"">" +"Suppressor - 5.56mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_rotex5_grey"]];
 this addaction ["<t color=""#FFFF00"">" +"Suppressor - 7.62mm", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_aac_762sdn6_silencer"]];
 this addaction ["<t color=""#00FF00"">" +"C-More", "7R\Loadouts\7R_EQ.sqf",["optic_ACO"]];
+this addaction ["<t color=""#00FF00"">" +"Barska RDS", "7R\Loadouts\7R_EQ.sqf",["7r_acc_barska"]];
 this addaction ["<t color=""#00FF00"">" +"EOT552", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_EOT552"]];
 this addaction ["<t color=""#00FF00"">" +"EXPS3", "7R\Loadouts\7R_EQ.sqf",["optic_holosight_blk_f"]];
 this addaction ["<t color=""#00FF00"">" +"XPS3", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_eotech_xps3"]];
