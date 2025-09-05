@@ -1,0 +1,73 @@
+_unit = (_this select 1);
+if( !local _unit ) exitWith {};
+
+comment "Exported from Arsenal by Jem";
+
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
+
+comment "Add weapons";
+_unit addWeapon "arifle_MX_GL_Black_F";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+_unit addPrimaryWeaponItem "30Rnd_556x45_Stanag";
+_unit addPrimaryWeaponItem "1Rnd_HE_Grenade_shell";
+_unit addWeapon "RH_fnp45";
+_unit addHandgunItem "RH_X300";
+_unit addHandgunItem "RH_15Rnd_45cal_fnp";
+
+comment "Add containers";
+_unit forceAddUniform "U_B_CTRG_1";
+_unit addVest "milgp_v_marciras_assaulter_belt_b";
+_unit addBackpack "B_AssaultPack_rgr";
+
+comment "Add binoculars";
+_unit addWeapon "Binocular";
+
+comment "Add items to containers";
+_unit addItemToUniform "ACE_Flashlight_MX991";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "RH_15Rnd_45cal_fnp";};
+_unit addItemToUniform "Chemlight_green";
+for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
+for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
+for "_i" from 1 to 8 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+_unit addHeadgear "cap_tac_ESS";
+_unit addGoggles "G_Bandanna_beast";
+_unit addItemToBackpack "SR_PAK";
+
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemGPS";
+
+if (isNil "SR_Night") then {SR_Night = false};
+if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
+	_unit linkItem "A3_GPNVG18_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit addItemToBackpack "UGL_FlareWhite_F";
+	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+};
+_unit setVariable ["SR_Class","G", true];
+_unit setVariable ["ace_isEngineer",0, true];
+_unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
+
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];
