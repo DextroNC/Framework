@@ -37,18 +37,18 @@ _uniforms = [
 		["Operator Engineer (Repair)", "loadouts\MODERN\T3_AUS_Army\aus_o_e_repair.sqf"]
 	]],
 
-	["Echo", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
-		[["Echo Rifleman", "loadouts\MODERN\T3_AUS_Army\aus_e_rifleman.sqf"],
-		["Echo AR", "loadouts\MODERN\T3_AUS_Army\aus_e_ar.sqf"],
-		["Echo Engineer (Demo)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_demo.sqf"],
-		["Echo Engineer (EOD)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_eod.sqf"],
-		["Echo Engineer (Fortification)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_fort.sqf"],
-		["Echo Engineer (Repair)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_repair.sqf"],
-		["Echo Heavy Weapons (Mortar)", "loadouts\MODERN\T3_AUS_Army\aus_e_mor.sqf"],
-		["Echo Asst. Heavy Weapons (Mortar)", "loadouts\MODERN\T3_AUS_Army\aus_e_morAsst.sqf"],
-		["Echo Heavy Weapons (HAT)", "loadouts\MODERN\T3_AUS_Army\aus_e_hat.sqf"],
-		["Echo Asst. Heavy Weapons (HAT)", "loadouts\MODERN\T3_AUS_Army\aus_e_hatAsst.sqf"],
-		["Echo Driver", "loadouts\MODERN\T3_AUS_Army\aus_e_driver.sqf"]
+	["Support", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
+		[["Support Rifleman", "loadouts\MODERN\T3_AUS_Army\aus_e_rifleman.sqf"],
+		["Support AR", "loadouts\MODERN\T3_AUS_Army\aus_e_ar.sqf"],
+		["Support Engineer (Demo)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_demo.sqf"],
+		["Support Engineer (EOD)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_eod.sqf"],
+		["Support Engineer (Fortification)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_fort.sqf"],
+		["Support Engineer (Repair)", "loadouts\MODERN\T3_AUS_Army\aus_e_e_repair.sqf"],
+		["Support Heavy Weapons (Mortar)", "loadouts\MODERN\T3_AUS_Army\aus_e_mor.sqf"],
+		["Support Asst. Heavy Weapons (Mortar)", "loadouts\MODERN\T3_AUS_Army\aus_e_morAsst.sqf"],
+		["Support Heavy Weapons (HAT)", "loadouts\MODERN\T3_AUS_Army\aus_e_hat.sqf"],
+		["Support Asst. Heavy Weapons (HAT)", "loadouts\MODERN\T3_AUS_Army\aus_e_hatAsst.sqf"],
+		["Support Driver", "loadouts\MODERN\T3_AUS_Army\aus_e_driver.sqf"]
 	]],
 
 	["Foxtrot", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_armor.paa",
@@ -68,11 +68,6 @@ _uniforms = [
 		[["Rodeo Pilot", "loadouts\MODERN\T3_AUS_Army\pilot_rotaryPilot.sqf"],
 		["Rodeo Co-Pilot (Crewman)", "loadouts\MODERN\T3_AUS_Army\pilot_rotaryCrew.sqf"],
 		["Whiskey Pilot", "loadouts\MODERN\T3_AUS_Army\pilot_fixedWing.sqf"]
-	]],
-
-	["Lima", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_support.paa",
-		[["Lima Technician", "loadouts\MODERN\T3_AUS_Army\aus_e_e_repair.sqf"],
-		["Lima Operator", "loadouts\MODERN\T3_AUS_Army\aus_e_rifleman.sqf"]
 	]]
 ];
 					
