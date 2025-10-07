@@ -37,8 +37,11 @@ this addaction ["<t color=""#FF8C00"">" +"SU-230 MRDS - 7.62mm (Tan)", "7R\Loado
 this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_premier_mrds"]];
 this addaction ["<t color=""#0000FF"">" +"x4 Night sight - KITE", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_kite"]];
 this addaction ["<t color=""#0000FF"">" +"x8 Night sight - DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_baf_maxikite"]];
+
+private _tier = 1;
+
 // Support items
-[this, 1] call fw_fnc_addEquipmentItems;
+[this, _tier] call fw_fnc_addEquipmentItems;
 
 // Radios
-[this] call fw_fnc_addEquipmentRadios;
+[this, _tier] call fw_fnc_addEquipmentRadios;

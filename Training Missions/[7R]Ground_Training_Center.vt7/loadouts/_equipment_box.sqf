@@ -25,8 +25,10 @@ this addaction ["<t color=""#FF0000"">" +"DMR Sight - ACOG MDO", "7R\Loadouts\7R
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - MOS", "7R\Loadouts\7R_EQ.sqf",["optic_SOS"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight - PMII", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_PMII_312"]];
 
+private _tier = 3;
+
 // Support items
-[this, 3] call fw_fnc_addEquipmentItems;
+[this, _tier] call fw_fnc_addEquipmentItems;
 
 // Radios
-[this] call fw_fnc_addEquipmentRadios;
+[this, _tier] call fw_fnc_addEquipmentRadios;
