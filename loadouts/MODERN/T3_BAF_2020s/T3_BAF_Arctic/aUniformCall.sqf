@@ -30,27 +30,30 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
+            "7r_oversuit_mtp_arctic_gloves"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
+            "7r_oversuit_mtp_arctic_gloves"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
+            "7r_oversuit_mtp_arctic_gloves"
         ];
     };
 
@@ -83,7 +86,8 @@ _ess_list = [
     "UK3CB_BAF_H_Mk7_Net_ESS_D",
     "UK3CB_BAF_H_Mk7_Scrim_ESS_A",
     "UK3CB_BAF_H_Mk7_Scrim_ESS_B",
-    "UK3CB_BAF_H_Mk7_Scrim_ESS_C"
+    "UK3CB_BAF_H_Mk7_Scrim_ESS_C",
+    "UK3CB_BAF_H_Mk7_Win_ESS_A"
 ];
 
 _noess_list = [
@@ -102,7 +106,8 @@ _noess_list = [
     "UK3CB_BAF_H_Mk7_Scrim_C",
     "UK3CB_BAF_H_Mk7_Scrim_D",
     "UK3CB_BAF_H_Mk7_Scrim_E",
-    "UK3CB_BAF_H_Mk7_Scrim_F"
+    "UK3CB_BAF_H_Mk7_Scrim_F",
+    "UK3CB_BAF_H_Mk7_Win_A"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
@@ -126,7 +131,19 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A"
         ];
     };
 
@@ -180,7 +197,31 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A"
         ];
     };
 
@@ -204,7 +245,19 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A",
+            "UK3CB_BAF_H_Mk7_Win_ESS_A"
         ];
     };
 
@@ -228,37 +281,34 @@ if (_helmet in _ess_list) then {_class = 5};
     //Appends array of goggleswith desired values
     if (_Class <= 3) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.2,
-            "rhs_googles_clear", 0.35,
-            "rhsusf_oakley_goggles_blk", 0.1875,
-            "rhsusf_oakley_goggles_clr", 0.1875,
-            "usm_scarf", 0.066
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.066
-            "milgp_f_face_shield_shemagh_MC", 0.066
+            "rhs_googles_clear", 0.1,
+            "rhsusf_oakley_goggles_blk", 0.2375,
+            "rhsusf_oakley_goggles_clr", 0.2375,
+            "usm_scarf", 0.166
+            "milgp_f_face_shield_goggles_MC", 0.166
+            "milgp_f_face_shield_MC", 0.166
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.2,
-            "rhs_googles_clear", 0.35,
-            "rhsusf_oakley_goggles_blk", 0.1875,
-            "rhsusf_oakley_goggles_clr", 0.1875,
-            "usm_scarf", 0.066
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.066
-            "milgp_f_face_shield_shemagh_MC", 0.066
+            "rhs_googles_clear", 0.1,
+            "rhsusf_oakley_goggles_blk", 0.2375,
+            "rhsusf_oakley_goggles_clr", 0.2375,
+            "usm_scarf", 0.166
+            "milgp_f_face_shield_goggles_MC", 0.166
+            "milgp_f_face_shield_MC", 0.166
         ];
     };
 
     //ESS On Helmet 
     if (_Class == 5) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.3,
             "", 0.15,
-            "usm_scarf", 0.1
-            "milgp_f_face_shield_shemagh_MC", 0.1
+            "usm_scarf", 0.35
+            "milgp_f_face_shield_MC", 0.25
         ];
     };
 

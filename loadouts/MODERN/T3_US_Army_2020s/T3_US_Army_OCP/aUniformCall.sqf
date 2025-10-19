@@ -116,6 +116,7 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
+            "usm_scarf", .1,
             "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_shemagh2_clear_gogg_tan", 0.1
         ];
@@ -128,8 +129,9 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "usm_scarf", .1,
+            "rhsusf_shemagh2_gogg_tan", 0.05,
+            "rhsusf_shemagh2_clear_gogg_tan", 0.05
         ];
     };
 
@@ -138,7 +140,8 @@ if (_helmet in _ess_list) then {_class = 5};
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.3,
-            "", 0.35
+            "usm_scarf", .1,
+            "", 0.25
         ];
     };
 

@@ -140,7 +140,8 @@ if (_helmet in _ess_list) then {_class = 5};
     if (_Class <= 3) then{
         _goggleArray = [
             "milgp_f_face_shield_MC", 0.325,
-            "rhsusf_shemagh2_tan", 0.325,
+            "rhsusf_shemagh2_tan", 0.1,
+            "usm_scarf", 0.225,
             "milgp_f_face_shield_goggles_MC", 0.1,
             "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_shemagh2_clear_gogg_tan", 0.15
@@ -151,7 +152,8 @@ if (_helmet in _ess_list) then {_class = 5};
     if (_Class == 4) then{
         _goggleArray = [
             "milgp_f_face_shield_MC", 0.4,
-            "rhsusf_shemagh2_tan", 0.35,
+            "rhsusf_shemagh2_tan", 0.1,
+            "usm_scarf", 0.25,
             "milgp_f_face_shield_goggles_MC", 0.05,
             "rhsusf_shemagh2_gogg_tan", 0.1,
             "rhsusf_shemagh2_clear_gogg_tan", 0.1
@@ -162,7 +164,8 @@ if (_helmet in _ess_list) then {_class = 5};
     if (_Class == 5) then{
         _goggleArray = [
             "milgp_f_face_shield_MC", 0.65,
-            "rhsusf_shemagh2_tan", 0.175,
+            "rhsusf_shemagh2_tan", 0.75,
+            "usm_scarf", 0.1,
             "milgp_f_face_shield_khk", 0.175
         ];
     };

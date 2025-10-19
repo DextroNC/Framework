@@ -104,7 +104,8 @@ if (_helmet in _ess_list) then {_class = _class + 0.5};
     //Echo & Squad - ESS on Helmet
     if (_Class in [1.5,2.5]) then{
         _goggleArray = [
-            "milgp_f_face_shield_rgr", 0.4,
+            "milgp_f_face_shield_rgr", 0.2,
+            "usm_scarf", 0.2,
             "7r_scrim_forest", 0.25,
             "rhsusf_shemagh2_tan", 0.175,
             "milgp_f_face_shield_khk", 0.175
@@ -114,7 +115,8 @@ if (_helmet in _ess_list) then {_class = _class + 0.5};
     //Echo & Squad
     if (_Class in [1,2]) then{
         _goggleArray = [
-            "milgp_f_face_shield_rgr", 0.2,
+            "milgp_f_face_shield_rgr", 0.1,
+            "usm_scarf", 0.2,
             "rhsusf_shemagh2_tan", 0.1,
             "milgp_f_face_shield_khk", 0.1,
             "7r_scrim_forest", 0.25,
@@ -127,7 +129,8 @@ if (_helmet in _ess_list) then {_class = _class + 0.5};
     //Platoon - ESS on Helmet
     if (_Class in [3.5]) then{
         _goggleArray = [
-            "milgp_f_face_shield_rgr", 0.65,
+            "milgp_f_face_shield_rgr", 0.325,
+            "usm_scarf", 0.325,
             "rhsusf_shemagh2_tan", 0.175,
             "milgp_f_face_shield_khk", 0.175
         ];
@@ -136,8 +139,9 @@ if (_helmet in _ess_list) then {_class = _class + 0.5};
     //Platoon
     if (_Class in [3]) then{
         _goggleArray = [
-            "milgp_f_face_shield_rgr", 0.325,
-            "rhsusf_shemagh2_tan", 0.225,
+            "milgp_f_face_shield_rgr", 0.175,
+            "milgp_f_face_shield_rgr", 0.175,
+            "rhsusf_shemagh2_tan", 0.2,
             "milgp_f_face_shield_khk", 0.1,
             "milgp_f_face_shield_goggles_rgr", 0.1,
             "rhsusf_shemagh2_gogg_tan", 0.1,
@@ -148,12 +152,13 @@ if (_helmet in _ess_list) then {_class = _class + 0.5};
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "milgp_f_face_shield_rgr", 0.4,
-            "rhsusf_shemagh2_tan", 0.25,
+            "milgp_f_face_shield_rgr", 0.175,
+            "milgp_f_face_shield_rgr", 0.175,
+            "rhsusf_shemagh2_tan", 0.2,
             "milgp_f_face_shield_khk", 0.1,
-            "milgp_f_face_shield_goggles_rgr", 0.05,
+            "milgp_f_face_shield_goggles_rgr", 0.1,
             "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "rhsusf_shemagh2_clear_gogg_tan", 0.15
         ];
     };
 
