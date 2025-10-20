@@ -32,6 +32,8 @@
         _uniformArray = [
             "7r_oversuit_arctic_mtp_gloves",
             "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
             "7r_oversuit_arctic_gloves",
             "7r_oversuit_mtp_arctic_gloves"
         ];
@@ -42,6 +44,8 @@
         _uniformArray = [
             "7r_oversuit_arctic_mtp_gloves",
             "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
             "7r_oversuit_arctic_gloves",
             "7r_oversuit_mtp_arctic_gloves"
         ];
@@ -52,6 +56,8 @@
         _uniformArray = [
             "7r_oversuit_arctic_mtp_gloves",
             "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_mtp_gloves",
+            "7r_oversuit_arctic_gloves",
             "7r_oversuit_arctic_gloves",
             "7r_oversuit_mtp_arctic_gloves"
         ];
@@ -119,19 +125,16 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
@@ -169,35 +172,29 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Net_CESS_A",
             "UK3CB_BAF_H_Mk7_Net_CESS_B",
             "UK3CB_BAF_H_Mk7_Net_CESS_C",
-            "UK3CB_BAF_H_Mk7_Net_CESS_D",
             "UK3CB_BAF_H_Mk7_Net_ESS_A",
             "UK3CB_BAF_H_Mk7_Net_ESS_A",
             "UK3CB_BAF_H_Mk7_Net_ESS_B",
             "UK3CB_BAF_H_Mk7_Net_ESS_C",
-            "UK3CB_BAF_H_Mk7_Net_ESS_D",
             "UK3CB_BAF_H_Mk7_Net_A",
             "UK3CB_BAF_H_Mk7_Net_A",
             "UK3CB_BAF_H_Mk7_Net_B",
             "UK3CB_BAF_H_Mk7_Net_C",
-            "UK3CB_BAF_H_Mk7_Net_D",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
@@ -233,19 +230,16 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
             "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
             "UK3CB_BAF_H_Mk7_Win_A",
@@ -282,11 +276,11 @@ if (_helmet in _ess_list) then {_class = 5};
     if (_Class <= 3) then{
         _goggleArray = [
             "rhs_googles_clear", 0.1,
-            "rhsusf_oakley_goggles_blk", 0.2375,
-            "rhsusf_oakley_goggles_clr", 0.2375,
-            "usm_scarf", 0.166
-            "milgp_f_face_shield_goggles_MC", 0.166
-            "milgp_f_face_shield_MC", 0.166
+            "rhsusf_oakley_goggles_blk", 0.2875,
+            "rhsusf_oakley_goggles_clr", 0.2875,
+            "usm_scarf", 0.266,
+            "milgp_f_face_shield_goggles_MC", 0.066,
+            "milgp_f_face_shield_MC", 0.066
         ];
     };
 
@@ -294,11 +288,11 @@ if (_helmet in _ess_list) then {_class = 5};
     if (_Class == 4) then{
         _goggleArray = [
             "rhs_googles_clear", 0.1,
-            "rhsusf_oakley_goggles_blk", 0.2375,
-            "rhsusf_oakley_goggles_clr", 0.2375,
-            "usm_scarf", 0.166
-            "milgp_f_face_shield_goggles_MC", 0.166
-            "milgp_f_face_shield_MC", 0.166
+            "rhsusf_oakley_goggles_blk", 0.2875,
+            "rhsusf_oakley_goggles_clr", 0.2875,
+            "usm_scarf", 0.266,
+            "milgp_f_face_shield_goggles_MC", 0.066,
+            "milgp_f_face_shield_MC", 0.066
         ];
     };
 
@@ -307,7 +301,7 @@ if (_helmet in _ess_list) then {_class = 5};
         _goggleArray = [
             "rhs_googles_clear", 0.3,
             "", 0.15,
-            "usm_scarf", 0.35
+            "usm_scarf", 0.35,
             "milgp_f_face_shield_MC", 0.25
         ];
     };

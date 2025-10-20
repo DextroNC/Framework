@@ -97,7 +97,7 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_m240G"
+            "7r_weap_l7a2"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51";
     };
