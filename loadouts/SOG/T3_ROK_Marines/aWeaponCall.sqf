@@ -181,7 +181,7 @@
         for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
     };
     //PDMR - 15 Magazines
-    if (_Rifle == 8) then{
+    if (_Rifle == 9) then{
         for "_i" from 1 to 15 do {_unit addItem _primaryAmmo;};
     };
     //Breacher - 8 Magazines
