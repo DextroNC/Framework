@@ -34,7 +34,7 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "vn_o_pack_03";
     _unit addItemToBackpack "ACE_EntrenchingTool";
-    for "_i" from 1 to 5 do {_unit addItemToBackpack "vn_rpg2_mag";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "vn_rpg7_mag";};
 
 comment "Add Drip";
 

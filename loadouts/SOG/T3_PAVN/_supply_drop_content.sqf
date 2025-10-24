@@ -24,7 +24,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 30];
 	_box addmagazinecargoGlobal ["vn_m4956_10_mag", 20];
 	_box addmagazinecargoGlobal ["vn_svd_mag", 10];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 10];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 10];
 	_box additemcargoGlobal ["vn_f1_grenade_mag", 8];
 	_box additemcargoGlobal ["vn_rkg3_grenade_mag", 12];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 28];
@@ -94,7 +94,7 @@ if (_type == 5) then {
 	_box addmagazinecargoGlobal ["vn_type56_mag", 9];
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 15];
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 15];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 9];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 9];
 	_box additemcargoGlobal ["vn_mine_m112_remote_mag", 2];
 	_box additemcargoGlobal ["vn_mine_satchel_remote_02_mag", 1];
 };

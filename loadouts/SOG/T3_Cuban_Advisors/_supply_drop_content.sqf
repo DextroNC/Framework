@@ -27,7 +27,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_svd_mag", 15];
 	_box addWeaponCargoGlobal ["rhs_weap_rpg18", 4];
 	_box addWeaponCargoGlobal ["rhs_weap_rpg18", 2];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 10];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 10];
 	_box additemcargoGlobal ["vn_f1_grenade_mag", 8];
 	_box additemcargoGlobal ["vn_v40_grenade_mag", 2];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 28];
@@ -100,7 +100,7 @@ if (_type == 5) then {
 	_box addmagazinecargoGlobal ["vn_pk_100_mag", 5];
 	_box addmagazinecargoGlobal ["vn_m1897_buck_mag", 15];
 	_box addmagazinecargoGlobal ["vn_m1897_fl_mag", 15];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 9];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 9];
 	_box additemcargoGlobal ["vn_mine_m112_remote_mag", 2];
 	_box additemcargoGlobal ["vn_mine_satchel_remote_02_mag", 1];
 };

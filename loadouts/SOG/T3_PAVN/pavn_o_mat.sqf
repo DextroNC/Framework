@@ -44,11 +44,11 @@ comment "Add Secondary/Attachments";
 comment "Add Tertiary equipment";
     _unit addWeapon "vn_m19_binocs_grey";
     _unit addWeapon "vn_rpg7";
-    _unit addSecondaryWeaponItem "vn_rpg2_mag";
+    _unit addSecondaryWeaponItem "vn_rpg7_mag";
 
     
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToBackpack "vn_rpg2_mag";};
+    for "_i" from 1 to 3 do {_unit addItemToBackpack "vn_rpg7_mag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

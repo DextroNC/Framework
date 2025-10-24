@@ -8,8 +8,8 @@ if(isServer) then {
     this addmagazinecargoGlobal ["vn_mk22_mag", 60];
     this addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 20];
     this addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 10];
-	this addmagazinecargoGlobal ["vn_rpg2_mag", 20];
-	this addmagazinecargoGlobal ["vn_rpg2_mag", 10];
+	this addmagazinecargoGlobal ["vn_rpg7_mag", 20];
+	this addmagazinecargoGlobal ["vn_rpg7_mag", 10];
 	this additemcargoGlobal ["vn_mine_satchel_remote_02_mag", 6];
 	this additemcargoGlobal ["vn_mine_m112_remote_mag", 12];
     

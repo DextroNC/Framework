@@ -28,7 +28,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_m45_mag", 18];
 	_box addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 4];
 	_box addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 2];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 10];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 10];
 	_box additemcargoGlobal ["vn_m61_grenade_mag", 8];
 	_box additemcargoGlobal ["vn_v40_grenade_mag", 2];
 	_box additemcargoGlobal ["rhs_mag_an_m8hc", 28];
@@ -102,7 +102,7 @@ if (_type == 5) then {
 	_box addmagazinecargoGlobal ["vn_m60_100_mag", 5];
 	_box addmagazinecargoGlobal ["vn_m1897_buck_mag", 15];
 	_box addmagazinecargoGlobal ["vn_m1897_fl_mag", 15];
-	_box addmagazinecargoGlobal ["vn_rpg2_mag", 9];
+	_box addmagazinecargoGlobal ["vn_rpg7_mag", 9];
 	_box additemcargoGlobal ["vn_mine_m112_remote_mag", 2];
 	_box additemcargoGlobal ["vn_mine_satchel_remote_02_mag", 1];
 };
