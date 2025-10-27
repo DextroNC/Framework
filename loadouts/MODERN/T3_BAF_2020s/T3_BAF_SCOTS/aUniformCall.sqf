@@ -232,7 +232,9 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "usm_scarf", 0.066,
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.066,
+            "milgp_f_face_shield_shemagh_MC", 0.066
         ];
     };
 
@@ -243,7 +245,9 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
-            "milgp_f_face_shield_goggles_shemagh_MC", 0.2
+            "usm_scarf", 0.066,
+            "milgp_f_face_shield_goggles_shemagh_MC", 0.066,
+            "milgp_f_face_shield_shemagh_MC", 0.066
         ];
     };
 
@@ -253,7 +257,8 @@ if (_helmet in _ess_list) then {_class = 5};
             "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.3,
             "", 0.15,
-            "milgp_f_face_shield_shemagh_MC", 0.2
+            "usm_scarf", 0.1,
+            "milgp_f_face_shield_shemagh_MC", 0.1
         ];
     };
 

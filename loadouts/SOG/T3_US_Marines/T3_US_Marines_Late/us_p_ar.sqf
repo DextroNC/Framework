@@ -1,0 +1,70 @@
+_unit = (_this select 1);
+if( !local _unit ) exitWith {};
+
+comment "Arsenal Gameplay by Roy, Ionaru";
+
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
+
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+
+comment "Add Uniforms/Items";
+    _unit addItemToUniform "ACE_MapTools";
+    _unit addItemToUniform "SR_PAK";
+    _unit addItemToUniform "CBRN_gasmaskFilter";
+    for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+    _unit addItemToUniform "ACE_Flashlight_MX991";
+    _unit addItemToUniform "ACE_HandFlare_Green";
+    for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
+
+comment "Add Vest/Items";
+    _unit addVest "vn_b_vest_usmc_03";
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "vn_m61_grenade_mag";};
+
+comment "Add Backpack/Items";
+    _unit addBackpack selectRandom ["vn_b_pack_lw_02","vn_b_pack_lw_05"];
+
+comment "Add Drip";
+    _unit addItemToBackpack selectRandom ["vn_b_bandana_01","H_Cap_blk","vn_b_boonie_02_08","vn_b_boonie_03_08","vn_b_boonie_04_08","vn_b_boonie_05_08","vn_b_boonie_01_08","vn_b_headband_08","vn_b_headband_04","vn_b_headband_03"];
+
+comment "Add Primary/Attachments";
+    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
+    [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+
+comment "Add Secondary/Attachments";
+
+comment "Add Tertiary equipment";
+    _unit addWeapon "vn_m19_binocs_grey";
+
+comment "Add Ammunition";
+
+comment "Add Navigation";
+    _unit linkItem "ItemMap";
+    _unit linkItem "ItemCompass";
+    _unit linkItem "ItemWatch";
+    _unit linkItem "ItemRadioAcreFlagged";
+    
+    
+
+comment "Other Variables";
+if (isNil "SR_Night") then {SR_Night = false};
+if (SR_Night) then {
+    _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+};
+_unit setVariable ["SR_Class","AR", true];
+_unit setVariable ["ace_isEngineer",0, true];
+_unit setVariable ["ace_medical_medicClass",0,true];
+_unit setVariable ["ACE_isEOD",false,true];
+
+_unit setVariable ["SR_Loadout",getUnitLoadout _unit];
+_unit setVariable ["SR_CBRN_Mask","vn_b_acc_m17_01"];

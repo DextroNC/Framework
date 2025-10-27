@@ -7,8 +7,10 @@ this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["
 this addaction ["<t color=""#0000FF"">" +"x2 Night sight - 1pn93-1", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_1pn93_1"]];
 this addaction ["<t color=""#0000FF"">" +"x3 Night sight - 1pn93-2", "7R\Loadouts\7R_EQ.sqf",["rhs_acc_1pn93_2"]];
 
+private _tier = 4;
+
 // Support items
-[this, 4] call fw_fnc_addEquipmentItems;
+[this, _tier] call fw_fnc_addEquipmentItems;
 
 // Radios
-[this] call fw_fnc_addEquipmentRadios;
+[this, _tier] call fw_fnc_addEquipmentRadios;

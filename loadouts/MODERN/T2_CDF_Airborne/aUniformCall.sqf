@@ -111,10 +111,10 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "rhsusf_ach_helmet_headset_ess_ocp",4,
             "rhsusf_ach_helmet_headset_ess_ocp_alt",4,
             "rhsusf_ach_helmet_camo_ocp",16,
-            "7r_ocp_opscore",6,
-            "7r_ocp_opscore_2",8,
-            "7r_ocp_opscore_3",8,
-            "7r_ocp_opscore_4",8
+            "7r_ocp_opscore",9,
+            "7r_ocp_opscore_2",12,
+            "7r_ocp_opscore_3",12,
+            "7r_ocp_opscore_4",12
         ];
     };
 
