@@ -72,7 +72,7 @@ clearBackpackCargoGlobal _helo;
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
 // Add Waypoints at EZ
-[_group, _target] spawn BIS_fnc_wpLand;
+[_group, _target, "TR UNLOAD"] call fw_fnc_createWaypoint
 
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo))};
 // Fail Safe
