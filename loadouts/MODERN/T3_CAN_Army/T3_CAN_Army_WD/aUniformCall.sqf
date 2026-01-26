@@ -30,109 +30,77 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat"
+            "7r_combat_fatigues_cadpat",2,
+            "7r_combat_fatigues_cadpat_gloves",2,
+            "7r_combat_fatigues_cadpat_mixed",1,
+            "7r_combat_fatigues_cadpat_mixed_gloves",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat"
+            "7r_combat_fatigues_cadpat",2,
+            "7r_combat_fatigues_cadpat_gloves",2,
+            "7r_combat_fatigues_cadpat_mixed",1,
+            "7r_combat_fatigues_cadpat_mixed_gloves",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat_ssl",
-            "7r_field_uniform_cadpat"
+            "7r_combat_fatigues_cadpat",2,
+            "7r_combat_fatigues_cadpat_gloves",2,
+            "7r_combat_fatigues_cadpat_mixed",1,
+            "7r_combat_fatigues_cadpat_mixed_gloves",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_sard",1
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
-
-_ess_list = [
-    "7r_cadpat_cg634_ess",
-    "7r_cadpat_cg634_headset_ess"
-];
-
-_noess_list = [
-    "7r_cadpat_cg634",
-    "7r_cadpat_cg634_headset"
-];
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 //Appends array of hats with desired uniforms based on _Class
-    //Echo
-    if (_Class == 1) then{
-        _hatArray = _ess_list + _noess_list;
+    if (_Class > 0) then{
+        _hatArray = [
+            "7r_cadpat_opscore",
+            "7r_cadpat_opscore_2",
+            "7r_cadpat_opscore_3",
+            "7r_cadpat_opscore_4"
+        ];
     };
 
-    //Squad
-    if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list;
-    };
-
-    //Platoon 
-    if (_Class == 3) then{
-        _hatArray = _ess_list + _noess_list;
-    };
-
-    //Sierra
-    if (_Class == 4) then{
-        _hatArray = _ess_list + _noess_list;
+    if (_Class in [3,1]) then{
+        _hatArray = [
+            "7r_can_opscore_3",
+            "7r_can_opscore_4",
+            "7r_cadpat_opscore_2",
+            "7r_cadpat_opscore_3",
+            "7r_cadpat_opscore_4"
+        ];
     };
     
     //Selects random hat from determined array, runs
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
-if (_helmet in _ess_List) then {_class = _class + 0.5};
 
 //Appends array of goggleswith desired values
 
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "7r_scrim_lush", 0.425,
             "UK3CB_G_Neck_Shemag_Tan", 0.1,
             "rhs_googles_clear", 0.225,
             "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_blk", 0.1,
             "rhsusf_oakley_goggles_clr", 0.1
-        ];
-    };
-    
-    //Echo Goggles On Helmet
-    if (_Class == 1.5) then{
-        _goggleArray = [
-            "7r_scrim_lush", 0.225,
-            "UK3CB_G_Neck_Shemag_Tan", 0.3,
-            "rhs_googles_clear", 0.225,
-            "usm_scarf", 0.2
         ];
     };
 
@@ -147,16 +115,6 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhsusf_oakley_goggles_clr", 0.1
         ];
     };
-    
-    //Squad Goggles On Helmet
-    if (_Class == 2.5) then{
-        _goggleArray = [
-            "7r_scrim_lush", 0.225,
-            "UK3CB_G_Neck_Shemag_Tan", 0.3,
-            "rhs_googles_clear", 0.225,
-            "usm_scarf", 0.2
-        ];
-    };
 
     //Platoon 
     if (_Class == 3) then{
@@ -168,15 +126,6 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhsusf_oakley_goggles_clr", 0.1
         ];
     };
-    
-    //Platoon Goggles On Helmet
-    if (_Class == 3.5) then{
-        _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.3,
-            "rhs_googles_clear", 0.225,
-            "usm_scarf", 0.2
-        ];
-    };
 
     //Sierra
     if (_Class == 4) then{
@@ -186,15 +135,6 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_blk", 0.1,
             "rhsusf_oakley_goggles_clr", 0.1
-        ];
-    };
-    
-    //Sierra Goggles On Helmet
-    if (_Class == 4.5) then{
-        _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.3,
-            "rhs_googles_clear", 0.225,
-            "usm_scarf", 0.2
         ];
     };
 

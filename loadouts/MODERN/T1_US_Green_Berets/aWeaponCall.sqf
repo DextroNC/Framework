@@ -83,10 +83,7 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_m240B",
-            "rhs_weap_m240B",
-            "rhs_weap_m240B",
-            "rhs_weap_m240G"
+            "7r_weap_mk48"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
@@ -137,7 +134,7 @@
             "rhsusf_acc_anpeq15_top"
         ];
     };
-    if (_Rifle == 5) then{
+    if (_Rifle in [5,6]) then{
         _attachmentArray = [
             "rhsusf_acc_anpeq15side"
         ];

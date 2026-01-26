@@ -75,26 +75,22 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _ess_list = [
     "7r_ldf_wz2005_ess",
-    "7r_ldf_wz2005_headset_ess",
-    "7r_odg_wz2005_ess",
-    "7r_odg_wz2005_headset_ess"
+    "7r_ldf_wz2005_headset_ess"
 ];
 
 _noess_list = [
     "7r_ldf_wz2005_headset",
-    "7r_ldf_wz2005",
-    "7r_odg_wz2005_headset",
-    "7r_odg_wz2005"
+    "7r_ldf_wz2005"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_odg_wz2005_headset",
-            "7r_odg_wz2005",
-            "7r_odg_wz2005_ess",
-            "7r_odg_wz2005_headset_ess"
+            "7r_ldf_wz2005_headset",
+            "7r_ldf_wz2005",
+            "7r_ldf_wz2005_ess",
+            "7r_ldf_wz2005_headset_ess"
         ];
     };
 
@@ -111,10 +107,10 @@ _noess_list = [
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_odg_wz2005_headset",
-            "7r_odg_wz2005",
-            "7r_odg_wz2005_ess",
-            "7r_odg_wz2005_headset_ess"
+            "7r_ldf_wz2005_headset",
+            "7r_ldf_wz2005",
+            "7r_ldf_wz2005_ess",
+            "7r_ldf_wz2005_headset_ess"
         ];
     };
 

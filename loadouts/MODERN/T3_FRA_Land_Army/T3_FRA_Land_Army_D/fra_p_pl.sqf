@@ -37,13 +37,13 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Compact";
+    _unit addBackpack "7r_compact_cce";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
     _unit addItemToBackpack "ACE_HuntIR_monitor";
     for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhsusf_patrolcap_ocp";
+    _unit addItemToBackpack "7r_beret_french_army_prr";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

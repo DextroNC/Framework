@@ -22,7 +22,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 72];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 24];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
-    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
+    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 8];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Pellets", 16];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
@@ -110,7 +110,7 @@ if (_type == 4) then {
 if (_type == 5) then {
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_10Rnd_762x51_m118_special_Mag", 4];
-	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
+	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 5];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Pellets", 3];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 3];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];

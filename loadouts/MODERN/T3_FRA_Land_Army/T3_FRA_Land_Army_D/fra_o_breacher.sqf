@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Kitbag";
+    _unit addBackpack "7r_kitbag_cce";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_12G_Slugs";};
     for "_i" from 1 to 2 do {_unit addItemToVest "tsp_stickCharge_auto_mag";};

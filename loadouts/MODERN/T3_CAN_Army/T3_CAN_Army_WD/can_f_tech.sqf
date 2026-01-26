@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "7r_field_uniform_cadpat";
+    _unit forceAddUniform selectRandomWeighted ["7r_combat_fatigues_cadpat",2,"7r_combat_fatigues_cadpat_mixed_gloves",1];
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -41,7 +41,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "7r_weap_c8a3";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
+    _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";

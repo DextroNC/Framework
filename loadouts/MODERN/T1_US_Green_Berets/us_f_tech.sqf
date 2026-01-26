@@ -42,7 +42,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m4a1_mstock";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
+    _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";

@@ -34,7 +34,7 @@ _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack selectRandom ["7r_beret_can_army_prr","7r_beret_can_army_prr_over","7r_cadpat_patrolcap","7r_cadpat_patrolcap"];
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_P320_BLK";
+_unit addWeapon "UK3CB_P320_DES";
 _unit addWeapon "Binocular";
 
 comment "Add items";

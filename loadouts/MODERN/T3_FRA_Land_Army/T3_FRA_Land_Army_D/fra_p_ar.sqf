@@ -32,15 +32,15 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Compact";
+    _unit addBackpack "7r_compact_cce";
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhs_Booniehat_ocp";
+    _unit addItemToBackpack "7r_daguet_boonie";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+    _unit addPrimaryWeaponItem "rhsusf_acc_su230";
 
 comment "Add Secondary/Attachments";
 

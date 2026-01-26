@@ -99,15 +99,13 @@
         _primaryArray = [
             "7r_weap_l7a2"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr"
+            "rhs_weap_mk18_nsr_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -131,9 +129,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr"
+            "rhs_weap_mk18_nsr_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -157,12 +153,6 @@
     };
     if (_Rifle in [7,10]) then{
         _gripArray = [
-            "rhs_acc_mk18_nsr",
-            "rhs_acc_mk18_nsr_bcm",
-            "rhs_acc_mk18_nsr_d",
-            "rhs_acc_mk18_nsr_d_bcm",
-            "rhs_acc_mk18_nsr_d",
-            "rhs_acc_mk18_nsr_d_bcm",
             "rhs_acc_mk18_nsr_d",
             "rhs_acc_mk18_nsr_d_bcm"
         ];
