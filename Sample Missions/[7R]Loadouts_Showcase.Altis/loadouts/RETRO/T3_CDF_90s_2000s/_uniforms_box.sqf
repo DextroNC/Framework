@@ -37,16 +37,16 @@ _uniforms = [
 		["Operator Engineer (Repair)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_o_e_repair.sqf"]
 	]],
 
-	["Echo", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
-		[["Echo Rifleman", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_rifleman.sqf"],
-		["Echo AR", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_ar.sqf"],
-		["Echo Engineer (Demo)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_demo.sqf"],
-		["Echo Engineer (EOD)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_eod.sqf"],
-		["Echo Engineer (Fortification)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_fort.sqf"],
-		["Echo Engineer (Repair)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_repair.sqf"],
-		["Echo Heavy Weapons (Mortar)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_mor.sqf"],
-		["Echo Asst. Heavy Weapons (Mortar)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_morAsst.sqf"],
-		["Echo Driver", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_driver.sqf"]
+	["Support", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_maint.paa",
+		[["Support Rifleman", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_rifleman.sqf"],
+		["Support AR", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_ar.sqf"],
+		["Support Engineer (Demo)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_demo.sqf"],
+		["Support Engineer (EOD)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_eod.sqf"],
+		["Support Engineer (Fortification)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_fort.sqf"],
+		["Support Engineer (Repair)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_repair.sqf"],
+		["Support Heavy Weapons (Mortar)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_mor.sqf"],
+		["Support Asst. Heavy Weapons (Mortar)", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_morAsst.sqf"],
+		["Support Driver", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_driver.sqf"]
 	]],
 
 	["Foxtrot", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_armor.paa",
@@ -64,11 +64,6 @@ _uniforms = [
 		[["Rodeo Pilot", "loadouts\RETRO\T3_CDF_90s_2000s\pilot_rotaryPilot.sqf"],
 		["Rodeo Co-Pilot (Crewman)", "loadouts\RETRO\T3_CDF_90s_2000s\pilot_rotaryCrew.sqf"],
 		["Whiskey Pilot", "loadouts\RETRO\T3_CDF_90s_2000s\pilot_fixedWing.sqf"]
-	]],
-
-	["Lima", "#ff8c00", "a3\ui_f\data\Map\Markers\NATO\b_support.paa",
-		[["Lima Technician", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_e_repair.sqf"],
-		["Lima Operator", "loadouts\RETRO\T3_CDF_90s_2000s\cdf_e_rifleman.sqf"]
 	]]
 ];
 					
