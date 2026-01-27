@@ -88,7 +88,7 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "7r_weap_colt727"
+            "7r_weap_colt723"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -121,10 +121,17 @@
     _unit addWeapon selectRandom _primaryArray;
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
-    if (_Rifle >= 1) then{
-        _attachmentArray = [
-            "7r_acc_SF660_Barrel"
-        ];
+    if (SR_Night) then {
+        if (_Rifle >= 1) then{
+            _attachmentArray = [
+                "7r_acc_SF660_Barrel"
+            ];
+        };
+        if (_Rifle == 3) then{
+            _attachmentArray = [
+                "7r_acc_SF660_M203"
+            ];
+        };
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
     if (_Rifle >= 1) then{

@@ -37,7 +37,7 @@ comment "Add Drip";
     _unit addHeadgear "UK3CB_H_Pilot_Helmet";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "7r_weap_colt727";
+    _unit addWeapon "7r_weap_colt723";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";
