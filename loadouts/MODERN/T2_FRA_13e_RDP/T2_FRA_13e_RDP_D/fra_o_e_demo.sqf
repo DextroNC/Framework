@@ -27,13 +27,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
+    _unit addVest "7r_spc_khk_light";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Kitbag";
+    _unit addBackpack "7r_kitbag_cce";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "SatchelCharge_Remote_Mag";};

@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhs_uniform_FROG01_wd";
+    _unit forceAddUniform "rhs_uniform_FROG01_d";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -40,7 +40,7 @@ comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m4_carryhandle";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
+    _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";

@@ -78,10 +78,10 @@ _helmet_list = [
 ];
 
 _helmet_list_pl_and_echo = [
-    "7r_khk_opscore_2",
-    "7r_khk_opscore_3",
-    "7r_khk_opscore_4",
-    "7r_khk_opscore_2",
+    "7r_fla_opscore_3",
+    "7r_fla_opscore_4",
+    "7r_fla_opscore",
+    "7r_fla_opscore_2",
     "rhsusf_opscore_fg_pelt_nsw",
     "rhsusf_opscore_fg_pelt_cam",
     "rhsusf_opscore_fg_pelt_nsw",

@@ -38,7 +38,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhs_Booniehat_ocp";
+    _unit addItemToBackpack "7r_daguet_boonie";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR

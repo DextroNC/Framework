@@ -41,7 +41,7 @@
         _primaryArray = [
             "rhs_weap_hk416d145"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //2 - Rifle 2
@@ -50,7 +50,7 @@
             "rhs_weap_hk416d10",
             "rhs_weap_hk416d10_LMT"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //3 - Grenadier
@@ -58,7 +58,7 @@
         _primaryArray = [
             "rhs_weap_hk416d145_m320"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //4 - BattleRifle
@@ -82,7 +82,7 @@
         _primaryArray = [
             "rhs_weap_fnmag"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
@@ -91,7 +91,7 @@
             "7r_weap_scar_l",
             "7r_weap_scar_l_grip"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //8 - DMR
@@ -99,7 +99,7 @@
         _primaryArray = [
             "rhs_weap_hk416d145"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
     //9 - PDMR
@@ -116,7 +116,7 @@
             "rhs_weap_hk416d10",
             "rhs_weap_hk416d10_LMT"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull";
     };
 
 //Selects random weapon from determined array, runs
@@ -125,9 +125,16 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a_blk"
+            "rhsusf_acc_anpeq15_wmx_h"
         ];
     };
+
+    if (_Rifle in [5,7]) then{
+        _attachmentArray = [
+            "rhsusf_acc_anpeq15side"
+        ];
+    };
+
     if (_Rifle <= 4 or _Rifle == 10) then{
         _gripArray = [
             "",
@@ -140,6 +147,7 @@
             "rhsusf_acc_rvg_de"
         ];
     };
+
     if (_Rifle == 5) then{
         _gripArray = [
             "rhsusf_acc_saw_lw_bipod",

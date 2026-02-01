@@ -39,7 +39,12 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_hk416d145"
+            "rhs_weap_hk416d15_smr",
+            "rhs_weap_hk416d15_smr_kac",
+            "rhs_weap_hk416d15_smr_tan",
+            "rhs_weap_hk416d15_smr_tan_kac",
+            "rhs_weap_hk416d15_smr_tan",
+            "rhs_weap_hk416d15_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -47,8 +52,12 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "rhs_weap_hk416d10_smr",
+            "rhs_weap_hk416d10_smr_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -56,7 +65,8 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_hk416d10_m320"
+            "rhs_weap_hk416d10_m320",
+            "rhs_weap_hk416d10_m320_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -82,7 +92,7 @@
         _primaryArray = [
             "rhs_weap_fnmag"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
@@ -97,7 +107,8 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_hk416d145"
+            "rhs_weap_hk416d145",
+            "rhs_weap_hk416d145_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -113,8 +124,12 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_hk416d10",
-            "rhs_weap_hk416d10_LMT"
+            "rhs_weap_hk416d10_smr",
+            "rhs_weap_hk416d10_smr_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac",
+            "rhs_weap_hk416d10_smr_tan",
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -123,12 +138,25 @@
     _unit addWeapon selectRandom _primaryArray;
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
-    if (_Rifle >= 1) then{
+    if (_Rifle > 1) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a_blk"
+            "rhsusf_acc_anpeq15_wmx_h"
         ];
     };
-    if (_Rifle <= 4 or _Rifle == 10) then{
+
+    if (_Rifle in [1,2,10]) then{
+        _attachmentArray = [
+            "rhsusf_acc_anpeq15_wmx"
+        ];
+    };
+
+    if (_Rifle in [5,7]) then{
+        _attachmentArray = [
+            "rhsusf_acc_anpeq15side"
+        ];
+    };
+
+    if (_Rifle == 4) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_grip2",
@@ -141,6 +169,21 @@
             ""
         ];
     };
+    
+    if (_Rifle == 1) then{
+        _gripArray = [
+            "rhs_acc_m4_smr_d",
+            "rhs_acc_m4_smr_d_bcm"
+        ];
+    };
+    
+    if (_Rifle in [2,10]) then{
+        _gripArray = [
+            "rhs_acc_mk18_smr_d",
+            "rhs_acc_mk18_smr_d_bcm"
+        ];
+    };
+
     if (_Rifle == 5) then{
         _gripArray = [
             "rhsusf_acc_grip4_bipod",

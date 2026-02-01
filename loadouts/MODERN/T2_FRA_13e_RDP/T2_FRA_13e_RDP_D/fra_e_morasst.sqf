@@ -27,12 +27,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_marciras_assaulter_belt_mc";
+    _unit addVest "7r_spc_khk_light";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_carryall";
+    _unit addBackpack "7r_carryall_cce";
     _unit addItem "7r_compact_drone";
     _unit addItem "ACE_UAVBattery";
     for "_i" from 1 to 8 do {_unit addItemToBackpack "UK3CB_BAF_1Rnd_60mm_Mo_Shells";};

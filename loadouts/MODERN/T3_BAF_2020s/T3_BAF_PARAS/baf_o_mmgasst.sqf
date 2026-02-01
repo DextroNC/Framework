@@ -34,7 +34,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B";
-    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m80a1epr";};
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";

@@ -93,16 +93,9 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "7r_ttsko_d_wz2005_headset",2,
             "7r_ttsko_d_wz2005",2,
             "7r_ttsko_d_wz2005_headset_ess",2,
-            "7r_khk_wz2005_ess",1,
-            "7r_khk_wz2005_headset",1,
-            "7r_khk_wz2005_headset_ess",1,
-            "7r_khk_wz2005",1,
             "7r_ttsko_d_opscore_2",2,
             "7r_ttsko_d_opscore_3",1,
-            "7r_ttsko_d_opscore_4",1,
-            "7r_cdf_d_opscore",2,
-            "7r_cdf_d_opscore_3",1,
-            "7r_cdf_d_opscore_4",1
+            "7r_ttsko_d_opscore_4",1
         ];
     };
 
@@ -126,10 +119,6 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "7r_ttsko_d_wz2005_headset",2,
             "7r_ttsko_d_wz2005",2,
             "7r_ttsko_d_wz2005_headset_ess",2,
-            "7r_khk_wz2005_ess",1,
-            "7r_khk_wz2005_headset",1,
-            "7r_khk_wz2005_headset_ess",1,
-            "7r_khk_wz2005",1,
             "7r_ttsko_d_opscore_2",2,
             "7r_ttsko_d_opscore_3",1,
             "7r_ttsko_d_opscore_4",1,
@@ -144,7 +133,10 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
         _hatArray = [
             "7r_cdf_d_opscore",2,
             "7r_cdf_d_opscore_3",1,
-            "7r_cdf_d_opscore_4",1
+            "7r_cdf_d_opscore_4",1,
+            "7r_ttsko_d_opscore_2",2,
+            "7r_ttsko_d_opscore_3",1,
+            "7r_ttsko_d_opscore_4",1
         ];
     };
     //Selects random hat from determined array, runs
@@ -153,8 +145,6 @@ _helmet = selectRandomWeighted _hatArray;
 _unit addHeadgear _helmet;
 
 _goggleList = [
-    "7r_khk_wz2005_ess",
-    "7r_khk_wz2005_headset_ess",
     "7r_ttsko_d_wz2005_headset_ess",
     "7r_ttsko_d_wz2005_ess"
 ];

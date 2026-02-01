@@ -103,7 +103,7 @@
             "rhs_weap_fnmag",
             "rhs_weap_fnmag"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC

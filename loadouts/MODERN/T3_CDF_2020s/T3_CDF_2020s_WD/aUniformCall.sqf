@@ -93,16 +93,9 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "7r_ttsko_wz2005_headset",2,
             "7r_ttsko_wz2005",2,
             "7r_ttsko_wz2005_headset_ess",2,
-            "7r_odg_wz2005_ess",1,
-            "7r_odg_wz2005_headset",1,
-            "7r_odg_wz2005_headset_ess",1,
-            "7r_odg_wz2005",1,
             "7r_ttsko_opscore_2",2,
             "7r_ttsko_opscore_3",1,
-            "7r_ttsko_opscore_4",1,
-            "7r_cdf_opscore",2,
-            "7r_cdf_opscore_3",1,
-            "7r_cdf_opscore_4",1
+            "7r_ttsko_opscore_4",1
         ];
     };
 
@@ -126,10 +119,6 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
             "7r_ttsko_wz2005_headset",2,
             "7r_ttsko_wz2005",2,
             "7r_ttsko_wz2005_headset_ess",2,
-            "7r_odg_wz2005_ess",1,
-            "7r_odg_wz2005_headset",1,
-            "7r_odg_wz2005_headset_ess",1,
-            "7r_odg_wz2005",1,
             "7r_ttsko_opscore_2",2,
             "7r_ttsko_opscore_3",1,
             "7r_ttsko_opscore_4",1,

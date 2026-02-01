@@ -28,13 +28,13 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_marciras_medic_belt_mc";
+    _unit addVest "7r_spc_khk_corpsman";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_Multicam_Backpack_Compact";
+    _unit addBackpack "7r_compact_cce";
 
 
 comment "Add Drip";

@@ -82,7 +82,7 @@
         _primaryArray = [
             "rhs_weap_fnmag"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
@@ -184,7 +184,7 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "UK3CB_P320_BLK";
+    _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
     _unit addItem "UK3CB_P320_9x19_17Rnd";
     _unit addItem "UK3CB_P320_9x19_17Rnd";

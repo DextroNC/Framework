@@ -43,7 +43,7 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "7r_weap_colt727";
+    _unit addWeapon "7r_weap_colt723";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
     _unit addPrimaryWeaponItem "7r_m16_optic";
 

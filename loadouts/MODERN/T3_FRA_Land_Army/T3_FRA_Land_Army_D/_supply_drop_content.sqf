@@ -19,10 +19,10 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 72];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 72];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 24];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
-    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
+    _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 8];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Pellets", 16];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
@@ -68,7 +68,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["UK3CB_BAF_338_5Rnd", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 12];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 	_box additemcargoGlobal ["ACE_UAVBattery", 2];
@@ -79,7 +79,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull", 36];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_FMJ", 8];
@@ -110,7 +110,7 @@ if (_type == 4) then {
 if (_type == 5) then {
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 4];
-	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
+	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 5];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Pellets", 3];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_12G_Slugs", 3];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 6];

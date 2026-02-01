@@ -39,9 +39,7 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m4_nsr_d",
-            "rhs_weap_m4_nsr_d",
-            "rhs_weap_m4_nsr"
+            "rhs_weap_m4_nsr_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -49,9 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr"
+            "rhs_weap_mk18_nsr_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -91,7 +87,7 @@
         _primaryArray = [
             "7r_weap_l7a2"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
@@ -125,9 +121,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr_d",
-            "rhs_weap_mk18_nsr"
+            "rhs_weap_mk18_nsr_d"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
     };
@@ -157,20 +151,8 @@
             "UK3CB_BAF_LLM_IR_Tan"
         ];
         _gripArray = [
-            "rhs_acc_m4_nsr13",
-            "rhs_acc_m4_nsr13_bcm",
             "rhs_acc_m4_nsr13_d",
             "rhs_acc_m4_nsr13_d_bcm",
-            "rhs_acc_m4_nsr13_d",
-            "rhs_acc_m4_nsr13_d_bcm",
-            "rhs_acc_m4_nsr13_d",
-            "rhs_acc_m4_nsr13_d_bcm",
-            "rhs_acc_m4_nsr",
-            "rhs_acc_m4_nsr_bcm",
-            "rhs_acc_m4_nsr_d",
-            "rhs_acc_m4_nsr_d_bcm",
-            "rhs_acc_m4_nsr_d",
-            "rhs_acc_m4_nsr_d_bcm",
             "rhs_acc_m4_nsr_d",
             "rhs_acc_m4_nsr_d_bcm"
         ];
@@ -183,12 +165,6 @@
             "UK3CB_BAF_LLM_IR_Tan"
         ];
         _gripArray = [
-            "rhs_acc_mk18_nsr",
-            "rhs_acc_mk18_nsr_bcm",
-            "rhs_acc_mk18_nsr_d",
-            "rhs_acc_mk18_nsr_d_bcm",
-            "rhs_acc_mk18_nsr_d",
-            "rhs_acc_mk18_nsr_d_bcm",
             "rhs_acc_mk18_nsr_d",
             "rhs_acc_mk18_nsr_d_bcm"
         ];

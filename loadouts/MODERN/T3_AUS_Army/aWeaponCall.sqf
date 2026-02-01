@@ -40,9 +40,9 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "7r_weap_ef88_black",
-            "7r_weap_ef88_black",
-            "7r_weap_ef88_black",
-            "7r_weap_ef88"
+            "7r_weap_ef88",
+            "7r_weap_ef88_spray2",
+            "7r_weap_ef88_spray3"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -51,9 +51,9 @@
     if (_Rifle == 2) then{
         _primaryArray = [
             "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c"
+            "7r_weap_ef88_c",
+            "7r_weap_ef88_c_spray2",
+            "7r_weap_ef88_c_spray3"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -62,9 +62,9 @@
     if (_Rifle == 3) then{
         _primaryArray = [
             "7r_weap_ef88_gl_black",
-            "7r_weap_ef88_gl_black",
-            "7r_weap_ef88_gl_black",
-            "7r_weap_ef88_gl"
+            "7r_weap_ef88_gl",
+            "7r_weap_ef88_gl_spray2",
+            "7r_weap_ef88_gl_spray3"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };
@@ -89,9 +89,9 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_fnmag"
+            "7r_weap_maximi"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51";
+        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
     };
 
     //7 - SPC
@@ -117,7 +117,7 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_sr25_ec"
+            "7r_weap_hk417_16in"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -126,9 +126,9 @@
     if (_Rifle == 10) then{
         _primaryArray = [
             "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c_black",
-            "7r_weap_ef88_c"
+            "7r_weap_ef88_c",
+            "7r_weap_ef88_c_spray2",
+            "7r_weap_ef88_c_spray3"
         ];
         _primaryAmmo = "7r_mag_aug_m855a1";
     };

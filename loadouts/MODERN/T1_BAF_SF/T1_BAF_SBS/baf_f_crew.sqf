@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP";
+    _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_RM";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,21 +27,19 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Holster";
+    _unit addVest "7r_virtus_platecarrier";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
 
 comment "Add Drip";
-    _unit addHeadgear "H_HelmetCrew_I_E";
+    _unit addHeadgear "H_HelmetCrew_I";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "SMG_05_F";
+    _unit addWeapon "UK3CB_BAF_L22A2";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";
-    _unit addHandgunItem "acc_flashlight_pistol";
-    _unit addHandgunItem "rhsusf_acc_omega9k";
     _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
 
 comment "Add Tertiary equipment";
@@ -49,7 +47,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -61,7 +59,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_TAN","USP_GPNVG18_WP_TAN2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAN","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_GM_TAR_TAN","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2","USP_GPNVG18_WP_TAR_TAN","USP_GPNVG18_WP_TAR_TAN2"];
+    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","TC", true];

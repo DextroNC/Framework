@@ -34,7 +34,7 @@ comment "Add Vest/Items";
     _unit addItemToVest "rhs_mag_m18_red";
 
 comment "Add Backpack/Items";
-    _unit addBackpack "milgp_bp_Tomahawk_rgr";
+    _unit addBackpack "B_AssaultPack_invisible";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";

@@ -36,21 +36,20 @@ comment "Add Backpack/Items";
 
 comment "Add Drip";
     _unit addHeadgear "rhsusf_cvc_helmet";
-    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4a1_carryhandle";
+    _unit addWeapon "rhs_weap_m4_carryhandle";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "hgun_ACPC2_F";
-    _unit addHandgunItem "9Rnd_45ACP_Mag";
+    _unit addWeapon "UK3CB_P320_DES";
+    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToVest "9Rnd_45ACP_Mag";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_PMAG";};
+    for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_P320_9x19_17Rnd";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

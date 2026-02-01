@@ -33,7 +33,7 @@ _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_P320_BLK";
+_unit addWeapon "UK3CB_P320_DES";
 _unit addWeapon "Binocular";
 
 comment "Add items";

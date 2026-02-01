@@ -30,39 +30,48 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc"
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc"
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc_ssl",
-            "7r_field_uniform_mc"
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_daguet",
+		"7r_combat_fatigues_daguet_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves",
+		"7r_combat_fatigues_serval",
+		"7r_combat_fatigues_serval_gloves"
         ];
     };
 
@@ -77,60 +86,65 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 _noess_list = [
-    "rhsusf_ach_helmet_ocp",
-    "rhsusf_ach_helmet_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt"
+    "7r_felin_helmet_tan",
+    "7r_felin_helmet_tan_headset",
+    "7r_felin_helmet_tan_headset"
 ];
 
 _ess_list = [
-    "rhsusf_ach_helmet_ESS_ocp",
-    "rhsusf_ach_helmet_ESS_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt"
+    "7r_felin_helmet_tan_ess",
+    "7r_felin_helmet_tan_headset_ess",
+    "7r_felin_helmet_tan_headset_ess"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = _ess_list + _noess_list + _noess_list;
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"];;
+        _hatArray = _ess_list + _noess_list + _noess_list;
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = _ess_list + _noess_list + _noess_list;
     };
 
     //Sierra
     if (_Class == 4) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = _ess_list + _noess_list + _noess_list;
     };
     
     //Selects random hat from determined array, runs
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
-if (_helmet in _ess_list) then {_class = 5};
+if ((_helmet in _ess_list) && (_class < 3)) then {_class = 5;};
+if ((_helmet in _ess_list) && (_class >= 3)) then {_class = 6;};
 
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
-    if (_Class <= 3) then{
+    if (_Class < 3) then{
         _goggleArray = [
+            "UK3CB_G_Balaclava2_DES", 0.25,
+            "7r_scrim_forest", 0.25,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "G_Bandanna_khk", 0.1,
+            "rhs_googles_clear", 0.15,
+            "rhs_googles_black", 0.15
+        ];
+    };
+
+    if (_Class == 3) then{
+        _goggleArray = [
+            "", 0.25,
             "UK3CB_G_Neck_Shemag_Tan", 0.225,
-            "rhs_googles_clear", 0.325,
-            "rhsusf_oakley_goggles_blk", 0.1875,
-            "rhsusf_oakley_goggles_clr", 0.1875,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "G_Bandanna_khk", 0.1,
+            "rhs_googles_clear", 0.225,
+            "rhs_googles_black", 0.225
         ];
     };
 
@@ -149,9 +163,21 @@ if (_helmet in _ess_list) then {_class = 5};
     //ESS On Helmet 
     if (_Class == 5) then{
         _goggleArray = [
-            "UK3CB_G_Neck_Shemag_Tan", 0.35,
-            "rhs_googles_clear", 0.3,
-            "", 0.35
+            "UK3CB_G_Balaclava2_DES", 0.25,
+            "7r_scrim_forest", 0.25,
+            "UK3CB_G_Neck_Shemag_Tan", 0.1,
+            "G_Bandanna_khk", 0.1,
+            "", 0.3
+        ];
+    };
+
+    //ESS On Helmet 
+    if (_Class == 6) then{
+        _goggleArray = [
+            "", 0.25,
+            "UK3CB_G_Neck_Shemag_Tan", 0.225,
+            "G_Bandanna_khk", 0.1,
+            "", 0.45
         ];
     };
 

@@ -71,21 +71,16 @@
 _unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _helmet_list = [
+    "7r_cce_opscore",
     "7r_cce_opscore_2",
     "7r_cce_opscore_3",
-    "7r_cce_opscore_4",
-    "7r_cce_opscore_2"
+    "7r_cce_opscore_4"
 ];
 
 _helmet_list_pl_and_echo = [
-    "7r_khk_opscore_2",
-    "7r_khk_opscore_3",
-    "7r_khk_opscore_4",
-    "7r_khk_opscore_2",
-    "rhsusf_opscore_fg_pelt_nsw",
-    "rhsusf_opscore_fg_pelt_cam",
-    "rhsusf_opscore_fg_pelt_nsw",
-    "rhsusf_opscore_fg_pelt_cam"
+    "7r_fla_opscore_2",
+    "7r_fla_opscore_3",
+    "7r_fla_opscore_4"
 ];
 
 //Appends array of hats with desired uniforms based on _Class

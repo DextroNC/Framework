@@ -68,37 +68,40 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "rhsusf_opscore_fg_pelt",1,
-            "rhsusf_opscore_fg_pelt_cam",1,
-            "rhsusf_opscore_fg_pelt_nsw",1
+            "7r_amcu_opscore_2",2,
+            "7r_amcu_opscore_3",2,
+            "7r_amcu_opscore_4",2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "7r_amcu_opscore_2",1,
-            "7r_amcu_opscore_3",1,
-            "7r_amcu_opscore_4",1
+            "7r_amcu_opscore_2",2,
+            "7r_amcu_opscore_3",2,
+            "7r_amcu_opscore_4",2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "rhsusf_opscore_fg_pelt",1,
-            "rhsusf_opscore_fg_pelt_cam",1,
-            "rhsusf_opscore_fg_pelt_nsw",1
-            
+            "7r_amcu_opscore_2",2,
+            "7r_amcu_opscore_3",2,
+            "7r_amcu_opscore_4",2,
+            "7r_aus_opscore_4",1,
+            "7r_aus_opscore_3",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_amcu_opscore_2",1,
-            "7r_amcu_opscore_3",1,
-            "7r_amcu_opscore_4",1
+            "7r_amcu_opscore_2",2,
+            "7r_amcu_opscore_3",2,
+            "7r_amcu_opscore_4",2,
+            "7r_aus_opscore_4",1,
+            "7r_aus_opscore_3",1
         ];
     };
     //Selects random hat from determined array, runs
@@ -110,9 +113,8 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 1) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.025,
+            "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.025,
             "rhsusf_oakley_goggles_blk", 0.15,
             "UK3CB_G_Neck_Shemag_Tan", 0.45
         ];
@@ -122,9 +124,8 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 2) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.025,
+            "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_clr", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.025,
             "rhsusf_oakley_goggles_blk", 0.1,
             "7r_scrim_forest", 0.325,
             "UK3CB_G_Neck_Shemag_Tan", 0.225
@@ -135,9 +136,8 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 3) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.025,
+            "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.025,
             "rhsusf_oakley_goggles_blk", 0.15,
             "UK3CB_G_Neck_Shemag_Tan", 0.45
         ];
@@ -147,9 +147,8 @@ _unit addHeadgear selectRandomWeighted _hatArray;
     if (_Class == 4) then{
         _goggleArray = [
             "rhs_googles_clear", 0.2,
-            "rhsusf_shemagh2_gogg_tan", 0.025,
+            "usm_scarf", 0.05,
             "rhsusf_oakley_goggles_clr", 0.15,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.025,
             "rhsusf_oakley_goggles_blk", 0.15,
             "UK3CB_G_Neck_Shemag_Tan", 0.45
         ];

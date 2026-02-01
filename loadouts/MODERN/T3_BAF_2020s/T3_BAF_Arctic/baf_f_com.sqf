@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP";
+    _unit forceAddUniform "7r_oversuit_mtp_gloves";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "UK3CB_BAF_V_Osprey_Holster";
+    _unit addVest "7r_virtus_platecarrier";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";

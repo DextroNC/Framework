@@ -46,7 +46,7 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_premier_mrds";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "UK3CB_P320_BLK";
+    _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";
