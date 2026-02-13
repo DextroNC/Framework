@@ -35,7 +35,7 @@ comment "Add Vest/Items";
 
 comment "Add Backpack/Items";
     _unit addBackpack "B_Kitbag_invisible";
-    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_vss_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_20rnd_9x39mm_SP6",20],[],"rhsusf_acc_rvg_blk"], 1];
+    backpackContainer _unit addWeaponWithAttachmentsCargo [["rhs_weap_vss_grip_npz","","rhs_acc_perst1ik_ris","rhsusf_acc_g33_t1",["rhs_30Rnd_762x39mm_Savz58",20],[],"rhsusf_acc_rvg_blk"], 1];
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
     _unit addItemToBackpack "uk3cb_baf_maxikite";
@@ -58,7 +58,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 3 do {_unit addItem "rhs_20rnd_9x39mm_SP6";};
+    for "_i" from 1 to 3 do {_unit addItem "rhs_30Rnd_762x39mm_Savz58";};
     for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_300winmag_xm2010";};
 
 comment "Add Navigation";

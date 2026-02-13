@@ -26,7 +26,7 @@ switch (_index) do {
 	// Ground Vehicle (Infantry) Loadout - Loadout 2
 	case 2: {
 		_vehicle additemcargoGlobal ["SR_PAK", 8];
-		_vehicle addWeaponcargoGlobal ["rhs_weap_rpg26", 2];
+		_vehicle addWeaponcargoGlobal ["rhs_weap_rpg75", 2];
 	};
 	// Ground Vehicle (Echo) Loadout - Loadout 3
 	case 3: {

@@ -7,7 +7,7 @@ if(isServer) then {
 	this addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 160];
 	this addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 40];
     this addmagazinecargoGlobal ["rhs_mag_9x18_8_57N181S", 60];
-    this addweaponcargoGlobal ["rhs_weap_rpg26", 20];
+    this addweaponcargoGlobal ["rhs_weap_rpg75", 20];
     this addweaponcargoGlobal ["rhs_weap_rshg2", 10];
 	this addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 20];
 	this addmagazinecargoGlobal ["rhs_rpg7_OG7V_mag", 10];

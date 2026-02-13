@@ -71,7 +71,7 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_rpk74m_npz"
+            "rhs_weap_rpk74m"
         ];
         _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
