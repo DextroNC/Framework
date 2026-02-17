@@ -39,7 +39,7 @@
             "7r_bdu_btisrl_ttsko_d",2,
             "7r_bdu_srl_ttsko_d",4,
             "7r_bdu_srh_ttsko_d",6,
-            "7r_bdu_bnu_ttsko_d",6
+            "7r_bdu_bnu_ttsko_d",3
         ];
     };
 
@@ -55,7 +55,7 @@
             "7r_bdu_btisrl_ttsko_d",2,
             "7r_bdu_srl_ttsko_d",4,
             "7r_bdu_srh_ttsko_d",6,
-            "7r_bdu_bnu_ttsko_d",6
+            "7r_bdu_bnu_ttsko_d",3
         ];
     };
 
@@ -71,7 +71,7 @@
             "7r_bdu_btisrl_ttsko_d",2,
             "7r_bdu_srl_ttsko_d",4,
             "7r_bdu_srh_ttsko_d",6,
-            "7r_bdu_bnu_ttsko_d",6
+            "7r_bdu_bnu_ttsko_d",3
         ];
     };
 

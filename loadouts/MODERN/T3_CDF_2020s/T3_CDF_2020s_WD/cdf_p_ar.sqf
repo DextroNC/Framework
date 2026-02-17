@@ -37,11 +37,12 @@ comment "Add Backpack/Items";
     _unit addBackpack "7r_kitbag_ttsko";
 
 comment "Add Drip";
-    _unit addItemToBackpack "rhssaf_booniehat_digital";
+    _unit addItemToBackpack "7r_ttsko_boonie";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [objNull, _unit] call compile preprocessFileLineNumbers "loadouts\optic_switch.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 
 comment "Add Secondary/Attachments";

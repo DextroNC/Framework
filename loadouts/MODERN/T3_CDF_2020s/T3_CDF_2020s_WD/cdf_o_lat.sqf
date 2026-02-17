@@ -48,7 +48,7 @@ comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
-    _unit addWeapon "rhs_weap_rpg26";
+    _unit addWeapon "rhs_weap_rpg75";
 
 comment "Add Ammunition";
 

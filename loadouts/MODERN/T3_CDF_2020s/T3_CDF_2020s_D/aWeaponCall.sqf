@@ -83,7 +83,7 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_rpk74m_npz"
+            "rhs_weap_rpk74m"
         ];
         _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
@@ -99,9 +99,10 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_vss_grip"
+            "rhs_weap_savz58p_rail",
+            "rhs_weap_savz58v_rail"
         ];
-        _primaryAmmo = "rhs_20rnd_9x39mm_SP6";
+        _primaryAmmo = "rhs_30Rnd_762x39mm_Savz58";
     };
 
     //8 - DMR

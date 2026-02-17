@@ -72,9 +72,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_minimi_para_railed"
+            "7r_weap_c9"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200rnd_556x45_mixed_box_black";
     };
 
     //6 - MMG

@@ -27,8 +27,8 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhsusf_8Rnd_Slug", 16];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 20];
 	_box addmagazinecargoGlobal ["10Rnd_762x54_Mag", 10];
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 24];
-	_box addWeaponCargoGlobal ["rhs_weap_rpg26", 4];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 24];
+	_box addWeaponCargoGlobal ["rhs_weap_rpg75", 4];
 	_box addWeaponCargoGlobal ["rhs_weap_rshg2", 2];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VL_mag", 3];
 	_box addmagazinecargoGlobal ["rhs_rpg7_PG7VR_mag", 2];
@@ -84,9 +84,9 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["rhs_60Rnd_545X39_7N10_AK_mixed", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 12];
     _box addmagazinecargoGlobal ["10Rnd_762x54_Mag", 5];
-	_box addmagazinecargoGlobal ["rhs_20rnd_9x39mm_SP6", 12];
+	_box addmagazinecargoGlobal ["rhs_30Rnd_762x39mm_Savz58", 12];
 	_box addmagazinecargoGlobal ["rhs_mag_9x18_8_57N181S", 8];
-	_box addWeaponCargoGlobal ["rhs_weap_rpg26", 2];
+	_box addWeaponCargoGlobal ["rhs_weap_rpg75", 2];
 	_box addWeaponCargoGlobal ["rhs_weap_rshg2", 1];
 	_box additemcargoGlobal ["rhs_mag_rgd5", 6];
 	_box additemcargoGlobal ["rhs_mag_rgo", 2];

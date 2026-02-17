@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform selectRandom ["7r_combat_fatigues_daguet_gloves","7r_combat_fatigues_daguet_gloves","7r_combat_fatigues_serval_gloves"];
+    _unit forceAddUniform "7r_combat_fatigues_cce_gloves";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -35,7 +35,7 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear "rhsusf_cvc_alt_helmet";
+    _unit addHeadgear "rhsusf_cvc_green_alt_helmet";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d10";

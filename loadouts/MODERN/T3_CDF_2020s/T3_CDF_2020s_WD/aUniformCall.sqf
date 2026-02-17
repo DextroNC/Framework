@@ -30,48 +30,48 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko",4,
-            "7r_combatsmocks_ttsko_gloves",4,
-            "7r_combatsmocks_ttsko_odg",4,
-            "7r_combatsmocks_ttsko_odg_gloves",4,
+            "7r_combatsmocks_ttsko",5,
+            "7r_combatsmocks_ttsko_gloves",5,
+            "7r_combatsmocks_ttsko_odg",5,
+            "7r_combatsmocks_ttsko_odg_gloves",5,
             "7r_bdu_ttsko",2,
-            "7r_bdu_bti_ttsko",1,
-            "7r_bdu_btisrl_ttsko",1,
+            "7r_bdu_bti_ttsko",2,
+            "7r_bdu_btisrl_ttsko",2,
             "7r_bdu_srl_ttsko",2,
-            "7r_bdu_srh_ttsko",3,
-            "7r_bdu_bnu_ttsko",3
+            "7r_bdu_srh_ttsko",2,
+            "7r_bdu_bnu_ttsko",2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko",4,
-            "7r_combatsmocks_ttsko_gloves",4,
-            "7r_combatsmocks_ttsko_odg",4,
-            "7r_combatsmocks_ttsko_odg_gloves",4,
+            "7r_combatsmocks_ttsko",5,
+            "7r_combatsmocks_ttsko_gloves",5,
+            "7r_combatsmocks_ttsko_odg",5,
+            "7r_combatsmocks_ttsko_odg_gloves",5,
             "7r_bdu_ttsko",2,
-            "7r_bdu_bti_ttsko",1,
-            "7r_bdu_btisrl_ttsko",1,
+            "7r_bdu_bti_ttsko",2,
+            "7r_bdu_btisrl_ttsko",2,
             "7r_bdu_srl_ttsko",2,
-            "7r_bdu_srh_ttsko",3,
-            "7r_bdu_bnu_ttsko",3
+            "7r_bdu_srh_ttsko",2,
+            "7r_bdu_bnu_ttsko",2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko",4,
-            "7r_combatsmocks_ttsko_gloves",4,
-            "7r_combatsmocks_ttsko_odg",4,
-            "7r_combatsmocks_ttsko_odg_gloves",4,
+            "7r_combatsmocks_ttsko",5,
+            "7r_combatsmocks_ttsko_gloves",5,
+            "7r_combatsmocks_ttsko_odg",5,
+            "7r_combatsmocks_ttsko_odg_gloves",5,
             "7r_bdu_ttsko",2,
-            "7r_bdu_bti_ttsko",1,
-            "7r_bdu_btisrl_ttsko",1,
+            "7r_bdu_bti_ttsko",2,
+            "7r_bdu_btisrl_ttsko",2,
             "7r_bdu_srl_ttsko",2,
-            "7r_bdu_srh_ttsko",3,
-            "7r_bdu_bnu_ttsko",3
+            "7r_bdu_srh_ttsko",2,
+            "7r_bdu_bnu_ttsko",2
         ];
     };
 
