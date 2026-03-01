@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 // 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
-[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+[_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
@@ -26,18 +26,28 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "vn_o_vest_01";
+    _unit addVest "vn_o_vest_03";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
     for "_i" from 1 to 2 do {_unit addItemToVest "vn_f1_grenade_mag";};
 
 comment "Add Backpack/Items";
-_unit addBackpack "vn_b_pack_p08_01";
+    _unit addBackpack "vn_o_pack_05";
+    _unit addItemToUniform "ACRE_PRC343";
+    _unit addItemToBackpack "ACRE_PRC77";
+    _unit addItemToBackpack "ACE_Clacker";
+    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addItemToBackpack "ACE_ConstructionTool";
+    _unit addItemToBackpack "ACE_SpraypaintGreen";
+    for "_i" from 1 to 4 do {_unit addItemToBackpack "vn_mine_tripwire_f1_04_mag";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "vn_mine_tm57_mag";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Fortication_Material";};
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
-    [_unit, 3] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
+    [_unit, 4] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
@@ -47,26 +57,19 @@ comment "Add Tertiary equipment";
 comment "Add Ammunition";
 
 comment "Add Navigation";
-    _unit linkItem "ItemMap";
-    _unit linkItem "ItemCompass";
-    _unit linkItem "ItemWatch";
-    _unit linkItem "ItemRadioAcreFlagged";
-    
-    
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadioAcreFlagged";
+
+
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","G", true];
+_unit setVariable ["SR_Class","PE", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];

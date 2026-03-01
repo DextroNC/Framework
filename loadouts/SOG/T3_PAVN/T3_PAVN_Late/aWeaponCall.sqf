@@ -39,9 +39,9 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "vn_sks"
+            "vn_type56"
         ];
-        _primaryAmmo = "vn_sks_mag";
+        _primaryAmmo = "vn_type56_mag";
     };
 
     //2 - Rifle 2
@@ -63,9 +63,9 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "vn_m4956"
+            "vn_sks"
         ];
-        _primaryAmmo = "vn_m4956_10_mag";
+        _primaryAmmo = "vn_sks_mag";
     };
 
     //5 - AutoRifle
@@ -87,9 +87,9 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "vn_type56"
+            "vn_pps52"
         ];
-        _primaryAmmo = "vn_type56_mag";
+        _primaryAmmo = "vn_pps_mag";
     };
 
     //8 - DMR
@@ -120,21 +120,14 @@
     _unit addWeapon selectRandom _primaryArray;
 
 //Appends _attachmentArray1 array with a light source based on _Rifle
-    if (_Rifle in [1,8]) then{
+    if (_Rifle in [4,8]) then{
         _attachmentArray = [
             "",
             "vn_b_sks",
             "vn_b_sks"
         ];
     };
-    if (_Rifle in [4]) then{
-        _attachmentArray = [
-            "",
-            "vn_b_m4956",
-            "vn_b_m4956"
-        ];
-    };
-    if (_Rifle in [2,7]) then{
+    if (_Rifle in [1,2,7]) then{
         _attachmentArray = [
             "",
             "vn_b_type56",
@@ -148,12 +141,12 @@
 
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 16 Magazines
-    if (_Rifle in [1,4]) then{
-        for "_i" from 1 to 16 do {_unit addItem _primaryAmmo;};
-    };
-    //Infantry-based rifles - 12 Magazines
-    if (_Rifle in [2,7]) then{
+    if (_Rifle in [1,2,7]) then{
         for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
+    };
+    //Infantry-based rifles - 16 Magazines
+    if (_Rifle in [4]) then{
+        for "_i" from 1 to 16 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{

@@ -99,22 +99,24 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "vn_o_helmet_nva_04",2,
+            "vn_o_helmet_nva_01",1,
+            "vn_o_helmet_nva_02",2,
             "vn_o_helmet_nva_03",2,
+            "vn_o_helmet_nva_04",1,
             "vn_o_helmet_nva_07",1,
-            "vn_o_helmet_nva_02",1,
-            "vn_o_helmet_nva_01",1
+            "vn_o_helmet_nva_09",3
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "vn_o_helmet_nva_04",2,
+            "vn_o_helmet_nva_01",1,
+            "vn_o_helmet_nva_02",2,
             "vn_o_helmet_nva_03",2,
+            "vn_o_helmet_nva_04",1,
             "vn_o_helmet_nva_07",1,
-            "vn_o_helmet_nva_02",1,
-            "vn_o_helmet_nva_01",1
+            "vn_o_helmet_nva_09",3
         ];
     };
 
@@ -143,7 +145,7 @@ _unit addHeadgear _helmet;
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.15,
+            "vn_o_poncho_01_01", 0.15,
             "vn_b_scarf_01_01", 0.081,
             "vn_b_scarf_01_03", 0.081,
             "vn_o_scarf_01_01", 0.081,
@@ -157,7 +159,7 @@ _unit addHeadgear _helmet;
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "", 0.15,
+            "vn_o_poncho_01_01", 0.15,
             "vn_b_scarf_01_01", 0.081,
             "vn_b_scarf_01_03", 0.081,
             "vn_o_scarf_01_01", 0.081,
@@ -171,7 +173,7 @@ _unit addHeadgear _helmet;
     //Platoon 
     if (_Class == 3) then{
         _goggleArray = [
-            "", 0.15,
+            "vn_o_poncho_01_01", 0.15,
             "vn_b_scarf_01_01", 0.081,
             "vn_b_scarf_01_03", 0.081,
             "vn_o_scarf_01_01", 0.081,
@@ -185,7 +187,7 @@ _unit addHeadgear _helmet;
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "", 0.15,
+            "vn_o_poncho_01_01", 0.15,
             "vn_b_scarf_01_01", 0.081,
             "vn_b_scarf_01_03", 0.081,
             "vn_o_scarf_01_01", 0.081,

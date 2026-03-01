@@ -16,13 +16,14 @@ clearBackpackCargoGlobal _box;
 
 // Infantry Supply
 if (_type == 1) then {
-	_box addmagazinecargoGlobal ["vn_sks_mag", 72];
-	_box addmagazinecargoGlobal ["vn_type56_mag", 36];
+	_box addmagazinecargoGlobal ["vn_type56_mag", 72];
+	_box addmagazinecargoGlobal ["vn_sks_mag", 36];
+	_box addmagazinecargoGlobal ["vn_pps_mag", 24];
+	_box addmagazinecargoGlobal ["vn_m38_mag", 20];
 	_box addmagazinecargoGlobal ["vn_tt33_mag", 24];
 	_box addmagazinecargoGlobal ["vn_rpd_125_mag", 24];
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 30];
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 30];
-	_box addmagazinecargoGlobal ["vn_m4956_10_mag", 20];
 	_box addmagazinecargoGlobal ["vn_svd_mag", 10];
 	_box addmagazinecargoGlobal ["vn_rpg7_mag", 10];
 	_box additemcargoGlobal ["vn_f1_grenade_mag", 8];
@@ -63,10 +64,11 @@ if (_type == 3) then {
 
 // Small Squad Supply
 if (_type == 4) then {
-	_box addmagazinecargoGlobal ["vn_sks_mag", 36];
-	_box addmagazinecargoGlobal ["vn_type56_mag", 18];
+	_box addmagazinecargoGlobal ["vn_type56_mag", 36];
+	_box addmagazinecargoGlobal ["vn_sks_mag", 18];
+	_box addmagazinecargoGlobal ["vn_pps_mag", 12];
 	_box addmagazinecargoGlobal ["vn_rpd_125_mag", 12];
-    _box addmagazinecargoGlobal ["vn_m4956_10_mag", 8];
+    _box addmagazinecargoGlobal ["vn_sks_mag", 8];
 	_box addmagazinecargoGlobal ["vn_tt33_mag", 8];
 	_box additemcargoGlobal ["vn_f1_grenade_mag", 6];
 	_box additemcargoGlobal ["vn_rkg3_grenade_mag", 6];

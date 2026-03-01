@@ -63,6 +63,12 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+    _unit addItem "vn_40mm_m583_flare_w_mag";
+    _unit addItem "vn_40mm_m583_flare_w_mag";
+    _unit addItem "vn_40mm_m583_flare_w_mag";
+    _unit addItem "vn_40mm_m583_flare_w_mag";
+    _unit addItem "vn_40mm_m662_flare_r_mag";
+    _unit addItem "vn_40mm_m662_flare_r_mag";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PL", true];

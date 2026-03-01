@@ -18,6 +18,8 @@ clearBackpackCargoGlobal _box;
 if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_sks_mag", 72];
 	_box addmagazinecargoGlobal ["vn_mat49_mag", 36];
+	_box addmagazinecargoGlobal ["vn_type56_mag", 24];
+	_box addmagazinecargoGlobal ["vn_m38_mag", 20];
 	_box addmagazinecargoGlobal ["vn_m10_mag", 24];
 	_box addmagazinecargoGlobal ["vn_dp28_mag", 24];
 	_box addmagazinecargoGlobal ["vn_izh54_mag", 30];
@@ -64,6 +66,7 @@ if (_type == 3) then {
 // Small Squad Supply
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["vn_sks_mag", 36];
+	_box addmagazinecargoGlobal ["vn_pps_mag", 24];
 	_box addmagazinecargoGlobal ["vn_mat49_mag", 18];
 	_box addmagazinecargoGlobal ["vn_dp28_mag", 12];
     _box addmagazinecargoGlobal ["vn_m4956_10_mag", 8];

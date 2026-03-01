@@ -1,4 +1,4 @@
-this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["vn_o_4x_svd"]];
+this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["vn_o_3x_m9130"]];
 
 private _tier = 5;
 

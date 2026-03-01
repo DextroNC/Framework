@@ -33,7 +33,6 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "vn_b_pack_trp_04_02";
     _unit addItemToUniform "ACRE_PRC343";
-    _unit addItemToBackpack "ACRE_PRC77";
     _unit addItemToBackpack "ACE_RangeCard";
 
 comment "Add Drip";

@@ -19,6 +19,8 @@ _uniforms = [
 		["Operator Rifleman", "loadouts\pavn_o_rifleman.sqf"],
 		["Operator AR", "loadouts\pavn_o_ar.sqf"],
 		["Operator LAT", "loadouts\pavn_o_lat.sqf"],
+		["Operator MMG", "loadouts\pavn_o_mmg.sqf"],
+		["Operator Asst. MMG", "loadouts\pavn_o_mmgAsst.sqf"],
 		["Operator MAT", "loadouts\pavn_o_mat.sqf"],
 		["Operator Asst. MAT", "loadouts\pavn_o_matAsst.sqf"]
 	]],
@@ -27,7 +29,7 @@ _uniforms = [
 		[["Operator Grenadier", "loadouts\pavn_o_Grenadier.sqf"],
 		["Operator DMR", "loadouts\pavn_o_dmr.sqf"],
 		["Operator Battlerifle", "loadouts\pavn_o_br.sqf"],
-		["Operator Specialist (Type-56 AK)", "loadouts\pavn_o_spec.sqf"],
+		["Operator Specialist (PPS-52)", "loadouts\pavn_o_spec.sqf"],
 		["Operator Breacher", "loadouts\pavn_o_breacher.sqf"],
 		["Operator Engineer (Demo)", "loadouts\pavn_o_e_demo.sqf"],
 		["Operator Engineer (EOD)", "loadouts\pavn_o_e_eod.sqf"],

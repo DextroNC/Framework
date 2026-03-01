@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 // 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
-[_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+[_unit, 2] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_MapTools";
@@ -26,22 +26,21 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "vn_o_vest_vc_02";
+    _unit addVest "vn_b_vest_sas_04";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "vn_f1_grenade_mag";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "vn_b_pack_p08_01";
-    _unit addItemToUniform "ACRE_PRC343";
-    _unit addItemToBackpack "ACRE_PRC77";
-    _unit addItemToBackpack "ACE_RangeCard";
+    _unit addBackpack "vn_o_pack_04";
+    _unit addItemToBackpack "ToolKit";
+    _unit addItemToBackpack "ACE_EntrenchingTool";
+    _unit addItemToBackpack "ACE_SpraypaintGreen";
 
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
-    [_unit, 9] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "vn_o_4x_svd";
+    // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
+    [_unit, 1] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
 
 comment "Add Secondary/Attachments";
 
@@ -63,8 +62,8 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
-_unit setVariable ["SR_Class","PDMR", true];
-_unit setVariable ["ace_isEngineer",0, true];
+_unit setVariable ["SR_Class","E", true];
+_unit setVariable ["ace_isEngineer",2, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
 

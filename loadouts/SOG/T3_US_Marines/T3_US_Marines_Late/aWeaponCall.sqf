@@ -55,9 +55,9 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "vn_m3a1"
+            "vn_m2carbine"
         ];
-        _primaryAmmo = "vn_m3a1_mag";
+        _primaryAmmo = "vn_carbine_30_mag";
     };
 
     //4 - BattleRifle
