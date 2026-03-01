@@ -20,8 +20,8 @@ params [["_targetMarker","EZ"],["_spawnMarker","STARTSPAWN"],["_type","RHS_CH_47
 
 if !(isServer) exitWith{};
 
-_spawn = markerPos _spawnMarker;
-_target = markerPos _targetMarker;
+private _spawn = markerPos _spawnMarker;
+private _target = markerPos _targetMarker;
 private _str = "";
 
 // Check if Target Marker exists if not exit with error msg
@@ -54,9 +54,9 @@ _str = "Exfil Helicopter dispatched to Grid " + (mapGridPosition _target) + ".";
 ["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
 
 // Spawning Helicopter
-_helo = [_spawn, -90, _type, SR_Side] call bis_fnc_spawnVehicle;
-_group = _helo select 2;
-_helo = _helo select 0;
+private _heloArray = [_spawn, -90, _type, SR_Side] call bis_fnc_spawnVehicle;
+private _group = _heloArray select 2;
+private _helo = _heloArray select 0;
 
 // Disable AI in Parts
 [_group] spawn sr_support_fnc_supportAI;
@@ -71,10 +71,13 @@ clearitemcargoGlobal _helo;
 clearBackpackCargoGlobal _helo; 
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
+// Set NOE Flight Altitude
+_helo flyInHeight 25;
+
 // Add Waypoints at EZ
 [_group, _target] spawn BIS_fnc_wpLand;
 
-waitUntil {(!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo))};
+waitUntil {sleep 0.5; (!([_helo] call fw_fnc_checkStatus) || (isTouchingGround _helo))};
 // Fail Safe
 sleep 3;
 if (!(isTouchingGround _helo)) then {
@@ -84,27 +87,30 @@ if (!(isTouchingGround _helo)) then {
 };
 
 // Wait for Liftoff Command and lift off
-waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || SR_HeliLiftoff};
+waitUntil {sleep 0.5; (!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || SR_HeliLiftoff};
 {deleteWaypoint _x} forEachReversed waypoints _group;
+private _holdPos = getPosATL _helo;
+_holdPos set [2, 150];
+[_group, _holdPos, "MOVE"] call fw_fnc_createWaypoint;
 
 // Check if Dropoff Marker exists if not exit with error msg
-if (_dropoffMarker isEqualto [0,0,0]) exitWith {
+if (markerPos _dropoffMarker isEqualto [0,0,0]) then {
 	_dropoffMarker = _spawnMarker;
 	_str = "Exfil: No dropoff designated, going to spawn";
-	[_str,_str] remoteExec ["sr_support_fnc_infoMessage", _caller];
+	["",_str] remoteExec ["sr_support_fnc_infoMessage", _caller];
 };
 
 // Assign recovered Variable
 {
 	_x setVariable ["SR_Recovered",true,true];
-}forEach assignedCargo _helo;
+}forEach crew _helo;
 
 // Evaluate Dropoff
-if (!(markerPos _dropoffMarker isEqualTo [0,0,0]) && {_x in allPlayers} count (crew _helo) > 0) then {
-	_wpDropoff = [_group, (markerPos _dropoffMarker), "TR UNLOAD"] spawn fw_fnc_createWaypoint;
+if (!(markerPos _dropoffMarker isEqualTo [0,0,0]) && {({_x in allPlayers} count (crew _helo)) > 0}) then {
+	_wpDropoff = [_group, (markerPos _dropoffMarker), "TR UNLOAD"] call fw_fnc_createWaypoint;
 };
 
-// Final WP to despawn
+// Final WP to fly off map and despawn
 sleep 3;
 private _wpEnd = [markerPos "STARTSPAWN", 2000, _helo getDir markerPos "STARTSPAWN"] call BIS_fnc_relPos;
 _wpEnd set [2, 50];	

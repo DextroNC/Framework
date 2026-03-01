@@ -50,7 +50,7 @@ _unit addItem "rhs_mag_rgd5";
 		if (count (waypoints _grp) > 1) then {
 			{
 				deleteWaypoint ((waypoints _grp) select 0);
-			} forEach waypoints _grp;
+			} forEachReversed waypoints _grp;
 		};
 		_unit doMove (position _target);
 		if (_unit distance2d _target < 25) then {
