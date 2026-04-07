@@ -87,9 +87,9 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "vn_mat49_vc"
+            "vn_type56"
         ];
-        _primaryAmmo = "vn_mat49_vc_mag";
+        _primaryAmmo = "vn_type56_mag";
     };
 
     //8 - DMR

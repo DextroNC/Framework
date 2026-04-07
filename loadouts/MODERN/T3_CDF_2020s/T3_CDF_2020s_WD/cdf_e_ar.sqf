@@ -44,7 +44,7 @@ comment "Add Weapons/Attachments";
     //1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG | 7 - SPC | 8 - DMR
     [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     [objNull, _unit] call compile preprocessFileLineNumbers "loadouts\optic_switch.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
 
 comment "Add Secondary/Attachments";
 

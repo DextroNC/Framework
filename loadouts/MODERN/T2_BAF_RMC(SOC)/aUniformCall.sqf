@@ -30,87 +30,36 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP"
+            "7r_g3_mtp",6,
+            "7r_g3_mtp_ssl",5
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP"
+            "7r_g3_mtp",6,
+            "7r_g3_mtp_ssl",5
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_TShirt_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP"
+            "7r_g3_mtp",6,
+            "7r_g3_mtp_ssl",5
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_sard",1
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _helmet_list = [
     "7r_mtp_opscore_2",

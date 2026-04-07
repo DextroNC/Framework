@@ -45,7 +45,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m4a1_carryhandle";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_USMC";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";

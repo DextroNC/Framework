@@ -63,12 +63,6 @@ _unit linkItem "ItemRadioAcreFlagged";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

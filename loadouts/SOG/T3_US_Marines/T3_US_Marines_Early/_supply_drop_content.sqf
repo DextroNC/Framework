@@ -24,7 +24,6 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_m1897_buck_mag", 30];
 	_box addmagazinecargoGlobal ["vn_m1897_fl_mag", 30];
 	_box addmagazinecargoGlobal ["vn_m14_mag", 20];
-	_box addmagazinecargoGlobal ["vn_m3a1_mag", 24];
 	_box addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 4];
 	_box addWeaponWithAttachmentsCargoGlobal [["vn_m72","","","",["vn_m72_mag",1],[],""], 2];
 	_box addmagazinecargoGlobal ["vn_m20a1b1_heat_mag", 6];

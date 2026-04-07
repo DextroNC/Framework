@@ -116,8 +116,8 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "7r_m92_digital_1_headset",2,
-            "7r_m92_digital_1_headset_ess",2
+            "7r_m92_digital_headset",2,
+            "7r_m92_digital_headset_ess",2
         ];
     };
 
@@ -134,8 +134,8 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "7r_m92_digital_1_headset",2,
-            "7r_m92_digital_1_headset_ess",2
+            "7r_m92_digital_headset",2,
+            "7r_m92_digital_headset_ess",2
         ];
     };
 
@@ -165,7 +165,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
     if (_Class == 1) then{
         _goggleArray = [
             "UK3CB_G_Neck_Shemag", 0.1,
-            "7r_scrim_forest", 0.225,
+            "7r_scrim_semi", 0.225,
             "rhs_googles_clear", 0.225,
             "rhsusf_oakley_goggles_blk", 0.075,
             "rhsusf_oakley_goggles_clear", 0.075,
@@ -177,7 +177,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
     if (_Class == 1.5) then{
         _goggleArray = [
             "UK3CB_G_Neck_Shemag", 0.1,
-            "7r_scrim_forest", 0.225,
+            "7r_scrim_semi", 0.225,
             "rhs_googles_clear", 0.225,
             "", 0.1,
             "rhsusf_shemagh2_tan", 0.1

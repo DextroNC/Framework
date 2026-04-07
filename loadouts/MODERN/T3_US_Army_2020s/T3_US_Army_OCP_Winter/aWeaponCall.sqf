@@ -85,7 +85,7 @@
             "rhs_weap_m249_light_S",
             "rhs_weap_m249_pip_S_para"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200rnd_556x45_mixed_box_black";
     };
 
     //6 - MMG

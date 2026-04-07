@@ -71,8 +71,8 @@ if (uniform _unit == "7r_oversuit_ddpm_dpm") then {_unit setVariable ["SR_dpmTop
             "UK3CB_BAF_H_Boonie_ddpm_PRR",
             "UK3CB_BAF_H_Boonie_ddpm",
             "UK3CB_BAF_H_Boonie_ddpm_PRR",
-            "UK3CB_TKM_I_H_Turban_03_1",
-            "UK3CB_TKC_H_Pilot_Turban_01_1",
+            "UK3CB_TNM_B_H_Cap_KHK",
+            "UK3CB_TNM_B_H_Radio_Cap_KHK",
             "H_Bandanna_khk",
             "H_Bandanna_khk_hs"
         ];
@@ -86,8 +86,8 @@ if (uniform _unit == "7r_oversuit_ddpm_dpm") then {_unit setVariable ["SR_dpmTop
             "UK3CB_BAF_H_Boonie_ddpm_PRR",
             "UK3CB_BAF_H_Boonie_ddpm",
             "UK3CB_BAF_H_Boonie_ddpm_PRR",
-            "UK3CB_TKM_I_H_Turban_03_1",
-            "UK3CB_TKC_H_Pilot_Turban_01_1",
+            "UK3CB_TNM_B_H_Cap_KHK",
+            "UK3CB_TNM_B_H_Radio_Cap_KHK",
             "H_Bandanna_khk",
             "H_Bandanna_khk_hs"
         ];

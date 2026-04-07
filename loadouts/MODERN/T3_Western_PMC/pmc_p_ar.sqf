@@ -39,7 +39,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 5] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
-    _unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+    _unit addPrimaryWeaponItem "rhsusf_acc_su230";
 
 comment "Add Secondary/Attachments";
 

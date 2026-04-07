@@ -44,7 +44,7 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
     _unit addPrimaryWeaponItem "rhs_acc_tgpa";
     _unit addPrimaryWeaponItem "rhs_acc_perst1ik";
-    _unit addPrimaryWeaponItem "rhsusf_acc_acog3_usmc";
+    _unit addPrimaryWeaponItem "rhsusf_acc_acog_usmc";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhs_weap_tt33";
