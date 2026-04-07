@@ -87,7 +87,7 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "vn_xm177e1"
+            "vn_xm177"
         ];
         _primaryAmmo = "vn_m16_20_mag";
     };
