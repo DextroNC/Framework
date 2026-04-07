@@ -14,9 +14,10 @@
 */
 
 // Parameter Init
-params ["_leader","_marker","_speed","_patrolParams",["_cargo",[]],["_groupSize",4]];
+params ["_leader","_marker","_speed","_patrolParams",["_cargo",[]],["_groupSize",8],["_rtb",false]];
 private "_ins";
 _veh = vehicle _leader;
+_rtbPos = getPos _leader;
 
 // Damaged Eventhandler
 _index = (vehicle _leader) addEventHandler ["Dammaged",{(leader group driver (_this select 0)) setVariable ['dismount', true, true];}];
@@ -46,4 +47,4 @@ waitUntil {_leader getVariable ["dismount", false] || !alive _leader || !alive (
 
 // Remove Eventhandler
 (vehicle _leader) removeEventHandler ["Dammaged", _index];
-[_leader, _patrolParams, _cargo, _groupSize] spawn fw_fnc_dismountVehicle;
+[_leader, _patrolParams, _cargo, _groupSize, _rtb, _rtbPos] spawn fw_fnc_dismountVehicle;

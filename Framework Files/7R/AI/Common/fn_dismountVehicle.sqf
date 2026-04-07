@@ -11,7 +11,7 @@
 
 */
 // Parameter Init
-params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",4]];
+params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",8],["_rtb",false],["_rtbPos",[0,0,0]]];
 _v = vehicle _leader;
 _originalGroup = group _leader;
 _originalGroup setVariable ["Vcm_Disable",true,true]; 
@@ -95,16 +95,21 @@ if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 
 		// Force loiter altitude to 150m AGL
     	_v flyInHeight 150;
-
-		// Add LOITER waypoint at center
-		{deleteWaypoint _x} forEachReversed waypoints _originalGroup;
-		private _wp = _originalGroup addWaypoint [_paCenter, 0, 1];
-		_wp setWaypointType "LOITER";
-		_wp setWaypointLoiterType "CIRCLE";
-		_wp setWaypointLoiterRadius _paRadius;
-		_wp setWaypointBehaviour "SAFE";
-		_wp setWaypointSpeed "NORMAL";
-		_wp setWaypointCombatMode "WHITE";
+		if (_rtb) then {
+			_dir = (getPos (leader _originalGroup)) getDir _rtbPos;
+			_rtbWP = _rtbPos getPos [3000, _dir];
+			[_originalGroup, _rtbWP, "END"] call fw_fnc_createWaypoint;
+		} else {
+			// Add LOITER waypoint at center
+			{deleteWaypoint _x} forEachReversed waypoints _originalGroup;
+			private _wp = _originalGroup addWaypoint [_paCenter, 0, 1];
+			_wp setWaypointType "LOITER";
+			_wp setWaypointLoiterType "CIRCLE";
+			_wp setWaypointLoiterRadius _paRadius;
+			_wp setWaypointBehaviour "SAFE";
+			_wp setWaypointSpeed "NORMAL";
+			_wp setWaypointCombatMode "WHITE";
+		};
 	} else {
 		_array2 remoteExec ["fw_fnc_patrol", 2];
 	};
