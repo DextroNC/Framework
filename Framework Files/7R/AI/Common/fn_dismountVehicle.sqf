@@ -11,12 +11,12 @@
 
 */
 // Parameter Init
-params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",4]];
+params ["_leader","_patrolParams",["_cargo",[]],["_groupSize",8],["_rtb",false],["_rtbPos",[0,0,0]]];
 _v = vehicle _leader;
 _originalGroup = group _leader;
-_originalGroup setVariable ["Vcm_Disable",false,true]; 
+_originalGroup setVariable ["Vcm_Disable",true,true]; 
 
-// Check if Vehicle is Armed
+// If vehicle is unarmed, then:
 if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 	// Single Group Dismount
 	units _originalGroup orderGetIn false;
@@ -38,7 +38,7 @@ if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 	};
 
 	// Call UPSMON
-	_array = [_leader];
+	_array = [leader _originalGroup]; //leader might have changed, so grabbing again
 	_array append _patrolParams;
 	_array remoteExec ["fw_fnc_patrol",2];
 } else {
@@ -76,16 +76,41 @@ if (isNull (gunner vehicle _leader) && !(_v isKindOf "Air")) then {
 		if (count _cargo == 0) then {_array append _patrolParams;} else {_array append _cargo;};
 		// Cargo Patrol Init
 		_array remoteExec ["fw_fnc_patrol",2];
+	};
 
-		// Patrol Script Params for Vehicle
-		_array2 = [leader _originalGroup];
-		_array2 append _patrolParams;
-		// Patrol Script init Vehicle
-		if (_v isKindOf "Air") then {
-			_pa = [_array2 select 1] call CBA_fnc_getArea;
-			[_originalGroup, _pa select 0, _pa select 1, 4, "MOVE", "SAFE", "YELLOW", "LIMITED", "COLUMN", "", [0,0,0]] call CBA_fnc_taskPatrol;
+	// After the split loop — patrol the remaining cargo (always runs)
+	if (count units _ng > 0) then {
+		_array = [leader _ng];
+		if (count _cargo == 0) then {_array append _patrolParams;} else {_array append _cargo;};
+		_array remoteExec ["fw_fnc_patrol", 2];
+	};
+
+	// Patrol the vehicle group (always runs)
+	_array2 = [leader _originalGroup]; //leader might have changed, so grabbing again
+	_array2 append _patrolParams;
+	if (_v isKindOf "Air") then { //Loiter the Helo
+		private _pa = [_patrolParams select 0] call CBA_fnc_getArea;
+		private _paCenter = _pa select 0;
+		private _paRadius = selectMax [(_pa select 1),(_pa select 2),250]; // minimum 500m diameter
+
+		// Force loiter altitude to 150m AGL
+    	_v flyInHeight 150;
+		if (_rtb) then {
+			_dir = (getPos (leader _originalGroup)) getDir _rtbPos;
+			_rtbWP = _rtbPos getPos [3000, _dir];
+			[_originalGroup, _rtbWP, "END"] call fw_fnc_createWaypoint;
 		} else {
-			_array2 remoteExec ["fw_fnc_patrol",2];
+			// Add LOITER waypoint at center
+			{deleteWaypoint _x} forEachReversed waypoints _originalGroup;
+			private _wp = _originalGroup addWaypoint [_paCenter, 0, 1];
+			_wp setWaypointType "LOITER";
+			_wp setWaypointLoiterType "CIRCLE";
+			_wp setWaypointLoiterRadius _paRadius;
+			_wp setWaypointBehaviour "SAFE";
+			_wp setWaypointSpeed "NORMAL";
+			_wp setWaypointCombatMode "WHITE";
 		};
+	} else {
+		_array2 remoteExec ["fw_fnc_patrol", 2];
 	};
 };

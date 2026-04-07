@@ -67,7 +67,7 @@ switch (_type) do
 
 // Waypoint exclusivity
 if (_exclusiv) then {
-	{deleteWaypoint _x} forEach waypoints _group;
+	{deleteWaypoint _x} forEachReversed waypoints _group;
 } else {
 	_waypointNumber = (count (waypoints _group)) + 1;
 };

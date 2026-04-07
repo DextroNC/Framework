@@ -12,7 +12,6 @@
 // Parameter Init
 params [["_noDelete",false]];
 
-
 // Exit when debrief already in progress
 if (phase == 9999) exitWith {
 	["DEBRIEF IN PROGRESS", 1.5] spawn ace_common_fnc_displayTextStructured;
@@ -20,6 +19,9 @@ if (phase == 9999) exitWith {
 
 // Message
 ["DEBRIEF STARTED", 1.5] spawn ace_common_fnc_displayTextStructured;
+
+// Save OCAP Recording
+["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
 
 // Server only execute or HC if present
 if (isServer || (!hasInterface && !isDedicated)) then {
