@@ -39,29 +39,25 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "uk3cb_auga2_blk",
-            "uk3cb_auga2",
-            "uk3cb_auga2_tan"
+            "uk3cb_auga1_tan"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "uk3cb_auga2_carb_blk",
-            "uk3cb_auga2_carb",
-            "uk3cb_auga2_carb_tan"
+            "uk3cb_auga1_carb_tan"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m16a4_carryhandle_M203"
+            "7r_weap_m16a2_m203"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //4 - BattleRifle
@@ -92,26 +88,17 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_m4a1_handguard",
-            "rhs_weap_m4a1_carryhandle",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_handguard",
-            "rhs_weap_m4a1_carryhandle",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1",
-            "rhs_weap_m4a1_mstock"
+            "rhs_weap_m4a1_carryhandle"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "uk3cb_auga2_lsw_blk",
-            "uk3cb_auga2_lsw",
             "uk3cb_auga2_lsw_tan"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
     //9 - PDMR
@@ -126,11 +113,9 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "uk3cb_auga2_carb_blk",
-            "uk3cb_auga2_carb",
-            "uk3cb_auga2_carb_tan"
+            "uk3cb_auga1_carb_tan"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
 
 //Selects random weapon from determined array, runs
