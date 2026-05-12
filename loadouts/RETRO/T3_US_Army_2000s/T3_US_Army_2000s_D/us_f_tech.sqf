@@ -36,7 +36,7 @@ comment "Add Backpack/Items";
 
 comment "Add Drip";
     _unit addHeadgear "rhsusf_cvc_green_helmet";
-    _unit addGoggles "G_Bandanna_oli";
+    _unit addGoggles "usm_scarf";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m4_carryhandle";

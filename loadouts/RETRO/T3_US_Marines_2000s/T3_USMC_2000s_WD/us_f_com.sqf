@@ -37,7 +37,7 @@ comment "Add Drip";
     _unit addGoggles "rhsusf_oakley_goggles_clr";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addWeapon "7r_weap_colt723";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";

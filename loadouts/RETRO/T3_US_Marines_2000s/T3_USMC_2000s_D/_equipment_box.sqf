@@ -1,5 +1,3 @@
-this addaction ["<t color=""#00FF00"">" +"EOT552", "7R\Loadouts\7R_EQ.sqf",["RKSL_optic_EOT552"]];
-this addaction ["<t color=""#00FF00"">" +"M68 CCO", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_compm4"]];
 this addaction ["<t color=""#FF8C00"">" +"ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG_USMC"]];
 this addaction ["<t color=""#FF8C00"">" +"AR sight - ACOG", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ACOG"]];
 this addaction ["<t color=""#FF8C00"">" +"MMG sight - M145", "7R\Loadouts\7R_EQ.sqf",["rhsusf_acc_ELCAN"]];

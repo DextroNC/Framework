@@ -40,7 +40,6 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "rhsusf_acc_premier_anpvs27";
 
 comment "Add Drip";
-    _unit addGoggles "UK3CB_G_Neck_Shemag_Tan";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m24sws";

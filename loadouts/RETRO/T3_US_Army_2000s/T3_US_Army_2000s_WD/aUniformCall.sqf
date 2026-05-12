@@ -135,7 +135,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -147,7 +147,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -159,7 +159,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -171,7 +171,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -183,7 +183,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -195,7 +195,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -207,7 +207,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -219,7 +219,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
             "", 0.05,
             "rhs_googles_black", 0.175,
             "rhs_googles_clear", 0.175,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];

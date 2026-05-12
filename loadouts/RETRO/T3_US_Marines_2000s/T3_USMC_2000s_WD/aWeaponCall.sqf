@@ -39,7 +39,7 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m16a4_carryhandle"
+            "7r_weap_m16a2"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -47,7 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_m4_carryhandle"
+            "7r_weap_m16a2"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -55,7 +55,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m16a4_carryhandle_M203"
+            "7r_weap_m16a2_m203"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -74,7 +74,7 @@
         _primaryArray = [
             "rhs_weap_m249_pip"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch";
+        _primaryAmmo = "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";
     };
 
     //6 - MMG
@@ -113,7 +113,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_m4_carryhandle"
+            "7r_weap_colt723"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855_Stanag";
     };
@@ -124,10 +124,20 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "rhsusf_acc_m952v"
+            "7r_acc_SF660_Barrel"
         ];
     };
-    if ((_Rifle <= 3) or (_Rifle == 10) or (_Rifle == 7)) then{
+    if (_Rifle == 3) then{
+        _attachmentArray = [
+            "7r_acc_SF660_M203"
+        ];
+    };
+    if (_Rifle in [7,8]) then{
+        _attachmentArray = [
+            "7r_acc_SF660"
+        ];
+    };
+    if ((_Rifle == 7)) then{
         _gripArray = [
             "",
             "",
