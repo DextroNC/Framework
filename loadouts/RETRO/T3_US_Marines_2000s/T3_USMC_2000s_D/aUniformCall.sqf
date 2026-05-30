@@ -30,33 +30,48 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "rhs_uniform_FROG01_d"
+            "7r_bdu_marpat_d",1,
+            "7r_bdu_btisrl_marpat_d",1,
+            "7r_bdu_bti_marpat_d",1,
+            "7r_bdu_srh_marpat_d",1.5,
+            "7r_bdu_srl_marpat_d",1.5,
+            "7r_bdu_bnu_marpat_d",1.5
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "rhs_uniform_FROG01_d"
+            "7r_bdu_marpat_d",1,
+            "7r_bdu_btisrl_marpat_d",1,
+            "7r_bdu_bti_marpat_d",1,
+            "7r_bdu_srh_marpat_d",1.5,
+            "7r_bdu_srl_marpat_d",1.5,
+            "7r_bdu_bnu_marpat_d",1.5
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "rhs_uniform_FROG01_d"
+            "7r_bdu_marpat_d",1,
+            "7r_bdu_btisrl_marpat_d",1,
+            "7r_bdu_bti_marpat_d",1,
+            "7r_bdu_srh_marpat_d",1.5,
+            "7r_bdu_srl_marpat_d",1.5,
+            "7r_bdu_bnu_marpat_d",1.5
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_sard"
+            "U_B_FullGhillie_sard",1
         ];
     };
     
 //Selects random uniform from determined array, runs
-_unit forceAddUniform selectRandom _uniformArray;
+_unit forceAddUniform selectRandomWeighted _uniformArray;
 
 _ess_list = [
     "rhsusf_lwh_helmet_marpatd_ess",
@@ -104,7 +119,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "rhs_ess_black", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
     
@@ -116,7 +131,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -128,7 +143,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "rhs_ess_black", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -140,7 +155,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -152,7 +167,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "rhs_ess_black", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -164,7 +179,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -176,7 +191,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "rhs_ess_black", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 
@@ -188,7 +203,7 @@ if (_helmet in _ess_List) then {_class = _class + 0.5};
             "rhs_googles_clear", 0.175,
             "usm_scarf", 0.05,
             "", 0.2,
-            "UK3CB_G_KLR_TAN", 0.35
+            "usm_kneepads_blk", 0.35
         ];
     };
 

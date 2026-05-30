@@ -74,7 +74,7 @@
         _primaryArray = [
             "rhs_weap_m249_pip"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200rnd_556x45_M855_mixed_box";
     };
 
     //6 - MMG
@@ -104,10 +104,9 @@
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "rhs_weap_m14_rail",
-            "rhs_weap_m14_rail_fiberglass"
+            "rhs_weap_m40a5"
         ];
-        _primaryAmmo = "20Rnd_762x51_Mag";
+        _primaryAmmo = "rhsusf_10Rnd_762x51_m118_special_Mag";
     };
 
     //10 - Breacher
@@ -132,9 +131,9 @@
             "7r_acc_SF660_M203"
         ];
     };
-    if (_Rifle in [7,8]) then{
+    if (_Rifle in [7,8,9]) then{
         _attachmentArray = [
-            "7r_acc_SF660"
+            "rhsusf_acc_M952V"
         ];
     };
     if ((_Rifle == 7)) then{
