@@ -34,7 +34,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_CHC_C_B_HIKER";
+    _unit addBackpack "UK3CB_TKA_O_B_RIF_Khk";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_mag_maaws_HEAT";};
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_maaws_HE";};
