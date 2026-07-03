@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-_unit addVest "milgp_v_jpc_marksman_belt_khk";
+_unit addVest "7r_mmac_marksman_belt_khk";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_an_m8hc";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -42,7 +42,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_hk416d145";
     _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
     _unit addPrimaryWeaponItem "7r_acc_zo4x30i";
 
 comment "Add Secondary/Attachments";

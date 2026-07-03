@@ -40,11 +40,7 @@
     if (_Rifle == 1) then{
         _primaryArray = [
             "rhs_weap_hk416d15_smr_tan",
-            "rhs_weap_hk416d15_smr_tan_kac",
-            "rhs_weap_hk416d15_smr",
-            "rhs_weap_hk416d15_smr_kac",
-            "rhs_weap_hk416d15_smr",
-            "rhs_weap_hk416d15_smr_kac"
+            "rhs_weap_hk416d15_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";
     };
@@ -53,11 +49,7 @@
     if (_Rifle == 2) then{
         _primaryArray = [
             "rhs_weap_hk416d10_smr_tan",
-            "rhs_weap_hk416d10_smr_tan_kac",
-            "rhs_weap_hk416d10_smr",
-            "rhs_weap_hk416d10_smr_kac",
-            "rhs_weap_hk416d10_smr",
-            "rhs_weap_hk416d10_smr_kac"
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";
     };
@@ -85,15 +77,15 @@
         _primaryArray = [
             "7r_weap_mg4"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
+        _primaryAmmo = "7r_mag_mg4_m855a1_mixed";
     };
 
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "UK3CB_MG3_KWS_B"
+            "7r_weap_mg5"
         ];
-        _primaryAmmo = "UK3CB_MG3_250rnd_762x51_RM";
+        _primaryAmmo = "7r_mag_mg5_m80a1";
     };
 
     //7 - SPC
@@ -124,11 +116,7 @@
     if (_Rifle == 10) then{
         _primaryArray = [
             "rhs_weap_hk416d10_smr_tan",
-            "rhs_weap_hk416d10_smr_tan_kac",
-            "rhs_weap_hk416d10_smr",
-            "rhs_weap_hk416d10_smr_kac",
-            "rhs_weap_hk416d10_smr",
-            "rhs_weap_hk416d10_smr_kac"
+            "rhs_weap_hk416d10_smr_tan_kac"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan";
     };
@@ -139,7 +127,7 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "UK3CB_BAF_LLM_IR_Black"
+            "UK3CB_BAF_LLM_IR_Tan"
         ];
     };
     if (_Rifle == 7) then{
@@ -188,7 +176,7 @@
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 3 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{

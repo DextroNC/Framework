@@ -30,39 +30,24 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_g3_multitarn_khk",
             "7r_g3_multitarn",
-            "7r_g3_multitarn",
-            "7r_g3_multitarn_khk_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_tee"
+            "7r_g3_multitarn_ssl"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_g3_multitarn_khk",
             "7r_g3_multitarn",
-            "7r_g3_multitarn",
-            "7r_g3_multitarn_khk_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_tee"
+            "7r_g3_multitarn_ssl"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_g3_multitarn_khk",
             "7r_g3_multitarn",
-            "7r_g3_multitarn",
-            "7r_g3_multitarn_khk_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_ssl",
-            "7r_g3_multitarn_tee"
+            "7r_g3_multitarn_ssl"
         ];
     };
 
