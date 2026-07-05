@@ -37,7 +37,7 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p_visor";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addWeapon "7r_weap_colt723";
     _unit addPrimaryWeaponItem "rhsusf_acc_kac_grip";
 
 comment "Add Secondary/Attachments";

@@ -25,11 +25,12 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
+    _unit addItemToUniform "ACE_key_lockpick";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_jpc_medic_belt_rgr";
+    _unit addVest "7r_mmac_medic_belt_multitarn";
     for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 

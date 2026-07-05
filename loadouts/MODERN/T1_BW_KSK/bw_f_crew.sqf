@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "7r_field_uniform_multitarn";
+    _unit forceAddUniform "7r_combat_fatigues_flecktarn_gloves";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "7r_multitarn_modvest_crew";
+    _unit addVest "7r_flecktarn_modvest_crew";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
 
 comment "Add Backpack/Items";
@@ -38,7 +38,7 @@ comment "Add Drip";
 comment "Add Primary/Attachments";
     _unit addWeapon "rhsusf_weap_MP7A2";
     _unit addPrimaryWeaponItem "rhs_acc_grip_ffg2";
-    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Black";
+    _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_glock17g4";

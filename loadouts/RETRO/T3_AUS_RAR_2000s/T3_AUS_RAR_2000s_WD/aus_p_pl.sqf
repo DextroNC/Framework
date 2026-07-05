@@ -39,7 +39,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_m112_mag";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_Beret_blk";
+    _unit addItemToBackpack "7r_beret_aus_army_prr_over";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

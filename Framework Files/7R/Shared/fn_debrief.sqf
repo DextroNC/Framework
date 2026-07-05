@@ -20,9 +20,6 @@ if (phase == 9999) exitWith {
 // Message
 ["DEBRIEF STARTED", 1.5] spawn ace_common_fnc_displayTextStructured;
 
-// Save OCAP Recording
-["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
-
 // Server only execute or HC if present
 if (isServer || (!hasInterface && !isDedicated)) then {
 	// Remove Hostiles
@@ -41,6 +38,10 @@ if (isServer || (!hasInterface && !isDedicated)) then {
 
 // Server Only
 if (isServer) exitWith {
+
+	// Save OCAP Recording
+	["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
+
 	// Stop recording
 	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 

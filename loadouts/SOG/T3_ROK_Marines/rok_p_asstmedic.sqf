@@ -23,6 +23,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
     _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_HandFlare_Green";
+    _unit addItemToUniform "ACE_key_lockpick";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
     for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 

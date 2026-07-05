@@ -28,7 +28,7 @@ comment "Add Uniforms/Items";
 
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_jpc_assaulter_belt_rgr";
+    _unit addVest "7r_mmac_assaulter_belt_multitarn";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};

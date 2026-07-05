@@ -123,7 +123,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -134,7 +134,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -145,7 +145,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -156,7 +156,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -167,7 +167,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -178,7 +178,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -189,7 +189,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "usm_swdgoggles", 0.2,
             "usm_kneepads_blk", 0.35
         ];
@@ -200,7 +200,7 @@ if (_helmet in _ess_list) then {_Class = _Class + 0.5};
         _goggleArray = [
             "G_Spectacles", 0.05,
             "", 0.35,
-            "G_Bandanna_oli", 0.05,
+            "usm_scarf", 0.05,
             "", 0.2,
             "usm_kneepads_blk", 0.35
         ];

@@ -32,7 +32,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_FieldPack_green_F";
+    _unit addBackpack "7r_fieldpack_cce";
 
 comment "Add Drip";
     _unit addItemToBackpack "rhs_booniehat2_marpatwd";

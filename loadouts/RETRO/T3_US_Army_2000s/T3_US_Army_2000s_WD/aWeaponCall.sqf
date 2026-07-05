@@ -63,8 +63,8 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_m14_rail",
-            "rhs_weap_m14_rail_fiberglass"
+            "rhs_weap_m14_ris_fiberglass",
+            "rhs_weap_m14_ris_wd"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };

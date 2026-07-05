@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhs_uniform_FROG01_wd";
+    _unit forceAddUniform "7r_bdu_bti_marpat_wd";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -36,7 +36,7 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_cvc_green_ess";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addWeapon "7r_weap_colt723";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "rhsusf_weap_m9";

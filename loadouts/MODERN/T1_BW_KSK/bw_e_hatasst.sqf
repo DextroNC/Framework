@@ -27,12 +27,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "milgp_v_jpc_assaulter_belt_rgr";
+    _unit addVest "7r_mmac_assaulter_belt_multitarn";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack selectRandom ["milgp_bp_Tomahawk_rgr","milgp_bp_Pointman_rgr"];
+    _unit addBackpack selectRandom ["7r_bp_Tomahawk_multitarn","7r_bp_Pointman_multitarn"];
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
