@@ -11,6 +11,8 @@ private _active = {_target getVariable ["SR_Test",false]};
 private _inactive = {!(_target getVariable ["SR_Test",false])};
 private _leader = {leader group player == player};
 
+ace_rally pushBack training_rp;
+
 // Shooting Range
 {
 	// Parameter Init
@@ -107,4 +109,4 @@ private _medic = ["SR_Test", "Become Medic", "", {
 }, {true}, {},[]] call ace_interact_menu_fnc_createAction;
 [bootcamp_interact, 0, ["ACE_MainActions"], _medic] spawn ace_interact_menu_fnc_addActionToObject;
 
-[ "Bootcamp", format ["Year %1", date select 0], mapGridPosition player] spawn BIS_fnc_infoText;
+["Bootcamp", format ["Year %1", date select 0], mapGridPosition player] spawn BIS_fnc_infoText;
