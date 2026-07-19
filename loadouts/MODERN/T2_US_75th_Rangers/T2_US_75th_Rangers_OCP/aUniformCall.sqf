@@ -66,10 +66,10 @@ _helmet_list = [
 ];
 
 _helmet_list_pl_and_echo = [
-    "7r_khk_opscore_2",
-    "7r_khk_opscore_3",
-    "7r_khk_opscore_4",
-    "7r_khk_opscore_2",
+    "7r_ocp_opscore_2",
+    "7r_ocp_opscore_3",
+    "7r_ocp_opscore_4",
+    "7r_ocp_opscore_2",
     "rhsusf_opscore_rg_cover_pelt",
     "rhsusf_opscore_rg_cover_pelt",
     "rhsusf_opscore_fg_pelt_nsw",
@@ -114,12 +114,13 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "", 0.125,
             "7r_scrim_arid", 0.1,
-            "UK3CB_G_Neck_Shemag_Tan", 0.25,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
             "rhs_googles_clear", 0.175,
-            "rhsusf_oakley_goggles_blk", 0.0875,
-            "rhsusf_shemagh2_gogg_tan", 0.0875,
-            "rhsusf_oakley_goggles_clr", 0.0875,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.0875
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 
@@ -128,12 +129,13 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "", 0.125,
             "7r_scrim_arid", 0.1,
-            "UK3CB_G_Neck_Shemag_Tan", 0.25,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
             "rhs_googles_clear", 0.175,
-            "rhsusf_oakley_goggles_blk", 0.0875,
-            "rhsusf_shemagh2_gogg_tan", 0.0875,
-            "rhsusf_oakley_goggles_clr", 0.0875,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.0875
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 

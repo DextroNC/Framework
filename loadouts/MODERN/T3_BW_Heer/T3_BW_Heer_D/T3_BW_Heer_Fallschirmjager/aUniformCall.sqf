@@ -66,7 +66,9 @@ _unit forceAddUniform selectRandom _uniformArray;
     if (_Class == 1) then{
         _hatArray = [
             "7r_gefh_sk_tropen_enhanced",2,
-            "7r_gefh_sk_tropen_bare_enhanced",1
+            "7r_gefh_sk_tropen_bare_enhanced",2,
+            "7r_gefh_sk_tropen",1,
+            "7r_gefh_sk_tropen_bare",1
         ];
     };
 
@@ -74,7 +76,9 @@ _unit forceAddUniform selectRandom _uniformArray;
     if (_Class == 2) then{
         _hatArray = [
             "7r_gefh_sk_tropen_enhanced",2,
-            "7r_gefh_sk_tropen_bare_enhanced",1
+            "7r_gefh_sk_tropen_bare_enhanced",2,
+            "7r_gefh_sk_tropen",1,
+            "7r_gefh_sk_tropen_bare",1
         ];
     };
 
@@ -82,7 +86,9 @@ _unit forceAddUniform selectRandom _uniformArray;
     if (_Class == 3) then{
         _hatArray = [
             "7r_gefh_sk_tropen_enhanced",2,
-            "7r_gefh_sk_tropen_bare_enhanced",1
+            "7r_gefh_sk_tropen_bare_enhanced",2,
+            "7r_gefh_sk_tropen",1,
+            "7r_gefh_sk_tropen_bare",1
             
         ];
     };

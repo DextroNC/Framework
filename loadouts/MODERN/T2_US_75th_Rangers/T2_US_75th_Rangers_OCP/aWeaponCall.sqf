@@ -158,21 +158,13 @@
     if (_Rifle in [1,3]) then{
         _gripArray = [
             "rhs_acc_m4_urgi_d",
-            "rhs_acc_m4_urgi_d",
-            "rhs_acc_m4_urgi",
-            "rhs_acc_m4_urgi_d_bcm",
-            "rhs_acc_m4_urgi_d_bcm",
-            "rhs_acc_m4_urgi_bcm"
+            "rhs_acc_m4_urgi_d_bcm"
         ];
     };
     if (_Rifle in [2,7,10]) then{
         _gripArray = [
             "rhs_acc_mk18_urgi_d",
-            "rhs_acc_mk18_urgi_d",
-            "rhs_acc_mk18_urgi",
-            "rhs_acc_mk18_urgi_d_bcm",
-            "rhs_acc_mk18_urgi_d_bcm",
-            "rhs_acc_mk18_urgi_bcm"
+            "rhs_acc_mk18_urgi_d_bcm"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
