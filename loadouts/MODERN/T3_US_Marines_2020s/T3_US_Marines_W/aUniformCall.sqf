@@ -58,37 +58,40 @@
 //Selects random uniform from determined array, runs
 _unit forceAddUniform selectRandom _uniformArray;
 
-_ess_list = [
-    "rhsusf_lwh_helmet_marpatwd_ess",
-    "rhsusf_lwh_helmet_marpatwd_headset"
-];
-
-_noess_list = [
-    "rhsusf_lwh_helmet_marpatwd"
-];
-
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = [
+            "7r_marine_opscore_2",
+            "7r_marine_opscore_3",
+            "7r_marine_opscore_4"
+        ];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = [
+            "7r_marpat_opscore_2",
+            "7r_marpat_opscore_3",
+            "7r_marpat_opscore_4"
+        ];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _ess_list + _noess_list;
+        _hatArray = [
+            "7r_marine_opscore_2",
+            "7r_marine_opscore_3",
+            "7r_marine_opscore_4"
+        ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "7r_marpat_opscore_2",
-            "7r_marpat_opscore_3",
-            "7r_marpat_opscore_4"
+            "7r_marine_opscore_2",
+            "7r_marine_opscore_3",
+            "7r_marine_opscore_4"
         ];
     };
     
