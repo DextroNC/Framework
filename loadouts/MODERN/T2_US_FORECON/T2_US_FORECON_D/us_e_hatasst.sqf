@@ -27,12 +27,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_corpsman";
+    _unit addVest "milgp_v_jpc_assaulter_belt_cb";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "B_AssaultPack_invisible";
+    _unit addBackpack "milgp_bp_Pointman_cb";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";

@@ -64,14 +64,28 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "7r_marine_d_opscore_2",
             "7r_marine_d_opscore_3",
-            "7r_marine_d_opscore_4"
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4",
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_marpat_d_opscore_2",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_4"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
             "7r_marpat_d_opscore_2",
+            "7r_marpat_d_opscore_3",
             "7r_marpat_d_opscore_3",
             "7r_marpat_d_opscore_4"
         ];
@@ -82,7 +96,16 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "7r_marine_d_opscore_2",
             "7r_marine_d_opscore_3",
-            "7r_marine_d_opscore_4"
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4",
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_marpat_d_opscore_2",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_4"
         ];
     };
 
@@ -91,7 +114,16 @@ _unit forceAddUniform selectRandom _uniformArray;
         _hatArray = [
             "7r_marine_d_opscore_2",
             "7r_marine_d_opscore_3",
-            "7r_marine_d_opscore_4"
+            "7r_marine_d_opscore_3",
+            "7r_marine_d_opscore_4",
+            "7r_khk_opscore_2",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_3",
+            "7r_khk_opscore_4",
+            "7r_marpat_d_opscore_2",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_3",
+            "7r_marpat_d_opscore_4"
         ];
     };
     

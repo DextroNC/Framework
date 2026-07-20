@@ -19,7 +19,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 10];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_MK318_Stanag", 72];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan", 72];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 24];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 12];
     _box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51_m80a1epr", 8];
@@ -71,7 +71,7 @@ if (_type == 3) then {
 	_box addmagazinecargoGlobal ["rhsusf_5Rnd_762x51_m118_special_Mag", 10];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 4];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 2];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_MK318_Stanag", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan", 12];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];
 	_box additemcargoGlobal ["Laserbatteries", 2];
 	_box additemcargoGlobal ["ACE_UAVBattery", 2];
@@ -82,7 +82,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["tsp_popperCharge_auto_mag", 5];
 	_box addmagazinecargoGlobal ["tsp_stickCharge_auto_mag", 2];
 	_box addmagazinecargoGlobal ["tsp_frameCharge_mag", 1];
-	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_MK318_Stanag", 36];
+	_box addmagazinecargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan", 36];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote", 6];
     _box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
 	_box addmagazinecargoGlobal ["UK3CB_P320_9x19_17Rnd", 8];

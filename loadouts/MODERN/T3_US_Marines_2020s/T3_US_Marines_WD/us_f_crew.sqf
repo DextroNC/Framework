@@ -47,7 +47,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_P320_9x19_17Rnd";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
