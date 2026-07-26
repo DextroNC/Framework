@@ -27,12 +27,12 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_AOR1";
+    _unit addVest "VSM_FAPC_operator_Multicam";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "VSM_AOR1_carryall";
+    _unit addBackpack "VSM_Multicam_carryall";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 

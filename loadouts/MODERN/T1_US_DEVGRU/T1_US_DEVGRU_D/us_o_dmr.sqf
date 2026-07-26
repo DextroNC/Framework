@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA";
+    _unit addVest "VSM_FAPC_operator_Multicam";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
@@ -41,7 +41,7 @@ comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
     [_unit, 8] call compile preprocessFileLineNumbers "loadouts\aWeaponCall.sqf";
     _unit addPrimaryWeaponItem "rhsusf_acc_su230";
-    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
+    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
     _unit addPrimaryWeaponItem "rhs_acc_harris_swivel";
 
 comment "Add Secondary/Attachments";

@@ -27,17 +27,26 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "dr_AOR2lbt_op";
+    _unit addVest "VSM_FAPC_operator_Multicam";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "AOR2_Backpack_Compact";
+    _unit addBackpack "VSM_Multicam_Backpack_Compact";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
-    _unit addItemToBackpack "AOR2_Boonie";
+    _unit addItemToBackpack selectRandom [
+        "milgp_h_cap_02_RGR",
+        "milgp_h_cap_03_RGR",
+        "milgp_h_cap_backwards_02_RGR",
+        "milgp_h_cap_backwards_03_RGR",
+        "usm_bdu_boonie_odg",
+        "usm_bdu_boonie_odg",
+        "rhsusf_bowman_cap",
+        "H_Cap_usblack"
+    ];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -61,7 +70,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2"];
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_TAN","USP_GPNVG18_WP_TAN2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAN","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_GM_TAR_TAN","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2","USP_GPNVG18_WP_TAR_TAN","USP_GPNVG18_WP_TAR_TAN2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

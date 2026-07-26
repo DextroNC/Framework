@@ -29,7 +29,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "VSM_LBT6094_operator_OGA";
+    _unit addVest "VSM_FAPC_operator_Multicam";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     _unit addItemToVest "rhs_mag_m18_green";
     _unit addItemToVest "rhs_mag_m18_red";
@@ -37,14 +37,23 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_B_B_RadioBag_DES";
+    _unit addBackpack "B_RadioBag_01_mtp_F";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
     _unit addItem "7r_compact_drone";
     _unit addItem "ACE_UAVBattery";
 
 comment "Add Drip";
-    _unit addItemToBackpack "UK3CB_H_Beanie_02_BLK";
+    _unit addItemToBackpack selectRandom [
+        "milgp_h_cap_02_MC",
+        "milgp_h_cap_03_MC",
+        "milgp_h_cap_backwards_02_MC",
+        "milgp_h_cap_backwards_03_MC",
+        "rhs_Booniehat_ocp",
+        "rhs_Booniehat_ocp",
+        "rhsusf_bowman_cap",
+        "H_Cap_usblack"
+    ];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG

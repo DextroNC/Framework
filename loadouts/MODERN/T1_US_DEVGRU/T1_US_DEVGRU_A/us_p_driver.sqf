@@ -27,7 +27,7 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "dr_Alpinelbt_op";
+    _unit addVest "dr_Alpinefacp_op";
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_an_m8hc";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -37,7 +37,11 @@ comment "Add Backpack/Items";
     _unit addItemToBackpack "ACE_EntrenchingTool";
 
 comment "Add Drip";
-    _unit addItemToBackpack "UK3CB_H_Beanie_02_Win";
+    _unit addItemToBackpack selectRandom [
+        "UK3CB_H_Beanie_02_Win",
+        "UK3CB_H_Beanie_02_Win",
+        "rhs_beanie_green"
+    ];
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -61,7 +65,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2"];
+    _unit linkItem selectRandom ["USP_GPNVG18_WP_BLK","USP_GPNVG18_WP_BLK2","USP_GPNVG18_WP_TAN","USP_GPNVG18_WP_TAN2","USP_GPNVG18_WP_GM_BLK","USP_GPNVG18_WP_GM_TAN","USP_GPNVG18_WP_GM_TAR_BLK","USP_GPNVG18_WP_GM_TAR_TAN","USP_GPNVG18_WP_TAR_BLK","USP_GPNVG18_WP_TAR_BLK2","USP_GPNVG18_WP_TAR_TAN","USP_GPNVG18_WP_TAR_TAN2"];
     _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
