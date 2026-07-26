@@ -39,11 +39,13 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m27iar",
-            "rhs_weap_m27iar_d",
-            "rhs_weap_m27iar_d"
+            "rhs_weap_hk416d10",
+            "rhs_weap_hk416d10_LMT",
+            "rhs_weap_hk416d10_LMT_d",
+            "rhs_weap_hk416d10_LMT_d",
+            "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
     //2 - Rifle 2
@@ -55,7 +57,7 @@
             "rhs_weap_hk416d10_LMT_d",
             "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
     //3 - Grenadier
@@ -65,7 +67,7 @@
             "rhs_weap_hk416d10_m320_d",
             "rhs_weap_hk416d10_m320_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
     //4 - BattleRifle
@@ -101,7 +103,7 @@
             "rhs_weap_mk18_KAC_d",
             "rhs_weap_mk18_KAC"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
     //8 - DMR
@@ -110,7 +112,7 @@
             "rhs_weap_m27iar_grip",
             "rhs_weap_m27iar_d_grip"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
     //9 - PDMR
@@ -129,7 +131,7 @@
             "rhs_weap_hk416d10_LMT_d",
             "rhs_weap_hk416d10_LMT_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_TAN";
     };
 
 //Selects random weapon from determined array, runs
