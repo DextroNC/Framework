@@ -146,8 +146,8 @@
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
         _unit addPrimaryWeaponItem _uglHE;
-        for "_i" from 1 to 7 do {_unit addItemToBackpack _uglHE;};
-        for "_i" from 1 to 6 do {_unit addItemToBackpack _uglSmoke;};
+        for "_i" from 1 to 7 do {_unit addItem _uglHE;};
+        for "_i" from 1 to 6 do {_unit addItem _uglSmoke;};
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{

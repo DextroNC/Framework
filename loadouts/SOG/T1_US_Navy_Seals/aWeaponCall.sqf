@@ -145,8 +145,7 @@
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
     if (_Rifle <= 2 or _Rifle == 4 or _Rifle == 7) then{
-        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
@@ -165,8 +164,7 @@
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
-        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
     };
     //Breacher - 8 Magazines
     if (_Rifle == 10) then{
