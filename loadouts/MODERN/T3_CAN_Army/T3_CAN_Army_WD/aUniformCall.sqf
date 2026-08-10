@@ -31,9 +31,7 @@
     if (_Class == 1) then{
         _uniformArray = [
             "7r_combat_fatigues_cadpat",2,
-            "7r_combat_fatigues_cadpat_gloves",2,
-            "7r_combat_fatigues_cadpat_mixed",1,
-            "7r_combat_fatigues_cadpat_mixed_gloves",1
+            "7r_combat_fatigues_cadpat_gloves",2
         ];
     };
 
@@ -41,9 +39,7 @@
     if (_Class == 2) then{
         _uniformArray = [
             "7r_combat_fatigues_cadpat",2,
-            "7r_combat_fatigues_cadpat_gloves",2,
-            "7r_combat_fatigues_cadpat_mixed",1,
-            "7r_combat_fatigues_cadpat_mixed_gloves",1
+            "7r_combat_fatigues_cadpat_gloves",2
         ];
     };
 
@@ -51,9 +47,7 @@
     if (_Class == 3) then{
         _uniformArray = [
             "7r_combat_fatigues_cadpat",2,
-            "7r_combat_fatigues_cadpat_gloves",2,
-            "7r_combat_fatigues_cadpat_mixed",1,
-            "7r_combat_fatigues_cadpat_mixed_gloves",1
+            "7r_combat_fatigues_cadpat_gloves",2
         ];
     };
 
