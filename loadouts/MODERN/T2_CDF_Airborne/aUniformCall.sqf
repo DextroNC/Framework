@@ -102,19 +102,20 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "rhsusf_ach_helmet_ocp",4,
-            "rhsusf_ach_helmet_ocp_alt",4,
-            "rhsusf_ach_helmet_ESS_ocp",4,
-            "rhsusf_ach_helmet_ESS_ocp_alt",4,
-            "rhsusf_ach_helmet_headset_ocp",4,
-            "rhsusf_ach_helmet_headset_ocp_alt",4,
-            "rhsusf_ach_helmet_headset_ess_ocp",4,
-            "rhsusf_ach_helmet_headset_ess_ocp_alt",4,
-            "rhsusf_ach_helmet_camo_ocp",16,
-            "7r_ocp_opscore",9,
-            "7r_ocp_opscore_2",12,
-            "7r_ocp_opscore_3",12,
-            "7r_ocp_opscore_4",12
+            "rhsusf_opscore_fg",1,
+            "rhsusf_opscore_fg_pelt",1.33,
+            "rhsusf_opscore_fg_pelt_cam",1.33,
+            "rhsusf_opscore_fg_pelt_nsw",1.33,
+            "rhsusf_opscore_ut",2,
+            "rhsusf_opscore_ut_pelt",2.66,
+            "rhsusf_opscore_ut_pelt_nsw",2.66,
+            "rhsusf_opscore_ut_pelt_nsw_cam",2.66,
+            "rhsusf_opscore_rg_cover",2,
+            "rhsusf_opscore_rg_cover",4,
+            "7r_ocp_opscore",3,
+            "7r_ocp_opscore_2",4,
+            "7r_ocp_opscore_3",4,
+            "7r_ocp_opscore_4",4
         ];
     };
 
