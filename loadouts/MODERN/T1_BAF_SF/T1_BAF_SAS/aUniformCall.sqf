@@ -127,7 +127,7 @@ _unit forceAddUniform selectRandom _uniformArray;
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _helmet_list_pl_and_echo;
+        _hatArray = _helmet_list;
     };
 
     //Squad
@@ -137,7 +137,7 @@ _unit forceAddUniform selectRandom _uniformArray;
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _helmet_list_pl_and_echo;
+        _hatArray = _helmet_list;
     };
 
     //Sierra
