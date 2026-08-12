@@ -30,42 +30,42 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
