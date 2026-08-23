@@ -9,6 +9,15 @@ _newUnit setVariable ["SR_Class", _class, true];
 private _loadout = _oldUnit getVariable ["SR_Loadout",[]];
 _newUnit setUnitLoadout _loadout;
 
+// Transfer Skills
+private _medicSkill = _oldUnit getVariable ["ace_medical_medicClass",0];
+private _engineerSkill = _oldUnit getVariable ["ace_isEngineer",0];
+private _eodSkill = _oldUnit getVariable ["ACE_isEOD",false];
+
+_newUnit setVariable ["ace_medical_medicClass",_medicSkill,true];
+_newUnit setVariable ["ace_isEngineer",_engineerSkill,true];
+_newUnit setVariable ["ace_isEOD",_eodSkill,true];
+
 // Transfer Night Adjustment
 if (SR_Night) then {
 	switch (_class) do {
