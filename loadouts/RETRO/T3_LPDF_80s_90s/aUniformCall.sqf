@@ -123,7 +123,7 @@ _unit addHeadgear selectRandom _hatArray;
 		"", 0.94,
 		"G_Aviator", 0.02,
 		"G_Spectacles", 0.02,
-		"G_Squares", 0.02
+		"G_Spectacles", 0.02
     ];
 
     if (_Class == 2) then {
@@ -132,7 +132,7 @@ _unit addHeadgear selectRandom _hatArray;
             "", 0.19,
             "G_Aviator", 0.02,
             "G_Spectacles", 0.02,
-            "G_Squares", 0.02
+            "G_Spectacles", 0.02
         ];
     };
 

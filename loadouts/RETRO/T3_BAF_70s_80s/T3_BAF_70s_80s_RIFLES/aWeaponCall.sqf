@@ -39,7 +39,6 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_l1a1_wood",
             "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
@@ -48,7 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_l1a1_para"
+            "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -97,7 +96,6 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_l1a1_wood",
             "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
@@ -115,7 +113,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_l1a1_para"
+            "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
