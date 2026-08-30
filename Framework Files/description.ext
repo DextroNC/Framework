@@ -46,6 +46,11 @@ class CfgDebriefingSections
 		title = "War Criminals";
 		variable = "SR_WC";
 	};
+	class friendlyFire
+	{
+		title = "Friendly Fire";
+		variable = "SR_FF";
+	};
 };
 
 class CfgFunctions
