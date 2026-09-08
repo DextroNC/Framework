@@ -14,7 +14,6 @@
 		class isSergeant{};
 		class isLeader{};
 		class flag{};
-		class checkStatus{};
 		class clearArea {};
 		class sortUnitsByGroup{};
 		class removeNVG{};
@@ -140,7 +139,6 @@
 		class getRandomPos{};
 		class surrender{};
 		class reinforce{};
-		class suppress{};
 		class depressedCooldown{};
 		class hasLosses{};
 		class removeDeadGroups{};
