@@ -40,23 +40,24 @@ comment "Add Backpack/Items";
 comment "Add Drip";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_hk416d145";
-    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+    _unit addWeapon "rhs_weap_m4_urgi";
+    _unit addPrimaryWeaponItem "rhs_acc_m4_urgi_bcm";
+    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
+    _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_wmx";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhsusf_weap_glock17g4";
+    _unit addWeapon "UK3CB_P320_BLK";
     _unit addHandgunItem "acc_flashlight_pistol";
     _unit addHandgunItem "rhsusf_acc_omega9k";
-    _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_FMJ";
+    _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_MX2A";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_FMJ";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag_Pull";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_PMAG";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

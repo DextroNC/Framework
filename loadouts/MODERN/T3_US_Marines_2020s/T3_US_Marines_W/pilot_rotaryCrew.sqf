@@ -37,7 +37,8 @@ comment "Add Drip";
     _unit addHeadgear "rhsusf_hgu56p";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addWeapon "rhs_weap_m4a1_carryhandle";
+    _unit addPrimaryWeaponItem "rhsusf_acc_rvg_blk";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_P320_DES";
@@ -49,7 +50,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag";};
+    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

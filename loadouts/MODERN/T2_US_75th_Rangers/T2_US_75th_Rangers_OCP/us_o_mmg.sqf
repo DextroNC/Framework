@@ -33,7 +33,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack selectRandomWeighted ["milgp_bp_Pointman_mc",2,"7r_backpanel_mc",2,"7r_backpanel_mc_flag_us",1];
+    _unit addBackpack "VSM_Multicam_Backpack_Compact";
 
 comment "Add Drip";
 

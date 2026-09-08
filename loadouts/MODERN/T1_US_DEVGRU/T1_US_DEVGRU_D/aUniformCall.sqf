@@ -30,42 +30,27 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1"
+            "milgp_u_g3_field_set_rolled_mc",
+            "milgp_u_g3_field_set_mc",
+            "milgp_u_tshirt_g3_field_pants_mc"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1"
+            "milgp_u_g3_field_set_rolled_mc",
+            "milgp_u_g3_field_set_mc",
+            "milgp_u_tshirt_g3_field_pants_mc"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_g3_field_set_rolled_aor1",
-            "milgp_u_g3_field_set_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1",
-            "milgp_u_fleece_khk_g3_field_pants_aor1"
+            "milgp_u_g3_field_set_rolled_mc",
+            "milgp_u_g3_field_set_mc",
+            "milgp_u_tshirt_g3_field_pants_mc"
         ];
     };
 
@@ -83,28 +68,24 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS",
-            "VSM_oga_OPS_2",
-            "VSM_Tan_spray_OPS_2"
+            "rhsusf_opscore_mar_ut_pelt",
+            "rhsusf_opscore_mar_fg_pelt"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "VSM_OPS_aor1",
-            "VSM_OPS_2_AOR1"
+            "rhsusf_opscore_mar_ut_pelt",
+            "rhsusf_opscore_mar_fg_pelt"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _hatArray = [
-            "VSM_oga_OPS",
-            "VSM_Tan_spray_OPS",
-            "VSM_oga_OPS_2",
-            "VSM_Tan_spray_OPS_2"
+            "rhsusf_opscore_mar_ut_pelt",
+            "rhsusf_opscore_mar_fg_pelt"
             
         ];
     };
@@ -112,8 +93,8 @@ _unit forceAddUniform selectRandom _uniformArray;
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OPS_aor1",
-            "VSM_OPS_2_AOR1"
+            "rhsusf_opscore_mar_ut_pelt",
+            "rhsusf_opscore_mar_fg_pelt"
         ];
     };
     //Selects random hat from determined array, runs
@@ -123,44 +104,56 @@ _unit addHeadgear selectRandom _hatArray;
     //Appends array of goggleswith desired values
     if (_Class == 1) then{
         _goggleArray = [
-            "UK3CB_G_Balaclava2_BLK", 0.425,
-            "UK3CB_G_Balaclava2_DES", 0.1,
-            "VSM_Goggles", 0.225,
-            "VSM_Balaclava2_tan_Goggles", 0.05,
-            "VSM_Balaclava2_black_Goggles", 0.2
+            "", 0.225,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
+            "rhs_googles_clear", 0.175,
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "UK3CB_G_Balaclava2_BLK", 0.425,
-            "UK3CB_G_Balaclava2_DES", 0.1,
-            "VSM_Goggles", 0.225,
-            "VSM_Balaclava2_tan_Goggles", 0.05,
-            "VSM_Balaclava2_black_Goggles", 0.2
+            "", 0.225,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
+            "rhs_googles_clear", 0.175,
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _goggleArray = [
-            "VSM_FaceMask_black", 0.425,
-            "VSM_FaceMask_tan", 0.1,
-            "VSM_Goggles", 0.225,
-            "VSM_Facemask_tan_Goggles", 0.05,
-            "VSM_Facemask_black_Goggles", 0.2
+            "", 0.225,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
+            "rhs_googles_clear", 0.175,
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _goggleArray = [
-            "VSM_FaceMask_black", 0.425,
-            "VSM_FaceMask_tan", 0.1,
-            "VSM_Goggles", 0.225,
-            "VSM_Facemask_tan_Goggles", 0.05,
-            "VSM_Facemask_black_Goggles", 0.2
+            "", 0.225,
+            "milgp_f_face_shield_khk", 0.0675,
+            "milgp_f_face_shield_goggles_khk", 0.0675,
+            "milgp_f_face_shield_shemagh_khk", 0.0675,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.0675,
+            "rhs_googles_clear", 0.175,
+            "rhsusf_oakley_goggles_blk", 0.175,
+            "rhsusf_oakley_goggles_clr", 0.175
         ];
     };
 

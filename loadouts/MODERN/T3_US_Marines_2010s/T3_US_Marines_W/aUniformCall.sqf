@@ -88,6 +88,7 @@ _noess_list = [
         _hatArray = [
             "7r_marpat_opscore_2",
             "7r_marpat_opscore_3",
+            "7r_marpat_opscore_4",
             "7r_marpat_opscore_4"
         ];
     };

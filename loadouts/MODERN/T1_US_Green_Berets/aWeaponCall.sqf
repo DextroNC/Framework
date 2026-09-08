@@ -158,21 +158,13 @@
     if (_Rifle in [1,3]) then{
         _gripArray = [
             "rhs_acc_m4_urgi_d",
-            "rhs_acc_m4_urgi_d",
-            "rhs_acc_m4_urgi",
-            "rhs_acc_m4_urgi_d_bcm",
-            "rhs_acc_m4_urgi_d_bcm",
-            "rhs_acc_m4_urgi_bcm"
+            "rhs_acc_m4_urgi_d_bcm"
         ];
     };
     if (_Rifle in [2,7,10]) then{
         _gripArray = [
             "rhs_acc_mk18_urgi_d",
-            "rhs_acc_mk18_urgi_d",
-            "rhs_acc_mk18_urgi",
-            "rhs_acc_mk18_urgi_d_bcm",
-            "rhs_acc_mk18_urgi_d_bcm",
-            "rhs_acc_mk18_urgi_bcm"
+            "rhs_acc_mk18_urgi_d_bcm"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
@@ -182,8 +174,7 @@
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
     if (_Rifle <= 4 or _Rifle == 7) then{
-        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
@@ -193,17 +184,15 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 4 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
-        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
     };
     //Breacher - 8 Magazines
     if (_Rifle == 10) then{

@@ -39,30 +39,33 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_m27iar"
+            "rhs_weap_m27iar",
+            "rhs_weap_m27iar_d",
+            "rhs_weap_m27iar_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2 or _Rifle == 32) then{
         _primaryArray = [
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_d",
+            "rhs_weap_m4a1_d",
+            "rhs_weap_m4a1_d_mstock"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "rhs_weap_m4_m320"
+            "rhs_weap_hk416d145_m320",
+            "rhs_weap_hk416d145_m320_d",
+            "rhs_weap_hk416d145_m320_d"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
     //4 - BattleRifle
@@ -76,9 +79,8 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_m249_pip_ris",
-            "rhs_weap_m249_pip_L",
-            "rhs_weap_m249_pip_L_para"
+            "rhs_weap_m249_pip_S",
+            "rhs_weap_m249_pip_S_para"
         ];
         _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
     };
@@ -86,9 +88,6 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "rhs_weap_m240B",
-            "rhs_weap_m240B",
-            "rhs_weap_m240B",
             "rhs_weap_m240G"
         ];
         _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
@@ -97,22 +96,21 @@
     //7 - SPC
     if (_Rifle == 7) then{
         _primaryArray = [
-            "rhs_weap_m4a1_mstock",
-            "rhs_weap_m4a1_mstock",
-            "rhs_weap_m4a1",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle_mstock",
-            "rhs_weap_m4a1_carryhandle"
+            "rhs_weap_mk18",
+            "rhs_weap_mk18_d",
+            "rhs_weap_mk18_KAC_d",
+            "rhs_weap_mk18_KAC"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_m27iar_grip"
+            "rhs_weap_m27iar_grip",
+            "rhs_weap_m27iar_d_grip"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
     //9 - PDMR
@@ -126,14 +124,13 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4_mstock",
-            "rhs_weap_m4",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle_mstock",
-            "rhs_weap_m4_carryhandle"
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1",
+            "rhs_weap_m4a1_d",
+            "rhs_weap_m4a1_d",
+            "rhs_weap_m4a1_d_mstock"
         ];
-        _primaryAmmo = "rhs_mag_30Rnd_556x45_MK318_Stanag";
+        _primaryAmmo = "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan";
     };
 
 //Selects random weapon from determined array, runs
@@ -145,22 +142,24 @@
             "rhsusf_acc_anpeq16a"
         ];
     };
-    if (_Rifle <= 4 or _Rifle == 10 or _Rifle == 32) then{
+    if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7) or (_Rifle == 32)) then{
         _gripArray = [
             "",
+            "rhsusf_acc_grip2",
+            "rhsusf_acc_kac_grip",
+            "rhsusf_acc_grip3",
+            "rhsusf_acc_tdstubby_blk",
             "",
+            "rhsusf_acc_grip2_tan",
             "rhsusf_acc_kac_grip",
             "rhsusf_acc_kac_grip",
-            "rhsusf_acc_grip2",
-            "rhsusf_acc_grip2",
-            "rhsusf_acc_rvg_blk",
-            "rhsusf_acc_rvg_de"
+            "rhsusf_acc_tdstubby_tan"
         ];
     };
     if (_Rifle == 5) then{
         _gripArray = [
-            "rhsusf_acc_saw_lw_bipod",
-            "rhsusf_acc_saw_bipod"
+            "rhsusf_acc_grip4_bipod",
+            "rhsusf_acc_kac_grip_saw_bipod"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
@@ -170,8 +169,7 @@
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
     if (_Rifle <= 4 or _Rifle == 7) then{
-        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
@@ -181,17 +179,15 @@
     };
     //AutoRifle - 1000 RNDS/1200 for E/P
     if (_Rifle == 5) then{
-        for "_i" from 1 to 6 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 4 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
-        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
     };
     //Breacher & M32 MGL - 8 Magazines
     if (_Rifle == 10 or _Rifle == 32) then{

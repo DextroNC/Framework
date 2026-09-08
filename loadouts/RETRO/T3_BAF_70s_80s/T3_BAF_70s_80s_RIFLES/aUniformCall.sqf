@@ -30,36 +30,39 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
+            
+            "7r_oversuit_dpm",4,
             "7r_bdu_dpm",2,
             "7r_bdu_btisrl_dpm",1,
             "7r_bdu_bti_dpm",1,
             "7r_bdu_srh_dpm",2,
-            "7r_bdu_srl_dpm",2,
-            "7r_bdu_bnu_dpm",1
+            "7r_bdu_srl_dpm",2
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
+            
+            "7r_oversuit_dpm",4,
             "7r_bdu_dpm",2,
             "7r_bdu_btisrl_dpm",1,
             "7r_bdu_bti_dpm",1,
             "7r_bdu_srh_dpm",2,
-            "7r_bdu_srl_dpm",2,
-            "7r_bdu_bnu_dpm",1
+            "7r_bdu_srl_dpm",2
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
+            
+            "7r_oversuit_dpm",4,
             "7r_bdu_dpm",2,
             "7r_bdu_btisrl_dpm",1,
             "7r_bdu_bti_dpm",1,
             "7r_bdu_srh_dpm",2,
-            "7r_bdu_srl_dpm",2,
-            "7r_bdu_bnu_dpm",1
+            "7r_bdu_srl_dpm",2
         ];
     };
 
@@ -79,9 +82,7 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Echo
     if (_Class == 1) then{
         _hatArray = [
-            "UK3CB_BAF_H_Beret_Rifles",
-            "UK3CB_BAF_H_Beret_Rifles_PRR",
-            "UK3CB_BAF_H_Wool_Hat"
+            "UK3CB_H_HSAT_PTYPE"
         ];
     };
 
@@ -118,19 +119,20 @@ _unit addHeadgear _helmet;
     //Echo
     if (_Class == 1) then{
         _goggleArray = [
-            "", 0.875,
-            "rhs_scarf", 0.1,
-            "G_Squares",0.05
+            "", 0.175,
+            "7r_scrim_strips", 0.675,
+            "usm_scarf", 0.1,
+            "G_Spectacles",0.05
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _goggleArray = [
-            "", 0.375,
-            "7r_scrim_forest", 0.475,
-            "rhs_scarf", 0.1,
-            "G_Squares",0.05
+            "", 0.175,
+            "7r_scrim_strips", 0.675,
+            "usm_scarf", 0.1,
+            "G_Spectacles",0.05
         ];
     };
 
@@ -138,8 +140,8 @@ _unit addHeadgear _helmet;
     if (_Class == 3) then{
         _goggleArray = [
             "", 0.875,
-            "rhs_scarf", 0.1,
-            "G_Squares",0.05
+            "usm_scarf", 0.1,
+            "G_Spectacles",0.05
         ];
     };
 
@@ -147,8 +149,8 @@ _unit addHeadgear _helmet;
     if (_Class == 4) then{
         _goggleArray = [
             "", 0.875,
-            "rhs_scarf", 0.1,
-            "G_Squares",0.05
+            "usm_scarf", 0.1,
+            "G_Spectacles",0.05
         ];
     };
 

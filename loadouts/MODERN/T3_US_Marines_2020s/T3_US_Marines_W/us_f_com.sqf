@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "7r_oversuit_marpatw_gloves";
+    _unit forceAddUniform "rhs_uniform_FROG01_wd";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -48,7 +48,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 1 do {_unit addItemToVest "UK3CB_P320_9x19_17Rnd";};
-    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag";};
+    for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";

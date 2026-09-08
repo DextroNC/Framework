@@ -95,7 +95,7 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan",0.0625,
             "rhs_balaclava",0.0625,
-            "G_Squares",0.0625,
+            "G_Spectacles",0.0625,
             "rhs_scarf",0.0625,
             "UK3CB_G_Gloves_Black",0.125,
             "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,
@@ -108,7 +108,7 @@ _unit addHeadgear _helmet;
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan",0.0625,
             "rhs_balaclava",0.0625,
-            "G_Squares",0.0625,
+            "G_Spectacles",0.0625,
             "rhs_scarf",0.0625,
             "UK3CB_G_Gloves_Black",0.125,
             "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,

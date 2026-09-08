@@ -64,10 +64,8 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 _helmet_list = [
     "7r_mtp_opscore_2",
     "7r_mtp_opscore_3",
-    "7r_mtp_opscore_4"
-];
-
-_helmet_list_pl_and_echo = [
+    "7r_mtp_opscore_4",
+    "7r_mtp_opscore_4",
     "rhsusf_opscore_rg_cover_pelt",
     "rhsusf_opscore_rg_cover_pelt",
     "rhsusf_opscore_fg_pelt_nsw",
@@ -77,7 +75,7 @@ _helmet_list_pl_and_echo = [
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = _helmet_list_pl_and_echo;
+        _hatArray = _helmet_list;
     };
 
     //Squad
@@ -87,7 +85,7 @@ _helmet_list_pl_and_echo = [
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = _helmet_list_pl_and_echo;
+        _hatArray = _helmet_list;
     };
 
     //Sierra

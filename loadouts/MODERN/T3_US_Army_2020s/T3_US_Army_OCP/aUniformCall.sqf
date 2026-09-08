@@ -59,21 +59,30 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 _noess_list = [
-    "rhsusf_ach_helmet_ocp",
-    "rhsusf_ach_helmet_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt"
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_scrim_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_helmet"
 ];
 
 _ess_list = [
-    "rhsusf_ach_helmet_ESS_ocp",
-    "rhsusf_ach_helmet_ESS_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt"
+    "7r_ihps_ess_helmet",
+    "7r_ihps_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet",
+    "7r_ihps_ess_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_helmet"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
@@ -84,7 +93,7 @@ _ess_list = [
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"];
+        _hatArray = _ess_list + _noess_list;
     };
 
     //Platoon 
@@ -95,10 +104,10 @@ _ess_list = [
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OGA_OD_OPS",
-            "VSM_OD_spray_OPS",
-            "VSM_OGA_OD_OPS_2",
-            "VSM_OD_spray_OPS_2"
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_3",
+            "7r_ocp_opscore_4"
         ];
     };
     //Selects random hat from determined array, runs
@@ -116,9 +125,9 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
-            "usm_scarf", .1,
-            "rhsusf_shemagh2_gogg_tan", 0.1,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.1
+            "", .1,
+            "milgp_f_face_shield_shemagh_khk", 0.1,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.1
         ];
     };
 
@@ -129,9 +138,9 @@ if (_helmet in _ess_list) then {_class = 5};
             "rhs_googles_clear", 0.35,
             "rhsusf_oakley_goggles_blk", 0.1875,
             "rhsusf_oakley_goggles_clr", 0.1875,
-            "usm_scarf", .1,
-            "rhsusf_shemagh2_gogg_tan", 0.05,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.05
+            "", .1,
+            "milgp_f_face_shield_shemagh_khk", 0.05,
+            "milgp_f_face_shield_goggles_shemagh_khk", 0.05
         ];
     };
 
@@ -140,8 +149,9 @@ if (_helmet in _ess_list) then {_class = 5};
         _goggleArray = [
             "UK3CB_G_Neck_Shemag_Tan", 0.35,
             "rhs_googles_clear", 0.3,
-            "usm_scarf", .1,
-            "", 0.25
+            "", .1,
+            "milgp_f_face_shield_shemagh_khk", 0.1,
+            "milgp_f_face_shield_shemagh_khk", 0.15
         ];
     };
 

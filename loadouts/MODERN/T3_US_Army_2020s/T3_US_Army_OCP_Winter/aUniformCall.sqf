@@ -86,21 +86,39 @@
 _unit forceAddUniform selectRandom _uniformArray;
 
 _noess_list = [
-    "rhsusf_ach_helmet_ocp",
-    "rhsusf_ach_helmet_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt",
-    "rhsusf_ach_helmet_headset_ocp",
-    "rhsusf_ach_helmet_headset_ocp_alt"
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_scrim_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_scrim_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet",
+    "7r_ihps_scrim_helmet",
+    "7r_ihps_headset_helmet",
+    "7r_ihps_headset_scrim_helmet"
 ];
 
 _ess_list = [
-    "rhsusf_ach_helmet_ESS_ocp",
-    "rhsusf_ach_helmet_ESS_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt",
-    "rhsusf_ach_helmet_headset_ess_ocp",
-    "rhsusf_ach_helmet_headset_ess_ocp_alt"
+    "7r_ihps_ess_helmet",
+    "7r_ihps_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet",
+    "7r_ihps_ess_helmet",
+    "7r_ihps_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet",
+    "7r_ihps_headset_ess_helmet",
+    "7r_ihps_headset_ess_scrim_helmet"
 ];
 
 //Appends array of hats with desired uniforms based on _Class
@@ -111,7 +129,7 @@ _ess_list = [
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = _ess_list + _noess_list + ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_camo_ocp"];
+        _hatArray = _ess_list + _noess_list;
     };
 
     //Platoon 
@@ -122,10 +140,10 @@ _ess_list = [
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OGA_OD_OPS",
-            "VSM_OD_spray_OPS",
-            "VSM_OGA_OD_OPS_2",
-            "VSM_OD_spray_OPS_2"
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_2",
+            "7r_ocp_opscore_3",
+            "7r_ocp_opscore_4"
         ];
     };
     //Selects random hat from determined array, runs

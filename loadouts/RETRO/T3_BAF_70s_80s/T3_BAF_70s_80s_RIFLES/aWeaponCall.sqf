@@ -39,7 +39,6 @@
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "rhs_weap_l1a1_wood",
             "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
@@ -48,7 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_l1a1_para"
+            "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -97,7 +96,6 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_l1a1_wood",
             "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
@@ -115,7 +113,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_l1a1_para"
+            "rhs_weap_l1a1"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -149,12 +147,11 @@
 //Checks rifle type, adds ammunition based on ammount
     //Infantry-based rifles - 12 Magazines
     if (_Rifle <= 4 or _Rifle == 7) then{
-        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 12 do {_unit addItem _primaryAmmo;};
     };
     //Adds UGLs for Grenadiers, SLs - 8 HE, 6 Smoke
     if (_Rifle == 3) then{
-        _unit addItemToBackpack "rhs_weap_m79";
+        _unit addItem "rhs_weap_m79";
         for "_i" from 1 to 8 do {_unit addItem _uglHE;};
         for "_i" from 1 to 6 do {_unit addItem _uglSmoke;};
     };
@@ -164,13 +161,11 @@
     };
     //MMG - 500 RNDS
     if (_Rifle == 6) then{
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 4 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 5 do {_unit addItem _primaryAmmo;};
     };
     //DMR - 10 Magazines
     if (_Rifle == 8 or _Rifle == 9) then{
-        for "_i" from 1 to 8 do {_unit addItem _primaryAmmo;};
-        for "_i" from 1 to 2 do {_unit addItem _primaryAmmo;};
+        for "_i" from 1 to 10 do {_unit addItem _primaryAmmo;};
     };
     //Breacher - 8 Magazines
     if (_Rifle == 10) then{

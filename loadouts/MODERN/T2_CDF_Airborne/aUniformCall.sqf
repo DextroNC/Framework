@@ -30,42 +30,42 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_mc_gloves",3,
-            "7r_combatsmocks_mc",3,
-            "7r_combatsmocks_dpm_gloves",1,
-            "7r_combatsmocks_dpm",1,
-            "7r_combatsmocks_dpm_mc_gloves",5,
-            "7r_combatsmocks_dpm_mc",5,
-            "7r_combatsmocks_mc_dpm_gloves",5,
-            "7r_combatsmocks_mc_dpm",5
+            "7r_combatsmocks_mc_gloves",6,
+            "7r_combatsmocks_mc",6,
+            "7r_combatsmocks_ttsko_gloves",1,
+            "7r_combatsmocks_ttsko",1,
+            "7r_combatsmocks_ttsko_mc_gloves",3,
+            "7r_combatsmocks_ttsko_mc",3,
+            "7r_combatsmocks_mc_ttsko_gloves",4,
+            "7r_combatsmocks_mc_ttsko",4
         ];
     };
 
@@ -102,19 +102,20 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     //Squad
     if (_Class == 2) then{
         _hatArray = [
-            "rhsusf_ach_helmet_ocp",4,
-            "rhsusf_ach_helmet_ocp_alt",4,
-            "rhsusf_ach_helmet_ESS_ocp",4,
-            "rhsusf_ach_helmet_ESS_ocp_alt",4,
-            "rhsusf_ach_helmet_headset_ocp",4,
-            "rhsusf_ach_helmet_headset_ocp_alt",4,
-            "rhsusf_ach_helmet_headset_ess_ocp",4,
-            "rhsusf_ach_helmet_headset_ess_ocp_alt",4,
-            "rhsusf_ach_helmet_camo_ocp",16,
-            "7r_ocp_opscore",9,
-            "7r_ocp_opscore_2",12,
-            "7r_ocp_opscore_3",12,
-            "7r_ocp_opscore_4",12
+            "rhsusf_opscore_fg",1,
+            "rhsusf_opscore_fg_pelt",1.33,
+            "rhsusf_opscore_fg_pelt_cam",1.33,
+            "rhsusf_opscore_fg_pelt_nsw",1.33,
+            "rhsusf_opscore_ut",2,
+            "rhsusf_opscore_ut_pelt",2.66,
+            "rhsusf_opscore_ut_pelt_nsw",2.66,
+            "rhsusf_opscore_ut_pelt_nsw_cam",2.66,
+            "rhsusf_opscore_rg_cover",2,
+            "rhsusf_opscore_rg_cover",4,
+            "7r_ocp_opscore",3,
+            "7r_ocp_opscore_2",4,
+            "7r_ocp_opscore_3",4,
+            "7r_ocp_opscore_4",4
         ];
     };
 
