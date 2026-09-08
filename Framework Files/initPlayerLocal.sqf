@@ -54,7 +54,7 @@ _EZC = ["7R_EZ","Call Extraction","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heli_
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _EZC] call ace_interact_menu_fnc_addActionToClass;
 
 // Vehicle Drop
-_CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_canCallVehicleDrop},{[_target, _player, []] call fw_fnc_vehicleDropAction}] call ace_interact_menu_fnc_createAction;
+_CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{},{[_player] call fw_fnc_canCallVehicleDrop},{[_target, _player, []] call fw_fnc_vehicleDropAction}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header"], _CHH] call ace_interact_menu_fnc_addActionToClass;
 
 // FireSupport
