@@ -171,14 +171,14 @@ player createDiaryRecord ["Composition", ["Platoon Composition", "
 
 player createDiarySubject ["Mortar", "Mortar"];
 player createDiaryRecord ["Mortar", ["Charge 3", "
-<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge3_ca.paa' />
+<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge3_ace_ca.paa' />
 "]];
 player createDiaryRecord ["Mortar", ["Charge 2", "
-<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge2_ca.paa' />
+<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge2_ace_ca.paa' />
 "]];
 player createDiaryRecord ["Mortar", ["Charge 1", "
-<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge1_ca.paa' />
+<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge1_ace_ca.paa' />
 "]];
 player createDiaryRecord ["Mortar", ["Charge 0", "
-<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge0_ca.paa' />
+<img image='\UK3CB_BAF_Weapons\addons\UK3CB_BAF_Weapons_Static\data\M6_charge0_ace_ca.paa' />
 "]];
