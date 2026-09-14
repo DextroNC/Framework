@@ -105,7 +105,7 @@
         _primaryArray = [
             "UK3CB_BAF_L115A3_DE"
         ];
-        _primaryAmmo = "20Rnd_762x51_Mag";
+        _primaryAmmo = "UK3CB_BAF_338_5Rnd";
     };
 
     //10 - Breacher
