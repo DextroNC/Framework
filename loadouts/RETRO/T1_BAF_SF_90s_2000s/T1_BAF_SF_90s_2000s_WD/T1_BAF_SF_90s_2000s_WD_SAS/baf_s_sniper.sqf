@@ -57,7 +57,7 @@ comment "Add Tertiary equipment";
 
 comment "Add Ammunition";
     for "_i" from 1 to 4 do {_unit addItemToUniform "UK3CB_BAF_9_13Rnd";};
-    for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_762x51_m118_special_Mag";};
+    for "_i" from 1 to 10 do {_unit addItemToVest "UK3CB_BAF_338_5Rnd";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
