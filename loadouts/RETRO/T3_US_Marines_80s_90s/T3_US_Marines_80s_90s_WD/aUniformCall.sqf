@@ -82,6 +82,8 @@ _ess_list = [
 
 _noess_list = [
     "usm_helmet_pasgt_m_ce_wdl",
+    "usm_helmet_pasgt_scrim_wdl",
+    "usm_helmet_pasgt_scrim_wdl",
     "usm_helmet_pasgt_scrim_wdl"
 ];
 
