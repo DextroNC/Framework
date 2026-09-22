@@ -20,7 +20,7 @@ private _index = _unit addEventHandler ["Killed", {
 	params ["_dead"];
 
 	// Find Killer and create info string
-	private _killer = name (_dead getVariable ["ace_medical_lastDamageSource", objNull]);
+	private _killer = (_dead getVariable ["ace_medical_lastDamageSource", objNull]);
 
 	// Check if player
 	if (_killer in allPlayers) then {
