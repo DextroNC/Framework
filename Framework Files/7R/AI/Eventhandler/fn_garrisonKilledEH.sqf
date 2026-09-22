@@ -44,7 +44,7 @@ _unit addEventHandler ["Killed", {
 		} forEach _groupUnits;
 
 		// Clip _releaseUnits to _maxCount
-		if (count _releaseUnit > _maxCount) then {_releaseUnits resize _maxCount;};
+		if (count _releaseUnits > _maxCount) then {_releaseUnits resize _maxCount;};
 
 		{
 			// Release units
