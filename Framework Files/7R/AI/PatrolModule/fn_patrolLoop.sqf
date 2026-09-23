@@ -119,8 +119,8 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
         };
     };
 }, {}, {
-    // Once Depressed, reset after 4 min
-    [this,200] spawn fw_fnc_depressedCooldown;
+    // Once Depressed, reset after 3 minutes, 20 seconds
+    [_this,200] spawn fw_fnc_depressedCooldown;
 }, "CombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Artillery Support Loop

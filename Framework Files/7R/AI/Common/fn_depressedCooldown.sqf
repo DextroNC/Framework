@@ -32,4 +32,4 @@ params ["_group","_cooldown"];
 	{
 		_x allowFleeing 0;
 	}forEach units _this;
-},_group, random [60,90,120]] call CBA_fnc_waitAndExecute;
+},_group, random [(_cooldown-20),_cooldown,(_cooldown+20)]] call CBA_fnc_waitAndExecute;
