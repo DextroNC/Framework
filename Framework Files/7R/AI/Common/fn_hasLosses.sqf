@@ -10,7 +10,7 @@
 		Evaluate whether a group suffered substancial losses
 
 	Example:
-		[_group,] call fw_fnc_hasLosses;
+		[_group,45] call fw_fnc_hasLosses;
 */
 // Parameter Init
 params ["_group",["_tresh",45]];
@@ -24,7 +24,7 @@ private _current = {alive _x} count (units _group);
 if (((_current * 100) / _original) < _tresh) then {_return = true;};
 
 // Debug
-//if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this];};
+if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this];};
 
 // Return
 _return
