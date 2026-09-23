@@ -102,7 +102,8 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
             // Flee
             case 0: {
                 _this setVariable ["SR_Depressed", true];
-                _this allowFleeing 1;
+                // allowFleeing only works where the group is local, which is the HC for HC-spawned AI
+                [_this, 1] remoteExec ["allowFleeing", leader _this];
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
             };

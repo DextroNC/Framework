@@ -16,7 +16,7 @@ params ["_unit"];
 
 
 // Killed Eventhandler
-_unit addEventHandler ["Killed", {
+private _code = {
 	// Parameter Init
 	params ["_dead"];
 
@@ -38,8 +38,10 @@ _unit addEventHandler ["Killed", {
 				_releaseUnits pushBackUnique _x;
  			};
 
-			// Remove EH
-			_x removeAllEventHandlers "Killed";
+			// Remove EH, only this function's own so other Killed EHs (war crimes, VCOM, ACE) stay
+			private _index = _x getVariable ["SR_GarrisonKilledEH", -1];
+			if (_index >= 0) then {_x removeEventHandler ["Killed", _index]};
+			_x setVariable ["SR_GarrisonKilledEH", nil];
 
 		} forEach _groupUnits;
 
@@ -55,4 +57,12 @@ _unit addEventHandler ["Killed", {
 			if (SR_Debug) then { format ["%1 now has pathing enabled", _x] remoteExec ["systemChat", 0]; };
 		} forEach _releaseUnits;
 	};
-}];
+};
+
+// Swap the EH in one unscheduled step (isNil), so two calls for the same unit cannot interleave and stack.
+// The index is only valid on this machine, so it is kept in a local variable.
+isNil {
+	private _old = _unit getVariable ["SR_GarrisonKilledEH", -1];
+	if (_old >= 0) then {_unit removeEventHandler ["Killed", _old]};
+	_unit setVariable ["SR_GarrisonKilledEH", _unit addEventHandler ["Killed", _code]];
+};

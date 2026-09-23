@@ -168,6 +168,7 @@
 		class civKilledEH{};
 		class civPanicEH{};
 		class powKilledEH{};
+		class logWarCrime{};
 		class garrisonKilledEH{};
 	};
 	class Loadouts {
