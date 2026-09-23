@@ -82,7 +82,7 @@ class CfgRemoteExec
 			jip = 0;
 		};
 		class fw_fnc_logWarCrime {
-			allowedTargets = 0;
+			allowedTargets = 2;
 			jip = 0;
 		};
 	};
