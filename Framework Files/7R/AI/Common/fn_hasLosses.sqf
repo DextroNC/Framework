@@ -21,10 +21,11 @@ private _original = _group getVariable ["SR_GroupSize", 1];
 private _current = {alive _x} count (units _group);
 
 // If Group is down to less than 45 percent of Original Size
-if (((_current * 100) / _original) < _tresh) then {_return = true;};
-
-// Debug
-if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this];};
+if (((_current * 100) / _original) < _tresh) then {
+	_return = true;
+	// Debug
+	if (SR_Debug) then {systemChat format ["%1 suffered substancial losses", _this select 0];};
+};
 
 // Return
 _return
