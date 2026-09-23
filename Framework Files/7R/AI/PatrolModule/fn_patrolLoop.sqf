@@ -137,11 +137,17 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Find Target
     _target = _leader findNearestEnemy position _leader;
     if (_target == objNull) exitWith {};
-    private _targetKnowledge = _leader knowsAbout _target;
 
     // Minimum Target Knowledge require to call artillery
+    private _targetKnowledge = _leader knowsAbout _target;
     if ( _targetKnowledge < 1.5) exitWith {};
-    hint format ["%1", _targetKnowledge];
+
+    // Leave loop for close range engagements (any friendlies within 250m)
+    if ((_target nearEntities ["CAManBase", 250]) findIf {(alive _x) && (side group _x == side group _leader)} != -1) exitWith {};
+
+    // Leave loop for spread out/alone enemies (less then six detected enemies within 100 meters of each other.)
+    if (count ((_target nearEntities ["CAManBase", 100]) select {(alive _x) && (side group _x == side group _target) && ((_leader knowsAbout _x) > 1.5)}) < 6) exitWith {};
+
     // Get Available Artillery
     _artillery  = [_group] call fw_fnc_artilleryCheck;
 
@@ -154,9 +160,8 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Daytime Evaluation
     } else {
 
-        // If Target to close use smoke else HE
-        if (leader _group distance2D _target < 150) then {
-
+        // Fire smoke about half the time.
+        if (random 1 > 0.5) then {
             // Request Smoke
             [_artillery,1,_target] spawn fw_fnc_artilleryCall;
         } else {
@@ -171,10 +176,10 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Unlock Artillery
     [{
         SR_ArtilleryCooldown = false;
-    },objNull, 5] call CBA_fnc_waitAndExecute;
+    },objNull, 30] call CBA_fnc_waitAndExecute;
 
     // Debug
-    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];}; 
+    if (SR_ArtyDebug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _target)];}; 
 
 }, {}, {}, "SupportLoop"] call CBA_statemachine_fnc_addState;
 
