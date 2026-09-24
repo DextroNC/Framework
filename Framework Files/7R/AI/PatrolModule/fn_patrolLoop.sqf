@@ -81,7 +81,12 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
 private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_State", "PATROL"] in ["COMBAT","GARRISON"]) && !(_x getVariable ["SR_Depressed", false])}}, true] call CBA_statemachine_fnc_create;
 [_combatStateMachine, {
     // If Group has suffered substancial losses then...
-    if ([_this, 45] call fw_fnc_hasLosses) then {
+    // Roll once per casualty: the state machine revisits the group every few frames, so rolling on every pass made the outcome near certain
+    private _alive = {alive _x} count (units _this);
+    private _lastCheck = _this getVariable ["SR_MoraleCheckAlive", -1];
+    if ([_this, 45] call fw_fnc_hasLosses && {_lastCheck < 0 || {_alive < _lastCheck}}) then {
+        _this setVariable ["SR_MoraleCheckAlive", _alive];
+
         // Select Option
         private _last = 0;
         private _index = -1;
@@ -102,7 +107,8 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
             // Flee
             case 0: {
                 _this setVariable ["SR_Depressed", true];
-                _this allowFleeing 1;
+                // allowFleeing only works where the group is local, which is the HC for HC-spawned AI
+                [_this, 1] remoteExec ["allowFleeing", leader _this];
                 // Debug
                 if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
             };
@@ -116,11 +122,11 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
                 if (SR_Debug) then {systemChat format ["%1 is surrendering", _this];};
             };
         };
+
+        // Once Depressed, reset after 3 minutes, 20 seconds. Called here because onStateLeaving never runs: this state has no transitions
+        if (_index >= 0) then {[_this,200,_index == 0] spawn fw_fnc_depressedCooldown;};
     };
-}, {}, {
-    // Once Depressed, reset after 4 min
-    [this,200] spawn fw_fnc_depressedCooldown;
-}, "CombatLoop"] call CBA_statemachine_fnc_addState;
+}, {}, {}, "CombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Artillery Support Loop
 if (isNil "AI_ART_Units") then {AI_ART_Units = [];};
