@@ -179,7 +179,7 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     },objNull, 30] call CBA_fnc_waitAndExecute;
 
     // Debug
-    if (SR_ArtyDebug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _target)];}; 
+    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _target)];}; 
 
 }, {}, {}, "SupportLoop"] call CBA_statemachine_fnc_addState;
 
