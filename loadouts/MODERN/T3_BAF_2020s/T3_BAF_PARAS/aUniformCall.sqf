@@ -30,27 +30,24 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 

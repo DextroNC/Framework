@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP";
+    _unit forceAddUniform "7r_combat_fatigues_mtp_gloves";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
