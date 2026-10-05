@@ -97,7 +97,7 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
     if (_Class == 3) then{
         _hatArray = [
             "UK3CB_BAF_H_Beret_PR",
-            "UK3CB_BAF_H_Beret_PR_PRR",
+            "UK3CB_BAF_H_Beret_PR",
             "UK3CB_BAF_H_Wool_Hat"
         ];
     };

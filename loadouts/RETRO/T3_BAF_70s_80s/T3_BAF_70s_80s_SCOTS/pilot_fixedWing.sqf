@@ -31,7 +31,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "UK3CB_BAF_9_13Rnd";};
 _unit addHeadgear "H_PilotHelmetFighter_O";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
-_unit addItemToBackpack "UK3CB_BAF_H_Beret_SG_PRR";
+_unit addItemToBackpack "UK3CB_BAF_H_Beret_SG";
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L9A1";

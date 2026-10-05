@@ -17,7 +17,7 @@ removeGoggles _unit;
 [_unit, 3] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
 
 comment "Add Uniforms/Items";
-    _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer_PRR";
+    _unit addHeadgear "UK3CB_BAF_H_Beret_RM_Officer";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
