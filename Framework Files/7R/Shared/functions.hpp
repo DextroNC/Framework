@@ -46,6 +46,17 @@
 		class civBomberAction{};
 		class civUnitSpawn{};
 	};
+	class convoy
+	{
+		file = "7R\Convoy";
+		class initConvoy{};
+		class convoyAmbushed{};
+		class leadSpeedControl{};
+		class linkSpeedControl{};
+		class pathCreator{};
+		class spawnConvoy{};
+		class posAlongRoad{};
+	};
 	class support {
 		file = "7R\Support";
 		class supportStatusReport{};
