@@ -163,8 +163,6 @@
 		class findPOI{};
 		class garrisonZEI{};
 		class createWaypoint{};
-		class convoy{};
-		class convoyReaction{};
 	};
 	class AiAnimationn {
 		file = "7R\AI\Animation";
