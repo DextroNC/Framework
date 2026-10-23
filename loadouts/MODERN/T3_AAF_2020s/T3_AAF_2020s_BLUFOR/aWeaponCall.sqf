@@ -32,14 +32,14 @@
     _primaryAmmo = "";
     _attachmentArray = [];
     _gripArray = [];
-    _uglHE = "1Rnd_HE_Grenade_shell";
-    _uglSmoke = "1Rnd_Smoke_Grenade_shell";
+    _uglHE = "rhs_VOG25";
+    _uglSmoke = "rhs_GDM40";
 
 //Appends _primaryArray array with set of weapons and _primaryAmmo array with set of ammo based on _Rifle
     //1 - Rifle 1
     if (_Rifle == 1) then{
         _primaryArray = [
-            "arifle_TRG21_F"
+            "rhs_weap_m21a"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -47,7 +47,7 @@
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "arifle_TRG20_F"
+            "rhs_weap_m21s"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -55,7 +55,7 @@
     //3 - Grenadier
     if (_Rifle == 3) then{
         _primaryArray = [
-            "arifle_TRG21_GL_F"
+            "rhs_weap_m21a_pbg40"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -63,7 +63,7 @@
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "UK3CB_G3KA4"
+            "UK3CB_G3A3V_RIS"
         ];
         _primaryAmmo = "20Rnd_762x51_Mag";
     };
@@ -71,9 +71,9 @@
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "7r_weap_negev_ng5_black"
+            "7r_weap_c9"
         ];
-        _primaryAmmo = "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote";
+        _primaryAmmo = "rhsusf_200rnd_556x45_mixed_box_black";
     };
 
     //6 - MMG
@@ -111,7 +111,7 @@
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "arifle_TRG20_F"
+            "rhs_weap_m21s"
         ];
         _primaryAmmo = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
     };
@@ -122,10 +122,15 @@
 //Appends _attachmentArray1 array with a light source based on _Rifle
     if (_Rifle >= 1) then{
         _attachmentArray = [
-            "rhsusf_acc_anpeq16a_blk"
+            "rhs_acc_perst1ik"
         ];
     };
-    if ((_Rifle <= 4) or (_Rifle == 10)) then{
+    if (_Rifle in [4, 7, 8]) then{
+        _attachmentArray = [
+            "UK3CB_BAF_LLM_IR_Black"
+        ];
+    };
+    if ((_Rifle == 7)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
             "rhsusf_acc_rvg_blk"
@@ -137,9 +142,6 @@
     };
     if ((_Rifle <= 4) or (_Rifle == 10) or (_Rifle == 7)) then{
         _unit addPrimaryWeaponItem selectRandom _gripArray;
-    };
-    if ((_Rifle == 4)) then{
-        _unit addPrimaryWeaponItem "rhsgref_acc_zendl";
     };
 
 
@@ -172,7 +174,7 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "hgun_ACPC2_F";
+    _unit addWeapon "rhsusf_weap_m1911a1";
     _unit addHandgunItem "9Rnd_45ACP_Mag";
     _unit addItem "9Rnd_45ACP_Mag";
     _unit addItem "9Rnd_45ACP_Mag";

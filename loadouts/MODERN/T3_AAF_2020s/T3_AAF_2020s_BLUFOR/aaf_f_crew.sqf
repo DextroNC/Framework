@@ -36,10 +36,10 @@ comment "Add Drip";
     _unit addHeadgear "H_HelmetCrew_I";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "arifle_TRG20_F";
+    _unit addWeapon "rhs_weap_m21s";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "hgun_ACPC2_F";
+    _unit addWeapon "rhsusf_weap_m1911a1";
     _unit addHandgunItem "9Rnd_45ACP_Mag";
 
 comment "Add Tertiary equipment";

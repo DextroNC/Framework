@@ -39,8 +39,6 @@ comment "Add Vest/Items";
 comment "Add Backpack/Items";
     _unit addBackpack "UK3CB_AAF_B_B_FIELDPACK_DIGI_GRN";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-    _unit addItemToBackpack "ACE_HuntIR_monitor";
-    for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 
 comment "Add Drip";
     _unit addItemToBackpack "UK3CB_AAF_B_H_Beret_Army_Off";
@@ -55,7 +53,7 @@ comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -70,12 +68,12 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_red";
+    _unit addItem "rhs_VG40OP_red";
     _unit addItemToBackpack "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

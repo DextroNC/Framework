@@ -49,7 +49,7 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "hgun_ACPC2_F";
+    _unit addWeapon "rhsusf_weap_m1911a1";
     _unit addHandgunItem "9Rnd_45ACP_Mag";
 
 comment "Add Tertiary equipment";

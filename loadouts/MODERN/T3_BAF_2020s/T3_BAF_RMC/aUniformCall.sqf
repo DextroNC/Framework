@@ -30,27 +30,24 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_RM",
-            "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM"
+            "7r_combat_fatigues_mtp_gloves",
+            "7r_combat_fatigues_mtp"
         ];
     };
 
@@ -68,19 +65,15 @@ _ess_list = [
     "UK3CB_BAF_H_Mk7_Camo_CESS_A",
     "UK3CB_BAF_H_Mk7_Camo_CESS_B",
     "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-    "UK3CB_BAF_H_Mk7_Camo_CESS_D",
     "UK3CB_BAF_H_Mk7_Camo_ESS_A",
     "UK3CB_BAF_H_Mk7_Camo_ESS_B",
     "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-    "UK3CB_BAF_H_Mk7_Camo_ESS_D",
     "UK3CB_BAF_H_Mk7_Net_CESS_A",
     "UK3CB_BAF_H_Mk7_Net_CESS_B",
     "UK3CB_BAF_H_Mk7_Net_CESS_C",
-    "UK3CB_BAF_H_Mk7_Net_CESS_D",
     "UK3CB_BAF_H_Mk7_Net_ESS_A",
     "UK3CB_BAF_H_Mk7_Net_ESS_B",
     "UK3CB_BAF_H_Mk7_Net_ESS_C",
-    "UK3CB_BAF_H_Mk7_Net_ESS_D",
     "UK3CB_BAF_H_Mk7_Scrim_ESS_A",
     "UK3CB_BAF_H_Mk7_Scrim_ESS_B",
     "UK3CB_BAF_H_Mk7_Scrim_ESS_C"
@@ -90,13 +83,11 @@ _noess_list = [
     "UK3CB_BAF_H_Mk7_Camo_A",
     "UK3CB_BAF_H_Mk7_Camo_B",
     "UK3CB_BAF_H_Mk7_Camo_C",
-    "UK3CB_BAF_H_Mk7_Camo_D",
     "UK3CB_BAF_H_Mk7_Camo_E",
     "UK3CB_BAF_H_Mk7_Camo_F",
     "UK3CB_BAF_H_Mk7_Net_A",
     "UK3CB_BAF_H_Mk7_Net_B",
     "UK3CB_BAF_H_Mk7_Net_C",
-    "UK3CB_BAF_H_Mk7_Net_D",
     "UK3CB_BAF_H_Mk7_Scrim_A",
     "UK3CB_BAF_H_Mk7_Scrim_B",
     "UK3CB_BAF_H_Mk7_Scrim_C",
@@ -114,19 +105,16 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_C"
         ];
     };
 
@@ -152,35 +140,29 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Net_CESS_A",
             "UK3CB_BAF_H_Mk7_Net_CESS_B",
             "UK3CB_BAF_H_Mk7_Net_CESS_C",
-            "UK3CB_BAF_H_Mk7_Net_CESS_D",
             "UK3CB_BAF_H_Mk7_Net_ESS_A",
             "UK3CB_BAF_H_Mk7_Net_ESS_A",
             "UK3CB_BAF_H_Mk7_Net_ESS_B",
             "UK3CB_BAF_H_Mk7_Net_ESS_C",
-            "UK3CB_BAF_H_Mk7_Net_ESS_D",
             "UK3CB_BAF_H_Mk7_Net_A",
             "UK3CB_BAF_H_Mk7_Net_A",
             "UK3CB_BAF_H_Mk7_Net_B",
             "UK3CB_BAF_H_Mk7_Net_C",
-            "UK3CB_BAF_H_Mk7_Net_D",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_C"
         ];
     };
 
@@ -192,19 +174,16 @@ _noess_list = [
             "UK3CB_BAF_H_Mk7_Camo_A",
             "UK3CB_BAF_H_Mk7_Camo_B",
             "UK3CB_BAF_H_Mk7_Camo_C",
-            "UK3CB_BAF_H_Mk7_Camo_D",
             "UK3CB_BAF_H_Mk7_Camo_E",
             "UK3CB_BAF_H_Mk7_Camo_F",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_A",
             "UK3CB_BAF_H_Mk7_Camo_CESS_B",
             "UK3CB_BAF_H_Mk7_Camo_CESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_CESS_D",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_A",
             "UK3CB_BAF_H_Mk7_Camo_ESS_B",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_C",
-            "UK3CB_BAF_H_Mk7_Camo_ESS_D"
+            "UK3CB_BAF_H_Mk7_Camo_ESS_C"
         ];
     };
 
