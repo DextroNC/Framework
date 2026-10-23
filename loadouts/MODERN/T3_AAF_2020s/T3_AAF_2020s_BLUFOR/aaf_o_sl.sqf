@@ -53,7 +53,7 @@ comment "Add Tertiary equipment";
     _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
 
 comment "Add Navigation";
 _unit linkItem "ItemMap";
@@ -68,12 +68,12 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
     _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
     _unit addItem "ACE_IR_Strobe_Item";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareWhite_F";
-    _unit addItem "UGL_FlareRed_F";
-    _unit addItem "UGL_FlareRed_F";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_white";
+    _unit addItem "rhs_VG40OP_red";
+    _unit addItem "rhs_VG40OP_red";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","SL", true];

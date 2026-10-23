@@ -34,7 +34,7 @@ _unit addItemToBackpack "ToolKit";
 _unit addItemToBackpack "UK3CB_AAF_B_H_Beret_Airforce_Off";
 
 comment "Add weapons";
-_unit addWeapon "hgun_ACPC2_F";
+_unit addWeapon "rhsusf_weap_m1911a1";
 _unit addWeapon "Binocular";
 
 comment "Add items";

@@ -169,8 +169,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "rhs_googles_clear", 0.225,
             "rhsusf_oakley_goggles_blk", 0.075,
             "rhsusf_oakley_goggles_clear", 0.075,
-            "rhsusf_shemagh2_gogg_tan", 0.05,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.05
+            "milgp_f_face_shield_goggles_shemagh_RGR", 0.1
         ];
     };
 
@@ -180,7 +179,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "7r_scrim_semi", 0.225,
             "rhs_googles_clear", 0.225,
             "", 0.1,
-            "rhsusf_shemagh2_tan", 0.1
+            "milgp_f_face_shield_shemagh_RGR", 0.1
         ];
     };
 
@@ -192,8 +191,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "rhs_googles_clear", 0.225,
             "rhsusf_oakley_goggles_blk", 0.025,
             "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.05,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.05
+            "milgp_f_face_shield_goggles_shemagh_RGR", 0.1
         ];
     };
     
@@ -203,7 +201,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "7r_scrim_semi", 0.225,
             "rhs_googles_clear", 0.225,
             "", 0.1,
-            "rhsusf_shemagh2_tan", 0.1
+            "milgp_f_face_shield_shemagh_RGR", 0.1
         ];
     };
 
@@ -214,8 +212,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "rhs_googles_clear", 0.65,
             "rhsusf_oakley_goggles_blk", 0.025,
             "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.05,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.05
+            "milgp_f_face_shield_goggles_shemagh_RGR", 0.1
         ];
     };
 
@@ -225,7 +222,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "UK3CB_G_Neck_Shemag", 0.1,
             "rhs_googles_clear", 0.65,
             "", 0.1,
-            "rhsusf_shemagh2_tan", 0.1
+            "milgp_f_face_shield_shemagh_RGR", 0.1
         ];
     };
 
@@ -236,8 +233,7 @@ if (_helmet in _ess_list) then {_Class = _Class + .5};
             "rhs_googles_clear", 0.65,
             "rhsusf_oakley_goggles_blk", 0.025,
             "rhsusf_oakley_goggles_clear", 0.025,
-            "rhsusf_shemagh2_gogg_tan", 0.05,
-            "rhsusf_shemagh2_clear_gogg_tan", 0.05
+            "milgp_f_face_shield_goggles_shemagh_RGR", 0.1
         ];
     };
 
