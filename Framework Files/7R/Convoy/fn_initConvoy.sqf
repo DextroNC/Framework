@@ -14,14 +14,16 @@
 		Spawns the Convoy Vehicles according to the specified Templates and sets up the Convoy Logic.
 
 	Example:
-		_return = [_initialMarker, _convoyTemplates, _waypoints] call fw_fnc_spawnConvoy;
+		_return = [_initialMarker, _convoyTemplates, _waypointMarkers] call fw_fnc_spawnConvoy;
 
 */
 
 // Parameter Init
-params ["_initialMarker", "_convoyTemplates", "_waypoints", ["_spacing", 35], ["_speed", 60]];
+params ["_initialMarker", "_convoyTemplates", "_waypointMarkers", ["_spacing", 35], ["_speed", 60]];
 
-if !(isServer) exitWith {systemChat "Error: Convoy Function should only be executed on the server."};
+// Server only execute or HC if present
+if (!isServer && hasInterface) exitWith {};
+if (HC in allPlayers && isServer) exitWith {};
 
 // Create Logic Object
 _logicCenter = createCenter sideLogic;
@@ -29,7 +31,8 @@ _logicGroup = createGroup _logicCenter;
 _logic = _logicGroup createUnit ["Logic", [0,0,0], [], 0, "NONE"];
 
 // Set Logic Variables
-_logic setVariable ["convWaypoints", _waypoints];
+_logic setVariable ["convWaypointMarkers", _waypointMarkers];
+_logic setVariable ["convWaypoints", []];
 _logic setVariable ["convSeparation", _spacing];
 _logic setVariable ["maxSpeed", _speed];
 _logic setVariable ["stiffnessCoeff", 0.2];
@@ -60,10 +63,13 @@ if (_groupVehicles isEqualTo []) exitWith {
 private _leaderVeh = _groupVehicles select 0;
 _leaderVeh setVariable ["convoy_stopped", false, true];
 _leaderVeh setVariable ["convoy_terminate", false, true];
+_leaderVeh setVariable ["convoy_arrived", false, true];
 _leaderVeh setVariable ["convoy_behaviourChanged", false, true];
 _leaderVeh setVariable ["convoy_drawObjects", 3, true];
+_leaderVeh setVariable ["convoy_logic", _logic, true];
 
 // Leader Waypoints
+_waypoints = [];
 private _leaderGroup = group _leaderVeh;
 {
 	private _wpPos = markerPos _x;
@@ -74,8 +80,18 @@ private _leaderGroup = group _leaderVeh;
 		_wp setWaypointType "MOVE";
 		_wp setWaypointSpeed (_logic getVariable ["speedModeConv", "NORMAL"]);
 		_wp setWaypointCompletionRadius 20;
+		_waypoints pushBack _wp;
+		_logic setVariable ["convWaypoints", _waypoints];
 	};
-} forEach _waypoints;
+} forEach _waypointMarkers;
+
+// Set completion logic on final waypoint
+if (count _waypoints > 0) then {
+	private _finalWp = _waypoints select (count _waypoints - 1);
+	_finalWp setWaypointStatements [
+		"true", "(vehicle this) setVariable ['convoy_arrived', true, true];"
+	];
+};
 
 // call the "driver changes system" for each vehicle
 // writes --> On Each Vehicle: 	{"driverIncapacitated", "vehicleIncapacitated","terminate_driverTransitions"}
