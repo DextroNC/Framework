@@ -125,6 +125,11 @@
             "rhs_acc_perst1ik"
         ];
     };
+    if (_Rifle in [4, 7, 8]) then{
+        _attachmentArray = [
+            "UK3CB_BAF_LLM_IR_Black"
+        ];
+    };
     if ((_Rifle == 7)) then{
         _gripArray = [
             "rhsusf_acc_grip2",
