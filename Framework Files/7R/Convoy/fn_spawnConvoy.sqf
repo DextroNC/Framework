@@ -50,6 +50,11 @@ if (markerSize _initialMarker isEqualTo [1,1]) then {
 
     // Reset Spawn Pos for next vehicle
     _spawnArray = [_leader, _spacing] call fw_fnc_posAlongRoad;
+
+    // Check for empty _spawnArray or the same location returned twice and exit early.
+    if (count _spawnArray == 0) exitWith {};
+    if (_spawnPos isEqualTo _spawnArray select 0) exitWith {};
+
     _spawnPos = _spawnArray select 0;
     _spawnDir = _spawnArray select 1;
 
