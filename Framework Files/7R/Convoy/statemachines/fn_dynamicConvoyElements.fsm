@@ -1,0 +1,345 @@
+/*%FSM<COMPILE "scriptedFSM.cfg, fn_dynamicConvoyElements">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"_",-1,250,-313.051392,-167.683777,101.948608,117.316223,0.000000,""};
+item1[] = {"init",0,250,-213.792557,-250.444077,-168.792557,-225.444061,0.000000,"init"};
+item2[] = {"_",8,218,-146.994629,-245.741135,-131.994629,-230.741150,0.000000,""};
+item3[] = {"_",8,218,-71.806183,-205.070618,-51.806183,-185.070618,0.000000,""};
+item4[] = {"initialize_loop",2,250,-104.599121,-250.276855,-19.599113,-225.276855,0.000000,"initialize loop"};
+item5[] = {"increment",2,250,-96.720993,-144.207031,-26.720993,-124.207031,0.000000,"increment"};
+item6[] = {"no_more_vehicles",4,218,-9.542847,-161.696152,83.248810,-106.501717,10.000000,"no more" \n "vehicles"};
+item7[] = {"vehicles_availab",8,218,-123.805962,-107.177307,0.548065,-62.601624,8.000000,"vehicles" \n "available"};
+item8[] = {"vehicle",2,250,-104.913971,-29.292938,-19.116333,-3.543915,0.000000,"vehicle"};
+item9[] = {"is_changing_driv",4,218,-244.118301,-46.589111,-138.871628,15.062958,8.000000,"is changing" \n "drivers"};
+item10[] = {"stop_convoy",2,250,-286.728027,30.426697,-229.351242,64.477539,0.000000,"stop" \n "convoy"};
+item11[] = {"has_driver",4,218,-308.193024,-97.094315,-207.901642,-61.796402,8.000000,"has driver"};
+item12[] = {"ok",8,218,-165.000000,-100.000000,-135.000000,-70.000000,0.000000,"ok"};
+item13[] = {"sleep",2,250,9.316284,-208.296890,64.316284,-183.296890,0.000000,"sleep"};
+item14[] = {"continue",4,218,-8.505966,-253.073059,81.494034,-223.073044,0.000000,"continue"};
+item15[] = {"terminate",1,4346,179.038940,8.238007,254.038940,33.238007,0.000000,"terminate"};
+item16[] = {"terminate",4,218,-5.355209,-41.158020,84.644791,8.841980,12.000000,"terminate"};
+item17[] = {"",7,210,129.588654,-20.203644,137.588654,-12.203674,0.000000,""};
+item18[] = {"",7,210,163.981674,-20.220566,172.546387,-12.658371,0.000000,""};
+item19[] = {"resume",2,250,-286.235291,-144.448334,-228.926758,-124.098747,0.000000,"resume"};
+item20[] = {"_",8,218,-155.000000,-205.000000,-135.000000,-185.000000,0.000000,""};
+item21[] = {"ambush",1,250,190.000000,-82.826126,280.000031,-32.826141,0.000000,"ambush"};
+item22[] = {"convoy_hit",4,218,90.000000,-110.000000,180.000000,-60.000000,9.000000,"convoy" \n "hit"};
+version=1;
+class LayoutItems
+{
+	class Item0
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {1,2};
+link1[] = {2,4};
+link2[] = {3,5};
+link3[] = {4,3};
+link4[] = {5,6};
+link5[] = {5,7};
+link6[] = {6,13};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {8,12};
+link10[] = {8,16};
+link11[] = {8,22};
+link12[] = {9,10};
+link13[] = {10,11};
+link14[] = {11,19};
+link15[] = {12,5};
+link16[] = {13,14};
+link17[] = {14,4};
+link18[] = {16,17};
+link19[] = {17,18};
+link20[] = {18,15};
+link21[] = {19,20};
+link22[] = {20,4};
+link23[] = {22,21};
+globals[] = {0.000000,0,0,0,0,640,480,1,49,6316128,1,-349.296387,351.582886,326.846405,-179.526581,854,617,1};
+window[] = {0,-1,-1,-1,-1,945,156,1804,156,1,872};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "fn_dynamicConvoyElements";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 1;
+                        init = /*%FSM<STATEINIT""">*/"private _logic = _this select 0;" \n
+                         "private _groupVehicles = _this select 1;" \n
+                         "" \n
+                         "private _leaderVeh = _groupVehicles select 0;" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log ""DCS: dynamic convoy system started"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="initialize_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "initialize_loop">*/
+                class initialize_loop
+                {
+                        name = "initialize_loop";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"private _i = -1;" \n
+                         "" \n
+                         "private _convoyLength = count _groupVehicles;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="increment";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "increment">*/
+                class increment
+                {
+                        name = "increment";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"_i = _i + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "no_more_vehicles">*/
+                                class no_more_vehicles
+                                {
+                                        itemno = 6;
+                                        priority = 10.000000;
+                                        to="sleep";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_i == _convoyLength"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "vehicles_availab">*/
+                                class vehicles_availab
+                                {
+                                        itemno = 7;
+                                        priority = 8.000000;
+                                        to="vehicle";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "vehicle">*/
+                class vehicle
+                {
+                        name = "vehicle";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"private _vehicle = _groupVehicles select _i;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "terminate">*/
+                                class terminate
+                                {
+                                        itemno = 16;
+                                        priority = 12.000000;
+                                        to="terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_leaderVeh getVariable [""convoy_terminate"", -1]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "convoy_hit">*/
+                                class convoy_hit
+                                {
+                                        itemno = 22;
+                                        priority = 9.000000;
+                                        to="ambush";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _vehicle || damage _vehicle > 0.8 || _vehicle getVariable [""vehicleIncapacitated"", false] || _vehicle getVariable [""driverIncapacitated"", false] || [(leader group _vehicle), 75] call BIS_fnc_enemyDetected"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "is_changing_driv">*/
+                                class is_changing_driv
+                                {
+                                        itemno = 9;
+                                        priority = 8.000000;
+                                        to="stop_convoy";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_vehicle getVariable [""driverIncapacitated"", -1]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "ok">*/
+                                class ok
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="increment";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "stop_convoy">*/
+                class stop_convoy
+                {
+                        name = "stop_convoy";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_leaderVeh setVariable [""convoy_stopped"", true, true];" \n
+                         "" \n
+                         "//if (SR_Debug) then { diag_log ""DCS: waiting for driver"" };" \n
+                         "if (SR_Debug) then { diag_log format[""%1 %2 %3"",""DCS: "", _vehicle, "" waiting for driver""] };" \n
+                         "" \n
+                         "//private _i = -1;" \n
+                         "private _future = time + 5*60;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "has_driver">*/
+                                class has_driver
+                                {
+                                        itemno = 11;
+                                        priority = 8.000000;
+                                        to="resume";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_vehicle getVariable [""driverIncapacitated"", -1])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "sleep">*/
+                class sleep
+                {
+                        name = "sleep";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"private _future = time + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "continue">*/
+                                class continue
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="initialize_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _future"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "terminate">*/
+                class terminate
+                {
+                        name = "terminate";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"if (SR_Debug) then { diag_log ""DCS: dynamic convoy system terminated"" };" \n
+                         "" \n
+                         "_leaderVeh setVariable [""convoy_terminate"", true, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "resume">*/
+                class resume
+                {
+                        name = "resume";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"_leaderVeh setVariable [""convoy_stopped"", false, true];" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log ""DCS: resuming..."" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="initialize_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ambush">*/
+                class ambush
+                {
+                        name = "ambush";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"_leaderVeh setVariable [""convoy_terminate"", true, true];" \n
+                         "" \n
+                         "if ((_logic getVariable [""behaviourConv"",-1]) == ""pushThroughContact"") then {" \n
+                         "	{" \n
+                         "		private _vehicle = _x;" \n
+                         "		private _commander = effectiveCommander _vehicle;" \n
+                         "		private _commandersGroup = group _commander;" \n
+                         "" \n
+                         "		{[(_x select 0)] join _commandersGroup} forEach (fullCrew [_vehicle, ""Gunner"", true]);" \n
+                         "		{[(_x select 0)] join _commandersGroup} forEach (fullCrew [_vehicle, ""Driver"", true]);" \n
+                         "		{[(_x select 0)] join _commandersGroup} forEach (fullCrew [_vehicle, ""Turret"", true]);" \n
+                         "		{[(_x select 0)] join _commandersGroup} forEach (fullCrew [_vehicle, ""Commander"", true]);" \n
+                         "	" \n
+                         "		" \n
+                         "	} forEach _groupVehicles;" \n
+                         "};" \n
+                         "" \n
+                         "[_groupVehicles] spawn fw_fnc_convoyAmbushed;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "terminate",
+                "ambush",
+        };
+};
+/*%FSM</COMPILE>*/

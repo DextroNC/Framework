@@ -1,0 +1,456 @@
+/*%FSM<COMPILE "scriptedFSM.cfg, fn_behaviorManager">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"_",-1,250,75.647400,-272.881470,246.709930,22.200317,0.000000,""};
+item1[] = {"__1",-1,250,-327.764893,-273.185791,-121.337143,23.442230,0.000000,""};
+item2[] = {"push_through",-1,250,-242.704315,1.380220,-149.353821,23.389681,0.000000,"push through"};
+item3[] = {"init",0,250,-40.385803,-430.836273,4.614189,-405.836304,0.000000,"init"};
+item4[] = {"_",8,218,-26.681465,-385.391663,-11.681450,-370.391663,0.000000,""};
+item5[] = {"_",8,218,-234.114014,-207.180557,-209.113998,-182.180557,0.000000,""};
+item6[] = {"initialize_loop",2,250,-259.607269,-246.821289,-184.607300,-221.821289,0.000000,"initialize loop"};
+item7[] = {"increment",2,250,-259.113983,-164.086761,-184.113998,-139.086761,0.000000,"increment"};
+item8[] = {"end",4,218,-166.144669,-169.406387,-132.320251,-129.893463,10.000000,"end"};
+item9[] = {"ok",8,218,-316.062897,-114.848099,-286.062927,-84.848099,0.000000,"ok"};
+item10[] = {"vehicles_availab",8,218,-266.288208,-125.274384,-176.288223,-75.274384,0.000000,"vehicles" \n "available"};
+item11[] = {"isolate_driver_in",2,250,-270.301575,-61.193970,-170.301620,-26.193970,0.000000,"isolate driver in" \n "a careless group"};
+item12[] = {"change_behavior",2,250,-53.240707,-343.918701,20.956757,-306.537659,0.000000,"change" \n "behavior"};
+item13[] = {"push",4,218,-257.407959,-343.485474,-188.150589,-307.845734,2.000000,"push"};
+item14[] = {"aware",8,218,150.716858,-342.496521,215.716858,-307.496521,0.000000,"aware"};
+item15[] = {"initialize_loop_1",2,250,145.716858,-247.910446,220.716858,-222.910385,0.000000,"initialize loop"};
+item16[] = {"_",8,218,170.716858,-207.910385,195.716858,-182.910385,0.000000,""};
+item17[] = {"increment_1",2,250,145.716858,-162.910385,220.716858,-137.910385,0.000000,"increment"};
+item18[] = {"vehicles_availab",8,218,138.110626,-119.104172,228.110626,-69.104172,0.000000,"vehicles" \n "available"};
+item19[] = {"set_aware",2,250,150.690796,-48.678299,216.472107,-21.034042,0.000000,"set aware"};
+item20[] = {"ok",8,218,101.609917,-110.042709,131.609863,-80.042709,0.000000,"ok"};
+item21[] = {"end",4,218,91.610199,-170.529968,125.434631,-131.017044,10.000000,"end"};
+item22[] = {"wait_change",2,250,-95.863647,-170.269073,-44.960297,-130.619888,0.000000,"wait" \n "change"};
+item23[] = {"aware",-1,250,188.846802,-0.296234,246.835815,22.015474,0.000000,"aware"};
+item24[] = {"changed",4,218,-103.444321,-230.236816,-36.620575,-194.545166,2.000000,"changed"};
+item25[] = {"exit",4,218,-41.706100,-97.348495,5.060303,-63.976883,10.000000,"exit"};
+item26[] = {"terminate",1,4346,-52.497742,-41.449829,15.613617,-10.602417,0.000000,"terminate"};
+item27[] = {"wait_change_1",2,250,1.809250,-170.631927,52.712601,-130.982742,0.000000,"wait" \n "change"};
+item28[] = {"changed",4,218,-6.224960,-230.965271,60.598785,-195.273621,2.000000,"changed"};
+version=1;
+class LayoutItems
+{
+	class Item0
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+	class Item1
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+	class Item2
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+	class Item23
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {3,4};
+link1[] = {4,12};
+link2[] = {5,7};
+link3[] = {6,5};
+link4[] = {7,8};
+link5[] = {7,10};
+link6[] = {8,22};
+link7[] = {9,7};
+link8[] = {10,11};
+link9[] = {11,9};
+link10[] = {12,13};
+link11[] = {12,14};
+link12[] = {13,6};
+link13[] = {14,15};
+link14[] = {15,16};
+link15[] = {16,17};
+link16[] = {17,18};
+link17[] = {17,21};
+link18[] = {18,19};
+link19[] = {19,20};
+link20[] = {20,17};
+link21[] = {21,27};
+link22[] = {22,24};
+link23[] = {22,25};
+link24[] = {24,12};
+link25[] = {25,26};
+link26[] = {27,25};
+link27[] = {27,28};
+link28[] = {28,12};
+globals[] = {0.000000,0,0,0,0,640,480,6,48,6316128,1,-484.020203,466.829773,151.854309,-613.432861,1012,876,1};
+window[] = {2,-1,-1,-1,-1,926,156,1541,156,3,1030};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "fn_behaviorManager";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"private _logic = _this select 0;" \n
+                         "private _groupVehicles = _this select 1;" \n
+                         "" \n
+                         "private _leaderVeh = _groupVehicles select 0;" \n
+                         "" \n
+                         "private _updateFreq = .5;" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log ""BS: behaviour system started"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="change_behavior";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "initialize_loop">*/
+                class initialize_loop
+                {
+                        name = "initialize_loop";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"private _i = -1;" \n
+                         "" \n
+                         "private _convoyLength = count _groupVehicles;" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log ""BS: setting push through"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="increment";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "increment">*/
+                class increment
+                {
+                        name = "increment";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"_i = _i + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "end">*/
+                                class end
+                                {
+                                        itemno = 8;
+                                        priority = 10.000000;
+                                        to="wait_change";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_i == _convoyLength"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "vehicles_availab">*/
+                                class vehicles_availab
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="isolate_driver_in";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "isolate_driver_in">*/
+                class isolate_driver_in
+                {
+                        name = "isolate_driver_in";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"private _vehicle = _groupVehicles select _i;" \n
+                         "private _driver = driver _vehicle;" \n
+                         "private _driversGroup = group _driver;" \n
+                         "" \n
+                         "private _numUnits = count (units _driversGroup);" \n
+                         "" \n
+                         "_vehicle setUnloadInCombat [false, false];" \n
+                         "_vehicle allowCrewInImmobile true;" \n
+                         "" \n
+                         "if (_numUnits > 1) then {" \n
+                         "	private _groupTemp = createGroup (side _driver);" \n
+                         "	_groupTemp copyWaypoints _driversGroup;" \n
+                         "	[_driver] joinSilent _groupTemp;" \n
+                         "	while {(count (waypoints _driversGroup)) > 0} do {" \n
+                         "		deleteWaypoint ((waypoints _driversGroup) select 0);" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "(group _driver) setBehaviour ""CARELESS"";" \n
+                         "_vehicle setEffectiveCommander _driver;" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log format[""%1 %2, %3"",""BS:"", _vehicle, ""changed behaviour""] };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "ok">*/
+                                class ok
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="increment";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "change_behavior">*/
+                class change_behavior
+                {
+                        name = "change_behavior";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"if (SR_Debug) then { diag_log ""BS: changed behaviour"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "push">*/
+                                class push
+                                {
+                                        itemno = 13;
+                                        priority = 2.000000;
+                                        to="initialize_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_logic getVariable [""behaviourConv"",-1]) == ""pushThroughContact"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "aware">*/
+                                class aware
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="initialize_loop_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "initialize_loop_1">*/
+                class initialize_loop_1
+                {
+                        name = "initialize_loop_1";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"private _i = -1;" \n
+                         "" \n
+                         "private _convoyLength = count _groupVehicles;" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log ""BS: setting aware"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="increment_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "increment_1">*/
+                class increment_1
+                {
+                        name = "increment_1";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"_i = _i + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "end">*/
+                                class end
+                                {
+                                        itemno = 21;
+                                        priority = 10.000000;
+                                        to="wait_change_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_i == _convoyLength"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "vehicles_availab">*/
+                                class vehicles_availab
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="set_aware";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "set_aware">*/
+                class set_aware
+                {
+                        name = "set_aware";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"private _vehicle = _groupVehicles select _i;" \n
+                         "_vehicle setUnloadInCombat [true, true];" \n
+                         "_vehicle allowCrewInImmobile true;" \n
+                         "" \n
+                         "(group (driver _vehicle)) setBehaviour ""AWARE"";" \n
+                         "" \n
+                         "if (SR_Debug) then { diag_log format[""%1 %2, %3"",""BS:"", _vehicle, ""changed behaviour""] };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "ok">*/
+                                class ok
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="increment_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "wait_change">*/
+                class wait_change
+                {
+                        name = "wait_change";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "exit">*/
+                                class exit
+                                {
+                                        itemno = 25;
+                                        priority = 10.000000;
+                                        to="terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_leaderVeh getVariable [""convoy_terminate"", -1]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "changed">*/
+                                class changed
+                                {
+                                        itemno = 24;
+                                        priority = 2.000000;
+                                        to="change_behavior";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_logic getVariable [""behaviourConv"",-1]) != ""pushThroughContact"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "terminate">*/
+                class terminate
+                {
+                        name = "terminate";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"if (SR_Debug) then { diag_log ""BS: behaviour system terminated"" };"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "wait_change_1">*/
+                class wait_change_1
+                {
+                        name = "wait_change_1";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "exit">*/
+                                class exit
+                                {
+                                        itemno = 25;
+                                        priority = 10.000000;
+                                        to="terminate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_leaderVeh getVariable [""convoy_terminate"", -1]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "changed">*/
+                                class changed
+                                {
+                                        itemno = 28;
+                                        priority = 2.000000;
+                                        to="change_behavior";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_logic getVariable [""behaviourConv"",-1]) != ""aware"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "terminate",
+        };
+};
+/*%FSM</COMPILE>*/
