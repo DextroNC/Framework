@@ -51,6 +51,12 @@ waitUntil {scriptDone _handle};
 private _groupVehicles = _logic getVariable ["convVehicles", []];
 
 // Setup Convoy Variables
+if (_groupVehicles isEqualTo []) exitWith {
+	deleteVehicle _logic;
+	deleteGroup _logicGroup;
+	diag_log "initConvoy: no vehicles were spawned";
+	objNull
+};
 private _leaderVeh = _groupVehicles select 0;
 _leaderVeh setVariable ["convoy_stopped", false, true];
 _leaderVeh setVariable ["convoy_terminate", false, true];
