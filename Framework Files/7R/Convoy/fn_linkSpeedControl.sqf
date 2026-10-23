@@ -8,10 +8,10 @@
 		--> Nothing
 
 	Description:
-		Controls the lead vehicle's speed and behavior based on convoy metrics and logic settings.
+		Controls the following vehicle's speed and behavior based on convoy metrics and logic settings.
 
 	Example:
-		_return = [_logic, _groupVehicles] call fw_fnc_leadSpeedControl;
+		_return = [_logic, _groupVehicles] call fw_fnc_linkSpeedControl;
 
 */
 

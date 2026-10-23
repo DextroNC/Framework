@@ -242,7 +242,7 @@ class FSM
                          "if (SR_Debug) then { diag_log format[""%1 %2 %3"",""DTS: "", _vehicle, "" driver incapacitated""] };" \n
                          "_vehicle setVariable [""driverIncapacitated"", true, true];" \n
                          "private _aliveCrew = [];" \n
-                         "{ if (alive _x) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
+                         "{ if (alive _x && getVariable ['ACE_isUnconscious', false] == false) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
                          "private _numAliveUnits = count _aliveCrew;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links

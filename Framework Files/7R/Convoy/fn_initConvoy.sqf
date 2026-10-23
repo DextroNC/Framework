@@ -11,10 +11,10 @@
 		--> Convoy Logic Entity as Object
 
 	Description:
-		Spawns the Convoy Vehicles according to the specified Templates and sets up the Convoy Logic.
+		Initiates the convoy system.
 
 	Example:
-		_return = [_initialMarker, _convoyTemplates, _waypointMarkers] call fw_fnc_spawnConvoy;
+		_return = [_initialMarker, _convoyTemplates, _waypointMarkers] call fw_fnc_initConvoy;
 
 */
 
@@ -89,7 +89,10 @@ private _leaderGroup = group _leaderVeh;
 if (count _waypoints > 0) then {
 	private _finalWp = _waypoints select (count _waypoints - 1);
 	_finalWp setWaypointStatements [
-		"true", "(vehicle this) setVariable ['convoy_arrived', true, true];"
+		"true", "
+			(vehicle this) setVariable ['convoy_arrived', true, true];
+			(vehicle this) setVariable ['convoy_terminate', true, true];
+		"
 	];
 };
 
