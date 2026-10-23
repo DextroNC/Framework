@@ -45,7 +45,7 @@ while {!(_leaderVeh getVariable["convoy_terminate",-1])} do {
 		private _linkRelaxation = _distLink - _convSeparation;
 		
 		// Calculate the desired link speed based on the distance to the vehicle in front and the stiffness coefficient
-		private _linkSpeed = [ (speed _vehicleInFront) +  _stiffnessLinkCoeff*(_linkRelaxation/abs(_linkRelaxation))*abs(_linkRelaxation)^(1.5) , 0, 100000 ] call BIS_fnc_clamp;
+		private _linkSpeed = [(speed _vehicleInFront) + _stiffnessLinkCoeff * _linkRelaxation * sqrt (abs _linkRelaxation), 0, 100000] call BIS_fnc_clamp;
 		
 		// Apply the calculated link speed to the current vehicle if the convoy is not stopped
 		if ( !(_leaderVeh getVariable["convoy_stopped",-1]) ) then {
