@@ -143,6 +143,7 @@ for [{ _i = 0 }, { _i < _convoyLength }, { _i = _i + 1 }] do {
 	private _vehicle = _groupVehicles select _i;
 	
 	_vehicle forceSpeed -1;
+	_vehicle limitSpeed 100000;
 	
 	//(driver _vehicle) setBehaviour "AWARE";
 	//_vehicle setUnloadInCombat [true, true];
