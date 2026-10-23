@@ -1,7 +1,7 @@
 this addaction ["<t color=""#FF8C00"">" +"L2A1 SUIT", "7R\Loadouts\7R_EQ.sqf",["rhsgref_acc_l1a1_l2a2"]];
 this addaction ["<t color=""#FF0000"">" +"DMR Sight", "7R\Loadouts\7R_EQ.sqf",["uk3cb_optic_no32"]];
 
-private _tier = 4;
+private _tier = 4.5;
 
 // Support items
 [this, _tier] call fw_fnc_addEquipmentItems;
