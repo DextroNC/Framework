@@ -35,7 +35,10 @@ while {!(_leaderVeh getVariable["convoy_terminate",-1])} do {
 	private _pathFrequecy = _logic getVariable ["pathFrequecy",-1];
 	
 	private _convoy_path = _leaderVeh getVariable["convoy_path",-1];
-	_convoy_path pushBack (position _leaderVeh);
+	private _leaderPos = position _leaderVeh;
+	if !(_leaderPos isEqualTo (_convoy_path select ((count _convoy_path) - 1))) then {
+		_convoy_path pushBack _leaderPos;
+	};
 	
 	// Delete Unecessary Points
 	private _vehicleInBack = _groupVehicles select ((count _groupVehicles)-1);
