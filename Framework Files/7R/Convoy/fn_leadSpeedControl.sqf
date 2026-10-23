@@ -55,7 +55,8 @@ while {!(_leaderVeh getVariable["convoy_terminate",-1])} do {
 		_vehicle = _groupVehicles select _i;
 		_vehicleInFront = _groupVehicles select _i-1;
 		_arrayDistances set [_i-1, _vehicle distance _vehicleInFront];
-		_arrayRotations set [_i-1, abs( (getDir _vehicle) - (getDir _vehicleInFront) )];
+		private _headingDelta = abs ((getDir _vehicle) - (getDir _vehicleInFront));
+		_arrayRotations set [_i-1, _headingDelta min (360 - _headingDelta)];
 		_arraySpeeds set [_i-1, abs( (speed _vehicle) - (speed _vehicleInFront) )];
 	};
 	
