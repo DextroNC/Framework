@@ -96,7 +96,7 @@ while {!(_leaderVeh getVariable["convoy_terminate",-1])} do {
 			};
 		};
 		
-		_leaderVeh setVariable ["convoy_path", _convoy_path, true];
+		_leaderVeh setVariable ["convoy_path", _convoy_path];
 		
 		if ( speed _vehicle == 0 && ( (position _vehicle) distance (position _vehicleInFront)) > 100 ) then {
 			(driver _vehicle) doMove (position _vehicleInFront);
