@@ -242,7 +242,7 @@ class FSM
                          "if (SR_Debug) then { diag_log format[""%1 %2 %3"",""DTS: "", _vehicle, "" driver incapacitated""] };" \n
                          "_vehicle setVariable [""driverIncapacitated"", true, true];" \n
                          "private _aliveCrew = [];" \n
-                         "{ if (alive _x && getVariable ['ACE_isUnconscious', false] == false) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
+                         "{ if (alive _x && _x getVariable ['ACE_isUnconscious', false] == false) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
                          "private _numAliveUnits = count _aliveCrew;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -347,7 +347,7 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"//!alive _crewMember" \n
                                          "" \n
-                                         "( ( lifeState _crewMember ) == ""INCAPACITATED"" ) || ( ( lifeState _crewMember ) == ""DEAD"" ) || ( !alive _vehicle ) || ( !canMove _vehicle )"/*%FSM</CONDITION""">*/;
+                                         "( ( _crewMember getVariable ['ACE_isUnconscious', false] == true ) || ( ( !alive _crewMember ) || ( !alive _vehicle ) || ( !canMove _vehicle )"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
