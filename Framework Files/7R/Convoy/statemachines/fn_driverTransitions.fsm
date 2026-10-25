@@ -1,9 +1,9 @@
-/*%FSM<COMPILE "D:\jogos\steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_driverTransitions">*/
+/*%FSM<COMPILE "scriptedFSM.cfg, fn_driverTransitions">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"_",-1,250,-281.388580,55.000000,125.000000,445.608582,0.000000,""};
 item1[] = {"increment",2,250,-135.000000,75.000000,-65.000000,95.000000,0.000000,"increment"};
-item2[] = {"init",0,4346,-163.447922,-214.933762,-133.447983,-189.933762,0.000000,"init"};
+item2[] = {"init",0,250,-163.447922,-214.933762,-133.447983,-189.933762,0.000000,"init"};
 item3[] = {"This_fsm_governs",-1,250,-280.304260,-164.336945,-157.831512,-77.168457,0.000000,"This fsm governs the " \n "driver changes upon" \n "the driver's death"};
 item4[] = {"driver_incapacit",4,218,-120.000000,-170.000000,55.000000,-130.000000,10.000000,"driver incapacitated"};
 item5[] = {"_",8,218,-105.000000,-210.000000,-90.000000,-195.000000,0.000000,""};
@@ -24,7 +24,7 @@ item19[] = {"set_commander",2,250,-142.645172,400.000000,-47.645172,425.000000,0
 item20[] = {"",7,210,256.000000,408.575897,264.000000,416.575897,0.000000,""};
 item21[] = {"_",8,218,10.000000,400.000000,35.000000,425.000000,0.000000,""};
 item22[] = {"sleep",2,250,232.492065,-212.676880,287.492065,-187.676880,0.000000,"sleep"};
-item23[] = {"unit_died_in_tra",4,218,-25.000000,235.000000,95.000000,285.000000,2.000000,"unit died in" \n "transit"};
+item23[] = {"unit_died_in_tra",4,4314,-25.000000,235.000000,95.000000,285.000000,2.000000,"unit died in" \n "transit"};
 item24[] = {"_",8,218,121.079163,-187.021866,136.079163,-172.021866,0.000000,""};
 item25[] = {"",7,210,256.000000,256.367554,264.000000,264.367584,0.000000,""};
 item26[] = {"prioritize_non_g",2,250,-250.000000,140.000000,-180.000000,175.000000,0.000000,"prioritize" \n "non-gunner"};
@@ -100,8 +100,8 @@ link31[] = {27,13};
 link32[] = {28,1};
 link33[] = {29,11};
 link34[] = {30,11};
-globals[] = {0.000000,0,0,0,0,640,480,3,451,6316128,1,-285.463715,372.533600,587.324707,-326.945190,665,924,1};
-window[] = {2,-1,-1,-1,-1,919,130,1515,130,3,683};
+globals[] = {0.000000,0,0,0,0,640,480,3,451,6316128,1,-285.463715,372.533600,587.324707,-326.945190,665,876,1};
+window[] = {2,-1,-1,-1,-1,971,182,1567,182,3,683};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -179,7 +179,7 @@ class FSM
                         itemno = 6;
                         init = /*%FSM<STATEINIT""">*/"//if (SR_Debug) then { diag_log ""DTS: reading vars"" };" \n
                          "" \n
-                         "private _driverIncapacitated = ( ( lifeState (driver _vehicle) ) == ""INCAPACITATED"" ) || ( ( lifeState (driver _vehicle) ) == ""DEAD"" );" \n
+                         "private _driverIncapacitated = ( ( lifeState (driver _vehicle) ) == ""INCAPACITATED"" ) || ( ( lifeState (driver _vehicle) ) == ""DEAD"" ) || ( (driver _vehicle) getVariable [""ACE_isUnconscious"", false] );" \n
                          "" \n
                          "private _vehicleDestroyed = !alive _vehicle || !canMove _vehicle;" \n
                          ""/*%FSM</STATEINIT""">*/;
@@ -242,7 +242,7 @@ class FSM
                          "if (SR_Debug) then { diag_log format[""%1 %2 %3"",""DTS: "", _vehicle, "" driver incapacitated""] };" \n
                          "_vehicle setVariable [""driverIncapacitated"", true, true];" \n
                          "private _aliveCrew = [];" \n
-                         "{ if (alive _x && getVariable ['ACE_isUnconscious', false] == false) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
+                         "{ if (alive _x && _x getVariable [""ACE_isUnconscious"", false] == false) then { _aliveCrew pushBack _x }; } foreach (crew _vehicle);" \n
                          "private _numAliveUnits = count _aliveCrew;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -347,7 +347,7 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"//!alive _crewMember" \n
                                          "" \n
-                                         "( ( lifeState _crewMember ) == ""INCAPACITATED"" ) || ( ( lifeState _crewMember ) == ""DEAD"" ) || ( !alive _vehicle ) || ( !canMove _vehicle )"/*%FSM</CONDITION""">*/;
+                                         "( _crewMember getVariable [""ACE_isUnconscious"", false] == true ) || ( !alive _crewMember ) || ( !alive _vehicle ) || ( !canMove _vehicle )"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

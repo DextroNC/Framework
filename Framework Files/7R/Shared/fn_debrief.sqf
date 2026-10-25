@@ -22,6 +22,12 @@ if (phase == 9999) exitWith {
 
 // Server only execute or HC if present
 if (isServer || (!hasInterface && !isDedicated)) then {
+
+	// Save OCAP Recording - Needs to execute on a client other than the server. If we don't have an HC, we have will have to live with it not executing.
+if (!isServer) then {
+	["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_localEvent;
+};
+
 	// Remove Hostiles
 	if (!_noDelete) then {
 		// Deny new spawns
@@ -29,21 +35,15 @@ if (isServer || (!hasInterface && !isDedicated)) then {
 		publicVariable "SR_Unit_Cap";
 		// Delete existing units
 		{
-			if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
+			if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x getVariable ["SR_NoRemoval", false])) then {
 				deleteVehicle _x;
 			};
-		} forEach (allUnits-allPlayers);
+		} forEach (allUnits - allPlayers - entities "HeadlessClient_F");
 	};
 };
 
 // Server Only
 if (isServer) exitWith {
-
-	// Save OCAP Recording
-	["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
-
-	// Stop recording
-	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 
 	// Set Variables
 	phase = 9999;
