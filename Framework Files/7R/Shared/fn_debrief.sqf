@@ -24,7 +24,9 @@ if (phase == 9999) exitWith {
 if (isServer || (!hasInterface && !isDedicated)) then {
 
 	// Save OCAP Recording - Needs to execute on a client other than the server. If we don't have an HC, we have will have to live with it not executing.
-	["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
+if (!isServer) then {
+	["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_localEvent;
+};
 
 	// Remove Hostiles
 	if (!_noDelete) then {
