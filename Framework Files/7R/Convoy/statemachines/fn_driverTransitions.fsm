@@ -179,7 +179,7 @@ class FSM
                         itemno = 6;
                         init = /*%FSM<STATEINIT""">*/"//if (SR_Debug) then { diag_log ""DTS: reading vars"" };" \n
                          "" \n
-                         "private _driverIncapacitated = ( ( lifeState (driver _vehicle) ) == ""INCAPACITATED"" ) || ( ( lifeState (driver _vehicle) ) == ""DEAD"" );" \n
+                         "private _driverIncapacitated = ( ( lifeState (driver _vehicle) ) == ""INCAPACITATED"" ) || ( ( lifeState (driver _vehicle) ) == ""DEAD"" ) || ( (driver _vehicle) getVariable [""ACE_isUnconscious"", false] );" \n
                          "" \n
                          "private _vehicleDestroyed = !alive _vehicle || !canMove _vehicle;" \n
                          ""/*%FSM</STATEINIT""">*/;
