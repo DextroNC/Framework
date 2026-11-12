@@ -7,7 +7,7 @@
 
 
 	Description:
-		Check wether artillery is available.
+		Check whether artillery is available.
 
 	Example:
 		_return = [] call fw_fnc_artilleryReadyCheck;
