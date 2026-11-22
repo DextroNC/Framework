@@ -19,7 +19,6 @@ _uniforms = [
 		["Operator Rifleman", "loadouts\baf_o_rifleman.sqf"],
 		["Operator AR", "loadouts\baf_o_ar.sqf"],
 		["Operator LAT", "loadouts\baf_o_lat.sqf"],
-		["Operator LAT (NLAW)", "loadouts\baf_o_lat2.sqf"],
 		["Operator MAT", "loadouts\baf_o_mat.sqf"],
 		["Operator Asst. MAT", "loadouts\baf_o_matAsst.sqf"],
 		["Operator MMG", "loadouts\baf_o_mmg.sqf"],
