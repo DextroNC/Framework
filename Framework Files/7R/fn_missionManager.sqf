@@ -42,7 +42,7 @@ switch (_nbr) do {
 
 		_handle = ["o1","GARRISON",1,[150]] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
-		_handle = ["o2","ZEI",1] spawn fw_fnc_spawnTemplate; 
+		_handle = ["o2","GARRISON",1,[5,1]] spawn fw_fnc_spawnTemplate; 
 		waitUntil {scriptDone _handle};
 		_handle = ["a2",["LOP_CHR_Civ_Random"], 10,0] spawn fw_fnc_civSpawn;
 		waitUntil {scriptDone _handle};

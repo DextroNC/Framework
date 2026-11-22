@@ -51,10 +51,11 @@ private _code = {
 		{
 			// Release units
 			_x enableAI "PATH";
+			_x setUnitPos "AUTO";
 			_x setCombatMode "RED";
 			
 			// Debug
-			if (SR_Debug) then { format ["%1 now has pathing enabled", _x] remoteExec ["systemChat", 0]; };
+			if (missionNamespace getVariable ["SR_Debug", false]) then { format ["%1 now has pathing enabled", _x] remoteExec ["systemChat", 0]; };
 		} forEach _releaseUnits;
 	};
 };
