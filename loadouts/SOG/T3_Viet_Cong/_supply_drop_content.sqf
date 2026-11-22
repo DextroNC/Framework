@@ -29,6 +29,7 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["vn_rpg2_mag", 10];
 	_box additemcargoGlobal ["vn_rg42_grenade_mag", 8];
 	_box additemcargoGlobal ["vn_rkg3_grenade_mag", 12];
+	_box addWeaponCargoGlobal ["rhs_weap_rpg18", 2];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 28];
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];
@@ -73,6 +74,7 @@ if (_type == 4) then {
 	_box addmagazinecargoGlobal ["vn_m10_mag", 8];
 	_box additemcargoGlobal ["vn_rg42_grenade_mag", 6];
 	_box additemcargoGlobal ["vn_rkg3_grenade_mag", 6];
+	_box addWeaponCargoGlobal ["rhs_weap_rpg18", 1];
 	_box additemcargoGlobal ["rhs_mag_rdg2_white", 16];
 	_box additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	_box additemcargoGlobal ["rhs_mag_nspn_red", 2];

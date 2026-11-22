@@ -20,6 +20,7 @@ _uniforms = [
 		["Operator AR", "loadouts\pavn_o_ar.sqf"],
 		["Operator Asst. AR", "loadouts\pavn_o_mmgAsst.sqf"],
 		["Operator LAT", "loadouts\pavn_o_lat.sqf"],
+		["Operator LAT (RPG-18)", "loadouts\pavn_o_lat2.sqf"],
 		["Operator MAT", "loadouts\pavn_o_mat.sqf"],
 		["Operator Asst. MAT", "loadouts\pavn_o_matAsst.sqf"]
 	]],

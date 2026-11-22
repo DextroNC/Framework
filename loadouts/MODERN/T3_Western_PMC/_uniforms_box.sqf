@@ -19,6 +19,7 @@ _uniforms = [
 		["Operator Rifleman", "loadouts\pmc_o_rifleman.sqf"],
 		["Operator AR", "loadouts\pmc_o_ar.sqf"],
 		["Operator LAT", "loadouts\pmc_o_lat.sqf"],
+		["Operator LAT (M72)", "loadouts\pmc_o_lat2.sqf"],
 		["Operator MMG", "loadouts\pmc_o_mmg.sqf"],
 		["Operator Asst. MMG", "loadouts\pmc_o_mmgAsst.sqf"],
 		["Operator MAT", "loadouts\pmc_o_mat.sqf"],
