@@ -36,13 +36,13 @@ _headerMarker = ["7R_Marker","Marker Designation","a3\ui_f\data\IGUI\Cfg\simpleT
 	_SDM = ["7R_SupplyDrop","Mark Supply DZ","",{null = ["SupplyDrop", "Supply DZ", "ColorBlue", "hd_join", false] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _SDM] call ace_interact_menu_fnc_addActionToClass;
 
-	_ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+	_ATM = ["7R_Artillery","Designate Artillery-Target","",{null = ["ArtilleryTarget", "ORD-T", "ColorRed", "hd_destroy", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader && ArtilleryCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _ATM] call ace_interact_menu_fnc_addActionToClass;
 
-	_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_arrow", false, [0.7,0.7],true] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+	_CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", "ColorRed", "hd_arrow", false, [0.7,0.7],true] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _CTM] call ace_interact_menu_fnc_addActionToClass;
 
-	_UAM = ["7R_Artillery","Designate UAV Loiter Point","",{null = ["UAVTarget", "ISR", "ColorWest", "mil_triangle", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+	_UAM = ["7R_Artillery","Designate UAV Loiter Point","",{null = ["UAVTarget", "ISR", "ColorWest", "mil_triangle", false, [0.7,0.7]] spawn fw_fnc_designateMarker},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","7R_Header","7R_Marker"], _UAM] call ace_interact_menu_fnc_addActionToClass;
 
 // Supply Drop
