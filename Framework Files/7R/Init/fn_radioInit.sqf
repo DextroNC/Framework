@@ -146,7 +146,9 @@ player createDiarySubject ["Mission Log", "Mission Log"];
 player createDiarySubject ["Regulation", "Regulation"];
 player createDiaryRecord ["Regulation", ["Equipment Regulations", "
 <br/>
-1. Loadouts must remain untouched. Do not drop or replace content. Engineers may change explosives to meet mission requirements. <br/><br/>
+1. Loadouts must remain untouched. Do not drop or replace content. <br/>
+--- Engineers may change explosives to meet mission requirements. <br/>
+--- LATs may swap their launcher for another single-use launcher from the big box. <br/><br/>
 2. Up to 2 Machine Guns or ARs are allowed per squad. <br/><br/>
 3. Only one orange optic is allowed per infantry squad. <br/>
 --- Not allowed for PL, SLs, medics, ARs, MAT, breachers, or grenadiers. <br/><br/>

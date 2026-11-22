@@ -9,6 +9,7 @@ if(isServer) then {
     this addmagazinecargoGlobal ["16Rnd_9x21_Mag", 60];
     this addweaponcargoGlobal ["rhs_weap_m136_hedp", 20];
     this addweaponcargoGlobal ["rhs_weap_m72a7", 10];
+    this addweaponcargoGlobal ["launch_NLAW_F", 10];
 	this addmagazinecargoGlobal ["MRAWS_HEAT_F", 20];
 	this addmagazinecargoGlobal ["MRAWS_HE_F", 10];
 	this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];
