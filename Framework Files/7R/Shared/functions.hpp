@@ -4,6 +4,7 @@
 		file = "7R\Init";
 		class frameworkInit{preInit = 1;};
 		class radioInit{postInit = 1;};
+		class casualtyLogInit{postInit = 1;};
 		class compositionDisplay{};
 	};
 	class shared
@@ -191,6 +192,7 @@
 	class Text {
 		file = "7R\Text";
 		class makeColor{};
+		class escapeText{};
 	};
 	class Breach {
 		file = "7R\Breach";
