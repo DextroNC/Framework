@@ -35,7 +35,7 @@ if (UAVFireMissionLock) exitWith {
 	["Negative: ISR support unavailable. Other mission in progress.","ISR: Currently busy"] spawn fw_fnc_info;
 	
 };
-if (CASCallAmmo == 0) exitWith {
+if (UAVCallAmmo == 0) exitWith {
 	["Negative: ISR support unavailable. No UAVs on station.","ISR: No platforms left"] spawn fw_fnc_info;
 };
 if (_targetPos isEqualto [0,0,0]) exitWith {
