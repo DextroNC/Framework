@@ -8,7 +8,6 @@ if(isServer) then {
     this addmagazinecargoGlobal ["vn_tt33_mag", 60];
 	this addmagazinecargoGlobal ["vn_rpg7_mag", 20];
 	this addmagazinecargoGlobal ["vn_rpg7_mag", 10];
-	this addWeaponCargoGlobal ["rhs_weap_rpg18", 10];
 	this additemcargoGlobal ["vn_mine_satchel_remote_02_mag", 6];
 	this additemcargoGlobal ["vn_mine_m112_remote_mag", 12];
     
