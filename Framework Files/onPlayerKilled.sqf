@@ -24,7 +24,5 @@ if (SR_RespawnForce) then {
 [true] call acre_api_fnc_setSpectator;
 ["Initialize", [player, [], false,false]] call BIS_fnc_EGSpectator;
 
-// Combat Log and Debrief Entry: written by 7R/Init/fn_casualtyLogInit.sqf from ACE's ace_killed
-
 // Respawn tracking variable
 _unit setVariable ["SR_HasDied",true];

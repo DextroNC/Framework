@@ -15,8 +15,8 @@
 		None, runs as postInit.
 */
 // Server side
-// The server is the only writer of SR_FF and SR_KIA. Clients send it entries, so incidents on
-// several machines at once cannot overwrite each other's line.
+// The server is the single writer of SR_FF and SR_KIA: clients send it entries, and it appends
+// them one at a time.
 if (isServer) then {
 	["SR_FF_Entry", {
 		params ["_shooterName", "_victimName", "_self", "_killed"];
@@ -28,14 +28,14 @@ if (isServer) then {
 		};
 		diag_log ("[Friendly Fire] - " + format [_text, _shooterName, _victimName]);
 
-		// The debrief parses SR_FF as structured text, so names must not carry markup.
+		// Names are escaped because the debrief parses SR_FF as structured text.
 		SR_FF = SR_FF + "<br/>" + format [_text, _shooterName call fw_fnc_escapeText, _victimName call fw_fnc_escapeText] + ".";
 		publicVariable "SR_FF";
 	}] call CBA_fnc_addEventHandler;
 
 	["SR_KIA_Entry", {
 		params ["_nameDead", "_nameGroup", "_nameKiller"];
-		// The combat log and the debrief both parse these as structured text.
+		// Escaped because the combat log and the debrief parse these as structured text.
 		_nameDead = _nameDead call fw_fnc_escapeText;
 		_nameGroup = _nameGroup call fw_fnc_escapeText;
 		_nameKiller = _nameKiller call fw_fnc_escapeText;
@@ -49,14 +49,13 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 // Wound tracking
-// ACE keeps its damage source variables only on the machine where the unit is local, so all of
-// this runs on the player's own machine and exits everywhere else. ACE raises ace_unconscious
-// and ace_medical_death from inside its own ace_medical_woundReceived handler, and ours for the
-// same wound runs right after it. So a knock-down or death is first marked pending, then the
-// wound that follows in the same frame is recorded as its cause, and the incident is judged on
-// the next frame.
+// ACE keeps its damage source variables on the machine where the unit is local, so this runs on
+// the player's own machine. ACE raises ace_unconscious and ace_medical_death from inside its own
+// ace_medical_woundReceived handler, and ours for the same wound runs right after it. A
+// knock-down or death is marked pending, the wound that follows in the same frame is recorded as
+// its cause, and the incident is judged on the next frame.
 //   A hit is [time, frame, attacker, attacker is a player, attacker name, used, bleeding added].
-//   The name is taken when the hit lands, so it survives the attacker's body being deleted.
+//   The name is taken when the hit lands, so it stays available after the body is deleted.
 //   "used" is set once the hit has explained an incident.
 //   SR_LastHit:      the latest hit.
 //   SR_DownBy:       the hit behind the current knock-down, or [] if none is known.
@@ -68,16 +67,15 @@ if (!hasInterface) exitWith {};
 //   SR_FF_NoBlame:   frame of a knock-down that medication or a script caused.
 ["ace_medical_woundReceived", {
 	params ["_unit", "", "_shooter", "_type"];
-	// No isPlayer check: a fatal wound has already killed the unit by the time this runs.
-	// SR_FF_Incident filters on players while they are still alive.
+	// Records wounds of every local unit. SR_FF_Incident picks out the players while they are
+	// still alive, since a fatal wound has killed the unit by the time this runs.
 	if (!local _unit) exitWith {};
 
-	// ACE passes the victim, or nobody, for crashes, drowning, fire, falls and collisions. For a
-	// vehicle, static weapon or mortar it passes the vehicle, and objNull for an ACE-placed
-	// explosive, but it writes the person behind it to lastInstigator just before raising this
-	// event. ace_medical_fnc_addDamageToUnit also passes objNull when it has no instigator, and
-	// then leaves lastInstigator stale, so objNull only counts for engine damage: ACE's
-	// "vehiclehit", or an ammo class that is not also one of ACE's damage type names ("grenade").
+	// The attacker is the shooter when that is a man. For a vehicle, static weapon, mortar or
+	// ACE-placed explosive it is the person ACE writes to lastInstigator just before raising this
+	// event, which is current for engine damage: a non-null shooter, ACE's "vehiclehit", or an
+	// ammo class that is not also an ACE damage type name ("grenade"). Crashes, drowning, fire,
+	// falls and collisions, where ACE names the victim or nobody, get objNull.
 	private _attacker = objNull;
 	switch (true) do {
 		case (_type in ["drowning", "vehiclecrash", "burn", "falling", "collision"] && {isNull _shooter || {_shooter isEqualTo _unit}}): {};
@@ -94,9 +92,8 @@ if (!hasInterface) exitWith {};
 		};
 	};
 
-	// ACE frag fragments carry no shooter at all. Within a second of a hit whose attacker ACE
-	// named, normally the blast of the same round, they belong to that attacker. A fragment that
-	// inherits an attacker does not extend that second.
+	// Frag fragments have no shooter. They take the attacker of the latest hit ACE attributed
+	// directly, if it landed within the last second: normally the blast of the same round.
 	private _direct = !isNull _attacker;
 	private _anchor = _unit getVariable ["SR_FF_AnchorHit", []];
 	if (
@@ -106,20 +103,18 @@ if (!hasInterface) exitWith {};
 		_attacker = _anchor select 2;
 	};
 
-	// The array syntax of isPlayer also holds for an attacker who has died since.
+	// The array syntax of isPlayer also works on an attacker who has died since.
 	private _isPlayer = isPlayer [_attacker];
 
-	// Bleeding this wound added. ACE's handler, which ran first, has updated woundBleeding, and
-	// the treatment handlers below resync the baseline. A tourniquet removed by someone else or a
-	// reopening wound raises bleeding unseen, which this then credits to the next wound.
+	// Bleeding this wound added, against the baseline from the last wound or treatment. ACE's
+	// handler ran first, so woundBleeding already includes this wound.
 	private _bleeding = _unit getVariable ["ace_medical_woundBleeding", 0];
 	private _bleedAdded = 0 max (_bleeding - (_unit getVariable ["SR_FF_BleedSeen", 0]));
 	_unit setVariable ["SR_FF_BleedSeen", _bleeding];
 
-	// A wound taken while already down, from whoever knocked the unit down, belongs to that
-	// knock-down and must not explain a later one again. ACE's handler has run first, so the
-	// unit is already down for the wound that knocked it down; that one reaches SR_FF_Pending
-	// below, which does not look at "used".
+	// A wound taken while down from the attacker who knocked the unit down belongs to that
+	// knock-down and starts out used. The knock-down's own wound reaches SR_FF_Pending below,
+	// which takes it whatever its "used" flag.
 	private _used = (_unit getVariable ["ACE_isUnconscious", false]) && {_attacker isEqualTo ((_unit getVariable ["SR_DownBy", []]) param [2, objNull])};
 	private _hit = [CBA_missionTime, diag_frameNo, _attacker, _isPlayer, ["", name _attacker] select (!isNull _attacker), _used, _bleedAdded];
 	_unit setVariable ["SR_LastHit", _hit];
@@ -148,12 +143,10 @@ if (!hasInterface) exitWith {};
 	_unit setVariable ["SR_FF_Pending", nil];
 	_pending params ["", "_killed", "_victimName", "_hit", "_bleeding"];
 
-	// No wound came after it. A wound earlier in the same frame still caused it. Otherwise it is
-	// a knock-down from blood loss, pain or medication, a scripted knock-down (G-force, Zeus,
-	// field rations), or a death at the end of a knock-down. Only a bleeding victim's knock-down
-	// with no medication or script behind it is blamed, on the recent wound that added the most
-	// bleeding since the last bandage, tourniquet or full heal, and only if that wound has not
-	// explained an incident already.
+	// With no wound right after the incident, the cause is a wound earlier in the same frame.
+	// Failing that, a knock-down from blood loss (the victim is bleeding and the frame is not
+	// marked SR_FF_NoBlame) is blamed on the unused hit that added the most bleeding since the
+	// last bandage, tourniquet or full heal, within 300 seconds.
 	if (_hit isEqualTo []) then {
 		private _last = _unit getVariable ["SR_LastHit", []];
 		if (_last isNotEqualTo [] && {(_last select 1) == _frame}) exitWith {_hit = _last};
@@ -176,14 +169,14 @@ if (!hasInterface) exitWith {};
 	params ["_unit", "_killed"];
 	if (!local _unit || {!isPlayer _unit}) exitWith {};
 
-	// A death in the same frame as a knock-down is one incident: ace_vehicle_damage wounds the
-	// crew and then kills them in one call, with no wound after the death. Keep the cause found.
+	// A death in the same frame as a knock-down joins that incident and keeps its cause:
+	// ace_vehicle_damage wounds the crew and then kills them in one call.
 	private _frame = diag_frameNo;
 	private _pending = _unit getVariable ["SR_FF_Pending", []];
 	if (_pending isNotEqualTo [] && {(_pending select 0) == _frame}) exitWith {
 		if (_killed) then {_pending set [1, true]};
 	};
-	// An incident from an earlier frame that is not judged yet: judge it before replacing it.
+	// An unjudged incident from an earlier frame is judged before it is replaced.
 	if (_pending isNotEqualTo []) then {["SR_FF_Judge", [_unit, _pending select 0]] call CBA_fnc_localEvent};
 
 	private _bleeding = (_unit getVariable ["ace_medical_woundBleeding", 0]) > 0;
@@ -191,7 +184,7 @@ if (!hasInterface) exitWith {};
 	[{["SR_FF_Judge", _this] call CBA_fnc_localEvent}, [_unit, _frame]] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-// On waking up the knock-down is over, so nothing later is blamed on whoever caused it.
+// Waking up ends the knock-down and clears its cause.
 ["ace_unconscious", {
 	params ["_unit", "_state"];
 	if (_state) then {
@@ -201,16 +194,16 @@ if (!hasInterface) exitWith {};
 	};
 }] call CBA_fnc_addEventHandler;
 
-// With ACE's default fatal injury setting a fatal wound kills without a knock-down first.
+// Deaths are incidents too: ACE's default fatal injury setting kills on a fatal wound directly.
 ["ace_medical_death", {
 	params ["_unit"];
 	["SR_FF_Incident", [_unit, true]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
-// Knock-downs that no wound caused. ace_medical_fnc_setUnconscious (G-force, Zeus, field
-// rations) raises knockOut, and an overdose knocks the patient down inside ACE's
-// medicationLocal handler. ACE's handlers run before these, so the frame is marked right after
-// the incident and before SR_FF_Judge looks at it.
+// Marks knock-downs caused by a script or by medication: ace_medical_fnc_setUnconscious
+// (G-force, Zeus, field rations) raises knockOut, and an overdose knocks the patient down inside
+// ACE's medicationLocal handler. ACE's handlers run first, so the mark lands right after the
+// incident and before SR_FF_Judge reads it.
 ["ace_medical_knockOut", {
 	params ["_unit"];
 	if (local _unit) then {_unit setVariable ["SR_FF_NoBlame", diag_frameNo]};
@@ -221,9 +214,9 @@ if (!hasInterface) exitWith {};
 	if (local _unit) then {_unit setVariable ["SR_FF_NoBlame", diag_frameNo]};
 }] call CBA_fnc_addEventHandler;
 
-// Treatment that changes bleeding, run on the patient's machine. Once a medic has worked on the
-// bleeding, a later knock-down from blood loss is no longer pinned on a wound from before, and
-// the baseline follows ACE's new value. ACE's handlers run first, so woundBleeding is current.
+// Bandages, tourniquets and full heals, on the patient's machine: the bleeding baseline takes
+// ACE's new woundBleeding (ACE's handlers run first), and blood-loss blame starts again from the
+// next wound.
 {
 	[_x, {
 		params ["_unit"];
@@ -234,15 +227,15 @@ if (!hasInterface) exitWith {};
 } forEach ["ace_medical_treatment_bandageLocal", "ace_medical_treatment_tourniquetLocal", "ace_medical_treatment_fullHealLocal"];
 
 // KIA Log
-// ACE raises ace_killed for every death, scripted ones included, on the machine where the unit
-// is local. A fatal wound is recorded only after it (ACE kills inside its own woundReceived
-// handler, which runs before ours), so the killer is worked out on the next frame:
-// - At the end of a knock-down (cardiac arrest timer, bleed-out, or ACE's respawn button while
-//   unconscious) no wound comes with the death, so the killer is whoever knocked the player down.
-// - Otherwise a wound in the death frame or the one before it killed: a fatal wound, an
-//   execution in cardiac arrest, a vehicle destroyed around the player.
-// - Anything else (a scripted kill, hunger, being buried alive) has no killer.
-// A mission turns this off with SR_KIALog = false in 7R/fn_systemInit.sqf.
+// ACE raises ace_killed for every death on the machine where the unit is local. ACE kills inside
+// its own woundReceived handler, before ours records the fatal wound, so the killer is worked
+// out on the next frame:
+// - At the end of a knock-down (cardiac arrest timer, bleed-out, ACE's respawn button while
+//   unconscious): the attacker who knocked the player down.
+// - Otherwise the attacker of a wound in the death frame or the one before it: a fatal wound,
+//   an execution in cardiac arrest, a vehicle destroyed around the player.
+// - Otherwise (a scripted kill, hunger, being buried alive): "unknown".
+// SR_KIALog = false in 7R/fn_systemInit.sqf turns the KIA log off.
 ["ace_killed", {
 	params ["_unit", "_causeOfDeath"];
 	if (!local _unit || {!isPlayer [_unit]} || {!(missionNamespace getVariable ["SR_KIALog", true])}) exitWith {};
@@ -261,7 +254,7 @@ if (!hasInterface) exitWith {};
 	}, [_unit, _causeOfDeath, diag_frameNo, name _unit, groupId (group _unit)]] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
-// The respawned unit starts with a clean record, in case these were copied over from the body.
+// Clears the record on a respawned unit, in case the engine copies variables over from the body.
 ["CAManBase", "Respawn", {
 	params ["_unit"];
 	if (!local _unit) exitWith {};
