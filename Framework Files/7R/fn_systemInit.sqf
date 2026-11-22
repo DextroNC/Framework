@@ -13,6 +13,7 @@ SR_Camo_Coef = 0.75; // For Night Missions, default: 0.75
 
 // Respawn Management
 SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships). (check height in editor with: hint format ["%1", (getPosASL player) select 2])
+SR_KIALog = true; // Logs player deaths in the Combat Log and the debrief Casualties list. Set to 'false' for training missions.
 
 /*
 	Available supply boxes.
