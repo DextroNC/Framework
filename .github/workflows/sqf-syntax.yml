@@ -1,0 +1,85 @@
+name: SQF syntax
+
+# Parses SQF with SQFvm (https://github.com/SQFvm/runtime) to catch syntax and
+# preprocessor errors. Every run checks Framework Files and loadouts; a pull
+# request also checks any other .sqf file it adds or changes.
+
+on:
+  push:
+    branches: [master]
+    paths: ['**.sqf', '**.inc', '**.hpp', '.github/workflows/sqf-syntax.yml']
+  pull_request:
+    paths: ['**.sqf', '**.inc', '**.hpp', '.github/workflows/sqf-syntax.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  SQFVM_TAG: v2026.04.03-ed9f5f5
+  SQFVM_SHA256: bb4e3bb415305d2ef2c4cdb75e98f442baea3a4575887c6570a11435a780615b
+
+jobs:
+  parse:
+    # The SQFvm Linux build needs glibc 2.38 or newer (Ubuntu 24.04+).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+
+      - name: Install SQFvm
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/sqfvm.zip" \
+            "https://github.com/SQFvm/runtime/releases/download/$SQFVM_TAG/sqfvm_linux_x64_gcc.zip"
+          echo "$SQFVM_SHA256  $RUNNER_TEMP/sqfvm.zip" | sha256sum -c -
+          unzip -q "$RUNNER_TEMP/sqfvm.zip" -d "$RUNNER_TEMP/sqfvm"
+          chmod +x "$RUNNER_TEMP/sqfvm/sqfvm_linux_x64_gcc/sqfvm"
+          echo "SQFVM=$RUNNER_TEMP/sqfvm/sqfvm_linux_x64_gcc/sqfvm" >> "$GITHUB_ENV"
+
+      - name: List files
+        run: |
+          {
+            find "Framework Files" loadouts -name '*.sqf' -print0
+            # On a pull request HEAD is the merge commit and HEAD^1 the base branch.
+            if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+              git diff -z --name-only --diff-filter=ACMR HEAD^1 HEAD -- '*.sqf'
+            fi
+          } | sort -zu > "$RUNNER_TEMP/files.lst"
+          echo "Checking $(tr -cd '\0' < "$RUNNER_TEMP/files.lst" | wc -c) files"
+
+      - name: Parse
+        run: |
+          # SQFvm exits 255 on a parse error, which would make xargs stop at the
+          # first failing batch, so each batch maps a failure to exit 1.
+          # Paths are passed absolute: SQFvm cannot resolve a relative
+          # #include from a file given by a relative path.
+          set +e
+          xargs -0 -n 500 -a "$RUNNER_TEMP/files.lst" bash -c '
+            args=()
+            for f; do args+=(-i "$PWD/$f"); done
+            "$SQFVM" -a --suppress-welcome --no-execute-print --parse-only "${args[@]}" || exit 1
+          ' _ > "$RUNNER_TEMP/parse.log" 2>&1
+          rc=$?
+          set -e
+          cat "$RUNNER_TEMP/parse.log"
+          # Turn "[ERR] [L<line>|C<col>|<path>]<TAB><message>" into annotations.
+          prefix="$PWD/"
+          while IFS= read -r line; do
+            if [[ $line =~ ^\[ERR\]\ \[L([0-9]+)\|C([0-9]+)\|(.*)\]$'\t'(.*)$ ]]; then
+              file=${BASH_REMATCH[3]#"$prefix"}
+              file=${file//,/%2C}
+              msg=${BASH_REMATCH[4]//%/%25}
+              echo "::error file=$file,line=${BASH_REMATCH[1]},col=$((BASH_REMATCH[2] + 1))::$msg"
+            fi
+          done < "$RUNNER_TEMP/parse.log"
+          errors=$(grep -c '^\[ERR\]' "$RUNNER_TEMP/parse.log" || true)
+          if [ "$rc" -ne 0 ] || [ "$errors" -ne 0 ]; then
+            echo "::error::SQF parse check failed: $errors error(s), exit code $rc"
+            exit 1
+          fi
+          echo "No parse errors."
