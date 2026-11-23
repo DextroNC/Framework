@@ -155,6 +155,7 @@
 		class hasLosses{};
 		class removeDeadGroups{};
 		class garrison{};
+		class garrisonStance{};
 		class rampageCharge{};
 		class rampageArea{};
 		class artilleryInit{};
@@ -162,7 +163,6 @@
 		class artilleryCall{};
 		class dismountVehicle{};
 		class findPOI{};
-		class garrisonZEI{};
 		class createWaypoint{};
 	};
 	class AiAnimationn {

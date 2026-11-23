@@ -2,7 +2,7 @@
 
 	Parameters:
 		<-- Spawn Position as Marker
-		<-- Template Type as String (either PATROL, GARRISON or VEHICLE)
+		<-- Template Type as String (either PATROL, GARRISON, VEHICLE or AIR)
 		<-- Template Number as Integer
 		<-- Parameters as Array
 		<-- Opt. Parameters
@@ -25,6 +25,14 @@ if (count (allUnits-allPlayers) > SR_Unit_Cap) exitWith {systemChat "Unit Cap re
 // Parameter init
 params ["_marker","_type","_number",["_params",[]]];
 private ["_template","_leader","_group","_array","_spawnPos"];
+
+// ZEI and BUNKER run as GARRISON: ZEI fills the closest building, BUNKER takes a radius (default 200)
+// Compatibility for old templates
+if (_type isEqualTo "ZEI") then {_type = "GARRISON"; _params = [0,1];};
+if (_type isEqualTo "BUNKER") then {_type = "GARRISON"; _params = [_params param [0,200],1];};
+
+// Check Template Mode
+if !(_type in ["PATROL","GARRISON","VEHICLE","AIR"]) exitWith {systemChat format ["Error: Template mode %1 does not exist!", _type]};
 
 // Find Template
 private _template  = [_number] call fw_fnc_findTemplate;
@@ -73,27 +81,10 @@ if (_type isEqualTo "GARRISON") Then {
 	_group deleteGroupWhenEmpty true;
 	_group selectLeader _leader;
 
-	// Add event handler  to enable pathing on nearby group members when ally is killed
-	{
-		[_x] spawn fw_fnc_garrisonKilledEH;
-	} forEach units _group;
-
-
 	// Pass to Garrison Script
-	([_spawnPos, units _group] + _params) remoteExec ["fw_fnc_garrison",2];
+	_params params [["_radius",50],["_mode",0]];
+	[_spawnPos, units _group, _radius, _mode, true] remoteExec ["fw_fnc_garrison",2];
 };
-// =================================================================================================
-// SINGLE BUILDING GARRISON
-// =================================================================================================
-
-// ZEI Garrison
-if (_type isEqualTo "ZEI") Then {
-
-	// Pass to Garrison Script (ZEI)
-	[_spawnPos, _units, _group] remoteExec ["fw_fnc_garrisonZEI",2];
-
-};
-
 // =================================================================================================
 // VEHICLE SPAWN
 // =================================================================================================
@@ -111,33 +102,6 @@ if (_type isEqualTo "VEHICLE") Then {
 
 	// Pass to Vehicle diag_activeScripts
 	([_leader] + _params) spawn fw_fnc_spawnVehicleTemplate;
-};
-
-// =================================================================================================
-
-// Bunkers
-if (_type isEqualTo "BUNKER") Then {
-	private _bunkerClasses = ["Land_fortified_nest_big","Land_BagBunker_Large_F","Land_Bunker_01_big_F","Land_Bunker_01_HQ_F","Land_Bunker_01_tall_F","Bunker_02_base_F","Fortress2","Land_Bunker_01_small_F","Land_fortified_nest_small","Fortress1","Land_BagBunker_Small_F"];
-	_params params [["_radius",200]];
-
-	// Find and Populate Bunkers
-	{
-		private _bunkers = _spawnPos nearObjects [_x, _radius];
-		
-		// Populate Bunkers
-		{
-			// Find Slots available
-			private _count = count (_x call BIS_fnc_buildingPositions);
-			private _garrison = _units;
-
-			// Adjust Template
-			if (count _units > _count) then {
-				_garrison resize _count;
-			};
-			// Garrison Bunker (ZEI)
-			[(getPos _x), _garrison, _group] remoteExec ["fw_fnc_garrisonZEI",2];
-		}forEach _bunkers;
-	}forEach _bunkerClasses;
 };
 
 // =================================================================================================
